@@ -4,10 +4,16 @@ Replaces dead pillows.su/pillowcase links in the yzygold (Kanye West) tracker's
 CSVs with live file links (mostly imgur.gg) scraped from yetracker.cc's public
 JSON API, which uses a different, still-working file host.
 
-Matches each row by (era, song title) against yetracker's own catalog, using
-leak date / track length as disambiguators when a title is reused (e.g. many
-different "Beat 1" instrumentals). Rows are only replaced when the match is
-unambiguous, so most benefit comes on repeated runs as yetracker's data grows.
+Matches each row by (era, song title) against yetracker's own catalog. The
+trailing "[V#]" version tag is ignored for matching -- the two trackers number
+versions independently, so what we call "[V2]" may be their "[V1]" for the
+exact same leaked file. Leak date / exact track length are used instead as the
+real fingerprint to disambiguate between same-titled candidates (e.g. many
+different "Beat 1" instrumentals, or a song's several versions). If more than
+one of OUR rows would resolve to the same single yetracker source, none of
+them are replaced -- we can't tell which one it actually is. Rows are only
+replaced when the match is unambiguous, so most benefit comes on repeated runs
+as yetracker's data grows.
 
 Usage:
     python3 scripts/fix-yzygold-pillowcase-links.py            # dry run, prints stats
@@ -39,6 +45,16 @@ TAB_MAP = {
 CREDIT_MARKERS = ["with ", "with:", "feat.", "feat ", "ft.", "prod.", "ref.", "reference", "&"]
 FILE_HOSTS = ["imgur.gg", "krakenfiles.com", "pixeldrain.com"]
 PILLOW_TOKEN_RE = re.compile(r"\S*pillow\S*", re.IGNORECASE)
+VERSION_TAG_RE = re.compile(r"\s*\[[^\]]*\]\s*$")  # trailing "[V1]", "[V2-V?]", etc.
+
+# Our era name (lowercased) -> yetracker.cc's era name (lowercased), for cases
+# where the two trackers independently renamed/split the same era.
+ERA_ALIASES = {
+    "love everyone": "hitler",
+    "donda 2": "donda 2 [v1]",
+    "donda 2 (2025)": "donda 2 [v2]",
+    "bad bitch playbook": "¥$",
+}
 
 
 def fetch_tab(tab):
@@ -72,6 +88,11 @@ def parse_name(raw):
     return title, credits, alts
 
 
+def base_title(title):
+    """Strip one trailing bracketed version tag for cross-version grouping."""
+    return VERSION_TAG_RE.sub("", title).strip()
+
+
 def load_yetracker_index(tabs):
     lookup = {}
     for tab in tabs:
@@ -90,7 +111,7 @@ def load_yetracker_index(tabs):
                     "track_length": (t.get("track_length") or "").strip(),
                     "links": t.get("links", []),
                 }
-                lookup.setdefault((ename, title), []).append(entry)
+                lookup.setdefault((ename, base_title(title)), []).append(entry)
     return lookup
 
 
@@ -127,8 +148,10 @@ def conflicts(row_leak, row_len, cand):
 
 
 def match_row(era, name_raw, leak_date, track_length, lookup):
+    era_key = era.strip().lower()
+    era_key = ERA_ALIASES.get(era_key, era_key)
     title, credits, alts = parse_name(name_raw)
-    cands = lookup.get((era.strip().lower(), title))
+    cands = lookup.get((era_key, base_title(title)))
     if not cands:
         return None, "no_key"
     row_leak, row_len = (leak_date or "").strip().lower(), (track_length or "").strip()
@@ -165,7 +188,14 @@ def process_file(fname, lookup, apply=False):
             len_idx = i
 
     stats = {"pillow_rows": 0, "replaced": 0}
-    replacements, seen_old = [], set()
+
+    # Pass 1: match every dead-link row to a candidate (if any), but don't
+    # commit yet -- first find out whether more than one of OUR rows would
+    # claim the exact same yetracker candidate (e.g. our [V1] and [V2] rows
+    # both resolving to their single untagged version, since version labels
+    # aren't trustworthy across trackers -- see match_row/base_title).
+    pending = []  # (cand, link, old_url)
+    claims = {}   # id(cand) -> count of our rows that landed on it
     for row in rows[1:]:
         if len(row) <= link_idx or not is_dead_link_cell(row[link_idx]):
             continue
@@ -181,21 +211,30 @@ def process_file(fname, lookup, apply=False):
             stats["no_file_link"] = stats.get("no_file_link", 0) + 1
             continue
         tokens = PILLOW_TOKEN_RE.findall(row[link_idx])
-        if len(tokens) != 1 or tokens[0] in seen_old:
+        if len(tokens) != 1:
             stats["skipped_unsafe"] = stats.get("skipped_unsafe", 0) + 1
             continue
-        seen_old.add(tokens[0])
+        claims[id(cand)] = claims.get(id(cand), 0) + 1
+        pending.append((cand, link, tokens[0]))
+
+    # Pass 2: commit only the un-contested ones.
+    replacements, seen_old = [], set()
+    for cand, link, old_url in pending:
+        if claims[id(cand)] > 1:
+            stats["candidate_contested"] = stats.get("candidate_contested", 0) + 1
+            continue
+        if old_url in seen_old:
+            stats["skipped_unsafe"] = stats.get("skipped_unsafe", 0) + 1
+            continue
+        seen_old.add(old_url)
         stats["replaced"] += 1
-        replacements.append((tokens[0], link))
+        replacements.append((old_url, link))
 
     if apply and replacements:
-        raw = open(fp, encoding="utf-8").read()
-        for old_url, new_url in replacements:
-            if raw.count(old_url) == 1:
-                raw = raw.replace(old_url, new_url, 1)
-            else:
-                stats["skipped_unsafe"] = stats.get("skipped_unsafe", 0) + 1
-        open(fp, "w", encoding="utf-8").write(raw)
+        raw = open(fp, newline="", encoding="utf-8").read()
+        for old_url, new_url in sorted(replacements, key=lambda p: -len(p[0])):
+            raw = raw.replace(old_url, new_url)
+        open(fp, "w", newline="", encoding="utf-8").write(raw)
 
     return stats
 
