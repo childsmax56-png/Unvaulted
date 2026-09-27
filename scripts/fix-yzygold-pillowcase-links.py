@@ -94,7 +94,12 @@ def base_title(title):
 
 
 def load_yetracker_index(tabs):
-    lookup = {}
+    """Two lookups: 'exact' keyed by the full (bracketed) title -- what worked
+    well historically for tabs like released/art/tracklists, where a bracket
+    tag is a real, stable label rather than an arbitrary leak-numbering
+    sequence -- and 'base' keyed by the version-tag-stripped title, merging
+    every version of a song within an era, used only as a fallback."""
+    exact, base = {}, {}
     for tab in tabs:
         d = fetch_tab(tab)
         for era in d["eras"]:
@@ -111,8 +116,9 @@ def load_yetracker_index(tabs):
                     "track_length": (t.get("track_length") or "").strip(),
                     "links": t.get("links", []),
                 }
-                lookup.setdefault((ename, base_title(title)), []).append(entry)
-    return lookup
+                exact.setdefault((ename, title), []).append(entry)
+                base.setdefault((ename, base_title(title)), []).append(entry)
+    return {"exact": exact, "base": base}
 
 
 def best_file_link(links):
@@ -147,17 +153,20 @@ def conflicts(row_leak, row_len, cand):
     return False
 
 
-def match_row(era, name_raw, leak_date, track_length, lookup):
-    era_key = era.strip().lower()
-    era_key = ERA_ALIASES.get(era_key, era_key)
-    title, credits, alts = parse_name(name_raw)
-    cands = lookup.get((era_key, base_title(title)))
+def _resolve(cands, row_leak, row_len, credits, alts, require_signal_if_unique):
+    """Shared unique/disambiguate logic against one candidate pool. Returns
+    (cand_or_None, reason). require_signal_if_unique makes the lone-candidate
+    case require positive corroboration too (used for the riskier base-title
+    fallback pool, where "only one candidate" is a weaker guarantee)."""
     if not cands:
         return None, "no_key"
-    row_leak, row_len = (leak_date or "").strip().lower(), (track_length or "").strip()
     if len(cands) == 1:
         only = cands[0]
-        return (None, "unique_conflict") if conflicts(row_leak, row_len, only) else (only, "unique")
+        if conflicts(row_leak, row_len, only):
+            return None, "unique_conflict"
+        if require_signal_if_unique and score(row_leak, row_len, credits, alts, only) <= 0:
+            return None, "ambiguous_no_signal"
+        return only, "unique"
     scored = [(score(row_leak, row_len, credits, alts, c), c) for c in cands if not conflicts(row_leak, row_len, c)]
     if not scored:
         return None, "ambiguous_all_conflict"
@@ -168,6 +177,28 @@ def match_row(era, name_raw, leak_date, track_length, lookup):
     if top_score <= 0:
         return None, "ambiguous_no_signal"
     return top, "disambiguated"
+
+
+def match_row(era, name_raw, leak_date, track_length, lookup):
+    era_key = era.strip().lower()
+    era_key = ERA_ALIASES.get(era_key, era_key)
+    title, credits, alts = parse_name(name_raw)
+    row_leak, row_len = (leak_date or "").strip().lower(), (track_length or "").strip()
+
+    # Tier 1: exact bracketed-title match -- this is what already worked well
+    # for tabs like released/art/tracklists, so it always wins when it finds
+    # a confident candidate.
+    exact_cands = lookup["exact"].get((era_key, title))
+    cand, reason = _resolve(exact_cands, row_leak, row_len, credits, alts, require_signal_if_unique=False)
+    if cand is not None:
+        return cand, "exact_" + reason
+
+    # Tier 2: fall back to the version-agnostic pool (only reached when tier 1
+    # found nothing usable), requiring positive signal even in the lone-
+    # candidate case since "only one" is a weaker guarantee across versions.
+    base_cands = lookup["base"].get((era_key, base_title(title)))
+    cand, reason = _resolve(base_cands, row_leak, row_len, credits, alts, require_signal_if_unique=True)
+    return cand, "fallback_" + reason
 
 
 def is_dead_link_cell(cell):
