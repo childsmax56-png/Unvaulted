@@ -1,13 +1,15 @@
 import type { ArtistConfig } from './types';
 
-// Alternate version of the yzygold (Kanye West) tracker. Its data started as a
-// snapshot of yzygold's catalog, then had every dead pillows.su link replaced
-// with a live file link (mostly imgur.gg) sourced from yetracker.cc's public
-// API where a confident match existed; any link that couldn't be confidently
-// matched was removed rather than left broken. Fully static — no live sheet
-// sync, since this tracker doesn't have a Google Sheet of its own.
+// Alternate version of the yzygold (Kanye West) tracker, now backed by
+// yetracker.cc's own Google Sheet (live-synced via SHEET_SOURCES in
+// functions/api/[artist]/_sheets.ts, which also merges its separate
+// "Related" and "SSC" tabs into the Unreleased data — see the comment there).
 export const yetrackergoldConfig: ArtistConfig = {
   slug: 'yetrackergold',
+  // Temporarily off the landing grid/search/pickers while we sort out the new
+  // sheet's data — still reachable directly at /yetrackergold/. Remove this
+  // flag to bring it back.
+  hidden: true,
   hasGroupbuysTab: true,
   hasAlbumCopiesTab: true,
   SITE_NAME: 'YE (YeTracker.cc Version)',
@@ -15,10 +17,10 @@ export const yetrackergoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/yetrackergold/',
   OG_IMAGE_URL: 'https://i.ibb.co/LhXdRh7j/2026-03-23-T184041-712.png',
   STORAGE_PREFIX: 'yetrackergold_',
-  HARDCODED_SHEET_ID: '',
-  HARDCODED_SHEET_GID: '',
+  HARDCODED_SHEET_ID: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
+  HARDCODED_SHEET_GID: '77894385',
   SHEET_URL_UNRELEASED: '',
-  SHEET_URL_RECENT: '',
+  SHEET_URL_RECENT: 'https://docs.google.com/spreadsheets/d/1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo/export?format=csv&gid=77894385',
   hasYeditsTab: true,
   hasCompsTab: false,
   hasSubAlbumsTab: true,

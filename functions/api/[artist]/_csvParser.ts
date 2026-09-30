@@ -1,4 +1,6 @@
-export function parseCSV(text: string): Record<string, string>[] {
+// Quote-aware CSV tokenizer — splits raw CSV text into rows of raw cell values,
+// respecting quoted fields that contain commas, quotes, or embedded newlines.
+export function splitCSVRows(text: string): string[][] {
   const rows: string[][] = [];
   let current: string[] = [];
   let field = '';
@@ -38,6 +40,22 @@ export function parseCSV(text: string): Record<string, string>[] {
     current.push(field);
     rows.push(current);
   }
+
+  return rows;
+}
+
+// Re-serialize rows of raw cell values back into CSV text, quoting only cells
+// that need it (contain a comma, quote, or newline).
+export function joinCSVRows(rows: string[][]): string {
+  return rows
+    .map(row => row.map(cell => (
+      /[",\n\r]/.test(cell) ? `"${cell.replace(/"/g, '""')}"` : cell
+    )).join(','))
+    .join('\n');
+}
+
+export function parseCSV(text: string): Record<string, string>[] {
+  const rows = splitCSVRows(text);
 
   if (rows.length < 2) return [];
 
