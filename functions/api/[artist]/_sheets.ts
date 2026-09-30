@@ -1,5 +1,6 @@
 import { getCommunityTrackerCsv } from './_community';
 import { fetchSheetApiCsv, hasSheetApiSource } from './_sheetsApi';
+import { splitCSVRows, joinCSVRows } from './_csvParser';
 
 // Live Google Sheet fallback for trackers that don't ship committed CSVs.
 //
@@ -580,7 +581,56 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       unreleased: '1783689060',
     },
   },
+  yetrackergold: {
+    sheetId: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
+    gids: {
+      unreleased: '34972268',
+      released: '762588265',
+      recent: '77894385',
+      stems: '495336364',
+      tracklists: '1372270223',
+      'album-copies': '1297512832',
+      misc: '70063278',
+    },
+  },
 };
+
+// yetrackergold's source sheet splits some hidden/"Related" albums out into their
+// own tabs instead of keeping them in the main Unreleased tab: DAYTONA/NASIR/K.T.S.E.
+// live in a "Related" tab (gid 520283965), Jesus Is Born/Sunday Service Choir live in
+// an "SSC" tab (gid 1333371598). Both tabs use the same 9-column layout as the main
+// Unreleased tab (columns renamed/typo'd in places — e.g. "Type"/"Qualtiy" instead of
+// "Available Length"/"Quality" — but positionally identical), so their data rows are
+// appended under the Unreleased tab's own header rather than fetched as separate tabs.
+const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
+  yetrackergold: ['520283965', '1333371598'],
+};
+
+async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {
+  const extraGids = EXTRA_UNRELEASED_GIDS[artist];
+  const src = SHEET_SOURCES[artist];
+  if (!extraGids || !src) return baseCsv;
+
+  const rows = splitCSVRows(baseCsv);
+  for (const gid of extraGids) {
+    try {
+      const res = await fetch(
+        `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`,
+        { headers: { 'User-Agent': 'Mozilla/5.0' } },
+      );
+      if (!res.ok) continue;
+      const text = await res.text();
+      if (!isCsvText(text)) continue;
+      const extraRows = splitCSVRows(text)
+        .slice(1) // drop this tab's own header row — reuse the Unreleased tab's header
+        .filter(row => row.some(cell => cell.trim() !== ''));
+      rows.push(...extraRows);
+    } catch {
+      // skip this extra tab on failure; the base tab's rows are still returned
+    }
+  }
+  return joinCSVRows(rows);
+}
 
 // Build the Google Sheets CSV export URL for an artist's tab, or null if the
 // artist has no live-sheet source (or no gid for that tab).
@@ -631,7 +681,9 @@ export async function fetchTrackerCsv(
       const res = await fetch(remote, { headers: { 'User-Agent': 'Mozilla/5.0' } });
       if (res.ok) {
         const text = await res.text();
-        if (isCsvText(text)) return text;
+        if (isCsvText(text)) {
+          return tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text) : text;
+        }
       }
     } catch {
       // fall through to the committed snapshot
