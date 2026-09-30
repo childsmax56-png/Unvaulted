@@ -61,6 +61,9 @@ export interface ArtistConfig {
   hasTracklistsTab?: boolean; // set false to force-hide the Tracklists tab regardless of data
   hasAlbumCopiesTab?: boolean; // set true to enable the Album Copies tab (data from data/album-copies.csv)
   hasGroupbuysTab?: boolean; // set true to enable the Groupbuys tab (data from data/groupbuys.csv)
+  hasIndividualProjectsTab?: boolean; // set true to enable a second Unreleased-style tab (e.g. a group's members' solo projects), sourced from the 'individual' sheet tab
+  individualProjectsLabel?: string; // override the "Individual Projects" tab label
+  hasIndividualTracklistsTab?: boolean; // set true to enable a Tracklists-style tab for the Individual Projects catalog, sourced from the 'individual-tracklists' sheet tab
   SHEET_URL_RECENT_PRODUCTION?: string; // CSV export URL for a second recent tab (production projects)
   productionFirst?: boolean; // show Production Projects before Music in navbar
   productionSecond?: boolean; // show Production Projects second (right after Music) in navbar

@@ -42,6 +42,12 @@ export const gibbsgoldConfig: ArtistConfig = {
     'Alfredo':              '/gibbsgold/eras/alfredo.jpg',
     '$oul $old $eparately': '/gibbsgold/eras/oul-old-eparately.jpg',
     'Alfredo 2':            '/gibbsgold/eras/alfredo-2.jpg',
+    // Released-tab-only early mixtapes (not in ALBUM_RELEASE_DATES/the Music grid, but
+    // still shown as their own group on the Released tab, so they need covers too).
+    'Str8 Killa No Filla':               '/gibbsgold/eras/str8-killa-no-filla.jpg',
+    'The Miseducation of Freddie Gibbs': '/gibbsgold/eras/the-miseducation-of-freddie-gibbs.jpg',
+    "Fuckin' Wit Fred":                  '/gibbsgold/eras/fuckin-wit-fred.jpg',
+    'Live from Gary, Indiana Part 2':    '/gibbsgold/eras/live-from-gary-indiana-part-2.jpg',
   },
 
   ALBUM_RELEASE_DATES: {

@@ -135,6 +135,48 @@ function parseCSVText(text: string): Record<string, string>[] {
     });
 }
 
+// The Individual Tracklists sheet (e.g. wutanggold's members' solo discographies) has
+// no Era column of its own — instead a bare-Name, empty-Tracklist row is a section
+// divider naming the member/artist, and every following row with tracklist text is one
+// of their albums, grouped under that divider until the next one. Turn that into the
+// same TracklistAlbum[] shape the main Tracklists tab uses, keyed by the divider name
+// so it lines up with that name's own era in the Individual Projects catalog.
+function parseIndividualTracklists(rows: Record<string, string>[]): TracklistAlbum[] {
+  const albums: TracklistAlbum[] = [];
+  let currentSection = '';
+  for (const row of rows) {
+    const nameKey = Object.keys(row).find(k => k.startsWith('Name')) ?? 'Name';
+    const tracklistKey = Object.keys(row).find(k => k.startsWith('Tracklist'));
+    const name = (row[nameKey] ?? '').trim();
+    if (!name) continue;
+    const tracklistRaw = tracklistKey ? (row[tracklistKey] ?? '') : '';
+    if (!tracklistRaw.trim()) {
+      currentSection = name;
+      continue;
+    }
+    const lines = tracklistRaw.split('\n').map(l => l.trim()).filter(Boolean);
+    const tracks: { num: string; name: string }[] = [];
+    const descLines: string[] = [];
+    for (const line of lines) {
+      const m = line.match(/^([A-Za-z]?\d+)[.)]\s*(.+)$/);
+      if (m) tracks.push({ num: m[1], name: m[2].trim() });
+      else if (tracks.length === 0) descLines.push(line);
+    }
+    if (tracks.length === 0) continue;
+    albums.push({
+      era: currentSection || name,
+      name,
+      date: row['Date(s)'] ?? '',
+      quality: row['Portion'] ?? '',
+      source: row['Source'] ?? '',
+      links: (row['Link(s)'] ?? '').split('\n').map(l => l.trim()).filter(Boolean),
+      tracks,
+      description: descLines.join(' ') || undefined,
+    });
+  }
+  return albums;
+}
+
 export interface MvEntry {
   Era: string;
   Name: string;
@@ -252,6 +294,8 @@ export default function App() {
   const [albumCopiesData, setAlbumCopiesData] = useState<AlbumCopyEra[]>([]);
   const [groupbuysData, setGroupbuysData] = useState<GroupbuysData>({ years: [], grandTotal: '' });
   const [productionData, setProductionData] = useState<TrackerData | null>(null);
+  const [individualData, setIndividualData] = useState<TrackerData | null>(null);
+  const [individualTracklistsData, setIndividualTracklistsData] = useState<TracklistAlbum[]>([]);
   const [tracklistsData, setTracklistsData] = useState<TracklistAlbum[]>([]);
   const [tracklistsLegend, setTracklistsLegend] = useState<TracklistLegendItem[]>([]);
   const [releasedData, setReleasedData] = useState<ReleasedEntry[]>([]);
@@ -301,6 +345,8 @@ export default function App() {
     if (path.startsWith('/subalbums')) return 'subalbums';
     if (path.startsWith('/concerts')) return 'concerts';
     if (path.startsWith('/production')) return 'production';
+    if (path.startsWith('/individualtracklists')) return 'individualtracklists';
+    if (path.startsWith('/individual')) return 'individual';
     return 'music';
   });
 
@@ -1377,9 +1423,34 @@ export default function App() {
         });
     }
 
+    if (activeConfig.hasIndividualProjectsTab) {
+      axios.get(`/api/${ARTIST_SLUG}/individual`)
+        .then(res => {
+          setIndividualData(JSON.parse(JSON.stringify(res.data)));
+        })
+        .catch(err => {
+          console.error("Failed to fetch Individual Projects data:", err);
+        });
+    }
+
+    if (activeConfig.hasIndividualTracklistsTab) {
+      axios.get(`/api/${ARTIST_SLUG}/individual-tracklists`)
+        .then(res => {
+          const rows = (Array.isArray(res.data) ? res.data : []) as Record<string, string>[];
+          const albums = parseIndividualTracklists(rows);
+          setIndividualTracklistsData(albums);
+          setFetchedTabs(prev => new Set([...prev, 'individualtracklists']));
+          if (albums.length > 0) setTabsWithData(prev => new Set([...prev, 'individualtracklists']));
+        })
+        .catch(err => {
+          console.error("Failed to fetch Individual Tracklists data:", err);
+          setFetchedTabs(prev => new Set([...prev, 'individualtracklists']));
+        });
+    }
+
     axios.get(`/api/${ARTIST_SLUG}/released`)
       .then(res => {
-        setReleasedData(normalizeParsedRows(res.data) as ReleasedEntry[]);
+        setReleasedData(normalizeEraField(normalizeParsedRows(res.data)) as ReleasedEntry[]);
       })
       .catch(err => {
         console.error("Failed to fetch Released data:", err);
@@ -1711,6 +1782,14 @@ export default function App() {
       if (!currentPath.startsWith('/production')) {
         window.history.pushState({ category: 'production' }, '', absPath('/production'));
       }
+    } else if (activeCategory === 'individual') {
+      if (!currentPath.startsWith('/individual')) {
+        window.history.pushState({ category: 'individual' }, '', absPath('/individual'));
+      }
+    } else if (activeCategory === 'individualtracklists') {
+      if (!currentPath.startsWith('/individualtracklists')) {
+        window.history.pushState({ category: 'individualtracklists' }, '', absPath('/individualtracklists'));
+      }
     } else if (activeCategory === 'contributor' && selectedContributor) {
       const newPath = `/contributor/${encodeURIComponent(selectedContributor)}`;
       if (currentPath !== newPath) {
@@ -1803,6 +1882,10 @@ export default function App() {
         setActiveCategory('concerts');
       } else if (path.startsWith('/production')) {
         setActiveCategory('production');
+      } else if (path.startsWith('/individualtracklists')) {
+        setActiveCategory('individualtracklists');
+      } else if (path.startsWith('/individual')) {
+        setActiveCategory('individual');
       } else if (path.startsWith('/contributor/')) {
         const name = decodeURIComponent(path.split('/contributor/')[1]);
         setSelectedContributor(name);
@@ -2705,6 +2788,10 @@ export default function App() {
       if (!productionErasArray.find(e => e.name === selectedAlbum.name)) {
         setSelectedAlbum(null);
       }
+    } else if ((cat === 'individual' || cat === 'individualtracklists') && selectedAlbum) {
+      if (!individualErasArray.find(e => e.name === selectedAlbum.name)) {
+        setSelectedAlbum(null);
+      }
     } else {
       setSelectedAlbum(null);
     }
@@ -2777,6 +2864,7 @@ let erasArray = (Object.values(data.eras || {}) as Era[])
   }) as Era[];
 
 const productionErasArray = (Object.values(productionData?.eras || {}) as Era[]);
+const individualErasArray = (Object.values(individualData?.eras || {}) as Era[]);
 
 const RELATED_ERA_ORDER = [
   'Donda',
@@ -3356,6 +3444,38 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                   const q = searchQuery.toLowerCase();
                   return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));
                 })} onSelectEra={setSelectedAlbum} />
+              ) : activeCategory === 'individual' && selectedAlbum ? (
+                <EraDetail
+                  key={`individual-${selectedAlbum.name}`}
+                  era={selectedAlbum}
+                  searchQuery={searchQuery}
+                  filters={filters}
+                  onPlaySong={handlePlaySong}
+                  currentSong={currentSong}
+                  isPlaying={isPlaying}
+                  toggleFavorite={toggleFavorite}
+                  favoriteKeys={favoriteKeys}
+                />
+              ) : activeCategory === 'individual' ? (
+                <EraGrid key="individual-grid" eras={individualErasArray.filter(e => {
+                  if (!searchQuery) return true;
+                  const q = searchQuery.toLowerCase();
+                  return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));
+                })} onSelectEra={setSelectedAlbum} />
+              ) : activeCategory === 'individualtracklists' && selectedAlbum ? (
+                <TracklistsView
+                  key={`individualtracklists-${selectedAlbum.name}`}
+                  data={individualTracklistsData.filter(t => t.era.toLowerCase() === selectedAlbum.name.toLowerCase())}
+                  searchQuery={searchQuery}
+                  eras={individualErasArray}
+                  onPlaySong={handlePlaySong}
+                  currentSong={currentSong}
+                  isPlaying={isPlaying}
+                  era={selectedAlbum}
+                  onBack={() => setSelectedAlbum(null)}
+                />
+              ) : activeCategory === 'individualtracklists' ? (
+                <EraGrid key="individualtracklists-grid" eras={individualErasArray.filter(e => individualTracklistsData.some(t => t.era.toLowerCase() === e.name.toLowerCase()))} onSelectEra={setSelectedAlbum} />
               ) : activeCategory === 'contributor' && selectedContributor ? (
                 <ContributorView
                   key={`contributor-${selectedContributor}`}

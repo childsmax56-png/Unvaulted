@@ -204,6 +204,13 @@ function groupByEra(data: ReleasedEntry[], allEras: Era[]): ReleasedEraGroup[] {
   for (const entry of data) {
     const era = entry.Era?.trim();
     if (!era) continue;
+    // Skip section-header/stats-banner rows (e.g. "13 Full\n5 Tagged\n...") that some
+    // sheets (jayzgold) place above each album's songs instead of a real song row.
+    if (era.includes('\n')) continue;
+    // Same banner pattern, but as a single-line count (e.g. chrisbrowngold's
+    // "20 Mixtape Tracks") — these also carry no Type/Link data, unlike a real song row.
+    const links = entry['Link(s)'] ?? entry.Links ?? entry.Link ?? '';
+    if (/^\d+\s/.test(era) && !entry.Type?.trim() && !links.trim()) continue;
     if (!map[era]) {
       map[era] = [];
       order.push(era);

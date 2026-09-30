@@ -372,6 +372,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       stems: '684268624',
       'music-videos': '147084403',
       tracklists: '1817611336',
+      individual: '653347054',
+      'individual-tracklists': '755186929',
     },
   },
   aaliyahgold: {
@@ -499,10 +501,16 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
     },
   },
   nasgold: {
-    sheetId: '1TnALmkQdRX_spdUMLLamizAZYD3rERO_iGGzCqD-A6M',
+    sheetId: '1-UZb9y-GQB5v3sysdUlYBxfUKDu58_Cw-TqUd8-v4U4',
     gids: {
-      unreleased: '1284857632',
-      tracklists: '1901624744',
+      unreleased: '1520634709',
+      released: '197122594',
+      recent: '2048130339',
+      misc: '716734258',
+      stems: '35307781',
+      tracklists: '1717251426',
+      art: '1835098630',
+      groupbuys: '1841567237',
     },
   },
   stevelacygold: {

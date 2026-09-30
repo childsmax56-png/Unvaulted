@@ -113,7 +113,13 @@ export const tydollagoldConfig: ArtistConfig = {
   ALBUM_DESCRIPTIONS: {},
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
-  ERA_MAPPINGS: {},
+  // The Released tab's sheet spells/orders a few era names differently than the
+  // Unreleased tab (which CUSTOM_IMAGES/ALBUM_RELEASE_DATES keys match) — map the
+  // Released-side variant to the canonical name so covers resolve for those eras.
+  ERA_MAPPINGS: {
+    'Mustard Collaboration': 'Collaboration with Mustard',
+    'girl music vol. 2: sex playlist': 'girl music vol 2: sex playlist',
+  },
 
   ALBUM_ORDER: [
     'Beach House',

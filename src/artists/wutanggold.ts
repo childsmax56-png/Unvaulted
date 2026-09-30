@@ -51,7 +51,6 @@ export const wutanggoldConfig: ArtistConfig = {
     'Demo Tape': '??/??/????',
     'Enter the Wu-Tang (36 Chambers)': '??/??/????',
     'Wu-Tang Forever': '??/??/????',
-    '(RZA, GZA, Ol\' Dirty Bastard, Method Man, U-God, Ghostface Killah, Inspectah Deck, Raekwon, Masta Killa, Cappadonna)': '??/??/????',
     'The W': '??/??/????',
     'Iron Flag': '??/??/????',
     '8 Diagrams': '??/??/????',
@@ -63,7 +62,6 @@ export const wutanggoldConfig: ArtistConfig = {
     'Black Samson, The Bastard Swordsman': '??/??/????',
     'Twice Upon A Time In Shaolin': '??/??/????',
     '"The Eighth Diagrams" (8 Diagrams [V1])': '??/??/????',
-    '??? (???. Ghostface Killah)': '??/??/????',
     'The Saga Continues [V2]': '??/??/????'
   },
 
@@ -77,7 +75,6 @@ export const wutanggoldConfig: ArtistConfig = {
     'Demo Tape',
     'Enter the Wu-Tang (36 Chambers)',
     'Wu-Tang Forever',
-    '(RZA, GZA, Ol\' Dirty Bastard, Method Man, U-God, Ghostface Killah, Inspectah Deck, Raekwon, Masta Killa, Cappadonna)',
     'The W',
     'Iron Flag',
     '8 Diagrams',
@@ -89,12 +86,27 @@ export const wutanggoldConfig: ArtistConfig = {
     'Black Samson, The Bastard Swordsman',
     'Twice Upon A Time In Shaolin',
     '"The Eighth Diagrams" (8 Diagrams [V1])',
-    '??? (???. Ghostface Killah)',
     'The Saga Continues [V2]'
   ],
 
-  TAG_MAP: {},
-  TAG_TOOLTIP_MAP: {},
+  // Matches the sheet's own "Key" tab (⭐/✨/🏆 are defined there; 🥇/🏅 aren't
+  // documented but are used on songs the same way every other tracker's "Wanted"
+  // tag is). Without this, these emoji stay embedded in the song name instead of
+  // being pulled out into a proper "Best Of"/"Grails"/etc. tag.
+  TAG_MAP: {
+    '⭐': 'Best Of', '⭐️': 'Best Of',
+    '✨': 'Special',
+    '🏆': 'Grails',
+    '🥇': 'Wanted', '🏅': 'Wanted',
+  },
+  TAG_TOOLTIP_MAP: {
+    'Best Of': 'Some of the best leaks hosted on the tracker.',
+    'Grails': 'The most wanted songs.',
+    'Special': 'Recommended/suggested/special songs that are not good enough to belong in Best Of, but still deserve to be highlighted in some sort of way.',
+    'Wanted': 'Songs that are wanted, but not as wanted as Grails.',
+  },
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
+  hasIndividualProjectsTab: true, // members' solo/collab discography, browsed the same way as Unreleased
+  hasIndividualTracklistsTab: true,
 };

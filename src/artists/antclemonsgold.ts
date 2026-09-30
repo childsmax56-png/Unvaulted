@@ -70,4 +70,5 @@ export const antclemonsgoldConfig: ArtistConfig = {
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
   hasAlbumCopiesTab: true,
+  hasMiscTab: false,
 };

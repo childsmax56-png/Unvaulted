@@ -5,7 +5,13 @@ import { resolveCommunityTracker, buildCommunityTrackerData } from './_community
 // Extract the URL from a Google Sheets HYPERLINK formula: =HYPERLINK("url","text") → url
 function extractHyperlinkUrl(cell: string): string {
   const m = cell.match(/^=HYPERLINK\("([^"]+)"/i);
-  return m ? m[1] : cell;
+  if (m) return m[1];
+  // Some sheets (e.g. daftpunkgold) prefix a real source link with stray text like
+  // "N/A https://..." — the leading text makes looksLikeRealLink() pass (it just checks
+  // for "://") but breaks the URL when used as-is. Strip anything before the link itself.
+  const httpIdx = cell.search(/https?:\/\//i);
+  if (httpIdx > 0) return cell.slice(httpIdx).trim();
+  return cell;
 }
 
 function parseSongName(raw: string): { name: string; extra: string | undefined } {
@@ -447,9 +453,15 @@ export const onRequestGet: PagesFunction = async (context) => {
 
     // Always supplement validEraNames with song-row era names so eras that have songs
     // but no header row (e.g. TrapMoneyBenny Collab, 004PF in vampgold) are not dropped.
+    // Some sheets (e.g. nasgold) trail a changelog/credits block ("Update Notes",
+    // "6/22/26: [iaon] made editor", a long "Special Thanks to..." sentence) below the
+    // real tracklist, in the same Era column — exclude that free text so it doesn't turn
+    // into its own bogus era.
+    const isJunkEraText = (s: string): boolean =>
+      s.length > 120 || /^\d{1,2}\/\d{1,2}\/\d{2,4}:/.test(s) || /^(Update Notes|Tracker Guidelines)$/i.test(s);
     for (const row of rows) {
       const eraField = (row['Era'] ?? '').trim();
-      if (eraField && !eraField.includes('\n') && !/^\d+\s+(OG|Full|Tagged|Partial|Snippet|Unavailable)\b/i.test(eraField)) {
+      if (eraField && !eraField.includes('\n') && !/^\d+\s+(OG|Full|Tagged|Partial|Snippet|Unavailable)\b/i.test(eraField) && !isJunkEraText(eraField)) {
         validEraNames.add(eraField);
         validEraNames.add(mapEraName(eraField));
       }
