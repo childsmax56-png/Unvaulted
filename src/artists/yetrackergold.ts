@@ -6,6 +6,10 @@ import type { ArtistConfig } from './types';
 // "Related" and "SSC" tabs into the Unreleased data — see the comment there).
 export const yetrackergoldConfig: ArtistConfig = {
   slug: 'yetrackergold',
+  // Temporarily off the landing grid/search/pickers while we sort out the new
+  // sheet's data — still reachable directly at /yetrackergold/. Remove this
+  // flag to bring it back.
+  hidden: true,
   hasGroupbuysTab: true,
   hasAlbumCopiesTab: true,
   SITE_NAME: 'YE (YeTracker.cc Version)',
