@@ -4,7 +4,7 @@ import { Play, Pause, Volume2, Maximize2, MoreHorizontal, Download, X, SkipBack,
 import { parseArtistFromSong } from '../lastfm';
 import { Song, Era } from '../types';
 import { useState, useRef, useEffect } from 'react';
-import { formatTextWithTags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, handleDownloadFile, ERA_THEMES , Img} from '../utils';
+import { formatTextWithTags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, handleDownloadFile, ERA_THEMES , Img, looksLikeRealLink} from '../utils';
 import { handleShareSilent } from './EraDetail';
 import { LyricsModal } from './LyricsModal';
 import { useSettings } from '../SettingsContext';
@@ -520,7 +520,7 @@ export function PlayerBar({
                     <Download className="w-4 h-4" /> Download
                   </button>
                 )}
-                {rawUrl && rawUrl.includes('pillows.su/f/') && (
+                {rawUrl && looksLikeRealLink(rawUrl) && (
                   <a
                     href={rawUrl}
                     target="_blank"
@@ -528,7 +528,7 @@ export function PlayerBar({
                     onClick={() => setShowMenu(false)}
                     className="w-full flex items-center gap-3 px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
                   >
-                    <ExternalLink className="w-4 h-4" /> Visit on Pillowcase
+                    <ExternalLink className="w-4 h-4" /> Visit Original Link
                   </a>
                 )}
                 <div className="h-px bg-white/10 my-1" />

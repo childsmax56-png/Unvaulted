@@ -444,6 +444,26 @@ def excel_date(val):
     return str(val).strip()
 
 
+def excel_text(val):
+    """Undo Google Sheets auto-formatting a text cell as a date/time.
+
+    An era or copy name that looks like a clock time (e.g. "4:44") gets stored by
+    Sheets as a time-of-day serial — a bare fraction of a day — instead of the typed
+    string, so the xlsx export hands back "0.19722222222222222" instead of "4:44".
+    Convert that back to H:MM; leave genuine dates/other numbers untouched."""
+    if not val:
+        return ""
+    try:
+        f = float(val)
+    except (ValueError, TypeError):
+        return str(val).strip()
+    if 0 <= f < 1:
+        total_minutes = round(f * 24 * 60)
+        h, m = divmod(total_minutes, 60)
+        return f"{h}:{m:02d}"
+    return str(val).strip()
+
+
 # ── per-artist build ──────────────────────────────────────────────────────────
 
 def build_from_xlsx(slug, path):
@@ -459,18 +479,32 @@ def build_from_xlsx(slug, path):
     if not rows:
         return None
 
-    # header = first row that has a 'name'-ish and 'tracklist'-ish column
+    # header = first row that has a 'name'-ish and 'tracklist'-ish column. Real header
+    # cells are short labels, so skip prose-heavy data rows that happen to contain the
+    # word "name" incidentally (e.g. a tracklist entry titled "What's in a Name?") —
+    # sheets with no real header row at all (e.g. jayzgold) then keep header_idx at 0
+    # and fall through to the positional defaults below.
     header_idx = 0
+    found_header = False
     for i, (rn, cells) in enumerate(rows[:6]):
-        joined = " ".join((v or "").lower() for v, _, _ in cells.values())
+        vals = [(v or "").strip() for v, _, _ in cells.values()]
+        if any(len(v) > 40 for v in vals):
+            continue
+        joined = " ".join(v.lower() for v in vals)
         if "tracklist" in joined and ("name" in joined or "era" in joined):
             header_idx = i
+            found_header = True
             break
-    header_cells = rows[header_idx][1]
+    # Without a real header row, rows[0] is often the legend/notes row, whose prose
+    # can accidentally contain header-ish substrings (e.g. the legend text "...
+    # Available" matches an "availab" search) — don't scan it for column keywords.
+    header_cells = rows[header_idx][1] if found_header else {}
 
     c_era = find_col(header_cells, "era") or 1
     c_name = find_col(header_cells, "name", "title")
     c_tl = find_col(header_cells, "tracklist") or 3
+    if c_name is None and not found_header:
+        c_name = 2  # no header row at all — assume the usual era/name/tracklist order
     if c_name is None or c_name == c_tl:
         c_name = None  # no dedicated name column — fall back to the era below
     c_date = find_col(header_cells, "date")
@@ -493,9 +527,9 @@ def build_from_xlsx(slug, path):
 
     albums = []
     for rn, cells in rows[header_idx + 1:]:
-        raw_name = (cells.get(c_name, ("", None, None))[0] or "").strip() if c_name else ""
+        raw_name = excel_text(cells.get(c_name, ("", None, None))[0]) if c_name else ""
         tl_val, _tlc, tl_run = cells.get(c_tl, ("", None, None))
-        era = (cells.get(c_era, ("", None, None))[0] or "").strip()
+        era = excel_text(cells.get(c_era, ("", None, None))[0])
         tl_stripped = (tl_val or "").strip()
         has_img = rn in images_by_row
         description, tracks = split_tracklist(tl_val, tl_run, legend_colors)
