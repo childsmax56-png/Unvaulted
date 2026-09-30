@@ -6,7 +6,6 @@ import { ARTIST_LIST } from './artists/registry';
 import type { ArtistConfig } from './artists/types';
 import { useSettings, LOADING_SCREENS } from './SettingsContext';
 import { Img } from './utils';
-import { SOCIALS_DATA, hasSocials, type SocialEntry } from './socialsData';
 import { useHasActiveAudio } from './player/audioStore';
 import { fetchGlobalVisitCounts, getUserVisitCounts, type VisitCounts } from './visits';
 
@@ -1010,140 +1009,6 @@ function SheetButton({ href, accent }: { href: string; accent?: string }) {
   );
 }
 
-function SocialsButton({ accent, onOpen }: { accent?: string; onOpen: () => void }) {
-  const color = accent ?? 'rgba(255,255,255,0.4)';
-  return (
-    <button
-      onClick={e => { e.stopPropagation(); onOpen(); }}
-      title="Socials & links"
-      aria-label="Socials & links"
-      style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        padding: '7px 9px', borderRadius: 8,
-        background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)',
-        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', flex: '0 0 auto',
-        transition: 'background 0.15s, color 0.15s, border-color 0.15s',
-      }}
-      onMouseEnter={e => {
-        const el = e.currentTarget;
-        el.style.background = `${color}18`;
-        el.style.borderColor = `${color}44`;
-        el.style.color = color;
-      }}
-      onMouseLeave={e => {
-        const el = e.currentTarget;
-        el.style.background = 'rgba(255,255,255,0.04)';
-        el.style.borderColor = 'rgba(255,255,255,0.08)';
-        el.style.color = 'rgba(255,255,255,0.45)';
-      }}
-    >
-      {/* @-mention / socials glyph */}
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="4" />
-        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-3.5 7.1" />
-      </svg>
-    </button>
-  );
-}
-
-function SocialsModal({ config, onClose }: { config: ArtistConfig; onClose: () => void }) {
-  const [q, setQ] = useState('');
-  const accent = config.accentColor;
-  const entries = SOCIALS_DATA[config.slug] ?? [];
-
-  const query = q.trim().toLowerCase();
-  const filtered = query
-    ? entries.filter(e =>
-        e.platform.toLowerCase().includes(query) ||
-        e.handle.toLowerCase().includes(query) ||
-        e.notes.toLowerCase().includes(query) ||
-        e.type.toLowerCase().includes(query))
-    : entries;
-
-  // Group by Type, preserving first-seen order.
-  const groups: { type: string; items: SocialEntry[] }[] = [];
-  const byType: Record<string, SocialEntry[]> = {};
-  for (const e of filtered) {
-    const t = e.type || 'Other';
-    if (!byType[t]) { byType[t] = []; groups.push({ type: t, items: byType[t] }); }
-    byType[t].push(e);
-  }
-
-  return (
-    <div onClick={onClose}
-      style={{ position: 'fixed', inset: 0, zIndex: 300, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(6px)', padding: 16 }}>
-      <div onClick={e => e.stopPropagation()}
-        style={{ position: 'relative', background: 'rgba(16,16,18,0.98)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 18, width: 'min(560px, 100%)', maxHeight: '82vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        <div style={{ padding: '18px 20px 12px', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-          <button onClick={onClose}
-            style={{ position: 'absolute', top: 14, right: 14, background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', fontSize: 20, lineHeight: 1 }}>✕</button>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: accent, textTransform: 'uppercase' }}>Socials & Links</div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: '#fff', marginTop: 2 }}>{config.artistLabel}</div>
-          <input
-            type="text"
-            value={q}
-            onChange={e => setQ(e.target.value)}
-            placeholder="Filter platforms, handles, notes…"
-            style={{ width: '100%', marginTop: 12, padding: '9px 12px', borderRadius: 9, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: 13, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' }}
-          />
-        </div>
-
-        <div style={{ overflowY: 'auto', padding: '8px 12px 16px' }}>
-          {filtered.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '32px 0', fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>No matches</div>
-          ) : groups.map(g => (
-            <div key={g.type} style={{ marginTop: 12 }}>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase', padding: '0 8px 6px' }}>{g.type}</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                {g.items.map((e, i) => <SocialRow key={g.type + i} entry={e} accent={accent} />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SocialRow({ entry, accent }: { entry: SocialEntry; accent: string }) {
-  const inactive = entry.status === 'Inactive';
-  const inner = (
-    <>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 13, fontWeight: 700, color: '#fff' }}>{entry.platform}</span>
-          {entry.handle && <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>{entry.handle}</span>}
-          {entry.status && (
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '1px 6px', borderRadius: 4,
-              background: inactive ? 'rgba(255,255,255,0.06)' : `${accent}20`,
-              color: inactive ? 'rgba(255,255,255,0.4)' : accent }}>{entry.status}</span>
-          )}
-        </div>
-        {entry.notes && <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 3, lineHeight: 1.4 }}>{entry.notes}</div>}
-      </div>
-      {entry.link && (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={accent} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 3 }}>
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" />
-        </svg>
-      )}
-    </>
-  );
-  const baseStyle: React.CSSProperties = {
-    display: 'flex', alignItems: 'flex-start', gap: 10, padding: '9px 8px', borderRadius: 9,
-    textDecoration: 'none', opacity: inactive && !entry.link ? 0.7 : 1,
-  };
-  if (entry.link) {
-    return (
-      <a href={entry.link} target="_blank" rel="noopener noreferrer"
-        style={{ ...baseStyle, cursor: 'pointer', transition: 'background 0.15s' }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
-      >{inner}</a>
-    );
-  }
-  return <div style={baseStyle}>{inner}</div>;
-}
-
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 function ConsentModal({ onAccept, onClose }: { onAccept: () => void; onClose: () => void }) {
@@ -1208,7 +1073,6 @@ export function LandingPage() {
   const [showAll, setShowAll] = useState(false);
   const [showConsent, setShowConsent] = useState(false);
   const [socialOpen, setSocialOpen] = useState(false);
-  const [socialsFor, setSocialsFor] = useState<ArtistConfig | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [sortMode, setSortMode] = useState<SortMode>('featured');
   const [globalVisits, setGlobalVisits] = useState<VisitCounts>({});
@@ -1295,7 +1159,6 @@ export function LandingPage() {
     }}>
       {showSettings && <LandingSettingsPanel onClose={() => setShowSettings(false)} />}
       {showConsent && <ConsentModal onAccept={signInWithGoogle} onClose={() => setShowConsent(false)} />}
-      {socialsFor && <SocialsModal config={socialsFor} onClose={() => setSocialsFor(null)} />}
 
       <header style={{ textAlign: 'center', marginBottom: 40, width: '100%', maxWidth: 900, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: 8 }}>
@@ -1390,7 +1253,6 @@ export function LandingPage() {
                   <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                   <div style={{ display: 'flex', gap: 6 }}>
                     {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                    {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                     <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                   </div>
                 </div>
@@ -1409,7 +1271,6 @@ export function LandingPage() {
                   <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                   <div style={{ display: 'flex', gap: 6 }}>
                     {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                    {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                     <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                   </div>
                 </div>
@@ -1423,7 +1284,6 @@ export function LandingPage() {
                 <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                 <div style={{ display: 'flex', gap: 6 }}>
                   {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                  {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                   <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                 </div>
               </div>
@@ -1437,7 +1297,6 @@ export function LandingPage() {
                 <EditorialArtistCard config={featured} showPhoto={showPhotos} variant="featured" isFavorite={isFavorite(featured.slug)} onToggleFavorite={toggleFavorite} />
                 <div style={{ display: 'flex', gap: 6 }}>
                   {SHEET_URLS[featured.slug] && <SheetButton href={SHEET_URLS[featured.slug]} accent={featured.accentColor} />}
-                  {hasSocials(featured.slug) && <SocialsButton accent={featured.accentColor} onOpen={() => setSocialsFor(featured)} />}
                   <ShareButton url={`${window.location.origin}/${featured.slug}`} accent={featured.accentColor} />
                 </div>
               </div>
@@ -1447,7 +1306,6 @@ export function LandingPage() {
                     <EditorialArtistCard config={config} showPhoto={showPhotos} variant="medium" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                     <div style={{ display: 'flex', gap: 6 }}>
                       {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                      {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                       <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                     </div>
                   </div>
@@ -1463,7 +1321,6 @@ export function LandingPage() {
                     <EditorialArtistCard config={item.config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(item.config.slug)} onToggleFavorite={toggleFavorite} />
                     <div style={{ display: 'flex', gap: 6 }}>
                       {SHEET_URLS[item.config.slug] && <SheetButton href={SHEET_URLS[item.config.slug]} accent={item.config.accentColor} />}
-                      {hasSocials(item.config.slug) && <SocialsButton accent={item.config.accentColor} onOpen={() => setSocialsFor(item.config)} />}
                       <ShareButton url={`${window.location.origin}/${item.config.slug}`} accent={item.config.accentColor} />
                     </div>
                   </div>

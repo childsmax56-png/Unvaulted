@@ -226,6 +226,7 @@ import { GroupbuysView, GroupbuysData } from './components/GroupbuysView';
 import { CompsView } from './components/CompsView';
 import { ConcertsView } from './components/ConcertsView';
 import { YEditsView } from './components/YEditsView';
+import { SocialsView } from './components/SocialsView';
 import { ReleasedView, ReleasedEntry } from './components/ReleasedView';
 import { VideosView, VideoRawEntry } from './components/VideosView';
 import { SubAlbumsView, SubAlbumEntry } from './components/SubAlbumsView';
@@ -347,6 +348,7 @@ export default function App() {
     if (path.startsWith('/production')) return 'production';
     if (path.startsWith('/individualtracklists')) return 'individualtracklists';
     if (path.startsWith('/individual')) return 'individual';
+    if (path.startsWith('/socials')) return 'socials';
     return 'music';
   });
 
@@ -1289,6 +1291,8 @@ export default function App() {
           setActiveCategory('tracklists');
         } else if (path.startsWith('/yedits')) {
           setActiveCategory('yedits');
+        } else if (path.startsWith('/socials')) {
+          setActiveCategory('socials');
         } else if (path.startsWith('/subalbums')) {
           setActiveCategory('subalbums');
         } else if (path.startsWith('/related/')) {
@@ -1770,6 +1774,10 @@ export default function App() {
       if (!currentPath.startsWith('/yedits')) {
         window.history.pushState({ category: 'yedits' }, '', absPath('/yedits'));
       }
+    } else if (activeCategory === 'socials') {
+      if (!currentPath.startsWith('/socials')) {
+        window.history.pushState({ category: 'socials' }, '', absPath('/socials'));
+      }
     } else if (activeCategory === 'subalbums') {
       if (!currentPath.startsWith('/subalbums')) {
         window.history.pushState({ category: 'subalbums' }, '', absPath('/subalbums'));
@@ -1876,6 +1884,8 @@ export default function App() {
         setActiveCategory('history');
       } else if (path.startsWith('/yedits')) {
         setActiveCategory('yedits');
+      } else if (path.startsWith('/socials')) {
+        setActiveCategory('socials');
       } else if (path.startsWith('/subalbums')) {
         setActiveCategory('subalbums');
       } else if (path.startsWith('/concerts')) {
@@ -3503,6 +3513,8 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                   currentSong={currentSong}
                   isPlaying={isPlaying}
                 />
+              ) : activeCategory === 'socials' ? (
+                <SocialsView key="socials" searchQuery={searchQuery} />
               ) : activeCategory === 'related' ? (
                 <EraGrid key="related-grid" eras={filteredRelatedEras} onSelectEra={setSelectedAlbum} />
               ) : isTimelineMode ? (

@@ -10,8 +10,9 @@ import { useSettings } from '../SettingsContext';
 import { retryImageOnError } from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { GlobalSearchPanel, GlobalSearchResult } from './GlobalSearchPanel';
+import { hasSocials } from '../socialsData';
 
-export type Category = 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'yedits' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists';
+export type Category = 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'yedits' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists' | 'socials';
 
 const DATA_DRIVEN_TABS = new Set(['art', 'stems', 'misc', 'fakes', 'albumcopies', 'groupbuys', 'videos', 'tracklists', 'subalbums', 'individualtracklists']);
 
@@ -56,6 +57,7 @@ const NAV_CATEGORIES: { key: Category; label: string }[] = [
   { key: 'production', label: 'Production Projects' },
   { key: 'individual', label: 'Individual Projects' },
   { key: 'individualtracklists', label: 'Individual Tracklists' },
+  { key: 'socials', label: 'Socials' },
 ];
 
 export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHomeClick, activeCategory, onCategoryChange, onRandomSongClick, isRandomMode, isTimelineMode, onTimelineToggle, yeiOpen, onYEIClick, globalSearchResults, onSelectGlobalResult, fetchedTabs, tabsWithData }: NavbarProps) {
@@ -120,6 +122,7 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
     if (key === 'groupbuys' && !activeConfig.hasGroupbuysTab) return false;
     if (key === 'individual' && !activeConfig.hasIndividualProjectsTab) return false;
     if (key === 'individualtracklists' && !activeConfig.hasIndividualTracklistsTab) return false;
+    if (key === 'socials' && !hasSocials(activeConfig.slug)) return false;
     if (DATA_DRIVEN_TABS.has(key) && fetchedTabs?.has(key) && !tabsWithData?.has(key)) return false;
     return true;
   }).map(cat => cat.key === 'misc' && activeConfig.miscLabel
