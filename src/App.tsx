@@ -19,7 +19,7 @@ import { handleShareSilent } from './components/EraDetail';
 import { TrackerData, Era, Song, SearchFilters } from './types';
 import { ContributorContext } from './ContributorContext';
 import { ContributorView } from './components/ContributorView';
-import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, handleDownloadFile, pixeldrainProxyBase } from './utils';
+import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, handleDownloadFile, pixeldrainProxyBase } from './utils';
 import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName } from './lastfm';
 import { logListen, isListeningLoggedIn } from './listening';
 import { isSpotifyLoggedIn, clearSpotifySession, startSpotifyAuth, handleSpotifyCallback } from './spotify';
@@ -2018,7 +2018,7 @@ export default function App() {
     } else if (rawUrl.includes('archive.org/details/')) {
       const archiveId = rawUrl.split('archive.org/details/')[1].split('?')[0];
       handlePlayArchiveTrack(archiveId, song.name, era.name);
-    } else if (rawUrl.startsWith('/') || /\.(mp3|m4a|wav|ogg|flac|aac)(\?|$)/i.test(rawUrl)) {
+    } else if (!isChallengeGatedAudioHost(rawUrl) && (rawUrl.startsWith('/') || /\.(mp3|m4a|wav|ogg|flac|aac)(\?|$)/i.test(rawUrl))) {
       const playableSongs = contextTracks && contextTracks.length > 0 ? contextTracks : [song];
       setPlaylist(playableSongs);
       const newIndex = playableSongs.findIndex(s =>

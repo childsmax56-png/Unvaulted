@@ -17,7 +17,7 @@ import axios from 'axios';
 import { useCallback, useSyncExternalStore } from 'react';
 import type { Song, Era } from '../types';
 import { parseArtistFromSong } from '../lastfm';
-import { pixeldrainProxyBase } from '../utils';
+import { pixeldrainProxyBase, isChallengeGatedAudioHost } from '../utils';
 
 export type ActivePlayer = 'audio' | 'spotify' | 'youtube' | 'soundcloud';
 
@@ -243,6 +243,7 @@ export async function resolveStreamUrl(rawUrl: string): Promise<string> {
 }
 
 function isDirectlyPlayableAudio(rawUrl: string): boolean {
+  if (isChallengeGatedAudioHost(rawUrl)) return false;
   return (
     rawUrl.includes('pillows.su/f/') ||
     rawUrl.includes('pillowcase.su/f/') ||

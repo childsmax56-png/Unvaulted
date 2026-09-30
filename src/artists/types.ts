@@ -49,6 +49,7 @@ export interface ArtistConfig {
   hasProductionTab?: boolean;
   hasYeditsTab?: boolean;
   hasRecentTab?: boolean;
+  hasReleasedTab?: boolean; // set false to force-hide the Released tab when the sheet has no Released data
   hasCompsTab?: boolean;
   hasConcertsTab?: boolean;
   hasSubAlbumsTab?: boolean;

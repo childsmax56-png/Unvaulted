@@ -1476,6 +1476,16 @@ export function looksLikeRealLink(rawUrl: string): boolean {
   return /:\/\//.test(u) || u.startsWith('/') || /\.(mp3|m4a|wav|ogg|flac|aac|mp4|mov|zip)(\?|$)/i.test(u);
 }
 
+// fileditchfiles.me sits behind a Cloudflare "Managed Challenge" that intercepts
+// every request lacking a browser-solved cf_clearance cookie — an <audio> tag
+// load or a server-side proxy fetch gets back the "Just a moment..." HTML page
+// instead of the file, so these links can never be streamed inline. Treat them
+// like any other non-embeddable host and let the UI open them in a new tab
+// instead of silently failing to play.
+export function isChallengeGatedAudioHost(rawUrl: string): boolean {
+  return rawUrl.includes('fileditchfiles.me');
+}
+
 export function isSongNotAvailable(song: any, rawUrl: string): boolean {
   if (song.quality?.toLowerCase() === 'not available') return true;
   if (!rawUrl) return false;
