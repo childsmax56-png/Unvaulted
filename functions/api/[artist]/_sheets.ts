@@ -648,12 +648,21 @@ const isCountHeaderRow = (era: string): boolean =>
 // JESUS IS KING song would otherwise be indistinguishable from the studio
 // version, so tag its Name cell. ("JESUS IS LORD", the other section the tab
 // uses, is renamed to "God's Country" generically via a.ts's ERA_NAME_MAP.)
+//
+// A fourth bucket, "Unknown", holds performances with no identifiable source
+// era at all — these get their own "Sunday Service Choir" era (matching how
+// yzygold/Suzy already names this bucket) rather than a tag, since there's no
+// real studio era to file them under.
 const SSC_TAG_GIDS = new Set(['1333371598']);
 
 function tagSundayServiceRow(row: string[]): string[] {
   const era = (row[0] || '').trim();
   if (!era || era === 'Jesus Is Born' || isCountHeaderRow(row[0] || '')) return row;
   const tagged = [...row];
+  if (era === 'Unknown') {
+    tagged[0] = 'Sunday Service Choir';
+    return tagged;
+  }
   tagged[1] = `${tagged[1] || ''} (Sunday Service Choir)`;
   return tagged;
 }

@@ -104,6 +104,7 @@ export const yegoldConfig: ArtistConfig = {
     "K.T.S.E.": "https://i.ibb.co/rfZM2kCp/K-T-S-E.jpg",
     "NEVER STOP": "https://i.ibb.co/vC9c5qFM/never-stop.png",
     "Jesus Is Born": "/yegold/JesusIsBorn.jpg",
+    "Sunday Service Choir": "https://i.ibb.co/nN2LDSxN/SSC.jpg",
     "CARTI YE": "/yegold/CartiYe.jpg",
     "Late Orchestration": "https://i.ibb.co/whrYVzkr/Late-Orchestration.jpg",
     "Child Rebel Soldier": "https://i.ibb.co/QFLpkFcz/IMG-3998.png",
@@ -141,6 +142,7 @@ export const yegoldConfig: ArtistConfig = {
     "Yandhi [V2]": "??/??/????",
     "JESUS IS KING": "10/25/2019",
     "Jesus Is Born": "12/25/2019",
+    "Sunday Service Choir": "??/??/????",
     "God's Country": "??/??/????",
     "JESUS IS KING: The Dr. Dre Version": "??/??/????",
     "DONDA [V1]": "07/18/2020",
@@ -168,7 +170,7 @@ export const yegoldConfig: ArtistConfig = {
   // the Released/Tracklists/Art/Stems tabs — kept as Related entries so those
   // tabs' covers still resolve. YE-I/The Elementary School Dropout (present
   // on yzygold's/Suzy's sheet) don't exist anywhere on this one — dropped.
-  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'Jesus Is Born'],
+  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'Jesus Is Born', 'Sunday Service Choir'],
 
   // Sourced from each era's own stat-header description cell on the live sheet
   // (same place the real yetracker.net site draws its own blurbs from) — not
@@ -202,6 +204,7 @@ export const yegoldConfig: ArtistConfig = {
     "Yandhi [V2]": "After Kanye delayed Yandhi indefinitely, he began working with record producer Timbaland to create \"more healing music\" for the album. Shortly after the announcement of the delay, Kanye underwent a sudden and dramatic conversion towards born-again evangelical Christianity, debuting the Sunday Service Choir at the start of 2019. The creation of the choir coincided with the songs on Yandhi taking a new Christian lyrical focus. Eventually, the album would morph into the thoroughly Christian JESUS IS KING by mid-2019.",
     "JESUS IS KING": "Following a revelation on Easter 2019 at Coachella, Kanye scrapped Yandhi and reworked it to focus on God and Christianity. This album ended up being JESUS IS KING. After a private listening party in Detroit, Kim Kardashian announced that the album would release on Sunday, September 29, following listening parties in Chicago and New York. It didn't, and there were no updates for almost a month. On October 20, 2019, Kanye suddenly reappeared on Twitter to announce the final release date.",
     "Jesus Is Born": "First announced on Kanye's interview with Zane Lowe on Apple's Beats 1 Radio station, Jesus Is Born is the first - and only - album from the Sunday Service Choir (also referred to as Sunday Service), a gospel choir founded and led by Kanye West. It would release on Christmas Day 2019, peaking at #2 on the Billboard U.S. Gospel charts, and #73 on the Billboard 200 charts. The album does not have a single original song, as all are interpolations of other artists' songs - or interpolations of Kanye West originals.",
+    "Sunday Service Choir": "Sunday Service Choir rehearsals and performances with no identifiable source era — everything else recorded at Sunday Service is instead filed under whichever studio era it actually belongs to (e.g. Yandhi, God's Country, DONDA [V1]), tagged \"(Sunday Service Choir)\" in its name.",
     "God's Country": "Shortly after the release of JESUS IS KING, Kanye (almost immediately) started working on new material. Songs from this era revolve around his faith while also consisting of dark themes (such as prison) and lyrics about current social issues. Initially announced as God's Country on May 20th, 2020 by Arthur Jafa, tracks from this album would go on to be developed further during DONDA WITH CHILD sessions, following Kanye getting new inspiration to make an album dedicated to his mother.",
     "JESUS IS KING: The Dr. Dre Version": "The release of JESUS IS KING was met with mixed reviews from fans and critics. Kanye then took to Twitter to announce that he was working on a new album with Dr. Dre. Initially conceived as a remix album, it eventually grew to incorporate mainly unreleased material. It was supposed to release officially during the #WESTDAYEVER campaign Kanye did on Twitter in 2020, but never did. It ended up being scrapped sometime in 2020, as stated by producer Dem Jointz. Randomly, Kanye posted an album cover in 2022 on his Instagram story, which is assumed to be for the album.",
     "DONDA [V1]": "With new inspiration to work on an album dedicated to his mother, Kanye continued working on previous demos and new ideas. The music of this era reflects Donda's impact on Kanye in a colorful sound while reflecting his mania and the stress he was going through focusing on his businesses while also running for President and struggling with his marriage. With multiple failed release dates for the album, Kanye went into silence in early 2021, finishing up tracks until the album morphed into something very different.",

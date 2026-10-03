@@ -73,11 +73,16 @@ def tag_sunday_service_row(row):
     """Mirrors tagSundayServiceRow in functions/api/[artist]/_sheets.ts — the
     SSC tab files most of its rows under whichever studio era the song is
     really from, so tag the Name cell to mark it as a Sunday Service Choir
-    recording (its own standalone album, "Jesus Is Born", is left as-is)."""
+    recording (its own standalone album, "Jesus Is Born", is left as-is).
+    "Unknown" rows (no identifiable source era) become their own "Sunday
+    Service Choir" era instead of a tag."""
     era = (row[0] if row else "").strip()
     if not era or era == "Jesus Is Born" or is_count_header(row[0] if row else ""):
         return row
     row = list(row)
+    if era == "Unknown":
+        row[0] = "Sunday Service Choir"
+        return row
     row[1] = f"{row[1] if len(row) > 1 else ''} (Sunday Service Choir)"
     return row
 
