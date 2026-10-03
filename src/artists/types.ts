@@ -97,4 +97,8 @@ export interface ArtistConfig {
   // hide official-only UI like the source-sheet link); `createdBy` is the author.
   community?: boolean;
   createdBy?: string;
+
+  // Other tracker variants for this same artist (different sheet/source). Surfaced as a
+  // picker button on this artist's landing-page card (see AlternateTrackerButton).
+  alternateTrackers?: { slug: string; label: string }[];
 }

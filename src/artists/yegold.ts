@@ -1,22 +1,19 @@
 import type { ArtistConfig } from './types';
 
-// Alternate version of the yzygold (Kanye West) tracker, now backed by
-// yetracker.cc's own Google Sheet (live-synced via SHEET_SOURCES in
-// functions/api/[artist]/_sheets.ts, which also merges its separate
-// "Related" and "SSC" tabs into the Unreleased data — see the comment there).
-export const yetrackergoldConfig: ArtistConfig = {
-  slug: 'yetrackergold',
-  // Temporarily off the landing grid/search/pickers while we sort out the new
-  // sheet's data — still reachable directly at /yetrackergold/. Remove this
-  // flag to bring it back.
-  hidden: true,
+// Default Ye tracker, backed by yetracker.net/.cc's own Google Sheet
+// (live-synced via SHEET_SOURCES in functions/api/[artist]/_sheets.ts, which
+// also merges its separate "Related" and "SSC" tabs into the Unreleased data
+// — see the comment there). The original hand-curated tracker now lives on
+// as the hidden "Suzy" alt (see yzygold.ts, alternateTrackers below).
+export const yegoldConfig: ArtistConfig = {
+  slug: 'yegold',
   hasGroupbuysTab: true,
   hasAlbumCopiesTab: true,
-  SITE_NAME: 'YE (YeTracker.cc Version)',
-  SITE_DESCRIPTION: 'The Kanye West tracker, with links sourced from yetracker.cc',
-  SITE_URL: 'https://unvaulted.cc/yetrackergold/',
+  SITE_NAME: 'YE',
+  SITE_DESCRIPTION: 'The Kanye West tracker, with links sourced from yetracker.net',
+  SITE_URL: 'https://unvaulted.cc/yegold/',
   OG_IMAGE_URL: 'https://i.ibb.co/LhXdRh7j/2026-03-23-T184041-712.png',
-  STORAGE_PREFIX: 'yetrackergold_',
+  STORAGE_PREFIX: 'yegold_',
   HARDCODED_SHEET_ID: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
   HARDCODED_SHEET_GID: '77894385',
   SHEET_URL_UNRELEASED: '',
@@ -24,9 +21,13 @@ export const yetrackergoldConfig: ArtistConfig = {
   hasYeditsTab: true,
   hasCompsTab: false,
   hasSubAlbumsTab: true,
+  alternateTrackers: [
+    { slug: 'yzygold', label: 'Suzy' },
+    { slug: 'yelolgold', label: 'Lol' },
+  ],
   accentColor: '#C9A224',
-  artistLabel: 'Ye (YeTracker.cc)',
-  cardLetter: 'YTC',
+  artistLabel: 'Ye',
+  cardLetter: 'YE',
   logoUrl: '/logos/yzygold.png',
   artistPhotoUrl: '/artists/kanye.jpg',
   navLogoUrl: '/yzygold/logo.png',

@@ -589,7 +589,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       unreleased: '1783689060',
     },
   },
-  yetrackergold: {
+  yegold: {
     sheetId: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
     gids: {
       unreleased: '34972268',
@@ -599,11 +599,31 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       tracklists: '1372270223',
       'album-copies': '1297512832',
       misc: '70063278',
+      art: '1219860820',
+      fakes: '61838480',
+      groupbuys: '1022200924',
+    },
+  },
+  yelolgold: {
+    sheetId: '1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA',
+    gids: {
+      unreleased: '199908479',
+      released: '1295931150',
+      recent: '689133373',
+      tracklists: '1372270223',
+      stems: '495336364',
+      'album-copies': '1297512832',
+      'music-videos': '837199839',
+      misc: '70063278',
+      art: '1659647236',
+      fakes: '61838480',
+      groupbuys: '1022200924',
+      individual: '1333371598', // Sunday Service Choir sub-tab
     },
   },
 };
 
-// yetrackergold's source sheet splits some hidden/"Related" albums out into their
+// yegold's source sheet splits some hidden/"Related" albums out into their
 // own tabs instead of keeping them in the main Unreleased tab: DAYTONA/NASIR/K.T.S.E.
 // live in a "Related" tab (gid 520283965), Jesus Is Born/Sunday Service Choir live in
 // an "SSC" tab (gid 1333371598). Both tabs use the same 9-column layout as the main
@@ -611,7 +631,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
 // "Available Length"/"Quality" — but positionally identical), so their data rows are
 // appended under the Unreleased tab's own header rather than fetched as separate tabs.
 const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
-  yetrackergold: ['520283965', '1333371598'],
+  yegold: ['520283965', '1333371598'],
 };
 
 async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {

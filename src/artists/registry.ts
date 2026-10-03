@@ -1,6 +1,7 @@
 import type { ArtistConfig } from './types';
 import { yzygoldConfig } from './yzygold';
-import { yetrackergoldConfig } from './yetrackergold';
+import { yegoldConfig } from './yegold';
+import { yelolgoldConfig } from './yelolgold';
 import { vampgoldConfig } from './vampgold';
 import { kdotgoldConfig } from './kdotgold';
 import { drizzygoldConfig } from './drizzygold';
@@ -65,8 +66,9 @@ import { wutanggoldConfig } from './wutanggold';
 
 export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   // Featured + pinned lineup drives the landing page order (see LandingPage.tsx)
-  yzygold: yzygoldConfig,        // Featured (Ye)
-  yetrackergold: yetrackergoldConfig, // Ye, alternate version using yetracker.cc links
+  yegold: yegoldConfig,          // Featured (Ye) — default tracker, yetracker.net/.cc links
+  yzygold: yzygoldConfig,        // Ye alt ("Suzy") — hidden, reachable via yegold's picker
+  yelolgold: yelolgoldConfig,    // Ye alt ("Lol") — hidden, reachable via yegold's picker
   vampgold: vampgoldConfig,      // Pinned: Playboi Carti
   wolfgold: wolfgoldConfig,      // Pinned: Tyler, The Creator
   aapgold: aapgoldConfig,        // Pinned: A$AP Rocky

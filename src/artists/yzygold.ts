@@ -2,6 +2,10 @@ import type { ArtistConfig } from './types';
 
 export const yzygoldConfig: ArtistConfig = {
   slug: 'yzygold',
+  // Demoted to an alternate ("Suzy") now that yegold (yetracker.net) is the
+  // default Ye tracker — still fully functional at /yzygold/, just off the
+  // landing grid/search. Reachable via the picker on yegold's homepage card.
+  hidden: true,
   hasGroupbuysTab: true,
   hasAlbumCopiesTab: true,
   SITE_NAME: 'YƵYGOLD',
@@ -16,8 +20,12 @@ export const yzygoldConfig: ArtistConfig = {
   hasYeditsTab: true,
   hasCompsTab: false,
   hasSubAlbumsTab: true,
+  alternateTrackers: [
+    { slug: 'yegold', label: 'Official' },
+    { slug: 'yelolgold', label: 'Lol' },
+  ],
   accentColor: '#C9A224',
-  artistLabel: 'Ye',
+  artistLabel: 'Suzy',
   sheetCreator: 'nicole, scarfvass',
   cardLetter: 'YZY',
   logoUrl: '/logos/yzygold.png',

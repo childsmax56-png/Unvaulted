@@ -8,6 +8,7 @@ import { useSettings, LOADING_SCREENS } from './SettingsContext';
 import { Img } from './utils';
 import { useHasActiveAudio } from './player/audioStore';
 import { fetchGlobalVisitCounts, getUserVisitCounts, type VisitCounts } from './visits';
+import { AlternateTrackerButton } from './components/AlternateTrackerButton';
 
 type SortMode = 'featured' | 'az' | 'popular' | 'yours';
 const SORT_OPTIONS: { id: SortMode; label: string }[] = [
@@ -698,8 +699,11 @@ function EditorialArtistCard({ config, showPhoto, variant, isFavorite, onToggleF
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: config.photoObjectPosition ?? 'top center' }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 55%, transparent 100%)' }} />
-        <div style={{ position: 'absolute', top: 10, right: 10, width: 7, height: 7, borderRadius: '50%', background: accent }} />
+        {!config.alternateTrackers?.length && (
+          <div style={{ position: 'absolute', top: 10, right: 10, width: 7, height: 7, borderRadius: '50%', background: accent }} />
+        )}
         {onToggleFavorite && <FavoriteButton active={!!isFavorite} onToggle={handleToggleFavorite} />}
+        <AlternateTrackerButton config={config} />
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: CARD_PADDING[variant] }}>
           {variant === 'featured' && (
             <div style={{ display: 'inline-block', fontSize: 9, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'rgba(201,162,36,0.25)', color: '#C9A224', padding: '2px 7px', borderRadius: 4, marginBottom: 6 }}>Featured</div>
@@ -727,6 +731,7 @@ function EditorialArtistCard({ config, showPhoto, variant, isFavorite, onToggleF
       }}
     >
       {onToggleFavorite && <FavoriteButton active={!!isFavorite} onToggle={handleToggleFavorite} />}
+      <AlternateTrackerButton config={config} />
       <div>
         {variant === 'featured' && (
           <div style={{ display: 'inline-block', fontSize: 9, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', background: `${accent}20`, color: accent, padding: '2px 7px', borderRadius: 4, marginBottom: 10 }}>Featured</div>
@@ -853,7 +858,8 @@ function BigLinkCard({ href, accent, badge, titleMain, titleAccent, subtitle, wa
 
 const SHEET_URLS: Record<string, string> = {
   yzygold:    'https://docs.google.com/spreadsheets/d/12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM/edit?gid=199908479#gid=199908479',
-  yetrackergold: 'https://docs.google.com/spreadsheets/d/1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo/edit?gid=34972268#gid=34972268',
+  yegold:     'https://docs.google.com/spreadsheets/d/1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo/edit?gid=34972268#gid=34972268',
+  yelolgold:  'https://docs.google.com/spreadsheets/d/1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA/edit?gid=199908479#gid=199908479',
   vampgold:   'https://docs.google.com/spreadsheets/d/1Irtfvymu26CShYowLMMfD-rM0o9CJqE6-BBSlYsAaF4/edit?gid=0#gid=0',
   wolfgold:   'https://docs.google.com/spreadsheets/d/19GJTNp7PxK1OtyVBmGelZSMm5i8Fy82EGtcFdIkBpsY/edit?gid=1246511510#gid=1246511510',
   drizzygold: 'https://docs.google.com/spreadsheets/d/1v55XAPLzw1iuWxH1OQKajCIYPhW2BXcLoV4mXDZ55DI/edit?gid=755606328#gid=755606328',
