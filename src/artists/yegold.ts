@@ -132,11 +132,8 @@ export const yegoldConfig: ArtistConfig = {
     "Cruel Winter [V2]": "??/??/????",
     "Turbo Grafix 16": "??/??/2016",
     "LOVE EVERYONE": "??/??/2018",
-    "DAYTONA": "05/25/2018",
     "ye": "06/01/2018",
     "KIDS SEE GHOSTS": "06/08/2018",
-    "NASIR": "06/15/2018",
-    "K.T.S.E.": "06/23/2018",
     "Good Ass Job (2018)": "??/??/2018",
     "Yandhi [V1]": "??/??/2018",
     "Yandhi [V2]": "??/??/????",
@@ -159,18 +156,20 @@ export const yegoldConfig: ArtistConfig = {
     "BULLY [V1]": "03/18/2025",
     "CUCK": "03/06/2025",
     "DONDA 2 [V2]": "04/29/2025",
-    "NEVER STOP": "06/27/2025",
     "IN A PERFECT WORLD": "06/22/2025",
     "BULLY [V2]": "03/28/2026",
     "Ongoing": "??/??/????",
   },
 
-  // DAYTONA/NASIR/K.T.S.E./NEVER STOP have no Unreleased-tab leak rows on the
-  // real sheet, but they're real, officially-released albums with content in
-  // the Released/Tracklists/Art/Stems tabs — kept as Related entries so those
-  // tabs' covers still resolve. YE-I/The Elementary School Dropout (present
-  // on yzygold's/Suzy's sheet) don't exist anywhere on this one — dropped.
-  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'Jesus Is Born', 'Sunday Service Choir'],
+  // DAYTONA/NASIR/K.T.S.E./NEVER STOP are NOT eras here (unlike Jesus Is Born/
+  // Sunday Service Choir below) — they have no Unreleased-tab leak rows
+  // anywhere on the real sheet, so listing them would just show as empty "0
+  // songs" cards in the Related tab. They still have a CUSTOM_IMAGES entry
+  // above, since the Released/Tracklists/Art/Stems tabs reference those names
+  // directly and look covers up independent of this list. YE-I/The
+  // Elementary School Dropout (present on yzygold's/Suzy's sheet) don't exist
+  // anywhere on this one at all — dropped entirely.
+  HIDDEN_ALBUMS: ['Jesus Is Born', 'Sunday Service Choir'],
 
   // Sourced from each era's own stat-header description cell on the live sheet
   // (same place the real yetracker.net site draws its own blurbs from) — not
