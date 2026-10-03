@@ -41,8 +41,58 @@ export const yelolgoldConfig: ArtistConfig = {
     return 'Kanye West';
   },
 
+  // Ported from yegold (.net, preferred) and yzygold (Suzy, fallback for the
+  // two eras yegold no longer tracks under these exact names — see the note
+  // above ALBUM_RELEASE_DATES). Not every yelolgold era maps 1:1 to yegold's
+  // post-audit names (e.g. yelolgold's sheet still uses "Bad Bitch Playbook"
+  // rather than "¥$", confirmed against its own live data), so these are
+  // keyed to match yelolgold's own ALBUM_RELEASE_DATES, not yegold's.
   CUSTOM_IMAGES: {
-    'Jesus Is Born': '/yegold/JesusIsBorn.jpg',
+    "Before The College Dropout": "https://i.ibb.co/kpk9TzL/image-2026-05-04-074305465.png",
+    "The College Dropout": "https://i.ibb.co/mrK8W4rL/image-2026-03-22-142639537.png",
+    "Late Registration": "https://i.ibb.co/QvNMHS7f/image-2026-05-04-074325717.png",
+    "Graduation": "https://i.ibb.co/gZmLyhpD/image-2026-05-04-074348808.png",
+    "808s & Heartbreak": "https://i.ibb.co/gL1jHjxD/image-2026-05-04-074412180.png",
+    "Good Ass Job": "https://i.ibb.co/zWDJvnF3/image-2026-05-04-074429956.png",
+    "My Beautiful Dark Twisted Fantasy": "https://i.ibb.co/nMhS9cfq/image-2026-05-04-074450433.png",
+    "Watch The Throne": "https://i.ibb.co/Gvh0rdt/ea89bace-a565-4fd7-aec2-de7f2a0341a2.jpg",
+    "Cruel Summer": "https://i.ibb.co/wr7sS6DH/cell-Image-199908479-8.png",
+    "Thank God For Drugs": "https://i.ibb.co/G32JPb2w/image-2026-05-04-074528355.png", // yzygold (yegold now folds this into Yeezus's alt-name)
+    "Yeezus": "https://i.ibb.co/54tTPvy/YEEZUS-COVER-1-scaled.jpg",
+    "Cruel Winter [V1]": "/yzygold/CruelWinterV1.jpeg",
+    "Yeezus 2": "https://i.ibb.co/gL2VPWGD/image-2026-05-04-074633664.png",
+    "So Help Me God": "https://i.ibb.co/Lz3b2xDD/cell-Image-199908479-13.png",
+    "SWISH": "https://i.ibb.co/vvdd31rM/image-2026-05-04-074736182.png",
+    "The Life Of Pablo": "https://i.ibb.co/n8DkztcP/image-2026-03-22-142914834.png",
+    "Cruel Winter [V2]": "https://i.ibb.co/bjFdyLjv/image-2026-04-28-131805413.png",
+    "Turbo Grafx 16": "https://i.ibb.co/q3fggHMz/image-2026-03-22-143044324.png",
+    "LOVE EVERYONE": "https://i.ibb.co/Tq7HkRKn/cell-Image-199908479-18.png",
+    "DAYTONA": "https://i.ibb.co/1fX0N137/Daytona.jpg",
+    "ye": "https://i.ibb.co/4ffBbzd/0a170099-f725-41f6-88a9-c28ab2a6bdb8.jpg",
+    "KIDS SEE GHOSTS": "https://i.ibb.co/xsRLz4k/28ef3e62-abba-4064-9dd7-44dd37803981.jpg",
+    "Good Ass Job (2018)": "https://i.ibb.co/Y4tB29pw/image-2026-05-04-075000044.png",
+    "Yandhi [V1]": "https://yetracker.cc/img/9382ca79345e3a764d6f08ac9bc86898",
+    "Yandhi [V2]": "https://yetracker.cc/img/ac5edf6afc2f81a5613a5292f137e548",
+    "JESUS IS KING": "https://i.ibb.co/6cPT40L6/image-2026-05-04-075046079.png",
+    "God's Country": "https://yetracker.cc/img/b05c530912bbca7eab6931b3fe87493e",
+    "JESUS IS KING: The Dr. Dre Version": "https://yetracker.cc/img/b10a2746d60af89082ee3fe20fd60a36",
+    "DONDA [V1]": "https://i.ibb.co/8rV5JJ3/children-park-manip-retouched.jpg",
+    "Donda [V2]": "https://i.ibb.co/JjzVyMvT/image-2026-05-04-075158690.png",
+    "Donda [V3]": "https://i.ibb.co/YX9xy2p/19e339a4-33e0-46ec-bd90-0e4ed62932cc.jpg",
+    "Jesus Is Born": "/yegold/JesusIsBorn.jpg",
+    "DONDA 2 [V1]": "https://i.ibb.co/27D2fTXM/image-2026-05-04-075245507.png",
+    "WAR": "https://i.ibb.co/93mVjHZV/WAR-youtube-thumbnail.png",
+    "YEBU": "https://i.ibb.co/vxTD8nVh/image-2026-05-04-075337930.png",
+    "Bad Bitch Playbook": "https://i.ibb.co/jknzBvyZ/image.png", // yzygold (yegold renamed this era to "¥$")
+    "VULTURES 1": "https://i.ibb.co/5hFN28jM/cell-Image-199908479-37.png",
+    "VULTURES 2": "https://i.ibb.co/35h4bhzG/image-2026-05-04-075431548.png",
+    "VULTURES 3": "https://yetracker.cc/img/9c928643e77b50cd0f0e71ea740e6a53",
+    "BULLY [V1]": "https://a5.mzstatic.com/us/r1000/0/Music221/v4/4b/38/d1/4b38d146-381d-ace2-73df-24074576e62b/656465138828_cover.jpg",
+    "CUCK": "https://yetracker.cc/img/f67f57cf09620b30726b0b7df91a65b8",
+    "DONDA 2 [V2]": "https://i.ibb.co/b5ZNpDXk/cover.jpg",
+    "IN A PERFECT WORLD": "https://i.ibb.co/Fqd2crvz/iapwcover.png",
+    "BULLY [V2]": "https://i.ibb.co/pBfL20KJ/HLNl-Xx-Ubs-AAaz-S8.jpg",
+    "Ongoing": "https://i.ibb.co/dwZ4cwmd/image-2026-04-27-185921217.png",
   },
 
   ALBUM_RELEASE_DATES: {
