@@ -69,21 +69,31 @@ def is_junk_row(era, name):
     return era.strip().lower() == "tracker news" or "apply for tracker editor" in name.lower()
 
 
+SSC_ERA_DISPLAY_NAMES = {
+    "JESUS IS LORD": "God's Country",
+    "DONDA 2": "DONDA 2 [V1]",
+}
+
+
 def tag_sunday_service_row(row):
     """Mirrors tagSundayServiceRow in functions/api/[artist]/_sheets.ts — the
-    SSC tab files most of its rows under whichever studio era the song is
-    really from, so tag the Name cell to mark it as a Sunday Service Choir
-    recording (its own standalone album, "Jesus Is Born", is left as-is).
-    "Unknown" rows (no identifiable source era) become their own "Sunday
-    Service Choir" era instead of a tag."""
+    SSC tab marks each row's studio origin in the Era column instead of
+    filing it under its own name (except the choir's own standalone album,
+    "Jesus Is Born", which keeps its own section). Every other row collapses
+    into one "Sunday Service Choir" era, with its original Era value folded
+    into the Name cell as a tag instead."""
     era = (row[0] if row else "").strip()
-    if not era or era == "Jesus Is Born" or is_count_header(row[0] if row else ""):
+    name = (row[1] if len(row) > 1 else "").strip()
+    # Skip header/disclaimer rows (e.g. "This tab only tracks Sunday Service
+    # Choir..."), which have no Name — only their long sentence sits in the
+    # Era cell, which would otherwise get renamed into a fake tagged "song".
+    if not era or not name or era == "Jesus Is Born" or is_count_header(row[0] if row else ""):
         return row
     row = list(row)
-    if era == "Unknown":
-        row[0] = "Sunday Service Choir"
-        return row
-    row[1] = f"{row[1] if len(row) > 1 else ''} (Sunday Service Choir)"
+    if era != "Unknown":
+        display_era = SSC_ERA_DISPLAY_NAMES.get(era, era)
+        row[1] = f"{row[1] if len(row) > 1 else ''} ({display_era})"
+    row[0] = "Sunday Service Choir"
     return row
 
 

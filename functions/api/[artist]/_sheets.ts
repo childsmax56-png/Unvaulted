@@ -640,30 +640,37 @@ const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
 const isCountHeaderRow = (era: string): boolean =>
   era.includes('\n') && /\b(Full|Tagged|Partial|OG|Snippet|Unavailable)\b/i.test(era);
 
-// The SSC ("Sunday Service Choir") tab shared by yegold/yelolgold files most of
-// its rows under whichever studio era the song was originally from (Yandhi,
-// JESUS IS KING, DONDA [V1], ...) rather than under its own name — only the
-// choir's own standalone album, "Jesus Is Born", keeps its own section. Once
-// merged into the main Unreleased tab, a Sunday Service rendition of e.g. a
-// JESUS IS KING song would otherwise be indistinguishable from the studio
-// version, so tag its Name cell. ("JESUS IS LORD", the other section the tab
-// uses, is renamed to "God's Country" generically via a.ts's ERA_NAME_MAP.)
-//
-// A fourth bucket, "Unknown", holds performances with no identifiable source
-// era at all — these get their own "Sunday Service Choir" era (matching how
-// yzygold/Suzy already names this bucket) rather than a tag, since there's no
-// real studio era to file them under.
+// The SSC ("Sunday Service Choir") tab shared by yegold/yelolgold marks each
+// row's studio origin (Yandhi, JESUS IS KING, DONDA [V1], "Unknown" if
+// unidentified, ...) in the Era column instead of filing it under its own
+// name — except the choir's own standalone album, "Jesus Is Born", which
+// keeps its own section. Every other row collapses into one "Sunday Service
+// Choir" era (matching yzygold/Suzy), with the row's original Era value
+// folded into the song's name as a tag instead, so you can still tell a
+// Sunday Service rendition of e.g. a JESUS IS KING song apart from another
+// one recorded during Yandhi — without it being scattered across those
+// albums' own separate pages. Display names are normalized the same way
+// a.ts's ERA_NAME_MAP would (e.g. "JESUS IS LORD" -> "God's Country").
 const SSC_TAG_GIDS = new Set(['1333371598']);
+
+const SSC_ERA_DISPLAY_NAMES: Record<string, string> = {
+  'JESUS IS LORD': "God's Country",
+  'DONDA 2': 'DONDA 2 [V1]',
+};
 
 function tagSundayServiceRow(row: string[]): string[] {
   const era = (row[0] || '').trim();
-  if (!era || era === 'Jesus Is Born' || isCountHeaderRow(row[0] || '')) return row;
+  const name = (row[1] || '').trim();
+  // Skip header/disclaimer rows (e.g. "This tab only tracks Sunday Service
+  // Choir..."), which have no Name — only their long sentence sits in the Era
+  // cell, which would otherwise get renamed into a fake tagged "song".
+  if (!era || !name || era === 'Jesus Is Born' || isCountHeaderRow(row[0] || '')) return row;
   const tagged = [...row];
-  if (era === 'Unknown') {
-    tagged[0] = 'Sunday Service Choir';
-    return tagged;
+  if (era !== 'Unknown') {
+    const displayEra = SSC_ERA_DISPLAY_NAMES[era] ?? era;
+    tagged[1] = `${tagged[1] || ''} (${displayEra})`;
   }
-  tagged[1] = `${tagged[1] || ''} (Sunday Service Choir)`;
+  tagged[0] = 'Sunday Service Choir';
   return tagged;
 }
 
