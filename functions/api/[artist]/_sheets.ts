@@ -658,12 +658,38 @@ function tagSundayServiceRow(row: string[]): string[] {
   return tagged;
 }
 
+const normalizeHeader = (h: string): string => (h || '').replace(/\n/g, ' ').trim().toLowerCase();
+
+// The SSC tab has an extra "Type" column (10 columns vs. the Unreleased tab's
+// 9) positioned before "Available Length", so appending its rows as-is shifts
+// Available Length/Quality/Link(s) left by one and silently drops the real
+// link — this remaps each extra row to the base header's column order by
+// header name instead of assuming identical positions.
+function remapRowToBaseHeader(baseHeaders: string[], extraHeaders: string[], row: string[]): string[] {
+  const normExtra = extraHeaders.map(normalizeHeader);
+  return baseHeaders.map(bh => {
+    const normBase = normalizeHeader(bh);
+    let idx = normExtra.indexOf(normBase);
+    if (idx === -1) {
+      // "Track Length" (base) vs "Length" (extra) and similar: match on the
+      // base header's last significant word.
+      const lastWord = normBase.split(' ').pop() || normBase;
+      idx = normExtra.indexOf(lastWord);
+    }
+    if (idx === -1) {
+      idx = normExtra.findIndex(eh => eh.includes(normBase) || normBase.includes(eh));
+    }
+    return idx !== -1 && idx < row.length ? row[idx] : '';
+  });
+}
+
 async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {
   const extraGids = EXTRA_UNRELEASED_GIDS[artist];
   const src = SHEET_SOURCES[artist];
   if (!extraGids || !src) return baseCsv;
 
   const rows = splitCSVRows(baseCsv);
+  const baseHeaders = rows[0] ?? [];
   for (const gid of extraGids) {
     try {
       const res = await fetch(
@@ -673,9 +699,14 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promis
       if (!res.ok) continue;
       const text = await res.text();
       if (!isCsvText(text)) continue;
-      let extraRows = splitCSVRows(text)
+      const extraAll = splitCSVRows(text);
+      const extraHeaders = extraAll[0] ?? [];
+      const sameLayout = extraHeaders.length === baseHeaders.length
+        && extraHeaders.every((h, i) => normalizeHeader(h) === normalizeHeader(baseHeaders[i]));
+      let extraRows = extraAll
         .slice(1) // drop this tab's own header row — reuse the Unreleased tab's header
         .filter(row => row.some(cell => cell.trim() !== ''));
+      if (!sameLayout) extraRows = extraRows.map(row => remapRowToBaseHeader(baseHeaders, extraHeaders, row));
       if (SSC_TAG_GIDS.has(gid)) extraRows = extraRows.map(tagSundayServiceRow);
       rows.push(...extraRows);
     } catch {
