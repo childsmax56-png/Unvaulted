@@ -858,7 +858,7 @@ function BigLinkCard({ href, accent, badge, titleMain, titleAccent, subtitle, wa
 
 const SHEET_URLS: Record<string, string> = {
   yzygold:    'https://docs.google.com/spreadsheets/d/12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM/edit?gid=199908479#gid=199908479',
-  yegold:     'https://docs.google.com/spreadsheets/d/1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo/edit?gid=34972268#gid=34972268',
+  yegold:     'https://docs.google.com/spreadsheets/d/1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y/edit?gid=34972268#gid=34972268',
   yelolgold:  'https://docs.google.com/spreadsheets/d/1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA/edit?gid=199908479#gid=199908479',
   vampgold:   'https://docs.google.com/spreadsheets/d/1Irtfvymu26CShYowLMMfD-rM0o9CJqE6-BBSlYsAaF4/edit?gid=0#gid=0',
   wolfgold:   'https://docs.google.com/spreadsheets/d/19GJTNp7PxK1OtyVBmGelZSMm5i8Fy82EGtcFdIkBpsY/edit?gid=1246511510#gid=1246511510',

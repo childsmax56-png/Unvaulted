@@ -1,10 +1,18 @@
 import type { ArtistConfig } from './types';
 
-// Default Ye tracker, backed by yetracker.net/.cc's own Google Sheet
+// Default Ye tracker, backed by yetracker.net's own Google Sheet
 // (live-synced via SHEET_SOURCES in functions/api/[artist]/_sheets.ts, which
-// also merges its separate "Related" and "SSC" tabs into the Unreleased data
-// — see the comment there). The original hand-curated tracker now lives on
-// as the hidden "Suzy" alt (see yzygold.ts, alternateTrackers below).
+// also merges its separate "SSC" tab into the Unreleased data — see the
+// comment there). The original hand-curated tracker now lives on as the
+// hidden "Suzy" alt (see yzygold.ts, alternateTrackers below).
+//
+// HARDCODED_SHEET_ID was previously a stale fork of the real document (same
+// gids, since it was a copy, but diverged cell data — e.g. it never got the
+// real sheet's later "CARTI YE" era). The real id was recovered by scraping
+// yetracker.net's own reverse-proxy view (https://yetracker.net/htmlview/sheet),
+// which embeds it as a "Sheet Link" in the Name column's header cell; unlike
+// yetracker.net's own domain, the real doc is a normal public Google Sheet
+// with a working CSV export. See scripts/build-yegold-csvs.py.
 export const yegoldConfig: ArtistConfig = {
   slug: 'yegold',
   hasGroupbuysTab: true,
@@ -14,10 +22,10 @@ export const yegoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/yegold/',
   OG_IMAGE_URL: 'https://i.ibb.co/LhXdRh7j/2026-03-23-T184041-712.png',
   STORAGE_PREFIX: 'yegold_',
-  HARDCODED_SHEET_ID: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
+  HARDCODED_SHEET_ID: '1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y',
   HARDCODED_SHEET_GID: '77894385',
   SHEET_URL_UNRELEASED: '',
-  SHEET_URL_RECENT: 'https://docs.google.com/spreadsheets/d/1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo/export?format=csv&gid=77894385',
+  SHEET_URL_RECENT: 'https://docs.google.com/spreadsheets/d/1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y/export?format=csv&gid=77894385',
   hasYeditsTab: true,
   hasCompsTab: false,
   hasSubAlbumsTab: true,
@@ -91,12 +99,8 @@ export const yegoldConfig: ArtistConfig = {
     "VULTURES 1": "https://i.ibb.co/5hFN28jM/cell-Image-199908479-37.png",
     "Cruel Winter [V2]": "https://i.ibb.co/bjFdyLjv/image-2026-04-28-131805413.png",
     "Ongoing": "https://i.ibb.co/dwZ4cwmd/image-2026-04-27-185921217.png",
-    "DAYTONA": "https://i.ibb.co/1fX0N137/Daytona.jpg",
-    "NASIR": "https://a5.mzstatic.com/us/r1000/0/Music125/v4/f9/41/a9/f941a9d4-099d-4b65-484a-e585136ca838/18UMGIM37154.rgb.jpg",
-    "K.T.S.E.": "https://i.ibb.co/rfZM2kCp/K-T-S-E.jpg",
-    "NEVER STOP": "https://i.ibb.co/vC9c5qFM/never-stop.png",
     "Jesus Is Born": "https://i.ibb.co/nN2LDSxN/SSC.jpg",
-    "Sunday Service Choir": "https://i.ibb.co/nN2LDSxN/SSC.jpg",
+    "JESUS IS LORD": "https://i.ibb.co/nN2LDSxN/SSC.jpg",
     "Late Orchestration": "https://i.ibb.co/whrYVzkr/Late-Orchestration.jpg",
     "Child Rebel Soldier": "https://i.ibb.co/QFLpkFcz/IMG-3998.png",
     "BULLY": "https://a5.mzstatic.com/us/r1000/0/Music221/v4/4b/38/d1/4b38d146-381d-ace2-73df-24074576e62b/656465138828_cover.jpg",
@@ -123,16 +127,14 @@ export const yegoldConfig: ArtistConfig = {
     "Cruel Winter [V2]": "??/??/????",
     "Turbo Grafix 16": "??/??/2016",
     "LOVE EVERYONE": "??/??/2018",
-    "DAYTONA": "05/25/2018",
     "ye": "06/01/2018",
     "KIDS SEE GHOSTS": "06/08/2018",
-    "NASIR": "06/15/2018",
-    "K.T.S.E.": "06/23/2018",
     "Good Ass Job (2018)": "??/??/2018",
     "Yandhi [V1]": "??/??/2018",
     "Yandhi [V2]": "??/??/????",
     "JESUS IS KING": "10/25/2019",
     "Jesus Is Born": "12/25/2019",
+    "JESUS IS LORD": "??/??/????",
     "God's Country": "??/??/????",
     "JESUS IS KING: The Dr. Dre Version": "??/??/????",
     "DONDA [V1]": "07/18/2020",
@@ -149,25 +151,19 @@ export const yegoldConfig: ArtistConfig = {
     "BULLY [V1]": "03/18/2025",
     "CUCK": "03/06/2025",
     "DONDA 2 [V2]": "04/29/2025",
-    "NEVER STOP": "06/27/2025",
     "IN A PERFECT WORLD": "06/22/2025",
     "BULLY [V2]": "03/28/2026",
     "Ongoing": "??/??/????",
   },
 
-  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'Jesus Is Born', 'Sunday Service Choir'],
+  // DAYTONA/NASIR/K.T.S.E./NEVER STOP/YE-I/The Elementary School Dropout — all
+  // present on yzygold's (Suzy's) sheet — don't exist as eras on the real
+  // yetracker.net document at all; Sunday Service Choir content there is
+  // split across two real eras instead, both kept out of the main grid.
+  HIDDEN_ALBUMS: ['Jesus Is Born', 'JESUS IS LORD'],
 
   ALBUM_DESCRIPTIONS: {
-    "CARTI YE": "A collaborative mixtape between Ye and Playboi Carti. The two linked up for the \"2024\" music video shoot on 12/13/2023, and the project's existence was later confirmed by Ye before being scrapped on 03/15/2025 — most of the recorded material has since been folded into VULTURES 2.",
-  },
-
-  // CARTI YE currently has no songs tagged to it in the source sheet (its
-  // material is filed under VULTURES 2) — the disclaimer keeps the era card
-  // visible in the main grid instead of being hidden as "empty".
-  ERA_DISCLAIMERS: {
-    "CARTI YE": {
-      text: 'Scrapped — its recorded material is currently tagged under VULTURES 2 on the source sheet.',
-    },
+    "CARTI YE": "A collaborative mixtape between Ye and Playboi Carti. The two linked up for the \"2024\" music video shoot on 12/13/2023, and the project's existence was later confirmed by Ye before being scrapped on 03/15/2025.",
   },
 
   ALBUM_SONG_COUNTS: {},
@@ -178,6 +174,8 @@ export const yegoldConfig: ArtistConfig = {
     "BULLY": "BULLY [V1]",
     "Bully": "BULLY [V1]",
     "Donda [V1]": "DONDA [V1]",
+    "Hitler": "LOVE EVERYONE",
+    "DONDA 2": "DONDA 2 [V1]",
   },
 
   TAG_MAP: {

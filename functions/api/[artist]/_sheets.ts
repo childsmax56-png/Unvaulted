@@ -590,7 +590,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
     },
   },
   yegold: {
-    sheetId: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
+    sheetId: '1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y',
     gids: {
       unreleased: '34972268',
       released: '762588265',
@@ -623,15 +623,17 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
 };
 
-// yegold's source sheet splits some hidden/"Related" albums out into their
-// own tabs instead of keeping them in the main Unreleased tab: DAYTONA/NASIR/K.T.S.E.
-// live in a "Related" tab (gid 520283965), Jesus Is Born/Sunday Service Choir live in
-// an "SSC" tab (gid 1333371598). Both tabs use the same 9-column layout as the main
-// Unreleased tab (columns renamed/typo'd in places — e.g. "Type"/"Qualtiy" instead of
-// "Available Length"/"Quality" — but positionally identical), so their data rows are
-// appended under the Unreleased tab's own header rather than fetched as separate tabs.
+// yegold's source sheet splits its Sunday Service Choir content out into its
+// own "SSC" tab (gid 1333371598) instead of keeping it in the main Unreleased
+// tab. It uses the same 9-column layout as the main Unreleased tab, so its
+// data rows are appended under the Unreleased tab's own header rather than
+// fetched as a separate tab.
+//
+// (The stale fork of this sheet also had a "Related" tab, gid 520283965, for
+// DAYTONA/NASIR/K.T.S.E. — the real document has no such tab at all; those
+// eras don't exist on it.)
 const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
-  yegold: ['520283965', '1333371598'],
+  yegold: ['1333371598'],
 };
 
 async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {

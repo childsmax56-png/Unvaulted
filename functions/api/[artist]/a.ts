@@ -28,6 +28,11 @@ function parseSongName(raw: string): { name: string; extra: string | undefined }
 const ERA_NAME_MAP: Record<string, string> = {
   'Turbo Grafx 16': 'Turbo Grafix 16',
   'Turbo Grafx-16': 'Turbo Grafix 16',
+  // yegold — the real sheet titles the era "Hitler" directly (Ye's own name for
+  // it) rather than the "LOVE EVERYONE" title used everywhere else in the app;
+  // a stray 2-song "DONDA 2" row from the SSC merge tab folds into DONDA 2 [V1].
+  'Hitler': 'LOVE EVERYONE',
+  'DONDA 2': 'DONDA 2 [V1]',
   'KIDS SEE GHOSTS': 'KIDS SEE GHOSTS',
   'KIDS SEE GHOST': 'KIDS SEE GHOSTS',
   'KIDSSEEGHOSTS': 'KIDS SEE GHOSTS',
