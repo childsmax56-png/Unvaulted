@@ -33,7 +33,7 @@ GIDS = {
     "art": "1659647236",
     "fakes": "61838480",
     "groupbuys": "1022200924",
-    "individual": "1333371598",  # Sunday Service Choir sub-tab
+    "individual": "1333371598",  # SSC tab — merged into unreleased, see tag_sunday_service_row
 }
 
 RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
@@ -66,6 +66,19 @@ def is_junk_row(era, name):
     'Tracker News: Apply For Tracker Editor Here!' row every fork of this
     sheet seems to carry at the top of each tab)."""
     return era.strip().lower() == "tracker news" or "apply for tracker editor" in name.lower()
+
+
+def tag_sunday_service_row(row):
+    """Mirrors tagSundayServiceRow in functions/api/[artist]/_sheets.ts — the
+    SSC tab files most of its rows under whichever studio era the song is
+    really from, so tag the Name cell to mark it as a Sunday Service Choir
+    recording (its own standalone album, "Jesus Is Born", is left as-is)."""
+    era = (row[0] if row else "").strip()
+    if not era or era == "Jesus Is Born" or is_count_header(row[0] if row else ""):
+        return row
+    row = list(row)
+    row[1] = f"{row[1] if len(row) > 1 else ''} (Sunday Service Choir)"
+    return row
 
 
 def merge_notes(*parts):
@@ -436,6 +449,9 @@ def main():
     print(f"Building {SLUG} from sheet {SHEET_ID}")
 
     unrel = build_unreleased(fetch_rows(GIDS["unreleased"]))
+    ssc_rows = [tag_sunday_service_row(r) for r in build_unreleased(fetch_rows(GIDS["individual"]))]
+    unrel.extend(ssc_rows)
+    print(f"    (merged ssc: {len(ssc_rows)} rows)")
     write_csv(data_dir, "unreleased.csv", UNREL_HEADER, unrel)
 
     rows = build_released(fetch_rows(GIDS["released"]))
@@ -465,15 +481,15 @@ def main():
         if rows:
             write_csv(data_dir, f"{tab}.csv", rows[0], rows[1:])
 
-    # Sunday Service Choir sub-tab -> "individual" (hasIndividualProjectsTab)
-    rows = build_unreleased(fetch_rows(GIDS["individual"]))
-    write_csv(data_dir, "individual.csv", UNREL_HEADER, rows)
-
     eras = derive_eras(unrel)
-    cfg = gen_config(eras)
-    with open(os.path.join(ROOT, "src", "artists", f"{SLUG}.ts"), "w", encoding="utf-8") as f:
-        f.write(cfg)
-    print(f"src/artists/{SLUG}.ts: {len(eras)} eras")
+    print(f"{len(eras)} eras in unreleased.csv (src/artists/{SLUG}.ts is now hand-maintained —")
+    print("re-run with WRITE_CONFIG=1 only if you want it regenerated from scratch, which")
+    print("discards any manual edits, e.g. alternateTrackers/HIDDEN_ALBUMS/CUSTOM_IMAGES).")
+    if os.environ.get("WRITE_CONFIG"):
+        cfg = gen_config(eras)
+        with open(os.path.join(ROOT, "src", "artists", f"{SLUG}.ts"), "w", encoding="utf-8") as f:
+            f.write(cfg)
+        print(f"  wrote src/artists/{SLUG}.ts")
 
 
 if __name__ == "__main__":

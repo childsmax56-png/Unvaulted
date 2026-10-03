@@ -30,9 +30,12 @@ const ERA_NAME_MAP: Record<string, string> = {
   'Turbo Grafx-16': 'Turbo Grafix 16',
   // yegold — the real sheet titles the era "Hitler" directly (Ye's own name for
   // it) rather than the "LOVE EVERYONE" title used everywhere else in the app;
-  // a stray 2-song "DONDA 2" row from the SSC merge tab folds into DONDA 2 [V1].
+  // a stray 2-song "DONDA 2" row from the SSC merge tab folds into DONDA 2 [V1];
+  // the SSC tab's own "JESUS IS LORD" section is this era's current real name,
+  // God's Country, reused by the live sheet for an unrelated earlier era.
   'Hitler': 'LOVE EVERYONE',
   'DONDA 2': 'DONDA 2 [V1]',
+  'JESUS IS LORD': "God's Country",
   'KIDS SEE GHOSTS': 'KIDS SEE GHOSTS',
   'KIDS SEE GHOST': 'KIDS SEE GHOSTS',
   'KIDSSEEGHOSTS': 'KIDS SEE GHOSTS',

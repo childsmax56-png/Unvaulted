@@ -618,23 +618,45 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '1659647236',
       fakes: '61838480',
       groupbuys: '1022200924',
-      individual: '1333371598', // Sunday Service Choir sub-tab
     },
   },
 };
 
-// yegold's source sheet splits its Sunday Service Choir content out into its
-// own "SSC" tab (gid 1333371598) instead of keeping it in the main Unreleased
-// tab. It uses the same 9-column layout as the main Unreleased tab, so its
-// data rows are appended under the Unreleased tab's own header rather than
-// fetched as a separate tab.
+// yegold's and yelolgold's source sheets both split their Sunday Service Choir
+// content out into its own "SSC" tab (gid 1333371598, same on both — see
+// SSC_TAG_GIDS below) instead of keeping it in the main Unreleased tab. It
+// uses the same 9-column layout as the main Unreleased tab, so its data rows
+// are appended under the Unreleased tab's own header rather than fetched as a
+// separate tab.
 //
-// (The stale fork of this sheet also had a "Related" tab, gid 520283965, for
-// DAYTONA/NASIR/K.T.S.E. — the real document has no such tab at all; those
-// eras don't exist on it.)
+// (The stale fork yegold used to point at also had a "Related" tab, gid
+// 520283965, for DAYTONA/NASIR/K.T.S.E. — the real document has no such tab
+// at all; those eras don't exist on it.)
 const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
   yegold: ['1333371598'],
+  yelolgold: ['1333371598'],
 };
+
+const isCountHeaderRow = (era: string): boolean =>
+  era.includes('\n') && /\b(Full|Tagged|Partial|OG|Snippet|Unavailable)\b/i.test(era);
+
+// The SSC ("Sunday Service Choir") tab shared by yegold/yelolgold files most of
+// its rows under whichever studio era the song was originally from (Yandhi,
+// JESUS IS KING, DONDA [V1], ...) rather than under its own name — only the
+// choir's own standalone album, "Jesus Is Born", keeps its own section. Once
+// merged into the main Unreleased tab, a Sunday Service rendition of e.g. a
+// JESUS IS KING song would otherwise be indistinguishable from the studio
+// version, so tag its Name cell. ("JESUS IS LORD", the other section the tab
+// uses, is renamed to "God's Country" generically via a.ts's ERA_NAME_MAP.)
+const SSC_TAG_GIDS = new Set(['1333371598']);
+
+function tagSundayServiceRow(row: string[]): string[] {
+  const era = (row[0] || '').trim();
+  if (!era || era === 'Jesus Is Born' || isCountHeaderRow(row[0] || '')) return row;
+  const tagged = [...row];
+  tagged[1] = `${tagged[1] || ''} (Sunday Service Choir)`;
+  return tagged;
+}
 
 async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {
   const extraGids = EXTRA_UNRELEASED_GIDS[artist];
@@ -651,9 +673,10 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promis
       if (!res.ok) continue;
       const text = await res.text();
       if (!isCsvText(text)) continue;
-      const extraRows = splitCSVRows(text)
+      let extraRows = splitCSVRows(text)
         .slice(1) // drop this tab's own header row — reuse the Unreleased tab's header
         .filter(row => row.some(cell => cell.trim() !== ''));
+      if (SSC_TAG_GIDS.has(gid)) extraRows = extraRows.map(tagSundayServiceRow);
       rows.push(...extraRows);
     } catch {
       // skip this extra tab on failure; the base tab's rows are still returned

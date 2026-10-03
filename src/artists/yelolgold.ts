@@ -14,8 +14,6 @@ export const yelolgoldConfig: ArtistConfig = {
   hidden: true,
   hasGroupbuysTab: true,
   hasAlbumCopiesTab: true,
-  hasIndividualProjectsTab: true,
-  individualProjectsLabel: 'Sunday Service Choir',
   SITE_NAME: 'YE (Lol)',
   SITE_DESCRIPTION: 'The Kanye West tracker, alternate "Lol" version',
   SITE_URL: 'https://unvaulted.cc/yelolgold/',
@@ -43,7 +41,9 @@ export const yelolgoldConfig: ArtistConfig = {
     return 'Kanye West';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    'Jesus Is Born': '/yegold/JesusIsBorn.jpg',
+  },
 
   ALBUM_RELEASE_DATES: {
     'Before The College Dropout': '??/??/????',
@@ -77,6 +77,7 @@ export const yelolgoldConfig: ArtistConfig = {
     'DONDA [V1]': '??/??/????',
     'Donda [V2]': '??/??/????',
     'Donda [V3]': '??/??/????',
+    'Jesus Is Born': '??/??/????',
     'DONDA 2 [V1]': '??/??/????',
     'WAR': '??/??/????',
     'YEBU': '??/??/????',
@@ -92,7 +93,11 @@ export const yelolgoldConfig: ArtistConfig = {
     'Ongoing': '??/??/????'
   },
 
-  HIDDEN_ALBUMS: [],
+  // Jesus Is Born is the Sunday Service Choir's own standalone album (merged
+  // in from the sheet's SSC tab, see EXTRA_UNRELEASED_GIDS in _sheets.ts) —
+  // other SSC recordings are filed under whichever studio era they're from
+  // instead, tagged "(Sunday Service Choir)" in the song name.
+  HIDDEN_ALBUMS: ['Jesus Is Born'],
   ALBUM_DESCRIPTIONS: {},
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
@@ -130,6 +135,7 @@ export const yelolgoldConfig: ArtistConfig = {
     'DONDA [V1]',
     'Donda [V2]',
     'Donda [V3]',
+    'Jesus Is Born',
     'DONDA 2 [V1]',
     'WAR',
     'YEBU',

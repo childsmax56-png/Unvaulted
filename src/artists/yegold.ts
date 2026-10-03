@@ -99,8 +99,12 @@ export const yegoldConfig: ArtistConfig = {
     "VULTURES 1": "https://i.ibb.co/5hFN28jM/cell-Image-199908479-37.png",
     "Cruel Winter [V2]": "https://i.ibb.co/bjFdyLjv/image-2026-04-28-131805413.png",
     "Ongoing": "https://i.ibb.co/dwZ4cwmd/image-2026-04-27-185921217.png",
-    "Jesus Is Born": "https://i.ibb.co/nN2LDSxN/SSC.jpg",
-    "JESUS IS LORD": "https://i.ibb.co/nN2LDSxN/SSC.jpg",
+    "DAYTONA": "https://i.ibb.co/1fX0N137/Daytona.jpg",
+    "NASIR": "https://a5.mzstatic.com/us/r1000/0/Music125/v4/f9/41/a9/f941a9d4-099d-4b65-484a-e585136ca838/18UMGIM37154.rgb.jpg",
+    "K.T.S.E.": "https://i.ibb.co/rfZM2kCp/K-T-S-E.jpg",
+    "NEVER STOP": "https://i.ibb.co/vC9c5qFM/never-stop.png",
+    "Jesus Is Born": "/yegold/JesusIsBorn.jpg",
+    "CARTI YE": "/yegold/CartiYe.jpg",
     "Late Orchestration": "https://i.ibb.co/whrYVzkr/Late-Orchestration.jpg",
     "Child Rebel Soldier": "https://i.ibb.co/QFLpkFcz/IMG-3998.png",
     "BULLY": "https://a5.mzstatic.com/us/r1000/0/Music221/v4/4b/38/d1/4b38d146-381d-ace2-73df-24074576e62b/656465138828_cover.jpg",
@@ -127,14 +131,16 @@ export const yegoldConfig: ArtistConfig = {
     "Cruel Winter [V2]": "??/??/????",
     "Turbo Grafix 16": "??/??/2016",
     "LOVE EVERYONE": "??/??/2018",
+    "DAYTONA": "05/25/2018",
     "ye": "06/01/2018",
     "KIDS SEE GHOSTS": "06/08/2018",
+    "NASIR": "06/15/2018",
+    "K.T.S.E.": "06/23/2018",
     "Good Ass Job (2018)": "??/??/2018",
     "Yandhi [V1]": "??/??/2018",
     "Yandhi [V2]": "??/??/????",
     "JESUS IS KING": "10/25/2019",
     "Jesus Is Born": "12/25/2019",
-    "JESUS IS LORD": "??/??/????",
     "God's Country": "??/??/????",
     "JESUS IS KING: The Dr. Dre Version": "??/??/????",
     "DONDA [V1]": "07/18/2020",
@@ -151,16 +157,18 @@ export const yegoldConfig: ArtistConfig = {
     "BULLY [V1]": "03/18/2025",
     "CUCK": "03/06/2025",
     "DONDA 2 [V2]": "04/29/2025",
+    "NEVER STOP": "06/27/2025",
     "IN A PERFECT WORLD": "06/22/2025",
     "BULLY [V2]": "03/28/2026",
     "Ongoing": "??/??/????",
   },
 
-  // DAYTONA/NASIR/K.T.S.E./NEVER STOP/YE-I/The Elementary School Dropout — all
-  // present on yzygold's (Suzy's) sheet — don't exist as eras on the real
-  // yetracker.net document at all; Sunday Service Choir content there is
-  // split across two real eras instead, both kept out of the main grid.
-  HIDDEN_ALBUMS: ['Jesus Is Born', 'JESUS IS LORD'],
+  // DAYTONA/NASIR/K.T.S.E./NEVER STOP have no Unreleased-tab leak rows on the
+  // real sheet, but they're real, officially-released albums with content in
+  // the Released/Tracklists/Art/Stems tabs — kept as Related entries so those
+  // tabs' covers still resolve. YE-I/The Elementary School Dropout (present
+  // on yzygold's/Suzy's sheet) don't exist anywhere on this one — dropped.
+  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'Jesus Is Born'],
 
   ALBUM_DESCRIPTIONS: {
     "CARTI YE": "A collaborative mixtape between Ye and Playboi Carti. The two linked up for the \"2024\" music video shoot on 12/13/2023, and the project's existence was later confirmed by Ye before being scrapped on 03/15/2025.",

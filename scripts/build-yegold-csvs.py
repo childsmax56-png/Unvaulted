@@ -69,6 +69,19 @@ def is_junk_row(era, name):
     return era.strip().lower() == "tracker news" or "apply for tracker editor" in name.lower()
 
 
+def tag_sunday_service_row(row):
+    """Mirrors tagSundayServiceRow in functions/api/[artist]/_sheets.ts — the
+    SSC tab files most of its rows under whichever studio era the song is
+    really from, so tag the Name cell to mark it as a Sunday Service Choir
+    recording (its own standalone album, "Jesus Is Born", is left as-is)."""
+    era = (row[0] if row else "").strip()
+    if not era or era == "Jesus Is Born" or is_count_header(row[0] if row else ""):
+        return row
+    row = list(row)
+    row[1] = f"{row[1] if len(row) > 1 else ''} (Sunday Service Choir)"
+    return row
+
+
 def merge_notes(*parts):
     seen, out = set(), []
     for p in parts:
@@ -338,7 +351,7 @@ def main():
     print(f"Building {SLUG} from the REAL sheet {SHEET_ID}")
 
     unrel = build_unreleased(fetch_rows(GIDS["unreleased"]))
-    ssc_rows = build_unreleased(fetch_rows(GIDS["ssc"]))
+    ssc_rows = [tag_sunday_service_row(r) for r in build_unreleased(fetch_rows(GIDS["ssc"]))]
     unrel.extend(ssc_rows)
     print(f"    (merged ssc: {len(ssc_rows)} rows)")
     write_csv(data_dir, "unreleased.csv", UNREL_HEADER, unrel)
