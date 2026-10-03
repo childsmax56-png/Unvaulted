@@ -83,7 +83,9 @@ export function parseCSV(text: string): Record<string, string>[] {
     (isFormulaArtifact(rows[headerIdx]) || isHeaderRow(rows[headerIdx + 1]))
   ) headerIdx++;
 
-  const headers = rows[headerIdx];
+  // Trim stray whitespace in header cells (e.g. a sheet's "Era" header typo'd as
+  // " Era") so downstream lookups like row['Era'] match regardless.
+  const headers = rows[headerIdx].map(h => h.trim());
   return rows.slice(headerIdx + 1)
     .filter(row => row.some(cell => cell.trim() !== ''))
     .map(row => {
