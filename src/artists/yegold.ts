@@ -151,6 +151,7 @@ export const yegoldConfig: ArtistConfig = {
     "VULTURES 1": "02/10/2024",
     "VULTURES 2": "08/03/2024",
     "The Elementary School Dropout": "03/10/2024",
+    "CARTI YE": "??/??/????",
     "VULTURES 3": "??/??/????",
     "BULLY [V1]": "03/18/2025",
     "CUCK": "03/06/2025",
@@ -162,9 +163,11 @@ export const yegoldConfig: ArtistConfig = {
     "YE-I": "10/16/2023",
   },
 
-  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'The Elementary School Dropout', 'Jesus Is Born', 'Sunday Service Choir', 'YE-I'],
+  HIDDEN_ALBUMS: ['NASIR', 'K.T.S.E.', 'NEVER STOP', 'DAYTONA', 'The Elementary School Dropout', 'Jesus Is Born', 'Sunday Service Choir', 'YE-I', 'CARTI YE'],
 
-  ALBUM_DESCRIPTIONS: {},
+  ALBUM_DESCRIPTIONS: {
+    "CARTI YE": "A collaborative mixtape between Ye and Playboi Carti. The two linked up for the \"2024\" music video shoot on 12/13/2023, and the project's existence was later confirmed by Ye before being scrapped on 03/15/2025 — most of the recorded material has since been folded into VULTURES 2.",
+  },
 
   ALBUM_SONG_COUNTS: {},
 
