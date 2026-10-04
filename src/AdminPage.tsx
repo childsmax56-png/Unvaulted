@@ -163,18 +163,24 @@ function HealthView() {
 
   const done = Object.values(reports).filter(r => r !== 'loading').length;
 
-  const errorText = () => {
+  // Plain-text issue list for pasting into a chat/issue, grouped by tracker.
+  // A tracker that has both errors and warnings shows up in both copies.
+  const issueText = (levels: Issue['level'][]) => () => {
     const blocks: string[] = [];
     for (const a of OFFICIAL) {
       const rep = reports[a.slug];
       if (!rep || rep === 'loading') continue;
       const lines = 'error' in rep
-        ? [`- Health check failed: ${rep.error}`]
-        : rep.issues.filter(i => i.level === 'error').map(i => `- ${i.message}`);
+        ? (levels.includes('error') ? [`- [error] Health check failed: ${rep.error}`] : [])
+        : rep.issues.filter(i => levels.includes(i.level)).map(i => `- ${levels.length > 1 ? `[${i.level}] ` : ''}${i.message}`);
       if (lines.length) blocks.push(`${NAME_OF[a.slug]} (/${a.slug})\n${lines.join('\n')}`);
     }
     return blocks.join('\n\n');
   };
+  const errorText = issueText(['error']);
+  const warningText = issueText(['warn']);
+  const allIssuesText = issueText(['error', 'warn']);
+  const hasWarnings = Object.values(reports).some(r => r && r !== 'loading' && !('error' in r) && r.issues.some(i => i.level === 'warn'));
   const counts = [0, 1, 2, 3].map(lv => Object.values(reports).filter(r => severity(r) === lv).length);
 
   return (
@@ -189,6 +195,8 @@ function HealthView() {
           </span>
         )}
         {counts[2] + counts[3] > 0 && <CopyButton label="Copy errors" getText={errorText} />}
+        {hasWarnings && <CopyButton label="Copy warnings" getText={warningText} />}
+        {counts[2] + counts[3] > 0 && hasWarnings && <CopyButton label="Copy all issues" getText={allIssuesText} />}
         <label style={{ color: C.dim, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, marginLeft: 'auto' }}>
           <input type="checkbox" checked={onlyProblems} onChange={e => setOnlyProblems(e.target.checked)} /> Only show problems
         </label>
