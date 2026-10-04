@@ -9,7 +9,7 @@ import { UserPlaylist, PlaylistSong, Song, Era } from './types';
 import { ArtImage } from './components/ArtGallery';
 import { eraArtwork } from './eraArtwork';
 import * as audioStore from './player/audioStore';
-import { handleDownloadFile, buildArtistTag, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
+import { handleDownloadFile, buildArtistTag, buildTitleTag, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
 import { useSettings } from './SettingsContext';
 
 // Prefer the song's real era cover (bundled per tracker) over whatever was
@@ -298,11 +298,8 @@ export function PlaylistsPage() {
     setDownloadingSong(key);
     try {
       const eraName = entry.eraName || '';
-      const title = entry.songName.includes(' - ')
-        ? entry.songName.substring(entry.songName.indexOf(' - ') + 3)
-        : entry.songName;
       const meta = settings.embedMetadata ? {
-        title,
+        title: buildTitleTag(entry.songName, settings.tagFeaturedArtists),
         artist: buildArtistTag(entry.songName, eraName, settings.tagFeaturedArtists, entry.artist),
         album: eraName,
         year: ALBUM_RELEASE_DATES[eraName]?.split('/').pop(),

@@ -19,7 +19,7 @@ import { handleShareSilent } from './components/EraDetail';
 import { TrackerData, Era, Song, SearchFilters } from './types';
 import { ContributorContext } from './ContributorContext';
 import { ContributorView } from './components/ContributorView';
-import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, handleDownloadFile, pixeldrainProxyBase } from './utils';
+import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, buildTitleTag, handleDownloadFile, pixeldrainProxyBase } from './utils';
 import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName } from './lastfm';
 import { logListen, isListeningLoggedIn } from './listening';
 import { isSpotifyLoggedIn, clearSpotifySession, startSpotifyAuth, handleSpotifyCallback } from './spotify';
@@ -2411,9 +2411,8 @@ export default function App() {
         const rawUrl = currentSong.url || (currentSong.urls && currentSong.urls.length > 0 ? currentSong.urls[0] : '');
         const kbEraName = (currentSong as any).realEra?.name || currentEra?.name || '';
         const kbArtUrl = currentSong.image || CUSTOM_IMAGES[kbEraName] || (currentSong as any).realEra?.image || currentEra?.image;
-        const kbTitle = currentSong.name.includes(' - ') ? currentSong.name.substring(currentSong.name.indexOf(' - ') + 3) : currentSong.name;
         handleDownloadFile(rawUrl, currentSong.name, settings.tagsAsEmojis, settings.embedMetadata ? {
-          title: kbTitle,
+          title: buildTitleTag(currentSong.name, settings.tagFeaturedArtists),
           artist: buildArtistTag(currentSong.name, kbEraName, settings.tagFeaturedArtists),
           album: kbEraName,
           year: ALBUM_RELEASE_DATES[kbEraName]?.split('/').pop(),

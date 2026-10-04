@@ -361,17 +361,50 @@ export function buildArtistTag(songName: string, eraName: string | undefined, in
   }
   if (!includeFeatures) return primary;
 
-  // Collect everyone credited as featured: (feat. X), (ft. X), (with X), (w/ X),
-  // across every group in the name. Producer/ref credits are deliberately left out.
-  const featured: string[] = [];
-  const pattern = /[\[(](?:feat\.|ft\.|with\s+|w\/)\s*([^\])\n]+)[\])]/gi;
-  let m;
-  while ((m = pattern.exec(songName)) !== null) {
-    m[1].split(/,|&/).map(n => n.replace(/[️]/g, '').trim()).filter(n => n && n !== '???').forEach(n => featured.push(n));
-  }
+  const featured = collectFeatured(songName);
   const primaryLower = primary.toLowerCase();
-  const unique = [...new Set(featured)].filter(n => !primaryLower.includes(n.toLowerCase()));
+  const unique = featured.filter(n => !primaryLower.includes(n.toLowerCase()));
   return unique.length ? `${primary} feat. ${unique.join(', ')}` : primary;
+}
+
+const FEATURE_GROUP = /[\[(](?:feat\.|ft\.|with\s+|w\/)\s*([^\])\n]+)[\])]/gi;
+const CREDIT_GROUP = /\s*[\[(](?:feat\.|ft\.|prod\.|add\.|perf\.|ref\.|with\s+|w\/)[^\])\n]*[\])]/gi;
+
+function collectFeatured(songName: string): string[] {
+  const featured: string[] = [];
+  for (const m of songName.matchAll(FEATURE_GROUP)) {
+    m[1].split(/,|&/).map(n => n.replace(/[\uFE0F]/g, '').trim()).filter(n => n && n !== '???').forEach(n => featured.push(n));
+  }
+  return [...new Set(featured)];
+}
+
+/**
+ * Builds the title tag for a downloaded song, e.g.
+ * "Ye - ⭐ Hurricane [V3]\n(Alt Name)\n(feat. The Weeknd)" → "Hurricane (ft. The Weeknd) [V3] [BEST OF]".
+ * Alt-name lines and credit groups are dropped; version brackets and tags are kept.
+ */
+export function buildTitleTag(songName: string, includeFeatures = true): string {
+  let rest = songName.includes(' - ') ? songName.substring(songName.indexOf(' - ') + 3) : songName;
+
+  const tags: string[] = [];
+  Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
+    if (rest.includes(emoji)) {
+      tags.push(`[${tag.toUpperCase()}]`);
+      rest = rest.split(emoji).join('');
+    }
+  });
+  rest = rest.replace(/[\uFE0F]/g, '');
+
+  const firstLine = rest.split('\n')[0].replace(CREDIT_GROUP, '');
+  const brackets = firstLine.match(/\[[^\]]*\]/g) || [];
+  let base = firstLine.replace(/\s*\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();
+  if (!base) base = rest.replace(/\s+/g, ' ').trim();
+
+  const featured = includeFeatures ? collectFeatured(songName) : [];
+  const parts = [base];
+  if (featured.length) parts.push(`(ft. ${featured.join(', ')})`);
+  parts.push(...brackets, ...tags);
+  return parts.join(' ');
 }
 
 /**

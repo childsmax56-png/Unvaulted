@@ -9,7 +9,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { isLastfmLoggedIn } from '../lastfm';
 import { saveAs } from 'file-saver';
 import { Era } from '../types';
-import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { ArtEntry } from './ArtGallery';
 import { StemEntry } from './StemsView';
@@ -81,7 +81,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
           const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
           try {
             blob = await embedID3Tags(blob, {
-              title: songTitle,
+              title: buildTitleTag(name, settings.tagFeaturedArtists),
               artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
               album: era,
               year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
@@ -236,7 +236,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
             const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
             try {
               blob = await embedID3Tags(blob, {
-                title: songTitle,
+                title: buildTitleTag(name, settings.tagFeaturedArtists),
                 artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
                 album: era,
                 year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
@@ -391,7 +391,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
           <div className="flex items-center justify-between p-4 bg-[#111] border border-white/5 rounded-xl">
             <div className="flex flex-col">
               <span className="text-sm font-medium text-white/90">Tag Featured Artists</span>
-              <span className="text-xs text-white/40">Add featured artists (feat., ft., with) to the artist tag of downloaded songs</span>
+              <span className="text-xs text-white/40">Add featured artists (feat., ft., with) to the title and artist tags of downloaded songs</span>
             </div>
             <button
               onClick={() => updateSettings({ tagFeaturedArtists: !settings.tagFeaturedArtists })}

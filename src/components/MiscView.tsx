@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle } from './SongTitle';
 import { saveAs } from 'file-saver';
@@ -319,7 +319,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
           if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
             const artUrl = selectedEraData!.image || CUSTOM_IMAGES[miscEraName];
             const tagMeta = {
-              title: songTitle,
+              title: buildTitleTag(song.name, settings.tagFeaturedArtists),
               artist: buildArtistTag(song.name, miscEraName, settings.tagFeaturedArtists),
               album: miscEraName,
               year: ALBUM_RELEASE_DATES[miscEraName]?.split('/').pop(),

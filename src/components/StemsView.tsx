@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle, SongExtra } from './SongTitle';
 import { saveAs } from 'file-saver';
@@ -409,7 +409,7 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
           if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
             const artUrl = selectedEraData!.image || CUSTOM_IMAGES[stemsEraName];
             const tagMeta = {
-              title: songTitle,
+              title: buildTitleTag(song.name, settings.tagFeaturedArtists),
               artist: buildArtistTag(song.name, stemsEraName, settings.tagFeaturedArtists),
               album: stemsEraName,
               year: ALBUM_RELEASE_DATES[stemsEraName]?.split('/').pop(),
