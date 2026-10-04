@@ -746,6 +746,17 @@ export function sheetCsvUrl(artist: string, tab: string): string | null {
 // return index.html with status 200 — detect real CSV text by its leading char.
 const isCsvText = (t: string): boolean => !t.trimStart().startsWith('<');
 
+export type TrackerCsvSource = 'community' | 'sheets-api' | 'live' | 'committed';
+
+export interface TrackerCsvResult {
+  text: string | null;
+  source: TrackerCsvSource | null;
+  // True when a live source (Sheets API or CSV export) is configured for this tab.
+  liveConfigured: boolean;
+  // Why the configured live source didn't serve (only set when it was tried and failed).
+  liveError?: string;
+}
+
 // Resolve a tracker tab's CSV text: DB-backed community tracker first, then the
 // live Google Sheet export (when a gid is configured for the tab), then the committed
 // static file. Returns null when no source yields CSV. `env`/`request` are optional so
@@ -763,15 +774,33 @@ export async function fetchTrackerCsv(
   env?: Env,
   request?: Request,
 ): Promise<string | null> {
+  return (await resolveTrackerCsv(origin, artist, tab, env, request)).text;
+}
+
+// Same resolution as fetchTrackerCsv, but also reports WHICH source served the
+// tab and why a configured live source fell through — used by the admin health
+// dashboard (functions/api/admin/health.ts) to spot sheets silently falling back
+// to their committed snapshot.
+export async function resolveTrackerCsv(
+  origin: string,
+  artist: string,
+  tab: string,
+  env?: Env,
+  request?: Request,
+): Promise<TrackerCsvResult> {
   const community = await getCommunityTrackerCsv(env, artist, tab, request);
-  if (community !== null) return community;
+  if (community !== null) return { text: community, source: 'community', liveConfigured: false };
+
+  const errors: string[] = [];
+  const apiConfigured = hasSheetApiSource(artist, tab);
 
   // Live via the Sheets API for download-disabled sheets whose plain CSV export
   // is blocked and strips hrefs (e.g. cactigold). Reconstructs the canonical CSV
   // with real hyperlink URLs; falls through to the committed snapshot on failure.
-  if (hasSheetApiSource(artist, tab)) {
+  if (apiConfigured) {
     const apiCsv = await fetchSheetApiCsv(artist, tab, env?.GOOGLE_SHEETS_API_KEY);
-    if (apiCsv !== null) return apiCsv;
+    if (apiCsv !== null) return { text: apiCsv, source: 'sheets-api', liveConfigured: true };
+    errors.push(env?.GOOGLE_SHEETS_API_KEY ? 'Sheets API request failed' : 'GOOGLE_SHEETS_API_KEY not set');
   }
 
   // Live Google Sheet first, when this tab has a configured gid.
@@ -782,24 +811,31 @@ export async function fetchTrackerCsv(
       if (res.ok) {
         const text = await res.text();
         if (isCsvText(text)) {
-          return tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text) : text;
+          const csv = tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text) : text;
+          return { text: csv, source: 'live', liveConfigured: true };
         }
+        errors.push('Sheet export returned HTML (sheet private or gid gone?)');
+      } else {
+        errors.push(`Sheet export HTTP ${res.status}`);
       }
-    } catch {
-      // fall through to the committed snapshot
+    } catch (err) {
+      errors.push(`Sheet export fetch threw: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
+
+  const liveConfigured = apiConfigured || !!remote;
+  const liveError = errors.length ? errors.join('; ') : undefined;
 
   // Committed static CSV snapshot (fallback, or the sole source for unconfigured tabs).
   try {
     const res = await fetch(`${origin}/${artist}/data/${tab}.csv`);
     if (res.ok) {
       const text = await res.text();
-      if (isCsvText(text)) return text;
+      if (isCsvText(text)) return { text, source: 'committed', liveConfigured, liveError };
     }
   } catch {
     // no committed CSV either
   }
 
-  return null;
+  return { text: null, source: null, liveConfigured, liveError };
 }
