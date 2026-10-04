@@ -106,7 +106,8 @@ export const tydollagoldConfig: ArtistConfig = {
     'girl music vol 2: sex playlist': '??/??/????',
     'girl music vol. 2: sex playlist': '??/??/????',
     'PURPLE MOON': '??/??/????',
-    'Ongoing': '??/??/????'
+    'Ongoing': '??/??/????',
+    'To Be Continued...': '??/??/????',
   },
 
   HIDDEN_ALBUMS: [],
@@ -160,7 +161,8 @@ export const tydollagoldConfig: ArtistConfig = {
     'girl music vol 2: sex playlist',
     'girl music vol. 2: sex playlist',
     'PURPLE MOON',
-    'Ongoing'
+    'Ongoing',
+    'To Be Continued...',
   ],
 
   TAG_MAP: {},

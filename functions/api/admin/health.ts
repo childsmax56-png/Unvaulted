@@ -63,7 +63,11 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     const data = await res.json() as { eras?: Record<string, { name: string; data?: Record<string, unknown[]> }> };
     for (const era of Object.values(data.eras ?? {})) {
       const n = Object.values(era.data ?? {}).reduce((sum, b) => sum + (Array.isArray(b) ? b.length : 0), 0);
-      songsPerEra[era.name] = n;
+      // Rename eras the way the client does (case-insensitive ERA_MAPPINGS) so a
+      // mapped sheet era isn't reported as missing.
+      const mapKey = Object.keys(config.ERA_MAPPINGS ?? {}).find(k => k.toLowerCase() === era.name.toLowerCase());
+      const name = mapKey ? config.ERA_MAPPINGS[mapKey] : era.name;
+      songsPerEra[name] = (songsPerEra[name] ?? 0) + n;
       songs += n;
     }
   } catch (err) {
@@ -72,6 +76,10 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const skip = new Set([...(config.EXCLUDED_ALBUMS ?? []), ...(config.ART_ONLY_ALBUMS ?? [])]);
   const emptyEras = erasError ? [] : Object.keys(config.ALBUM_RELEASE_DATES)
     .filter(name => !skip.has(name) && !songsPerEra[name]);
+  // The site only shows eras listed in ALBUM_RELEASE_DATES (or HIDDEN_ALBUMS), so
+  // songs in any other era — usually one the sheet renamed or added — never appear.
+  const unlistedEras = Object.entries(songsPerEra)
+    .filter(([name, n]) => n > 0 && !(name in config.ALBUM_RELEASE_DATES) && !config.HIDDEN_ALBUMS.includes(name));
 
   const snapshot = { tabs: Object.fromEntries(tabs.map(t => [t.tab, t.rows])), songs, eras: Object.keys(songsPerEra).length };
 
@@ -104,7 +112,13 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
       issues.push({ level: 'warn', message: `${t.tab}: rows dropped ${before} → ${t.rows} since last week` });
     }
   }
-  if (emptyEras.length) issues.push({ level: 'warn', message: `${emptyEras.length} configured era(s) have 0 songs: ${emptyEras.join(', ')}` });
+  if (unlistedEras.length) {
+    const hidden = unlistedEras.reduce((sum, [, n]) => sum + n, 0);
+    issues.push({ level: 'warn', message: `${hidden} song(s) hidden — era(s) not in the tracker config (add to ALBUM_RELEASE_DATES or ERA_MAPPINGS): ${unlistedEras.map(([name, n]) => `${name} (${n})`).join(', ')}` });
+  }
+  // Empty configured eras are hidden from the grid, so this is only a hint (e.g. a
+  // released album with no unreleased songs, or the other half of a rename above).
+  if (emptyEras.length) issues.push({ level: 'info', message: `${emptyEras.length} configured era(s) have 0 songs: ${emptyEras.join(', ')}` });
 
-  return json({ tracker, tabs, songs, eraCount: Object.keys(songsPerEra).length, emptyEras, previous, issues });
+  return json({ tracker, tabs, songs, eraCount: Object.keys(songsPerEra).length, emptyEras, unlistedEras, previous, issues });
 };

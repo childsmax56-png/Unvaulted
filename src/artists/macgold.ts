@@ -110,7 +110,10 @@ export const macgoldConfig: ArtistConfig = {
   ALBUM_DESCRIPTIONS: {},
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
-  ERA_MAPPINGS: {},
+  ERA_MAPPINGS: {
+    'The Jukebox: Prelude To The Class Clown': 'The Jukebox: Prelude to Class Clown',
+    'Watching Movies with the Sound Off': 'Watching Movies With The Sound Off',
+  },
   ALBUM_ORDER: [
     "But My Mackin' Ain't Easy",
     'Welcome To Hip-Hop',

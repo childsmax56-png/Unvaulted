@@ -103,9 +103,6 @@ function mapEraName(name: string): string {
   return ERA_NAME_MAP[name] ?? name;
 }
 
-// Artists whose ERA_ORDER is exhaustive — unlisted rows (e.g. changelog footer) are dropped.
-const EXHAUSTIVE_ERA_ORDER_ARTISTS = new Set(['yzygold', 'kdotgold', 'dongold', 'colegold', 'aapgold', 'mfgold', 'mjgold', 'slimegold', 'sosagold', 'rihannagold']);
-
 // Per-artist ERA_ORDER for artists whose CSVs have eras in the wrong order.
 const ARTIST_ERA_ORDERS: Record<string, string[]> = {
   sosagold: [
@@ -432,6 +429,10 @@ export const onRequestGet: PagesFunction = async (context) => {
 
     const rows = parseCSV(csvText);
 
+    // Some sheets pad era names with runs of spaces ("Pre-LONG.      LIVE.A$AP" in
+    // aapgold) — collapse them so the names match the tracker config.
+    const collapseSpaces = (v: string) => v.replace(/[ \t]{2,}/g, ' ');
+
     // Detect which column holds the song/era name — different CSVs use different headers.
     // Some use 'Name\n(Join The Discord!)', others use 'Name\n(Check out the Tracker website!)', etc.
     const NAME_KEY = rows.length > 0
@@ -462,7 +463,7 @@ export const onRequestGet: PagesFunction = async (context) => {
     for (const row of rows) {
       const eraField = row['Era'] ?? '';
       if (!eraField.includes('\n')) continue;
-      const { name: eraName } = parseSongName(row[NAME_KEY] ?? '');
+      const { name: eraName } = parseSongName(collapseSpaces(row[NAME_KEY] ?? ''));
       if (eraName && !/^\d+\s/.test(eraName)) {
         validEraNames.add(eraName);
         // Also add the mapped name so song rows whose Era column uses the short name are found
@@ -477,9 +478,11 @@ export const onRequestGet: PagesFunction = async (context) => {
     // real tracklist, in the same Era column — exclude that free text so it doesn't turn
     // into its own bogus era.
     const isJunkEraText = (s: string): boolean =>
-      s.length > 120 || /^\d{1,2}\/\d{1,2}\/\d{2,4}:/.test(s) || /^(Update Notes|Tracker Guidelines)$/i.test(s);
+      s.length > 120 || /^\d{1,2}\/\d{1,2}\/\d{2,4}:/.test(s) || /^(Update Notes|Tracker Guidelines|Tracker News|Links|Changelogs?)$/i.test(s)
+      // a bare date or member list in parentheses, e.g. frankgold "(June 4th, 2026)"
+      || /^\(.*\)$/.test(s);
     for (const row of rows) {
-      const eraField = (row['Era'] ?? '').trim();
+      const eraField = collapseSpaces(row['Era'] ?? '').trim();
       if (eraField && !eraField.includes('\n') && !/^\d+\s+(OG|Full|Tagged|Partial|Snippet|Unavailable)\b/i.test(eraField) && !isJunkEraText(eraField)) {
         validEraNames.add(eraField);
         validEraNames.add(mapEraName(eraField));
@@ -488,12 +491,12 @@ export const onRequestGet: PagesFunction = async (context) => {
 
     // Second pass: build eras and songs, ignoring anything outside known eras.
     for (const row of rows) {
-      const eraField = row['Era'] ?? '';
+      const eraField = collapseSpaces(row['Era'] ?? '');
       const nameField = row[NAME_KEY] ?? '';
 
       if (eraField.includes('\n')) {
         // Era header row
-        const { name: rawName, extra } = parseSongName(nameField);
+        const { name: rawName, extra } = parseSongName(collapseSpaces(nameField));
         if (!rawName || !validEraNames.has(rawName)) continue;
         const eraName = mapEraName(rawName);
 
@@ -621,12 +624,12 @@ export const onRequestGet: PagesFunction = async (context) => {
       for (const name of eraOrder) {
         if (eras[name]) orderedEras[name] = eras[name];
       }
-      // For exhaustive orders, drop unlisted rows (changelog/footer garbage).
-      // For non-exhaustive orders, append any eras not in the order list.
-      if (!EXHAUSTIVE_ERA_ORDER_ARTISTS.has(artist)) {
-        for (const name of Object.keys(eras)) {
-          if (!orderedEras[name]) orderedEras[name] = eras[name];
-        }
+      // Append eras missing from the order list instead of dropping them — sheets add
+      // and rename eras (aapgold "TESTING [V3]", sosagold "4NEM"), and dropping them here
+      // hid their songs before the client's ERA_MAPPINGS could rename them. Footer junk
+      // is already removed above, and the client only shows configured eras.
+      for (const name of Object.keys(eras)) {
+        if (!orderedEras[name]) orderedEras[name] = eras[name];
       }
     } else {
       // For other artists, preserve CSV row order as-is.

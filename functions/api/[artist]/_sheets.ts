@@ -23,20 +23,8 @@ interface SheetSource {
 // (some trackers merge links from a separate source into their committed CSV and the
 // live sheet stores them differently — those must stay committed-CSV-only).
 const SHEET_SOURCES: Record<string, SheetSource> = {
-  frankgold: {
-    sheetId: '1wlztKH_bwoTDtMZFm8-lYqzZWLCGf-XqE-gea-nGR0Y',
-    gids: {
-      unreleased: '44489322',
-      released: '1454863518',
-      recent: '1122958563',
-      tracklists: '1543259143',
-      stems: '1010941390',
-      'album-copies': '1324887433',
-      'music-videos': '1257792866',
-      fakes: '510511701',
-      art: '1257812670',
-    },
-  },
+  // frankgold: its Google Sheet is gone (export HTTP 410) — served from the committed
+  // CSVs scraped from franktracker.net's static mirror, so no live source.
   yzygold: {
     sheetId: '12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM',
     gids: {
@@ -549,23 +537,23 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
   tydollagold: {
     sheetId: '11Kk3Mi8iiFmXEFV8vzcmTrnjcMkfgImABCavXhC4D48',
+    // Stems/Art tabs were recreated (old gids 400); the new tabs lose links or changed
+    // layout, so those stay on the committed CSV.
     gids: {
       unreleased: '2000110692',
       released: '663137012',
       recent: '1432839591',
-      art: '1176669816',
-      stems: '997655538',
-      misc: '864600317',
+      misc: '1323869477',
       tracklists: '813585500',
     },
   },
   d4vdgold: {
     sheetId: '1N6_EyCC6AM_cpFkIJivCN0kWzEwJRev7vQCmFAChnjk',
+    // Released/Art tabs were recreated (old gids 400) with a different column layout,
+    // so those stay on the committed CSV.
     gids: {
       unreleased: '1194098099',
-      released: '1821567829',
       recent: '352145936',
-      art: '1223938693',
       stems: '376357246',
       fakes: '1822712170',
       tracklists: '745709653',

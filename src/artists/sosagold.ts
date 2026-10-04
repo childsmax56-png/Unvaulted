@@ -49,6 +49,8 @@ export const sosagoldConfig: ArtistConfig = {
     'Glory University': '01/03/2018',
     'Underwater': '09/04/2018',
     'Almighty So 2 [V1]': '04/07/2019',
+    '4NEM': '??/??/????',
+    'Almighty So 2 [V2]': '??/??/????',
     '4EB': '06/16/2020',
   },
 
@@ -59,7 +61,7 @@ export const sosagoldConfig: ArtistConfig = {
   ERA_MAPPINGS: {},
   ALBUM_ORDER: [
     'Wiiic City', 'Drill', 'Finally Rich', 'Lean', 'Rehab', 'Xanax', 'Cappin', 'Turbo',
-    'Glory University', 'Underwater', 'Almighty So 2 [V1]', '4EB',
+    'Glory University', 'Underwater', 'Almighty So 2 [V1]', '4NEM', 'Almighty So 2 [V2]', '4EB',
   ],
 
   TAG_MAP: {},

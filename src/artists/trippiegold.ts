@@ -81,6 +81,8 @@ export const trippiegoldConfig: ArtistConfig = {
     'Saint Michael': '??/??/????',
     'LIFE\'S A TRIP 2': '??/??/????',
     'LIVE LOVE LAUGH DIE': '??/??/????',
+    'NDA [V1]': '??/??/????',
+    'NDA [V2]': '??/??/????',
     'NDA': '??/??/????'
   },
 
@@ -88,7 +90,9 @@ export const trippiegoldConfig: ArtistConfig = {
   ALBUM_DESCRIPTIONS: {},
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
-  ERA_MAPPINGS: {},
+  ERA_MAPPINGS: {
+    '#NDA': 'NDA',
+  },
 
   ALBUM_ORDER: [
     'Awakening My InnerBeast',
@@ -113,7 +117,7 @@ export const trippiegoldConfig: ArtistConfig = {
     'A Love Letter To You 5 [V2]',
     'Saint Michael',
     'LIFE\'S A TRIP 2',
-    'LIVE LOVE LAUGH DIE',
+    'LIVE LOVE LAUGH DIE', 'NDA [V1]', 'NDA [V2]',
     'NDA'
   ],
 

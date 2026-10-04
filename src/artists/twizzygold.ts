@@ -64,9 +64,15 @@ export const twizzygoldConfig: ArtistConfig = {
   },
 
   ALBUM_RELEASE_DATES: {
+    "530": "??/??/????",
+    "1500": "??/??/????",
     "Deep Blue $trips": "??/??/2018",
     "Wake Up Call": "??/??/2019",
     "Elegance": "??/??/????",
+    "Super Sonic": "??/??/????",
+    "Super geëky": "??/??/????",
+    "Collaboration with 2kthagoon": "??/??/????",
+    "Collaboration with SwagHollywood": "??/??/????",
     "Different Creature": "??/??/2021",
     "I'm So Me": "??/??/2021",
     "We Us": "??/??/2020",
@@ -95,12 +101,15 @@ export const twizzygoldConfig: ArtistConfig = {
     "ADL": "03/17/2023",
     "ADL (Deluxe)": "??/??/2023",
     "Ongoing": "??/??/????",
+    "4L with us": "??/??/????",
+    "COCOON": "??/??/????",
   },
 
   ALBUM_ORDER: [
+    "530", "1500",
     "Deep Blue $trips",
     "Wake Up Call",
-    "Elegance",
+    "Elegance", "Super Sonic", "Super geëky", "Collaboration with 2kthagoon", "Collaboration with SwagHollywood",
     "Different Creature",
     "I'm So Me",
     "We Us",
@@ -129,6 +138,7 @@ export const twizzygoldConfig: ArtistConfig = {
     "ADL",
     "ADL (Deluxe)",
     "Ongoing",
+    "4L with us", "COCOON",
   ],
 
   HIDDEN_ALBUMS: [],
