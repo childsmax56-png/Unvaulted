@@ -1,4 +1,4 @@
-import { parseCSV, csvResponse } from './_csvParser';
+import { parseCSV, csvResponse, splitCSVRows, joinCSVRows } from './_csvParser';
 import { fetchTrackerCsv } from './_sheets';
 import { resolveCommunityTracker, buildCommunityTrackerData } from './_community';
 
@@ -414,10 +414,21 @@ export const onRequestGet: PagesFunction = async (context) => {
       text = fallbackText;
     }
 
-    // Some CSVs (e.g. wolfgold) have a disclaimer block before the real header row.
-    // Find the first line that starts with "Era," and strip everything before it.
-    const eraHeaderIdx = text.split('\n').findIndex(l => l.trimStart().startsWith('Era,') || l.trimStart().startsWith('"Era"'));
-    const csvText = eraHeaderIdx > 0 ? text.split('\n').slice(eraHeaderIdx).join('\n') : text;
+    // Some CSVs (e.g. wolfgold) have a disclaimer block before the real header row,
+    // and several live sheets no longer label the era column "Era" (jayzgold/teccagold
+    // use "Album"; dongold/dannybrowngold/chrisbrowngold/gunnagold/wolfgold leave it
+    // blank or put "\", " " or "." there). Find the header row by its Name/Title column,
+    // drop everything above it, and name its first column "Era" — otherwise no row has
+    // an Era field and the tracker builds 0 songs.
+    const allRows = splitCSVRows(text);
+    const headerIdx = allRows.findIndex(r =>
+      r.slice(0, 3).some(c => /^\s*(name|title)\b/i.test(c)) && r.some(c => /link|source/i.test(c)));
+    let csvText = text;
+    if (headerIdx >= 0) {
+      const header = [...allRows[headerIdx]];
+      header[0] = 'Era';
+      csvText = joinCSVRows([header, ...allRows.slice(headerIdx + 1)]);
+    }
 
     const rows = parseCSV(csvText);
 
@@ -440,7 +451,7 @@ export const onRequestGet: PagesFunction = async (context) => {
     const firstRowKeys = rows.length > 0 ? Object.keys(rows[0]) : [];
     const TRACK_LENGTH_KEY = firstRowKeys.find(k => k === 'Track Length') ?? firstRowKeys.find(k => k === 'Length') ?? 'Track Length';
     const AVAIL_LENGTH_KEY = firstRowKeys.find(k => k === 'Available Length') ?? firstRowKeys.find(k => k === 'Availability') ?? firstRowKeys.find(k => k === 'Currently Available') ?? firstRowKeys.find(k => k === 'Portion') ?? 'Available Length';
-    const LINKS_KEY = firstRowKeys.find(k => k === 'Link(s)') ?? firstRowKeys.find(k => k === 'Source') ?? firstRowKeys.find(k => k === 'Link') ?? 'Link(s)';
+    const LINKS_KEY = firstRowKeys.find(k => k === 'Link(s)') ?? firstRowKeys.find(k => k === 'Source') ?? firstRowKeys.find(k => k === 'Link') ?? firstRowKeys.find(k => /link/i.test(k)) ?? 'Link(s)';
 
     const eras: Record<string, any> = {};
 
@@ -502,6 +513,7 @@ export const onRequestGet: PagesFunction = async (context) => {
         }
 
         const { name, extra } = parseSongName(nameField);
+        if (!name) continue;
         const links = (row[LINKS_KEY] ?? '').split('\n').map((l: string) => extractHyperlinkUrl(l.trim())).filter(Boolean);
 
         eras[eraName].data['Unreleased Tracks'].push({
@@ -516,6 +528,18 @@ export const onRequestGet: PagesFunction = async (context) => {
           url: links[0] ?? '',
           urls: links,
         });
+      }
+    }
+
+    // Footer blocks (credits, editor lists, community rules — e.g. wolfgold,
+    // dannybrowngold, chrisbrowngold) put free text in the Era column, which the
+    // passes above turn into eras. Real eras have a header row (fileInfo) or at least
+    // one song with a link, length, availability or quality; drop those that don't.
+    for (const [eraName, era] of Object.entries(eras)) {
+      if (era.fileInfo) continue;
+      const songs: any[] = era.data['Unreleased Tracks'];
+      if (!songs.some(s => s.url || s.track_length.trim() || s.available_length.trim() || s.quality.trim())) {
+        delete eras[eraName];
       }
     }
 

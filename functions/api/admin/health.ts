@@ -40,7 +40,13 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   if (!config) return json({ error: 'Unknown tracker' }, 404);
 
   const tabs = await Promise.all(TABS.map(async (tab) => {
-    const r = await resolveTrackerCsv(url.origin, tracker, tab, env);
+    let r = await resolveTrackerCsv(url.origin, tracker, tab, env);
+    // Same fallback as /api/{slug}/a: some trackers (e.g. dregold) only commit
+    // unreleased-main.csv, not unreleased.csv.
+    if (tab === 'unreleased' && !r.text) {
+      const main = await resolveTrackerCsv(url.origin, tracker, 'unreleased-main', env);
+      if (main.text) r = { ...main, liveConfigured: r.liveConfigured, liveError: r.liveError };
+    }
     const rows = r.text
       ? Math.max(0, splitCSVRows(r.text).filter(row => row.some(c => c.trim() !== '')).length - 1)
       : 0;
