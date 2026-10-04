@@ -1,4 +1,6 @@
-// Moderator dashboard at /admin: tracker data health + dead links.
+// Moderator dashboard at /admin: tracker data health, dead links, a live feed
+// of entry comments, and the yeditsgold moderation tools (claims, community
+// tracker review, owner-only admin keys — shared with /yeditsgold's panel).
 //
 // Health: runs /api/admin/health for every official tracker (a few at a time)
 // and flags live sheets falling back to their committed snapshot, empty tabs,
@@ -12,6 +14,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ARTIST_LIST } from './artists/registry';
 import { getToken } from './comments';
+import { YeditsAdminPanel, type YeditsAdminTab } from './components/YeditsAdminPanel';
 
 const FRESH_MS = 7 * 86_400_000;
 const SCAN_BATCH = 25;
@@ -72,37 +75,70 @@ const SOURCE_LABEL: Record<string, string> = { live: 'live', 'sheets-api': 'api'
 const OFFICIAL = ARTIST_LIST.filter(a => !a.community);
 const NAME_OF: Record<string, string> = Object.fromEntries(OFFICIAL.map(a => [a.slug, a.artistLabel || a.SITE_NAME || a.slug]));
 
+type View = YeditsAdminTab | 'health' | 'links' | 'comments';
+const VIEWS: { id: View; label: string; ownerOnly?: boolean }[] = [
+  { id: 'health', label: 'Tracker health' },
+  { id: 'links', label: 'Dead links' },
+  { id: 'comments', label: 'Live comments' },
+  { id: 'claims', label: 'Claims' },
+  { id: 'trackers', label: 'Community trackers' },
+  { id: 'keys', label: 'Admin keys', ownerOnly: true },
+];
+
 export function AdminPage() {
-  const [view, setView] = useState<'health' | 'links'>('health');
+  const [view, setView] = useState<View>(() => {
+    const v = new URLSearchParams(window.location.search).get('view');
+    return VIEWS.some(x => x.id === v) ? v as View : 'health';
+  });
   const [access, setAccess] = useState<'checking' | 'ok' | 'signin' | 'forbidden'>('checking');
+  const [isOwner, setIsOwner] = useState(false);
 
   useEffect(() => {
-    if (!getToken()) { setAccess('signin'); return; }
+    const token = getToken();
+    if (!token) { setAccess('signin'); return; }
     api('/api/admin/links?tracker=__probe__&mode=status')
       .then(() => setAccess('ok'))
       .catch((e) => setAccess(e.status === 401 ? 'signin' : 'forbidden'));
+    // Owner status gates the admin-keys tab (same check /yeditsgold uses).
+    fetch('/api/yeditsgold-admin-check', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token }),
+    })
+      .then(r => r.ok ? r.json() : {})
+      .then((d: { owner?: boolean }) => setIsOwner(!!d.owner))
+      .catch(() => {});
   }, []);
+
+  // Keep the chosen section in the URL so /admin?view=comments can be bookmarked.
+  const pick = (v: View) => {
+    setView(v);
+    const url = new URL(window.location.href);
+    url.searchParams.set('view', v);
+    window.history.replaceState(null, '', url);
+  };
 
   return (
     <div style={{ minHeight: '100vh', background: C.bg, color: C.text, fontFamily: 'system-ui, sans-serif' }}>
       <div style={{ maxWidth: 1180, margin: '0 auto', padding: '28px 16px 80px' }}>
         <Link to="/" style={{ color: C.blue, textDecoration: 'none', fontSize: 14 }}>← Home</Link>
         <h1 style={{ fontSize: 28, margin: '10px 0 4px' }}>Admin</h1>
-        <p style={{ color: C.dim, margin: '0 0 20px' }}>Tracker data health and dead links.</p>
+        <p style={{ color: C.dim, margin: '0 0 20px' }}>Tracker health, dead links, live comments, and moderation.</p>
 
         {access === 'checking' && <p style={{ color: C.faint }}>Checking access…</p>}
         {access === 'signin' && <p style={{ color: C.dim }}>Sign in with a moderator account to use this page.</p>}
         {access === 'forbidden' && <p style={{ color: C.dim }}>This page is for moderators only.</p>}
         {access === 'ok' && (
           <>
-            <div style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
-              {(['health', 'links'] as const).map(v => (
-                <button key={v} onClick={() => setView(v)} style={tabBtn(view === v)}>
-                  {v === 'health' ? 'Tracker health' : 'Dead links'}
-                </button>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
+              {VIEWS.filter(v => !v.ownerOnly || isOwner).map(v => (
+                <button key={v.id} onClick={() => pick(v.id)} style={tabBtn(view === v.id)}>{v.label}</button>
               ))}
             </div>
-            {view === 'health' ? <HealthView /> : <LinksView />}
+            {view === 'health' && <HealthView />}
+            {view === 'links' && <LinksView />}
+            {view === 'comments' && <CommentsView />}
+            {(view === 'claims' || view === 'trackers' || (view === 'keys' && isOwner)) && (
+              <YeditsAdminPanel key={view} embedded tab={view} isOwner={isOwner} />
+            )}
           </>
         )}
       </div>
@@ -476,6 +512,150 @@ function LinksView() {
     </div>
   );
 }
+
+// ---- Live comments ----------------------------------------------------------
+
+interface CommentRow {
+  id: string; tracker_id: string; entry_key: string; entry_label: string | null; entry_type: string | null;
+  parent_id: string | null; user_id: string; username: string; body: string; created_at: number;
+}
+
+const COMMENTS_POLL_MS = 5000;
+const NEW_HIGHLIGHT_MS = 15_000;
+
+function CommentsView() {
+  const [comments, setComments] = useState<CommentRow[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [paused, setPaused] = useState(false);
+  const [tracker, setTracker] = useState('');
+  const [query, setQuery] = useState('');
+  const [deleting, setDeleting] = useState<string | null>(null);
+  const [lastPoll, setLastPoll] = useState<number | null>(null);
+  // id → when this tab first saw it; anything that arrives after the first load
+  // gets a highlight so new comments stand out as they stream in.
+  const firstSeen = useRef<Map<string, number>>(new Map());
+  const primed = useRef(false);
+  const [, tick] = useState(0);
+
+  const poll = useCallback(async () => {
+    const params = new URLSearchParams({ limit: '150' });
+    if (tracker) params.set('tracker', tracker);
+    if (query.trim()) params.set('q', query.trim());
+    try {
+      const data = await api<{ comments: CommentRow[] }>(`/api/admin/comments?${params}`);
+      const now = Date.now();
+      const seen = firstSeen.current;
+      for (const c of data.comments) if (!seen.has(c.id)) seen.set(c.id, primed.current ? now : 0);
+      primed.current = true;
+      setComments(data.comments);
+      setError(null);
+      setLastPoll(now);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setLoaded(true);
+    }
+  }, [tracker, query]);
+
+  // Changing the filter is a fresh feed: don't flash everything as new.
+  useEffect(() => { firstSeen.current = new Map(); primed.current = false; }, [tracker, query]);
+
+  useEffect(() => {
+    if (paused) return;
+    const t = setTimeout(poll, query ? 300 : 0); // debounce typing in the search box
+    const id = setInterval(() => { if (!document.hidden) poll(); }, COMMENTS_POLL_MS);
+    const onVisible = () => { if (!document.hidden) poll(); };
+    document.addEventListener('visibilitychange', onVisible);
+    return () => { clearTimeout(t); clearInterval(id); document.removeEventListener('visibilitychange', onVisible); };
+  }, [poll, paused, query]);
+
+  // Re-render once a second so "Xs ago" and the new-comment highlight fade stay current.
+  useEffect(() => {
+    const id = setInterval(() => tick(n => n + 1), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const remove = async (c: CommentRow) => {
+    if (!confirm(`Delete this comment by @${c.username}?`)) return;
+    setDeleting(c.id);
+    try {
+      await api(`/api/comments?id=${encodeURIComponent(c.id)}`, { method: 'DELETE' });
+      setComments(list => list.filter(x => x.id !== c.id));
+    } catch (e) {
+      alert(`Delete failed: ${(e as Error).message}`);
+    } finally {
+      setDeleting(null);
+    }
+  };
+
+  const trackerOptions = useMemo(
+    () => ARTIST_LIST.filter(a => !a.hidden || a.slug === tracker).map(a => ({ slug: a.slug, name: a.artistLabel || a.SITE_NAME || a.slug })),
+    [tracker],
+  );
+  const nameOf = (slug: string) => trackerOptions.find(t => t.slug === slug)?.name || slug;
+  const now = Date.now();
+  const newCount = comments.filter(c => (firstSeen.current.get(c.id) ?? 0) > 0).length;
+
+  return (
+    <div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 14 }}>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, color: paused ? C.faint : C.green }}>
+          <span style={{ width: 8, height: 8, borderRadius: 999, background: paused ? C.faint : C.green, boxShadow: paused ? 'none' : `0 0 8px ${C.green}` }} />
+          {paused ? 'Paused' : 'Live'}
+        </span>
+        <button onClick={() => setPaused(p => !p)} style={smallBtn(paused ? C.green : C.dim)}>{paused ? 'Resume' : 'Pause'}</button>
+        <select value={tracker} onChange={e => setTracker(e.target.value)} style={inputStyle}>
+          <option value="">All trackers</option>
+          {trackerOptions.map(t => <option key={t.slug} value={t.slug}>{t.name}</option>)}
+        </select>
+        <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search text, user, entry…" style={{ ...inputStyle, minWidth: 200 }} />
+        <span style={{ color: C.faint, fontSize: 12, marginLeft: 'auto' }}>
+          {newCount > 0 && <span style={{ color: C.blue, marginRight: 8 }}>{newCount} new since opened</span>}
+          {lastPoll ? `Updated ${Math.max(0, Math.round((now - lastPoll) / 1000))}s ago` : ''}
+        </span>
+      </div>
+
+      {error && <p style={{ color: C.red, fontSize: 13 }}>Couldn't load comments: {error}</p>}
+      {!loaded && <Empty text="Loading comments…" />}
+      {loaded && comments.length === 0 && !error && <Empty text="No comments yet." />}
+
+      {comments.map(c => {
+        const seenAt = firstSeen.current.get(c.id) ?? 0;
+        const fresh = seenAt > 0 && now - seenAt < NEW_HIGHLIGHT_MS;
+        return (
+          <div key={c.id} style={{
+            background: fresh ? '#0c1f3d' : C.card, border: `1px solid ${fresh ? '#1d4ed8' : C.border}`,
+            borderRadius: 10, padding: '10px 14px', marginBottom: 6, fontSize: 14, transition: 'background 1s, border-color 1s',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+              <b>@{c.username}</b>
+              {c.parent_id && <span style={{ color: C.faint, fontSize: 12 }}>replied</span>}
+              <span style={{ color: C.faint, fontSize: 12 }}>on</span>
+              <a href={`/${c.tracker_id}/`} target="_blank" rel="noreferrer" style={{ color: C.blue, fontSize: 13, textDecoration: 'none' }}>
+                {c.entry_label || c.entry_key}
+              </a>
+              <span style={{ color: C.faint, fontSize: 12 }}>
+                · {nameOf(c.tracker_id)}{c.entry_type ? ` · ${c.entry_type}` : ''}
+              </span>
+              <span title={new Date(c.created_at).toLocaleString()} style={{ color: C.faint, fontSize: 12, marginLeft: 'auto' }}>
+                {now - c.created_at < 60_000 ? 'just now' : ago(c.created_at)}
+              </span>
+              <button onClick={() => remove(c)} disabled={deleting === c.id} style={smallBtn(C.red)}>
+                {deleting === c.id ? '…' : 'Delete'}
+              </button>
+            </div>
+            <div style={{ marginTop: 6, whiteSpace: 'pre-wrap', wordBreak: 'break-word', color: C.text }}>{c.body}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+const inputStyle: React.CSSProperties = {
+  background: C.card, color: C.text, border: `1px solid ${C.border}`, borderRadius: 6, padding: '5px 10px', fontSize: 13,
+};
 
 // Mirrors functions/api/links/_links.ts isCheckableLink / normalizeLinkUrl.
 const CHECKABLE = /pixeldrain\.com\/u\/|pillows\.su\/f\/|pillowcase\.su\/f\/|imgur\.gg\/f\/|krakenfiles\.com\/view\/|drive\.google\.com\/(file\/d\/|open\?id=|uc\?)/i;
