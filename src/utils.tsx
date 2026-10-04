@@ -349,7 +349,7 @@ export function getSongSlug(song: any, allSongsInCollection: any[]): string {
   return createSlug(song.name) || 'NoName1';
 }
 
-export function buildArtistTag(songName: string, eraName: string | undefined): string {
+export function buildArtistTag(songName: string, eraName: string | undefined, includeFeatures = true, fallbackArtist?: string): string {
   let primary: string;
   const dashIdx = songName.indexOf(' - ');
   if (dashIdx !== -1) {
@@ -357,14 +357,21 @@ export function buildArtistTag(songName: string, eraName: string | undefined): s
     Object.keys(TAG_MAP).forEach(emoji => { primary = primary.replaceAll(emoji, ''); });
     primary = primary.replace(/[️]/g, '').trim();
   } else {
-    primary = getArtistName(eraName);
+    primary = fallbackArtist || getArtistName(eraName);
   }
+  if (!includeFeatures) return primary;
 
-  const featMatch = songName.match(/\(feat\.\s*([^)]+)\)/i);
-  if (featMatch) {
-    return `${primary} feat. ${featMatch[1].trim()}`;
+  // Collect everyone credited as featured: (feat. X), (ft. X), (with X), (w/ X),
+  // across every group in the name. Producer/ref credits are deliberately left out.
+  const featured: string[] = [];
+  const pattern = /[\[(](?:feat\.|ft\.|with\s+|w\/)\s*([^\])\n]+)[\])]/gi;
+  let m;
+  while ((m = pattern.exec(songName)) !== null) {
+    m[1].split(/,|&/).map(n => n.replace(/[️]/g, '').trim()).filter(n => n && n !== '???').forEach(n => featured.push(n));
   }
-  return primary;
+  const primaryLower = primary.toLowerCase();
+  const unique = [...new Set(featured)].filter(n => !primaryLower.includes(n.toLowerCase()));
+  return unique.length ? `${primary} feat. ${unique.join(', ')}` : primary;
 }
 
 /**

@@ -247,7 +247,7 @@ function AlbumCard({ album, matches, defaultOpen, onPlaySong, currentSong, isPla
             const year = album.date || ALBUM_RELEASE_DATES[album.era]?.split('/').pop();
             blob = await embedID3Tags(blob, {
               title: track.name,
-              artist: buildArtistTag(track.name, album.era),
+              artist: buildArtistTag(track.name, album.era, settings.tagFeaturedArtists),
               album: album.name,
               year,
               artworkUrl,

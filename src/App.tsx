@@ -2413,7 +2413,7 @@ export default function App() {
         const kbTitle = currentSong.name.includes(' - ') ? currentSong.name.substring(currentSong.name.indexOf(' - ') + 3) : currentSong.name;
         handleDownloadFile(rawUrl, currentSong.name, settings.tagsAsEmojis, settings.embedMetadata ? {
           title: kbTitle,
-          artist: buildArtistTag(currentSong.name, kbEraName),
+          artist: buildArtistTag(currentSong.name, kbEraName, settings.tagFeaturedArtists),
           album: kbEraName,
           year: ALBUM_RELEASE_DATES[kbEraName]?.split('/').pop(),
           artworkUrl: kbArtUrl,
@@ -2423,7 +2423,7 @@ export default function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentSong, isPlayerClosed, settings.keyboardShortcuts, currentEra]);
+  }, [currentSong, isPlayerClosed, settings.keyboardShortcuts, settings.tagFeaturedArtists, currentEra]);
 
   useEffect(() => {
     const handleEasterEgg = () => {

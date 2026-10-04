@@ -55,6 +55,7 @@ export interface AppSettings {
   googleSheetsUrl: string;
   downloadAsOgFilename: boolean;
   embedMetadata: boolean;
+  tagFeaturedArtists: boolean;
   convertToMp3: boolean;
   YZYGOLDMode: boolean;
   dropdownNav: boolean;
@@ -100,6 +101,7 @@ export const defaultSettings: AppSettings = {
   googleSheetsUrl: '',
   downloadAsOgFilename: false,
   embedMetadata: true,
+  tagFeaturedArtists: true,
   convertToMp3: false,
   YZYGOLDMode: false,
   dropdownNav: true,

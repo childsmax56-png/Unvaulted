@@ -326,7 +326,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           // the browser's connection limit and cause the download to hang.
           const tagMeta = {
             title: songTitle,
-            artist: buildArtistTag(song.name, songEraName),
+            artist: buildArtistTag(song.name, songEraName, settings.tagFeaturedArtists),
             album: songEraName,
             year: ALBUM_RELEASE_DATES[songEraName]?.split('/').pop(),
             artworkUrl: undefined,
@@ -425,7 +425,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
           const tagMeta = {
             title: songTitle,
-            artist: buildArtistTag(song.name, songEraName),
+            artist: buildArtistTag(song.name, songEraName, settings.tagFeaturedArtists),
             album: songEraName,
             year: ALBUM_RELEASE_DATES[songEraName]?.split('/').pop(),
             artworkUrl: undefined,

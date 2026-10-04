@@ -410,7 +410,7 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
             const artUrl = selectedEraData!.image || CUSTOM_IMAGES[stemsEraName];
             const tagMeta = {
               title: songTitle,
-              artist: buildArtistTag(song.name, stemsEraName),
+              artist: buildArtistTag(song.name, stemsEraName, settings.tagFeaturedArtists),
               album: stemsEraName,
               year: ALBUM_RELEASE_DATES[stemsEraName]?.split('/').pop(),
               artworkUrl: artUrl,

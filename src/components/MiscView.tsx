@@ -320,7 +320,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
             const artUrl = selectedEraData!.image || CUSTOM_IMAGES[miscEraName];
             const tagMeta = {
               title: songTitle,
-              artist: buildArtistTag(song.name, miscEraName),
+              artist: buildArtistTag(song.name, miscEraName, settings.tagFeaturedArtists),
               album: miscEraName,
               year: ALBUM_RELEASE_DATES[miscEraName]?.split('/').pop(),
               artworkUrl: artUrl,

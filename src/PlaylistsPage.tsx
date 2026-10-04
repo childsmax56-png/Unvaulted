@@ -303,7 +303,7 @@ export function PlaylistsPage() {
         : entry.songName;
       const meta = settings.embedMetadata ? {
         title,
-        artist: entry.artist || buildArtistTag(entry.songName, eraName),
+        artist: buildArtistTag(entry.songName, eraName, settings.tagFeaturedArtists, entry.artist),
         album: eraName,
         year: ALBUM_RELEASE_DATES[eraName]?.split('/').pop(),
         artworkUrl: songArtwork(entry),

@@ -509,7 +509,7 @@ export function PlayerBar({
                         const dlYear = ALBUM_RELEASE_DATES[dlEraName]?.split('/').pop();
                         handleDownloadFile(rawUrl, currentSong.name, settings.tagsAsEmojis, settings.embedMetadata ? {
                           title: titleDisplay,
-                          artist: buildArtistTag(currentSong.name, dlEraName),
+                          artist: buildArtistTag(currentSong.name, dlEraName, settings.tagFeaturedArtists),
                           album: dlEraName,
                           year: dlYear,
                           artworkUrl: dlArtUrl,
