@@ -18,6 +18,8 @@ import { SiLastdotfm } from 'react-icons/si';
 import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { ReportLinkButton } from './ReportLinkButton';
+import { useDeadLinks, isDeadLink } from '../linkStatus';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { usePlaylists } from '../PlaylistContext';
 import { useIsClamped } from '../hooks/useIsClamped';
@@ -207,6 +209,7 @@ export const handleShareSilent = (song: Song, era: Era): string => {
 
 export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
   const { settings, updateSettings } = useSettings();
+  const deadLinks = useDeadLinks(activeConfig.slug);
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [zoomedImage, setZoomedImage] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -973,6 +976,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                     const isYoutubeLink = (rawUrl.includes('youtube.com/watch') || rawUrl.includes('youtu.be/')) && !isNotAvailable;
                     const isPlayable = (rawUrl.includes('pillows.su/f/') || rawUrl.includes('imgur.gg/f/') || rawUrl.includes('i.imgur.com') || rawUrl.includes('krakenfiles.com/view/') || rawUrl.includes('pixeldrain.com/u/')) && !isNotAvailable;
                     const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
+                    const isDead = !isEmpty && isDeadLink(deadLinks, rawUrl);
                     const isCurrentlyPlaying = (currentSong?.name === song.name && currentSong?.description === song.description) ||
                       (currentSong?.url && song.url && currentSong.url === song.url) ||
                       (currentSong?.urls && song.urls && currentSong.urls.length > 0 && song.urls.length > 0 && currentSong.urls[0] === song.urls[0]);
@@ -1039,6 +1043,14 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                           <div className={`flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 font-medium ${isCurrentlyPlaying ? 'text-[var(--theme-color)]' : 'text-white'}`}>
                             <SongTitle name={song.name} className="break-words whitespace-normal leading-snug" />
                             {song.extra && <SongExtra extra={song.extra} className={`text-xs break-words whitespace-normal leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`} />}
+                            {isDead && (
+                              <span
+                                title="This file has been deleted from its host"
+                                className="self-start sm:self-auto shrink-0 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded border border-red-500/30 text-red-400/90 bg-red-500/10"
+                              >
+                                Dead link
+                              </span>
+                            )}
                           </div>
                           {song.description && (() => {
                             const { ogFilename, note } = parseNoteDescription(song.description);
@@ -1119,6 +1131,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                               />
                             );
                           })()}
+                          {!isEmpty && !isDead && !activeConfig.community && (
+                            <ReportLinkButton
+                              tracker={activeConfig.slug}
+                              url={rawUrl}
+                              label={song.name}
+                              era={(song as any).realEra?.name || era.name}
+                              isCurrentlyPlaying={isCurrentlyPlaying}
+                            />
+                          )}
                           {(() => {
                             const commentEra = (song as any).realEra?.name || era.name;
                             return (

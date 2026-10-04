@@ -238,6 +238,7 @@ import { PlaylistProvider } from './PlaylistContext';
 import { initDataSync, scheduleDataPush } from './dataSync';
 import { recordListeningHistory } from './history';
 import { activeConfig } from './artists/activeConfig';
+import { reportBrokenLink } from './linkStatus';
 
 // When viewing a community (user-built) tracker, attach the signed-in account's
 // token to our own /api/ data requests. This lets the creator/admin preview a
@@ -2526,6 +2527,18 @@ export default function App() {
     const err = el.error;
     console.error('Audio element error', err?.code, err?.message, 'src:', el.src, 'crossOrigin:', el.crossOrigin, 'networkState:', el.networkState, 'readyState:', el.readyState);
     if (el.src) showToast("Failed to load audio - the source may be unreachable");
+    // Let the server re-check the link; it's only badged dead if the host
+    // confirms the file is gone (a down proxy or network blip won't count).
+    const rawUrl = currentSong ? (currentSong.url || currentSong.urls?.[0] || '') : '';
+    if (el.src && rawUrl && !activeConfig.community) {
+      reportBrokenLink({
+        tracker: currentSong?.commentTracker || ARTIST_SLUG,
+        url: rawUrl,
+        label: currentSong?.name,
+        era: (currentSong as any)?.realEra?.name || currentEra?.name,
+        reason: 'playback',
+      });
+    }
   };
 
   const handleSeek = (time: number) => {

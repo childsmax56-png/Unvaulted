@@ -89,6 +89,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const unreleased = tabs.find(t => t.tab === 'unreleased')!;
   if (!unreleased.source || unreleased.rows === 0) issues.push({ level: 'error', message: 'Unreleased tab has no data' });
   if (erasError) issues.push({ level: 'error', message: erasError });
+  else if (songs === 0) issues.push({ level: 'error', message: 'Era data built 0 songs — the site shows this tracker as empty' });
   for (const t of tabs) {
     if (t.liveConfigured && t.source === 'committed') issues.push({ level: 'warn', message: `${t.tab}: live sheet failed, serving committed snapshot (${t.liveError})` });
     if (t.liveConfigured && !t.source) issues.push({ level: 'error', message: `${t.tab}: live sheet failed and no committed snapshot (${t.liveError})` });
