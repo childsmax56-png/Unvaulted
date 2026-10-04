@@ -1,6 +1,7 @@
 const ALLOWED_HOSTS = [
   'api.pillows.su',
   'temp.imgur.gg',
+  'i.imgur.gg',
   'drive.google.com',
   'drive.usercontent.google.com',
 ];

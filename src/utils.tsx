@@ -1176,18 +1176,26 @@ export function pixeldrainProxyUrl(url: string): string | null {
   return id ? `${pixeldrainProxyBase()}/api/${id}` : null;
 }
 
+// Look up an imgur.gg/f/<id> page link via its file API. Besides the direct CDN
+// URL this returns the real MIME type + filename — imgur.gg also hosts videos,
+// images and zips, which must not be treated (and ID3-tagged) as audio.
+export async function resolveImgurGg(url: string): Promise<{ cdnUrl: string; type: string; ext: string } | null> {
+  const id = url.split('/f/')[1]?.split(/[?#/]/)[0]?.trim();
+  if (!id) return null;
+  const host = new URL(url).host;
+  const res = await fetch(`https://${host}/api/file/${id}`).catch(() => null);
+  if (!res || !res.ok) return null;
+  const data = await res.json().catch(() => null);
+  if (!data?.cdnUrl) return null;
+  const ext = String(data.name ?? '').match(/\.[a-z0-9]{2,4}$/i)?.[0].toLowerCase() ?? '';
+  return { cdnUrl: data.cdnUrl, type: String(data.type ?? ''), ext };
+}
+
 export async function resolveUrl(url: string): Promise<{ fetchUrl: string; isImage: boolean; imageExt?: string; headers?: Record<string, string> }> {
   if (url.includes('imgur.gg/f/')) {
-    const id = url.split('/f/')[1];
-    const host = new URL(url).host;
-    if (id) {
-      const res = await fetch(`https://${host}/api/file/${id}`).catch(() => null);
-      if (res && res.ok) {
-        const data = await res.json().catch(() => null);
-        if (data?.cdnUrl) return { fetchUrl: data.cdnUrl, isImage: false };
-      }
-    }
-    return { fetchUrl: url, isImage: false };
+    const info = await resolveImgurGg(url);
+    if (info?.type.startsWith('image/')) return { fetchUrl: info.cdnUrl, isImage: true, imageExt: info.ext || '.jpg' };
+    return { fetchUrl: info?.cdnUrl ?? url, isImage: false };
   }
   if (url.includes('pillows.su/f/')) {
     const pathPart = url.split('/f/')[1];
@@ -1259,15 +1267,23 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
 
     let isImage = false;
     let ext = '.mp3';
+    // Set for files we know aren't audio (e.g. an imgur.gg video or zip): saved
+    // byte-for-byte with this extension, skipping audio detection/tagging.
+    let nonAudioExt: string | null = null;
+    // Same-origin proxy to retry through when the direct cross-origin fetch fails.
+    let proxyUrl: string | null = null;
 
     if (url.includes('imgur.gg/f/')) {
-        const id = url.split('/f/')[1];
-        const host = new URL(url).host;
-        if (id) {
-            const res = await fetch(`https://${host}/api/file/${id}`).catch(() => null);
-            if (res && res.ok) {
-                const data = await res.json().catch(() => null);
-                if (data?.cdnUrl) finalUrl = data.cdnUrl;
+        const info = await resolveImgurGg(url);
+        if (info) {
+            finalUrl = info.cdnUrl;
+            proxyUrl = `/api/audio-proxy?url=${encodeURIComponent(info.cdnUrl)}`;
+            if (info.type.startsWith('image/')) {
+                isImage = true;
+                ext = info.ext || '.jpg';
+            } else if (!info.type.startsWith('audio/') && info.ext) {
+                nonAudioExt = info.ext;
+                ext = info.ext;
             }
         }
     } else if (url.includes('pillows.su/f/')) {
@@ -1347,12 +1363,19 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       // Use plain fetch (no timeout) for audio — mirrors the zip download path.
       // The 3-second getWithTimeout was aborting before pillows.su responded.
       // Images still get the short timeout + proxy fallback chain.
-      let response: Response | null = isImage
+      // no-store when a proxy fallback exists (imgur.gg): an <audio> element that
+      // already played the file cached it without CORS headers, and reusing that
+      // cache entry makes this cross-origin fetch fail.
+      let response: Response | null = isImage && !proxyUrl
         ? await getWithTimeout(finalUrl, 3000)
-        : await fetch(finalUrl).catch(() => null);
+        : await fetch(finalUrl, proxyUrl ? { cache: 'no-store' } : undefined).catch(() => null);
+
+      if ((!response || !response.ok) && proxyUrl) {
+        response = await fetch(proxyUrl).catch(() => null);
+      }
 
       if (!response || !response.ok) {
-        if (isImage) {
+        if (isImage && !proxyUrl) {
           const proxies = [
             `https://corsproxy.io/?${encodeURIComponent(finalUrl)}`,
             `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(finalUrl)}`,
@@ -1388,7 +1411,9 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       }
 
       blob = await response.blob();
-      if (isImage) {
+      if (nonAudioExt) {
+        // Not audio — save as-is; tagging/transcoding would corrupt it.
+      } else if (isImage) {
         blob = await compressImageBlob(blob);
         fileName = fileName.replace(/\.(png|jpeg|jpg)$/i, '') + '.jpg';
       } else {
@@ -1459,7 +1484,9 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       }
     } catch (e) {
       console.error('Download failed:', e);
-      openFallback(finalUrl, fileName);
+      // Prefer the same-origin proxy: the download attribute is honoured there,
+      // whereas a cross-origin CDN link just opens and plays in a new tab.
+      openFallback(proxyUrl ?? finalUrl, fileName);
       return;
     }
 
