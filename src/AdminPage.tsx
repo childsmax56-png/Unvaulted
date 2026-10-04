@@ -162,6 +162,19 @@ function HealthView() {
   }, [reports, onlyProblems]);
 
   const done = Object.values(reports).filter(r => r !== 'loading').length;
+
+  const errorText = () => {
+    const blocks: string[] = [];
+    for (const a of OFFICIAL) {
+      const rep = reports[a.slug];
+      if (!rep || rep === 'loading') continue;
+      const lines = 'error' in rep
+        ? [`- Health check failed: ${rep.error}`]
+        : rep.issues.filter(i => i.level === 'error').map(i => `- ${i.message}`);
+      if (lines.length) blocks.push(`${NAME_OF[a.slug]} (/${a.slug})\n${lines.join('\n')}`);
+    }
+    return blocks.join('\n\n');
+  };
   const counts = [0, 1, 2, 3].map(lv => Object.values(reports).filter(r => severity(r) === lv).length);
 
   return (
@@ -175,6 +188,7 @@ function HealthView() {
             <span style={{ color: C.green }}>{counts[0]} healthy</span> · <span style={{ color: C.amber }}>{counts[1]} warnings</span> · <span style={{ color: C.red }}>{counts[2] + counts[3]} errors</span>
           </span>
         )}
+        {counts[2] + counts[3] > 0 && <CopyButton label="Copy errors" getText={errorText} />}
         <label style={{ color: C.dim, fontSize: 13, display: 'flex', alignItems: 'center', gap: 6, marginLeft: 'auto' }}>
           <input type="checkbox" checked={onlyProblems} onChange={e => setOnlyProblems(e.target.checked)} /> Only show problems
         </label>
@@ -343,6 +357,12 @@ function LinksView() {
     }
   };
 
+  const liveDead = dead.filter(d => d.override !== 'ok');
+  const deadText = () => liveDead.map(d =>
+    `${NAME_OF[d.tracker] || d.tracker}${d.era ? ` · ${d.era}` : ''} · ${d.name || '(untitled)'} — ${d.url} (HTTP ${d.http_status ?? '—'})`,
+  ).join('\n');
+  const deadUrls = () => liveDead.map(d => d.url).join('\n');
+
   const isBusy = (action: string, t: string, u: string) => busy === `${action}:${t}:${u}`;
   const anyScanning = Object.values(scans).some(s => s.phase === 'loading' || s.phase === 'checking');
 
@@ -414,7 +434,15 @@ function LinksView() {
         ))}
       </Section>
 
-      <Section title={`Dead links (${dead.length}${dead.length === 500 ? '+' : ''})`}>
+      <Section
+        title={`Dead links (${dead.length}${dead.length === 500 ? '+' : ''})`}
+        action={liveDead.length > 0 && (
+          <>
+            <CopyButton label="Copy list" getText={deadText} />
+            <CopyButton label="Copy URLs" getText={deadUrls} />
+          </>
+        )}
+      >
         {dead.length === 0 ? <Empty text="No dead links found yet. Run a scan." /> : dead.map(d => (
           <Row key={d.tracker + d.url} dim={d.override === 'ok'}>
             <div style={{ flex: 1, minWidth: 0 }}>
@@ -449,12 +477,33 @@ function normalize(raw: string): string {
   return u.replace(/\/+$/, '');
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, action, children }: { title: string; action?: React.ReactNode; children: React.ReactNode }) {
   return (
     <section style={{ marginBottom: 28 }}>
-      <h2 style={{ fontSize: 17, margin: '0 0 10px' }}>{title}</h2>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', margin: '0 0 10px' }}>
+        <h2 style={{ fontSize: 17, margin: 0, marginRight: 'auto' }}>{title}</h2>
+        {action}
+      </div>
       {children}
     </section>
+  );
+}
+
+function CopyButton({ label, getText }: { label: string; getText: () => string }) {
+  const [state, setState] = useState<'idle' | 'copied' | 'failed'>('idle');
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(getText());
+      setState('copied');
+    } catch {
+      setState('failed');
+    }
+    setTimeout(() => setState('idle'), 1500);
+  };
+  return (
+    <button onClick={copy} style={smallBtn(state === 'copied' ? C.green : state === 'failed' ? C.red : C.blue)}>
+      {state === 'copied' ? 'Copied!' : state === 'failed' ? 'Copy failed' : label}
+    </button>
   );
 }
 
