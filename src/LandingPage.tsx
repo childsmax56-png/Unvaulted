@@ -604,7 +604,13 @@ function useVGAuth() {
     setUser(null);
   };
 
-  return { user, signInWithGoogle, signOut };
+  const signIn = (token: string, vgUser: VGUser) => {
+    localStorage.setItem(TOKEN_KEY, token);
+    localStorage.setItem(USER_KEY, JSON.stringify(vgUser));
+    setUser(vgUser);
+  };
+
+  return { user, signIn, signInWithGoogle, signOut };
 }
 
 // ─── Card components ──────────────────────────────────────────────────────────
@@ -1017,57 +1023,212 @@ function SheetButton({ href, accent }: { href: string; accent?: string }) {
 
 // ─── Main page ────────────────────────────────────────────────────────────────
 
-function ConsentModal({ onAccept, onClose }: { onAccept: () => void; onClose: () => void }) {
+const authInputStyle: React.CSSProperties = {
+  width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.05)',
+  border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '10px 12px',
+  color: '#fff', fontSize: 13, outline: 'none',
+};
+
+function AuthModal({ onGoogle, onSignedIn, onClose }: {
+  onGoogle: () => void;
+  onSignedIn: (token: string, user: VGUser) => void;
+  onClose: () => void;
+}) {
+  const [tab, setTab] = useState<'login' | 'register'>('login');
+  const [loginVal, setLoginVal] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [agreed, setAgreed] = useState(false);
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  const switchTab = (t: 'login' | 'register') => { setTab(t); setError(''); };
+
+  const submit = async () => {
+    if (busy) return;
+    setError('');
+    if (tab === 'register' && !agreed) return setError('Please agree to the Terms of Service and Privacy Policy');
+    setBusy(true);
+    try {
+      const res = await fetch(`${VG_API}/api/auth/${tab}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(tab === 'login' ? { login: loginVal, password } : { username, email, password }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) return setError(data.error || (tab === 'login' ? 'Sign in failed' : 'Registration failed'));
+      onSignedIn(data.token, data.user);
+      onClose();
+    } catch {
+      setError('Network error — please try again');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const google = () => {
+    if (!agreed) return setError('Please agree to the Terms of Service and Privacy Policy');
+    onClose();
+    onGoogle();
+  };
+
+  const onEnter = (e: React.KeyboardEvent) => { if (e.key === 'Enter') submit(); };
+
   return (
     <div
       onClick={onClose}
       style={{
         position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', zIndex: 1000,
-        display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24,
+        display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16,
       }}
     >
       <div
         onClick={e => e.stopPropagation()}
         style={{
-          background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14,
-          padding: '28px 28px 24px', maxWidth: 400, width: '100%',
+          position: 'relative', background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14,
+          padding: '24px 24px 20px', maxWidth: 400, width: '100%',
         }}
       >
-        <h2 style={{ margin: '0 0 8px', fontSize: 18, fontWeight: 700, color: '#fff' }}>
-          Create your account
-        </h2>
-        <p style={{ margin: '0 0 20px', fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
-          Sign in with Google to track your vault rankings and claim your profile.
-        </p>
-        <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', marginBottom: 20 }}>
-          <input
-            type="checkbox"
-            checked={agreed}
-            onChange={e => setAgreed(e.target.checked)}
-            style={{ marginTop: 2, accentColor: '#C9A224', width: 15, height: 15, flexShrink: 0 }}
-          />
-          <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>
-            I agree to the{' '}
-            <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Terms of Service</a>
-            {' '}and{' '}
-            <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Privacy Policy</a>
-          </span>
-        </label>
         <button
-          onClick={() => { if (agreed) { onClose(); onAccept(); } }}
-          disabled={!agreed}
-          style={{
-            width: '100%', padding: '11px 0', borderRadius: 10,
-            background: agreed ? 'rgba(201,162,36,0.15)' : 'rgba(255,255,255,0.05)',
-            color: agreed ? '#C9A224' : 'rgba(255,255,255,0.25)',
-            fontSize: 14, fontWeight: 600, letterSpacing: '0.04em',
-            cursor: agreed ? 'pointer' : 'not-allowed', transition: 'all 0.15s',
-            border: `1px solid ${agreed ? 'rgba(201,162,36,0.3)' : 'rgba(255,255,255,0.08)'}`,
-          }}
+          onClick={onClose}
+          aria-label="Close"
+          style={{ position: 'absolute', top: 14, right: 14, background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.4)' }}
         >
-          Continue with Google
+          <X size={16} />
         </button>
+        <h2 style={{ margin: '0 0 6px', fontSize: 18, fontWeight: 700, color: '#fff' }}>
+          {tab === 'login' ? 'Sign in to UNVAULTED' : 'Create your account'}
+        </h2>
+        <p style={{ margin: '0 0 18px', fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
+          Track your vault rankings, sync favorites and playlists, and claim your profile.
+        </p>
+
+        <div style={{ display: 'flex', gap: 4, marginBottom: 16, borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+          {(['login', 'register'] as const).map(t => (
+            <button
+              key={t}
+              onClick={() => switchTab(t)}
+              style={{
+                padding: '0 8px 10px', background: 'none', border: 'none', cursor: 'pointer',
+                fontSize: 13, fontWeight: 700, marginBottom: -1,
+                borderBottom: `2px solid ${tab === t ? '#C9A224' : 'transparent'}`,
+                color: tab === t ? '#C9A224' : 'rgba(255,255,255,0.4)',
+              }}
+            >
+              {t === 'login' ? 'Sign In' : 'Create Account'}
+            </button>
+          ))}
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {tab === 'login' ? (
+            <input
+              placeholder="Username or email"
+              value={loginVal}
+              onChange={e => setLoginVal(e.target.value)}
+              onKeyDown={onEnter}
+              autoComplete="username"
+              autoFocus
+              style={authInputStyle}
+            />
+          ) : (
+            <>
+              <div>
+                <input
+                  placeholder="Choose a username"
+                  value={username}
+                  onChange={e => setUsername(e.target.value)}
+                  onKeyDown={onEnter}
+                  autoComplete="username"
+                  autoFocus
+                  style={authInputStyle}
+                />
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>
+                  3–32 characters, letters, numbers, _ . -
+                </div>
+              </div>
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                onKeyDown={onEnter}
+                autoComplete="email"
+                style={authInputStyle}
+              />
+            </>
+          )}
+          <input
+            type="password"
+            placeholder={tab === 'register' ? 'Password (min. 8 characters)' : 'Password'}
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            onKeyDown={onEnter}
+            autoComplete={tab === 'login' ? 'current-password' : 'new-password'}
+            style={authInputStyle}
+          />
+
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', margin: '2px 0' }}>
+            <input
+              type="checkbox"
+              checked={agreed}
+              onChange={e => setAgreed(e.target.checked)}
+              style={{ marginTop: 2, accentColor: '#C9A224', width: 15, height: 15, flexShrink: 0 }}
+            />
+            <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>
+              I agree to the{' '}
+              <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Terms of Service</a>
+              {' '}and{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Privacy Policy</a>
+            </span>
+          </label>
+
+          <button
+            onClick={submit}
+            disabled={busy}
+            style={{
+              width: '100%', padding: '11px 0', borderRadius: 10,
+              background: 'rgba(201,162,36,0.15)', color: '#C9A224',
+              border: '1px solid rgba(201,162,36,0.3)',
+              fontSize: 14, fontWeight: 600, letterSpacing: '0.04em',
+              cursor: busy ? 'wait' : 'pointer', opacity: busy ? 0.6 : 1,
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            }}
+          >
+            {tab === 'login' ? <LogIn size={14} /> : <User size={14} />}
+            {busy ? 'Please wait…' : tab === 'login' ? 'Sign In' : 'Create Account'}
+          </button>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '2px 0' }}>
+            <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.1)' }} />
+            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>or</span>
+            <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.1)' }} />
+          </div>
+
+          <button
+            onClick={google}
+            style={{
+              width: '100%', padding: '11px 0', borderRadius: 10, border: 'none',
+              background: '#fff', color: '#000', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            }}
+          >
+            <GoogleIcon /> Continue with Google
+          </button>
+
+          {error && <p style={{ fontSize: 12, color: '#ef4444', textAlign: 'center', margin: 0 }}>{error}</p>}
+
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', textAlign: 'center', margin: '4px 0 0' }}>
+            {tab === 'login' ? "Don't have an account? " : 'Already have an account? '}
+            <button
+              onClick={() => switchTab(tab === 'login' ? 'register' : 'login')}
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: '#C9A224', fontSize: 12, fontWeight: 600 }}
+            >
+              {tab === 'login' ? 'Create one' : 'Sign in'}
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -1085,7 +1246,7 @@ export function LandingPage() {
   const [userVisits] = useState<VisitCounts>(getUserVisitCounts);
   const { settings } = useSettings();
   const showPhotos = true;
-  const { user, signInWithGoogle, signOut } = useVGAuth();
+  const { user, signIn, signInWithGoogle, signOut } = useVGAuth();
   const { favorites, toggleFavorite } = useFavoriteArtists();
   const isFavorite = (slug: string) => favorites.includes(slug);
 
@@ -1164,7 +1325,7 @@ export function LandingPage() {
       alignItems: 'center',
     }}>
       {showSettings && <LandingSettingsPanel onClose={() => setShowSettings(false)} />}
-      {showConsent && <ConsentModal onAccept={signInWithGoogle} onClose={() => setShowConsent(false)} />}
+      {showConsent && <AuthModal onGoogle={signInWithGoogle} onSignedIn={signIn} onClose={() => setShowConsent(false)} />}
 
       <header style={{ textAlign: 'center', marginBottom: 40, width: '100%', maxWidth: 900, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: 8 }}>
@@ -1491,7 +1652,7 @@ export function LandingPage() {
             onClick={() => setShowConsent(true)}
             style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}
           >
-            <GoogleIcon /> Sign in with Google
+            <LogIn size={14} /> Sign In
           </button>
         )}
       </div>
