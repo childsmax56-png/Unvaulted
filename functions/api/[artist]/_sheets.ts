@@ -1,5 +1,6 @@
 import { getCommunityTrackerCsv } from './_community';
 import { fetchSheetApiCsv, hasSheetApiSource } from './_sheetsApi';
+import { fetchImportedCsv, hasImportedSource } from './_importedSheets';
 import { splitCSVRows, joinCSVRows } from './_csvParser';
 
 // Live Google Sheet fallback for trackers that don't ship committed CSVs.
@@ -781,6 +782,18 @@ export async function resolveTrackerCsv(
 
   const errors: string[] = [];
   const apiConfigured = hasSheetApiSource(artist, tab);
+  const importedConfigured = hasImportedSource(artist, tab);
+
+  // Trackers added by scripts/build-bigupdate-csvs.py: fetch the raw tab and run
+  // the importer's normalization live (see _importedSheets.ts).
+  if (importedConfigured) {
+    try {
+      const csv = await fetchImportedCsv(artist, tab, env?.GOOGLE_SHEETS_API_KEY);
+      return { text: csv, source: 'live', liveConfigured: true };
+    } catch (err) {
+      errors.push(err instanceof Error ? err.message : String(err));
+    }
+  }
 
   // Live via the Sheets API for download-disabled sheets whose plain CSV export
   // is blocked and strips hrefs (e.g. cactigold). Reconstructs the canonical CSV
@@ -811,7 +824,7 @@ export async function resolveTrackerCsv(
     }
   }
 
-  const liveConfigured = apiConfigured || !!remote;
+  const liveConfigured = apiConfigured || importedConfigured || !!remote;
   const liveError = errors.length ? errors.join('; ') : undefined;
 
   // Committed static CSV snapshot (fallback, or the sole source for unconfigured tabs).

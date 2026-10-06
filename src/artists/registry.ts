@@ -63,6 +63,16 @@ import { ushergoldConfig } from './ushergold';
 import { weekndgoldConfig } from './weekndgold';
 import { westsidegoldConfig } from './westsidegold';
 import { wutanggoldConfig } from './wutanggold';
+import { clipsegoldConfig } from './clipsegold';
+import { daxgoldConfig } from './daxgold';
+import { deathgripsgoldConfig } from './deathgripsgold';
+import { delasoulgoldConfig } from './delasoulgold';
+import { premiergoldConfig } from './premiergold';
+import { dmxgoldConfig } from './dmxgold';
+import { dualipagoldConfig } from './dualipagold';
+import { earlgoldConfig } from './earlgold';
+import { olivertreegoldConfig } from './olivertreegold';
+import { fiviogoldConfig } from './fiviogold';
 
 export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   // Featured + pinned lineup drives the landing page order (see LandingPage.tsx)
@@ -129,6 +139,16 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   weekndgold: weekndgoldConfig,         // The Weeknd
   westsidegold: westsidegoldConfig,     // Westside Gunn
   wutanggold: wutanggoldConfig,         // Wu-Tang Clan
+  clipsegold:     clipsegoldConfig,     // Clipse
+  daxgold:        daxgoldConfig,        // Dax
+  deathgripsgold: deathgripsgoldConfig, // Death Grips
+  delasoulgold:   delasoulgoldConfig,   // De La Soul
+  premiergold:    premiergoldConfig,    // DJ Premier
+  dmxgold:        dmxgoldConfig,        // DMX
+  dualipagold:    dualipagoldConfig,    // Dua Lipa
+  earlgold:       earlgoldConfig,       // Earl Sweatshirt
+  olivertreegold: olivertreegoldConfig, // Oliver Tree
+  fiviogold:      fiviogoldConfig,      // Fivio Foreign
   // Easter egg — hidden from the landing grid, reached by searching "d4vd".
   d4vdgold: d4vdgoldConfig,
 };

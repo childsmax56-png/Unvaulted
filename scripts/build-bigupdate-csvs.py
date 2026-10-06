@@ -8,10 +8,13 @@ generates src/artists/<slug>.ts. It is header-driven: source column order and
 naming vary per tracker, so columns are matched by header keyword rather than
 by fixed position.
 
-Usage: python3 scripts/build-bigupdate-csvs.py
+Usage: python3 scripts/build-bigupdate-csvs.py [batch]
+  batch = "bigupdate" (default, ~/Downloads/big update) or "2026-10"
+  (~/Downloads/new trackers 2026-10, one "x - <Tab>.csv" per tab, pulled via
+  CSV export or — for private/display-text-link sheets — the Sheets API).
 Then wire the generated configs into src/artists/registry.ts.
 """
-import csv, io, os, re, json
+import csv, io, os, re, json, sys
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 SRC_ROOT = os.path.expanduser("~/Downloads/big update")
@@ -42,6 +45,59 @@ ARTISTS = {
     "weekend":           ("weekndgold",     "The Weeknd",       "#b91c1c", "W", "The Weeknd"),
     "westside gun":      ("westsidegold",   "Westside Gunn",    "#525252", "W", "Westside Gunn"),
     "wu tang":           ("wutanggold",     "Wu-Tang Clan",     "#facc15", "W", "Wu-Tang Clan"),
+}
+
+# 2026-10 batch. folder -> (slug, name, accent, letter, label, sheet id, creator)
+ARTISTS_2026_10 = {
+    "clipse":          ("clipsegold",     "Clipse",          "#a3a3a3", "C", "Clipse",
+                        "1XUtY5ris3U5R9sRBTOQdTxTNhvCbmjNAQbmLHGHTMGQ", "iaon"),
+    "dax":             ("daxgold",        "Dax",             "#dc2626", "D", "Dax",
+                        "1t1IuCgKrx3QjCt9CLrcu3FqA32qGAF8TeQjhCQHO4AY", "iaon"),
+    "death grips":     ("deathgripsgold", "Death Grips",     "#18181b", "D", "Death Grips",
+                        "1Eh-9UyWUtyEpi_ELEhq5pD41ivFJHuQcvz2wFR2ml9g", "iaon"),
+    "de la soul":      ("delasoulgold",   "De La Soul",      "#facc15", "D", "De La Soul",
+                        "19KA4hq1j8sVhTEt4gqWWn6Potw9N_IGGJ2bwgZeVYHI", "iaon"),
+    "dj premier":      ("premiergold",    "DJ Premier",      "#b45309", "P", "DJ Premier",
+                        "1RaAzCb3IAg0FZas9dsAMqU785xw1sDYIvx3-SVFEVsY", "iaon"),
+    "dmx":             ("dmxgold",        "DMX",             "#7f1d1d", "D", "DMX",
+                        "101y0kCIzwGoT0YmGHIchehUpO7tzAdjXSZZVRrEobOg", "iaon"),
+    "dua lipa":        ("dualipagold",    "Dua Lipa",        "#db2777", "D", "Dua Lipa",
+                        "1gi_foSEziQ48hTlq8hBqIwZCHz6hma1rYXr8qykBq6c", "iaon"),
+    "earl sweatshirt": ("earlgold",       "Earl Sweatshirt", "#65a30d", "E", "Earl Sweatshirt",
+                        "1EKEnvdiwSudiPJSePPzfCXIQ_W-AYeAIY6_r-a12bdM", "iaon"),
+    "oliver tree":     ("olivertreegold", "Oliver Tree",     "#0284c7", "O", "Oliver Tree",
+                        "1rhvQ9F8VRAj-jOyTLsvhORsVCyvcMRXJuGoDR1-z4jY", "iaon"),
+    "favio foreign":   ("fiviogold",      "Fivio Foreign",   "#4f46e5", "F", "Fivio Foreign",
+                        "1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74", "iaon"),
+}
+
+# Per-tracker era-name fixes the generic reconciliation can't infer.
+#   "headers": era-header Name cell (whitespace-collapsed) -> new Name cell
+#   "songs":   song-row Era -> era name
+ERA_FIXES = {
+    "clipsegold": {"songs": {
+        "King Push: The Prelude": "King Push – Darkest Before Dawn: The Prelude"}},
+    "delasoulgold": {
+        "headers": {
+            "Art Official Itelligence: Mosiac Thump": "AOI: Mosaic Thump",
+            "Art Official Intelligence: Bionix": "AOI: Bionix",
+            "Art Official Intelligence: 3 [V1]": "AOI: 3 [V1]",
+            "Art Official Intelligence: 3 [V2]": "AOI: 3 [V2]",
+            "Maseo & Bumpy Knuckles Present... 4 Exits Only": "4 Exits Only\n(Maseo & Bumpy Knuckles)",
+        },
+        "songs": {"AOI: Mosiac Thump": "AOI: Mosaic Thump", "Your Welcome!": "You're Welcome!"},
+    },
+    "olivertreegold": {
+        # the sheet titles one header block for three album eras; give it to the first
+        "headers": {"Cowboy Tears Drown the World in a Swimming Pool of Sorrow": "Cowboy Tears"},
+        "songs": {"Soul Album": "Untitled Soul Album", "Tommy Cash Collaboration": "Unknown EP",
+                  "LYM, HYB": "Love You Madly, Hate You Badly"},
+    },
+}
+
+BATCHES = {
+    "bigupdate": (SRC_ROOT, ARTISTS),
+    "2026-10": (os.path.expanduser("~/Downloads/new trackers 2026-10"), ARTISTS_2026_10),
 }
 
 RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
@@ -165,12 +221,103 @@ UNREL_HEADER = ["Era", "Name", "Notes", "Track Length", "File Date",
                 "Leak Date", "Available Length", "Quality", "Link(s)"]
 
 
-def build_unreleased(rows):
+def link_cols(h):
+    """Every 'Link(s)' column (some sheets split links by host across columns)."""
+    return [i for i, x in enumerate(h) if "link" in clean(x).lower()]
+
+
+def is_count_block(c):
+    """'3 Full' / '24 Total\n17 Confirmed...' — every line is '<n> <word>'."""
+    lines = [l.strip() for l in (c or "").split("\n") if l.strip()]
+    return bool(lines) and all(re.match(
+        r"^\d+\s+(Total|Full|Tagged|Partial|OG|Snippets?|Unavailable|Confirmed|Leaks?|"
+        r"Beats?|Stems?|Cut|Lost|Rumou?red|Available|Instrumentals?|Demos?)\b", l, re.I)
+        for l in lines)
+
+
+def era_header_cell(r):
+    """The file-count cell of an era-header row (normally col 0; some sheets
+    leave col 0 blank and put the counts further right), else None. Always
+    returned with a newline — a.ts keys era headers on a multi-line Era cell."""
+    if not r:
+        return None
+    c = None
+    if is_count_header(r[0]) or is_count_block(r[0]):
+        c = r[0]
+    elif not clean(r[0]):
+        c = next((x for x in r[1:] if is_count_block(x)), None)
+    if c is None:
+        return None
+    return c if "\n" in c.strip() else c.strip() + "\n"
+
+
+def era_key(s):
+    s = re.sub(r"\s+", " ", (s or "").split("\n")[0]).strip().rstrip("*").strip()
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def reconcile_eras(out, name_rows):
+    """Point song rows at their era-header name.
+
+    Source sheets wrap/abbreviate the Era cell ("Year Of The \nSnitch",
+    "Fear Of God II" under "Fear Of God II: Let Us Pray", "B.I.B.L.E" vs
+    "B.I.B.L.E."), which would otherwise split one era into an empty header era
+    plus a description-less song era. Also promotes count-less header rows
+    (blank Era, era title in Name, e.g. Earl) whose title matches song eras.
+    """
+    hdr = {}
+    for r in out:
+        if "\n" in r[0]:
+            name = clean(r[1].split("\n")[0])
+            hdr.setdefault(era_key(name), name)
+    song_keys = {era_key(r[0]) for r in out if "\n" not in r[0]}
+    # count-less era headers: blank Era, title in Name, no file data
+    promoted = []
+    for (idx, title, notes) in name_rows:
+        k = era_key(re.sub(r"\(.*?\)", "", title.split("\n")[0]))
+        if k and k not in hdr and k in song_keys:
+            first, _, rest = title.partition("\n")
+            name = clean(re.sub(r"\(.*?\)", "", first))
+            extra = "\n".join(x for x in (clean(first[len(name):]) if first.startswith(name) else "", clean(rest)) if x)
+            hdr[k] = name
+            promoted.append((idx, ["\n", name + ("\n" + extra if extra else ""), notes, "", "", "", "", "", ""]))
+    for idx, row in reversed(promoted):
+        out.insert(idx, row)
+    for r in out:
+        if "\n" in r[0]:
+            continue
+        k = era_key(r[0])
+        if k in hdr:
+            r[0] = hdr[k]
+            continue
+        cands = [v for hk, v in hdr.items() if k and hk.startswith(k)]
+        r[0] = cands[0] if len(cands) == 1 else re.sub(r"\s+", " ", r[0]).rstrip("*").strip()
+    # a.ts (re)initialises an era at its header row, dropping songs listed above
+    # it — so move any header that trails its era's first song up to that song.
+    for i in range(len(out)):
+        r = out[i]
+        if "\n" not in r[0]:
+            continue
+        name = clean(r[1].split("\n")[0])
+        first = next((j for j in range(i) if "\n" not in out[j][0] and out[j][0] == name), None)
+        if first is not None:
+            out.insert(first, out.pop(i))
+    return out
+
+
+def build_unreleased(rows, fixes=None):
     hi = find_header(rows)
     h = rows[hi]
+    name_i = col(h, "name") or col(h, "title")
+    if name_i is None:
+        name_i = 1  # some sheets leave the Name header blank
+    notes_i = col(h, "note") or col(h, "info") or col(h, "description")
+    if notes_i is None and name_i + 1 < len(h) and not clean(h[name_i + 1]):
+        notes_i = name_i + 1  # blank-headed column right after Name
+    lcols = link_cols(h)
     ci = {
-        "name": (col(h, "name") or col(h, "title")),
-        "notes": col(h, "note") or col(h, "info"),
+        "name": name_i,
+        "notes": notes_i,
         "tlen": col(h, "track", "length") or col(h, "length", exclude=("available", "full")),
         "file": col(h, "file", "date") or col(h, "obtained"),
         "leak": col(h, "leak", "date"),
@@ -178,24 +325,37 @@ def build_unreleased(rows):
         "qual": col(h, "quality"),
         "link": col(h, "link") or col(h, "source"),
     }
-    out = []
+    out, name_rows = [], []
     for r in rows[hi + 1:]:
-        era0 = r[0] if r else ""
-        if is_count_header(era0):
-            era_name = cell(r, ci["name"]).split("\n")[0]
+        if r and not clean(r[0]) and cell(r, ci["name"]) and not era_header_cell(r) \
+                and not any(cell(r, ci[k]) for k in ("link", "avail", "qual", "tlen")):
+            name_rows.append((len(out), cell(r, ci["name"]), cell(r, ci["notes"])))
+            continue
+        hdr_cell = era_header_cell(r)
+        if hdr_cell:
+            era_name = cell(r, ci["name"])  # a.ts: first line = era, rest = extra
             if not era_name:
                 continue
-            out.append([era0, era_name, "", "", "", "", "", "", ""])
+            out.append([hdr_cell, era_name, cell(r, ci["notes"]), "", "", "", "", "", ""])
         else:
-            era = clean(era0)
+            era = re.sub(r"\s+", " ", r[0]).strip() if r else ""
             name = cell(r, ci["name"])
             if not era or not name:
                 continue
+            links = "\n".join(x for x in (cell(r, i) for i in lcols) if x) if len(lcols) > 1 \
+                else cell(r, ci["link"])
             out.append([era, name, cell(r, ci["notes"]), cell(r, ci["tlen"]),
                         cell(r, ci["file"]), cell(r, ci["leak"]),
-                        cell(r, ci["avail"]), cell(r, ci["qual"]),
-                        cell(r, ci["link"])])
-    return out
+                        cell(r, ci["avail"]), cell(r, ci["qual"]), links])
+    fixes = fixes or {}
+    for r in out:
+        if "\n" in r[0]:
+            key = re.sub(r"\s+", " ", r[1]).strip()
+            if key in fixes.get("headers", {}):
+                r[1] = fixes["headers"][key]
+        elif r[0] in fixes.get("songs", {}):
+            r[0] = fixes["songs"][r[0]]
+    return reconcile_eras(out, name_rows)
 
 
 def build_recent_from_unrel(unrel):
@@ -382,8 +542,8 @@ def derive_eras(unrel):
     """Ordered union of every era referenced in the unreleased schema output."""
     order, seen = [], set()
     for r in unrel:
-        if is_count_header(r[0]):
-            era = clean(r[1])
+        if "\n" in r[0]:
+            era = clean(r[1].split("\n")[0])  # a.ts: era name = Name's first line
         else:
             era = clean(r[0])
         if era and era not in seen:
@@ -397,7 +557,7 @@ def ts_str(s):
     return "'" + s.replace("\\", "\\\\").replace("'", "\\'").replace("\n", " ") + "'"
 
 
-def gen_config(slug, name, accent, letter, label, eras, flags):
+def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", creator=""):
     rd = ",\n".join(f"    {ts_str(e)}: '??/??/????'" for e in eras)
     order = ",\n".join(f"    {ts_str(e)}" for e in eras)
     extra = []
@@ -407,6 +567,7 @@ def gen_config(slug, name, accent, letter, label, eras, flags):
         extra.append("  hasGroupbuysTab: true,")
     extra_s = ("\n" + "\n".join(extra)) if extra else ""
     var = slug + "Config"
+    creator_s = f"\n  sheetCreator: {ts_str(creator)}," if creator else ""
     return f"""import type {{ ArtistConfig }} from './types';
 
 // {name} tracker. Data served from committed CSV snapshots under
@@ -419,9 +580,9 @@ export const {var}: ArtistConfig = {{
   SITE_DESCRIPTION: 'The Best {name} Tracker In The World!',
   SITE_URL: 'https://unvaulted.cc/{slug}/',
   OG_IMAGE_URL: '',
-  STORAGE_PREFIX: '{slug}_',
+  STORAGE_PREFIX: '{slug}_',{creator_s}
 
-  HARDCODED_SHEET_ID: '',
+  HARDCODED_SHEET_ID: '{sheet_id}',
   HARDCODED_SHEET_GID: '',
   SHEET_URL_UNRELEASED: '',
   SHEET_URL_RECENT: '',
@@ -461,9 +622,10 @@ export const {var}: ArtistConfig = {{
 
 
 # --------------------------------------------------------------------- main --
-def process(folder, meta):
-    slug, name, accent, letter, label = meta
-    src_dir = os.path.join(SRC_ROOT, folder)
+def process(folder, meta, src_root=SRC_ROOT):
+    slug, name, accent, letter, label = meta[:5]
+    sheet_id, creator = (meta[5], meta[6]) if len(meta) > 5 else ("", "")
+    src_dir = os.path.join(src_root, folder)
     dst_dir = os.path.join(ROOT, "public", slug)
     data_dir = os.path.join(dst_dir, "data")
     print(f"\n{folder} -> {slug}")
@@ -483,7 +645,7 @@ def process(folder, meta):
         return None
 
     os.makedirs(data_dir, exist_ok=True)
-    unrel = build_unreleased(read_rows(tabs["unreleased"]))
+    unrel = build_unreleased(read_rows(tabs["unreleased"]), ERA_FIXES.get(slug))
     write_csv(data_dir, "unreleased.csv", UNREL_HEADER, unrel)
 
     if "released" in tabs:
@@ -520,13 +682,13 @@ def process(folder, meta):
 
     # recent: use source tab if present, else derive from unreleased
     if "recent" in tabs:
-        rows = build_unreleased(read_rows(tabs["recent"]))
+        rows = build_unreleased(read_rows(tabs["recent"]), ERA_FIXES.get(slug))
         write_csv(data_dir, "recent.csv", UNREL_HEADER, rows)
     else:
         write_csv(data_dir, "recent.csv", UNREL_HEADER, build_recent_from_unrel(unrel))
 
     eras = derive_eras(unrel)
-    cfg = gen_config(slug, name, accent, letter, label, eras, flags)
+    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator)
     with open(os.path.join(ROOT, "src", "artists", f"{slug}.ts"), "w", encoding="utf-8") as f:
         f.write(cfg)
     print(f"    src/artists/{slug}.ts: {len(eras)} eras")
@@ -534,9 +696,10 @@ def process(folder, meta):
 
 
 def main():
+    src_root, artists = BATCHES[sys.argv[1] if len(sys.argv) > 1 else "bigupdate"]
     slugs = []
-    for folder, meta in ARTISTS.items():
-        s = process(folder, meta)
+    for folder, meta in artists.items():
+        s = process(folder, meta, src_root)
         if s:
             slugs.append((meta[0], meta[1]))
     print("\n\n=== registry imports ===")
