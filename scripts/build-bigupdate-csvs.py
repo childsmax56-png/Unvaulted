@@ -99,9 +99,32 @@ ERA_FIXES = {
     },
 }
 
+# Kept private: off the landing grid, feed, pickers and search; reachable by URL only.
+HIDDEN_TRACKERS = {"daxgold"}
+
+ERA_FIXES.update({
+    # headers wrap mid-title ("38 Baby 2 [V1] / Ain't Too"): name eras after the
+    # songs' cleaner Era cells and keep the header title as the subtitle
+    "nbayoungboygold": {"prefer_song_era": True, "songs": {
+        "4444t": "4444", "Just Got A Lot On My Shoulders": "I Just Got A Lot On My Shoulders"}},
+    "migosgold": {"songs": {"Collab with Rich The Kid": "Collaboration with Rich The Kid"}},
+})
+
+# 2026-10b batch. Migos' sheet gives the group and each member their own tab:
+# "x - Unreleased+<n> <Member>.csv" files are merged into the group's eras.
+ARTISTS_2026_10B = {
+    "jpegmafia":    ("jpegmafiagold",    "JPEGMAFIA",     "#e11d48", "J", "JPEGMAFIA",
+                     "1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI", ""),
+    "migos":        ("migosgold",        "Migos",         "#ca8a04", "M", "Migos",
+                     "1MgVRlGs5DL7keB_I6YPEj4FYLOHb8DVJbxN5-h6yxOE", ""),
+    "nba youngboy": ("nbayoungboygold",  "NBA YoungBoy",  "#16a34a", "Y", "NBA YoungBoy",
+                     "1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg", ""),
+}
+
 BATCHES = {
     "bigupdate": (SRC_ROOT, ARTISTS),
     "2026-10": (os.path.expanduser("~/Downloads/new trackers 2026-10"), ARTISTS_2026_10),
+    "2026-10b": (os.path.expanduser("~/Downloads/new trackers 2026-10b"), ARTISTS_2026_10B),
 }
 
 RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
@@ -115,10 +138,16 @@ RELEASED_TYPE_ALIASES = {"Track": "Album Track", "Singles": "Single", "Features"
 def released_type(t):
     """Sheet Type -> a released.ts type. Compound labels keep their first part
     ('Feature / Single' -> Feature); anything unknown (Remix, OST Track...) -> Other."""
-    for part in (clean(t), clean(t).split("/")[0].strip()):
+    t = re.sub(r"\s+", " ", clean(t))
+    for part in (t, t.split("/")[0].strip()):
         part = RELEASED_TYPE_ALIASES.get(part, part)
         if part in RELEASED_VALID:
             return part
+    # descriptive labels (NBA YoungBoy: 'Lead Project Single', 'Compilation Project')
+    if re.search(r"\bsingle\b", t, re.I):
+        return "Single"
+    if re.search(r"\bproject\b", t, re.I) and not re.search(r"skit", t, re.I):
+        return "Album Track"
     return "Other"
 MONTHS = {m: i for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun",
@@ -154,9 +183,18 @@ def parse_date(s):
     return (int(m.group(1)), 0, 0) if m else None
 
 
+def tidy_cell(c):
+    """Drop invisible marks and filler lines some sheets pad cells with
+    (NBA YoungBoy: 'Mind of a Menace Era\n(1999 - June 2016)\n\n.\n.', 'AHLAN \u200e')."""
+    c = re.sub(r"[\u200b\u200e\u200f\ufeff]", "", c)
+    if "\n" in c or c.strip() in (".", "|"):
+        c = "\n".join(l for l in c.split("\n") if l.strip() not in (".", "|"))
+    return c
+
+
 def read_rows(path):
     with open(path, newline="", encoding="utf-8") as f:
-        return list(csv.reader(f))
+        return [[tidy_cell(c) for c in r] for r in csv.reader(f)]
 
 
 def _first_line(c):
@@ -169,9 +207,10 @@ def find_header(rows):
     Header cells often carry a parenthetical second line ('Name\\n(Check out...)'),
     and some sheets prepend disclaimer rows, so match on the cell's first line.
     """
+    keys = {"name", "title", "main content", "full content"}
     for i, r in enumerate(rows):
-        firsts = {_first_line(c) for c in r}
-        if firsts & {"name", "title", "main content", "full content"}:
+        # any line of the cell — some sheets pad headers with blank lines (' \nName\n')
+        if any(l.strip().lower() in keys for c in r for l in c.split("\n")):
             return i
     return 0
 
@@ -263,9 +302,13 @@ def is_stat_block(c):
     """Per-era stats banner ('23 Total\n1 Single\n...', '16 Album Tracks') that
     some tabs put in the Era column above each era's rows."""
     lines = [l.strip() for l in (c or "").split("\n") if l.strip()]
-    if not lines or not all(re.match(r"^\d+\s+[A-Za-z]", l) for l in lines):
+    counted = [bool(re.match(r"^\d+\s+\S", l)) for l in lines]
+    if not lines or not counted[0]:
         return False
-    return len(lines) > 1 or bool(STAT_WORD.match(lines[0]))
+    if len(lines) == 1:
+        return bool(STAT_WORD.match(lines[0]))
+    # tolerate a wrapped line or two ('9 "MOAM3 Reloaded"\nSongs')
+    return sum(counted) / len(lines) >= 0.6
 
 
 def era_header_cell(r):
@@ -342,12 +385,20 @@ def era_release_date(era, timeline):
     return (to_release_date(pick) if pick else None) or "??/??/????"
 
 
+def strip_trailing_emoji(name):
+    """'TOP ⭐' -> 'TOP': drop decorative emoji (and a dangling ' /') ending an
+    era header's first line."""
+    first, nl, rest = name.partition("\n")
+    first = re.sub(r"[\s/\u2600-\u27bf\u2b00-\u2bff\U0001f300-\U0001faff\ufe0f]+$", "", first)
+    return first + nl + rest
+
+
 def era_key(s):
     s = re.sub(r"\s+", " ", (s or "").split("\n")[0]).strip().rstrip("*").strip()
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
-def reconcile_eras(out, name_rows):
+def reconcile_eras(out, name_rows, prefer_song_era=False):
     """Point song rows at their era-header name.
 
     Source sheets wrap/abbreviate the Era cell ("Year Of The \nSnitch",
@@ -365,10 +416,12 @@ def reconcile_eras(out, name_rows):
     # count-less era headers: blank Era, title in Name, no file data
     promoted = []
     for (idx, title, notes, desc) in name_rows:
-        k = era_key(re.sub(r"\(.*?\)", "", title.split("\n")[0]))
+        first, _, rest = title.partition("\n")
+        # exact title first ("Father Of 4 (Deluxe)"), else with parentheticals dropped
+        raw = era_key(first)
+        k = raw if raw in song_keys else era_key(re.sub(r"\(.*?\)", "", first))
         if k and k not in hdr and k in song_keys:
-            first, _, rest = title.partition("\n")
-            name = clean(re.sub(r"\(.*?\)", "", first))
+            name = clean(first) if k == raw else clean(re.sub(r"\(.*?\)", "", first))
             extra = "\n".join(x for x in (clean(first[len(name):]) if first.startswith(name) else "", clean(rest)) if x)
             hdr[k] = name
             promoted.append((idx, ["\n", name + ("\n" + extra if extra else ""), notes, "", "", "", "", "", "", desc]))
@@ -382,7 +435,24 @@ def reconcile_eras(out, name_rows):
             r[0] = hdr[k]
             continue
         cands = [v for hk, v in hdr.items() if k and hk.startswith(k)]
-        r[0] = cands[0] if len(cands) == 1 else re.sub(r"\s+", " ", r[0]).rstrip("*").strip()
+        if len(cands) == 1 and not prefer_song_era:
+            r[0] = cands[0]
+        else:
+            r[0] = re.sub(r"\s+", " ", r[0]).rstrip("*").strip()
+    # Headers whose name matches no song era (NBA YoungBoy: header 'Mind of a
+    # Menace Era' over songs filed as 'Pre 38 Baby') take the era of the songs
+    # directly below them, when no other header claims it; the sheet's header
+    # title is kept as the era's subtitle.
+    names = {clean(r[1].split("\n")[0]) for r in out if "\n" in r[0]}
+    song_eras = {r[0] for r in out if "\n" not in r[0]}
+    for i, r in enumerate(out):
+        if "\n" not in r[0] or clean(r[1].split("\n")[0]) in song_eras:
+            continue
+        nxt = next((x for x in out[i + 1:] if "\n" not in x[0]), None)
+        if nxt is not None and nxt[0] not in names and out[i + 1:].index(nxt) == 0:
+            old = re.sub(r"\s*\n\s*", " ", clean(r[1])).strip()
+            r[1] = nxt[0] + "\n(" + old + ")"
+            names.add(nxt[0])
     # a.ts (re)initialises an era at its header row, dropping songs listed above
     # it — so move any header that trails its era's first song up to that song.
     for i in range(len(out)):
@@ -420,14 +490,17 @@ def build_unreleased(rows, fixes=None):
     }
     out, name_rows = [], []
     for r in rows[hi + 1:]:
-        if r and not clean(r[0]) and cell(r, ci["name"]) and not era_header_cell(r) \
-                and not any(cell(r, ci[k]) for k in ("link", "avail", "qual", "tlen")):
+        self_titled = r and clean(r[0]) and era_key(r[0]) == era_key(cell(r, ci["name"]))
+        # (an era description may sit in the Portion column — long prose isn't an availability)
+        if r and (not clean(r[0]) or self_titled) and cell(r, ci["name"]) and not era_header_cell(r) \
+                and not any(cell(r, ci[k]) for k in ("link", "qual", "tlen")) \
+                and (not cell(r, ci["avail"]) or len(cell(r, ci["avail"])) > 25):
             name_rows.append((len(out), cell(r, ci["name"]), cell(r, ci["notes"]),
                               header_desc(r, {0, ci["name"], ci["notes"]})))
             continue
         hdr_cell = era_header_cell(r)
         if hdr_cell:
-            era_name = cell(r, ci["name"])  # a.ts: first line = era, rest = extra
+            era_name = strip_trailing_emoji(cell(r, ci["name"]))  # a.ts: first line = era, rest = extra
             if not era_name:
                 continue
             out.append([hdr_cell, era_name, cell(r, ci["notes"]), "", "", "", "", "", "",
@@ -450,7 +523,55 @@ def build_unreleased(rows, fixes=None):
                 r[1] = fixes["headers"][key]
         elif r[0] in fixes.get("songs", {}):
             r[0] = fixes["songs"][r[0]]
-    return reconcile_eras(out, name_rows)
+    return reconcile_eras(out, name_rows, fixes.get("prefer_song_era", False))
+
+
+def merge_member_tabs(blocks):
+    """Merge per-member unreleased outputs into one era list.
+
+    blocks: [(member or None, rows)]. Eras shared between tabs (Migos' "Culture"
+    appears in the group, Quavo, Offset and Takeoff tabs) become one era — a.ts
+    resets an era at every header row, so each era may only have one. A member's
+    own eras are slotted in after the era that precedes them in that member's
+    tab. Member-tab songs get a '(Member)' credit line.
+    """
+    order, heads, songs = [], {}, {}
+    for member, rows in blocks:
+        prev = None
+        for r in rows:
+            r = list(r)
+            if "\n" in r[0]:
+                era = clean(r[1].split("\n")[0])
+                heads.setdefault(era, r)
+            else:
+                era = r[0]
+                if member:
+                    r[1] = r[1] + "\n(" + member + ")"
+                songs.setdefault(era, []).append(r)
+            if era not in order:
+                order.insert(order.index(prev) + 1 if prev in order else len(order), era)
+            prev = era
+    out = []
+    for era in order:
+        if era in heads:
+            out.append(heads[era])
+        out.extend(songs.get(era, []))
+    return out
+
+
+def merge_recent_tabs(blocks):
+    """Recent tabs are flat, newest-first lists: interleave the group's and each
+    member's by leak date (undated rows last, in tab order)."""
+    rows = []
+    for member, block in blocks:
+        for r in block:
+            if "\n" in r[0]:
+                continue
+            r = list(r)
+            if member:
+                r[1] = r[1] + "\n(" + member + ")"
+            rows.append(r)
+    return sorted(rows, key=lambda r: parse_date(r[5]) or (0, 0, 0), reverse=True)
 
 
 def build_recent_from_unrel(unrel):
@@ -477,6 +598,8 @@ def build_released(rows):
         "stream": col(h, "stream"),
         "link": col(h, "link") or col(h, "source"),
     }
+    # some sheets split links across columns ('Download(s)' + 'Original Link(s)')
+    lcols = [i for i, x in enumerate(h) if re.search(r"link|download", clean(x), re.I)]
     header = ["Era", "Name", "Notes", "Length", "Release Date", "Type", "Streaming", "Link(s)"]
     out = []
     for r in rows[hi + 1:]:
@@ -493,9 +616,10 @@ def build_released(rows):
         if not era or not name:
             continue
         t = released_type(cell(r, ci["type"]))
+        links = "\n".join(x for x in (cell(r, i) for i in lcols) if x) if len(lcols) > 1 \
+            else cell(r, ci["link"])
         out.append([era, name, cell(r, ci["notes"]), cell(r, ci["tlen"]),
-                    cell(r, ci["date"]), t, cell(r, ci["stream"]),
-                    cell(r, ci["link"])])
+                    cell(r, ci["date"]), t, cell(r, ci["stream"]), links])
     return out
 
 
@@ -625,8 +749,22 @@ def build_groupbuys(rows):
 
 
 def build_passthrough(rows):
-    """Art / Misc / Music Videos / Album Copies: re-serialise, drop empty rows."""
-    return [r for r in rows if any(clean(c) for c in r) and not (r and is_stat_block(r[0]))]
+    """Art / Misc / Music Videos / Album Copies: re-serialise, drop empty rows.
+
+    When links are split into a second 'Original Link(s)' column, fold them into
+    the first Link(s) column — that's the one the views read."""
+    rows = [r for r in rows if any(clean(c) for c in r) and not (r and is_stat_block(r[0]))]
+    if not rows:
+        return rows
+    hi = find_header(rows)
+    lcols = [i for i, x in enumerate(rows[hi]) if "link" in clean(x).lower()]
+    if len(lcols) > 1 and any("original" in rows[hi][i].lower() for i in lcols[1:]):
+        first = lcols[0]
+        for r in rows[hi + 1:]:
+            vals = [clean(r[i]) for i in lcols if i < len(r) and clean(r[i])]
+            if first < len(r):
+                r[first] = "\n".join(dict.fromkeys(vals))
+    return rows
 
 
 # ------------------------------------------------------------- era derivation --
@@ -664,6 +802,8 @@ def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", crea
     extra_s = ("\n" + "\n".join(extra)) if extra else ""
     var = slug + "Config"
     creator_s = f"\n  sheetCreator: {ts_str(creator)}," if creator else ""
+    if slug in HIDDEN_TRACKERS:
+        creator_s += "\n  // Private — off the landing grid, feed, pickers and search; reachable by URL only.\n  hidden: true,"
     covers = {e: p for e, p in (covers or {}).items() if e in eras}
     images = ("\n" + "".join(f"    {ts_str(e)}: {ts_str(p)},\n" for e, p in covers.items()) + "  ") if covers else ""
     return f"""import type {{ ArtistConfig }} from './types';
@@ -744,11 +884,16 @@ def process(folder, meta, src_root=SRC_ROOT):
     print(f"\n{folder} -> {slug}")
 
     # map source files to canonical tabs (first file wins per tab)
-    tabs = {}
+    tabs, member_tabs = {}, {}
     for fn in sorted(os.listdir(src_dir)):
         if not fn.lower().endswith(".csv"):
             continue
         title = fn.rsplit(" - ", 1)[-1].rsplit(".csv", 1)[0].strip()
+        m = re.match(r"(.+?)\+(\d+)\s+(.+)$", title)  # "Unreleased+1 Quavo"
+        if m:
+            member_tabs.setdefault(canon_tab(m.group(1)), []).append(
+                (int(m.group(2)), m.group(3), os.path.join(src_dir, fn)))
+            continue
         c = canon_tab(title)
         if c and c not in tabs:
             tabs[c] = os.path.join(src_dir, fn)
@@ -759,6 +904,10 @@ def process(folder, meta, src_root=SRC_ROOT):
 
     os.makedirs(data_dir, exist_ok=True)
     unrel = build_unreleased(read_rows(tabs["unreleased"]), ERA_FIXES.get(slug))
+    if member_tabs.get("unreleased"):
+        unrel = merge_member_tabs([(None, unrel)] + [
+            (member, build_unreleased(read_rows(path), ERA_FIXES.get(slug)))
+            for _, member, path in sorted(member_tabs["unreleased"])])
     era_meta = {}  # era -> (release date, description) from its header row
     for r in unrel:
         if "\n" in r[0]:
@@ -801,7 +950,12 @@ def process(folder, meta, src_root=SRC_ROOT):
 
     # recent: use source tab if present, else derive from unreleased
     if "recent" in tabs:
-        rows = [r[:9] for r in build_unreleased(read_rows(tabs["recent"]), ERA_FIXES.get(slug))]
+        rows = build_unreleased(read_rows(tabs["recent"]), ERA_FIXES.get(slug))
+        if member_tabs.get("recent"):
+            rows = merge_recent_tabs([(None, rows)] + [
+                (member, build_unreleased(read_rows(path), ERA_FIXES.get(slug)))
+                for _, member, path in sorted(member_tabs["recent"])])
+        rows = [r[:9] for r in rows]
         write_csv(data_dir, "recent.csv", UNREL_HEADER, rows)
     else:
         write_csv(data_dir, "recent.csv", UNREL_HEADER, build_recent_from_unrel(unrel))

@@ -15,15 +15,21 @@
 
 import { splitCSVRows, joinCSVRows } from './_csvParser';
 
-type Kind = 'unreleased' | 'released' | 'stems' | 'fakes' | 'passthrough' | 'recent-from-unreleased';
+type Kind = 'unreleased' | 'recent' | 'released' | 'stems' | 'fakes' | 'passthrough' | 'recent-from-unreleased';
 
-interface ImportedTab {
+interface RawTab {
   gid: string;
-  kind: Kind;
   // 'api': read the grid via the Sheets API (export 401s, or links are
   // display-text-only hyperlinks the CSV export drops). Needs `title`.
   via?: 'api';
   title?: string;
+}
+
+interface ImportedTab extends RawTab {
+  kind: Kind;
+  // Group trackers (Migos) give each member their own tab: merged into the
+  // group's eras ('unreleased') or interleaved by leak date ('recent').
+  members?: (RawTab & { member: string })[];
 }
 
 interface ImportedSource {
@@ -33,6 +39,8 @@ interface ImportedSource {
 
 const t = (gid: string, kind: Kind, api?: string): ImportedTab =>
   api ? { gid, kind, via: 'api', title: api } : { gid, kind };
+
+const m = (member: string, gid: string): RawTab & { member: string } => ({ gid, member });
 
 // Tracklists aren't listed: that tab renders from the committed Tracklists.json.
 const IMPORTED_SOURCES: Record<string, ImportedSource> = {
@@ -128,6 +136,37 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
       fakes: t('1753918871', 'fakes'),
     },
   },
+  jpegmafiagold: {
+    sheetId: '1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI',
+    tabs: {
+      unreleased: t('2012820373', 'unreleased'),
+      released: t('1767027991', 'released'),
+      recent: t('823823047', 'unreleased'),
+      stems: t('2044022564', 'stems'),
+      'album-copies': t('1359718971', 'passthrough'),
+      'music-videos': t('448180846', 'passthrough'),
+      misc: t('207906054', 'passthrough'),
+    },
+  },
+  migosgold: {
+    sheetId: '1MgVRlGs5DL7keB_I6YPEj4FYLOHb8DVJbxN5-h6yxOE',
+    tabs: {
+      unreleased: { ...t('335484962', 'unreleased'),
+        members: [m('Quavo', '1266312566'), m('Offset', '1395330475'), m('Takeoff', '911547308')] },
+      recent: { ...t('711581406', 'recent'),
+        members: [m('Quavo', '844278669'), m('Offset', '1455811060'), m('Takeoff', '1370426296')] },
+    },
+  },
+  nbayoungboygold: {
+    sheetId: '1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg',
+    tabs: {
+      unreleased: t('0', 'unreleased', 'Unreleased'),
+      // the sheet's RECENTS tab has no links — derive it from Unreleased
+      recent: t('0', 'recent-from-unreleased', 'Unreleased'),
+      released: t('1306638127', 'released', 'Released *WIP*'),
+      'music-videos': t('1849981206', 'passthrough', 'Unreleased Music Videos/Vlogs/Interviews'),
+    },
+  },
   fiviogold: {
     sheetId: '1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74',
     tabs: {
@@ -142,7 +181,18 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
 // Per-tracker era-name fixes (same table as ERA_FIXES in the importer).
 //   headers: era-header Name cell (whitespace-collapsed) -> new Name cell
 //   songs:   song-row Era -> era name
-const ERA_FIXES: Record<string, { headers?: Record<string, string>; songs?: Record<string, string> }> = {
+const ERA_FIXES: Record<string, {
+  headers?: Record<string, string>;
+  songs?: Record<string, string>;
+  preferSongEra?: boolean;
+}> = {
+  // headers wrap mid-title ("38 Baby 2 [V1] / Ain't Too"): name eras after the
+  // songs' cleaner Era cells and keep the header title as the subtitle
+  nbayoungboygold: {
+    preferSongEra: true,
+    songs: { '4444t': '4444', 'Just Got A Lot On My Shoulders': 'I Just Got A Lot On My Shoulders' },
+  },
+  migosgold: { songs: { 'Collab with Rich The Kid': 'Collaboration with Rich The Kid' } },
   // a.ts's global ERA_NAME_MAP already renames the full title to "Darkest Before Dawn"
   clipsegold: {
     headers: {
@@ -181,11 +231,21 @@ type Row = string[];
 type Idx = number | null;
 
 const clean = (s: string | undefined): string => (s ?? '').trim();
-const firstLine = (c: string): string => clean(c).split('\n')[0].trim().toLowerCase();
+
+// Drop invisible marks and filler lines some sheets pad cells with
+// (NBA YoungBoy: 'Mind of a Menace Era\n(1999 - June 2016)\n\n.\n.', 'AHLAN \u200e').
+function tidyCell(c: string): string {
+  c = c.replace(/[\u200b\u200e\u200f\ufeff]/g, '');
+  if (c.includes('\n') || c.trim() === '.' || c.trim() === '|') {
+    c = c.split('\n').filter(l => l.trim() !== '.' && l.trim() !== '|').join('\n');
+  }
+  return c;
+}
 
 function findHeader(rows: Row[]): number {
   const keys = new Set(['name', 'title', 'main content', 'full content']);
-  const i = rows.findIndex(r => r.some(c => keys.has(firstLine(c))));
+  // any line of the cell — some sheets pad headers with blank lines (' \nName\n')
+  const i = rows.findIndex(r => r.some(c => c.split('\n').some(l => keys.has(l.trim().toLowerCase()))));
   return i < 0 ? 0 : i;
 }
 
@@ -216,8 +276,20 @@ const STAT_WORD = /^\d+\s+(Total|Full|Tagged|Partial|OG|Snippets?|Unavailable|Co
 
 function isStatBlock(c: string): boolean {
   const lines = (c ?? '').split('\n').map(l => l.trim()).filter(Boolean);
-  if (!lines.length || !lines.every(l => /^\d+\s+[A-Za-z]/.test(l))) return false;
-  return lines.length > 1 || STAT_WORD.test(lines[0]);
+  const counted = lines.map(l => /^\d+\s+\S/.test(l));
+  if (!lines.length || !counted[0]) return false;
+  if (lines.length === 1) return STAT_WORD.test(lines[0]);
+  // tolerate a wrapped line or two ('9 "MOAM3 Reloaded"\nSongs')
+  return counted.filter(Boolean).length / lines.length >= 0.6;
+}
+
+// 'TOP ⭐' -> 'TOP': drop decorative emoji (and a dangling ' /') ending an era
+// header's first line.
+function stripTrailingEmoji(name: string): string {
+  const nl = name.indexOf('\n');
+  const first = nl < 0 ? name : name.slice(0, nl);
+  const rest = nl < 0 ? '' : name.slice(nl);
+  return first.replace(/[\s/\u2600-\u27bf\u2b00-\u2bff\u{1f300}-\u{1faff}\ufe0f]+$/u, '') + rest;
 }
 
 // The file-count cell of an era-header row, always returned with a newline
@@ -242,7 +314,7 @@ const collapse = (s: string): string => s.replace(/\s+/g, ' ').trim();
 const UNREL_HEADER = ['Era', 'Name', 'Notes', 'Track Length', 'File Date',
   'Leak Date', 'Available Length', 'Quality', 'Link(s)'];
 
-function reconcileEras(out: Row[], nameRows: [number, string, string][]): Row[] {
+function reconcileEras(out: Row[], nameRows: [number, string, string][], preferSongEra = false): Row[] {
   const hdr = new Map<string, string>();
   for (const r of out) {
     if (r[0].includes('\n')) {
@@ -257,9 +329,11 @@ function reconcileEras(out: Row[], nameRows: [number, string, string][]): Row[] 
   for (const [idx, title, notes] of nameRows) {
     const first = title.split('\n')[0];
     const rest = title.includes('\n') ? title.slice(title.indexOf('\n') + 1) : '';
-    const k = eraKey(first.replace(/\(.*?\)/g, ''));
+    // exact title first ("Father Of 4 (Deluxe)"), else with parentheticals dropped
+    const raw = eraKey(first);
+    const k = songKeys.has(raw) ? raw : eraKey(first.replace(/\(.*?\)/g, ''));
     if (k && !hdr.has(k) && songKeys.has(k)) {
-      const name = clean(first.replace(/\(.*?\)/g, ''));
+      const name = k === raw ? clean(first) : clean(first.replace(/\(.*?\)/g, ''));
       const extra = [first.startsWith(name) ? clean(first.slice(name.length)) : '', clean(rest)]
         .filter(Boolean).join('\n');
       hdr.set(k, name);
@@ -273,7 +347,23 @@ function reconcileEras(out: Row[], nameRows: [number, string, string][]): Row[] 
     const exact = hdr.get(k);
     if (exact !== undefined) { r[0] = exact; continue; }
     const cands = [...hdr.entries()].filter(([hk]) => k && hk.startsWith(k)).map(([, v]) => v);
-    r[0] = cands.length === 1 ? cands[0] : collapse(r[0]).replace(/\*+$/, '').trim();
+    r[0] = cands.length === 1 && !preferSongEra ? cands[0] : collapse(r[0]).replace(/\*+$/, '').trim();
+  }
+  // Headers whose name matches no song era (NBA YoungBoy: header 'Mind of a
+  // Menace Era' over songs filed as 'Pre 38 Baby') take the era of the songs
+  // directly below them, when no other header claims it; the sheet's header
+  // title is kept as the era's subtitle.
+  const names = new Set(out.filter(r => r[0].includes('\n')).map(r => clean(r[1].split('\n')[0])));
+  const songEraSet = new Set(out.filter(r => !r[0].includes('\n')).map(r => r[0]));
+  for (let i = 0; i < out.length; i++) {
+    const r = out[i];
+    if (!r[0].includes('\n') || songEraSet.has(clean(r[1].split('\n')[0]))) continue;
+    const nxt = out[i + 1];
+    if (nxt && !nxt[0].includes('\n') && !names.has(nxt[0])) {
+      const old = clean(r[1]).replace(/\s*\n\s*/g, ' ').trim();
+      r[1] = nxt[0] + '\n(' + old + ')';
+      names.add(nxt[0]);
+    }
   }
   // a.ts (re)initialises an era at its header row, dropping songs listed above
   // it — so move any header that trails its era's first song up to that song.
@@ -309,14 +399,17 @@ function buildUnreleased(rows: Row[], artist: string): Row[] {
   const out: Row[] = [];
   const nameRows: [number, string, string][] = [];
   for (const r of rows.slice(hi + 1)) {
-    if (r.length && !clean(r[0]) && cell(r, ci.name) && !eraHeaderCell(r)
-        && ![ci.link, ci.avail, ci.qual, ci.tlen].some(i => cell(r, i))) {
+    const selfTitled = r.length > 0 && !!clean(r[0]) && eraKey(r[0]) === eraKey(cell(r, ci.name));
+    // (an era description may sit in the Portion column — long prose isn't an availability)
+    if (r.length && (!clean(r[0]) || selfTitled) && cell(r, ci.name) && !eraHeaderCell(r)
+        && ![ci.link, ci.qual, ci.tlen].some(i => cell(r, i))
+        && (!cell(r, ci.avail) || cell(r, ci.avail).length > 25)) {
       nameRows.push([out.length, cell(r, ci.name), cell(r, ci.notes)]);
       continue;
     }
     const hdrCell = eraHeaderCell(r);
     if (hdrCell) {
-      const eraName = cell(r, ci.name); // a.ts: first line = era, rest = extra
+      const eraName = stripTrailingEmoji(cell(r, ci.name)); // a.ts: first line = era, rest = extra
       if (!eraName) continue;
       out.push([hdrCell, eraName, cell(r, ci.notes), '', '', '', '', '', '']);
     } else {
@@ -339,7 +432,54 @@ function buildUnreleased(rows: Row[], artist: string): Row[] {
       r[0] = fixes.songs[r[0]];
     }
   }
-  return reconcileEras(out, nameRows);
+  return reconcileEras(out, nameRows, !!fixes.preferSongEra);
+}
+
+// Merge per-member unreleased outputs into one era list. Eras shared between
+// tabs (Migos' "Culture" is in the group, Quavo, Offset and Takeoff tabs) become
+// one era — a.ts resets an era at every header row, so each may only have one.
+// A member's own eras slot in after the era preceding them in that member's
+// tab. Member-tab songs get a '(Member)' credit line.
+function mergeMemberTabs(blocks: [string | null, Row[]][]): Row[] {
+  const order: string[] = [];
+  const heads = new Map<string, Row>();
+  const songs = new Map<string, Row[]>();
+  for (const [member, rows] of blocks) {
+    let prev: string | null = null;
+    for (const r0 of rows) {
+      const r = [...r0];
+      let era: string;
+      if (r[0].includes('\n')) {
+        era = clean(r[1].split('\n')[0]);
+        if (!heads.has(era)) heads.set(era, r);
+      } else {
+        era = r[0];
+        if (member) r[1] = r[1] + '\n(' + member + ')';
+        if (!songs.has(era)) songs.set(era, []);
+        songs.get(era)!.push(r);
+      }
+      if (!order.includes(era)) {
+        order.splice(prev !== null && order.includes(prev) ? order.indexOf(prev) + 1 : order.length, 0, era);
+      }
+      prev = era;
+    }
+  }
+  return order.flatMap(era => [...(heads.has(era) ? [heads.get(era)!] : []), ...(songs.get(era) ?? [])]);
+}
+
+// Recent tabs are flat, newest-first lists: interleave the group's and each
+// member's by leak date (undated rows last, in tab order).
+function mergeRecentTabs(blocks: [string | null, Row[]][]): Row[] {
+  const rows: Row[] = [];
+  for (const [member, block] of blocks) {
+    for (const r0 of block) {
+      if (r0[0].includes('\n')) continue;
+      const r = [...r0];
+      if (member) r[1] = r[1] + '\n(' + member + ')';
+      rows.push(r);
+    }
+  }
+  return rows.map(r => [parseDate(r[5]) ?? 0, r] as const).sort((a, b) => b[0] - a[0]).map(([, r]) => r);
 }
 
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
@@ -374,10 +514,14 @@ const RELEASED_TYPE_ALIASES: Record<string, string> = {
 // Sheet Type -> a released.ts type. Compound labels keep their first part
 // ('Feature / Single' -> Feature); anything unknown (Remix, OST Track...) -> Other.
 function releasedType(raw: string): string {
-  for (let part of [clean(raw), clean(raw).split('/')[0].trim()]) {
+  const t = collapse(clean(raw));
+  for (let part of [t, t.split('/')[0].trim()]) {
     part = RELEASED_TYPE_ALIASES[part] ?? part;
     if (RELEASED_VALID.has(part)) return part;
   }
+  // descriptive labels (NBA YoungBoy: 'Lead Project Single', 'Compilation Project')
+  if (/\bsingle\b/i.test(t)) return 'Single';
+  if (/\bproject\b/i.test(t) && !/skit/i.test(t)) return 'Album Track';
   return 'Other';
 }
 
@@ -393,6 +537,8 @@ function buildReleased(rows: Row[]): Row[] {
     stream: col(h, ['stream']),
     link: col(h, ['link']) || col(h, ['source']),
   };
+  // some sheets split links across columns ('Download(s)' + 'Original Link(s)')
+  const lcols = h.map((x, i) => (/link|download/i.test(clean(x)) ? i : -1)).filter(i => i >= 0);
   const out: Row[] = [['Era', 'Name', 'Notes', 'Length', 'Release Date', 'Type', 'Streaming', 'Link(s)']];
   for (const r of rows.slice(hi + 1)) {
     const era0 = r[0] ?? '';
@@ -405,8 +551,9 @@ function buildReleased(rows: Row[]): Row[] {
     const era = collapse(era0);
     const name = cell(r, ci.name);
     if (!era || !name) continue;
+    const links = lcols.length > 1 ? lcols.map(i => cell(r, i)).filter(Boolean).join('\n') : cell(r, ci.link);
     out.push([era, name, cell(r, ci.notes), cell(r, ci.tlen), cell(r, ci.date), releasedType(cell(r, ci.type)),
-      cell(r, ci.stream), cell(r, ci.link)]);
+      cell(r, ci.stream), links]);
   }
   return out;
 }
@@ -462,17 +609,50 @@ function buildFakes(rows: Row[]): Row[] {
 }
 
 // Raw sheet rows -> the canonical CSV text the committed snapshot holds.
-export function normalizeImportedTab(artist: string, kind: Kind, rows: Row[]): string {
+// Art / Misc / Music Videos / Album Copies: drop empty and stats rows. When
+// links are split into a second 'Original Link(s)' column, fold them into the
+// first Link(s) column — that's the one the views read.
+function buildPassthrough(rows: Row[]): Row[] {
+  rows = rows.filter(r => r.some(c => clean(c)) && !(r.length && isStatBlock(r[0])));
+  if (!rows.length) return rows;
+  const hi = findHeader(rows);
+  const lcols = rows[hi].map((x, i) => (clean(x).toLowerCase().includes('link') ? i : -1)).filter(i => i >= 0);
+  if (lcols.length > 1 && lcols.slice(1).some(i => rows[hi][i].toLowerCase().includes('original'))) {
+    const first = lcols[0];
+    for (const r of rows.slice(hi + 1)) {
+      const vals = lcols.filter(i => i < r.length && clean(r[i])).map(i => clean(r[i]));
+      if (first < r.length) r[first] = [...new Set(vals)].join('\n');
+    }
+  }
+  return rows;
+}
+
+// Raw sheet rows (plus any member tabs' rows) -> the canonical CSV text the
+// committed snapshot holds.
+export function normalizeImportedTab(artist: string, kind: Kind, rows: Row[],
+  members: [string, Row[]][] = []): string {
+  rows = rows.map(r => r.map(tidyCell));
+  members = members.map(([mb, rs]) => [mb, rs.map(r => r.map(tidyCell))]);
   let out: Row[];
   switch (kind) {
-    case 'unreleased': out = [UNREL_HEADER, ...buildUnreleased(rows, artist)]; break;
+    case 'unreleased':
+    case 'recent': {
+      let built = buildUnreleased(rows, artist);
+      if (members.length) {
+        const blocks: [string | null, Row[]][] = [[null, built],
+          ...members.map(([mb, rs]) => [mb, buildUnreleased(rs, artist)] as [string, Row[]])];
+        built = kind === 'recent' ? mergeRecentTabs(blocks) : mergeMemberTabs(blocks);
+      }
+      out = [UNREL_HEADER, ...built];
+      break;
+    }
     case 'recent-from-unreleased':
       out = [UNREL_HEADER, ...buildRecentFromUnreleased(buildUnreleased(rows, artist))]; break;
     case 'released': out = buildReleased(rows); break;
     case 'stems': out = buildStems(rows); break;
     case 'fakes': out = buildFakes(rows); break;
     default: // art/misc/music videos/album copies
-      out = rows.filter(r => r.some(c => clean(c)) && !(r.length && isStatBlock(r[0])));
+      out = buildPassthrough(rows);
   }
   return joinCSVRows(out) + '\n';
 }
@@ -532,16 +712,21 @@ export async function fetchImportedCsv(artist: string, tab: string, apiKey: stri
   const src = IMPORTED_SOURCES[artist];
   const spec = src?.tabs[tab];
   if (!src || !spec) throw new Error('no imported source');
-  let rows: Row[] | null;
-  if (spec.via === 'api') {
-    if (!apiKey) throw new Error('GOOGLE_SHEETS_API_KEY not set');
-    rows = await fetchApiRows(src.sheetId, spec.title!, apiKey);
-    if (!rows) throw new Error('Sheets API request failed');
-  } else {
-    rows = await fetchExportRows(src.sheetId, spec.gid);
+  const fetchRaw = async (raw: RawTab): Promise<Row[]> => {
+    if (raw.via === 'api') {
+      if (!apiKey) throw new Error('GOOGLE_SHEETS_API_KEY not set');
+      const rows = await fetchApiRows(src.sheetId, raw.title!, apiKey);
+      if (!rows) throw new Error('Sheets API request failed');
+      return rows;
+    }
+    const rows = await fetchExportRows(src.sheetId, raw.gid);
     if (!rows) throw new Error('Sheet export failed (private, or gid gone?)');
-  }
-  const csv = normalizeImportedTab(artist, spec.kind, rows);
+    return rows;
+  };
+  // all-or-nothing: a missing member tab would silently drop that member's songs
+  const [rows, ...memberRows] = await Promise.all([spec, ...(spec.members ?? [])].map(fetchRaw));
+  const members = (spec.members ?? []).map((mb, i) => [mb.member, memberRows[i]] as [string, Row[]]);
+  const csv = normalizeImportedTab(artist, spec.kind, rows, members);
   // A structural change in the sheet that leaves (almost) nothing parseable
   // shouldn't blank the tracker — serve the snapshot instead.
   if (splitCSVRows(csv).length < 2) throw new Error('normalized tab is empty');

@@ -73,6 +73,9 @@ import { dualipagoldConfig } from './dualipagold';
 import { earlgoldConfig } from './earlgold';
 import { olivertreegoldConfig } from './olivertreegold';
 import { fiviogoldConfig } from './fiviogold';
+import { jpegmafiagoldConfig } from './jpegmafiagold';
+import { migosgoldConfig } from './migosgold';
+import { nbayoungboygoldConfig } from './nbayoungboygold';
 
 export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   // Featured + pinned lineup drives the landing page order (see LandingPage.tsx)
@@ -149,6 +152,9 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   earlgold:       earlgoldConfig,       // Earl Sweatshirt
   olivertreegold: olivertreegoldConfig, // Oliver Tree
   fiviogold:      fiviogoldConfig,      // Fivio Foreign
+  jpegmafiagold:  jpegmafiagoldConfig,  // JPEGMAFIA
+  migosgold:      migosgoldConfig,      // Migos
+  nbayoungboygold: nbayoungboygoldConfig, // NBA YoungBoy
   // Easter egg — hidden from the landing grid, reached by searching "d4vd".
   d4vdgold: d4vdgoldConfig,
 };

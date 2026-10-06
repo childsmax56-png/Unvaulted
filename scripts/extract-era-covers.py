@@ -62,6 +62,9 @@ def sheet_images(z, sheet_name):
 
 # workbooks holding several Unreleased-looking tabs (backups, drafts)
 UNRELEASED_TAB = {"olivertreegold": "The Unreleased"}
+# group trackers: one Unreleased tab per member -> [(workbook tab, source CSV)]
+MEMBER_TABS = {"migosgold": [("Migos", "x - Unreleased.csv"), ("Quavo", "x - Unreleased+1 Quavo.csv"),
+                             ("Offset", "x - Unreleased+2 Offset.csv"), ("Takeoff", "x - Unreleased+3 Takeoff.csv")]}
 
 
 def flatten_alpha(path):
@@ -110,20 +113,21 @@ def main():
         tab = UNRELEASED_TAB.get(slug) or next(
             (n for n in names if imp.canon_tab(n) == "unreleased"
              and not re.search(r"backup|copy|before|old", n, re.I)), None)
-        if not tab:
+        pairs = MEMBER_TABS.get(slug) or ([(tab, "x - Unreleased.csv")] if tab else [])
+        if not pairs:
             print("    !! no Unreleased tab in workbook")
             continue
 
-        raw = imp.read_rows(unrel_csv)
-        hi = imp.find_header(raw)
-        h = raw[hi]
-        name_i = imp.col(h, "name") or imp.col(h, "title") or 1
         # era names exactly as the importer emits them (header rows, post-fixes)
-        built = imp.build_unreleased(raw, imp.ERA_FIXES.get(slug))
-        eras = [imp.clean(r[1].split("\n")[0]) for r in built if "\n" in r[0]]
+        eras = []
+        for _, fn in pairs:
+            for r in imp.build_unreleased(imp.read_rows(os.path.join(src_root, folder, fn)), imp.ERA_FIXES.get(slug)):
+                e = imp.clean(r[1].split("\n")[0])
+                if "\n" in r[0] and e not in eras:
+                    eras.append(e)
         fixes = imp.ERA_FIXES.get(slug, {}).get("headers", {})
 
-        def era_for_row(row):
+        def era_for_row(row, raw, name_i):
             cell = raw[row][name_i] if row < len(raw) and name_i < len(raw[row]) else ""
             cell = fixes.get(re.sub(r"\s+", " ", cell).strip(), cell)
             k = imp.era_key(re.sub(r"\(.*?\)", "", cell.split("\n")[0]))
@@ -138,8 +142,14 @@ def main():
         out_dir = os.path.join(HERE, "..", "public", slug, "eras")
         os.makedirs(out_dir, exist_ok=True)
         covers = {}
-        for row, _col, media in sorted(sheet_images(z, tab)):
-            era = era_for_row(row)
+        images = []
+        for tab, fn in pairs:
+            raw = imp.read_rows(os.path.join(src_root, folder, fn))
+            h = raw[imp.find_header(raw)]
+            name_i = imp.col(h, "name") or imp.col(h, "title") or 1
+            images += [(row, media, raw, name_i) for row, _col, media in sorted(sheet_images(z, tab))]
+        for row, media, raw, name_i in images:
+            era = era_for_row(row, raw, name_i)
             if not era or era in covers:
                 print(f"    skip image at row {row + 1}" + (f" ({era} already has one)" if era else " (not an era header)"))
                 continue

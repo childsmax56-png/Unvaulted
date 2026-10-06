@@ -12,6 +12,8 @@ export const daxgoldConfig: ArtistConfig = {
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'daxgold_',
   sheetCreator: 'iaon',
+  // Private — off the landing grid, feed, pickers and search; reachable by URL only.
+  hidden: true,
 
   HARDCODED_SHEET_ID: '1t1IuCgKrx3QjCt9CLrcu3FqA32qGAF8TeQjhCQHO4AY',
   HARDCODED_SHEET_GID: '',
