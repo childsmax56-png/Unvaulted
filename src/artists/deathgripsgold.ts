@@ -88,8 +88,23 @@ export const deathgripsgoldConfig: ArtistConfig = {
     'Ongoing'
   ],
 
-  TAG_MAP: {},
-  TAG_TOOLTIP_MAP: {},
+  // the standard tracker key — sheets prefix song names with these emojis
+  TAG_MAP: {
+    '⭐': 'Best Of', '⭐️': 'Best Of',
+    '✨': 'Special',
+    '🏆': 'Grails',
+    '🥇': 'Wanted', '🏅': 'Wanted',
+    '🗑️': 'Worst Of', '🗑': 'Worst Of',
+    '🤖': 'AI',
+  },
+  TAG_TOOLTIP_MAP: {
+    'Best Of': 'Some of the best leaks hosted on the tracker.',
+    'Special': 'Standout songs that are not good enough to belong in Best Of, but still deserve to be highlighted.',
+    'Grails': 'The most wanted songs that have not yet leaked in full.',
+    'Wanted': 'Songs that are wanted, but not as wanted as Grails.',
+    'Worst Of': 'Some of the worst leaks on the tracker.',
+    'AI': 'Involves AI-generated content (e.g. an AI instrumental or AI artist).',
+  },
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
   hasAlbumCopiesTab: true,
