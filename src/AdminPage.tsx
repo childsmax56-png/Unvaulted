@@ -11,7 +11,7 @@
 // posts the rest to /api/admin/link-check in small batches. Also lists dead
 // links and open user/playback reports with recheck / mark-OK / resolve.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { ARTIST_LIST } from './artists/registry';
 import { getToken } from './comments';
 import { YeditsAdminPanel, type YeditsAdminTab } from './components/YeditsAdminPanel';
@@ -124,8 +124,7 @@ export function AdminPage() {
         <p style={{ color: C.dim, margin: '0 0 20px' }}>Tracker health, dead links, live comments, and moderation.</p>
 
         {access === 'checking' && <p style={{ color: C.faint }}>Checking access…</p>}
-        {access === 'signin' && <p style={{ color: C.dim }}>Sign in with a moderator account to use this page.</p>}
-        {access === 'forbidden' && <p style={{ color: C.dim }}>This page is for moderators only.</p>}
+        {(access === 'signin' || access === 'forbidden') && <Navigate to="/" replace />}
         {access === 'ok' && (
           <>
             <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>

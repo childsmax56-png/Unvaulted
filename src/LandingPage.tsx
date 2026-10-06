@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SiDiscord, SiReddit, SiTiktok, SiX } from 'react-icons/si';
-import { RefreshCw, LogIn, LogOut, User, X } from 'lucide-react';
+import { RefreshCw, LogIn, LogOut, User, X, ShieldCheck } from 'lucide-react';
 import { ARTIST_LIST } from './artists/registry';
 import type { ArtistConfig } from './artists/types';
 import { useSettings, LOADING_SCREENS } from './SettingsContext';
@@ -611,6 +611,25 @@ function useVGAuth() {
   };
 
   return { user, signIn, signInWithGoogle, signOut };
+}
+
+// Whether the signed-in user is a site moderator (owner or yeditsgold admin),
+// which unlocks the Admin button linking to /admin.
+function useIsAdmin(user: VGUser | null): boolean {
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem(TOKEN_KEY);
+    if (!user || !token) { setIsAdmin(false); return; }
+    let cancelled = false;
+    fetch('/api/yeditsgold-admin-check', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token }),
+    })
+      .then(r => r.ok ? r.json() : {})
+      .then((d: { admin?: boolean }) => { if (!cancelled) setIsAdmin(!!d.admin); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [user]);
+  return isAdmin;
 }
 
 // ─── Card components ──────────────────────────────────────────────────────────
@@ -1257,6 +1276,7 @@ export function LandingPage() {
   const { settings } = useSettings();
   const showPhotos = true;
   const { user, signIn, signInWithGoogle, signOut } = useVGAuth();
+  const isAdmin = useIsAdmin(user);
   const { favorites, toggleFavorite } = useFavoriteArtists();
   const isFavorite = (slug: string) => favorites.includes(slug);
 
@@ -1650,6 +1670,14 @@ export function LandingPage() {
         {user ? (
           <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>{user.username}</span>
+            {isAdmin && (
+              <a
+                href="/admin"
+                style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 16px', borderRadius: 10, background: 'rgba(96,165,250,0.12)', border: '1px solid rgba(96,165,250,0.3)', color: '#60a5fa', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textDecoration: 'none' }}
+              >
+                <ShieldCheck size={14} /> Admin
+              </a>
+            )}
             <button
               onClick={signOut}
               style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(201,162,36,0.12)', border: '1px solid rgba(201,162,36,0.3)', color: '#C9A224', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}
