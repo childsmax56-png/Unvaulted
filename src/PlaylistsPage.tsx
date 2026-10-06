@@ -9,7 +9,7 @@ import { UserPlaylist, PlaylistSong, Song, Era } from './types';
 import { ArtImage } from './components/ArtGallery';
 import { eraArtwork } from './eraArtwork';
 import * as audioStore from './player/audioStore';
-import { handleDownloadFile, buildArtistTag, buildTitleTag, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
+import { handleDownloadFile, buildArtistTag, buildTitleTag, buildDownloadName, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
 import { useSettings } from './SettingsContext';
 
 // Prefer the song's real era cover (bundled per tracker) over whatever was
@@ -305,7 +305,7 @@ export function PlaylistsPage() {
         year: ALBUM_RELEASE_DATES[eraName]?.split('/').pop(),
         artworkUrl: songArtwork(entry),
       } : undefined;
-      await handleDownloadFile(entry.url, entry.songName, settings.tagsAsEmojis, meta, undefined, settings.convertToMp3);
+      await handleDownloadFile(entry.url, buildDownloadName(entry.songName, settings.tagFeaturedArtists, settings.tagsAsEmojis), settings.tagsAsEmojis, meta, undefined, settings.convertToMp3);
     } catch {
       showToast('Couldn’t download this song');
     } finally {

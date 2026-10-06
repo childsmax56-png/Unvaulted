@@ -4,7 +4,7 @@ import { Play, Pause, Volume2, Maximize2, MoreHorizontal, Download, X, SkipBack,
 import { parseArtistFromSong } from '../lastfm';
 import { Song, Era } from '../types';
 import { useState, useRef, useEffect } from 'react';
-import { formatTextWithTags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, handleDownloadFile, ERA_THEMES , Img, looksLikeRealLink} from '../utils';
+import { formatTextWithTags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, ERA_THEMES , Img, looksLikeRealLink} from '../utils';
 import { handleShareSilent } from './EraDetail';
 import { LyricsModal } from './LyricsModal';
 import { useSettings } from '../SettingsContext';
@@ -507,7 +507,7 @@ export function PlayerBar({
                         const dlEraName = (currentSong as any).realEra?.name || era?.name || '';
                         const dlArtUrl = currentSong.image || CUSTOM_IMAGES[dlEraName] || (currentSong as any).realEra?.image || era?.image;
                         const dlYear = ALBUM_RELEASE_DATES[dlEraName]?.split('/').pop();
-                        handleDownloadFile(rawUrl, currentSong.name, settings.tagsAsEmojis, settings.embedMetadata ? {
+                        handleDownloadFile(rawUrl, buildDownloadName(currentSong.name, settings.tagFeaturedArtists, settings.tagsAsEmojis), settings.tagsAsEmojis, settings.embedMetadata ? {
                           title: buildTitleTag(currentSong.name, settings.tagFeaturedArtists),
                           artist: buildArtistTag(currentSong.name, dlEraName, settings.tagFeaturedArtists),
                           album: dlEraName,

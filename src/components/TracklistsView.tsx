@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ChevronDown, ChevronUp, Download, ExternalLink, Play, Pause, Image as ImageIcon, X } from 'lucide-react';
 import { saveAs } from 'file-saver';
 import { Era, Song } from '../types';
-import { isSongNotAvailable, embedID3Tags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { isSongNotAvailable, embedID3Tags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, buildDownloadName, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { useSettings } from '../SettingsContext';
 import { CommentButton } from './CommentButton';
@@ -257,7 +257,7 @@ function AlbumCard({ album, matches, defaultOpen, onPlaySong, currentSong, isPla
           }
         }
         const num = track.num !== '#?' ? String(track.num).padStart(2, '0') : '00';
-        zip.file(`${num}. ${sanitizeFilename(track.name)}${ext}`, blob);
+        zip.file(`${num}. ${sanitizeFilename(buildDownloadName(track.name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
       } catch {
         // skip tracks that fail
       } finally {

@@ -9,7 +9,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { isLastfmLoggedIn } from '../lastfm';
 import { saveAs } from 'file-saver';
 import { Era } from '../types';
-import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, buildDownloadName, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { ArtEntry } from './ArtGallery';
 import { StemEntry } from './StemsView';
@@ -89,7 +89,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
             }, songTitle);
           } catch { /* skip tagging, save raw */ }
         }
-        zip.file(`${sanitizeFilename(era)}/${sanitizeFilename(name)}${ext}`, blob);
+        zip.file(`${sanitizeFilename(era)}/${sanitizeFilename(buildDownloadName(name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
       } catch { /* skip */ } finally {
         done++;
         setProgress('unreleased', `${done} / ${songs.length}`);
@@ -244,7 +244,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
               }, songTitle);
             } catch { /* skip tagging, save raw */ }
           }
-          zip.file(`unreleased/${sanitizeFilename(era)}/${sanitizeFilename(name)}${ext}`, blob);
+          zip.file(`unreleased/${sanitizeFilename(era)}/${sanitizeFilename(buildDownloadName(name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
         } else if (kind === 'art') {
           const item = data;
           const url = item['Link(s)'].split('\n')[0].trim();

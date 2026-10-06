@@ -5,7 +5,7 @@ import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loa
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
 import { addItemsToGlobalTierList, readGlobalTierLists } from '../tierListStore';
@@ -307,7 +307,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         let blob = await res.blob();
         const songEraName = (song as any).realEra?.name || era.name;
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
-        const fileName = settings.tagsAsEmojis ? song.name : formatTextForNotification(song.name, false);
+        const fileName = buildDownloadName(song.name, settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
         if (isImage) {
           ext = imageExt || await detectAudioExt(blob);
@@ -413,7 +413,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         let blob = await res.blob();
         const songEraName = (song as any).realEra?.name || era.name;
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
-        const fileName = settings.tagsAsEmojis ? song.name : formatTextForNotification(song.name, false);
+        const fileName = buildDownloadName(song.name, settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
         if (isImage) { ext = imageExt || await detectAudioExt(blob); }
         else { ext = await detectAudioExt(blob); }

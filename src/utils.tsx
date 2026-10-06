@@ -383,17 +383,17 @@ function collectFeatured(songName: string): string[] {
  * "Ye - ⭐ Hurricane [V3]\n(Alt Name)\n(feat. The Weeknd)" → "Hurricane (ft. The Weeknd) [V3] [BEST OF]".
  * Alt-name lines and credit groups are dropped; version brackets and tags are kept.
  */
-export function buildTitleTag(songName: string, includeFeatures = true): string {
+export function buildTitleTag(songName: string, includeFeatures = true, keepEmojis = false): string {
   let rest = songName.includes(' - ') ? songName.substring(songName.indexOf(' - ') + 3) : songName;
 
   const tags: string[] = [];
-  Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
+  if (!keepEmojis) Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
     if (rest.includes(emoji)) {
       tags.push(`[${tag.toUpperCase()}]`);
       rest = rest.split(emoji).join('');
     }
   });
-  rest = rest.replace(/[\uFE0F]/g, '');
+  if (!keepEmojis) rest = rest.replace(/[\uFE0F]/g, '');
 
   const firstLine = rest.split('\n')[0].replace(CREDIT_GROUP, '');
   const brackets = firstLine.match(/\[[^\]]*\]/g) || [];
@@ -405,6 +405,12 @@ export function buildTitleTag(songName: string, includeFeatures = true): string 
   if (featured.length) parts.push(`(ft. ${featured.join(', ')})`);
   parts.push(...brackets, ...tags);
   return parts.join(' ');
+}
+
+/** Download filename for a song: the tagged title format when Tag Featured Artists is on, else the raw name. */
+export function buildDownloadName(songName: string, tagFeaturedArtists: boolean, tagsAsEmojis: boolean): string {
+  if (tagFeaturedArtists) return buildTitleTag(songName, true, tagsAsEmojis);
+  return tagsAsEmojis ? songName : formatTextForNotification(songName, false);
 }
 
 /**
