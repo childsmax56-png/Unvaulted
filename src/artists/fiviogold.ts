@@ -28,7 +28,17 @@ export const fiviogoldConfig: ArtistConfig = {
     return 'Fivio Foreign';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    'Before Pain and Love': '/fiviogold/eras/before-pain-and-love.jpg',
+    'Pain and Love': '/fiviogold/eras/pain-and-love.jpg',
+    '800 B.C.': '/fiviogold/eras/800-b-c.jpg',
+    'B.I.B.L.E.': '/fiviogold/eras/b-i-b-l-e.png',
+    'Collaboration with DJ Drama': '/fiviogold/eras/collaboration-with-dj-drama.jpg',
+    'Without Warning': '/fiviogold/eras/without-warning.jpg',
+    'Pain & Love 2': '/fiviogold/eras/pain-love-2.jpg',
+    'Still Standing': '/fiviogold/eras/still-standing.jpg',
+    'Ongoing': '/fiviogold/eras/ongoing.jpg',
+  },
 
   ALBUM_RELEASE_DATES: {
     'Before Pain and Love': '??/??/????',

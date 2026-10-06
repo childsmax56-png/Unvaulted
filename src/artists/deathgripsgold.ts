@@ -28,7 +28,19 @@ export const deathgripsgoldConfig: ArtistConfig = {
     return 'Death Grips';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    'Death Grips': '/deathgripsgold/eras/death-grips.jpg',
+    'Exmilitary': '/deathgripsgold/eras/exmilitary.png',
+    'The Money Store': '/deathgripsgold/eras/the-money-store.jpg',
+    'No Love Deep Web': '/deathgripsgold/eras/no-love-deep-web.jpg',
+    'Government Plates': '/deathgripsgold/eras/government-plates.jpg',
+    'Fashion Week': '/deathgripsgold/eras/fashion-week.jpg',
+    'Jenny Death': '/deathgripsgold/eras/jenny-death.png',
+    'Bottomless Pit': '/deathgripsgold/eras/bottomless-pit.png',
+    'Steroids': '/deathgripsgold/eras/steroids.jpg',
+    'Year of The Snitch': '/deathgripsgold/eras/year-of-the-snitch.jpg',
+    'Ongoing': '/deathgripsgold/eras/ongoing.png',
+  },
 
   ALBUM_RELEASE_DATES: {
     'Death Grips': '??/??/????',

@@ -28,7 +28,22 @@ export const olivertreegoldConfig: ArtistConfig = {
     return 'Oliver Tree';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    'The Last Supper': '/olivertreegold/eras/the-last-supper.jpg',
+    'Splitting Branches': '/olivertreegold/eras/splitting-branches.jpg',
+    'CalArts': '/olivertreegold/eras/calarts.jpg',
+    'Untitled Soul Album': '/olivertreegold/eras/untitled-soul-album.jpg',
+    'Squirt': '/olivertreegold/eras/squirt.jpg',
+    'Turbo': '/olivertreegold/eras/turbo.png',
+    'Ugly is Beautiful [V1]': '/olivertreegold/eras/ugly-is-beautiful-v1.jpg',
+    'Ugly is Beautiful [V2]': '/olivertreegold/eras/ugly-is-beautiful-v2.jpg',
+    'Little Ricky ZR3': '/olivertreegold/eras/little-ricky-zr3.jpg',
+    'Cowboy Tears': '/olivertreegold/eras/cowboy-tears.jpg',
+    'Super Computer': '/olivertreegold/eras/super-computer.jpg',
+    'Unknown EP': '/olivertreegold/eras/unknown-ep.jpg',
+    'Love You Madly, Hate You Badly': '/olivertreegold/eras/love-you-madly-hate-you-badly.jpg',
+    'Posthumous': '/olivertreegold/eras/posthumous.jpg',
+  },
 
   ALBUM_RELEASE_DATES: {
     'The Last Supper': '??/??/????',

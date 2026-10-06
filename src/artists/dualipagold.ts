@@ -28,7 +28,12 @@ export const dualipagoldConfig: ArtistConfig = {
     return 'Dua Lipa';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    'Early Career': '/dualipagold/eras/early-career.jpg',
+    'Dua Lipa': '/dualipagold/eras/dua-lipa.png',
+    'Future Nostalgia': '/dualipagold/eras/future-nostalgia.png',
+    'Radical Optimism': '/dualipagold/eras/radical-optimism.png',
+  },
 
   ALBUM_RELEASE_DATES: {
     'Early Career': '??/??/????',

@@ -589,7 +589,7 @@ def ts_str(s):
     return "'" + s.replace("\\", "\\\\").replace("'", "\\'").replace("\n", " ") + "'"
 
 
-def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", creator=""):
+def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", creator="", covers=None):
     rd = ",\n".join(f"    {ts_str(e)}: '??/??/????'" for e in eras)
     order = ",\n".join(f"    {ts_str(e)}" for e in eras)
     extra = []
@@ -600,6 +600,8 @@ def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", crea
     extra_s = ("\n" + "\n".join(extra)) if extra else ""
     var = slug + "Config"
     creator_s = f"\n  sheetCreator: {ts_str(creator)}," if creator else ""
+    covers = {e: p for e, p in (covers or {}).items() if e in eras}
+    images = ("\n" + "".join(f"    {ts_str(e)}: {ts_str(p)},\n" for e, p in covers.items()) + "  ") if covers else ""
     return f"""import type {{ ArtistConfig }} from './types';
 
 // {name} tracker. Data served from committed CSV snapshots under
@@ -629,7 +631,7 @@ export const {var}: ArtistConfig = {{
     return {ts_str(name)};
   }},
 
-  CUSTOM_IMAGES: {{}},
+  CUSTOM_IMAGES: {{{images}}},
 
   ALBUM_RELEASE_DATES: {{
 {rd}
@@ -720,7 +722,10 @@ def process(folder, meta, src_root=SRC_ROOT):
         write_csv(data_dir, "recent.csv", UNREL_HEADER, build_recent_from_unrel(unrel))
 
     eras = derive_eras(unrel)
-    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator)
+    # era covers pulled from the sheet's xlsx by scripts/extract-era-covers.py
+    covers_path = os.path.join(dst_dir, "eras", "covers.json")
+    covers = json.load(open(covers_path, encoding="utf-8")) if os.path.exists(covers_path) else {}
+    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator, covers)
     with open(os.path.join(ROOT, "src", "artists", f"{slug}.ts"), "w", encoding="utf-8") as f:
         f.write(cfg)
     print(f"    src/artists/{slug}.ts: {len(eras)} eras")

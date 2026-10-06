@@ -28,7 +28,19 @@ export const earlgoldConfig: ArtistConfig = {
     return 'Earl Sweatshirt';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    'Kitchen Cutlery': '/earlgold/eras/kitchen-cutlery.jpg',
+    'Earl': '/earlgold/eras/earl.png',
+    'EarlWolf': '/earlgold/eras/earlwolf.png',
+    'Doris': '/earlgold/eras/doris.jpg',
+    'I Don\'t Like Shit, I Don\'t Go Outside': '/earlgold/eras/i-don-t-like-shit-i-don-t-go-outside.jpg',
+    '4 MY DAWGS': '/earlgold/eras/4-my-dawgs.jpg',
+    'Some Rap Songs': '/earlgold/eras/some-rap-songs.jpg',
+    'FEET OF CLAY': '/earlgold/eras/feet-of-clay.png',
+    'The People Could Fly': '/earlgold/eras/the-people-could-fly.jpg',
+    'SICK!': '/earlgold/eras/sick.png',
+    'Voir Dire': '/earlgold/eras/voir-dire.jpg',
+  },
 
   ALBUM_RELEASE_DATES: {
     'Kitchen Cutlery': '??/??/????',
