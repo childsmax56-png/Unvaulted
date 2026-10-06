@@ -75,8 +75,12 @@ ARTISTS_2026_10 = {
 #   "headers": era-header Name cell (whitespace-collapsed) -> new Name cell
 #   "songs":   song-row Era -> era name
 ERA_FIXES = {
-    "clipsegold": {"songs": {
-        "King Push: The Prelude": "King Push – Darkest Before Dawn: The Prelude"}},
+    # a.ts's global ERA_NAME_MAP already renames the full title to "Darkest Before Dawn"
+    "clipsegold": {
+        "headers": {"King Push – Darkest Before Dawn: The Prelude (by Pusha T)":
+                    "Darkest Before Dawn\n(King Push – Darkest Before Dawn: The Prelude) (by Pusha T)"},
+        "songs": {"King Push: The Prelude": "Darkest Before Dawn"},
+    },
     "delasoulgold": {
         "headers": {
             "Art Official Itelligence: Mosiac Thump": "AOI: Mosaic Thump",
@@ -102,6 +106,20 @@ BATCHES = {
 
 RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
                   "Mixtape Track", "EP Track", "Other"}
+RELEASED_TYPE_ALIASES = {"Track": "Album Track", "Singles": "Single", "Features": "Feature",
+                         "Album Tracks": "Album Track", "Mixtape": "Mixtape Track",
+                         "Mixtape Tracks": "Mixtape Track", "EP Tracks": "EP Track",
+                         "Productions": "Production", "Album": "Album Track", "EP": "EP Track"}
+
+
+def released_type(t):
+    """Sheet Type -> a released.ts type. Compound labels keep their first part
+    ('Feature / Single' -> Feature); anything unknown (Remix, OST Track...) -> Other."""
+    for part in (clean(t), clean(t).split("/")[0].strip()):
+        part = RELEASED_TYPE_ALIASES.get(part, part)
+        if part in RELEASED_VALID:
+            return part
+    return "Other"
 MONTHS = {m: i for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun",
      "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
@@ -235,6 +253,21 @@ def is_count_block(c):
         for l in lines)
 
 
+STAT_WORD = re.compile(
+    r"^\d+\s+(Total|Full|Tagged|Partial|OG|Snippets?|Unavailable|Confirmed|Leaks?|Singles?|"
+    r"Album|Features?|Productions?|Remix(es)?|Mixtapes?|EP|Others?|Music|OST|Intros?|Interludes?|"
+    r"Skits?|Bonus|Never|Beats?|Stems?|Demos?|Instrumentals?|Covers?|Freestyles?)\b", re.I)
+
+
+def is_stat_block(c):
+    """Per-era stats banner ('23 Total\n1 Single\n...', '16 Album Tracks') that
+    some tabs put in the Era column above each era's rows."""
+    lines = [l.strip() for l in (c or "").split("\n") if l.strip()]
+    if not lines or not all(re.match(r"^\d+\s+[A-Za-z]", l) for l in lines):
+        return False
+    return len(lines) > 1 or bool(STAT_WORD.match(lines[0]))
+
+
 def era_header_cell(r):
     """The file-count cell of an era-header row (normally col 0; some sheets
     leave col 0 blank and put the counts further right), else None. Always
@@ -302,7 +335,9 @@ def reconcile_eras(out, name_rows):
         first = next((j for j in range(i) if "\n" not in out[j][0] and out[j][0] == name), None)
         if first is not None:
             out.insert(first, out.pop(i))
-    return out
+    # drop header rows of eras with no (named) songs — they'd render as empty eras
+    song_eras = {r[0] for r in out if "\n" not in r[0]}
+    return [r for r in out if "\n" not in r[0] or clean(r[1].split("\n")[0]) in song_eras]
 
 
 def build_unreleased(rows, fixes=None):
@@ -391,15 +426,13 @@ def build_released(rows):
             if era_name:
                 out.append([era0, era_name, "", "", "", "", "", ""])
             continue
-        era = clean(era0)
+        if is_stat_block(era0):
+            continue
+        era = re.sub(r"\s+", " ", era0).strip()
         name = cell(r, ci["name"])
         if not era or not name:
             continue
-        t = cell(r, ci["type"])
-        if t == "Track":
-            t = "Album Track"
-        if t not in RELEASED_VALID:
-            t = "Other"
+        t = released_type(cell(r, ci["type"]))
         out.append([era, name, cell(r, ci["notes"]), cell(r, ci["tlen"]),
                     cell(r, ci["date"]), t, cell(r, ci["stream"]),
                     cell(r, ci["link"])])
@@ -533,8 +566,7 @@ def build_groupbuys(rows):
 
 def build_passthrough(rows):
     """Art / Misc / Music Videos / Album Copies: re-serialise, drop empty rows."""
-    out = [r for r in rows if any(clean(c) for c in r)]
-    return out
+    return [r for r in rows if any(clean(c) for c in r) and not (r and is_stat_block(r[0]))]
 
 
 # ------------------------------------------------------------- era derivation --

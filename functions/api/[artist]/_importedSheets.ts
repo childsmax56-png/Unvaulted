@@ -111,6 +111,7 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
     tabs: {
       unreleased: t('793972257', 'unreleased'),
       recent: t('793972257', 'recent-from-unreleased'),
+      released: t('1202104579', 'released'), // the sheet's "Off-Streaming" tab
       stems: t('792344123', 'stems'),
     },
   },
@@ -142,8 +143,13 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
 //   headers: era-header Name cell (whitespace-collapsed) -> new Name cell
 //   songs:   song-row Era -> era name
 const ERA_FIXES: Record<string, { headers?: Record<string, string>; songs?: Record<string, string> }> = {
+  // a.ts's global ERA_NAME_MAP already renames the full title to "Darkest Before Dawn"
   clipsegold: {
-    songs: { 'King Push: The Prelude': 'King Push – Darkest Before Dawn: The Prelude' },
+    headers: {
+      'King Push – Darkest Before Dawn: The Prelude (by Pusha T)':
+        'Darkest Before Dawn\n(King Push – Darkest Before Dawn: The Prelude) (by Pusha T)',
+    },
+    songs: { 'King Push: The Prelude': 'Darkest Before Dawn' },
   },
   delasoulgold: {
     headers: {
@@ -202,6 +208,16 @@ function isCountBlock(c: string): boolean {
   const lines = (c ?? '').split('\n').map(l => l.trim()).filter(Boolean);
   return lines.length > 0 && lines.every(l =>
     /^\d+\s+(Total|Full|Tagged|Partial|OG|Snippets?|Unavailable|Confirmed|Leaks?|Beats?|Stems?|Cut|Lost|Rumou?red|Available|Instrumentals?|Demos?)\b/i.test(l));
+}
+
+// Per-era stats banner ('23 Total\n1 Single\n...', '16 Album Tracks') that some
+// tabs put in the Era column above each era's rows.
+const STAT_WORD = /^\d+\s+(Total|Full|Tagged|Partial|OG|Snippets?|Unavailable|Confirmed|Leaks?|Singles?|Album|Features?|Productions?|Remix(es)?|Mixtapes?|EP|Others?|Music|OST|Intros?|Interludes?|Skits?|Bonus|Never|Beats?|Stems?|Demos?|Instrumentals?|Covers?|Freestyles?)\b/i;
+
+function isStatBlock(c: string): boolean {
+  const lines = (c ?? '').split('\n').map(l => l.trim()).filter(Boolean);
+  if (!lines.length || !lines.every(l => /^\d+\s+[A-Za-z]/.test(l))) return false;
+  return lines.length > 1 || STAT_WORD.test(lines[0]);
 }
 
 // The file-count cell of an era-header row, always returned with a newline
@@ -268,7 +284,9 @@ function reconcileEras(out: Row[], nameRows: [number, string, string][]): Row[] 
     const first = out.findIndex((x, j) => j < i && !x[0].includes('\n') && x[0] === name);
     if (first >= 0) out.splice(first, 0, ...out.splice(i, 1));
   }
-  return out;
+  // drop header rows of eras with no (named) songs — they'd render as empty eras
+  const songEras = new Set(out.filter(r => !r[0].includes('\n')).map(r => r[0]));
+  return out.filter(r => !r[0].includes('\n') || songEras.has(clean(r[1].split('\n')[0])));
 }
 
 function buildUnreleased(rows: Row[], artist: string): Row[] {
@@ -347,6 +365,21 @@ function buildRecentFromUnreleased(unrel: Row[]): Row[] {
 
 const RELEASED_VALID = new Set(['Feature', 'Production', 'Single', 'Album Track',
   'Mixtape Track', 'EP Track', 'Other']);
+const RELEASED_TYPE_ALIASES: Record<string, string> = {
+  Track: 'Album Track', Singles: 'Single', Features: 'Feature', 'Album Tracks': 'Album Track',
+  Mixtape: 'Mixtape Track', 'Mixtape Tracks': 'Mixtape Track', 'EP Tracks': 'EP Track',
+  Productions: 'Production', Album: 'Album Track', EP: 'EP Track',
+};
+
+// Sheet Type -> a released.ts type. Compound labels keep their first part
+// ('Feature / Single' -> Feature); anything unknown (Remix, OST Track...) -> Other.
+function releasedType(raw: string): string {
+  for (let part of [clean(raw), clean(raw).split('/')[0].trim()]) {
+    part = RELEASED_TYPE_ALIASES[part] ?? part;
+    if (RELEASED_VALID.has(part)) return part;
+  }
+  return 'Other';
+}
 
 function buildReleased(rows: Row[]): Row[] {
   const hi = findHeader(rows);
@@ -368,13 +401,11 @@ function buildReleased(rows: Row[]): Row[] {
       if (eraName) out.push([era0, eraName, '', '', '', '', '', '']);
       continue;
     }
-    const era = clean(era0);
+    if (isStatBlock(era0)) continue;
+    const era = collapse(era0);
     const name = cell(r, ci.name);
     if (!era || !name) continue;
-    let type = cell(r, ci.type);
-    if (type === 'Track') type = 'Album Track';
-    if (!RELEASED_VALID.has(type)) type = 'Other';
-    out.push([era, name, cell(r, ci.notes), cell(r, ci.tlen), cell(r, ci.date), type,
+    out.push([era, name, cell(r, ci.notes), cell(r, ci.tlen), cell(r, ci.date), releasedType(cell(r, ci.type)),
       cell(r, ci.stream), cell(r, ci.link)]);
   }
   return out;
@@ -440,7 +471,8 @@ export function normalizeImportedTab(artist: string, kind: Kind, rows: Row[]): s
     case 'released': out = buildReleased(rows); break;
     case 'stems': out = buildStems(rows); break;
     case 'fakes': out = buildFakes(rows); break;
-    default: out = rows.filter(r => r.some(c => clean(c))); // art/misc/music videos/album copies
+    default: // art/misc/music videos/album copies
+      out = rows.filter(r => r.some(c => clean(c)) && !(r.length && isStatBlock(r[0])));
   }
   return joinCSVRows(out) + '\n';
 }
