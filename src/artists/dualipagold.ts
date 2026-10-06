@@ -37,14 +37,19 @@ export const dualipagoldConfig: ArtistConfig = {
 
   ALBUM_RELEASE_DATES: {
     'Early Career': '??/??/????',
-    'Dua Lipa': '??/??/????',
-    'Future Nostalgia': '??/??/????',
-    'Radical Optimism': '??/??/????',
+    'Dua Lipa': '10/18/2018',
+    'Future Nostalgia': '03/26/2021',
+    'Radical Optimism': '05/03/2024',
     'DL4': '??/??/????'
   },
 
   HIDDEN_ALBUMS: [],
-  ALBUM_DESCRIPTIONS: {},
+  ALBUM_DESCRIPTIONS: {
+    'Early Career': 'Dua Lipa’s first song didn’t have a name. ~ “My parents inspired me to pursue music. The first song I made didn’t have a title. I was very young and it was a song I sang to my mom about when I grow up, will she lend me all her beautiful clothes? She did."',
+    'Dua Lipa': 'Dua Lipa is the self-titled debut studio album by English singer Dua Lipa. Released on June 2, 2017, by Warner Bros. Records, the dance-pop and electropop record features global breakout hits like "New Rules" and "Be the One", earning widespread critical praise and commercial success',
+    'Future Nostalgia': 'Future Nostalgia is Dua Lipa\'s critically acclaimed sophomore studio album. A dazzling fusion of 1970s disco, 1980s pop and modern club energy. The 11-track record spawned massive global hits like "Don\'t Start Now," "Physical," and "Levitating", cementing her status as a defining pop visionary of her generation.',
+    'Radical Optimism': 'Radical Optimism is the third studio album by English singer Dua Lipa. Produced largely with Tame Impala\'s Kevin Parker and Danny L Harle, the 11-track record blends psychedelic-inflected dance-pop, Britpop elements, and disco vibes, drawing inspiration from the concept of navigating life\'s chaos with grace.',
+  },
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
   ERA_MAPPINGS: {},

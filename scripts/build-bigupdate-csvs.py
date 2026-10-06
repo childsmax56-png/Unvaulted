@@ -284,6 +284,64 @@ def era_header_cell(r):
     return c if "\n" in c.strip() else c.strip() + "\n"
 
 
+def header_desc(r, skip):
+    """An era header's description: its longest free-text cell other than the
+    count block, name and timeline (Notes) cells. Sheets put it in different
+    columns (Type, Leak Date, ...), but always in a long prose cell."""
+    best = ""
+    for i, c in enumerate(r):
+        c = clean(c)
+        if i in skip or is_count_block(c) or is_count_header(c):
+            continue
+        if len(c) > len(best):
+            best = c
+    return best if len(best) >= 40 else ""
+
+
+MONTH_NAMES = {m: i for i, m in enumerate(
+    ["january", "february", "march", "april", "may", "june", "july", "august",
+     "september", "october", "november", "december"], 1)}
+
+
+def to_release_date(d):
+    """Timeline date text -> MM/DD/YYYY with ?? for unknown parts, or None."""
+    d = clean(d)
+    m = re.fullmatch(r"([0-9xX?]{1,2})/([0-9xX?]{1,2})/(\d{4})", d)
+    if m:
+        part = lambda v: v.zfill(2) if v.isdigit() else "??"
+        return f"{part(m.group(1))}/{part(m.group(2))}/{m.group(3)}"
+    m = re.fullmatch(r"([A-Za-z]+)\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})", d)
+    mon = lambda w: next((n for k, n in MONTH_NAMES.items() if k.startswith(w.lower()[:3])), None)
+    if m and mon(m.group(1)):
+        return f"{mon(m.group(1)):02d}/{int(m.group(2)):02d}/{m.group(3)}"
+    m = re.fullmatch(r"([A-Za-z]+)\.?,?\s+(\d{4})", d)
+    if m and mon(m.group(1)):
+        return f"{mon(m.group(1)):02d}/??/{m.group(2)}"
+    m = re.fullmatch(r"(\d{4})", d)
+    return f"??/??/{m.group(1)}" if m else None
+
+
+NOT_A_RELEASE = re.compile(r"intend|plan|schedul|delay|shelv|leak|cancel|announc|teas|push|scrap|rumou?r", re.I)
+
+
+def era_release_date(era, timeline):
+    """The era's release date from its header timeline, e.g.
+    '(02/06/1989) (3 Feet High And Rising releases)'. Uses a release line that
+    names the era, else the timeline's last line if it's a release; eras that
+    never came out keep ??/??/???? rather than the previous album's date."""
+    lines = []
+    for line in (timeline or "").split("\n"):
+        m = re.match(r"\s*\(([^)]*)\)\s*(.*)", line)
+        if m:
+            lines.append((m.group(1), m.group(2)))
+    is_rel = lambda rest: re.search(r"releas", rest, re.I) and not NOT_A_RELEASE.search(rest)
+    k = era_key(re.sub(r"\[.*?\]|\(.*?\)", "", era))
+    named = [d for d, rest in lines if is_rel(rest) and k and k in re.sub(r"[^a-z0-9]", "", rest.lower())]
+    # a lone line is the era's start marker (the previous release), not its end
+    pick = named[-1] if named else (lines[-1][0] if len(lines) > 1 and is_rel(lines[-1][1]) else None)
+    return (to_release_date(pick) if pick else None) or "??/??/????"
+
+
 def era_key(s):
     s = re.sub(r"\s+", " ", (s or "").split("\n")[0]).strip().rstrip("*").strip()
     return re.sub(r"[^a-z0-9]", "", s.lower())
@@ -306,14 +364,14 @@ def reconcile_eras(out, name_rows):
     song_keys = {era_key(r[0]) for r in out if "\n" not in r[0]}
     # count-less era headers: blank Era, title in Name, no file data
     promoted = []
-    for (idx, title, notes) in name_rows:
+    for (idx, title, notes, desc) in name_rows:
         k = era_key(re.sub(r"\(.*?\)", "", title.split("\n")[0]))
         if k and k not in hdr and k in song_keys:
             first, _, rest = title.partition("\n")
             name = clean(re.sub(r"\(.*?\)", "", first))
             extra = "\n".join(x for x in (clean(first[len(name):]) if first.startswith(name) else "", clean(rest)) if x)
             hdr[k] = name
-            promoted.append((idx, ["\n", name + ("\n" + extra if extra else ""), notes, "", "", "", "", "", ""]))
+            promoted.append((idx, ["\n", name + ("\n" + extra if extra else ""), notes, "", "", "", "", "", "", desc]))
     for idx, row in reversed(promoted):
         out.insert(idx, row)
     for r in out:
@@ -364,14 +422,16 @@ def build_unreleased(rows, fixes=None):
     for r in rows[hi + 1:]:
         if r and not clean(r[0]) and cell(r, ci["name"]) and not era_header_cell(r) \
                 and not any(cell(r, ci[k]) for k in ("link", "avail", "qual", "tlen")):
-            name_rows.append((len(out), cell(r, ci["name"]), cell(r, ci["notes"])))
+            name_rows.append((len(out), cell(r, ci["name"]), cell(r, ci["notes"]),
+                              header_desc(r, {0, ci["name"], ci["notes"]})))
             continue
         hdr_cell = era_header_cell(r)
         if hdr_cell:
             era_name = cell(r, ci["name"])  # a.ts: first line = era, rest = extra
             if not era_name:
                 continue
-            out.append([hdr_cell, era_name, cell(r, ci["notes"]), "", "", "", "", "", ""])
+            out.append([hdr_cell, era_name, cell(r, ci["notes"]), "", "", "", "", "", "",
+                        header_desc(r, {0, ci["name"], ci["notes"]})])
         else:
             era = re.sub(r"\s+", " ", r[0]).strip() if r else ""
             name = cell(r, ci["name"])
@@ -589,8 +649,12 @@ def ts_str(s):
     return "'" + s.replace("\\", "\\\\").replace("'", "\\'").replace("\n", " ") + "'"
 
 
-def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", creator="", covers=None):
-    rd = ",\n".join(f"    {ts_str(e)}: '??/??/????'" for e in eras)
+def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", creator="", covers=None,
+               era_meta=None):
+    era_meta = era_meta or {}
+    rd = ",\n".join(f"    {ts_str(e)}: '{era_meta.get(e, ('??/??/????', ''))[0]}'" for e in eras)
+    descs = [(e, era_meta[e][1]) for e in eras if e in era_meta and era_meta[e][1]]
+    desc_s = ("\n" + "".join(f"    {ts_str(e)}: {ts_str(d)},\n" for e, d in descs) + "  ") if descs else ""
     order = ",\n".join(f"    {ts_str(e)}" for e in eras)
     extra = []
     if flags.get("albumcopies"):
@@ -638,7 +702,7 @@ export const {var}: ArtistConfig = {{
   }},
 
   HIDDEN_ALBUMS: [],
-  ALBUM_DESCRIPTIONS: {{}},
+  ALBUM_DESCRIPTIONS: {{{desc_s}}},
   ALBUM_SONG_COUNTS: {{}},
   CUSTOM_ALBUM_INFO: {{}},
   ERA_MAPPINGS: {{}},
@@ -680,6 +744,12 @@ def process(folder, meta, src_root=SRC_ROOT):
 
     os.makedirs(data_dir, exist_ok=True)
     unrel = build_unreleased(read_rows(tabs["unreleased"]), ERA_FIXES.get(slug))
+    era_meta = {}  # era -> (release date, description) from its header row
+    for r in unrel:
+        if "\n" in r[0]:
+            era = clean(r[1].split("\n")[0])
+            era_meta.setdefault(era, (era_release_date(era, r[2]), r[9] if len(r) > 9 else ""))
+    unrel = [r[:9] for r in unrel]
     write_csv(data_dir, "unreleased.csv", UNREL_HEADER, unrel)
 
     if "released" in tabs:
@@ -716,7 +786,7 @@ def process(folder, meta, src_root=SRC_ROOT):
 
     # recent: use source tab if present, else derive from unreleased
     if "recent" in tabs:
-        rows = build_unreleased(read_rows(tabs["recent"]), ERA_FIXES.get(slug))
+        rows = [r[:9] for r in build_unreleased(read_rows(tabs["recent"]), ERA_FIXES.get(slug))]
         write_csv(data_dir, "recent.csv", UNREL_HEADER, rows)
     else:
         write_csv(data_dir, "recent.csv", UNREL_HEADER, build_recent_from_unrel(unrel))
@@ -725,7 +795,7 @@ def process(folder, meta, src_root=SRC_ROOT):
     # era covers pulled from the sheet's xlsx by scripts/extract-era-covers.py
     covers_path = os.path.join(dst_dir, "eras", "covers.json")
     covers = json.load(open(covers_path, encoding="utf-8")) if os.path.exists(covers_path) else {}
-    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator, covers)
+    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator, covers, era_meta)
     with open(os.path.join(ROOT, "src", "artists", f"{slug}.ts"), "w", encoding="utf-8") as f:
         f.write(cfg)
     print(f"    src/artists/{slug}.ts: {len(eras)} eras")
