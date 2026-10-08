@@ -188,6 +188,7 @@
         <div>
           <div class="user-name" id="user-name">—</div>
           <div class="user-email" id="user-email">—</div>
+          <a id="profile-link" href="#" style="color: var(--gold); font-size: 13px; text-decoration: none; display: inline-block; margin-top: 4px;">View &amp; edit public profile →</a>
         </div>
         <button class="sign-out-btn" onclick="doSignOut()">Sign out</button>
       </div>
@@ -352,6 +353,7 @@
     document.getElementById('view-account').style.display = 'block';
     document.getElementById('user-name').textContent = user.username;
     document.getElementById('user-email').textContent = user.email;
+    document.getElementById('profile-link').href = '/u/' + encodeURIComponent(user.username);
     renderAvatar(user.avatarUrl, user.username);
   }
 

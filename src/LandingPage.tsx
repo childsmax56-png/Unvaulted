@@ -1684,7 +1684,13 @@ export function LandingPage() {
         )}
         {user ? (
           <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>{user.username}</span>
+            <a
+              href={`/u/${encodeURIComponent(user.username)}`}
+              title="View your public profile"
+              style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 600, textDecoration: 'none', padding: '10px 4px' }}
+            >
+              {user.username}
+            </a>
             {isAdmin && (
               <a
                 href="/admin"
