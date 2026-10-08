@@ -1622,6 +1622,15 @@ export function LandingPage() {
           watermark="PR"
         />
         <BigLinkCard
+          href="/archive"
+          accent="#22D3EE"
+          badge="New"
+          titleMain="TRACKER"
+          titleAccent="ARCHIVE"
+          subtitle="Every tracker copy, the Leaktionary, templates & more"
+          watermark="TA"
+        />
+        <BigLinkCard
           href="/foryou"
           accent="#7C5CFF"
           badge="New"

@@ -1,0 +1,18 @@
+Update//Evidence Status,,,Available/Working Status,
+Yes,"""Yes"" if the tracker is up to date.",,Yes,"""Yes"" if the tracker is working completly within all tabs."
+Outdated,"""Outdated"", if the tracker is outdated (Up to 6 months and above of difference)",,Yes (HTML),"""Yes (HTML)""  when the copy or tracker works on a non convenient way aka PDF, HTML, Excel file or Other formats"
+Mostly,"""Mostly"", if the tracker is mostly up to date (Up to 1 to 6 Months of difference)",,Mostly,"""Mostly"", if the tracker is mostly working (could miss a few eras or have broken features)"
+Misc,"""Misc"", if it doesnt have any leaks, is a discord server/telegram channel, or Just doesnt belong to anything else.",,No,"""No"" if the tracker isnt Available or working."
+Confirmed,"""Confirmed"", if the tracker is confirmed to exist, BUT unavailable.",,Misc,"""Misc"" if It doesnt belong to any other Status and it's really specific"
+Unknown,"""Unknown"" for entries where it's rumored or barely evidenced to exist.",,Unreleased Tab Only,"Only the ""Unreleased Tab"", or first tab of the tracker works. Used for Archive.org copy links for trackers that are NON HTML FORMAT."
+Archive Copy,"""Archive Copy"" Indicates that it's a copy or if it is recent, meant to be a copy intended to be an archive. wow",,Barely,Used for trackers that barely works. (Small portion like below 100 tables and only 1 sheet. can sometimes happen to the archive.org copies that arent properly archived.)
+No,"""No"", If there's no evidence of the tracker still existing somewhere (do not confuse it with outdated).",,REP-ONGOING,"""Replacement Ongoing"" indicating the link is taken down but we have done backups for it so this is not something to worry about. rarely used
+
+If we're NOT talking about copies, this is used for Work In Progress stuff."
+Icon Tags,,,,
+⭐,"""Best Of"", some of the best sheets hosted on the tracker.",,,
+🏅 ,"""Wanted"", Copies that are considered to be lost media unless proven to, also because many people want an archived version of.",,,
+🚧,"""Work In Progress"", Trackers or Entries that are in a work in progress, mostly copies that include new eras, or remakes of the whole tracker (mostly impossible since there where over 7k entries before the UMG/Milo crackdown)",,,
+✨,"""Special"", recommended/suggested/special Copies of the tracker, can be slightly/mostly outdated.",,,
+🗑️ ,"""Worst Of"", some of the worst copies of the tracker, could be old Copies, or fucked up ones. or just straight bullshit. self explanatory",,,
+🤡,"""Joke"", Copies or Trackers that were intentionally crafted to be a joke/Copied during an April Fools skit. Similar to ""Worst of"" but it's not precisely this fucked to be on it. Unless it does.",,,
