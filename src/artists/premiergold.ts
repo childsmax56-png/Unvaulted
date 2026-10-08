@@ -11,7 +11,7 @@ export const premiergoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/premiergold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'premiergold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'mel0njuice',
 
   HARDCODED_SHEET_ID: '1RaAzCb3IAg0FZas9dsAMqU785xw1sDYIvx3-SVFEVsY',
   HARDCODED_SHEET_GID: '',

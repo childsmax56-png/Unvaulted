@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Era } from '../types';
 import { formatTextWithTags, ALBUM_RELEASE_DATES, CUSTOM_IMAGES , Img} from '../utils';
+import { activeConfig } from '../artists/activeConfig';
 
 export function EraGrid({ eras, onSelectEra }: { key?: string, eras: Era[], onSelectEra: (era: Era) => void }) {
   return (
@@ -36,7 +37,7 @@ export function EraGrid({ eras, onSelectEra }: { key?: string, eras: Era[], onSe
             <div>
               <h3 className="text-sm font-bold text-white group-hover:underline truncate flex items-center gap-2">
                 <div className="truncate">{formatTextWithTags(era.name)}</div>
-                {ALBUM_RELEASE_DATES[era.name] && <div className="text-white/40 font-medium text-[10px] shrink-0 bg-white/5 px-1.5 py-0.5 rounded uppercase tracking-wider">{ALBUM_RELEASE_DATES[era.name]}</div>}
+                {(ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]) && <div className="text-white/40 font-medium text-[10px] shrink-0 bg-white/5 px-1.5 py-0.5 rounded uppercase tracking-wider">{ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]}</div>}
               </h3>
               <div className="flex items-center gap-2 mt-0.5">
                 {era.extra && <p className="text-white/50 text-xs truncate">{formatTextWithTags(era.extra)}</p>}

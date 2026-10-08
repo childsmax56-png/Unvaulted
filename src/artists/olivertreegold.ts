@@ -11,7 +11,7 @@ export const olivertreegoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/olivertreegold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'olivertreegold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'Cowtools, TyreimBy, Aurien',
 
   HARDCODED_SHEET_ID: '1rhvQ9F8VRAj-jOyTLsvhORsVCyvcMRXJuGoDR1-z4jY',
   HARDCODED_SHEET_GID: '',

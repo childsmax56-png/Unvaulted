@@ -297,6 +297,8 @@ export default function App() {
   const [groupbuysData, setGroupbuysData] = useState<GroupbuysData>({ years: [], grandTotal: '' });
   const [productionData, setProductionData] = useState<TrackerData | null>(null);
   const [individualData, setIndividualData] = useState<TrackerData | null>(null);
+  // group trackers: per-member Unreleased tabs (activeConfig.memberTabs), keyed by member key
+  const [memberData, setMemberData] = useState<Record<string, TrackerData>>({});
   const [individualTracklistsData, setIndividualTracklistsData] = useState<TracklistAlbum[]>([]);
   const [tracklistsData, setTracklistsData] = useState<TracklistAlbum[]>([]);
   const [tracklistsLegend, setTracklistsLegend] = useState<TracklistLegendItem[]>([]);
@@ -349,6 +351,7 @@ export default function App() {
     if (path.startsWith('/production')) return 'production';
     if (path.startsWith('/individualtracklists')) return 'individualtracklists';
     if (path.startsWith('/individual')) return 'individual';
+    if (path.startsWith('/member/')) return `member-${path.split('/')[2]}` as Category;
     if (path.startsWith('/socials')) return 'socials';
     return 'music';
   });
@@ -1428,6 +1431,16 @@ export default function App() {
         });
     }
 
+    for (const mt of activeConfig.memberTabs ?? []) {
+      axios.get(`/api/${ARTIST_SLUG}/individual?member=${encodeURIComponent(mt.key)}`)
+        .then(res => {
+          setMemberData(prev => ({ ...prev, [mt.key]: JSON.parse(JSON.stringify(res.data)) }));
+        })
+        .catch(err => {
+          console.error(`Failed to fetch ${mt.label} data:`, err);
+        });
+    }
+
     if (activeConfig.hasIndividualProjectsTab) {
       axios.get(`/api/${ARTIST_SLUG}/individual`)
         .then(res => {
@@ -1791,6 +1804,11 @@ export default function App() {
       if (!currentPath.startsWith('/production')) {
         window.history.pushState({ category: 'production' }, '', absPath('/production'));
       }
+    } else if (activeCategory.startsWith('member-')) {
+      const memberPath = `/member/${activeCategory.slice('member-'.length)}`;
+      if (!currentPath.startsWith(memberPath)) {
+        window.history.pushState({ category: activeCategory }, '', absPath(memberPath));
+      }
     } else if (activeCategory === 'individual') {
       if (!currentPath.startsWith('/individual')) {
         window.history.pushState({ category: 'individual' }, '', absPath('/individual'));
@@ -1897,6 +1915,8 @@ export default function App() {
         setActiveCategory('individualtracklists');
       } else if (path.startsWith('/individual')) {
         setActiveCategory('individual');
+      } else if (path.startsWith('/member/')) {
+        setActiveCategory(`member-${path.split('/')[2]}` as Category);
       } else if (path.startsWith('/contributor/')) {
         const name = decodeURIComponent(path.split('/contributor/')[1]);
         setSelectedContributor(name);
@@ -2810,6 +2830,10 @@ export default function App() {
       if (!productionErasArray.find(e => e.name === selectedAlbum.name)) {
         setSelectedAlbum(null);
       }
+    } else if (cat.startsWith('member-') && selectedAlbum) {
+      if (!Object.values(memberData[cat.slice('member-'.length)]?.eras || {}).find((e: any) => e.name === selectedAlbum.name)) {
+        setSelectedAlbum(null);
+      }
     } else if ((cat === 'individual' || cat === 'individualtracklists') && selectedAlbum) {
       if (!individualErasArray.find(e => e.name === selectedAlbum.name)) {
         setSelectedAlbum(null);
@@ -2887,6 +2911,9 @@ let erasArray = (Object.values(data.eras || {}) as Era[])
 
 const productionErasArray = (Object.values(productionData?.eras || {}) as Era[]);
 const individualErasArray = (Object.values(individualData?.eras || {}) as Era[]);
+const memberErasArray = activeCategory.startsWith('member-')
+  ? (Object.values(memberData[activeCategory.slice('member-'.length)]?.eras || {}) as Era[])
+  : [];
 
 const RELATED_ERA_ORDER = [
   'Donda',
@@ -3462,6 +3489,24 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 />
               ) : activeCategory === 'production' ? (
                 <EraGrid key="production-grid" eras={productionErasArray.filter(e => {
+                  if (!searchQuery) return true;
+                  const q = searchQuery.toLowerCase();
+                  return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));
+                })} onSelectEra={setSelectedAlbum} />
+              ) : activeCategory.startsWith('member-') && selectedAlbum ? (
+                <EraDetail
+                  key={`${activeCategory}-${selectedAlbum.name}`}
+                  era={selectedAlbum}
+                  searchQuery={searchQuery}
+                  filters={filters}
+                  onPlaySong={handlePlaySong}
+                  currentSong={currentSong}
+                  isPlaying={isPlaying}
+                  toggleFavorite={toggleFavorite}
+                  favoriteKeys={favoriteKeys}
+                />
+              ) : activeCategory.startsWith('member-') ? (
+                <EraGrid key={`${activeCategory}-grid`} eras={memberErasArray.filter(e => {
                   if (!searchQuery) return true;
                   const q = searchQuery.toLowerCase();
                   return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));

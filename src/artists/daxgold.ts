@@ -11,7 +11,7 @@ export const daxgoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/daxgold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'daxgold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'raglord',
   // Private — off the landing grid, feed, pickers and search; reachable by URL only.
   hidden: true,
 

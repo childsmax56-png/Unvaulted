@@ -22,7 +22,12 @@ export const onRequestGet: PagesFunction = async (context) => {
     const url = new URL(context.request.url);
     const artist = (context.params as Record<string, string>).artist ?? 'wutanggold';
 
-    const text = await fetchTrackerCsv(url.origin, artist, 'individual', context.env as Env, context.request);
+    // ?member=<key>: one of a group tracker's per-member tabs (config memberTabs),
+    // served from the 'member-<key>' tab; otherwise the single Individual Projects tab.
+    const member = url.searchParams.get('member');
+    if (member !== null && !/^[a-z0-9-]+$/.test(member)) return new Response('Bad member', { status: 400 });
+    const tab = member ? `member-${member}` : 'individual';
+    const text = await fetchTrackerCsv(url.origin, artist, tab, context.env as Env, context.request);
     if (text === null) return new Response('CSV not found', { status: 404 });
     if (!isCsvText(text)) return new Response('CSV not found', { status: 404 });
 

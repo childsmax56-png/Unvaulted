@@ -63,6 +63,13 @@ export interface ArtistConfig {
   hasGroupbuysTab?: boolean; // set true to enable the Groupbuys tab (data from data/groupbuys.csv)
   hasIndividualProjectsTab?: boolean; // set true to enable a second Unreleased-style tab (e.g. a group's members' solo projects), sourced from the 'individual' sheet tab
   individualProjectsLabel?: string; // override the "Individual Projects" tab label
+  // Group trackers: one Unreleased-style tab per member (Migos -> Quavo/Offset/Takeoff),
+  // each served from the 'member-<key>' tracker tab, shown right after the main tab.
+  memberTabs?: { key: string; label: string }[];
+  musicLabel?: string; // override the main "Music" tab label (e.g. the group's name)
+  // Release dates for eras that exist only in member tabs. They can't go in
+  // ALBUM_RELEASE_DATES, which also seeds (empty) eras into the main grid.
+  MEMBER_RELEASE_DATES?: Record<string, string>;
   hasIndividualTracklistsTab?: boolean; // set true to enable a Tracklists-style tab for the Individual Projects catalog, sourced from the 'individual-tracklists' sheet tab
   SHEET_URL_RECENT_PRODUCTION?: string; // CSV export URL for a second recent tab (production projects)
   productionFirst?: boolean; // show Production Projects before Music in navbar

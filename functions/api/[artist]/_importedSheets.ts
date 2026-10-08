@@ -27,8 +27,8 @@ interface RawTab {
 
 interface ImportedTab extends RawTab {
   kind: Kind;
-  // Group trackers (Migos) give each member their own tab: merged into the
-  // group's eras ('unreleased') or interleaved by leak date ('recent').
+  // Group trackers (Migos): the members' Recent tabs, interleaved with the
+  // group's by leak date.
   members?: (RawTab & { member: string })[];
 }
 
@@ -151,8 +151,11 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
   migosgold: {
     sheetId: '1MgVRlGs5DL7keB_I6YPEj4FYLOHb8DVJbxN5-h6yxOE',
     tabs: {
-      unreleased: { ...t('335484962', 'unreleased'),
-        members: [m('Quavo', '1266312566'), m('Offset', '1395330475'), m('Takeoff', '911547308')] },
+      unreleased: t('335484962', 'unreleased'),
+      // each member's tab is its own tracker tab (config memberTabs)
+      'member-quavo': t('1266312566', 'unreleased'),
+      'member-offset': t('1395330475', 'unreleased'),
+      'member-takeoff': t('911547308', 'unreleased'),
       recent: { ...t('711581406', 'recent'),
         members: [m('Quavo', '844278669'), m('Offset', '1455811060'), m('Takeoff', '1370426296')] },
     },
@@ -419,8 +422,10 @@ function buildUnreleased(rows: Row[], artist: string): Row[] {
       const links = lcols.length > 1
         ? lcols.map(i => cell(r, i)).filter(Boolean).join('\n')
         : cell(r, ci.link);
-      out.push([era, name, cell(r, ci.notes), cell(r, ci.tlen), cell(r, ci.file),
-        cell(r, ci.leak), cell(r, ci.avail), cell(r, ci.qual), links]);
+      const song = [era, name, cell(r, ci.notes), cell(r, ci.tlen), cell(r, ci.file),
+        cell(r, ci.leak), cell(r, ci.avail), cell(r, ci.qual), links];
+      if (!song.slice(2).some(Boolean)) continue; // sub-section label ('2018 Sessions'), not a song
+      out.push(song);
     }
   }
   const fixes = ERA_FIXES[artist] ?? {};
@@ -433,38 +438,6 @@ function buildUnreleased(rows: Row[], artist: string): Row[] {
     }
   }
   return reconcileEras(out, nameRows, !!fixes.preferSongEra);
-}
-
-// Merge per-member unreleased outputs into one era list. Eras shared between
-// tabs (Migos' "Culture" is in the group, Quavo, Offset and Takeoff tabs) become
-// one era — a.ts resets an era at every header row, so each may only have one.
-// A member's own eras slot in after the era preceding them in that member's
-// tab. Member-tab songs get a '(Member)' credit line.
-function mergeMemberTabs(blocks: [string | null, Row[]][]): Row[] {
-  const order: string[] = [];
-  const heads = new Map<string, Row>();
-  const songs = new Map<string, Row[]>();
-  for (const [member, rows] of blocks) {
-    let prev: string | null = null;
-    for (const r0 of rows) {
-      const r = [...r0];
-      let era: string;
-      if (r[0].includes('\n')) {
-        era = clean(r[1].split('\n')[0]);
-        if (!heads.has(era)) heads.set(era, r);
-      } else {
-        era = r[0];
-        if (member) r[1] = r[1] + '\n(' + member + ')';
-        if (!songs.has(era)) songs.set(era, []);
-        songs.get(era)!.push(r);
-      }
-      if (!order.includes(era)) {
-        order.splice(prev !== null && order.includes(prev) ? order.indexOf(prev) + 1 : order.length, 0, era);
-      }
-      prev = era;
-    }
-  }
-  return order.flatMap(era => [...(heads.has(era) ? [heads.get(era)!] : []), ...(songs.get(era) ?? [])]);
 }
 
 // Recent tabs are flat, newest-first lists: interleave the group's and each
@@ -639,9 +612,8 @@ export function normalizeImportedTab(artist: string, kind: Kind, rows: Row[],
     case 'recent': {
       let built = buildUnreleased(rows, artist);
       if (members.length) {
-        const blocks: [string | null, Row[]][] = [[null, built],
-          ...members.map(([mb, rs]) => [mb, buildUnreleased(rs, artist)] as [string, Row[]])];
-        built = kind === 'recent' ? mergeRecentTabs(blocks) : mergeMemberTabs(blocks);
+        built = mergeRecentTabs([[null, built],
+          ...members.map(([mb, rs]) => [mb, buildUnreleased(rs, artist)] as [string, Row[]])]);
       }
       out = [UNREL_HEADER, ...built];
       break;

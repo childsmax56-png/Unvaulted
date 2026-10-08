@@ -11,7 +11,7 @@ export const deathgripsgoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/deathgripsgold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'deathgripsgold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'UnLuckyJanek',
 
   HARDCODED_SHEET_ID: '1Eh-9UyWUtyEpi_ELEhq5pD41ivFJHuQcvz2wFR2ml9g',
   HARDCODED_SHEET_GID: '',

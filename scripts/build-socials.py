@@ -13,6 +13,7 @@ Writes: src/socialsData.ts
 import csv
 import json
 import os
+import re
 
 HOME = os.path.expanduser("~")
 SRC_DIR = os.path.join(HOME, "Downloads", "socials")
@@ -40,7 +41,26 @@ FILES = {
                        platform=0, handle=1, notes=2, type=3, link=4),
     "twizzygold": dict(file="Yeat Trackër - Media.csv",
                        platform=0, handle=1, notes=2, type=3, status=4, link=5),
+    "deathgripsgold": dict(file="Death Grips Tracker - Socials.csv",
+                       platform=0, handle=1, notes=2, link=3, type_infer=True),
+    # archival sheet: availability (Full / Archived / Screenshots Only ...) as the
+    # status, archive.org link when the original is gone
+    "jpegmafiagold": dict(file="JPEGMAFIA Tracker - Accounts.csv",
+                       platform=0, handle=1, notes=2, status=3, link=4, link_fallback=5,
+                       type_infer=True),
 }
+
+STREAMING = {"amazon music", "apple music", "deezer", "spotify", "tidal", "pandora", "qobuz",
+             "soundcloud", "bandcamp", "audiomack", "youtube music", "napster"}
+
+
+def infer_type(platform):
+    p = platform.lower()
+    if p in STREAMING:
+        return "Streaming Service"
+    if p in ("nicknames", "website", "websites"):
+        return "Other"
+    return "Social Media"
 
 
 def clean(s):
@@ -64,9 +84,14 @@ def norm_status(raw):
 
 
 def norm_link(raw):
-    v = clean(raw)
-    if v.lower().startswith("http"):
-        return v
+    # several links may share a cell (one per line) — use the first; bare domains
+    # ('dvonhendryx.bandcamp.com') get a scheme
+    for line in (raw or "").split("\n"):
+        v = clean(line)
+        if v.lower().startswith("http"):
+            return v
+        if re.match(r"^(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+(/\S*)?$", v, re.I):
+            return "https://" + v
     return ""
 
 
@@ -82,9 +107,10 @@ def build_entries(path, m):
             "platform": platform,
             "handle": clean(cell(row, m.get("handle"))),
             "notes": clean(cell(row, m.get("notes"))),
-            "type": clean(cell(row, m.get("type"))) or m.get("type_const", "Other"),
+            "type": clean(cell(row, m.get("type"))) or (infer_type(platform) if m.get("type_infer")
+                                                         else m.get("type_const", "Other")),
             "status": norm_status(cell(row, m.get("status"))),
-            "link": norm_link(cell(row, m.get("link"))),
+            "link": norm_link(cell(row, m.get("link"))) or norm_link(cell(row, m.get("link_fallback"))),
         }
         # Fold "years active" into notes if present and not already there.
         years = clean(cell(row, m.get("years"))) if m.get("years") is not None else ""

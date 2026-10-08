@@ -48,27 +48,28 @@ ARTISTS = {
 }
 
 # 2026-10 batch. folder -> (slug, name, accent, letter, label, sheet id, creator)
+# Creators are the credits listed for each sheet in TrackerHub's directory.
 ARTISTS_2026_10 = {
     "clipse":          ("clipsegold",     "Clipse",          "#a3a3a3", "C", "Clipse",
                         "1XUtY5ris3U5R9sRBTOQdTxTNhvCbmjNAQbmLHGHTMGQ", "iaon"),
     "dax":             ("daxgold",        "Dax",             "#dc2626", "D", "Dax",
-                        "1t1IuCgKrx3QjCt9CLrcu3FqA32qGAF8TeQjhCQHO4AY", "iaon"),
+                        "1t1IuCgKrx3QjCt9CLrcu3FqA32qGAF8TeQjhCQHO4AY", "raglord"),
     "death grips":     ("deathgripsgold", "Death Grips",     "#18181b", "D", "Death Grips",
-                        "1Eh-9UyWUtyEpi_ELEhq5pD41ivFJHuQcvz2wFR2ml9g", "iaon"),
+                        "1Eh-9UyWUtyEpi_ELEhq5pD41ivFJHuQcvz2wFR2ml9g", "UnLuckyJanek"),
     "de la soul":      ("delasoulgold",   "De La Soul",      "#facc15", "D", "De La Soul",
-                        "19KA4hq1j8sVhTEt4gqWWn6Potw9N_IGGJ2bwgZeVYHI", "iaon"),
+                        "19KA4hq1j8sVhTEt4gqWWn6Potw9N_IGGJ2bwgZeVYHI", "The Invisible Man II & Mel0njuice"),
     "dj premier":      ("premiergold",    "DJ Premier",      "#b45309", "P", "DJ Premier",
-                        "1RaAzCb3IAg0FZas9dsAMqU785xw1sDYIvx3-SVFEVsY", "iaon"),
+                        "1RaAzCb3IAg0FZas9dsAMqU785xw1sDYIvx3-SVFEVsY", "mel0njuice"),
     "dmx":             ("dmxgold",        "DMX",             "#7f1d1d", "D", "DMX",
-                        "101y0kCIzwGoT0YmGHIchehUpO7tzAdjXSZZVRrEobOg", "iaon"),
+                        "101y0kCIzwGoT0YmGHIchehUpO7tzAdjXSZZVRrEobOg", "Gypsy, TEATI Team, Bruh, HighSpeedChase/Shadyfan, SKITTLES, B4CON"),
     "dua lipa":        ("dualipagold",    "Dua Lipa",        "#db2777", "D", "Dua Lipa",
-                        "1gi_foSEziQ48hTlq8hBqIwZCHz6hma1rYXr8qykBq6c", "iaon"),
+                        "1gi_foSEziQ48hTlq8hBqIwZCHz6hma1rYXr8qykBq6c", "raymeta12 & Dula Peep"),
     "earl sweatshirt": ("earlgold",       "Earl Sweatshirt", "#65a30d", "E", "Earl Sweatshirt",
-                        "1EKEnvdiwSudiPJSePPzfCXIQ_W-AYeAIY6_r-a12bdM", "iaon"),
+                        "1EKEnvdiwSudiPJSePPzfCXIQ_W-AYeAIY6_r-a12bdM", "/u/Puzzlehead_Bit7904, gabu#4801, @plaguedoctresss"),
     "oliver tree":     ("olivertreegold", "Oliver Tree",     "#0284c7", "O", "Oliver Tree",
-                        "1rhvQ9F8VRAj-jOyTLsvhORsVCyvcMRXJuGoDR1-z4jY", "iaon"),
+                        "1rhvQ9F8VRAj-jOyTLsvhORsVCyvcMRXJuGoDR1-z4jY", "Cowtools, TyreimBy, Aurien"),
     "favio foreign":   ("fiviogold",      "Fivio Foreign",   "#4f46e5", "F", "Fivio Foreign",
-                        "1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74", "iaon"),
+                        "1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74", "Shadow, Rev, Grace"),
 }
 
 # Per-tracker era-name fixes the generic reconciliation can't infer.
@@ -114,11 +115,11 @@ ERA_FIXES.update({
 # "x - Unreleased+<n> <Member>.csv" files are merged into the group's eras.
 ARTISTS_2026_10B = {
     "jpegmafia":    ("jpegmafiagold",    "JPEGMAFIA",     "#e11d48", "J", "JPEGMAFIA",
-                     "1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI", ""),
+                     "1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI", "fmlu, yzygap, m3lt, ColbyJackChedda, kebabmf, Miser"),
     "migos":        ("migosgold",        "Migos",         "#ca8a04", "M", "Migos",
                      "1MgVRlGs5DL7keB_I6YPEj4FYLOHb8DVJbxN5-h6yxOE", ""),
     "nba youngboy": ("nbayoungboygold",  "NBA YoungBoy",  "#16a34a", "Y", "NBA YoungBoy",
-                     "1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg", ""),
+                     "1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg", "@manwithaplan2"),
 }
 
 BATCHES = {
@@ -512,9 +513,12 @@ def build_unreleased(rows, fixes=None):
                 continue
             links = "\n".join(x for x in (cell(r, i) for i in lcols) if x) if len(lcols) > 1 \
                 else cell(r, ci["link"])
-            out.append([era, name, cell(r, ci["notes"]), cell(r, ci["tlen"]),
-                        cell(r, ci["file"]), cell(r, ci["leak"]),
-                        cell(r, ci["avail"]), cell(r, ci["qual"]), links])
+            song = [era, name, cell(r, ci["notes"]), cell(r, ci["tlen"]),
+                    cell(r, ci["file"]), cell(r, ci["leak"]),
+                    cell(r, ci["avail"]), cell(r, ci["qual"]), links]
+            if not any(song[2:]):
+                continue  # sub-section label ('2018 Sessions'), not a song
+            out.append(song)
     fixes = fixes or {}
     for r in out:
         if "\n" in r[0]:
@@ -524,39 +528,6 @@ def build_unreleased(rows, fixes=None):
         elif r[0] in fixes.get("songs", {}):
             r[0] = fixes["songs"][r[0]]
     return reconcile_eras(out, name_rows, fixes.get("prefer_song_era", False))
-
-
-def merge_member_tabs(blocks):
-    """Merge per-member unreleased outputs into one era list.
-
-    blocks: [(member or None, rows)]. Eras shared between tabs (Migos' "Culture"
-    appears in the group, Quavo, Offset and Takeoff tabs) become one era — a.ts
-    resets an era at every header row, so each era may only have one. A member's
-    own eras are slotted in after the era that precedes them in that member's
-    tab. Member-tab songs get a '(Member)' credit line.
-    """
-    order, heads, songs = [], {}, {}
-    for member, rows in blocks:
-        prev = None
-        for r in rows:
-            r = list(r)
-            if "\n" in r[0]:
-                era = clean(r[1].split("\n")[0])
-                heads.setdefault(era, r)
-            else:
-                era = r[0]
-                if member:
-                    r[1] = r[1] + "\n(" + member + ")"
-                songs.setdefault(era, []).append(r)
-            if era not in order:
-                order.insert(order.index(prev) + 1 if prev in order else len(order), era)
-            prev = era
-    out = []
-    for era in order:
-        if era in heads:
-            out.append(heads[era])
-        out.extend(songs.get(era, []))
-    return out
 
 
 def merge_recent_tabs(blocks):
@@ -788,10 +759,16 @@ def ts_str(s):
 
 
 def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", creator="", covers=None,
-               era_meta=None):
+               era_meta=None, members=None):
     era_meta = era_meta or {}
+    members = members or []
     rd = ",\n".join(f"    {ts_str(e)}: '{era_meta.get(e, ('??/??/????', ''))[0]}'" for e in eras)
-    descs = [(e, era_meta[e][1]) for e in eras if e in era_meta and era_meta[e][1]]
+    # eras only in member tabs: dated via MEMBER_RELEASE_DATES (ALBUM_RELEASE_DATES
+    # would seed them into the main grid as empty eras); covers/descriptions shared
+    member_only = [e for _, _, mer in members for e in mer if e not in eras]
+    member_only = list(dict.fromkeys(member_only))
+    all_eras = eras + member_only
+    descs = [(e, era_meta[e][1]) for e in all_eras if e in era_meta and era_meta[e][1]]
     desc_s = ("\n" + "".join(f"    {ts_str(e)}: {ts_str(d)},\n" for e, d in descs) + "  ") if descs else ""
     order = ",\n".join(f"    {ts_str(e)}" for e in eras)
     extra = []
@@ -799,12 +776,20 @@ def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", crea
         extra.append("  hasAlbumCopiesTab: true,")
     if flags.get("groupbuys"):
         extra.append("  hasGroupbuysTab: true,")
+    if members:
+        extra.append(f"  musicLabel: {ts_str(name)},")
+        extra.append("  memberTabs: [\n" + "".join(
+            f"    {{ key: {ts_str(k)}, label: {ts_str(lbl)} }},\n" for k, lbl, _ in members) + "  ],")
+        mdates = [(e, era_meta[e][0]) for e in member_only if e in era_meta and era_meta[e][0] != "??/??/????"]
+        if mdates:
+            extra.append("  MEMBER_RELEASE_DATES: {\n" + "".join(
+                f"    {ts_str(e)}: '{d}',\n" for e, d in mdates) + "  },")
     extra_s = ("\n" + "\n".join(extra)) if extra else ""
     var = slug + "Config"
     creator_s = f"\n  sheetCreator: {ts_str(creator)}," if creator else ""
     if slug in HIDDEN_TRACKERS:
         creator_s += "\n  // Private — off the landing grid, feed, pickers and search; reachable by URL only.\n  hidden: true,"
-    covers = {e: p for e, p in (covers or {}).items() if e in eras}
+    covers = {e: p for e, p in (covers or {}).items() if e in all_eras}
     images = ("\n" + "".join(f"    {ts_str(e)}: {ts_str(p)},\n" for e, p in covers.items()) + "  ") if covers else ""
     return f"""import type {{ ArtistConfig }} from './types';
 
@@ -904,17 +889,28 @@ def process(folder, meta, src_root=SRC_ROOT):
 
     os.makedirs(data_dir, exist_ok=True)
     unrel = build_unreleased(read_rows(tabs["unreleased"]), ERA_FIXES.get(slug))
-    if member_tabs.get("unreleased"):
-        unrel = merge_member_tabs([(None, unrel)] + [
-            (member, build_unreleased(read_rows(path), ERA_FIXES.get(slug)))
-            for _, member, path in sorted(member_tabs["unreleased"])])
     era_meta = {}  # era -> (release date, description) from its header row
-    for r in unrel:
-        if "\n" in r[0]:
-            era = clean(r[1].split("\n")[0])
-            era_meta.setdefault(era, (era_release_date(era, r[2]), r[9] if len(r) > 9 else ""))
+
+    def collect_meta(rows):
+        for r in rows:
+            if "\n" in r[0]:
+                era = clean(r[1].split("\n")[0])
+                era_meta.setdefault(era, (era_release_date(era, r[2]), r[9] if len(r) > 9 else ""))
+
+    collect_meta(unrel)
     unrel = [r[:9] for r in unrel]
     write_csv(data_dir, "unreleased.csv", UNREL_HEADER, unrel)
+
+    # group trackers: each member's Unreleased tab becomes its own tracker tab
+    # (member-<key>.csv, served by /api/<slug>/individual?member=<key>)
+    members = []  # (key, label, era names)
+    for _, member, path in sorted(member_tabs.get("unreleased", [])):
+        key = re.sub(r"[^a-z0-9]+", "-", member.lower()).strip("-")
+        mrows = build_unreleased(read_rows(path), ERA_FIXES.get(slug))
+        collect_meta(mrows)
+        mrows = [r[:9] for r in mrows]
+        write_csv(data_dir, f"member-{key}.csv", UNREL_HEADER, mrows)
+        members.append((key, member, derive_eras(mrows)))
 
     if "released" in tabs:
         rows = build_released(read_rows(tabs["released"]))
@@ -964,7 +960,8 @@ def process(folder, meta, src_root=SRC_ROOT):
     # era covers pulled from the sheet's xlsx by scripts/extract-era-covers.py
     covers_path = os.path.join(dst_dir, "eras", "covers.json")
     covers = json.load(open(covers_path, encoding="utf-8")) if os.path.exists(covers_path) else {}
-    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator, covers, era_meta)
+    cfg = gen_config(slug, name, accent, letter, label, eras, flags, sheet_id, creator, covers, era_meta,
+                     members)
     with open(os.path.join(ROOT, "src", "artists", f"{slug}.ts"), "w", encoding="utf-8") as f:
         f.write(cfg)
     print(f"    src/artists/{slug}.ts: {len(eras)} eras")

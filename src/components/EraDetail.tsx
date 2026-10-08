@@ -331,7 +331,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             title: buildTitleTag(song.name, settings.tagFeaturedArtists),
             artist: buildArtistTag(song.name, songEraName, settings.tagFeaturedArtists),
             album: songEraName,
-            year: ALBUM_RELEASE_DATES[songEraName]?.split('/').pop(),
+            year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
             artworkUrl: undefined,
           };
           try {
@@ -430,7 +430,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             title: buildTitleTag(song.name, settings.tagFeaturedArtists),
             artist: buildArtistTag(song.name, songEraName, settings.tagFeaturedArtists),
             album: songEraName,
-            year: ALBUM_RELEASE_DATES[songEraName]?.split('/').pop(),
+            year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
             artworkUrl: undefined,
           };
           try {
@@ -688,7 +688,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             <div className="flex items-center gap-4 mb-3 flex-wrap">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap">
                 <div className="truncate">{formatTextWithTags(era.name)}</div>
-                {ALBUM_RELEASE_DATES[era.name] && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name]}</div>}
+                {(ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]) && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]}</div>}
               </h1>
 
               <div className="flex items-center gap-2">

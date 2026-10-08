@@ -11,6 +11,7 @@ export const nbayoungboygoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/nbayoungboygold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'nbayoungboygold_',
+  sheetCreator: '@manwithaplan2',
 
   HARDCODED_SHEET_ID: '1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg',
   HARDCODED_SHEET_GID: '',

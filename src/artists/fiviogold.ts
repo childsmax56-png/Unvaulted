@@ -11,7 +11,7 @@ export const fiviogoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/fiviogold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'fiviogold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'Shadow, Rev, Grace',
 
   HARDCODED_SHEET_ID: '1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74',
   HARDCODED_SHEET_GID: '',

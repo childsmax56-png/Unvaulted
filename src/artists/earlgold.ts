@@ -11,7 +11,7 @@ export const earlgoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/earlgold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'earlgold_',
-  sheetCreator: 'iaon',
+  sheetCreator: '/u/Puzzlehead_Bit7904, gabu#4801, @plaguedoctresss',
 
   HARDCODED_SHEET_ID: '1EKEnvdiwSudiPJSePPzfCXIQ_W-AYeAIY6_r-a12bdM',
   HARDCODED_SHEET_GID: '',

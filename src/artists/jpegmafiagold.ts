@@ -11,6 +11,7 @@ export const jpegmafiagoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/jpegmafiagold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'jpegmafiagold_',
+  sheetCreator: 'fmlu, yzygap, m3lt, ColbyJackChedda, kebabmf, Miser',
 
   HARDCODED_SHEET_ID: '1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI',
   HARDCODED_SHEET_GID: '',

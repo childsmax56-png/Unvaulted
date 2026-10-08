@@ -11,7 +11,7 @@ export const dualipagoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/dualipagold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'dualipagold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'raymeta12 & Dula Peep',
 
   HARDCODED_SHEET_ID: '1gi_foSEziQ48hTlq8hBqIwZCHz6hma1rYXr8qykBq6c',
   HARDCODED_SHEET_GID: '',

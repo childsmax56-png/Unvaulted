@@ -12,7 +12,7 @@ import { activeConfig } from '../artists/activeConfig';
 import { GlobalSearchPanel, GlobalSearchResult } from './GlobalSearchPanel';
 import { hasSocials } from '../socialsData';
 
-export type Category = 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'yedits' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists' | 'socials';
+export type Category = `member-${string}` | 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'yedits' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists' | 'socials';
 
 const DATA_DRIVEN_TABS = new Set(['art', 'stems', 'misc', 'fakes', 'albumcopies', 'groupbuys', 'videos', 'tracklists', 'subalbums', 'individualtracklists']);
 
@@ -125,7 +125,10 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
     if (key === 'socials' && !hasSocials(activeConfig.slug)) return false;
     if (DATA_DRIVEN_TABS.has(key) && fetchedTabs?.has(key) && !tabsWithData?.has(key)) return false;
     return true;
-  }).map(cat => cat.key === 'misc' && activeConfig.miscLabel
+  }).flatMap(cat => cat.key === 'music' && (activeConfig.musicLabel || activeConfig.memberTabs?.length)
+    ? [{ ...cat, label: activeConfig.musicLabel ?? cat.label },
+       ...(activeConfig.memberTabs ?? []).map(mt => ({ key: `member-${mt.key}` as Category, label: mt.label }))]
+    : [cat]).map(cat => cat.key === 'misc' && activeConfig.miscLabel
     ? { ...cat, label: activeConfig.miscLabel }
     : cat.key === 'individual' && activeConfig.individualProjectsLabel
     ? { ...cat, label: activeConfig.individualProjectsLabel }

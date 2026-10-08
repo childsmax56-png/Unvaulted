@@ -11,7 +11,7 @@ export const delasoulgoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/delasoulgold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'delasoulgold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'The Invisible Man II & Mel0njuice',
 
   HARDCODED_SHEET_ID: '19KA4hq1j8sVhTEt4gqWWn6Potw9N_IGGJ2bwgZeVYHI',
   HARDCODED_SHEET_GID: '',

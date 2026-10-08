@@ -11,7 +11,7 @@ export const dmxgoldConfig: ArtistConfig = {
   SITE_URL: 'https://unvaulted.cc/dmxgold/',
   OG_IMAGE_URL: '',
   STORAGE_PREFIX: 'dmxgold_',
-  sheetCreator: 'iaon',
+  sheetCreator: 'Gypsy, TEATI Team, Bruh, HighSpeedChase/Shadyfan, SKITTLES, B4CON',
 
   HARDCODED_SHEET_ID: '101y0kCIzwGoT0YmGHIchehUpO7tzAdjXSZZVRrEobOg',
   HARDCODED_SHEET_GID: '',
