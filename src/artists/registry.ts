@@ -78,6 +78,7 @@ import { migosgoldConfig } from './migosgold';
 import { nbayoungboygoldConfig } from './nbayoungboygold';
 import { vincegoldConfig } from './vincegold';
 import { xzibitgoldConfig } from './xzibitgold';
+import { thundercatgoldConfig } from './thundercatgold';
 
 export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   // Featured + pinned lineup drives the landing page order (see LandingPage.tsx)
@@ -159,6 +160,7 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   nbayoungboygold: nbayoungboygoldConfig, // NBA YoungBoy
   vincegold:      vincegoldConfig,      // Vince Staples
   xzibitgold:     xzibitgoldConfig,     // Xzibit
+  thundercatgold: thundercatgoldConfig, // Thundercat
   // Easter egg — hidden from the landing grid, reached by searching "d4vd".
   d4vdgold: d4vdgoldConfig,
 };

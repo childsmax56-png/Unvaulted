@@ -131,11 +131,18 @@ ARTISTS_2026_10C = {
                       "1EVBoDCk8uZ5ft1wRpTsqJlHxfdYDnFVbbD5bRMR6qpw", "GrimR3xx, TEATI"),
 }
 
+# 2026-10d batch — the sheet only has an Unreleased tab.
+ARTISTS_2026_10D = {
+    "thundercat": ("thundercatgold", "Thundercat", "#c2410c", "T", "Thundercat",
+                   "1KN1eE89gaCsf8Lh_mnjxjfrz7HNQd7V833uxMPibZkU", "@madvilliany"),
+}
+
 BATCHES = {
     "bigupdate": (SRC_ROOT, ARTISTS),
     "2026-10": (os.path.expanduser("~/Downloads/new trackers 2026-10"), ARTISTS_2026_10),
     "2026-10b": (os.path.expanduser("~/Downloads/new trackers 2026-10b"), ARTISTS_2026_10B),
     "2026-10c": (os.path.expanduser("~/Downloads/new trackers 2026-10c"), ARTISTS_2026_10C),
+    "2026-10d": (os.path.expanduser("~/Downloads/new trackers 2026-10d"), ARTISTS_2026_10D),
 }
 
 RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
@@ -403,6 +410,13 @@ def strip_trailing_emoji(name):
     first, nl, rest = name.partition("\n")
     first = re.sub(r"[\s/\u2600-\u27bf\u2b00-\u2bff\U0001f300-\U0001faff\ufe0f]+$", "", first)
     return first + nl + rest
+
+
+def prose_release_date(text):
+    """'...It was released in July 2013 under...' -> 07/??/2013 (else ??/??/????)."""
+    m = re.search(r"\breleased\s+(?:on\s+|in\s+)?([A-Z][a-z]+\.?\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}"
+                  r"|[A-Z][a-z]+\.?,?\s+\d{4}|\d{4})\b", text or "")
+    return (to_release_date(m.group(1)) if m else None) or "??/??/????"
 
 
 def era_key(s):
@@ -787,6 +801,9 @@ def gen_config(slug, name, accent, letter, label, eras, flags, sheet_id="", crea
         extra.append("  hasAlbumCopiesTab: true,")
     if flags.get("groupbuys"):
         extra.append("  hasGroupbuysTab: true,")
+    if flags.get("noreleased"):
+        # Released isn't data-driven in the Navbar — without this it shows empty
+        extra.append("  hasReleasedTab: false, // the sheet has no Released tab")
     if members:
         extra.append(f"  musicLabel: {ts_str(name)},")
         extra.append("  memberTabs: [\n" + "".join(
@@ -906,7 +923,16 @@ def process(folder, meta, src_root=SRC_ROOT):
         for r in rows:
             if "\n" in r[0]:
                 era = clean(r[1].split("\n")[0])
-                era_meta.setdefault(era, (era_release_date(era, r[2]), r[9] if len(r) > 9 else ""))
+                notes, desc = r[2], (r[9] if len(r) > 9 else "")
+                date = era_release_date(era, notes)
+                # some sheets (Thundercat) put the era's prose description in Notes
+                # instead of a "(date) (event)" timeline
+                if not desc and len(notes) >= 40 \
+                        and not re.search(r"(^|\n)\s*\(|\(\s*[\dXx?]{1,2}/", notes):
+                    desc = notes
+                    if date == "??/??/????":
+                        date = prose_release_date(notes)
+                era_meta.setdefault(era, (date, desc))
 
     collect_meta(unrel)
     unrel = [r[:9] for r in unrel]
@@ -939,7 +965,7 @@ def process(folder, meta, src_root=SRC_ROOT):
         write_csv(data_dir, "fakes.csv",
                   ["Era", "Name", "Notes", "Made By", "Type", "Currently Available", "Link(s)"], rows)
 
-    flags = {}
+    flags = {"noreleased": "released" not in tabs}
     if "album-copies" in tabs:
         rows = build_passthrough(read_rows(tabs["album-copies"]))
         write_csv(data_dir, "album-copies.csv", rows[0], rows[1:])

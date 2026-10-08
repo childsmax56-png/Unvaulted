@@ -170,6 +170,14 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
       'music-videos': t('1849981206', 'passthrough', 'Unreleased Music Videos/Vlogs/Interviews'),
     },
   },
+  thundercatgold: {
+    sheetId: '1KN1eE89gaCsf8Lh_mnjxjfrz7HNQd7V833uxMPibZkU',
+    tabs: {
+      unreleased: t('321437127', 'unreleased'),
+      // the sheet only has an Unreleased tab — Recent is derived from it
+      recent: t('321437127', 'recent-from-unreleased'),
+    },
+  },
   vincegold: {
     sheetId: '1_NjFkevi7tbhqAGHSfgaEsKrzRgvPePUeCLv0GG2GgU',
     tabs: {
