@@ -29,6 +29,8 @@ import { ProducersPage } from './ProducersPage.tsx';
 import { TrackerArchivePage } from './TrackerArchivePage.tsx';
 import { ChangesPage } from './ChangesPage.tsx';
 import { AlertsPage } from './AlertsPage.tsx';
+import { RoomsPage } from './RoomsPage.tsx';
+import { RoomPage } from './RoomPage.tsx';
 import { AdminPage } from './AdminPage.tsx';
 import { ProfilePage } from './ProfilePage.tsx';
 import { GlobalPlaylistProvider } from './GlobalPlaylistContext.tsx';
@@ -39,7 +41,7 @@ import { GlobalMiniPlayer } from './player/GlobalMiniPlayer.tsx';
 const RESERVED_TOP_SEGMENTS = new Set([
   'my-tracker', 'game', 'guess', 'yeditsgold', 'listening', 'tierlist',
   'terms', 'privacy', 'download', 'create-tracker', 'community', 'playlists',
-  'foryou', 'admin', 'u', 'producers', 'archive', 'changes', 'alerts',
+  'foryou', 'admin', 'u', 'producers', 'archive', 'changes', 'alerts', 'rooms',
 ]);
 
 // Renders the persistent mini player on any route where the per-artist <App>
@@ -154,6 +156,8 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/changes" element={<ChangesPage />} />
           <Route path="/changes/:slug" element={<ChangesPage />} />
           <Route path="/alerts" element={<AlertsPage />} />
+          <Route path="/rooms" element={<RoomsPage />} />
+          <Route path="/rooms/:code" element={<RoomPage />} />
           <Route path="/create-tracker" element={<SettingsProvider><CreateTrackerPage /></SettingsProvider>} />
           <Route path="/create-tracker/:id" element={<SettingsProvider><CreateTrackerPage /></SettingsProvider>} />
           <Route path="/:artist/*" element={<ArtistRoute />} />

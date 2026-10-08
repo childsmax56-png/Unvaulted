@@ -1,0 +1,26 @@
+# Listening rooms (unvaulted.cc/api/rooms/*) — Durable Object per room.
+# Pages Functions can't host Durable Objects, so this is its own Worker; the
+# route below takes precedence over the Pages app for /api/rooms/*.
+#
+# Deploy:  cd workers/rooms && npx wrangler deploy
+name = "unvaulted-rooms"
+main = "index.ts"
+compatibility_date = "2025-01-01"
+
+routes = [
+  { pattern = "unvaulted.cc/api/rooms*", zone_name = "unvaulted.cc" },
+]
+
+# Same accounts database as the Pages app (sessions/users + the live-room list).
+[[d1_databases]]
+binding = "DB"
+database_name = "vaultgold-accounts"
+database_id = "75b65b4b-664e-4375-97d0-e7e7a611ea95"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "ListeningRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ListeningRoom"]

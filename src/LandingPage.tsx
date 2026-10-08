@@ -1614,6 +1614,15 @@ export function LandingPage() {
           watermark="TL"
         />
         <BigLinkCard
+          href="/rooms"
+          accent="#22C55E"
+          badge="Live"
+          titleMain="LISTENING"
+          titleAccent="ROOMS"
+          subtitle="Listen together with a shared queue & chat"
+          watermark="LR"
+        />
+        <BigLinkCard
           href="/changes"
           accent="#F5C518"
           badge="New"

@@ -215,6 +215,31 @@ export function registerHost(handlers: {
   };
 }
 
+// --- Transport override (listening rooms) -----------------------------------
+// While the user is in a listening room (src/rooms/*), the room owns the queue:
+// next/prev/ended and play/pause (incl. media-session + mini-player buttons) are
+// routed to it instead of the local playlist.
+export interface TransportOverride {
+  onEnded: () => void;
+  onNext: () => void;
+  onPrev: () => void;
+  onPlayPause: (play: boolean) => void;
+}
+let transportOverride: TransportOverride | null = null;
+
+export function setTransportOverride(o: TransportOverride): () => void {
+  transportOverride = o;
+  return () => { if (transportOverride === o) transportOverride = null; };
+}
+
+// Raw element control for the room sync loop (bypasses the override).
+export function rawPlay() {
+  const a = getAudioEl();
+  if (!a) return;
+  a.volume = state.volume;
+  playSafe(a);
+}
+
 // --- Stream resolution (mirrors App's resolveStreamUrl) --------------------
 
 export async function resolveStreamUrl(rawUrl: string): Promise<string> {
@@ -262,6 +287,7 @@ export function isDirectlyPlayableAudio(rawUrl: string): boolean {
 export function togglePlay() {
   const a = getAudioEl();
   if (!a) return;
+  if (transportOverride) { transportOverride.onPlayPause(a.paused); return; }
   if (a.paused) {
     a.volume = state.volume;
     playSafe(a);
@@ -273,11 +299,13 @@ export function togglePlay() {
 export function play() {
   const a = getAudioEl();
   if (!a) return;
+  if (transportOverride) { transportOverride.onPlayPause(true); return; }
   a.volume = state.volume;
   playSafe(a);
 }
 
 export function pause() {
+  if (transportOverride) { transportOverride.onPlayPause(false); return; }
   getAudioEl()?.pause();
 }
 
@@ -476,6 +504,7 @@ function advanceAudioOnly(direction: 1 | -1) {
 }
 
 export function playNext() {
+  if (transportOverride) { transportOverride.onNext(); return; }
   if (hostNext) {
     hostNext();
     return;
@@ -484,6 +513,7 @@ export function playNext() {
 }
 
 export function playPrev() {
+  if (transportOverride) { transportOverride.onPrev(); return; }
   if (hostPrev) {
     hostPrev();
     return;
@@ -522,6 +552,7 @@ function advancePrefetchedSync(): boolean {
 }
 
 function handleEnded() {
+  if (transportOverride) { transportOverride.onEnded(); return; }
   const { loopMode, hasLoopedOnce } = state;
   const a = getAudioEl();
 
