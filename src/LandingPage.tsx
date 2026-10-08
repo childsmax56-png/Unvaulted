@@ -936,6 +936,8 @@ const SHEET_URLS: Record<string, string> = {
   jpegmafiagold:  'https://docs.google.com/spreadsheets/d/1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI/edit?gid=2012820373#gid=2012820373',
   migosgold:      'https://docs.google.com/spreadsheets/d/1MgVRlGs5DL7keB_I6YPEj4FYLOHb8DVJbxN5-h6yxOE/edit?gid=335484962#gid=335484962',
   nbayoungboygold: 'https://docs.google.com/spreadsheets/d/1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg/edit?gid=0#gid=0',
+  vincegold:      'https://docs.google.com/spreadsheets/d/1_NjFkevi7tbhqAGHSfgaEsKrzRgvPePUeCLv0GG2GgU/edit?gid=306146520#gid=306146520',
+  xzibitgold:     'https://docs.google.com/spreadsheets/d/1EVBoDCk8uZ5ft1wRpTsqJlHxfdYDnFVbbD5bRMR6qpw/edit?gid=1520634709#gid=1520634709',
   aaliyahgold:    'https://docs.google.com/spreadsheets/d/1QJR4Ku4Si5kLUL1P_vi9hCkkjDQvDWqafWiYc1v_Z8E/edit',
   antclemonsgold: 'https://docs.google.com/spreadsheets/d/11Ta0gixhRv9uUq-_O9nID_rjUf3oembw57f2sblMP3k/edit?gid=1295931150#gid=1295931150',
   badbunnygold:   'https://docs.google.com/spreadsheets/d/1O5RFNuOF4-K7xWCYMRQXy3Y_WkYOWu6o9zClsw8lPi4/edit?gid=1545615123#gid=1545615123',

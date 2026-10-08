@@ -170,6 +170,25 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
       'music-videos': t('1849981206', 'passthrough', 'Unreleased Music Videos/Vlogs/Interviews'),
     },
   },
+  vincegold: {
+    sheetId: '1_NjFkevi7tbhqAGHSfgaEsKrzRgvPePUeCLv0GG2GgU',
+    tabs: {
+      unreleased: t('306146520', 'unreleased'),
+      // no Recent tab on the sheet — derive it from Unreleased
+      recent: t('306146520', 'recent-from-unreleased'),
+      released: t('776106700', 'released'),
+      stems: t('441477856', 'stems'),
+    },
+  },
+  xzibitgold: {
+    sheetId: '1EVBoDCk8uZ5ft1wRpTsqJlHxfdYDnFVbbD5bRMR6qpw',
+    tabs: {
+      unreleased: t('1520634709', 'unreleased'),
+      released: t('197122594', 'released'),
+      recent: t('2048130339', 'unreleased'),
+      stems: t('1630804638', 'stems'),
+    },
+  },
   fiviogold: {
     sheetId: '1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74',
     tabs: {
@@ -481,7 +500,7 @@ const RELEASED_VALID = new Set(['Feature', 'Production', 'Single', 'Album Track'
 const RELEASED_TYPE_ALIASES: Record<string, string> = {
   Track: 'Album Track', Singles: 'Single', Features: 'Feature', 'Album Tracks': 'Album Track',
   Mixtape: 'Mixtape Track', 'Mixtape Tracks': 'Mixtape Track', 'EP Tracks': 'EP Track',
-  Productions: 'Production', Album: 'Album Track', EP: 'EP Track',
+  Productions: 'Production', Album: 'Album Track', EP: 'EP Track', Song: 'Album Track', Songs: 'Album Track',
 };
 
 // Sheet Type -> a released.ts type. Compound labels keep their first part

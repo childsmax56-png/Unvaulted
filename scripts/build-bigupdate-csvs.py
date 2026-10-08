@@ -122,10 +122,20 @@ ARTISTS_2026_10B = {
                      "1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg", "@manwithaplan2"),
 }
 
+# 2026-10c batch.
+ARTISTS_2026_10C = {
+    "vince staples": ("vincegold",  "Vince Staples", "#0f766e", "V", "Vince Staples",
+                      "1_NjFkevi7tbhqAGHSfgaEsKrzRgvPePUeCLv0GG2GgU",
+                      "BigGuy87, Digital Hendryk, dylzzz, KILLRITE, maliceeee, owl"),
+    "xzibit":        ("xzibitgold", "Xzibit",        "#9a3412", "X", "Xzibit",
+                      "1EVBoDCk8uZ5ft1wRpTsqJlHxfdYDnFVbbD5bRMR6qpw", "GrimR3xx, TEATI"),
+}
+
 BATCHES = {
     "bigupdate": (SRC_ROOT, ARTISTS),
     "2026-10": (os.path.expanduser("~/Downloads/new trackers 2026-10"), ARTISTS_2026_10),
     "2026-10b": (os.path.expanduser("~/Downloads/new trackers 2026-10b"), ARTISTS_2026_10B),
+    "2026-10c": (os.path.expanduser("~/Downloads/new trackers 2026-10c"), ARTISTS_2026_10C),
 }
 
 RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
@@ -133,7 +143,8 @@ RELEASED_VALID = {"Feature", "Production", "Single", "Album Track",
 RELEASED_TYPE_ALIASES = {"Track": "Album Track", "Singles": "Single", "Features": "Feature",
                          "Album Tracks": "Album Track", "Mixtape": "Mixtape Track",
                          "Mixtape Tracks": "Mixtape Track", "EP Tracks": "EP Track",
-                         "Productions": "Production", "Album": "Album Track", "EP": "EP Track"}
+                         "Productions": "Production", "Album": "Album Track", "EP": "EP Track",
+                         "Song": "Album Track", "Songs": "Album Track"}
 
 
 def released_type(t):
