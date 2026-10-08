@@ -1613,6 +1613,15 @@ export function LandingPage() {
           watermark="TL"
         />
         <BigLinkCard
+          href="/producers"
+          accent="#F59E0B"
+          badge="New"
+          titleMain="PRODUCER"
+          titleAccent="PAGES"
+          subtitle="Every beat a producer made, across every artist"
+          watermark="PR"
+        />
+        <BigLinkCard
           href="/foryou"
           accent="#7C5CFF"
           badge="New"

@@ -242,7 +242,7 @@ export async function resolveStreamUrl(rawUrl: string): Promise<string> {
   return rawUrl;
 }
 
-function isDirectlyPlayableAudio(rawUrl: string): boolean {
+export function isDirectlyPlayableAudio(rawUrl: string): boolean {
   if (isChallengeGatedAudioHost(rawUrl)) return false;
   return (
     rawUrl.includes('pillows.su/f/') ||
