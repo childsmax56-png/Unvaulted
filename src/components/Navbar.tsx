@@ -12,7 +12,7 @@ import { activeConfig } from '../artists/activeConfig';
 import { GlobalSearchPanel, GlobalSearchResult } from './GlobalSearchPanel';
 import { hasSocials } from '../socialsData';
 
-export type Category = `member-${string}` | 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'yedits' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists' | 'socials';
+export type Category = `member-${string}` | 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists' | 'socials';
 
 const DATA_DRIVEN_TABS = new Set(['art', 'stems', 'misc', 'fakes', 'albumcopies', 'groupbuys', 'videos', 'tracklists', 'subalbums', 'individualtracklists']);
 
@@ -49,7 +49,6 @@ const NAV_CATEGORIES: { key: Category; label: string }[] = [
   { key: 'recent', label: 'Recent' },
   { key: 'recent-production', label: 'Recent Production' },
   { key: 'tracklists', label: 'Tracklists' },
-  { key: 'yedits', label: 'Yedit Affiliates' },
   { key: 'comps', label: 'Comps' },
   { key: 'videos', label: 'Videos' },
   { key: 'subalbums', label: 'Sub Albums' },
@@ -105,7 +104,6 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
 
   const visibleCategories = baseCategories.filter(({ key }) => {
     if (key === 'stems' && activeConfig.hasStemsTab === false) return false;
-    if (key === 'yedits' && !activeConfig.hasYeditsTab) return false;
     if (key === 'production' && !activeConfig.hasProductionTab) return false;
     if (key === 'concerts' && !activeConfig.hasConcertsTab) return false;
     if (key === 'recent' && activeConfig.hasRecentTab === false) return false;
