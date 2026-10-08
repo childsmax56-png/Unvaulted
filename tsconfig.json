@@ -24,6 +24,7 @@
     "noEmit": true
   },
   "exclude": [
-    "pd-proxy"
+    "pd-proxy",
+    "workers"
   ]
 }

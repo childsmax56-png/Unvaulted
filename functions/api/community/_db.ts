@@ -125,6 +125,7 @@ export const RESERVED_SLUGS = new Set([
   'tierlist', 'tier-list', 'terms', 'privacy', 'download', 'yeditsgold',
   'yedits', 'settings', 'login', 'register', 'admin', 'auth', 'logos',
   'data', 'assets', 'public', 'feed', 'search', 'about', 'help', 'archive',
+  'changes', 'alerts', 'producers', 'playlists', 'foryou', 'guess', 'u',
 ]);
 
 // URL-safe slug: lowercase letters, digits and single hyphens, 3–40 chars.

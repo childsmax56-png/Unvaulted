@@ -18,6 +18,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { FollowButton } from './FollowButton';
 import { ReportLinkButton } from './ReportLinkButton';
 import { useDeadLinks, isDeadLink } from '../linkStatus';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
@@ -718,6 +719,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                     variant="pill"
                   />
                 )}
+                {era.name !== 'Favorites' && era.name !== 'Recent Leaks' && !activeConfig.community && (
+                  <FollowButton
+                    slug={activeConfig.slug}
+                    scope="era"
+                    target={baseEraName(era.name)}
+                    label={baseEraName(era.name)}
+                    variant="pill"
+                  />
+                )}
 
                 {era.name !== 'Recent Leaks' && (
                   showLatestOnly ? (
@@ -1152,6 +1162,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                               />
                             );
                           })()}
+                          {!activeConfig.community && (
+                            <FollowButton
+                              slug={activeConfig.slug}
+                              scope="song"
+                              target={song.name}
+                              label={song.name}
+                              isCurrentlyPlaying={isCurrentlyPlaying}
+                            />
+                          )}
                           {(() => {
                             const mvs = findMvsForSong(song.name, era.name, mvData);
                             if (mvs.length === 0) return null;

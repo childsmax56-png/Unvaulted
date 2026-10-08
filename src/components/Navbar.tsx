@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, LogIn, LogOut, Settings, Dice5, X, ChevronDown, GanttChart, LayoutGrid, UserPlus, Share2, Check, Home } from 'lucide-react';
+import { Search, LogIn, LogOut, Settings, Dice5, X, ChevronDown, GanttChart, LayoutGrid, UserPlus, Share2, Check, Home, History } from 'lucide-react';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { SiDiscord, SiReddit, SiTiktok, SiX } from 'react-icons/si';
 import { Users } from 'lucide-react';
@@ -332,6 +332,16 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
             >
               <Users className="w-5 h-5" />
             </button>
+            {!activeConfig.community && (
+              <a
+                href={`/changes/${activeConfig.slug}`}
+                onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate(`/changes/${activeConfig.slug}`); } }}
+                className="flex items-center p-2.5 rounded-full transition-all duration-300 bg-white/5 text-white/50 hover:bg-white/10 hover:text-white"
+                title="Changelog & alerts"
+              >
+                <History className="w-5 h-5" />
+              </a>
+            )}
             <a
               href="/"
               onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate('/'); } }}
@@ -450,6 +460,17 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
           <Users className="w-4 h-4" />
           <span className="text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Community / Socials</span>
         </button>
+        {!activeConfig.community && (
+          <a
+            href={`/changes/${activeConfig.slug}`}
+            onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate(`/changes/${activeConfig.slug}`); } }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 cursor-pointer bg-white/5 text-white/50 hover:bg-white/10 hover:text-white hover:scale-105"
+            title="What changed on this tracker — and alerts"
+          >
+            <History className="w-4 h-4" />
+            <span className="text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Changelog</span>
+          </a>
+        )}
         <a
           href="/"
           onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate('/'); } }}

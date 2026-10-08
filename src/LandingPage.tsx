@@ -9,6 +9,7 @@ import { Img } from './utils';
 import { useHasActiveAudio } from './player/audioStore';
 import { fetchGlobalVisitCounts, getUserVisitCounts, type VisitCounts } from './visits';
 import { AlternateTrackerButton } from './components/AlternateTrackerButton';
+import { AlertsBell } from './components/AlertsBell';
 
 type SortMode = 'featured' | 'az' | 'popular' | 'yours';
 const SORT_OPTIONS: { id: SortMode; label: string }[] = [
@@ -1613,6 +1614,15 @@ export function LandingPage() {
           watermark="TL"
         />
         <BigLinkCard
+          href="/changes"
+          accent="#F5C518"
+          badge="New"
+          titleMain="TRACKER"
+          titleAccent="CHANGELOG"
+          subtitle="Every new song & link, with alerts"
+          watermark="CL"
+        />
+        <BigLinkCard
           href="/producers"
           accent="#F59E0B"
           badge="New"
@@ -1693,6 +1703,7 @@ export function LandingPage() {
         )}
         {user ? (
           <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
+            <AlertsBell />
             <a
               href={`/u/${encodeURIComponent(user.username)}`}
               title="View your public profile"
