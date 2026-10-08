@@ -3,11 +3,12 @@
 //
 //   /archive            — landing: what's in it, stats, changelog
 //   /archive/:tab       — trackers | leaktionary | templates | instructions | key
+//   ?v=lol              — "the .lol archive", an alternate sheet with the same layout
 //
 // Data is the live Google Sheet, shaped by functions/api/tracker-archive.ts.
 
 import { useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { Home, Search, ExternalLink, Archive, BookOpen, LayoutTemplate, Info, ListChecks, FileSpreadsheet } from 'lucide-react';
 
 const ACCENT = '#22D3EE';
@@ -21,13 +22,14 @@ interface WordEntry { type: string; title: string; alt?: string; def: string; ta
 interface TemplateEntry { type: string; title: string; alt?: string; info: string; working: string; links: string[] }
 interface KeyRow { value: string; meaning: string }
 interface ArchiveData {
+  variant: string;
   sheetUrl: string;
   tabUrls: Record<string, string>;
   home: { stats: string[] };
   trackers: { entries: TrackerEntry[]; sections: { name: string; info?: string }[]; changelog: { date: string; note: string }[] };
   leaktionary: WordEntry[];
   templates: TemplateEntry[];
-  instructions: { title: string; steps: { label: string; text: string }[] };
+  instructions: { title: string; steps: { label: string; text: string }[] } | null;
   key: { status: KeyRow[]; working: KeyRow[]; icons: { icon: string; tag: string; meaning: string }[] };
 }
 
@@ -50,6 +52,23 @@ const TABS = [
   { id: 'key', label: 'Key', icon: Info },
 ] as const;
 type TabId = typeof TABS[number]['id'];
+
+const VARIANTS = [
+  { id: 'main', label: 'TrackerArchive' },
+  { id: 'lol', label: 'The .lol Archive' },
+] as const;
+type VariantId = typeof VARIANTS[number]['id'];
+
+function archivePath(variant: VariantId, tab?: string, query = ''): string {
+  const params = new URLSearchParams(query);
+  if (variant !== 'main') params.set('v', variant);
+  const qs = params.toString();
+  return `/archive${tab ? `/${tab}` : ''}${qs ? `?${qs}` : ''}`;
+}
+
+function tabsFor(data: ArchiveData | null) {
+  return TABS.filter((t) => t.id !== 'instructions' || !data || data.instructions);
+}
 
 // Colour per status value — green good, amber partial, red gone, blue archived.
 function statusClass(value: string): string {
@@ -106,17 +125,30 @@ function Status({ text }: { text: string }) {
 export function TrackerArchivePage() {
   const navigate = useNavigate();
   const { tab } = useParams<{ tab?: string }>();
-  const active = TABS.some((t) => t.id === tab) ? (tab as TabId) : null;
+  const [params] = useSearchParams();
+  const variant: VariantId = params.get('v') === 'lol' ? 'lol' : 'main';
   const [data, setData] = useState<ArchiveData | null>(null);
   const [error, setError] = useState(false);
+  const tabs = tabsFor(data?.variant === variant ? data : null);
+  const active = tabs.some((t) => t.id === tab) ? (tab as TabId) : null;
 
   useEffect(() => {
-    document.title = 'TrackerArchive · unvaulted';
-    fetch('/api/tracker-archive')
+    document.title = `${variant === 'lol' ? '.lol Archive' : 'TrackerArchive'} · unvaulted`;
+    setData(null);
+    setError(false);
+    let cancelled = false;
+    fetch(`/api/tracker-archive${variant === 'main' ? '' : `?v=${variant}`}`)
       .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then(setData)
-      .catch(() => setError(true));
-  }, []);
+      .then((d: ArchiveData) => { if (!cancelled) setData(d); })
+      .catch(() => { if (!cancelled) setError(true); });
+    return () => { cancelled = true; };
+  }, [variant]);
+
+  // Switching archives keeps the current tab unless the other one lacks it.
+  const switchTo = (v: VariantId) => {
+    const keep = active && (active !== 'instructions' || v === 'main') ? active : undefined;
+    navigate(archivePath(v, keep));
+  };
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col pb-32">
@@ -125,9 +157,17 @@ export function TrackerArchivePage() {
           <button onClick={() => navigate('/')} className="flex items-center gap-1.5 text-white/60 hover:text-white text-sm cursor-pointer transition-colors" title="Home">
             <Home className="w-4 h-4" /> <span className="hidden sm:inline">Home</span>
           </button>
-          <button onClick={() => navigate('/archive')} className="text-lg md:text-xl font-black tracking-tight ml-1 truncate cursor-pointer">
-            TRACKER<span style={{ color: ACCENT }}>ARCHIVE</span>
+          <button onClick={() => navigate(archivePath(variant))} className="text-lg md:text-xl font-black tracking-tight ml-1 truncate cursor-pointer">
+            {variant === 'lol' ? <>.LOL <span style={{ color: ACCENT }}>ARCHIVE</span></> : <>TRACKER<span style={{ color: ACCENT }}>ARCHIVE</span></>}
           </button>
+          <div className="flex p-0.5 rounded-full bg-white/5 border border-white/10 shrink-0" role="group" aria-label="Archive version">
+            {VARIANTS.map((v) => (
+              <button key={v.id} onClick={() => switchTo(v.id)} aria-pressed={variant === v.id}
+                className={`px-2.5 py-1 rounded-full text-xs whitespace-nowrap cursor-pointer transition-colors ${variant === v.id ? 'bg-white text-black font-semibold' : 'text-white/60 hover:text-white'}`}>
+                {v.id === 'main' ? <>Main</> : <>.lol<span className="hidden sm:inline"> archive</span></>}
+              </button>
+            ))}
+          </div>
           {data && (
             <a href={active ? data.tabUrls[active] : data.sheetUrl} target="_blank" rel="noopener noreferrer"
               className="ml-auto flex items-center gap-1.5 text-white/50 hover:text-white text-xs transition-colors shrink-0">
@@ -136,8 +176,8 @@ export function TrackerArchivePage() {
           )}
         </div>
         <div className="flex gap-1 px-4 md:px-8 pb-2 overflow-x-auto no-scrollbar">
-          {TABS.map(({ id, label, icon: Icon }) => (
-            <button key={id} onClick={() => navigate(`/archive/${id}`)}
+          {tabs.map(({ id, label, icon: Icon }) => (
+            <button key={id} onClick={() => navigate(archivePath(variant, id))}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm whitespace-nowrap cursor-pointer transition-colors ${active === id ? 'text-black font-semibold' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
               style={active === id ? { background: ACCENT } : undefined}>
               <Icon className="w-3.5 h-3.5" /> {label}
@@ -147,12 +187,12 @@ export function TrackerArchivePage() {
       </div>
 
       <div className="px-4 md:px-8 pt-6 max-w-6xl w-full mx-auto">
-        {error ? <Status text="Couldn't load the TrackerArchive. Try again in a minute." />
-          : !data ? <Status text="Loading the TrackerArchive…" />
+        {error ? <Status text="Couldn't load the archive. Try again in a minute." />
+          : !data || data.variant !== variant ? <Status text="Loading the archive…" />
           : active === 'trackers' ? <TrackersTab data={data} />
           : active === 'leaktionary' ? <LeaktionaryTab entries={data.leaktionary} />
           : active === 'templates' ? <TemplatesTab entries={data.templates} />
-          : active === 'instructions' ? <InstructionsTab data={data} />
+          : active === 'instructions' && data.instructions ? <InstructionsTab data={data} instructions={data.instructions} />
           : active === 'key' ? <KeyTab data={data} />
           : <Overview data={data} />}
       </div>
@@ -166,11 +206,12 @@ export function TrackerArchivePage() {
 
 function Overview({ data }: { data: ArchiveData }) {
   const navigate = useNavigate();
+  const variant = data.variant as VariantId;
   const counts: Record<TabId, string> = {
     trackers: `${data.trackers.entries.length.toLocaleString()} entries`,
     leaktionary: `${data.leaktionary.length} terms`,
     templates: `${data.templates.length} templates`,
-    instructions: `${data.instructions.steps.length} steps`,
+    instructions: `${data.instructions?.steps.length ?? 0} steps`,
     key: 'Status & icon meanings',
   };
   const blurbs: Record<TabId, string> = {
@@ -185,8 +226,11 @@ function Overview({ data }: { data: ArchiveData }) {
   return (
     <div className="space-y-8">
       <p className="text-white/50 text-sm max-w-3xl">
-        The TrackerArchive is a community-run index of leak trackers: every known copy of the Ye tracker, other artists’ sheets,
-        groupbuy and Discord history, and the tools and terms around it. Synced live from the sheet.
+        {variant === 'lol'
+          ? <>The .lol Archive is an alternate TrackerArchive from the .lol Ye Tracker team: its own archive of Ye tracker copies,
+            the TrackerVerse archive of other artists’ trackers, plus websites, misc sheets and WIP sections. Synced live from the sheet.</>
+          : <>The TrackerArchive is a community-run index of leak trackers: every known copy of the Ye tracker, other artists’ sheets,
+            groupbuy and Discord history, and the tools and terms around it. Synced live from the sheet.</>}
       </p>
 
       {data.home.stats.length > 0 && (
@@ -200,8 +244,8 @@ function Overview({ data }: { data: ArchiveData }) {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {TABS.map(({ id, label, icon: Icon }) => (
-          <button key={id} onClick={() => navigate(`/archive/${id}`)}
+        {tabsFor(data).map(({ id, label, icon: Icon }) => (
+          <button key={id} onClick={() => navigate(archivePath(variant, id))}
             className="text-left p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.07] hover:border-white/25 transition-colors cursor-pointer">
             <div className="flex items-center gap-2 font-bold">
               <Icon className="w-4 h-4" style={{ color: ACCENT }} /> {label}
@@ -217,7 +261,7 @@ function Overview({ data }: { data: ArchiveData }) {
           <h2 className="text-sm font-bold text-white/70 mb-2">Jump to</h2>
           <div className="flex flex-wrap gap-2">
             {tagCounts.map((f) => (
-              <button key={f.tag} onClick={() => navigate(`/archive/trackers?tag=${f.tag}`)}
+              <button key={f.tag} onClick={() => navigate(archivePath(variant, 'trackers', `tag=${f.tag}`))}
                 className="px-3 py-1.5 rounded-full text-sm bg-white/5 border border-white/10 hover:bg-white/10 cursor-pointer">
                 {f.icon} {f.label} <span className="text-white/35">{f.n}</span>
               </button>
@@ -232,7 +276,7 @@ function Overview({ data }: { data: ArchiveData }) {
           <div className="rounded-xl border border-white/5 divide-y divide-white/5">
             {data.trackers.changelog.slice(0, 12).map((c, i) => (
               <div key={i} className="flex gap-3 px-3 py-2 text-sm">
-                <span className="text-white/35 tabular-nums shrink-0 w-24">{c.date}</span>
+                {c.date && <span className="text-white/35 tabular-nums shrink-0 w-24">{c.date}</span>}
                 <span className="text-white/70">{c.note}</span>
               </div>
             ))}
@@ -442,8 +486,8 @@ function TemplatesTab({ entries }: { entries: TemplateEntry[] }) {
   );
 }
 
-function InstructionsTab({ data }: { data: ArchiveData }) {
-  const { title, steps } = data.instructions;
+function InstructionsTab({ data, instructions }: { data: ArchiveData; instructions: NonNullable<ArchiveData['instructions']> }) {
+  const { title, steps } = instructions;
   return (
     <div className="max-w-2xl">
       {title && <h2 className="font-bold mb-1" style={{ color: ACCENT }}>{title.replace(/\b([A-Z]{2,})\b/g, (w) => w[0] + w.slice(1).toLowerCase())}</h2>}

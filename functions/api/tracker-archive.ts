@@ -1,23 +1,50 @@
-// GET /api/tracker-archive — the community "TrackerArchive" Google Sheet
+// GET /api/tracker-archive[?v=lol] — a community "TrackerArchive" Google Sheet
 // (index of every Ye tracker copy, other artists' trackers, the Leaktionary,
 // sheet templates, instructions and the status key), shaped for /archive.
 //
-// Each tab is read live from the public CSV export (links in this sheet are
-// plain-text URLs, so CSV keeps them) and falls back to the committed snapshot
-// in public/tracker-archive-data/ if Google is unreachable. Edge-cached 1h.
+// Two archives share one layout: the main TrackerArchive and "the .lol
+// archive". Each tab is read live (links in both sheets are plain-text URLs,
+// so CSV keeps them) and falls back to the committed snapshot in
+// public/tracker-archive-data/{variant}/ if Google is unreachable. Edge-cached 1h.
 
-const SHEET_ID = '1oEzVbKJJfNXPf2TFOsMjzZjcCB08NPvIJ3K_CZfKGJA';
-const TABS = {
-  home: 733830576,
-  trackers: 713654230,
-  leaktionary: 1864378379,
-  templates: 210670964,
-  instructions: 730023433,
-  key: 1481588139,
-} as const;
-type TabName = keyof typeof TABS;
+type TabName = 'home' | 'trackers' | 'leaktionary' | 'templates' | 'instructions' | 'key';
 
-const CACHE_VERSION = 'v1';
+interface ArchiveSource {
+  sheetId: string;
+  // The .lol sheet has viewer downloads disabled: /export answers 401, but
+  // gviz still serves cell text.
+  via: 'export' | 'gviz';
+  // A tab may be stitched together from several sheet tabs, in order.
+  tabs: Partial<Record<TabName, number[]>>;
+}
+
+const SOURCES: Record<string, ArchiveSource> = {
+  main: {
+    sheetId: '1oEzVbKJJfNXPf2TFOsMjzZjcCB08NPvIJ3K_CZfKGJA',
+    via: 'export',
+    tabs: {
+      home: [733830576],
+      trackers: [713654230],
+      leaktionary: [1864378379],
+      templates: [210670964],
+      instructions: [730023433],
+      key: [1481588139],
+    },
+  },
+  lol: {
+    sheetId: '1xiU8dJVMOSD-OYy-1o-HFPPtG-W5PJdgvBUvdO5ELsc',
+    via: 'gviz',
+    tabs: {
+      // Main archive, TrackerVerse, other trackers, websites, misc.
+      trackers: [206903783, 2076989861, 1150640988, 1335212443, 993569498],
+      leaktionary: [1864378379],
+      templates: [210670964],
+      key: [1481588139],
+    },
+  },
+};
+
+const CACHE_VERSION = 'v2';
 const CACHE_HEADERS = {
   'Content-Type': 'application/json',
   'Cache-Control': 'public, max-age=600, s-maxage=3600',
@@ -51,8 +78,16 @@ function parseRows(text: string): string[][] {
   return rows.map((r) => r.map((c) => c.trim()));
 }
 
+// Full URLs anywhere in the cell, plus lines that are just a bare domain
+// ("yetracker.net", "discord.gg/yedits").
+const BARE_DOMAIN_RE = /^(?:www\.)?[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}(?:\/\S*)?$/i;
 function splitLinks(cell: string): string[] {
-  return (cell.match(/https?:\/\/[^\s"]+/g) ?? []).map((u) => u.replace(/[),.]+$/, ''));
+  const links = (cell.match(/https?:\/\/[^\s"]+/g) ?? []).map((u) => u.replace(/[),.]+$/, ''));
+  for (const line of cell.split('\n')) {
+    const t = line.trim();
+    if (!/https?:\/\//.test(t) && BARE_DOMAIN_RE.test(t)) links.push(`https://${t}`);
+  }
+  return links;
 }
 
 // Peel leading icon tags off a name: "🤡 ✨ Foo" → { name: "Foo", tags: [joke, special] }.
@@ -74,53 +109,86 @@ function splitName(name: string): { title: string; alt?: string } {
   return alt ? { title: title.trim(), alt } : { title: title.trim() };
 }
 
-async function loadTab(origin: string, tab: TabName): Promise<string[][]> {
+function sheetCsvUrl(src: ArchiveSource, gid: number): string {
+  const base = `https://docs.google.com/spreadsheets/d/${src.sheetId}`;
+  return src.via === 'gviz'
+    ? `${base}/gviz/tq?tqx=out:csv&headers=0&gid=${gid}`
+    : `${base}/export?format=csv&gid=${gid}`;
+}
+
+async function loadSheetTab(src: ArchiveSource, gid: number): Promise<string[][] | null> {
   try {
-    const res = await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${TABS[tab]}`, {
-      cf: { cacheTtl: 600 },
-    } as RequestInit);
+    const res = await fetch(sheetCsvUrl(src, gid), { cf: { cacheTtl: 600 } } as RequestInit);
     const text = res.ok ? await res.text() : '';
     // A private/removed sheet answers 200 with an HTML sign-in page.
     if (text && !text.trimStart().startsWith('<')) return parseRows(text);
   } catch { /* fall through */ }
-  const res = await fetch(`${origin}/tracker-archive-data/${tab}.csv`);
-  return res.ok ? parseRows(await res.text()) : [];
+  return null;
+}
+
+// Rows of every sheet tab behind `tab`. Each sheet tab keeps its own header
+// row, so consumers that slice(1) per tab get them as separate chunks.
+async function loadTab(origin: string, variant: string, tab: TabName): Promise<string[][][]> {
+  const src = SOURCES[variant];
+  const gids = src.tabs[tab] ?? [];
+  return Promise.all(gids.map(async (gid) => {
+    const live = await loadSheetTab(src, gid);
+    if (live) return live;
+    const res = await fetch(`${origin}/tracker-archive-data/${variant}/${gid}.csv`);
+    return res.ok ? parseRows(await res.text()) : [];
+  }));
 }
 
 const ENTRY_TYPES = new Set(['Trackers', 'Websites', 'Archive']);
 
-function buildTrackers(rows: string[][]) {
+function buildTrackers(tabs: string[][][]) {
   const entries: unknown[] = [];
   const sections: { name: string; info?: string }[] = [];
   const changelog: { date: string; note: string }[] = [];
-  let section = '';
-  let inChangelog = false;
-  for (const r of rows.slice(1)) {
-    const [type = '', name = '', info = '', status = '', working = '', links = ''] = r;
-    if (/^Date Made$/i.test(type)) { inChangelog = true; continue; }
-    if (inChangelog) {
-      if (type && name) changelog.push({ date: type, note: stripTags(name).name });
-      continue;
+  for (const rows of tabs) {
+    let section = '';
+    // 'dated': "Date Made | Update Notes" (main); 'undated': notes in column A (.lol).
+    let changelogMode: '' | 'dated' | 'undated' = '';
+    for (const r of rows.slice(1)) {
+      const [type = '', name = '', info = '', status = '', working = '', links = ''] = r;
+      if (/^Date Made$/i.test(type)) { changelogMode = 'dated'; continue; }
+      if (/^Update Notes$/i.test(type)) { changelogMode = 'undated'; continue; }
+      if (changelogMode === 'dated') {
+        if (type && name) changelog.push({ date: type, note: stripTags(name).name });
+        continue;
+      }
+      if (changelogMode === 'undated') {
+        if (type) changelog.push({ date: (type.match(/\[([^\]]+)\]\s*$/) ?? [])[1] ?? '', note: stripTags(type).name.replace(/\s*\[[^\]]+\]\s*$/, '') });
+        continue;
+      }
+      // Section header: blank type (or a non-entry label like "14/08/26\nArchives")
+      // with a name and no status/links. Its blurb may sit in any later column.
+      if (name && !ENTRY_TYPES.has(type) && (!type || (!status && !working && !links))) {
+        section = stripTags(name).name.replace(/\s+/g, ' ').trim();
+        const blurb = [info, status, working, links].find(Boolean);
+        sections.push(blurb ? { name: section, info: blurb } : { name: section });
+        continue;
+      }
+      if (!ENTRY_TYPES.has(type) || !name) continue;
+      const { name: clean, tags } = stripTags(name);
+      const { title, alt } = splitName(clean);
+      entries.push({
+        type, section, title, alt, info, status, working, tags,
+        links: splitLinks(links),
+        note: links && !splitLinks(links).length ? links : undefined,
+      });
     }
-    if (!type && name) {
-      section = name.replace(/\s+/g, ' ').trim();
-      sections.push(info ? { name: section, info } : { name: section });
-      continue;
-    }
-    if (!ENTRY_TYPES.has(type) || !name) continue;
-    const { name: clean, tags } = stripTags(name);
-    const { title, alt } = splitName(clean);
-    entries.push({
-      type, section, title, alt, info, status, working, tags,
-      links: splitLinks(links),
-      note: links && !/https?:\/\//.test(links) ? links : undefined,
-    });
   }
   return { entries, sections, changelog: changelog.reverse() };
 }
 
 function buildLeaktionary(rows: string[][]) {
-  return rows.slice(1).flatMap(([type = '', word = '', def = '', other = '']) => {
+  // Column order differs between archives — find "Link(s)//Other" by header.
+  const header = rows[0] ?? [];
+  const linkCol = Math.max(header.findIndex((h) => /^Link/i.test(h)), 3);
+  return rows.slice(1).flatMap((r) => {
+    const [type = '', word = '', def = ''] = r;
+    const other = r[linkCol] ?? '';
     if (!type || !word) return [];
     const { name, tags } = stripTags(word);
     const { title, alt } = splitName(name);
@@ -175,26 +243,31 @@ function buildHome(rows: string[][]) {
 
 export const onRequestGet: PagesFunction = async (context) => {
   const url = new URL(context.request.url);
+  const variant = SOURCES[url.searchParams.get('v') ?? ''] ? url.searchParams.get('v')! : 'main';
+  const src = SOURCES[variant];
   const cache = (caches as unknown as { default: Cache }).default;
-  const cacheKey = new Request(`${url.origin}/__tracker-archive/${CACHE_VERSION}`);
+  const cacheKey = new Request(`${url.origin}/__tracker-archive/${CACHE_VERSION}/${variant}`);
   if (!url.searchParams.has('fresh')) {
     const hit = await cache.match(cacheKey);
     if (hit) return hit;
   }
 
-  const names = Object.keys(TABS) as TabName[];
-  const tabs = await Promise.all(names.map((t) => loadTab(url.origin, t)));
-  const get = (t: TabName) => tabs[names.indexOf(t)];
+  const names = Object.keys(src.tabs) as TabName[];
+  const tabs = await Promise.all(names.map((t) => loadTab(url.origin, variant, t)));
+  const get = (t: TabName) => tabs[names.indexOf(t)] ?? [];
+  const first = (t: TabName) => get(t)[0] ?? [];
+  const sheetUrl = `https://docs.google.com/spreadsheets/d/${src.sheetId}/edit`;
 
   const body = {
-    sheetUrl: `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit`,
-    tabUrls: Object.fromEntries(names.map((t) => [t, `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit?gid=${TABS[t]}#gid=${TABS[t]}`])),
-    home: buildHome(get('home')),
+    variant,
+    sheetUrl,
+    tabUrls: Object.fromEntries(names.map((t) => [t, `${sheetUrl}?gid=${src.tabs[t]![0]}#gid=${src.tabs[t]![0]}`])),
+    home: buildHome(first('home')),
     trackers: buildTrackers(get('trackers')),
-    leaktionary: buildLeaktionary(get('leaktionary')),
-    templates: buildTemplates(get('templates')),
-    instructions: buildInstructions(get('instructions')),
-    key: buildKey(get('key')),
+    leaktionary: buildLeaktionary(first('leaktionary')),
+    templates: buildTemplates(first('templates')),
+    instructions: src.tabs.instructions ? buildInstructions(first('instructions')) : null,
+    key: buildKey(first('key')),
     generated_at: Date.now(),
   };
   const response = new Response(JSON.stringify(body), { headers: CACHE_HEADERS });
