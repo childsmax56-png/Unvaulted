@@ -3200,7 +3200,9 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
   return (
     <ContributorContext.Provider value={{ navigateToContributor }}>
     <PlaylistProvider>
-    <div className="h-dvh w-full flex overflow-hidden relative bg-yzy-black" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+    {/* Pinned to the viewport (not just h-dvh) so mobile browsers can't scroll the
+        window itself and push the navbar/top of the page off-screen. */}
+    <div className="fixed inset-0 w-full flex overflow-hidden bg-yzy-black" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
       {/* The <audio> element lives in the global audioStore so playback persists
           across route changes; App attaches its scrobble/error listeners to it. */}
 
