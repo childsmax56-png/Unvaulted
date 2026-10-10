@@ -3200,9 +3200,11 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
   return (
     <ContributorContext.Provider value={{ navigateToContributor }}>
     <PlaylistProvider>
-    {/* Pinned to the viewport (not just h-dvh) so mobile browsers can't scroll the
-        window itself and push the navbar/top of the page off-screen. */}
-    <div className="fixed inset-0 w-full flex overflow-hidden bg-yzy-black" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+    {/* On phones the page scrolls as a normal document (header included) so the
+        browser's own toolbars can collapse/expand around it. A locked full-height
+        shell with an inner scroller leaves the top of the header stuck under the
+        iOS address bar. Desktop keeps the fixed app shell. */}
+    <div className="relative min-h-dvh md:fixed md:inset-0 md:min-h-0 w-full flex md:overflow-hidden bg-yzy-black" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
       {/* The <audio> element lives in the global audioStore so playback persists
           across route changes; App attaches its scrobble/error listeners to it. */}
 
@@ -3266,7 +3268,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
           tabsWithData={tabsWithData}
         />
 
-        <main className={`flex-1 overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
+        <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
