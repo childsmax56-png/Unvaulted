@@ -2834,6 +2834,13 @@ export default function App() {
     setActiveCategory(cat);
   };
 
+  // On phones the page scrolls as a document, so start each view at the top.
+  // iOS WebKit can otherwise keep a stale scroll offset (from the previous view
+  // or the landing page), leaving the header scrolled out of sight.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeCategory, selectedAlbum, loading]);
+
   const handleHomeClick = () => {
     setSelectedAlbum(null);
     if (!settings.rememberSearch) {

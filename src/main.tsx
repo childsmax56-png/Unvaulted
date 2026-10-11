@@ -44,6 +44,16 @@ const RESERVED_TOP_SEGMENTS = new Set([
   'foryou', 'admin', 'u', 'producers', 'archive', 'changes', 'alerts', 'rooms',
 ]);
 
+// iOS WebKit doesn't always clamp/reset the window scroll on client-side route
+// changes, so a page can open already scrolled past its header. Always start
+// a new route at the top.
+if (typeof history !== 'undefined' && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 // Renders the persistent mini player on any route where the per-artist <App>
 // is NOT mounted (landing page, /my-tracker, etc.). On artist routes App shows
 // its own full PlayerBar, so this hides itself to avoid a duplicate bar.
@@ -134,6 +144,7 @@ createRoot(document.getElementById('root')!).render(
     <DownloadManagerProvider>
       <GlobalPlaylistProvider>
       <BrowserRouter>
+        <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<SettingsProvider><LandingPage /></SettingsProvider>} />
           <Route path="/my-tracker" element={<SettingsProvider><MyTrackerPage /></SettingsProvider>} />
