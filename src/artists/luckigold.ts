@@ -62,6 +62,7 @@ export const luckigoldConfig: ArtistConfig = {
     'GEMINI!': '06/14/2024',
     'dr*gs r bad [V1]': '??/??/????',
     'Dr*gs R Bad [V2]': '05/15/2026',
+    'Last Laugh [archive tape]': '??/??/????',
   },
 
   HIDDEN_ALBUMS: ['Body High', 'X', 'Freewave'],
@@ -112,6 +113,7 @@ export const luckigoldConfig: ArtistConfig = {
     'GEMINI!',
     'dr*gs r bad [V1]',
     'Dr*gs R Bad [V2]',
+    'Last Laugh [archive tape]',
   ],
 
   hasCompsTab: false,
@@ -143,6 +145,7 @@ export const luckigoldConfig: ArtistConfig = {
     'GEMINI!': {},
     'dr*gs r bad [V1]': {},
     'Dr*gs R Bad [V2]': {},
+    'Last Laugh [archive tape]': {},
   },
   TAG_TOOLTIP_MAP: {
     'Best Of': 'some of the best leaks hosted on the tracker.',

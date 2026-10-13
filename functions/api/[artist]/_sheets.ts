@@ -1,6 +1,6 @@
 import { getCommunityTrackerCsv } from './_community';
 import { fetchSheetApiCsv, hasSheetApiSource } from './_sheetsApi';
-import { fetchImportedCsv, hasImportedSource } from './_importedSheets';
+import { fetchApiRows, fetchImportedCsv, hasImportedSource } from './_importedSheets';
 import { splitCSVRows, joinCSVRows } from './_csvParser';
 
 // Live Google Sheet fallback for trackers that don't ship committed CSVs.
@@ -17,6 +17,11 @@ import { splitCSVRows, joinCSVRows } from './_csvParser';
 interface SheetSource {
   sheetId: string;
   gids: Record<string, string>;
+  // Download-disabled sheets 401 on the CSV export, so their tabs are read through
+  // the Sheets API instead (gid → tab title, the API's `ranges` key) and rebuilt
+  // into the same raw CSV the export gave, with hyperlink hrefs swapped in for
+  // label-only link cells. Needs env.GOOGLE_SHEETS_API_KEY.
+  apiTitles?: Record<string, string>;
 }
 
 // gids are enumerated from a sheet's public /htmlview by scripts/build-sheet-tabs.mjs.
@@ -51,6 +56,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       'album-copies': '1324887433',
       'music-videos': '1257792866',
       art: '1729133432',
+      fakes: '510511701',
     },
   },
   aapgold: {
@@ -64,6 +70,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       'music-videos': '951684041',
       'album-copies': '1730161920',
       tracklists: '1024624532',
+      art: '926621481',
+      misc: '53711288',
     },
   },
   colegold: {
@@ -158,6 +166,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       released: '1452347467',
       recent: '824959194',
       tracklists: '1443132755',
+      art: '909053212',
     },
   },
   slimegold: {
@@ -179,6 +188,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       recent: '1321754498',
       'music-videos': '943677178',
       tracklists: '1885470461',
+      misc: '1820782191',
     },
   },
   vampgold: {
@@ -208,6 +218,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       misc: '1044127471',
       'album-copies': '788275515',
       tracklists: '660032103',
+      fakes: '810597041',
     },
   },
   twizzygold: {
@@ -234,6 +245,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       misc: '326443742',
       fakes: '935698299',
       tracklists: '1717251426',
+      recent: '2048130339',
     },
   },
   fiftygold: {
@@ -313,6 +325,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
     gids: {
       stems: '2144277951',
       tracklists: '710536063',
+      art: '502377677',
     },
   },
   cudigold: {
@@ -321,6 +334,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       released: '1763054298',
       stems: '1395107855',
       misc: '1538684847',
+      art: '632168101',
     },
   },
   jayzgold: {
@@ -363,6 +377,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       tracklists: '1817611336',
       individual: '653347054',
       'individual-tracklists': '755186929',
+      misc: '1992239716',
     },
   },
   aaliyahgold: {
@@ -393,6 +408,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       recent: '386822022',
       stems: '803627503',
       tracklists: '2035478417',
+      fakes: '1227206575',
     },
   },
   chancegold: {
@@ -434,6 +450,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '171524654',
       fakes: '1642376975',
       tracklists: '1999300901',
+      stems: '197907807',
+      misc: '563585202',
     },
   },
   dannybrowngold: {
@@ -511,6 +529,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       stems: '1747609232',
       fakes: '974887049',
       tracklists: '1251519406',
+      art: '1488101424',
     },
   },
   trippiegold: {
@@ -538,26 +557,30 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
   tydollagold: {
     sheetId: '11Kk3Mi8iiFmXEFV8vzcmTrnjcMkfgImABCavXhC4D48',
-    // Stems/Art tabs were recreated (old gids 400); the new tabs lose links or changed
-    // layout, so those stay on the committed CSV.
+    // Stems/Art/Released tabs were recreated (old gids 400). The new Released tab's era
+    // names match the live Unreleased tab, and Art keeps its links, so both are live;
+    // the new Stems tab loses links, so it stays on the committed CSV.
     gids: {
       unreleased: '2000110692',
-      released: '663137012',
       recent: '1432839591',
       misc: '1323869477',
       tracklists: '813585500',
+      released: '848768915',
+      art: '2123382817',
     },
   },
   d4vdgold: {
     sheetId: '1N6_EyCC6AM_cpFkIJivCN0kWzEwJRev7vQCmFAChnjk',
-    // Released/Art tabs were recreated (old gids 400) with a different column layout,
-    // so those stay on the committed CSV.
+    // Released/Art tabs were recreated (old gids 400) with a different column layout.
+    // Art is live (canonicalizeLiveHeaders maps its Link/Description columns); Released
+    // splits links across per-platform columns, so it stays on the committed CSV.
     gids: {
       unreleased: '1194098099',
       recent: '352145936',
       stems: '376357246',
       fakes: '1822712170',
       tracklists: '745709653',
+      art: '375081282',
     },
   },
   daftpunkgold: {
@@ -593,6 +616,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       groupbuys: '1022200924',
     },
   },
+  // yelolgold's sheet has viewer downloads disabled (export HTTP 401), so it's read
+  // through the Sheets API — see apiTitles.
   yelolgold: {
     sheetId: '1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA',
     gids: {
@@ -607,6 +632,20 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '1659647236',
       fakes: '61838480',
       groupbuys: '1022200924',
+    },
+    apiTitles: {
+      '199908479': 'Unreleased',
+      '1295931150': 'Released',
+      '689133373': 'Recent',
+      '1372270223': 'Tracklists',
+      '495336364': 'Stems',
+      '1297512832': 'Album Copies',
+      '837199839': 'Music Videos',
+      '70063278': 'Misc',
+      '1659647236': 'Art',
+      '61838480': 'Fakes / Detags',
+      '1022200924': 'Groupbuys',
+      '1333371598': 'SSC',
     },
   },
 };
@@ -688,7 +727,29 @@ function remapRowToBaseHeader(baseHeaders: string[], extraHeaders: string[], row
   });
 }
 
-async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {
+// Fetch one tab of a SHEET_SOURCES sheet as raw CSV text — via the Sheets API for
+// apiTitles sheets, else the plain CSV export. Throws a short reason on failure
+// (reported by the admin health dashboard).
+async function fetchSheetTabCsv(src: SheetSource, gid: string, apiKey: string | undefined): Promise<string> {
+  const title = src.apiTitles?.[gid];
+  if (src.apiTitles) {
+    if (!title) throw new Error(`no API tab title for gid ${gid}`);
+    if (!apiKey) throw new Error('GOOGLE_SHEETS_API_KEY not set');
+    const rows = await fetchApiRows(src.sheetId, title, apiKey);
+    if (!rows) throw new Error('Sheets API request failed');
+    return joinCSVRows(rows);
+  }
+  const res = await fetch(
+    `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`,
+    { headers: { 'User-Agent': 'Mozilla/5.0' } },
+  );
+  if (!res.ok) throw new Error(`Sheet export HTTP ${res.status}`);
+  const text = await res.text();
+  if (!isCsvText(text)) throw new Error('Sheet export returned HTML (sheet private or gid gone?)');
+  return text;
+}
+
+async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string, apiKey: string | undefined): Promise<string> {
   const extraGids = EXTRA_UNRELEASED_GIDS[artist];
   const src = SHEET_SOURCES[artist];
   if (!extraGids || !src) return baseCsv;
@@ -697,13 +758,7 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promis
   const baseHeaders = rows[0] ?? [];
   for (const gid of extraGids) {
     try {
-      const res = await fetch(
-        `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`,
-        { headers: { 'User-Agent': 'Mozilla/5.0' } },
-      );
-      if (!res.ok) continue;
-      const text = await res.text();
-      if (!isCsvText(text)) continue;
+      const text = await fetchSheetTabCsv(src, gid, apiKey);
       const extraAll = splitCSVRows(text);
       const extraHeaders = extraAll[0] ?? [];
       const sameLayout = extraHeaders.length === baseHeaders.length
@@ -721,19 +776,62 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promis
   return joinCSVRows(rows);
 }
 
-// Build the Google Sheets CSV export URL for an artist's tab, or null if the
-// artist has no live-sheet source (or no gid for that tab).
-export function sheetCsvUrl(artist: string, tab: string): string | null {
-  const src = SHEET_SOURCES[artist];
-  if (!src) return null;
-  const gid = src.gids[tab];
-  if (!gid) return null;
-  return `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`;
-}
-
 // The SPA catch-all (_redirects /* /index.html 200) means missing static files
 // return index.html with status 200 — detect real CSV text by its leading char.
 const isCsvText = (t: string): boolean => !t.trimStart().startsWith('<');
+
+// Live sheet tabs often name columns differently from the committed CSV snapshots the
+// views were written against ("Links" / "Link" for "Link(s)", "Leak\nDate", "Usage",
+// "Title", ...). Rename those header cells to the canonical names on the live path so
+// the tab renders the same as its snapshot. A header is only renamed when the canonical
+// name isn't already a column, and Name/Notes headers are left alone (the client maps
+// their "Name\n(hint)" / "Notes\n(hint)" variants itself).
+const HEADER_ALIASES_ALL: Record<string, string> = {
+  Link: 'Link(s)',
+  Links: 'Link(s)',
+  Title: 'Name',
+  Info: 'Notes',
+  'Info / Notes': 'Notes',
+  Description: 'Notes',
+  Usage: 'Use',
+  Used: 'Use',
+  Images: 'Image',
+};
+const HEADER_ALIASES_TAB: Record<string, Record<string, string>> = {
+  art: { Type: 'Art Type', 'Designer / Photographer': 'Designer' },
+  misc: { Date: 'Date Made', 'Recording Date': 'File Date', 'Currently Available': 'Available Length', 'Entry Length': 'Length' },
+  fakes: { 'Currently Available': 'Available Length', 'when it leeked': 'Leak Date' },
+  released: { Date: 'Release Date' },
+};
+const CANONICALIZED_TABS = new Set(Object.keys(HEADER_ALIASES_TAB).concat('stems'));
+
+function canonicalizeLiveHeaders(tab: string, csv: string): string {
+  if (!CANONICALIZED_TABS.has(tab)) return csv;
+  const rows = splitCSVRows(csv);
+  // Same header detection as parseCSV: skip leading banner/formula rows.
+  let h = rows.findIndex(r => ['era', 'year', 'row', 'album', 'title'].includes((r[0] ?? '').trim().toLowerCase()));
+  if (h === -1) h = 0;
+  const header = rows[h];
+  if (!header) return csv;
+  // Collapse "Leak\nDate" → "Leak Date" and drop a trailing hint like "Link(s)\n(Soon)".
+  const clean = (c: string) => c.replace(/\s+/g, ' ').trim().replace(/\s+\([^)]*\)$/, '');
+  const present = new Set(header.map(clean));
+  const tabAliases = HEADER_ALIASES_TAB[tab] ?? {};
+  let changed = false;
+  rows[h] = header.map(cell => {
+    const c = clean(cell);
+    if (/^(Name|Notes)\b/.test(cell.trim())) return cell;
+    const target = tabAliases[c] ?? HEADER_ALIASES_ALL[c] ?? c;
+    if (target === cell) return cell;
+    if (target !== c && present.has(target)) return cell;
+    if (target === 'Name' && header.some(x => x.trim().startsWith('Name'))) return cell;
+    if (target === 'Notes' && header.some(x => x.trim().startsWith('Notes'))) return cell;
+    present.add(target);
+    changed = true;
+    return target;
+  });
+  return changed ? joinCSVRows(rows) : csv;
+}
 
 export type TrackerCsvSource = 'community' | 'sheets-api' | 'live' | 'committed';
 
@@ -805,22 +903,18 @@ export async function resolveTrackerCsv(
   }
 
   // Live Google Sheet first, when this tab has a configured gid.
-  const remote = sheetCsvUrl(artist, tab);
+  const src = SHEET_SOURCES[artist];
+  const remote = !!src?.gids[tab];
   if (remote) {
     try {
-      const res = await fetch(remote, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-      if (res.ok) {
-        const text = await res.text();
-        if (isCsvText(text)) {
-          const csv = tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text) : text;
-          return { text: csv, source: 'live', liveConfigured: true };
-        }
-        errors.push('Sheet export returned HTML (sheet private or gid gone?)');
-      } else {
-        errors.push(`Sheet export HTTP ${res.status}`);
-      }
+      const apiKey = env?.GOOGLE_SHEETS_API_KEY;
+      const text = await fetchSheetTabCsv(src, src.gids[tab], apiKey);
+      const csv = tab === 'unreleased'
+        ? await mergeExtraUnreleasedTabs(artist, text, apiKey)
+        : canonicalizeLiveHeaders(tab, text);
+      return { text: csv, source: src.apiTitles ? 'sheets-api' : 'live', liveConfigured: true };
     } catch (err) {
-      errors.push(`Sheet export fetch threw: ${err instanceof Error ? err.message : String(err)}`);
+      errors.push(err instanceof Error ? err.message : String(err));
     }
   }
 

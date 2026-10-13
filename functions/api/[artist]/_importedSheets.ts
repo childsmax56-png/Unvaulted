@@ -668,7 +668,7 @@ const LINK_LABELS = new Set(['link', 'links', 'here', 'snippet', 'pillows', 'pix
 
 // Sheets API grid -> raw rows, with hyperlink hrefs swapped in for link cells
 // whose text is only a label ("Link") — the CSV export loses those hrefs.
-async function fetchApiRows(sheetId: string, title: string, apiKey: string): Promise<Row[] | null> {
+export async function fetchApiRows(sheetId: string, title: string, apiKey: string): Promise<Row[] | null> {
   const fields = 'sheets.data.rowData.values(formattedValue,hyperlink,textFormatRuns.format.link.uri)';
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}` +
     `?includeGridData=true&ranges=${encodeURIComponent(`'${title.replace(/'/g, "''")}'`)}` +
