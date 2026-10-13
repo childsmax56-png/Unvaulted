@@ -1,6 +1,6 @@
 import { getCommunityTrackerCsv } from './_community';
 import { fetchSheetApiCsv, hasSheetApiSource } from './_sheetsApi';
-import { fetchImportedCsv, hasImportedSource } from './_importedSheets';
+import { fetchApiRows, fetchImportedCsv, hasImportedSource } from './_importedSheets';
 import { splitCSVRows, joinCSVRows } from './_csvParser';
 
 // Live Google Sheet fallback for trackers that don't ship committed CSVs.
@@ -17,6 +17,11 @@ import { splitCSVRows, joinCSVRows } from './_csvParser';
 interface SheetSource {
   sheetId: string;
   gids: Record<string, string>;
+  // Download-disabled sheets 401 on the CSV export, so their tabs are read through
+  // the Sheets API instead (gid → tab title, the API's `ranges` key) and rebuilt
+  // into the same raw CSV the export gave, with hyperlink hrefs swapped in for
+  // label-only link cells. Needs env.GOOGLE_SHEETS_API_KEY.
+  apiTitles?: Record<string, string>;
 }
 
 // gids are enumerated from a sheet's public /htmlview by scripts/build-sheet-tabs.mjs.
@@ -538,11 +543,10 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
   tydollagold: {
     sheetId: '11Kk3Mi8iiFmXEFV8vzcmTrnjcMkfgImABCavXhC4D48',
-    // Stems/Art tabs were recreated (old gids 400); the new tabs lose links or changed
-    // layout, so those stay on the committed CSV.
+    // Stems/Art/Released tabs were recreated (old gids 400); the new tabs lose links or
+    // changed layout/era names, so those stay on the committed CSV.
     gids: {
       unreleased: '2000110692',
-      released: '663137012',
       recent: '1432839591',
       misc: '1323869477',
       tracklists: '813585500',
@@ -593,6 +597,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       groupbuys: '1022200924',
     },
   },
+  // yelolgold's sheet has viewer downloads disabled (export HTTP 401), so it's read
+  // through the Sheets API — see apiTitles.
   yelolgold: {
     sheetId: '1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA',
     gids: {
@@ -607,6 +613,20 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '1659647236',
       fakes: '61838480',
       groupbuys: '1022200924',
+    },
+    apiTitles: {
+      '199908479': 'Unreleased',
+      '1295931150': 'Released',
+      '689133373': 'Recent',
+      '1372270223': 'Tracklists',
+      '495336364': 'Stems',
+      '1297512832': 'Album Copies',
+      '837199839': 'Music Videos',
+      '70063278': 'Misc',
+      '1659647236': 'Art',
+      '61838480': 'Fakes / Detags',
+      '1022200924': 'Groupbuys',
+      '1333371598': 'SSC',
     },
   },
 };
@@ -688,7 +708,29 @@ function remapRowToBaseHeader(baseHeaders: string[], extraHeaders: string[], row
   });
 }
 
-async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promise<string> {
+// Fetch one tab of a SHEET_SOURCES sheet as raw CSV text — via the Sheets API for
+// apiTitles sheets, else the plain CSV export. Throws a short reason on failure
+// (reported by the admin health dashboard).
+async function fetchSheetTabCsv(src: SheetSource, gid: string, apiKey: string | undefined): Promise<string> {
+  const title = src.apiTitles?.[gid];
+  if (src.apiTitles) {
+    if (!title) throw new Error(`no API tab title for gid ${gid}`);
+    if (!apiKey) throw new Error('GOOGLE_SHEETS_API_KEY not set');
+    const rows = await fetchApiRows(src.sheetId, title, apiKey);
+    if (!rows) throw new Error('Sheets API request failed');
+    return joinCSVRows(rows);
+  }
+  const res = await fetch(
+    `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`,
+    { headers: { 'User-Agent': 'Mozilla/5.0' } },
+  );
+  if (!res.ok) throw new Error(`Sheet export HTTP ${res.status}`);
+  const text = await res.text();
+  if (!isCsvText(text)) throw new Error('Sheet export returned HTML (sheet private or gid gone?)');
+  return text;
+}
+
+async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string, apiKey: string | undefined): Promise<string> {
   const extraGids = EXTRA_UNRELEASED_GIDS[artist];
   const src = SHEET_SOURCES[artist];
   if (!extraGids || !src) return baseCsv;
@@ -697,13 +739,7 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promis
   const baseHeaders = rows[0] ?? [];
   for (const gid of extraGids) {
     try {
-      const res = await fetch(
-        `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`,
-        { headers: { 'User-Agent': 'Mozilla/5.0' } },
-      );
-      if (!res.ok) continue;
-      const text = await res.text();
-      if (!isCsvText(text)) continue;
+      const text = await fetchSheetTabCsv(src, gid, apiKey);
       const extraAll = splitCSVRows(text);
       const extraHeaders = extraAll[0] ?? [];
       const sameLayout = extraHeaders.length === baseHeaders.length
@@ -719,16 +755,6 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string): Promis
     }
   }
   return joinCSVRows(rows);
-}
-
-// Build the Google Sheets CSV export URL for an artist's tab, or null if the
-// artist has no live-sheet source (or no gid for that tab).
-export function sheetCsvUrl(artist: string, tab: string): string | null {
-  const src = SHEET_SOURCES[artist];
-  if (!src) return null;
-  const gid = src.gids[tab];
-  if (!gid) return null;
-  return `https://docs.google.com/spreadsheets/d/${src.sheetId}/export?format=csv&gid=${gid}`;
 }
 
 // The SPA catch-all (_redirects /* /index.html 200) means missing static files
@@ -805,22 +831,16 @@ export async function resolveTrackerCsv(
   }
 
   // Live Google Sheet first, when this tab has a configured gid.
-  const remote = sheetCsvUrl(artist, tab);
+  const src = SHEET_SOURCES[artist];
+  const remote = !!src?.gids[tab];
   if (remote) {
     try {
-      const res = await fetch(remote, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-      if (res.ok) {
-        const text = await res.text();
-        if (isCsvText(text)) {
-          const csv = tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text) : text;
-          return { text: csv, source: 'live', liveConfigured: true };
-        }
-        errors.push('Sheet export returned HTML (sheet private or gid gone?)');
-      } else {
-        errors.push(`Sheet export HTTP ${res.status}`);
-      }
+      const apiKey = env?.GOOGLE_SHEETS_API_KEY;
+      const text = await fetchSheetTabCsv(src, src.gids[tab], apiKey);
+      const csv = tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text, apiKey) : text;
+      return { text: csv, source: src.apiTitles ? 'sheets-api' : 'live', liveConfigured: true };
     } catch (err) {
-      errors.push(`Sheet export fetch threw: ${err instanceof Error ? err.message : String(err)}`);
+      errors.push(err instanceof Error ? err.message : String(err));
     }
   }
 

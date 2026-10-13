@@ -127,7 +127,7 @@ export const aapgoldConfig: ArtistConfig = {
     'Cozy Tapes Vol. 3 [V2]': '??/??/????',
     'THE GR1M [V1]': '??/??/????',
     'Cozy Tapes Vol. 3 [V3]': '??/??/????',
-    'GR1M [V2]': '??/??/????',
+    'GR1M [V2]': '09/02/2022',
     'GR1M [V3]': '09/02/2022',
     "DON'T BE DUMB [V1]": '11/29/2022',
     'A$AP JEAN': '??/??/????',
@@ -188,7 +188,7 @@ export const aapgoldConfig: ArtistConfig = {
     'Cozy Tapes Vol. 3 [V2]': "After the Cozy Tapes Vol. 3 album failed to release during AWGEST 2018, many had lost all hope for this project's release. Later on, A$AP Ant confirmed the album was still in the works on April 20th, 2019 through a Tweet stating “Just got offf phone 12vy, a$ap mob up, cozy tapes 3 coming soon.” Through leaks we can see there were sessions for the album in December 2019 just before Yams Day in January 2020 in which the same month A$AP Nast Tweeted \"Cozy Tapes 3\", but again, with no avail. It was speculated in 2021 after seeing many members of the mob together again after drama within the group's members that the album would still be released. The album wasn’t mentioned again until January 2022 in an interview with A$AP Ant saying that they have to get the chemistry right and that it’s still coming. The project has not seen a release since. Often referred to as “Cozy For Lyfe” but a true title is unconfirmed. The cover used here is promo for Yams Day 2020.",
     'THE GR1M [V1]': "After seemingly scrapping the “ALL $MILE$” concept, Rocky began to work on his newest body of work. The first sign of this new album was when he previewed a song he began to play live at most of his live performances from that point titled “NO I.D. (GRIM FREESTYLE)” on December 22nd, 2020 in collaboration with Marine Serre. The project at that time was called \"THE GRIM\", as confirmed by producer HItkidd. In an interview with GQ from May 2021 Rocky expressed that he estimated the album was 90% complete, but the album didn’t see a release after that point. In the same interview he described the project as being a “ghetto love tale”.",
     'Cozy Tapes Vol. 3 [V3]': 'Third known working version of the unreleased Cozy Tapes Vol. 3.',
-    'GR1M [V2]': 'Later working version of the scrapped GR1M album sessions.',
+    'GR1M [V2]': "By mid 2021, \"THE GRIM\" was eventually renamed to simply \"GRIM\". On May 5th, 2022 a track titled “D.M.B.” was released, an ode to his now wife Rihanna, as he proposed to her in the music video for the track. Not long after they introduced their first born baby RZA Mayers into the world on May 13th, 2022. An interview with DAZED from May 22nd, 2022 Rocky officially confirmed the album’s title would not be “ALL $MILE$” and that the album was being wrapped up with him “shooting so many visuals for it”. In that interview he stated his sound would change from the more industrial sound from his previous album “TESTING” into a more “polished” sound. The project has never seen, as Rocky scrapped the \"GRIM\" idea all together sometime in October-November 2022 and changed the album to \"DON'T BE DUMB\" which was announced in December.",
     'LIVE.LOVE.A$AP [Re-Release]': "Official re-release of Rocky's debut mixtape, put out in 2021.",
     'GR1M [V3]': "By mid 2021, \"THE GRIM\" was eventually renamed to simply \"GRIM\". On May 5th, 2022 a track titled “D.M.B.” was released, an ode to his now wife Rihanna, as he proposed to her in the music video for the track. Not long after they introduced their first born baby RZA Mayers into the world on May 13th, 2022. An interview with DAZED from May 22nd, 2022 Rocky officially confirmed the album’s title would not be “ALL $MILE$” and that the album was being wrapped up with him “shooting so many visuals for it”. In that interview he stated his sound would change from the more industrial sound from his previous album “TESTING” into a more “polished” sound. The project has never seen, as Rocky scrapped the \"GRIM\" idea all together sometime in October-November 2022 and changed the album to \"DON'T BE DUMB\" which was announced in December.",
     "DON'T BE DUMB [V1]": "Eventually, the GRIM project was scrapped and by 2022 Rocky was seemingly working on a new album. The second single for the album “Shittin’ Me”, a fan-favorite song, released on December 2nd, 2022. Not long after on December 8th, 2022 Rocky stated during a football game “Thursday Night Football, Amazon, my first time back on the stage, my album is done, don’t be dumb, let’s go” officially stating the albums title and the next day he performed for Amazon Music on December 9th, 2022 previewing his next single “Same Problems?” which would officially release on Yams Day, January 18th, 2023. Another single would release on July 20th, 2023 titled “RIOT (Rowdy Pipe’n)” and with an interview with Complex the next day Rocky confirmed plenty of the production that would appear on the album and claimed he’s in “album mode”.",
@@ -212,6 +212,10 @@ export const aapgoldConfig: ArtistConfig = {
     'Pre-LONG. LIVE.A$AP': 'Pre-LONG.LIVE.A$AP',
     'AT.LONG. LAST.A$AP': 'AT.LONG.LAST.A$AP',
     'GR1M [V1]': 'THE GR1M [V1]',
+    // The sheet folded its three GRIM sub-eras into two (Oct 2026): V1 is still
+    // "THE GR1M", V2 absorbs the old GR1M [V2] + [V3] songs.
+    'GRIM [V1]': 'THE GR1M [V1]',
+    'GRIM [V2]': 'GR1M [V2]',
     'DUMB & DUMBER - DISC 2': "DON'T BE DUMB [DISC 2]",
   },
   ALBUM_ORDER: [
