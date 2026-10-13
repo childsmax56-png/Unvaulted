@@ -38,3 +38,16 @@ export async function ensureCommentTables(db: D1Database): Promise<void> {
 export function normTracker(raw: string): string {
   return (raw || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
 }
+
+// Alternate versions of the same artist's tracker share one set of comment
+// threads: a comment posted on a song in any of them shows up on that song in
+// all of them (entry keys are built from tab + era + name, which line up across
+// the versions). Rows keep the tracker they were posted from; reads just match
+// the whole group. Keep in sync with `alternateTrackers` in src/artists/*.ts.
+const COMMENT_GROUPS: string[][] = [
+  ['yegold', 'yzygold', 'yelolgold'],
+];
+
+export function commentGroup(tracker: string): string[] {
+  return COMMENT_GROUPS.find((g) => g.includes(tracker)) ?? [tracker];
+}

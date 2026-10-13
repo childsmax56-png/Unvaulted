@@ -1,4 +1,5 @@
 import type { ArtistConfig } from './types';
+import { yzygoldConfig } from './yzygold';
 
 // Default Ye tracker, backed by yetracker.net's own Google Sheet
 // (live-synced via SHEET_SOURCES in functions/api/[artist]/_sheets.ts, which
@@ -251,7 +252,8 @@ export const yegoldConfig: ArtistConfig = {
     '❓': 'Unknown',
   },
 
-  ERA_THEMES: {},
+  // Same era themes (banners + player art) as the Suzy tracker.
+  ERA_THEMES: yzygoldConfig.ERA_THEMES,
 
   TAG_TOOLTIP_MAP: {
     'Best Of': 'some of the best leaks hosted on the tracker.',

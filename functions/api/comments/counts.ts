@@ -7,7 +7,7 @@
 // Entry keys are joined with "|" (a char our keys never contain). Reads are
 // public, matching GET /api/comments.
 import { json, options } from '../_auth';
-import { ensureCommentTables, normTracker } from './_schema';
+import { ensureCommentTables, normTracker, commentGroup } from './_schema';
 
 export const onRequestOptions = options;
 
@@ -26,12 +26,13 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   if (entries.length === 0) return json({ counts: {} });
 
   const placeholders = entries.map(() => '?').join(',');
+  const group = commentGroup(tracker);
   const { results } = await env.DB.prepare(
     `SELECT entry_key, COUNT(*) AS n
        FROM entry_comments
-      WHERE tracker_id = ? AND deleted = 0 AND entry_key IN (${placeholders})
+      WHERE tracker_id IN (${group.map(() => '?').join(',')}) AND deleted = 0 AND entry_key IN (${placeholders})
       GROUP BY entry_key`
-  ).bind(tracker, ...entries).all<{ entry_key: string; n: number }>();
+  ).bind(...group, ...entries).all<{ entry_key: string; n: number }>();
 
   const counts: Record<string, number> = {};
   for (const r of results) counts[r.entry_key] = r.n;

@@ -1,4 +1,5 @@
 import type { ArtistConfig } from './types';
+import { yzygoldConfig } from './yzygold';
 
 // Third Ye tracker variant ("Lol"), built independently from its own Google
 // Sheet by scripts/build-yelolgold-csvs.py — NOT copied from yzygold/yegold,
@@ -278,6 +279,7 @@ export const yelolgoldConfig: ArtistConfig = {
     'AI': 'Track contains AI vocals.',
     'Lost Media': "Is currently lost, or we don't have a link to the media.",
   },
-  ERA_THEMES: {},
+  // Same era themes (banners + player art) as the Suzy tracker.
+  ERA_THEMES: yzygoldConfig.ERA_THEMES,
   hasSubAlbumsTab: false,
 };
