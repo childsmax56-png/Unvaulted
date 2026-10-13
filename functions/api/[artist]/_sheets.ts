@@ -56,6 +56,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       'album-copies': '1324887433',
       'music-videos': '1257792866',
       art: '1729133432',
+      fakes: '510511701',
     },
   },
   aapgold: {
@@ -69,6 +70,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       'music-videos': '951684041',
       'album-copies': '1730161920',
       tracklists: '1024624532',
+      art: '926621481',
+      misc: '53711288',
     },
   },
   colegold: {
@@ -163,6 +166,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       released: '1452347467',
       recent: '824959194',
       tracklists: '1443132755',
+      art: '909053212',
     },
   },
   slimegold: {
@@ -184,6 +188,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       recent: '1321754498',
       'music-videos': '943677178',
       tracklists: '1885470461',
+      misc: '1820782191',
     },
   },
   vampgold: {
@@ -213,6 +218,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       misc: '1044127471',
       'album-copies': '788275515',
       tracklists: '660032103',
+      fakes: '810597041',
     },
   },
   twizzygold: {
@@ -239,6 +245,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       misc: '326443742',
       fakes: '935698299',
       tracklists: '1717251426',
+      recent: '2048130339',
     },
   },
   fiftygold: {
@@ -318,6 +325,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
     gids: {
       stems: '2144277951',
       tracklists: '710536063',
+      art: '502377677',
     },
   },
   cudigold: {
@@ -326,6 +334,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       released: '1763054298',
       stems: '1395107855',
       misc: '1538684847',
+      art: '632168101',
     },
   },
   jayzgold: {
@@ -368,6 +377,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       tracklists: '1817611336',
       individual: '653347054',
       'individual-tracklists': '755186929',
+      misc: '1992239716',
     },
   },
   aaliyahgold: {
@@ -398,6 +408,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       recent: '386822022',
       stems: '803627503',
       tracklists: '2035478417',
+      fakes: '1227206575',
     },
   },
   chancegold: {
@@ -439,6 +450,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '171524654',
       fakes: '1642376975',
       tracklists: '1999300901',
+      stems: '197907807',
+      misc: '563585202',
     },
   },
   dannybrowngold: {
@@ -516,6 +529,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       stems: '1747609232',
       fakes: '974887049',
       tracklists: '1251519406',
+      art: '1488101424',
     },
   },
   trippiegold: {
@@ -543,25 +557,30 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
   tydollagold: {
     sheetId: '11Kk3Mi8iiFmXEFV8vzcmTrnjcMkfgImABCavXhC4D48',
-    // Stems/Art/Released tabs were recreated (old gids 400); the new tabs lose links or
-    // changed layout/era names, so those stay on the committed CSV.
+    // Stems/Art/Released tabs were recreated (old gids 400). The new Released tab's era
+    // names match the live Unreleased tab, and Art keeps its links, so both are live;
+    // the new Stems tab loses links, so it stays on the committed CSV.
     gids: {
       unreleased: '2000110692',
       recent: '1432839591',
       misc: '1323869477',
       tracklists: '813585500',
+      released: '848768915',
+      art: '2123382817',
     },
   },
   d4vdgold: {
     sheetId: '1N6_EyCC6AM_cpFkIJivCN0kWzEwJRev7vQCmFAChnjk',
-    // Released/Art tabs were recreated (old gids 400) with a different column layout,
-    // so those stay on the committed CSV.
+    // Released/Art tabs were recreated (old gids 400) with a different column layout.
+    // Art is live (canonicalizeLiveHeaders maps its Link/Description columns); Released
+    // splits links across per-platform columns, so it stays on the committed CSV.
     gids: {
       unreleased: '1194098099',
       recent: '352145936',
       stems: '376357246',
       fakes: '1822712170',
       tracklists: '745709653',
+      art: '375081282',
     },
   },
   daftpunkgold: {
@@ -761,6 +780,59 @@ async function mergeExtraUnreleasedTabs(artist: string, baseCsv: string, apiKey:
 // return index.html with status 200 — detect real CSV text by its leading char.
 const isCsvText = (t: string): boolean => !t.trimStart().startsWith('<');
 
+// Live sheet tabs often name columns differently from the committed CSV snapshots the
+// views were written against ("Links" / "Link" for "Link(s)", "Leak\nDate", "Usage",
+// "Title", ...). Rename those header cells to the canonical names on the live path so
+// the tab renders the same as its snapshot. A header is only renamed when the canonical
+// name isn't already a column, and Name/Notes headers are left alone (the client maps
+// their "Name\n(hint)" / "Notes\n(hint)" variants itself).
+const HEADER_ALIASES_ALL: Record<string, string> = {
+  Link: 'Link(s)',
+  Links: 'Link(s)',
+  Title: 'Name',
+  Info: 'Notes',
+  'Info / Notes': 'Notes',
+  Description: 'Notes',
+  Usage: 'Use',
+  Used: 'Use',
+  Images: 'Image',
+};
+const HEADER_ALIASES_TAB: Record<string, Record<string, string>> = {
+  art: { Type: 'Art Type', 'Designer / Photographer': 'Designer' },
+  misc: { Date: 'Date Made', 'Recording Date': 'File Date', 'Currently Available': 'Available Length', 'Entry Length': 'Length' },
+  fakes: { 'Currently Available': 'Available Length', 'when it leeked': 'Leak Date' },
+  released: { Date: 'Release Date' },
+};
+const CANONICALIZED_TABS = new Set(Object.keys(HEADER_ALIASES_TAB).concat('stems'));
+
+function canonicalizeLiveHeaders(tab: string, csv: string): string {
+  if (!CANONICALIZED_TABS.has(tab)) return csv;
+  const rows = splitCSVRows(csv);
+  // Same header detection as parseCSV: skip leading banner/formula rows.
+  let h = rows.findIndex(r => ['era', 'year', 'row', 'album', 'title'].includes((r[0] ?? '').trim().toLowerCase()));
+  if (h === -1) h = 0;
+  const header = rows[h];
+  if (!header) return csv;
+  // Collapse "Leak\nDate" → "Leak Date" and drop a trailing hint like "Link(s)\n(Soon)".
+  const clean = (c: string) => c.replace(/\s+/g, ' ').trim().replace(/\s+\([^)]*\)$/, '');
+  const present = new Set(header.map(clean));
+  const tabAliases = HEADER_ALIASES_TAB[tab] ?? {};
+  let changed = false;
+  rows[h] = header.map(cell => {
+    const c = clean(cell);
+    if (/^(Name|Notes)\b/.test(cell.trim())) return cell;
+    const target = tabAliases[c] ?? HEADER_ALIASES_ALL[c] ?? c;
+    if (target === cell) return cell;
+    if (target !== c && present.has(target)) return cell;
+    if (target === 'Name' && header.some(x => x.trim().startsWith('Name'))) return cell;
+    if (target === 'Notes' && header.some(x => x.trim().startsWith('Notes'))) return cell;
+    present.add(target);
+    changed = true;
+    return target;
+  });
+  return changed ? joinCSVRows(rows) : csv;
+}
+
 export type TrackerCsvSource = 'community' | 'sheets-api' | 'live' | 'committed';
 
 export interface TrackerCsvResult {
@@ -837,7 +909,9 @@ export async function resolveTrackerCsv(
     try {
       const apiKey = env?.GOOGLE_SHEETS_API_KEY;
       const text = await fetchSheetTabCsv(src, src.gids[tab], apiKey);
-      const csv = tab === 'unreleased' ? await mergeExtraUnreleasedTabs(artist, text, apiKey) : text;
+      const csv = tab === 'unreleased'
+        ? await mergeExtraUnreleasedTabs(artist, text, apiKey)
+        : canonicalizeLiveHeaders(tab, text);
       return { text: csv, source: src.apiTitles ? 'sheets-api' : 'live', liveConfigured: true };
     } catch (err) {
       errors.push(err instanceof Error ? err.message : String(err));
