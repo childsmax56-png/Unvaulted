@@ -1,8 +1,8 @@
-// GET /api/producers — every credited person (producers, featured artists,
-// reference vocalists) across all public trackers, sorted by song count.
+// GET /api/producers — every credited person (lead artists, producers,
+// featured artists, reference vocalists) across all public trackers, sorted by song count.
 // Each entry: { k: key, n: name, c: unique songs, v: version rows,
-// a: { slug: unique songs }, p/f/r: unique songs produced / featured on
-// (feat. + with) / reference vocals }.
+// a: { slug: unique songs }, l/p/f/r: unique songs as lead artist / produced /
+// featured on (feat. + with) / reference vocals }.
 import { cached, displayName, loadAllShards, songKey } from './_index';
 
 export interface ProducerSummary {
@@ -11,13 +11,14 @@ export interface ProducerSummary {
   c: number;
   v: number;
   a: Record<string, number>;
+  l: number;
   p: number;
   f: number;
   r: number;
 }
 
 // Row role letters → summary bucket ("w" with-credits count as features).
-const BUCKET: Record<string, 'p' | 'f' | 'r'> = { p: 'p', f: 'f', w: 'f', r: 'r' };
+const BUCKET: Record<string, 'l' | 'p' | 'f' | 'r'> = { a: 'l', p: 'p', f: 'f', w: 'f', r: 'r' };
 
 export const onRequestGet: PagesFunction = async (context) => {
   const origin = new URL(context.request.url).origin;
@@ -31,7 +32,7 @@ export const onRequestGet: PagesFunction = async (context) => {
       song.p.forEach((k, i) => {
         let entry = byKey.get(k);
         if (!entry) {
-          entry = { k, n: displayName(names[k] ?? {}), c: 0, v: 0, a: {}, p: 0, f: 0, r: 0 };
+          entry = { k, n: displayName(names[k] ?? {}), c: 0, v: 0, a: {}, l: 0, p: 0, f: 0, r: 0 };
           byKey.set(k, entry);
         }
         entry.v++;

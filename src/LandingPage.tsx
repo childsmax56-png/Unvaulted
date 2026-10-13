@@ -1637,7 +1637,7 @@ export function LandingPage() {
           badge="New"
           titleMain="PRODUCERS"
           titleAccent="& FEATURES"
-          subtitle="Every beat and every verse, across every artist"
+          subtitle="Every song, beat and verse, across every artist"
           watermark="PR"
         />
         <BigLinkCard

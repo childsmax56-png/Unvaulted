@@ -1,7 +1,8 @@
 // Shared builder for the cross-artist credits index (/producers pages).
 //
 // Credits live in each song's name/extra cell as "(prod. A, B & C)",
-// "(feat. X)", "(with Y)", "(ref. Z)". We parse those out of every public
+// "(feat. X)", "(with Y)", "(ref. Z)", plus the lead artist(s) in an
+// "Artist - Title" song name. We parse those out of every public
 // tracker's /api/{slug}/a catalog and group songs by a normalized person key so
 // "Pi'erre Bourne" and "Pierre Bourne" land on the same page.
 //
@@ -32,7 +33,7 @@ export const PRODUCER_SLUGS = [
 export const SHARD_SIZE = 10;
 export const SHARD_COUNT = Math.ceil(PRODUCER_SLUGS.length / SHARD_SIZE);
 // Bump to invalidate every cached shard/list/detail response at once.
-export const INDEX_VERSION = 'v3';
+export const INDEX_VERSION = 'v4';
 export const CACHE_HEADERS = {
   'Content-Type': 'application/json',
   'Access-Control-Allow-Origin': '*',
@@ -51,10 +52,10 @@ export interface CreditedSong {
   f?: string;   // file / recording date
   d?: string;   // availability ("Full", "Snippet", …)
   p: string[];  // credited person keys
-  r: string[];  // roles per key, parallel to p: any of "p" prod, "f" feat, "w" with, "r" ref — e.g. "pf"
+  r: string[];  // roles per key, parallel to p: any of "a" lead artist, "p" prod, "f" feat, "w" with, "r" ref — e.g. "pf"
 }
 
-export type Role = 'p' | 'f' | 'w' | 'r';
+export type Role = 'a' | 'p' | 'f' | 'w' | 'r';
 
 export interface ShardPayload {
   songs: CreditedSong[];
@@ -120,6 +121,8 @@ const UNSPLITTABLE: [RegExp, string][] = [
 ];
 
 function splitNames(group: string): string[] {
+  // "¥$" is Ye + Ty Dolla $ign's duo name — credit both.
+  group = group.replace(/¥\$/g, 'Kanye West & Ty Dolla $ign');
   for (const [re, keep] of UNSPLITTABLE) group = group.replace(re, keep);
   const out: string[] = [];
   // A bare "&" inside a word ("Earl&E", "L&X Music") is part of the name.
@@ -134,7 +137,8 @@ function splitNames(group: string): string[] {
       .replace(/^\s*(?:co-?prod\.?|add(?:itional)?\.?|prod\.?)\s*/i, '')
       .trim();
     if (!name || name.length > 40 || name.includes('?')) continue;
-    if (JUNK.has(producerKey(name))) continue;
+    const key = producerKey(name);
+    if (key.length < 2 || JUNK.has(key)) continue;
     out.push(name);
   }
   return out;
@@ -157,6 +161,25 @@ export function parseCredits(text: string): { name: string; role: Role }[] {
   return out;
 }
 
+// "Kanye West & Ty Dolla $ign - Title [V2]" → lead artists, from a song's
+// first line. Skips " - " that's really part of a title or version tag
+// ("Carousel [Demo 2 - Clearance]", "SUPERHERO [V1] - Music Video").
+const NOT_A_TITLE = /^(?:music video|live|remix|clearance|demo|intro|outro|interlude|snippet|instrumental|acoustic|edit)\b/i;
+
+export function parseLeadArtists(name: string): string[] {
+  const line = name.split('\n')[0];
+  const i = line.indexOf(' - ');
+  if (i <= 0) return [];
+  const prefix = line
+    .slice(0, i)
+    .replace(/[\uFE0F\u200D]/g, '')
+    .replace(/\p{Extended_Pictographic}/gu, '')
+    .trim();
+  const rest = line.slice(i + 3).trim();
+  if (!prefix || prefix.length > 60 || /[\[\]]/.test(prefix) || !rest || NOT_A_TITLE.test(rest)) return [];
+  return splitNames(prefix);
+}
+
 // Index one tracker's catalog into credited rows.
 export function indexCatalog(slug: string, data: { eras?: Record<string, any> }, into: ShardPayload) {
   for (const era of Object.values<any>(data.eras ?? {})) {
@@ -167,7 +190,10 @@ export function indexCatalog(slug: string, data: { eras?: Record<string, any> },
       for (const song of bucket) {
         const name = String(song?.name ?? '').trim();
         if (!name) continue;
-        const credits = parseCredits(`${name}\n${song.extra ?? ''}`);
+        const credits = [
+          ...parseLeadArtists(name).map((n) => ({ name: n, role: 'a' as Role })),
+          ...parseCredits(`${name}\n${song.extra ?? ''}`),
+        ];
         if (credits.length === 0) continue;
         const keys: string[] = [];
         const roles: string[] = [];

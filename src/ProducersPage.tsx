@@ -1,12 +1,12 @@
-// Cross-artist credit pages: producers AND featured artists.
+// Cross-artist credit pages: lead artists, producers and featured artists.
 //
 //   /producers       — searchable directory of every credited person
-//   /producers/:key  — everything one person produced, featured on or did a
-//                      reference for, across every tracker, grouped
+//   /producers/:key  — everything one person led, produced, featured on or did
+//                      a reference for, across every tracker, grouped
 //                      artist → era, playable through the global player
 //
-// Credits come from the "(prod. …)" / "(feat. …)" / "(with …)" / "(ref. …)"
-// text on each song, indexed server-side by functions/api/producers/*
+// Credits come from the "Artist - Title" song name and the "(prod. …)" /
+// "(feat. …)" / "(with …)" / "(ref. …)" text on each song, indexed server-side by functions/api/producers/*
 // (edge-cached, refreshed hourly).
 
 import { useEffect, useMemo, useState } from 'react';
@@ -27,13 +27,13 @@ const ARTIST_ROW_CAP = 50;
 
 interface ProducerSummary {
   k: string; n: string; c: number; v: number; a: Record<string, number>;
-  p: number; f: number; r: number; // unique songs produced / featured on / reference vocals
+  l: number; p: number; f: number; r: number; // unique songs as lead / produced / featured on / reference vocals
 }
 interface CreditedSong {
   s: string; e: string; n: string; x?: string; u?: string; q?: string;
   l?: string; f?: string; d?: string;
   p: string[]; // credited person keys
-  r: string[]; // roles per key: "p" prod, "f" feat, "w" with, "r" ref
+  r: string[]; // roles per key: "a" lead artist, "p" prod, "f" feat, "w" with, "r" ref
 }
 interface ProducerDetail {
   key: string;
@@ -44,14 +44,22 @@ interface ProducerDetail {
 }
 
 // Role buckets shown in the UI ("with" credits count as features).
-type Bucket = 'p' | 'f' | 'r';
+type Bucket = 'l' | 'p' | 'f' | 'r';
 const BUCKETS: { id: Bucket; label: string; noun: string; title: string }[] = [
+  { id: 'l', label: 'Lead artist', noun: 'as lead', title: 'Lead artist' },
   { id: 'p', label: 'Production', noun: 'produced', title: 'Producer' },
   { id: 'f', label: 'Features', noun: 'features', title: 'Featured artist' },
   { id: 'r', label: 'Reference', noun: 'references', title: 'Reference vocals' },
 ];
-const ROLE_BUCKET: Record<string, Bucket> = { p: 'p', f: 'f', w: 'f', r: 'r' };
-const ROLE_BADGE: Record<string, string> = { p: 'prod.', f: 'feat.', w: 'with', r: 'ref.' };
+const ROLE_BUCKET: Record<string, Bucket> = { a: 'l', p: 'p', f: 'f', w: 'f', r: 'r' };
+const ROLE_BADGE: Record<string, string> = { a: 'lead', p: 'prod.', f: 'feat.', w: 'with', r: 'ref.' };
+const ROLE_BADGE_CLASS: Record<string, string> = {
+  a: 'bg-emerald-500/15 text-emerald-300',
+  p: 'bg-amber-500/15 text-amber-300',
+  f: 'bg-fuchsia-500/15 text-fuchsia-300',
+  w: 'bg-fuchsia-500/15 text-fuchsia-300',
+  r: 'bg-sky-500/15 text-sky-300',
+};
 
 // This person's role letters on one row ("" if absent).
 function rolesOn(row: CreditedSong, key: string): string {
@@ -176,7 +184,7 @@ function ProducerDirectory() {
 
       <div className="px-4 md:px-8 pt-6 pb-4 max-w-6xl w-full mx-auto">
         <p className="text-white/50 text-sm">
-          Every producer and featured artist credited on the trackers, with all their songs across every artist.
+          Every lead artist, producer and featured artist credited on the trackers, with all their songs across every artist.
           {producers && <span className="text-white/30"> · {producers.length.toLocaleString()} people</span>}
         </p>
 
@@ -303,9 +311,9 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
 
   // Unique songs per role bucket, for the role chips and the hero label.
   const bucketCounts = useMemo(() => {
-    const sets: Record<Bucket, Set<string>> = { p: new Set(), f: new Set(), r: new Set() };
+    const sets: Record<Bucket, Set<string>> = { l: new Set(), p: new Set(), f: new Set(), r: new Set() };
     for (const row of detail?.songs ?? []) for (const b of bucketsOn(row, detail!.key)) sets[b].add(songKey(row.n));
-    return { p: sets.p.size, f: sets.f.size, r: sets.r.size };
+    return { l: sets.l.size, p: sets.p.size, f: sets.f.size, r: sets.r.size };
   }, [detail]);
 
   const visible = useMemo(
@@ -505,9 +513,7 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-1.5 min-w-0">
                               {[...rolesOn(row, detail.key)].map((ch) => (
-                                <span key={ch} className={`shrink-0 px-1.5 py-px rounded text-[10px] font-bold uppercase tracking-wide ${
-                                  ch === 'p' ? 'bg-amber-500/15 text-amber-300' : ch === 'r' ? 'bg-sky-500/15 text-sky-300' : 'bg-fuchsia-500/15 text-fuchsia-300'
-                                }`}>{ROLE_BADGE[ch]}</span>
+                                <span key={ch} className={`shrink-0 px-1.5 py-px rounded text-[10px] font-bold uppercase tracking-wide ${ROLE_BADGE_CLASS[ch] ?? ''}`}>{ROLE_BADGE[ch]}</span>
                               ))}
                               <div className={`text-sm truncate ${current ? 'font-semibold' : ''}`} style={current ? { color: ACCENT } : undefined}>{row.n}</div>
                             </div>
