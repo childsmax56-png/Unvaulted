@@ -9,11 +9,13 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Volume2, X } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Volume2, X, ChevronUp, Maximize2 } from 'lucide-react';
 import * as audioStore from './audioStore';
 import { parseArtistFromSong } from '../lastfm';
 import { CUSTOM_IMAGES, formatTextWithTags, Img } from '../utils';
 import { CommentButton } from '../components/CommentButton';
+import { FullScreenPlayer } from '../components/FullScreenPlayer';
+import { Era } from '../types';
 
 function formatTime(seconds: number) {
   if (!seconds || isNaN(seconds)) return '0:00';
@@ -26,8 +28,9 @@ export function GlobalMiniPlayer() {
   const state = audioStore.useAudioState();
   const [closed, setClosed] = useState(false);
   const [seeking, setSeeking] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-  const { currentSong, currentEra, activePlayer, isPlaying, currentTime, duration, volume, isShuffle, loopMode, currentArtwork, currentArtistLabel } = state;
+  const { currentSong, currentEra, activePlayer, isPlaying, currentTime, duration, volume, isShuffle, loopMode, currentArtwork, currentArtistLabel, playlist, currentSongIndex, shuffledQueue } = state;
 
   // Only responsible for the persistent HTML5-audio playback. Embedded players
   // (Spotify/YouTube/SoundCloud) are tied to App and stop on navigation.
@@ -49,7 +52,45 @@ export function GlobalMiniPlayer() {
     if (duration) audioStore.seek(ratio * duration);
   };
 
+  const nextSong = playlist.length > 0 ? playlist[(currentSongIndex + 1) % playlist.length] : null;
+
   return createPortal(
+    <>
+    <AnimatePresence>
+      {expanded && currentSong && (
+        <FullScreenPlayer
+          currentSong={currentSong}
+          nextSong={nextSong}
+          isPlaying={isPlaying}
+          togglePlay={audioStore.togglePlay}
+          onClose={() => setExpanded(false)}
+          era={currentEra}
+          currentTime={currentTime}
+          duration={duration}
+          onSeek={audioStore.seek}
+          audioRef={audioStore.audioRef as { current: HTMLAudioElement | null }}
+          onNext={audioStore.playNext}
+          onPrev={audioStore.playPrev}
+          isShuffle={isShuffle}
+          toggleShuffle={audioStore.toggleShuffle}
+          loopMode={loopMode}
+          toggleLoop={audioStore.cycleLoop}
+          playlist={playlist}
+          currentSongIndex={currentSongIndex}
+          shuffledQueue={shuffledQueue}
+          volume={volume}
+          onVolumeChange={audioStore.setVolume}
+          artworkOverride={currentArtwork || undefined}
+          artistOverride={currentArtistLabel || undefined}
+          onPlaySong={(idx) => {
+            const target = playlist[idx];
+            if (!target) return;
+            const eraToPass = ((target as any).realEra || currentEra) as Era;
+            void audioStore.playSongList(playlist, idx, eraToPass);
+          }}
+        />
+      )}
+    </AnimatePresence>
     <AnimatePresence>
       {closed ? (
         <motion.button
@@ -76,13 +117,23 @@ export function GlobalMiniPlayer() {
           animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
           exit={{ y: 100, opacity: 0, filter: 'blur(10px)' }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="fixed bottom-0 left-0 right-0 py-3 pb-safe md:py-0 md:h-24 bg-black/70 md:bg-black/60 backdrop-blur-3xl md:backdrop-blur-2xl border-t border-white/10 z-[60] grid grid-cols-[1fr_auto] md:flex items-center px-4 md:px-6 gap-y-4 gap-x-0 md:gap-0 rounded-t-3xl md:rounded-none"
+          className="fixed bottom-0 left-0 right-0 pt-4 pb-[max(1.25rem,calc(env(safe-area-inset-bottom)+0.75rem))] md:pt-0 md:pb-0 md:h-24 bg-black/70 md:bg-black/60 backdrop-blur-3xl md:backdrop-blur-2xl border-t border-white/10 z-[60] grid grid-cols-[1fr_auto] md:flex items-center px-5 md:px-6 gap-y-5 gap-x-0 md:gap-0 rounded-t-3xl md:rounded-none shadow-[0_-12px_40px_rgba(0,0,0,0.55)] md:shadow-none"
         >
-          <div className="flex items-center gap-4 min-w-0 md:flex-1 col-start-1 col-end-2 row-start-1 pr-4 md:pr-0">
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setExpanded(true)}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setExpanded(true); } }}
+            className="group flex items-center gap-4 min-w-0 md:flex-1 col-start-1 col-end-2 row-start-1 pr-4 md:pr-0 cursor-pointer"
+            title="Open full screen player"
+          >
             <div className="w-14 h-14 rounded-md overflow-hidden shrink-0 bg-white/10 relative shadow-lg">
               {imgUrl && (
                 <Img w={120} eager src={imgUrl} alt="Cover" className="w-full h-full object-cover" />
               )}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                <ChevronUp className="w-5 h-5 text-white" />
+              </div>
             </div>
             <div className="min-w-0">
               <div className="text-white font-bold break-words whitespace-normal leading-tight text-sm md:text-base pr-2">{formatTextWithTags(titleDisplay)}</div>
@@ -156,13 +207,17 @@ export function GlobalMiniPlayer() {
                 title="Volume"
               />
             </div>
+            <button onClick={() => setExpanded(true)} className="w-8 h-8 flex items-center justify-center text-white/40 hover:text-white transition-colors cursor-pointer" title="Full screen player">
+              <Maximize2 className="w-4 h-4" />
+            </button>
             <button onClick={() => setClosed(true)} className="w-8 h-8 flex items-center justify-center text-white/40 hover:text-white transition-colors cursor-pointer" title="Hide player">
               <X className="w-5 h-5" />
             </button>
           </div>
         </motion.div>
       )}
-    </AnimatePresence>,
+    </AnimatePresence>
+    </>,
     document.body,
   );
 }

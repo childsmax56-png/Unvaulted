@@ -9,7 +9,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { isLastfmLoggedIn } from '../lastfm';
 import { saveAs } from 'file-saver';
 import { Era } from '../types';
-import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, buildDownloadName, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { ArtEntry } from './ArtGallery';
 import { StemEntry } from './StemsView';
@@ -81,15 +81,15 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
           const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
           try {
             blob = await embedID3Tags(blob, {
-              title: songTitle,
-              artist: buildArtistTag(name, era),
+              title: buildTitleTag(name, settings.tagFeaturedArtists),
+              artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
               album: era,
               year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
               artworkUrl: artUrl,
             }, songTitle);
           } catch { /* skip tagging, save raw */ }
         }
-        zip.file(`${sanitizeFilename(era)}/${sanitizeFilename(name)}${ext}`, blob);
+        zip.file(`${sanitizeFilename(era)}/${sanitizeFilename(buildDownloadName(name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
       } catch { /* skip */ } finally {
         done++;
         setProgress('unreleased', `${done} / ${songs.length}`);
@@ -236,15 +236,15 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
             const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
             try {
               blob = await embedID3Tags(blob, {
-                title: songTitle,
-                artist: buildArtistTag(name, era),
+                title: buildTitleTag(name, settings.tagFeaturedArtists),
+                artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
                 album: era,
                 year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
                 artworkUrl: artUrl,
               }, songTitle);
             } catch { /* skip tagging, save raw */ }
           }
-          zip.file(`unreleased/${sanitizeFilename(era)}/${sanitizeFilename(name)}${ext}`, blob);
+          zip.file(`unreleased/${sanitizeFilename(era)}/${sanitizeFilename(buildDownloadName(name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
         } else if (kind === 'art') {
           const item = data;
           const url = item['Link(s)'].split('\n')[0].trim();
@@ -383,6 +383,21 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
               className={`w-11 h-6 rounded-full transition-colors relative shrink-0 ${settings.embedMetadata ? 'bg-[var(--theme-color)]' : 'bg-white/10'}`}
             >
               <div className={`w-5 h-5 rounded-full bg-white absolute top-0.5 transition-transform ${settings.embedMetadata ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
+            </button>
+          </div>
+        )}
+
+        {matchesSearch('tag featured artists feat ft with features metadata id3 artist download') && (
+          <div className="flex items-center justify-between p-4 bg-[#111] border border-white/5 rounded-xl">
+            <div className="flex flex-col">
+              <span className="text-sm font-medium text-white/90">Tag Featured Artists</span>
+              <span className="text-xs text-white/40">Add featured artists (feat., ft., with) to the title and artist tags of downloaded songs</span>
+            </div>
+            <button
+              onClick={() => updateSettings({ tagFeaturedArtists: !settings.tagFeaturedArtists })}
+              className={`w-11 h-6 rounded-full transition-colors relative shrink-0 ${settings.tagFeaturedArtists ? 'bg-[var(--theme-color)]' : 'bg-white/10'}`}
+            >
+              <div className={`w-5 h-5 rounded-full bg-white absolute top-0.5 transition-transform ${settings.tagFeaturedArtists ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
             </button>
           </div>
         )}
@@ -596,21 +611,6 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
               className={`w-11 h-6 rounded-full transition-colors relative shrink-0 ${settings.showRandomSongButton ? 'bg-[var(--theme-color)]' : 'bg-white/10'}`}
             >
               <div className={`w-5 h-5 rounded-full bg-white absolute top-0.5 transition-transform ${settings.showRandomSongButton ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
-            </button>
-          </div>
-        )}
-
-        {matchesSearch('yedit affiliates comps mode') && (
-          <div className="flex items-center justify-between p-4 bg-[#111] border border-white/5 rounded-xl">
-            <div className="flex flex-col">
-              <span className="text-sm font-medium text-white/90">Yedit Affiliates in Comps</span>
-              <span className="text-xs text-white/40">Move Yedit Affiliates into Comps as a button, removing it from the navbar</span>
-            </div>
-            <button
-              onClick={() => updateSettings({ YZYGOLDMode: !settings.YZYGOLDMode })}
-              className={`w-11 h-6 rounded-full transition-colors relative shrink-0 ${settings.YZYGOLDMode ? 'bg-[var(--theme-color)]' : 'bg-white/10'}`}
-            >
-              <div className={`w-5 h-5 rounded-full bg-white absolute top-0.5 transition-transform ${settings.YZYGOLDMode ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
             </button>
           </div>
         )}

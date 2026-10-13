@@ -90,6 +90,8 @@ export const shadygoldConfig: ArtistConfig = {
     "Unknown Album": "??/??/????",
     "The Re-Up": "12/05/2006",
     "Album 6": "??/??/????",
+    "King Mathers [V1]": "??/??/????",
+    "King Mathers [V2]": "??/??/????",
     "King Mathers": "??/??/????",
     "Relapse": "05/15/2009",
     "Relapse 2": "??/??/????",
@@ -166,6 +168,10 @@ export const shadygoldConfig: ArtistConfig = {
   CUSTOM_ALBUM_INFO: {},
   ERA_MAPPINGS: {
     "Still In The Bassmint /\nThe M&M Solo Tape": "Still In The Bassmint / \nThe M&M Solo Tape",
+    "Pre-SITB / M&MST": "Pre-Still In The Bassmint / The M&M Solo Tape",
+    "SITB / M&MST": "Still In The Bassmint / \nThe M&M Solo Tape",
+    "Side B": "Music To Be Murdered By: Side B",
+    "STANS": "STANS: The Official Soundtrack",
   },
 
   TAG_MAP: {

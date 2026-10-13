@@ -5,9 +5,14 @@
  * export only contains the display text of a hyperlink, e.g. "Pillowcase",
  * never the actual href — that's why links don't load).
  *
- * Run scripts/extract-cactigold-links.gs in script.google.com first to
- * produce cactigold-links.csv (saved to your Google Drive), download it,
- * then run this script to merge those URLs into the static CSVs.
+ * Produce cactigold-links.csv (Tab,Era,Name,URL) first, then run this script to
+ * merge those URLs into the static CSVs. Two ways to produce it:
+ *   - Automated (preferred): the Sheets API v4, no browser step —
+ *       GOOGLE_API_KEY=... node scripts/fetch-sheet-links.mjs \
+ *         --sheet 1gJqbQrb3dIWF-PLMsKkNUrftpQb8zxsZFDAIpSvT5Fo \
+ *         --out ~/Downloads/cactigold-links.csv
+ *   - Manual (legacy): run scripts/extract-cactigold-links.gs in
+ *       script.google.com, then download the result from your Google Drive.
  *
  * Usage: node scripts/build-cactigold-csvs.mjs
  *   Optional env: CACTIGOLD_LINKS_CSV=/path/to/cactigold-links.csv (default: ~/Downloads/cactigold-links.csv)

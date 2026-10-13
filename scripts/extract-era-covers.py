@@ -1,0 +1,238 @@
+#!/usr/bin/env python3
+"""Pull era cover art for trackers imported by build-bigupdate-csvs.py.
+
+Tracker sheets paste each era's cover as an image over the era-header row of
+the Unreleased tab. Neither the CSV export nor the Sheets API returns those
+images, but the sheet's xlsx export embeds them as drawings anchored to a cell.
+This maps every image anchored on the Unreleased tab to the era-header row it
+sits on, saves it to public/<slug>/eras/<era-slug>.<ext> (downscaled to 600px),
+and writes public/<slug>/eras/covers.json ({era: path}). build-bigupdate-csvs.py
+reads covers.json into the config's CUSTOM_IMAGES — re-run it afterwards.
+
+Usage: python3 scripts/extract-era-covers.py [batch] [folder ...]
+"""
+import csv, html, importlib.util, io, json, os, posixpath, re, subprocess, sys, tempfile, urllib.request, zipfile
+from xml.etree import ElementTree as ET
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+spec = importlib.util.spec_from_file_location("imp", os.path.join(HERE, "build-bigupdate-csvs.py"))
+imp = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(imp)
+
+NS = {
+    "m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
+    "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+    "xdr": "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing",
+    "a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+}
+RID = "{%s}id" % NS["r"]
+EMBED = "{%s}embed" % NS["r"]
+
+
+def rels(z, path):
+    d, b = posixpath.split(path)
+    rp = f"{d}/_rels/{b}.rels"
+    if rp not in z.namelist():
+        return {}
+    return {e.get("Id"): posixpath.normpath(posixpath.join(d, e.get("Target")))
+            for e in ET.fromstring(z.read(rp))}
+
+
+def sheet_images(z, sheet_name):
+    """[(row, col, media path)] for images drawn on the named sheet."""
+    wb = ET.fromstring(z.read("xl/workbook.xml"))
+    wr = rels(z, "xl/workbook.xml")
+    for s in wb.find("m:sheets", NS):
+        if s.get("name") != sheet_name:
+            continue
+        path = wr[s.get(RID)]
+        sr = rels(z, path)
+        out = []
+        for d in ET.fromstring(z.read(path)).findall("m:drawing", NS):
+            dp = sr[d.get(RID)]
+            dr = rels(z, dp)
+            for anc in ET.fromstring(z.read(dp)):
+                fr, blip = anc.find("xdr:from", NS), anc.find(".//a:blip", NS)
+                if fr is not None and blip is not None and dr.get(blip.get(EMBED)):
+                    out.append((int(fr.find("xdr:row", NS).text),
+                                int(fr.find("xdr:col", NS).text), dr[blip.get(EMBED)]))
+        return out
+    return []
+
+
+# workbooks holding several Unreleased-looking tabs (backups, drafts)
+UNRELEASED_TAB = {"olivertreegold": "The Unreleased"}
+# group trackers: one Unreleased tab per member -> [(workbook tab, source CSV)]
+MEMBER_TABS = {"migosgold": [("Migos", "x - Unreleased.csv"), ("Quavo", "x - Unreleased+1 Quavo.csv"),
+                             ("Offset", "x - Unreleased+2 Offset.csv"), ("Takeoff", "x - Unreleased+3 Takeoff.csv")]}
+
+
+def flatten_alpha(path):
+    """Logos pasted with transparency (e.g. DMX's black label logos) sit on the
+    sheet's white cells but vanish on the site's dark cards — flatten onto white."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    im = Image.open(path)
+    if im.mode in ("RGBA", "LA", "P") and "A" in im.convert("RGBA").getbands():
+        rgba = im.convert("RGBA")
+        if rgba.getextrema()[3][0] < 255:
+            bg = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
+            bg.alpha_composite(rgba)
+            bg.convert("RGB").save(path)
+
+
+def unreleased_gid(src_root, folder):
+    """The Unreleased tab's gid from the batch's list.tsv (name<TAB>sheet<TAB>Tab:gid ...)."""
+    path = os.path.join(src_root, "list.tsv")
+    if not os.path.exists(path):
+        return None
+    for line in open(path, encoding="utf-8"):
+        parts = line.rstrip("\n").split("\t")
+        if len(parts) == 3 and parts[0] == folder:
+            return next((t.split(":")[1] for t in parts[2].split() if t.split(":")[0] == "Unreleased"), None)
+    return None
+
+
+def htmlview_images(sheet_id, gid):
+    """[(row, image URL)] from the tab's web view. Fallback for sheets whose
+    downloads are disabled (xlsx export 401s, e.g. NBA YoungBoy): the view still
+    renders pasted images, as w120 thumbnails — '=s0' fetches the original."""
+    req = urllib.request.Request(
+        f"https://docs.google.com/spreadsheets/d/{sheet_id}/htmlview/sheet?headers=true&gid={gid}",
+        headers={"User-Agent": "Mozilla/5.0"})
+    page = urllib.request.urlopen(req).read().decode("utf-8", "replace")
+    out = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+        img = re.search(r'<img[^>]*src="([^"]+)"', tr)
+        num = re.search(r"<th[^>]*>(?:<[^>]+>)*\s*(\d+)\s*<", tr)
+        if img and num:
+            url = html.unescape(img.group(1))
+            out.append((int(num.group(1)) - 1, re.sub(r"=[wsh][^/=]*$", "", url) + "=s0"))
+    return out
+
+
+def image_ext(data):
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return ".png"
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return ".webp"
+    if data[:3] == b"GIF":
+        return ".gif"
+    return ".jpg"
+
+
+def slugify(s):
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-") or "era"
+
+
+def main():
+    args = sys.argv[1:]
+    batch = args.pop(0) if args and args[0] in imp.BATCHES else "2026-10"
+    src_root, artists = imp.BATCHES[batch]
+    for folder, meta in artists.items():
+        if args and folder not in args:
+            continue
+        slug, sheet_id = meta[0], (meta[5] if len(meta) > 5 else "")
+        unrel_csv = os.path.join(src_root, folder, "x - Unreleased.csv")
+        if not sheet_id or not os.path.exists(unrel_csv):
+            continue
+        print(f"\n{folder} -> {slug}")
+        z = None
+        try:
+            data = urllib.request.urlopen(
+                f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=xlsx").read()
+            z = zipfile.ZipFile(io.BytesIO(data))
+        except Exception as e:  # downloads disabled (Dax, NBA YoungBoy) — export 401s
+            gid = unreleased_gid(src_root, folder)
+            print(f"    xlsx export unavailable ({e}); trying the web view" + ("" if gid else " — no gid in list.tsv"))
+            if not gid:
+                continue
+
+        if z is not None:
+            # the Unreleased tab: the workbook sheet whose name canon_tab maps to unreleased
+            wb = ET.fromstring(z.read("xl/workbook.xml"))
+            names = [s.get("name") for s in wb.find("m:sheets", NS)]
+            tab = UNRELEASED_TAB.get(slug) or next(
+                (n for n in names if imp.canon_tab(n) == "unreleased"
+                 and not re.search(r"backup|copy|before|old", n, re.I)), None)
+        else:
+            tab = gid  # web-view fallback addresses the tab by gid
+        pairs = MEMBER_TABS.get(slug) if z is not None and MEMBER_TABS.get(slug) else \
+            ([(tab, "x - Unreleased.csv")] if tab else [])
+        if not pairs:
+            print("    !! no Unreleased tab in workbook")
+            continue
+
+        # era names exactly as the importer emits them (header rows, post-fixes)
+        eras = []
+        for _, fn in pairs:
+            for r in imp.build_unreleased(imp.read_rows(os.path.join(src_root, folder, fn)), imp.ERA_FIXES.get(slug)):
+                e = imp.clean(r[1].split("\n")[0])
+                if "\n" in r[0] and e not in eras:
+                    eras.append(e)
+        fixes = imp.ERA_FIXES.get(slug, {}).get("headers", {})
+
+        def era_for_row(row, raw, name_i):
+            cell = raw[row][name_i] if row < len(raw) and name_i < len(raw[row]) else ""
+            cell = fixes.get(re.sub(r"\s+", " ", cell).strip(), cell)
+            k = imp.era_key(re.sub(r"\(.*?\)", "", cell.split("\n")[0]))
+            if not k:
+                return None
+            exact = [e for e in eras if imp.era_key(e) == k]
+            if exact:
+                return exact[0]
+            pref = [e for e in eras if imp.era_key(e).startswith(k) or k.startswith(imp.era_key(e))]
+            if len(pref) == 1:
+                return pref[0]
+            # eras named after their songs' Era cells (prefer_song_era, NBA YoungBoy):
+            # the header's era is the one filed on the first song row below it
+            if row < len(raw) and imp.era_header_cell(raw[row]):
+                songs = imp.ERA_FIXES.get(slug, {}).get("songs", {})
+                for r in raw[row + 1:]:
+                    if r and imp.era_header_cell(r):
+                        break
+                    era = re.sub(r"\s+", " ", r[0]).strip().rstrip("*").strip() if r else ""
+                    if era:
+                        era = songs.get(era, era)
+                        return era if era in eras else None
+            return None
+
+        out_dir = os.path.join(HERE, "..", "public", slug, "eras")
+        os.makedirs(out_dir, exist_ok=True)
+        covers = {}
+        images = []
+        for tab, fn in pairs:
+            raw = imp.read_rows(os.path.join(src_root, folder, fn))
+            h = raw[imp.find_header(raw)]
+            name_i = imp.col(h, "name") or imp.col(h, "title") or 1
+            if z is not None:
+                images += [(row, (lambda m=media: z.read(m)), raw, name_i)
+                           for row, _col, media in sorted(sheet_images(z, tab))]
+            else:
+                images += [(row, (lambda u=url: urllib.request.urlopen(urllib.request.Request(
+                               u, headers={"User-Agent": "Mozilla/5.0"})).read()), raw, name_i)
+                           for row, url in htmlview_images(sheet_id, tab)]
+        for row, load, raw, name_i in images:
+            era = era_for_row(row, raw, name_i)
+            if not era or era in covers:
+                print(f"    skip image at row {row + 1}" + (f" ({era} already has one)" if era else " (not an era header)"))
+                continue
+            data = load()
+            fn = slugify(era) + image_ext(data)
+            dst = os.path.join(out_dir, fn)
+            with open(dst, "wb") as f:
+                f.write(data)
+            # downscale big pastes; covers render at card size
+            subprocess.run(["sips", "-Z", "600", dst], capture_output=True)
+            flatten_alpha(dst)
+            covers[era] = f"/{slug}/eras/{fn}"
+        with open(os.path.join(out_dir, "covers.json"), "w", encoding="utf-8") as f:
+            json.dump(covers, f, indent=1, ensure_ascii=False)
+        missing = [e for e in eras if e not in covers]
+        print(f"    {len(covers)}/{len(eras)} eras have covers" + (f"; missing: {missing}" if missing else ""))
+
+
+if __name__ == "__main__":
+    main()

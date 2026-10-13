@@ -1,11 +1,17 @@
-import { parseCSV, csvResponse } from './_csvParser';
+import { parseCSV, csvResponse, splitCSVRows, joinCSVRows } from './_csvParser';
 import { fetchTrackerCsv } from './_sheets';
 import { resolveCommunityTracker, buildCommunityTrackerData } from './_community';
 
 // Extract the URL from a Google Sheets HYPERLINK formula: =HYPERLINK("url","text") → url
 function extractHyperlinkUrl(cell: string): string {
   const m = cell.match(/^=HYPERLINK\("([^"]+)"/i);
-  return m ? m[1] : cell;
+  if (m) return m[1];
+  // Some sheets (e.g. daftpunkgold) prefix a real source link with stray text like
+  // "N/A https://..." — the leading text makes looksLikeRealLink() pass (it just checks
+  // for "://") but breaks the URL when used as-is. Strip anything before the link itself.
+  const httpIdx = cell.search(/https?:\/\//i);
+  if (httpIdx > 0) return cell.slice(httpIdx).trim();
+  return cell;
 }
 
 function parseSongName(raw: string): { name: string; extra: string | undefined } {
@@ -22,6 +28,14 @@ function parseSongName(raw: string): { name: string; extra: string | undefined }
 const ERA_NAME_MAP: Record<string, string> = {
   'Turbo Grafx 16': 'Turbo Grafix 16',
   'Turbo Grafx-16': 'Turbo Grafix 16',
+  // yegold — the real sheet titles the era "Hitler" directly (Ye's own name for
+  // it) rather than the "LOVE EVERYONE" title used everywhere else in the app;
+  // a stray 2-song "DONDA 2" row from the SSC merge tab folds into DONDA 2 [V1];
+  // the SSC tab's own "JESUS IS LORD" section is this era's current real name,
+  // God's Country, reused by the live sheet for an unrelated earlier era.
+  'Hitler': 'LOVE EVERYONE',
+  'DONDA 2': 'DONDA 2 [V1]',
+  'JESUS IS LORD': "God's Country",
   'KIDS SEE GHOSTS': 'KIDS SEE GHOSTS',
   'KIDS SEE GHOST': 'KIDS SEE GHOSTS',
   'KIDSSEEGHOSTS': 'KIDS SEE GHOSTS',
@@ -88,9 +102,6 @@ const ERA_NAME_MAP: Record<string, string> = {
 function mapEraName(name: string): string {
   return ERA_NAME_MAP[name] ?? name;
 }
-
-// Artists whose ERA_ORDER is exhaustive — unlisted rows (e.g. changelog footer) are dropped.
-const EXHAUSTIVE_ERA_ORDER_ARTISTS = new Set(['yzygold', 'kdotgold', 'dongold', 'colegold', 'aapgold', 'mfgold', 'mjgold', 'slimegold', 'sosagold']);
 
 // Per-artist ERA_ORDER for artists whose CSVs have eras in the wrong order.
 const ARTIST_ERA_ORDERS: Record<string, string[]> = {
@@ -365,8 +376,8 @@ const ARTIST_ERA_ORDERS: Record<string, string[]> = {
     'Talk That Talk',
     'Unapologetic',
     'ANTI',
-    'R9*',
-    'Ongoing',
+    'R9 [V1]',
+    'R9 [V2]',
   ],
 };
 
@@ -400,12 +411,27 @@ export const onRequestGet: PagesFunction = async (context) => {
       text = fallbackText;
     }
 
-    // Some CSVs (e.g. wolfgold) have a disclaimer block before the real header row.
-    // Find the first line that starts with "Era," and strip everything before it.
-    const eraHeaderIdx = text.split('\n').findIndex(l => l.trimStart().startsWith('Era,') || l.trimStart().startsWith('"Era"'));
-    const csvText = eraHeaderIdx > 0 ? text.split('\n').slice(eraHeaderIdx).join('\n') : text;
+    // Some CSVs (e.g. wolfgold) have a disclaimer block before the real header row,
+    // and several live sheets no longer label the era column "Era" (jayzgold/teccagold
+    // use "Album"; dongold/dannybrowngold/chrisbrowngold/gunnagold/wolfgold leave it
+    // blank or put "\", " " or "." there). Find the header row by its Name/Title column,
+    // drop everything above it, and name its first column "Era" — otherwise no row has
+    // an Era field and the tracker builds 0 songs.
+    const allRows = splitCSVRows(text);
+    const headerIdx = allRows.findIndex(r =>
+      r.slice(0, 3).some(c => /^\s*(name|title)\b/i.test(c)) && r.some(c => /link|source/i.test(c)));
+    let csvText = text;
+    if (headerIdx >= 0) {
+      const header = [...allRows[headerIdx]];
+      header[0] = 'Era';
+      csvText = joinCSVRows([header, ...allRows.slice(headerIdx + 1)]);
+    }
 
     const rows = parseCSV(csvText);
+
+    // Some sheets pad era names with runs of spaces ("Pre-LONG.      LIVE.A$AP" in
+    // aapgold) — collapse them so the names match the tracker config.
+    const collapseSpaces = (v: string) => v.replace(/[ \t]{2,}/g, ' ');
 
     // Detect which column holds the song/era name — different CSVs use different headers.
     // Some use 'Name\n(Join The Discord!)', others use 'Name\n(Check out the Tracker website!)', etc.
@@ -421,11 +447,12 @@ export const onRequestGet: PagesFunction = async (context) => {
       ? (Object.keys(rows[0]).find(k => k === 'Notes') ?? Object.keys(rows[0]).find(k => k.startsWith('Notes')) ?? Object.keys(rows[0]).find(k => k === 'Info') ?? 'Notes')
       : 'Notes';
 
-    // Detect track length and available length columns (wolfgold uses 'Length' / 'Availability').
+    // Detect track length and available length columns (wolfgold uses 'Length' / 'Availability';
+    // sosagold/jayzgold/cudigold/macgold use 'Currently Available'; sosagold uses 'Link').
     const firstRowKeys = rows.length > 0 ? Object.keys(rows[0]) : [];
     const TRACK_LENGTH_KEY = firstRowKeys.find(k => k === 'Track Length') ?? firstRowKeys.find(k => k === 'Length') ?? 'Track Length';
-    const AVAIL_LENGTH_KEY = firstRowKeys.find(k => k === 'Available Length') ?? firstRowKeys.find(k => k === 'Availability') ?? firstRowKeys.find(k => k === 'Portion') ?? 'Available Length';
-    const LINKS_KEY = firstRowKeys.find(k => k === 'Link(s)') ?? firstRowKeys.find(k => k === 'Source') ?? 'Link(s)';
+    const AVAIL_LENGTH_KEY = firstRowKeys.find(k => k === 'Available Length') ?? firstRowKeys.find(k => k === 'Availability') ?? firstRowKeys.find(k => k === 'Currently Available') ?? firstRowKeys.find(k => k === 'Portion') ?? 'Available Length';
+    const LINKS_KEY = firstRowKeys.find(k => k === 'Link(s)') ?? firstRowKeys.find(k => k === 'Source') ?? firstRowKeys.find(k => k === 'Link') ?? firstRowKeys.find(k => /link/i.test(k)) ?? 'Link(s)';
 
     const eras: Record<string, any> = {};
 
@@ -436,7 +463,7 @@ export const onRequestGet: PagesFunction = async (context) => {
     for (const row of rows) {
       const eraField = row['Era'] ?? '';
       if (!eraField.includes('\n')) continue;
-      const { name: eraName } = parseSongName(row[NAME_KEY] ?? '');
+      const { name: eraName } = parseSongName(collapseSpaces(row[NAME_KEY] ?? ''));
       if (eraName && !/^\d+\s/.test(eraName)) {
         validEraNames.add(eraName);
         // Also add the mapped name so song rows whose Era column uses the short name are found
@@ -446,9 +473,17 @@ export const onRequestGet: PagesFunction = async (context) => {
 
     // Always supplement validEraNames with song-row era names so eras that have songs
     // but no header row (e.g. TrapMoneyBenny Collab, 004PF in vampgold) are not dropped.
+    // Some sheets (e.g. nasgold) trail a changelog/credits block ("Update Notes",
+    // "6/22/26: [iaon] made editor", a long "Special Thanks to..." sentence) below the
+    // real tracklist, in the same Era column — exclude that free text so it doesn't turn
+    // into its own bogus era.
+    const isJunkEraText = (s: string): boolean =>
+      s.length > 120 || /^\d{1,2}\/\d{1,2}\/\d{2,4}:/.test(s) || /^(Update Notes|Tracker Guidelines|Tracker News|Links|Changelogs?)$/i.test(s)
+      // a bare date or member list in parentheses, e.g. frankgold "(June 4th, 2026)"
+      || /^\(.*\)$/.test(s);
     for (const row of rows) {
-      const eraField = (row['Era'] ?? '').trim();
-      if (eraField && !eraField.includes('\n') && !/^\d+\s+(OG|Full|Tagged|Partial|Snippet|Unavailable)\b/i.test(eraField)) {
+      const eraField = collapseSpaces(row['Era'] ?? '').trim();
+      if (eraField && !eraField.includes('\n') && !/^\d+\s+(OG|Full|Tagged|Partial|Snippet|Unavailable)\b/i.test(eraField) && !isJunkEraText(eraField)) {
         validEraNames.add(eraField);
         validEraNames.add(mapEraName(eraField));
       }
@@ -456,12 +491,12 @@ export const onRequestGet: PagesFunction = async (context) => {
 
     // Second pass: build eras and songs, ignoring anything outside known eras.
     for (const row of rows) {
-      const eraField = row['Era'] ?? '';
+      const eraField = collapseSpaces(row['Era'] ?? '');
       const nameField = row[NAME_KEY] ?? '';
 
       if (eraField.includes('\n')) {
         // Era header row
-        const { name: rawName, extra } = parseSongName(nameField);
+        const { name: rawName, extra } = parseSongName(collapseSpaces(nameField));
         if (!rawName || !validEraNames.has(rawName)) continue;
         const eraName = mapEraName(rawName);
 
@@ -481,6 +516,7 @@ export const onRequestGet: PagesFunction = async (context) => {
         }
 
         const { name, extra } = parseSongName(nameField);
+        if (!name) continue;
         const links = (row[LINKS_KEY] ?? '').split('\n').map((l: string) => extractHyperlinkUrl(l.trim())).filter(Boolean);
 
         eras[eraName].data['Unreleased Tracks'].push({
@@ -495,6 +531,18 @@ export const onRequestGet: PagesFunction = async (context) => {
           url: links[0] ?? '',
           urls: links,
         });
+      }
+    }
+
+    // Footer blocks (credits, editor lists, community rules — e.g. wolfgold,
+    // dannybrowngold, chrisbrowngold) put free text in the Era column, which the
+    // passes above turn into eras. Real eras have a header row (fileInfo) or at least
+    // one song with a link, length, availability or quality; drop those that don't.
+    for (const [eraName, era] of Object.entries(eras)) {
+      if (era.fileInfo) continue;
+      const songs: any[] = era.data['Unreleased Tracks'];
+      if (!songs.some(s => s.url || s.track_length.trim() || s.available_length.trim() || s.quality.trim())) {
+        delete eras[eraName];
       }
     }
 
@@ -576,12 +624,12 @@ export const onRequestGet: PagesFunction = async (context) => {
       for (const name of eraOrder) {
         if (eras[name]) orderedEras[name] = eras[name];
       }
-      // For exhaustive orders, drop unlisted rows (changelog/footer garbage).
-      // For non-exhaustive orders, append any eras not in the order list.
-      if (!EXHAUSTIVE_ERA_ORDER_ARTISTS.has(artist)) {
-        for (const name of Object.keys(eras)) {
-          if (!orderedEras[name]) orderedEras[name] = eras[name];
-        }
+      // Append eras missing from the order list instead of dropping them — sheets add
+      // and rename eras (aapgold "TESTING [V3]", sosagold "4NEM"), and dropping them here
+      // hid their songs before the client's ERA_MAPPINGS could rename them. Footer junk
+      // is already removed above, and the client only shows configured eras.
+      for (const name of Object.keys(eras)) {
+        if (!orderedEras[name]) orderedEras[name] = eras[name];
       }
     } else {
       // For other artists, preserve CSV row order as-is.

@@ -1968,7 +1968,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "notes": "Now defunked XXXTENTACION merch site",
       "type": "Website",
       "status": "",
-      "link": ""
+      "link": "https://shopxxxtentacion.com"
     },
     {
       "platform": "Website",
@@ -2355,6 +2355,698 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "type": "Social Media",
       "status": "Active",
       "link": "https://www.instagram.com/lyfestylecorporation"
+    }
+  ],
+  "deathgripsgold": [
+    {
+      "platform": "Amazon Music",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://music.amazon.com/artists/B0050QEO88/death-grips"
+    },
+    {
+      "platform": "Apple Music",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://music.apple.com/us/artist/death-grips/437819641"
+    },
+    {
+      "platform": "Deezer",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://www.deezer.com/us/artist/1699729"
+    },
+    {
+      "platform": "Facebook",
+      "handle": "Death Grips",
+      "notes": "Death Grips official Facebook page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.facebook.com/deathgripz/"
+    },
+    {
+      "platform": "Instagram",
+      "handle": "bbpoltergiest",
+      "notes": "Death Grips official Instagram page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.instagram.com/bbpoltergiest/"
+    },
+    {
+      "platform": "SoundCloud",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://soundcloud.com/deathgrips"
+    },
+    {
+      "platform": "Spotify",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://open.spotify.com/artist/5RADpgYLOuS2ZxDq7ggYYH"
+    },
+    {
+      "platform": "Tidal",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://tidal.com/artist/4557268"
+    },
+    {
+      "platform": "Pandora",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://www.pandora.com/artist/death-grips/ARrcp2d6ft62lX9"
+    },
+    {
+      "platform": "Qobuz",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://www.qobuz.com/us-en/interpreter/death-grips/765442"
+    },
+    {
+      "platform": "Twitter",
+      "handle": "bbpoltergiest",
+      "notes": "Death Grips official X page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://x.com/bbpoltergiest"
+    },
+    {
+      "platform": "Twitter",
+      "handle": "DeathGripz",
+      "notes": "Death Grips old twitter name.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://x.com/DeathGripz"
+    },
+    {
+      "platform": "YouTube",
+      "handle": "Death Grips",
+      "notes": "Death Grips official YouTube channel where music videos, can be found.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.youtube.com/channel/UCuq1H-HXWoW4JL-hX5bWxzw"
+    },
+    {
+      "platform": "YouTube Music",
+      "handle": "Death Grips",
+      "notes": "Subscription based streaming platform where Death Grips commercial discography can be found.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://music.youtube.com/@deathgrippin"
+    },
+    {
+      "platform": "Website",
+      "handle": "Thirdworlds",
+      "notes": "Death's Grips official website to buy merch download music or stems and many more.",
+      "type": "Other",
+      "status": "",
+      "link": "https://thirdworlds.net/index.html"
+    },
+    {
+      "platform": "Afera",
+      "handle": "",
+      "notes": "All of Zach Hill's social media & more.",
+      "type": "Social Media",
+      "status": "",
+      "link": ""
+    },
+    {
+      "platform": "bandcamp",
+      "handle": "Bandcamp",
+      "notes": "Zach Hill Offical Bandcamp page.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://zachhill.bandcamp.com/"
+    },
+    {
+      "platform": "bandcamp",
+      "handle": "Bandcamp",
+      "notes": "Zach Hill Old Bandcamp page.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://zachhill-ipecac.bandcamp.com/album/astrological-straits"
+    },
+    {
+      "platform": "Facebook",
+      "handle": "Zach Hill",
+      "notes": "Zach's official Facebook page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.facebook.com/zachhillmusic/"
+    },
+    {
+      "platform": "Instagram",
+      "handle": "gottagoogle",
+      "notes": "Zach's official Instagram page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.instagram.com/gottagoogle/"
+    },
+    {
+      "platform": "TikTok",
+      "handle": "zachhill0_0",
+      "notes": "Zach's official TikTok page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.tiktok.com/@zachhill0_0"
+    },
+    {
+      "platform": "Website",
+      "handle": "zachhillmusic",
+      "notes": "Archived version of Zach Hill official website to follow updates from himself.",
+      "type": "Other",
+      "status": "",
+      "link": "https://web.archive.org/web/20110209025556/http://zachhillmusic.com/"
+    },
+    {
+      "platform": "Afera",
+      "handle": "",
+      "notes": "All of Stefan's social media & more.",
+      "type": "Social Media",
+      "status": "",
+      "link": ""
+    },
+    {
+      "platform": "Twitter",
+      "handle": "Twitter",
+      "notes": "According to Death Grips Wiki, Stefan had a twitter that has gone unused since 2010, Now if the search for the account it says User Not Found.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://twitter.com/burnett_78"
+    },
+    {
+      "platform": "Website",
+      "handle": "stefanburnett",
+      "notes": "Stefan's Burnett now inactive website ran by stefan himself.",
+      "type": "Other",
+      "status": "",
+      "link": "https://stefanburnett.com/"
+    },
+    {
+      "platform": "Afera",
+      "handle": "",
+      "notes": "All of Andy Morin's social media & more.",
+      "type": "Social Media",
+      "status": "",
+      "link": ""
+    },
+    {
+      "platform": "Website",
+      "handle": "A2B2",
+      "notes": "A2B2 Website is a website made by Andy Morin. The website contains pasta and a picture of Andy himself, his Twitter, and his e-mail.",
+      "type": "Other",
+      "status": "",
+      "link": "https://a2b2.org/?count=10"
+    },
+    {
+      "platform": "Instagram",
+      "handle": "Andy Morin",
+      "notes": "Andy's official Instagram page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.instagram.com/andy_morin/"
+    },
+    {
+      "platform": "𝕏",
+      "handle": "Andy Morin",
+      "notes": "Andy's official X page.",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://x.com/andy__morin"
+    },
+    {
+      "platform": "bandcamp",
+      "handle": "Bandcamp",
+      "notes": "A2B2 Bandcamp page.",
+      "type": "Streaming Service",
+      "status": "",
+      "link": "https://a2b2.bandcamp.com/"
+    },
+    {
+      "platform": "YouTube",
+      "handle": "Andy Morin",
+      "notes": "Andy Morin youtube Channel",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://www.youtube.com/@epicproblem"
+    }
+  ],
+  "jpegmafiagold": [
+    {
+      "platform": "Nicknames",
+      "handle": "Devon Hendryx",
+      "notes": "Devon Hendryx went under various nicknames, being, DeVon Hendryx, Dévon Hendryx, The Rockwood Escape Plan, Ben Yuddha, Geny89. Gen89, Joey. D Chills, Joechillworld & PicheDreams.",
+      "type": "Other",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Bandcamp",
+      "handle": "dvonhendryx",
+      "notes": "Official Bandcamp. Note that devonhendryx.bandcamp.com is not official and is just an account made by a fan",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": "https://dvonhendryx.bandcamp.com"
+    },
+    {
+      "platform": "Bandcamp",
+      "handle": "Ben Yuddha (JPEGMAFIA)",
+      "notes": "Bandcamp that Devon in 2014 for a short while, only one archive exists of it which is insane to think about. Recently it has been discovered that Ben Yuddha is the current JPEGMAFIA Bandcamp",
+      "type": "Streaming Service",
+      "status": "Archived",
+      "link": "https://benyuddha.bandcamp.com"
+    },
+    {
+      "platform": "Bandcamp",
+      "handle": "The Rockwood Escape Plan (rockwoodescapeplan)",
+      "notes": "Bandcamp that Devon used in 2013 for a short while, only used to host Call Me Maybe & Silver St. Cloud. As of right now, the page has nothing on it.",
+      "type": "Streaming Service",
+      "status": "Partial",
+      "link": "https://rockwoodescapeplan.bandcamp.com"
+    },
+    {
+      "platform": "Bandcamp",
+      "handle": "hibikilovesdita",
+      "notes": "Another Bandcamp Devon used that has the same pfp as the rockwoodescapeplan Bandcamp, unknown what it had",
+      "type": "Streaming Service",
+      "status": "Partial",
+      "link": ""
+    },
+    {
+      "platform": "Bandcamp",
+      "handle": "Ghost Pop",
+      "notes": "Another suspected Devon account, however there's only archives from 2023, so it's unknown if he actually owned it",
+      "type": "Streaming Service",
+      "status": "Partial",
+      "link": "https://ghostpop1.bandcamp.com"
+    },
+    {
+      "platform": "Spotify",
+      "handle": "Devon Hendryx",
+      "notes": "Offical Spotify",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Apple Music",
+      "handle": "Devon Hendryx",
+      "notes": "Offical Apple Music, the only difference is that THE GHOST~POP TAPE is marked as a compilation",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "SoundCloud",
+      "handle": "generationy2k",
+      "notes": "On a certain archive of the JOECHILLWORLD Bandcamp page, there's a link to a soundcloud account called generationy2k, there are no archives of it, but its Peggy's current Soundcloud due to some songs of his being from years prior to their actual release, which is a feature of SoundCloud (replacing audio of already released songs)",
+      "type": "Streaming Service",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "YouTube",
+      "handle": "joechillworld",
+      "notes": "Devon's main Youtube, a lot of stuff is still up but archive.org shows a lot more stuff like EDIE 2009 or ANNE HATHAWAY, lots of lost media related to it. Majority of the videos on the channel have been privated/deleted and is unlikely to resurface.",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://youtube.com/joechillworld"
+    },
+    {
+      "platform": "Twitter",
+      "handle": "Devon Hendryx (idGenerationY, devonhendryx, デボンヘンドリックス)",
+      "notes": "Devon's old twitter which is seperate from his current Twitter, no archives of it, however screenshots of replies and posts exist",
+      "type": "Social Media",
+      "status": "Screenshots Only",
+      "link": "https://twitter.com/idGenerationY"
+    },
+    {
+      "platform": "Twitter",
+      "handle": "Ben Yuddha",
+      "notes": "According to some archives of killywhitey, within the sourcecode it says that Devon had made a Ben Yuddha twitter, given that Devon was under Ben Yuddha for so little time, it's likely he had no tweets on said account",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": "https://twitter.com/ibenyuddha"
+    },
+    {
+      "platform": "MySpace",
+      "handle": "Devon Hendryx",
+      "notes": "Nuked in 2019 due to a MySpace data erase, had a lot of important stuff on it like a full download of Anne Hathaway that we could've had",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "Tumblr",
+      "handle": "devonhendryx-blog",
+      "notes": "Also lost",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "Tumblr",
+      "handle": "theghostpoptape",
+      "notes": "Ditto",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "Tumblr",
+      "handle": "devonhendryx",
+      "notes": "Tumblr page that was active around 2019. Has some cryptic posts and shows a werid obsession with Frank Ocean. Was breiflly linked on the Devon Hendryx Bandcamp before the expanded edition of TGPT came out. Found by yung neil.",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://www.tumblr.com/devonhendryx"
+    },
+    {
+      "platform": "FaceBook",
+      "handle": "Devon Hendryx",
+      "notes": "Devon used to have Facebook but it was never archived and is likely never gonna get rediscovered",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "Genius",
+      "handle": "Devon Hendryx",
+      "notes": "Mess of a page, missing a ton of stuff, which can be found via archives",
+      "type": "Social Media",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Rhythmshare",
+      "handle": "devonhendryx",
+      "notes": "Devon owned a rhythmshare account to show his music, Anne Hathaway was uploaded here",
+      "type": "Social Media",
+      "status": "Archived",
+      "link": "https://web.archive.org/web/20110124004923/rhythmshare.com/members/devonhendryx.htm"
+    },
+    {
+      "platform": "Vimeo",
+      "handle": "devonhendryx",
+      "notes": "",
+      "type": "Social Media",
+      "status": "Screenshots Only",
+      "link": ""
+    },
+    {
+      "platform": "Website",
+      "handle": "devonhendryx",
+      "notes": "Devon's website that he would post blogs and links to his works, was active from (according to archive.org) 2011-2015, but potentially before then given he'd need a platform to post his music promo",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://devonhendryx.com"
+    },
+    {
+      "platform": "Website",
+      "handle": "ghostpop",
+      "notes": "Promotional website for THE GHOST~POP TAPE",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://ghostpop.jp"
+    },
+    {
+      "platform": "Website",
+      "handle": "killwhitey (com)",
+      "notes": "Devon owned the website to promote his music most likely starting 2012 and ending 2015, note that someone did own the domain before Devon, which is why there are archives of the site in like 2000.",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://killwhitey.com"
+    },
+    {
+      "platform": "Website",
+      "handle": "killwhitey (net)",
+      "notes": "Ditto, but is completely blank and has a couple archives from 2013-2015, was potentially an error on Devon's end when creating the website, or a dupe website that he also used.",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://killwhitey.net"
+    },
+    {
+      "platform": "Website",
+      "handle": "geny89",
+      "notes": "Promotional website owned by Devon between 2012 and 2015. was basically a duplicate of devonhendryx.com",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://geny89.com"
+    },
+    {
+      "platform": "Website",
+      "handle": "fuckhockey",
+      "notes": "Apparently Devon owned this site but there isn't a lot of information surrounding it",
+      "type": "Other",
+      "status": "Unavailable",
+      "link": "https://fuckhockey.com"
+    },
+    {
+      "platform": "Website",
+      "handle": "fuckwhitey",
+      "notes": "Much like fuckhockey, there are archives of fuckwhitey, like killwhitey, but they are all blank/don't load, it's possible Devon also owned this site",
+      "type": "Other",
+      "status": "Unavailable",
+      "link": "https://fuckwhitey.com"
+    },
+    {
+      "platform": "XVideos",
+      "handle": "therockwoodescapeplan (NSFW)",
+      "notes": "Nothing on it right now, but was most likely where THE GHOST~POP TAPE Movie was uploaded",
+      "type": "Social Media",
+      "status": "Partial",
+      "link": ""
+    },
+    {
+      "platform": "Misc",
+      "handle": "???",
+      "notes": "Given that Devon has has been making music since the early 2000s. and that some songs predate Devon's Tape, and that songs like Pu$$y #1 & WE DON'T LOVE THESE HOES were made around 2007-2008 and clearly don't fit the style of that era / album, Devon likely had made other projects, and therefore likely made other accounts to post these songs, there are also accounts that could've existed, like a Ben Yuddha website, Hibiki Twitter or geny89 Bandcamp, but we'll never know because there's no archives of it.",
+      "type": "Social Media",
+      "status": "Speculated",
+      "link": ""
+    },
+    {
+      "platform": "Nicknames",
+      "handle": "JPEGMAFIA",
+      "notes": "JPEGMAFIA has gone under far more names than Devon, those being, JPEG, Peggy, DJ SNITCH BITCH, Buttermilk Jesus, Darkskin Manson, Young Peglord, Peglord, Left Wing Hades, Lil World Cup, DJ Half-Court Violation, Peanut Butta Thug, Buttfuck Nowhere, Girth Brooks, Black Johnny Depp, BAEPEGMAFIA, Putinsbabymama99, Dj Snake Daddy & Thot Christ.",
+      "type": "Other",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Bandcamp",
+      "handle": "JPEGMAFIA (Ben Yuddha)",
+      "notes": "Official Bandcamp. This likely housed some Devon Hendryx projects like Generation Y & Dreamcast Summer Songs.",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": "https://jpegmafia.bandcamp.com"
+    },
+    {
+      "platform": "Spotify",
+      "handle": "JPEGMAFIA",
+      "notes": "Official Spotify",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Apple Music",
+      "handle": "JPEGMAFIA",
+      "notes": "Official Apple Music",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "SoundCloud",
+      "handle": "JPEGMAFIA (generationy2k)",
+      "notes": "Official SoundCloud",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "SoundCloud",
+      "handle": "DJ SNITCH BITCH",
+      "notes": "Alt account of Peggy's, posted a couple of exclusive tracks on there",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "YouTube",
+      "handle": "JPEGMAFIA (GENERATIONY1989)",
+      "notes": "Peggy's main YouTube, used to go under GENERATIONY1989 during the Devon Hendryx Era, had the upload of CALL ME MAYBE on there but is now unlisted.",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://www.youtube.com/channel/UCnAbB39RDMkmkMLigykYvQw"
+    },
+    {
+      "platform": "YouTube",
+      "handle": "89MAFIACULT 大ボス",
+      "notes": "Official YouTube for 89MAFIACULT",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://www.youtube.com/@89MAFIACULT"
+    },
+    {
+      "platform": "YouTube",
+      "handle": "jpgmafia-br2we",
+      "notes": "The only post on this is that EXPERIMENTAL RAP is dropping and that he hates all of us, this was apparently sent out before other announcements",
+      "type": "Social Media",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Deezer",
+      "handle": "JPEGMAFIA",
+      "notes": "Official Deezer account",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Tidal",
+      "handle": "JPEGMAFIA",
+      "notes": "Official Tidal Account",
+      "type": "Streaming Service",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Twitter",
+      "handle": "JPEGMAFIA (darkskinmanson)",
+      "notes": "JPEGMAFIA's Official Twitter account, note it deactivates quite abit, went under darkskinmanson for a bit",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://twitter.com/jpegmafia"
+    },
+    {
+      "platform": "Twitter",
+      "handle": "???",
+      "notes": "Apparently Peggy made an alternative Twitter account to complain about an ex of his.",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "Instagram",
+      "handle": "JPEGMAFIA (BAEPEGMAFIA)",
+      "notes": "Used to be called BAEPEGMAFIA but got changed sometime in 2026",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://www.instagram.com/jpegmafia/"
+    },
+    {
+      "platform": "Instagram",
+      "handle": "89mafiacult",
+      "notes": "Official instagram account for 89MAFIACULT, nothing posted yet",
+      "type": "Social Media",
+      "status": "Full",
+      "link": "https://www.instagram.com/89mafiacult/"
+    },
+    {
+      "platform": "FaceBook",
+      "handle": "JPEGMAFIA",
+      "notes": "Official FaceBook",
+      "type": "Social Media",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Reddit",
+      "handle": "r/jpegmafia",
+      "notes": "JPEGMAFIA used to have a subreddit that was most likely approved by him, but it was deleted",
+      "type": "Social Media",
+      "status": "Screenshots Only",
+      "link": ""
+    },
+    {
+      "platform": "Reddit",
+      "handle": "u/putinsbabymama99",
+      "notes": "POTENTIAL Reddit account seeing as this is the account that dropped I HAVE FULFILLED MY CONTRACT! and Peggy using Reddit over the years. Do note that u/jpegmafia is NOT his reddit either, the only confirmation is through the name and it's very obvious Peggy would not make a Reddit account with his name stamped on it and then go comment in porn subreddits, please do not pass that account as real, it's just through the name and even then it's 100% likely it's not him",
+      "type": "Social Media",
+      "status": "Screenshots Only",
+      "link": ""
+    },
+    {
+      "platform": "Discord",
+      "handle": "DJ Snake Daddy",
+      "notes": "APPARENTLY this is an alt of peggy's that he used at some point, althought there's no user this what the username was. If you do find don't try contact it",
+      "type": "Social Media",
+      "status": "Unavailable",
+      "link": ""
+    },
+    {
+      "platform": "TikTok",
+      "handle": "jpegmafiaburneraccount",
+      "notes": "Nothing has been posted to this account, although he changes the profile picture, following count and bio occasionally",
+      "type": "Social Media",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Vimeo",
+      "handle": "jpegmafia",
+      "notes": "",
+      "type": "Social Media",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Genius",
+      "handle": "JPEGMAFIA",
+      "notes": "Verified therefore official",
+      "type": "Social Media",
+      "status": "Full",
+      "link": ""
+    },
+    {
+      "platform": "Website",
+      "handle": "jpegmafia (tinylittlegod)",
+      "notes": "Official Website, used to go under tinylittlegod in 2016",
+      "type": "Other",
+      "status": "Full",
+      "link": "https://jpegmafia.net"
+    },
+    {
+      "platform": "Website",
+      "handle": "jpegmafia (Shop)",
+      "notes": "Shop for JPEGMAFIA.",
+      "type": "Other",
+      "status": "Full",
+      "link": "https://shop.jpegmafia.net"
+    },
+    {
+      "platform": "Website",
+      "handle": "jpegmafia (App)",
+      "notes": "Now abandoned part of the JPEGMAFIA Website, through archives it's just the 2023 era JPEGMAFIA Website",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://jpegmafia.app"
+    },
+    {
+      "platform": "Website",
+      "handle": "scaringthehoes",
+      "notes": "Ditto.",
+      "type": "Other",
+      "status": "Archived",
+      "link": "https://scaringthehoes.com"
     }
   ]
 };

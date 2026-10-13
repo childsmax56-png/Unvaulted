@@ -11,7 +11,7 @@ export const drizzygoldConfig: ArtistConfig = {
   HARDCODED_SHEET_ID: '1v55XAPLzw1iuWxH1OQKajCIYPhW2BXcLoV4mXDZ55DI',
   HARDCODED_SHEET_GID: '755606328',
   SHEET_URL_UNRELEASED: '',
-  SHEET_URL_RECENT: `https://docs.google.com/spreadsheets/d/1v55XAPLzw1iuWxH1OQKajCIYPhW2BXcLoV4mXDZ55DI/export?format=csv&gid=494030977`,
+  SHEET_URL_RECENT: `https://docs.google.com/spreadsheets/d/1v55XAPLzw1iuWxH1OQKajCIYPhW2BXcLoV4mXDZ55DI/export?format=csv&gid=1786784552`,
   accentColor: '#b8860b',
   artistLabel: 'Drake',
   sheetCreator: 'slothsavedearth, takaTyphoon, Luna, FinalxNinja, PhilMcG, Franki8000, raglord, Soulsby, futurefan41, frezling, graceisfriend, Brimcoole',
@@ -60,6 +60,7 @@ export const drizzygoldConfig: ArtistConfig = {
     "Take Care": "11/15/2011",
     "Posthumous Aaliyah Project": "??/??/????",
     "Nothing Was The Same": "09/24/2013",
+    "Views From The 6ix [V1]": "??/??/????",
     "If You're Reading This It's Too Late": "02/13/2015",
     "What A Time To Be Alive": "09/20/2015",
     "Wolves": "??/??/????",
@@ -78,6 +79,9 @@ export const drizzygoldConfig: ArtistConfig = {
     "$ome $exy $ongs 4 U": "02/14/2025",
     "ICEMAN [V1]": "??/??/????",
     "ICEMAN [V2]": "??/??/????",
+    "MAID OF HONOUR": "??/??/????",
+    "HABIBTI": "??/??/????",
+    "FEAR OF MISSING OUT": "??/??/????",
     "Unknown": "??/??/????",
   },
 
@@ -129,7 +133,10 @@ export const drizzygoldConfig: ArtistConfig = {
     { id: 'views', label: 'Views', type: 'gif', url: 'https://i.ibb.co/SwmyNq2Y/views.gif' },
   ],
 
-  ERA_MAPPINGS: { "ICEMAN": "ICEMAN [V2]", "Scary Hours 3": "For All The Dogs" },
+  ERA_MAPPINGS: {
+    "ICEMAN": "ICEMAN [V2]", "Scary Hours 3": "For All The Dogs",
+    "Views [V2]": "Views",
+  },
   hasCompsTab: false,
   hasConcertsTab: false,
   hasSubAlbumsTab: false,

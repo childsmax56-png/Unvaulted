@@ -104,7 +104,11 @@ export const d4vdgoldConfig: ArtistConfig = {
 
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
-  ERA_MAPPINGS: {},
+  ERA_MAPPINGS: {
+    'The Root Of It All': 'The Root Of It All [V1]',
+    'Petals To Thorns': 'Petals To Thorns [V2]',
+    'Marcescence': 'WITHERED Deluxe: Marcescence',
+  },
 
   ALBUM_ORDER: [
     'Pre-d4vd',

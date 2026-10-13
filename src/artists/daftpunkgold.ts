@@ -30,14 +30,16 @@ export const daftpunkgoldConfig: ArtistConfig = {
     return 'Daft Punk';
   },
 
+  // Keys must match the sheet's actual (abbreviated) Era names — see ALBUM_RELEASE_DATES —
+  // not the full album titles, or the cover never resolves for any era.
   CUSTOM_IMAGES: {
-    'SOMA Records Era':       '/daftpunkgold/eras/soma-records-era.jpg',
-    'Homework':               '/daftpunkgold/eras/homework.jpg',
-    'Discovery':              '/daftpunkgold/eras/discovery.jpg',
-    'Human After All':        '/daftpunkgold/eras/human-after-all.jpg',
-    'TRON Legacy':            '/daftpunkgold/eras/tron-legacy.jpg',
-    'Random Access Memories': '/daftpunkgold/eras/random-access-memories.jpg',
-    'Epilogue':               '/daftpunkgold/eras/epilogue.jpg',
+    'SOMA':       '/daftpunkgold/eras/soma-records-era.jpg',
+    'Homework':   '/daftpunkgold/eras/homework.jpg',
+    'Discovery':  '/daftpunkgold/eras/discovery.jpg',
+    'HAA':        '/daftpunkgold/eras/human-after-all.jpg',
+    'TRON':       '/daftpunkgold/eras/tron-legacy.jpg',
+    'RAM':        '/daftpunkgold/eras/random-access-memories.jpg',
+    'Epilogue':   '/daftpunkgold/eras/epilogue.jpg',
   },
 
   ALBUM_RELEASE_DATES: {
@@ -70,4 +72,6 @@ export const daftpunkgoldConfig: ArtistConfig = {
   TAG_TOOLTIP_MAP: {},
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
+  hasReleasedTab: false, // sheet has no Released tab
+  hasRecentTab: false, // sheet has no Recent tab
 };

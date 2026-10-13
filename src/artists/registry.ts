@@ -1,6 +1,7 @@
 import type { ArtistConfig } from './types';
 import { yzygoldConfig } from './yzygold';
-import { yetrackergoldConfig } from './yetrackergold';
+import { yegoldConfig } from './yegold';
+import { yelolgoldConfig } from './yelolgold';
 import { vampgoldConfig } from './vampgold';
 import { kdotgoldConfig } from './kdotgold';
 import { drizzygoldConfig } from './drizzygold';
@@ -62,11 +63,28 @@ import { ushergoldConfig } from './ushergold';
 import { weekndgoldConfig } from './weekndgold';
 import { westsidegoldConfig } from './westsidegold';
 import { wutanggoldConfig } from './wutanggold';
+import { clipsegoldConfig } from './clipsegold';
+import { daxgoldConfig } from './daxgold';
+import { deathgripsgoldConfig } from './deathgripsgold';
+import { delasoulgoldConfig } from './delasoulgold';
+import { premiergoldConfig } from './premiergold';
+import { dmxgoldConfig } from './dmxgold';
+import { dualipagoldConfig } from './dualipagold';
+import { earlgoldConfig } from './earlgold';
+import { olivertreegoldConfig } from './olivertreegold';
+import { fiviogoldConfig } from './fiviogold';
+import { jpegmafiagoldConfig } from './jpegmafiagold';
+import { migosgoldConfig } from './migosgold';
+import { nbayoungboygoldConfig } from './nbayoungboygold';
+import { vincegoldConfig } from './vincegold';
+import { xzibitgoldConfig } from './xzibitgold';
+import { thundercatgoldConfig } from './thundercatgold';
 
 export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   // Featured + pinned lineup drives the landing page order (see LandingPage.tsx)
-  yzygold: yzygoldConfig,        // Featured (Ye)
-  yetrackergold: yetrackergoldConfig, // Ye, alternate version using yetracker.cc links
+  yegold: yegoldConfig,          // Featured (Ye) — default tracker, yetracker.net/.cc links
+  yzygold: yzygoldConfig,        // Ye alt ("Suzy") — hidden, reachable via yegold's picker
+  yelolgold: yelolgoldConfig,    // Ye alt ("Lol") — hidden, reachable via yegold's picker
   vampgold: vampgoldConfig,      // Pinned: Playboi Carti
   wolfgold: wolfgoldConfig,      // Pinned: Tyler, The Creator
   aapgold: aapgoldConfig,        // Pinned: A$AP Rocky
@@ -127,6 +145,22 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   weekndgold: weekndgoldConfig,         // The Weeknd
   westsidegold: westsidegoldConfig,     // Westside Gunn
   wutanggold: wutanggoldConfig,         // Wu-Tang Clan
+  clipsegold:     clipsegoldConfig,     // Clipse
+  daxgold:        daxgoldConfig,        // Dax
+  deathgripsgold: deathgripsgoldConfig, // Death Grips
+  delasoulgold:   delasoulgoldConfig,   // De La Soul
+  premiergold:    premiergoldConfig,    // DJ Premier
+  dmxgold:        dmxgoldConfig,        // DMX
+  dualipagold:    dualipagoldConfig,    // Dua Lipa
+  earlgold:       earlgoldConfig,       // Earl Sweatshirt
+  olivertreegold: olivertreegoldConfig, // Oliver Tree
+  fiviogold:      fiviogoldConfig,      // Fivio Foreign
+  jpegmafiagold:  jpegmafiagoldConfig,  // JPEGMAFIA
+  migosgold:      migosgoldConfig,      // Migos
+  nbayoungboygold: nbayoungboygoldConfig, // NBA YoungBoy
+  vincegold:      vincegoldConfig,      // Vince Staples
+  xzibitgold:     xzibitgoldConfig,     // Xzibit
+  thundercatgold: thundercatgoldConfig, // Thundercat
   // Easter egg — hidden from the landing grid, reached by searching "d4vd".
   d4vdgold: d4vdgoldConfig,
 };

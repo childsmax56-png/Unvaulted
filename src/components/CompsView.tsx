@@ -3,7 +3,6 @@ import { ArrowLeft, ExternalLink, Star } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { CUSTOM_IMAGES , Img} from '../utils';
 import { Era } from '../types';
-import { useSettings } from '../SettingsContext';
 
 interface LinkEntry {
   text: string;
@@ -29,7 +28,6 @@ interface EraGroup {
 interface CompsViewProps {
   eras: Era[];
   searchQuery: string;
-  onNavigateToYedits?: () => void;
 }
 
 function isHighlight(name: string) {
@@ -67,8 +65,7 @@ function LinkGroup({ label, links }: { label: string; links: LinkEntry[] }) {
   );
 }
 
-export function CompsView({ eras, searchQuery, onNavigateToYedits }: CompsViewProps) {
-  const { settings } = useSettings();
+export function CompsView({ eras, searchQuery }: CompsViewProps) {
   const [allComps, setAllComps] = useState<CompEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedEra, setSelectedEra] = useState<string | null>(null);
@@ -250,25 +247,6 @@ export function CompsView({ eras, searchQuery, onNavigateToYedits }: CompsViewPr
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className="p-6 md:p-8 pb-32"
     >
-      {settings.YZYGOLDMode && onNavigateToYedits && (
-        <button
-          onClick={onNavigateToYedits}
-          className="w-full mb-8 relative overflow-hidden rounded-2xl border border-[var(--theme-color)]/30 bg-gradient-to-r from-black via-[#1a1400] to-black hover:border-[var(--theme-color)]/60 transition-all duration-300 group"
-        >
-          <div className="flex items-center justify-center py-6 px-8 gap-6">
-            <img
-              src="/yedit-affiliates-logo.png"
-              alt="YZY Gold Yedit Affiliates"
-              className="h-20 w-20 object-contain"
-            />
-            <div className="flex flex-col items-start">
-              <span className="text-2xl font-bold text-white tracking-tight">Yedit Affiliates</span>
-              <span className="text-sm text-[var(--theme-color)]/70 mt-0.5">Browse affiliate YEdits →</span>
-            </div>
-          </div>
-          <div className="absolute inset-0 bg-[var(--theme-color)]/0 group-hover:bg-[var(--theme-color)]/5 transition-colors duration-300 pointer-events-none" />
-        </button>
-      )}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
       {filteredGroups.map((group, i) => (
         <motion.div

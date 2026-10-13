@@ -1,13 +1,240 @@
 {
- "legend": [],
+ "legend": [
+  {
+   "label": "Unknown",
+   "color": "#999999"
+  },
+  {
+   "label": "Completely Unheard",
+   "color": "#E06666"
+  },
+  {
+   "label": "Snippet / Partial / Beat / Vocals / Recording Available",
+   "color": "#F6B26B"
+  },
+  {
+   "label": "Alternate Version Available",
+   "color": "#93C47D"
+  },
+  {
+   "label": "Confirmed Version Available",
+   "color": "#8E7CC3"
+  },
+  {
+   "label": "Alt. Name",
+   "color": "#6FA8DC"
+  },
+  {
+   "label": "Additional Info",
+   "color": "#C27BA0"
+  }
+ ],
  "albums": [
   {
-   "era": "Official tracklist for the album.\n\n1. We're Almost There\n2. Take Me Back\n3. One Day In Your Life\n4. Cinderella Stay Awhile\n5. We've Got Forever\n6. Just A Little Bit Of You\n7. You Are There\n8. Dapper Dan\n9. Dear Michael\n10. I'll Come Home To You",
-   "name": "Forever, Michael [1.16.75]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Got To Be There",
+   "name": "Got To Be There",
+   "date": "1972-01-24",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/0F4XW0iBOhNFkbn1BuQ8cu"
+   ],
+   "description": "Official tracklist for the album.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Ain't No Sunshine"
+    },
+    {
+     "num": "#2",
+     "name": "I Wanna Be Where You Are"
+    },
+    {
+     "num": "#3",
+     "name": "Girl Don't Take Your Love From Me"
+    },
+    {
+     "num": "#4",
+     "name": "In Our Small Way"
+    },
+    {
+     "num": "#5",
+     "name": "Got To Be There"
+    },
+    {
+     "num": "#6",
+     "name": "Rockin' Robin"
+    },
+    {
+     "num": "#7",
+     "name": "Wings Of My Love"
+    },
+    {
+     "num": "#8",
+     "name": "Maria (You Were The Only One)"
+    },
+    {
+     "num": "#9",
+     "name": "Love Is Here And Now You're Gone"
+    },
+    {
+     "num": "#10",
+     "name": "You've Got A Friend"
+    }
+   ]
+  },
+  {
+   "era": "Ben",
+   "name": "Ben",
+   "date": "1972-08-04",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/3xo2soey9XEBI5DlmT4KlQ"
+   ],
+   "description": "Official tracklist for the album.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Ben"
+    },
+    {
+     "num": "#2",
+     "name": "Greatest Show On Earth"
+    },
+    {
+     "num": "#3",
+     "name": "People Make The World Go Round"
+    },
+    {
+     "num": "#4",
+     "name": "We've Got A Good Thing Going"
+    },
+    {
+     "num": "#5",
+     "name": "Everybody's Somebody's Fool"
+    },
+    {
+     "num": "#6",
+     "name": "My Girl"
+    },
+    {
+     "num": "#7",
+     "name": "What Goes Around Comes Around"
+    },
+    {
+     "num": "#8",
+     "name": "In Our Small Way"
+    },
+    {
+     "num": "#9",
+     "name": "Shoo-Be-Doo-Be-Doo-Da-Day"
+    },
+    {
+     "num": "#10",
+     "name": "You Can Cry On My Shoulder"
+    }
+   ]
+  },
+  {
+   "era": "Music & Me",
+   "name": "Music & Me",
+   "date": "1973-04-13",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/19vhLDr0Fw8Lja1I8xVV09"
+   ],
+   "description": "Official tracklist for the album.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "With A Child's Heart"
+    },
+    {
+     "num": "#2",
+     "name": "Up Again"
+    },
+    {
+     "num": "#3",
+     "name": "All The Things You Are"
+    },
+    {
+     "num": "#4",
+     "name": "Happy (Love Theme From \"Lady Sings The Blues\")"
+    },
+    {
+     "num": "#5",
+     "name": "Too Young"
+    },
+    {
+     "num": "#6",
+     "name": "Doggin' Around"
+    },
+    {
+     "num": "#7",
+     "name": "Johnny Raven"
+    },
+    {
+     "num": "#8",
+     "name": "Euphoria"
+    },
+    {
+     "num": "#9",
+     "name": "Morning Glow"
+    },
+    {
+     "num": "#10",
+     "name": "Music And Me"
+    }
+   ]
+  },
+  {
+   "era": "Forever, Michael",
+   "name": "???",
+   "date": "1973-11-08",
+   "quality": "Blocked",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/iB0jBJrC#qfruP9r-I7my3gsnaZ-V-g",
+    "https://www.popsike.com/MICHAEL-JACKSON-Farewell-My-Summer-Love-1973-UNRELEASED-ALBUM-Promo-ACETATE-LP/203342538420.html"
+   ],
+   "description": "November 1973 tracklist from an earlier iteration of the album. Only Side B is currently known. Some of these tracks would be remixed and released as the 1984 album Farewell My Summer Love.\n\nSide A\n\n[...]\n\nSide B",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Farewell (My Summer Love) (Farewell My Summer Love)"
+    },
+    {
+     "num": "#2",
+     "name": "You've Really Got A Hold On Me"
+    },
+    {
+     "num": "#3",
+     "name": "Melody (Melodie)"
+    },
+    {
+     "num": "#4",
+     "name": "I'll Come Home To You"
+    },
+    {
+     "num": "#5",
+     "name": "Girl You're So Together"
+    }
+   ],
+   "images": [
+    "/mjgold/art/tl-6-0.jpg"
+   ]
+  },
+  {
+   "era": "Forever, Michael",
+   "name": "Forever, Michael",
+   "date": "1975-01-16",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/6leeBdAohG7zhybC3Cmu8W"
+   ],
    "description": "Official tracklist for the album.",
    "tracks": [
     {
@@ -53,12 +280,14 @@
    ]
   },
   {
-   "era": "Allen Zentz mixdown tape, dating back to March 31st, 1979.\n\n1. She's Out Of My Life\n2. Can't Help It\n3. Boot's Song\n4. Don't Stop",
-   "name": "\"Rough Mixes\" [3.31.79]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Off The Wall",
+   "name": "\"Rough Mixes\"",
+   "date": "1979-03-31",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/DFMXmYZY#uc3AMbrCDTqpPpDLG6aEqxvRiwUHWgL7YwH0UYA3heA"
+   ],
    "description": "Allen Zentz mixdown tape, dating back to March 31st, 1979.",
    "tracks": [
     {
@@ -67,26 +296,31 @@
     },
     {
      "num": "#2",
-     "name": "Can't Help It"
+     "name": "Can't Help It (I Can't Help It)"
     },
     {
      "num": "#3",
-     "name": "Boot's Song"
+     "name": "Boot's Song (Boots' Groove)"
     },
     {
      "num": "#4",
-     "name": "Don't Stop"
+     "name": "Don't Stop (Don't Stop 'Til You Get Enough)"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-8-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the album.\n\n1. Don't Stop 'Til You Get Enough\n2. Rock With You\n3. Workin' Day And Night\n4. Get On The Floor\n5. Off The Wall\n6. Girlfriend\n7. She's Out Of My Life\n8. I Can't Help It\n9. It's The Falling In Love\n10. Burn This Disco Out",
-   "name": "Off The Wall [8.10.79]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Official tracklist for the album.",
+   "era": "Off The Wall",
+   "name": "Off The Wall",
+   "date": "1979-08-10",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/2ZytN2cY4Zjrr9ukb2rqTP"
+   ],
+   "description": "Official tracklist for the album. \"Workin' Day And Night\" is titled \"Working Day And Night\" on most physical releases, this is likely a mistake as the former is used on streaming and compilations.",
    "tracks": [
     {
      "num": "#1",
@@ -131,12 +365,14 @@
    ]
   },
   {
-   "era": "Official tracklist for the Special Edition.\n\n1. Don't Stop 'Til You Get Enough\n2. Rock With You\n3. Workin' Day And Night\n4. Get On The Floor\n5. Off The Wall\n6. Girlfriend\n7. She's Out Of My Life\n8. I Can't Help It\n9. It's The Falling In Love\n10. Burn This Disco Out\n11. Quincy Jones Commentary #1\n12. Don't Stop 'Til You Get Enough (Original Demo from 1978)\n13. Quincy Jones Commentary #2\n14. Workin' Day And Night (Original Demo from 1978)\n15. Quincy Jones Commentary #3\n16. Rod Temperton Commentary\n17. Quincy Jones Commentary #4",
-   "name": "Off The Wall: Special Edition [10.XX.01]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Off The Wall",
+   "name": "Off The Wall (Special Edition)",
+   "date": "Oct 2001",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/4c4zsGZwtoTXOPGlDXTmw8"
+   ],
    "description": "Official tracklist for the Special Edition.",
    "tracks": [
     {
@@ -181,88 +417,51 @@
     },
     {
      "num": "#11",
-     "name": "Quincy Jones Commentary #1"
+     "name": "Voice-over Intro Quincy Jones Interview/Quincy Jones Interview #1"
     },
     {
      "num": "#12",
-     "name": "Don't Stop 'Til You Get Enough (Original Demo from 1978)"
+     "name": "Voice-over Intro \"Don't Stop 'Til You Get Enough (Original Demo From 1978)\""
     },
     {
      "num": "#13",
-     "name": "Quincy Jones Commentary #2"
+     "name": "Don't Stop 'Til You Get Enough (Original Demo From 1978)"
     },
     {
      "num": "#14",
-     "name": "Workin' Day And Night (Original Demo from 1978)"
+     "name": "Quincy Jones Interview #2"
     },
     {
      "num": "#15",
-     "name": "Quincy Jones Commentary #3"
+     "name": "Voice-over Intro \"Workin' Day And Night (Original Demo From 1978)\""
     },
     {
      "num": "#16",
-     "name": "Rod Temperton Commentary"
+     "name": "Workin' Day And Night (Original Demo From 1978)"
     },
     {
      "num": "#17",
-     "name": "Quincy Jones Commentary #4"
+     "name": "Quincy Jones Interview #3"
+    },
+    {
+     "num": "#18",
+     "name": "Voice-over Intro Rod Temperton Interview/Rod Temperton Interview"
+    },
+    {
+     "num": "#19",
+     "name": "Voice-over Intro Quincy Jones Interview #4/Quincy Jones Interview"
     }
    ]
   },
   {
-   "era": "Tracklist draft for Thriller, presumably from September.\n\n1. Wanna Be Startin' Somethin'\n2. Hot Street\n3. The Girl is Mine\n4. Thriller\n5. Billie Jean\n6. She's Trouble\n7. Nightline\n8. Carousel\n9. The Lady In My Life",
-   "name": "Tracklist Draft for Thriller [09.XX.82]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Tracklist draft for Thriller, presumably from September.",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "Wanna Be Startin' Somethin'"
-    },
-    {
-     "num": "#2",
-     "name": "Hot Street"
-    },
-    {
-     "num": "#3",
-     "name": "The Girl is Mine"
-    },
-    {
-     "num": "#4",
-     "name": "Thriller"
-    },
-    {
-     "num": "#5",
-     "name": "Billie Jean"
-    },
-    {
-     "num": "#6",
-     "name": "She's Trouble"
-    },
-    {
-     "num": "#7",
-     "name": "Nightline"
-    },
-    {
-     "num": "#8",
-     "name": "Carousel"
-    },
-    {
-     "num": "#9",
-     "name": "The Lady In My Life"
-    }
-   ]
-  },
-  {
-   "era": "Official tracklist for the album.\n\n1. Wanna Be Startin' Somethin'\n2. Baby Be Mine\n3. The Girl is Mine\n4. Thriller\n5. Beat It\n6. Billie Jean\n7. Human Nature\n8. P.Y.T. (Pretty Young Thing)\n9. The Lady In My Life",
-   "name": "Thriller [11.28.82]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Thriller",
+   "name": "Thriller",
+   "date": "1982-11-28",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/2ANVost0y2y52ema1E9xAZ"
+   ],
    "description": "Official tracklist for the album.",
    "tracks": [
     {
@@ -304,13 +503,15 @@
    ]
   },
   {
-   "era": "Official tracklist for the Special Edition.\n\n1. Wanna Be Startin' Somethin'\n2. Baby Be Mine\n3. The Girl is Mine\n4. Thriller\n5. Beat It\n6. Billie Jean\n7. Human Nature\n8. P.Y.T. (Pretty Young Thing)\n9. The Lady In My Life\n10. Quincy Jones Interview #1\n11. Someone In The Dark\n12. Voice-Over Intro/Quincy Jones Interview #2/Voice Over Intro for Billie Jean (Demo)\n13. Billie Jean (Home Demo from 1981)\n14. Quincy Jones Interview #3\n15. Voice-Over Intro/Rod Temperton Interview #1\n16. Quincy Jones Interview #4\n17. Voice-Over Intro/Voice-Over Session for Thriller\n18. Voice-Over Intro/Rod Temperton Interview #2\n19. Quincy Jones Interview #5\n20. Carousel\n21. Voice-Over Intro/Quincy Jones Interview #6",
-   "name": "Thriller: Special Edition [10.XX.01]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Official tracklist for the Special Edition.",
+   "era": "Thriller",
+   "name": "Thriller (Special Edition)",
+   "date": "Oct 2001",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/6JwMaTXGhIORvOXpOotryr"
+   ],
+   "description": "Official tracklist for the Special Edition. \"Carousel\" is a shortened edit on this release.",
    "tracks": [
     {
      "num": "#1",
@@ -322,7 +523,7 @@
     },
     {
      "num": "#3",
-     "name": "The Girl is Mine"
+     "name": "The Girl is Mine (with Paul McCartney)"
     },
     {
      "num": "#4",
@@ -350,7 +551,7 @@
     },
     {
      "num": "#10",
-     "name": "Quincy Jones Interview #1"
+     "name": "Voice-Over Intro Quincy Jones Interview #1 / Quincy Jones Interview #1"
     },
     {
      "num": "#11",
@@ -358,7 +559,7 @@
     },
     {
      "num": "#12",
-     "name": "Voice-Over Intro/Quincy Jones Interview #2/Voice Over Intro for Billie Jean (Demo)"
+     "name": "Voice-Over Intro Quincy Jones Interview #2 / Quincy Jones Interview #2 / Voice-Over Intro Billie Jean (Demo)"
     },
     {
      "num": "#13",
@@ -370,19 +571,21 @@
     },
     {
      "num": "#15",
-     "name": "Voice-Over Intro/Rod Temperton Interview #1"
+     "name": "Voice-Over Intro Rod Temperton Interview #1 / Rod Temperton Interview #1"
     },
     {
      "num": "#16",
-     "name": "Quincy Jones Interview #4"
+     "name": "Quincy Jones Interview #4",
+     "color": "#8E7CC3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Voice-Over Intro/Voice-Over Session for Thriller"
+     "name": "Voice-Over Intro / Voice-Over Session for Thriller"
     },
     {
      "num": "#18",
-     "name": "Voice-Over Intro/Rod Temperton Interview #2"
+     "name": "Voice-Over Intro Rod Temperton Interview #2 / Rod Temperton Interview #2"
     },
     {
      "num": "#19",
@@ -394,22 +597,24 @@
     },
     {
      "num": "#21",
-     "name": "Voice-Over Intro/Quincy Jones Interview #6"
+     "name": "Voice-Over Intro Quincy Jones Interview #6 / Quincy Jones Interview #6"
     }
    ]
   },
   {
-   "era": "Cassette tape with an early batch of tracks considered for the Bad album.\n\n1. Hot Fever\n2. Tomboy\n3. Smooth Criminal\n4. Dirty Diana\n5. What You Do To Me",
-   "name": "\"MJJ, new songs\" [10.28.85]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad",
+   "name": "\"MJJ, new songs\"",
+   "date": "1985-10-28",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://publicrecords.copyright.gov/advanced-search?page_number=1&parent_query=%7B%22operator_type%22:%22AND%22,%22column_name%22:%22titles%22,%22type_of_query%22:%22starts_with%22,%22query%22:%22MJJ,%20new%20songs.%22%7D&records_per_page=10&sort_order=%22asc%22&model=%22%22"
+   ],
    "description": "Cassette tape with an early batch of tracks considered for the Bad album.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Hot Fever"
+     "name": "Hot Fever (The Way You Make Me Feel)"
     },
     {
      "num": "#2",
@@ -430,12 +635,14 @@
    ]
   },
   {
-   "era": "Cassette tape featuring rough mixes of songs worked on during the middle of the Westlake sessions.\n\n1. Streetwalker\n2. Speed Demon\n3. The Way You Make Me Feel\n4. Smooth Criminal",
-   "name": "\"MJ 86/87 Edited Roughs\" [1.28.87]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad",
+   "name": "\"MJ 86/87 Edited Roughs\"",
+   "date": "1987-01-28",
+   "quality": "Blocked",
+   "source": "Secondary",
+   "links": [
+    "https://www.juliensauctions.com/en/items/14431/michael-jackson-cassette-tapes"
+   ],
    "description": "Cassette tape featuring rough mixes of songs worked on during the middle of the Westlake sessions.",
    "tracks": [
     {
@@ -454,15 +661,196 @@
      "num": "#4",
      "name": "Smooth Criminal"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-14-0.jpg"
    ]
   },
   {
-   "era": "Cassette tape found in Brad Sundberg's collection. Opens with a version of \"Streetwalker\"; the rest of the tracklist is identical to the official tracklist for Bad. Most likely created for personal listening only.\n\n1. Streetwalker\n2. Bad\n3. Hot Fever\n4. Speed Demon\n5. Liberian Girl\n6. Just Good Friends (with Stevie Wonder)\n7. Another Part Of Me\n8. Man In The Mirror\n9. I Just Can't Stop Loving You\n10. Dirty Diana\n11. Smooth Criminal",
-   "name": "\"MJ 87\" [8.12.87]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad",
+   "name": "Bad [Mixes 60]",
+   "date": "1987-07-08",
+   "quality": "Blocked",
+   "source": "Official",
+   "links": [
+    "https://mega.nz/folder/n00DlJ7R#ukGc9wSeV-UHD7OmBoGPuQ"
+   ],
+   "description": "Ampex 467 tape containing final mixes for the entire album, sequenced in order for mastering. Mitsubishi X-80 format, baked on June 9th, 2012 in preparation for Bad 25. Information taken from the original tape box sticker below the new one, which can be made partially visible through image manipulation. Some additional information is hard to make out or not visible. Oddly, it seems to be missing Leave Me Alone. Posted to Facebook on March 2nd, 2026 by retired producer and engineer Al Quaglieri.\n\nSide A:",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Bad 7-?-87 +3.5% tk 6"
+    },
+    {
+     "num": "#2",
+     "name": "The Way You Make Me Feel ?-?-87 +3.0% tk 4"
+    },
+    {
+     "num": "#3",
+     "name": "Speed Demon 7-2-87 +3.0% tk 10"
+    },
+    {
+     "num": "#4",
+     "name": "Liberian Girl 7-7-87 tk 3"
+    },
+    {
+     "num": "#5",
+     "name": "Just Good Friends 7-6-87 +3.5% tk 7"
+    },
+    {
+     "num": "#1",
+     "name": "Another Part Of Me 7-7-87 +1.0% tk 4"
+    },
+    {
+     "num": "#2",
+     "name": "Man In The Mirror 7-5-87 +1.0% tk 7"
+    },
+    {
+     "num": "#3",
+     "name": "I Just Can't Stop (Loving You) 6-2?-87"
+    },
+    {
+     "num": "#4",
+     "name": "Dirty Diana 7-5-87 +1.0% tk 6"
+    },
+    {
+     "num": "#5",
+     "name": "Smooth Criminal 7-8-87 +3.0% tk 6"
+    }
+   ],
+   "images": [
+    "/mjgold/art/tl-15-0.jpg"
+   ]
+  },
+  {
+   "era": "Bad",
+   "name": "Bad [Mixes 60]",
+   "date": "1987",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://mega.nz/file/f8Fw3LSB#GU1M3z07s22_D3Mc4QUy-P0mfmG1W2XFvufM18OXb30"
+   ],
+   "description": "Ampex 467 tape containing final mixes for the entire album, sequenced in order for mastering. Mitsubishi X-80 format, baked on June 9th, 2012 in preparation for Bad 25. Updated at an unknown date to add the updated mix of Smooth Criminal, but the original mix was moved to the very end. Posted to Facebook on March 2nd, 2026 by retired producer and engineer Al Quaglieri.\n\nSide A:",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Bad (Take 6)"
+    },
+    {
+     "num": "#2",
+     "name": "The Way You Make Me Feel (Hot Fever) (Take 4)"
+    },
+    {
+     "num": "#3",
+     "name": "Speed Demon (Take 10)"
+    },
+    {
+     "num": "#4",
+     "name": "Liberian Girl (Take 3)"
+    },
+    {
+     "num": "#5",
+     "name": "Just Good Friends (Take 7)"
+    },
+    {
+     "num": "#1",
+     "name": "Another Part Of Me (Take 4)"
+    },
+    {
+     "num": "#2",
+     "name": "Man In The Mirror (Take 7)"
+    },
+    {
+     "num": "#3",
+     "name": "I Just Can't Stop Loving You (Take 11)"
+    },
+    {
+     "num": "#4",
+     "name": "Dirty Diana (Take 6)"
+    },
+    {
+     "num": "#5",
+     "name": "Smooth Criminal (Take 13)"
+    },
+    {
+     "num": "#6",
+     "name": "Leave Me Alone (Take 4)"
+    },
+    {
+     "num": "#7",
+     "name": "Smooth Criminal (Take 6) - Used for 1st album pressing only"
+    }
+   ],
+   "images": [
+    "/mjgold/art/tl-16-0.jpg"
+   ]
+  },
+  {
+   "era": "Bad",
+   "name": "\"MJ 87\"",
+   "date": "1987-08-12",
+   "quality": "Blurry",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/QqolzAiT#N8cJZLy-cwR2pfjrf_T_cVyCIF8smYPIG_QmpvE6Dnc"
+   ],
+   "description": "Earlier planned tracklist for the MJ 87 comp tape, different entries are taped over with the final configuration (except for Hot Fever). These can be made out through image manipulation.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Streetwalker"
+    },
+    {
+     "num": "#2",
+     "name": "Bad"
+    },
+    {
+     "num": "#3",
+     "name": "Hot Fever (The Way You Make Me Feel)"
+    },
+    {
+     "num": "#4",
+     "name": "Liberian Girl"
+    },
+    {
+     "num": "#5",
+     "name": "Just Good Friends"
+    },
+    {
+     "num": "#6",
+     "name": "Another Part Of Me"
+    },
+    {
+     "num": "#7",
+     "name": "Man In The Mirror"
+    },
+    {
+     "num": "#8",
+     "name": "I Just Can't Stop Loving You"
+    },
+    {
+     "num": "#9",
+     "name": "Dirty Diana"
+    },
+    {
+     "num": "#10",
+     "name": "Smooth Criminal"
+    }
+   ],
+   "images": [
+    "/mjgold/art/tl-17-0.jpg"
+   ]
+  },
+  {
+   "era": "Bad",
+   "name": "\"MJ 87\"",
+   "date": "1987-08-12",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/QqolzAiT#N8cJZLy-cwR2pfjrf_T_cVyCIF8smYPIG_QmpvE6Dnc"
+   ],
    "description": "Cassette tape found in Brad Sundberg's collection. Opens with a version of \"Streetwalker\"; the rest of the tracklist is identical to the official tracklist for Bad. Most likely created for personal listening only.",
    "tracks": [
     {
@@ -475,7 +863,7 @@
     },
     {
      "num": "#3",
-     "name": "Hot Fever"
+     "name": "Hot Fever (The Way You Make Me Feel)"
     },
     {
      "num": "#4",
@@ -487,7 +875,7 @@
     },
     {
      "num": "#6",
-     "name": "Just Good Friends (with Stevie Wonder)"
+     "name": "Just Good Friends"
     },
     {
      "num": "#7",
@@ -509,15 +897,20 @@
      "num": "#11",
      "name": "Smooth Criminal"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-18-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the album.\n\n1. Bad\n2. The Way You Make Me Feel\n3. Speed Demon\n4. Liberian Girl\n5. Just Good Friends (with Stevie Wonder)\n6. Another Part Of Me\n7. Man In The Mirror\n8. I Just Can't Stop Loving You\n9. Dirty Diana\n10. Smooth Criminal",
-   "name": "Bad [8.31.87]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad",
+   "name": "Bad [LP Release]",
+   "date": "1987-08-31",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/459606-Michael-Jackson-Bad"
+   ],
    "description": "Official tracklist for the album.",
    "tracks": [
     {
@@ -538,7 +931,7 @@
     },
     {
      "num": "#5",
-     "name": "Just Good Friends (with Stevie Wonder)"
+     "name": "Just Good Friends"
     },
     {
      "num": "#6",
@@ -563,13 +956,15 @@
    ]
   },
   {
-   "era": "Official tracklist for the album. Features \"Leave Me Alone\" as a bonus track.\n\n1. Bad\n2. The Way You Make Me Feel\n3. Speed Demon\n4. Liberian Girl\n5. Just Good Friends (with Stevie Wonder)\n6. Another Part Of Me\n7. Man In The Mirror\n8. I Just Can't Stop Loving You\n9. Dirty Diana\n10. Smooth Criminal\n11. Leave Me Alone",
-   "name": "Bad [8.31.87]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Official tracklist for the album. Features \"Leave Me Alone\" as a bonus track.",
+   "era": "Bad",
+   "name": "Bad [CD Release]",
+   "date": "1987-08-31",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/3Us57CjssWnHjTUIXBuIeH"
+   ],
+   "description": "Official tracklist for the CD release of the album. Features \"Leave Me Alone\" as a bonus track. This is the tracklist currently used for streaming.",
    "tracks": [
     {
      "num": "#1",
@@ -589,7 +984,7 @@
     },
     {
      "num": "#5",
-     "name": "Just Good Friends (with Stevie Wonder)"
+     "name": "Just Good Friends"
     },
     {
      "num": "#6",
@@ -618,21 +1013,84 @@
    ]
   },
   {
-   "era": "Originally-planned tracksheet for the Special Edition.\n\n1. Bad\n2. The Way You Make Me Feel\n3. Speed Demon\n4. Liberian Girl\n5. Just Good Friends (with Stevie Wonder)\n6. Another Part Of Me\n7. Man In The Mirror\n8. I Just Can't Stop Loving You\n9. Dirty Diana\n10. Smooth Criminal\n11. Leave Me Alone\n12. Bumper Snippet\n13. Streetwalker\n14. Someone Put Your Hand Out [Edit]\n15. Todo Mi Amor Eres Tu\n16. Fly Away",
-   "name": "Bad: Special Edition [9.9.99]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Originally-planned tracksheet for the Special Edition.",
+   "era": "Bad",
+   "name": "Bad [Spanish CD]",
+   "date": "1987",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/2200404-Michael-Jackson-Bad"
+   ],
+   "description": "Official tracklist for the Spanish CD release. Same tracklist as the regular CD release, but features \"Todo Mi Amor Eres Tu\" as track 1.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bad"
+     "name": "Todo Mi Amor Eres Tu"
     },
     {
      "num": "#2",
+     "name": "Bad"
+    },
+    {
+     "num": "#3",
      "name": "The Way You Make Me Feel"
+    },
+    {
+     "num": "#4",
+     "name": "Speed Demon"
+    },
+    {
+     "num": "#5",
+     "name": "Liberian Girl"
+    },
+    {
+     "num": "#6",
+     "name": "Just Good Friends"
+    },
+    {
+     "num": "#7",
+     "name": "Another Part Of Me"
+    },
+    {
+     "num": "#8",
+     "name": "Man In The Mirror"
+    },
+    {
+     "num": "#9",
+     "name": "I Just Can't Stop Loving You"
+    },
+    {
+     "num": "#10",
+     "name": "Dirty Diana"
+    },
+    {
+     "num": "#11",
+     "name": "Smooth Criminal"
+    },
+    {
+     "num": "#12",
+     "name": "Leave Me Alone"
+    }
+   ]
+  },
+  {
+   "era": "Bad",
+   "name": "Bad [Master Tape]",
+   "date": "1992",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://mega.nz/folder/a0sSHYDS#O7DpFDAYN-ut2wRfQBO9XQ"
+   ],
+   "description": "3M 275 master tape for the album, Mitsubishi X-86 format. Has been updated multiple times with newer mixes, with the last being in 1992. Posted to Facebook on March 2nd, 2026 by retired producer and engineer Al Quaglieri.\n\nSide A:",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Bad (New Mix Inserted 9-1-87)"
+    },
+    {
+     "num": "#2",
+     "name": "The Way You Make Me Feel (Hot Fever) (New Mix Inserted 12-10-87)"
     },
     {
      "num": "#3",
@@ -644,7 +1102,67 @@
     },
     {
      "num": "#5",
-     "name": "Just Good Friends (with Stevie Wonder)"
+     "name": "Just Good Friends"
+    },
+    {
+     "num": "#1",
+     "name": "Another Part Of Me"
+    },
+    {
+     "num": "#2",
+     "name": "Man In The Mirror"
+    },
+    {
+     "num": "#3",
+     "name": "I Just Can't Stop Loving You (New Version - No Rap Inserted 10-28-87)"
+    },
+    {
+     "num": "#4",
+     "name": "Dirty Diana (New Mix Inserted 1-29-88)"
+    },
+    {
+     "num": "#5",
+     "name": "Smooth Criminal (New Mix Inserted 7-29-87 - New Intro 11-28-92)"
+    },
+    {
+     "num": "#6",
+     "name": "Leave Me Alone"
+    }
+   ],
+   "images": [
+    "/mjgold/art/tl-22-0.jpg"
+   ]
+  },
+  {
+   "era": "Bad",
+   "name": "\"BAD\" - LP + Bonus Cuts",
+   "date": "1999-09-09",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/as8EwBaZ#JBXlOqFNCEWOK3Ff975gVw"
+   ],
+   "description": "Originally-planned tracklist for the Special Edition. Does not feature any of the interviews. \"Someone Put Your Hand Out\" is actually an edited down version of the Dangerous-era track.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Bad"
+    },
+    {
+     "num": "#2",
+     "name": "The Way You Make Me F(eel)"
+    },
+    {
+     "num": "#3",
+     "name": "Speed Demon"
+    },
+    {
+     "num": "#4",
+     "name": "Liberian Girl"
+    },
+    {
+     "num": "#5",
+     "name": "Just Good Friends"
     },
     {
      "num": "#6",
@@ -656,7 +1174,7 @@
     },
     {
      "num": "#8",
-     "name": "I Just Can't Stop Loving You"
+     "name": "I Just Can't Stop Lov(ing You)"
     },
     {
      "num": "#9",
@@ -680,25 +1198,30 @@
     },
     {
      "num": "#14",
-     "name": "Someone Put Your Hand Out [Edit]"
+     "name": "Someone Put Your Hand (Out)"
     },
     {
      "num": "#15",
-     "name": "Todo Mi Amor Eres Tu"
+     "name": "I Just Can't Stop Lov(ing You (Spanish)) (Todo Mi Amor Eres Tu)"
     },
     {
      "num": "#16",
      "name": "Fly Away"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-23-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the Special Edition.\n\n1. Bad\n2. The Way You Make Me Feel\n3. Speed Demon\n4. Liberian Girl\n5. Just Good Friends (with Stevie Wonder)\n6. Another Part Of Me\n7. Man In The Mirror\n8. I Just Can't Stop Loving You\n9. Dirty Diana\n10. Smooth Criminal\n11. Leave Me Alone\n12. Voice-Over Intro/Quincy Jones Interview #1\n13. Streetwalker\n14. Voice-Over Intro/Quincy Jones Interview #2\n15. Todo Mi Amor Eres Tu\n16. Quincy Jones Interview #3\n17. Voice-over Intro to \"Fly Away\"\n18. Fly Away",
-   "name": "Bad: Special Edition [10.XX.01]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad",
+   "name": "Bad (Special Edition)",
+   "date": "Oct 2001",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/4GE64Gcm59UQC6mtgjn4IK"
+   ],
    "description": "Official tracklist for the Special Edition.",
    "tracks": [
     {
@@ -719,7 +1242,7 @@
     },
     {
      "num": "#5",
-     "name": "Just Good Friends (with Stevie Wonder)"
+     "name": "Just Good Friends"
     },
     {
      "num": "#6",
@@ -747,7 +1270,7 @@
     },
     {
      "num": "#12",
-     "name": "Voice-Over Intro/Quincy Jones Interview #1"
+     "name": "Voice-Over Intro Quincy Jones Interview #1/Quincy Jones Interview #1"
     },
     {
      "num": "#13",
@@ -755,7 +1278,7 @@
     },
     {
      "num": "#14",
-     "name": "Voice-Over Intro/Quincy Jones Interview #2"
+     "name": "Voice-Over Intro Quincy Jones Interview #2/Quincy Jones Interview #2"
     },
     {
      "num": "#15",
@@ -767,7 +1290,7 @@
     },
     {
      "num": "#17",
-     "name": "Voice-over Intro to \"Fly Away\""
+     "name": "Voice-over Intro \"Fly Away\""
     },
     {
      "num": "#18",
@@ -776,13 +1299,15 @@
    ]
   },
   {
-   "era": "Initial tracklist for the preceeding Decade project. Only Side A is known.\n\n1. Billie Jean\n2. Bad\n3. Rock With You\n4. The Way You Make Me Feel\n5. Don't Stop 'Til You Get Enough\n6. Workin' Day And Night",
-   "name": "Decade [9.17.89]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Initial tracklist for the preceeding Decade project. Only Side A is known.",
+   "era": "Dangerous",
+   "name": "Decade",
+   "date": "1989-09-17",
+   "quality": "Blocked",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/ysE2WYxZ#4ZNDsfmf7N767_tdwOhBZAAMgXeoWUeqiJmmI2xeNas"
+   ],
+   "description": "Earliest tracklist we have for the preceeding Decade project. Only Side A is known.",
    "tracks": [
     {
      "num": "#1",
@@ -808,15 +1333,21 @@
      "num": "#6",
      "name": "Workin' Day And Night"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-25-0.jpg"
    ]
   },
   {
-   "era": "A compilation of various songs made with Bryan Loren.\n\n1. Work That Body\n2. \"Three Songs In One\"\n3. Pretty Face\n4. Can't Come Back\n5. Bubbles",
-   "name": "\"Production Tape\" [10.4.89]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Dangerous",
+   "name": "\"Production Tape\"",
+   "date": "1989-10-04",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/KFdFnRrT#eTGA4O0QaqX8wil78GGDoA",
+    "https://mega.nz/file/K8lliITS#XrHzVp0j2Ta7YlyfhjVfnsm7rJKnjwwPhoR-jSeT9cg"
+   ],
    "description": "A compilation of various songs made with Bryan Loren.",
    "tracks": [
     {
@@ -839,16 +1370,61 @@
      "num": "#5",
      "name": "Bubbles"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-26-0.jpg"
    ]
   },
   {
-   "era": "Tracklist taken from a compilation DAT made in February 1990.\n\nTape one:\n\n1. Billie Jean\n2. Bad\n3. Rock With You\n4. The Way You Make Me Feel\n5. Don't Stop 'Til You Get Enough\n6. Workin' Day And Night\n7. Thriller\n8. Beat It\n9. Human Nature\n10. She's Out Of My Life\n11. P.Y.T. (Pretty Young Thing)\n12. Say, Say, Say (with Paul McCartney)\n13. Off The Wall\n14. Leave Me Alone\n15. Heartbreak Hotel\n16. Man In The Mirror\n\nTape two:\n\n1. Smooth Criminal\n2. Wanna Be Startin' Somethin'\n3. Dirty Diana\n4. Music And Me\n5. Someone In The Dark\n6. I Just Can't Stop Loving You (with Siedah Garrett)\n7. Liberian Girl\n8. The Girl Is Mine (with Paul McCartney)\n9. State Of Shock (with Mick Jagger)\n10. Come Together\n11. Heal The World",
-   "name": "Decade [2.14.90]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Tracklist taken from a compilation DAT made in February 1990.\n\nTape one:",
+   "era": "Dangerous",
+   "name": "Decade",
+   "date": "1990-02-08",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/v5MU3LaZ#cd-ON95AFNV62IjmeyxKmclgPMFkJit8o5T5yI5gZA8"
+   ],
+   "description": "Tracklist taken from a set of 2 cassette tapes made in February 1990. Only tape 2 is known.\n\nTape one:\n\n[...]\n\nTape two:",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Smooth Criminal"
+    },
+    {
+     "num": "#2",
+     "name": "Wanna Be Startin' Something (Wanna Be Startin' Somethin')"
+    },
+    {
+     "num": "#3",
+     "name": "Dirty Diana"
+    },
+    {
+     "num": "#4",
+     "name": "Music And Me"
+    },
+    {
+     "num": "#5",
+     "name": "Someone In The Dark"
+    },
+    {
+     "num": "#6",
+     "name": "I Just Can't Stop Loving You"
+    }
+   ],
+   "images": [
+    "/mjgold/art/tl-27-0.jpg"
+   ]
+  },
+  {
+   "era": "Dangerous",
+   "name": "Decade",
+   "date": "1990-02-14",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/GwMhUbID#ye-UAYE8OdIz14ahkfiKgA"
+   ],
+   "description": "Tracklist taken from a set of 2 cassette tapes made in February 1990.\n\nTape one:",
    "tracks": [
     {
      "num": "#1",
@@ -892,11 +1468,11 @@
     },
     {
      "num": "#11",
-     "name": "P.Y.T. (Pretty Young Thing)"
+     "name": "P.Y.T. (P.Y.T. (Pretty Young Thing))"
     },
     {
      "num": "#12",
-     "name": "Say, Say, Say (with Paul McCartney)"
+     "name": "Say, Say, Say"
     },
     {
      "num": "#13",
@@ -908,7 +1484,7 @@
     },
     {
      "num": "#15",
-     "name": "Heartbreak Hotel"
+     "name": "Heartbreak Hotel (This Place Hotel)"
     },
     {
      "num": "#16",
@@ -920,7 +1496,7 @@
     },
     {
      "num": "#2",
-     "name": "Wanna Be Startin' Somethin'"
+     "name": "Wanna Be Startin' Something (Wanna Be Startin' Somethin')"
     },
     {
      "num": "#3",
@@ -936,7 +1512,7 @@
     },
     {
      "num": "#6",
-     "name": "I Just Can't Stop Loving You (with Siedah Garrett)"
+     "name": "I Just Can't Stop Loving You"
     },
     {
      "num": "#7",
@@ -944,11 +1520,11 @@
     },
     {
      "num": "#8",
-     "name": "The Girl Is Mine (with Paul McCartney)"
+     "name": "The Girl Is Mine"
     },
     {
      "num": "#9",
-     "name": "State Of Shock (with Mick Jagger)"
+     "name": "State Of Shock"
     },
     {
      "num": "#10",
@@ -958,20 +1534,26 @@
      "num": "#11",
      "name": "Heal The World"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-28-0.jpg"
    ]
   },
   {
-   "era": "A compilation of various songs made with Bryan Loren.\n\n1. \"3 Songs In One\"\n2. House Groove\n3. Work That Body - Voc\n4. Can't Come Back - Voc\n5. Homeless\n6. Satisfy You - Voc\n7. Superfly Sister\n8. Bubbles\n9. Pretty Face",
-   "name": "\"Bryan Loren X-Fers From X-86HS\" [4.10.90]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "A compilation of various songs made with Bryan Loren.",
+   "era": "Dangerous",
+   "name": "\"Bryan Loren X-Fers From X-86HS\"",
+   "date": "1990-04-10",
+   "quality": "Blocked",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/KFdFnRrT#eTGA4O0QaqX8wil78GGDoA",
+    "https://mega.nz/file/a0UgwIDT#KkSDHCdXUVDsYMJOrvH35jZoFO5uoHh9bYYd7fEt9hI"
+   ],
+   "description": "A compilation of various songs made with Bryan Loren. Most likely has more tracks on the other side of the j-card, as Gregg Musgrove's list states that \"Man In Black\" and \"She Got It\" is included on this tape.",
    "tracks": [
     {
      "num": "#1",
-     "name": "\"3 Songs In One\""
+     "name": "\"3 Songs In One\" (\"Three Songs In One\")"
     },
     {
      "num": "#2",
@@ -987,11 +1569,11 @@
     },
     {
      "num": "#5",
-     "name": "Homeless"
+     "name": "Homeless (Homeless Bound)"
     },
     {
      "num": "#6",
-     "name": "Satisfy You - Voc"
+     "name": "Satisfy You (To Satisfy You) - Voc"
     },
     {
      "num": "#7",
@@ -1004,16 +1586,29 @@
     {
      "num": "#9",
      "name": "Pretty Face"
+    },
+    {
+     "num": "#?",
+     "name": "Man In Black"
+    },
+    {
+     "num": "#?",
+     "name": "She Got It"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-29-0.jpg"
    ]
   },
   {
-   "era": "Compilation of songs from the early Dangerous sessions, from a DAT dating to April 1990.\n\n1. Monkey Business\n2. Black Or White\n3. Man In Black\n4. Homeless Bound\n5. The Choice\n6. Earth Song\n7. Janet And MJ Duet\n8. Bubbles\n9. Superfly Sister\n10. Deep In The Night\n11. She Got It\n12. Garbage\n13. Heal The World",
-   "name": "\"Michael Jackson\" [4.19.90]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Dangerous",
+   "name": "\"Michael Jackson\"",
+   "date": "1990-04-19",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/PptXDJJL#J5F8dhY80aAtLNGcGJsnL8XyvJ8TcGdjsUBZ38OmZhI"
+   ],
    "description": "Compilation of songs from the early Dangerous sessions, from a DAT dating to April 1990.",
    "tracks": [
     {
@@ -1034,7 +1629,7 @@
     },
     {
      "num": "#5",
-     "name": "The Choice"
+     "name": "The Choice (Mind Is The Magic)"
     },
     {
      "num": "#6",
@@ -1068,15 +1663,57 @@
      "num": "#13",
      "name": "Heal The World"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-30-0.jpg"
    ]
   },
   {
-   "era": "Compilation of tracks made with Teddy Riley.\n\n1. Jam\n2. In The Closet\n3. Someone Put Your Hand Out\n4. Remember The Time\n5. Blood On The Dance Floor",
-   "name": "Future Records Compilation [3.XX.91]",
+   "era": "Dangerous",
+   "name": "???",
    "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "quality": "Blocked",
+   "source": "Secondary",
+   "links": [
+    "https://mega.nz/folder/KFdFnRrT#eTGA4O0QaqX8wil78GGDoA"
+   ],
+   "description": "A compilation of various songs made with Bryan Loren, not pictured in the images shared, but part of the lot acquired by Musgrove. Noted to have 6 tracks with vocals on the inventory list, but the rest is unknown.",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Can't Come Back"
+    },
+    {
+     "num": "#?",
+     "name": "Truth On Youth"
+    },
+    {
+     "num": "#?",
+     "name": "She's Got It Baby"
+    },
+    {
+     "num": "#?",
+     "name": "Call It Off"
+    },
+    {
+     "num": "#?",
+     "name": "She Got It"
+    },
+    {
+     "num": "#?",
+     "name": "Pressure"
+    }
+   ]
+  },
+  {
+   "era": "Dangerous",
+   "name": "\"Ask Rene - 5 Tracks\"",
+   "date": "Mar 1991",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/uxMQjKaI#cYQD-ktm7jwfVtclfO49Sg"
+   ],
    "description": "Compilation of tracks made with Teddy Riley.",
    "tracks": [
     {
@@ -1085,7 +1722,7 @@
     },
     {
      "num": "#2",
-     "name": "In The Closet"
+     "name": "Closet (In The Closet)"
     },
     {
      "num": "#3",
@@ -1097,36 +1734,47 @@
     },
     {
      "num": "#5",
-     "name": "Blood On The Dance Floor"
+     "name": "Unknown Groove (said to be \"Blood On The Dance Floor\")"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-32-0.jpg"
    ]
   },
   {
-   "era": "Two tracks created with Bryan Loren.\n\n1. All The Truth\n2. Call It Off",
-   "name": "\"Bryan-MJ\" [3.27.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Two tracks created with Bryan Loren.",
+   "era": "Dangerous",
+   "name": "\"Bryan-MJ\"",
+   "date": "1991-03-27",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/KFdFnRrT#eTGA4O0QaqX8wil78GGDoA",
+    "https://mega.nz/file/6pUGSApT#BXXDyMkwhdIraOssyJ-QLiIT5n-tMJ8-E-aWCCeKhAA"
+   ],
+   "description": "Two tracks created with Bryan Loren. Both contain Michael on BGV and Loren on lead vocals.",
    "tracks": [
     {
      "num": "#1",
-     "name": "All The Truth"
+     "name": "All The Truth (All The Truth You Need)"
     },
     {
      "num": "#2",
      "name": "Call It Off"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-33-0.jpg"
    ]
   },
   {
-   "era": "A compilation of mixes created with Teddy Riley.\n\n1. Jam (Mix 10)\n2. In The Closet (Mix 4)\n3. Remember The Time (Mix 7)\n4. Blood On The Dance Floor (Mix 6 #24)",
-   "name": "Future Records Compilation [4.XX.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Dangerous",
+   "name": "Future Records Compilation",
+   "date": "Apr 1991",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/file/j9dFEDjS#nODLtwrIVAFIvrEvJieWYc_Iw_sCyqetslLQMzYae-8"
+   ],
    "description": "A compilation of mixes created with Teddy Riley.",
    "tracks": [
     {
@@ -1143,18 +1791,23 @@
     },
     {
      "num": "#4",
-     "name": "Blood On The Dance Floor (Mix 6 #24)"
+     "name": "Blood On The Dance Floor (Mix 6)"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-34-0.jpg"
    ]
   },
   {
-   "era": "Last-known tracklist for the Decade project. Virtually identical to the February 1990 tracksheet.\n\nDAT 1\n\n1. Billie Jean\n2. Bad\n3. Rock With You\n4. The Way You Make Me Feel\n5. Don't Stop 'Til You Get Enough\n6. Workin' Day And Night\n7. Thriller\n8. Beat It\n9. Human Nature\n10. She's Out Of My Life\n11. P.Y.T. (Pretty Young Thing)\n12. Say, Say, Say (with Paul McCartney)\n13. Off The Wall (mistakenly listed as P.Y.T.)\n14. Leave Me Alone\n15. Heartbreak Hotel\n16. Man In The Mirror\n\nDAT 2\n\n1. Smooth Criminal\n2. Wanna Be Startin' Somethin'\n3. Dirty Diana\n4. Music And Me\n5. Someone In The Dark\n6. I Just Can't Stop Loving You (with Siedah Garrett)\n7. Liberian Girl\n8. The Girl Is Mine (with Paul McCartney)\n9. State Of Shock\n10. Come Together\n11. Heal The World",
-   "name": "Decade [5.03.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Last-known tracklist for the Decade project. Virtually identical to the February 1990 tracksheet.\n\nDAT 1",
+   "era": "Dangerous",
+   "name": "Decade",
+   "date": "1991-05-03",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/axtAgADZ#VIu4UvI9rg2vzTxzLWiELQ"
+   ],
+   "description": "Last-known tracklist for the Decade project. Virtually identical to the February 1990 tracksheet.\n\nDAT 1:",
    "tracks": [
     {
      "num": "#1",
@@ -1198,15 +1851,15 @@
     },
     {
      "num": "#11",
-     "name": "P.Y.T. (Pretty Young Thing)"
+     "name": "P.Y.T. (P.Y.T. (Pretty Young Thing))"
     },
     {
      "num": "#12",
-     "name": "Say, Say, Say (with Paul McCartney)"
+     "name": "Say, Say, Say"
     },
     {
      "num": "#13",
-     "name": "Off The Wall (mistakenly listed as P.Y.T.)"
+     "name": "P.Y.T. (P.Y.T. (Pretty Young Thing)) (unknown if it's \"Off The Wall\" like the previous copy or a different song)"
     },
     {
      "num": "#14",
@@ -1214,7 +1867,7 @@
     },
     {
      "num": "#15",
-     "name": "Heartbreak Hotel"
+     "name": "Heartbreak Hotel (This Place Hotel)"
     },
     {
      "num": "#16",
@@ -1226,7 +1879,7 @@
     },
     {
      "num": "#2",
-     "name": "Wanna Be Startin' Somethin'"
+     "name": "Wanna Be Startin' Something (Wanna Be Startin' Somethin')"
     },
     {
      "num": "#3",
@@ -1242,7 +1895,7 @@
     },
     {
      "num": "#6",
-     "name": "I Just Can't Stop Loving You (with Siedah Garrett)"
+     "name": "I Just Can't Stop Loving You"
     },
     {
      "num": "#7",
@@ -1250,7 +1903,7 @@
     },
     {
      "num": "#8",
-     "name": "The Girl Is Mine (with Paul McCartney)"
+     "name": "The Girl Is Mine"
     },
     {
      "num": "#9",
@@ -1264,20 +1917,25 @@
      "num": "#11",
      "name": "Heal The World"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-35-0.jpg"
    ]
   },
   {
-   "era": "A minidisc created during production of the album, featuring various mixes.\n\n1. Jam (with Heavy D)\n2. In The Closet\n3. Remember The Time\n4. Someone Put Your Hand Out\n5. Black Or White (with Slash)\n6. Who Is It\n7. Give In To Me\n8. Keep The Faith\n9. Gone Too Soon\n10. Dangerous\n11. Monkey Business\n12. For All Time\n13. If You Don't Love Me\n14. Serious Effect (with LL Cool J)",
-   "name": "Minidisc [08.XX.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "A minidisc created during production of the album, featuring various mixes.",
+   "era": "Dangerous",
+   "name": "Cassette",
+   "date": "Aug 1991",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://pillows.su/f/8d95411fb5e1c9145f9062e58307e89c"
+   ],
+   "description": "An oft-circulating cassette comp created during production. Sold by Rob Disner in late-March 2002, transfers would slowly leak out later in the year. Commonly mislabelled as a DAT.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Jam (with Heavy D)"
+     "name": "Jam"
     },
     {
      "num": "#2",
@@ -1289,74 +1947,7 @@
     },
     {
      "num": "#4",
-     "name": "Someone Put Your Hand Out"
-    },
-    {
-     "num": "#5",
-     "name": "Black Or White (with Slash)"
-    },
-    {
-     "num": "#6",
-     "name": "Who Is It"
-    },
-    {
-     "num": "#7",
-     "name": "Give In To Me"
-    },
-    {
-     "num": "#8",
-     "name": "Keep The Faith"
-    },
-    {
-     "num": "#9",
-     "name": "Gone Too Soon"
-    },
-    {
-     "num": "#10",
-     "name": "Dangerous"
-    },
-    {
-     "num": "#11",
-     "name": "Monkey Business"
-    },
-    {
-     "num": "#12",
-     "name": "For All Time"
-    },
-    {
-     "num": "#13",
-     "name": "If You Don't Love Me"
-    },
-    {
-     "num": "#14",
-     "name": "Serious Effect (with LL Cool J)"
-    }
-   ]
-  },
-  {
-   "era": "An oft-circulating cassette transferred from an earlier minidisc. Sold by Rob Disner in late-March 2002, transfers would slowly leak out later in the year.\n\n1. Jam (with Heavy D)\n2. In The Closet\n3. Remember The Time\n4. Black Or White (with Slash)\n5. Who Is It\n6. Give In To Me\n7. Keep The Faith\n8. Gone Too Soon\n9. Dangerous\n10. Earth Song (incorrectly leaked as \"What About Us\")\n11. Monkey Business\n12. For All Time\n13. If You Don't Love Me\n14. Serious Effect (with LL Cool J)",
-   "name": "Cassette [08.XX.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "An oft-circulating cassette transferred from an earlier minidisc. Sold by Rob Disner in late-March 2002, transfers would slowly leak out later in the year.",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "Jam (with Heavy D)"
-    },
-    {
-     "num": "#2",
-     "name": "In The Closet"
-    },
-    {
-     "num": "#3",
-     "name": "Remember The Time"
-    },
-    {
-     "num": "#4",
-     "name": "Black Or White (with Slash)"
+     "name": "Black Or White"
     },
     {
      "num": "#5",
@@ -1380,7 +1971,7 @@
     },
     {
      "num": "#10",
-     "name": "Earth Song (incorrectly leaked as \"What About Us\")"
+     "name": "Earth Song (leaked as \"What About Us\")"
     },
     {
      "num": "#11",
@@ -1396,26 +1987,28 @@
     },
     {
      "num": "#14",
-     "name": "Serious Effect (with LL Cool J)"
-    }
-   ]
-  },
-  {
-   "era": "Alternatively known as \"XXTRA DANGEROUS: UNFINISHED & UNRELEASED\". Compilation tape gifted to Shana Mangatal sometime during the production of the Dangerous album.\n\n1. Serious Effect\n2. Son Of Thriller\n3. She Got It\n4. Superfly Soul Sister\n5. Work That Body\n6. All The Truth You Need\n7. Call It Off\n8. Truth On Youth\n9. Don't Believe It\n10. Work\n11. To Satisfy You",
-   "name": "\"EXXTRA DANGEROUS (Unreleased Tracks From Dangerous)\" [XX.XX.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Alternatively known as \"XXTRA DANGEROUS: UNFINISHED & UNRELEASED\". Compilation tape gifted to Shana Mangatal sometime during the production of the Dangerous album.",
-   "tracks": [
-    {
-     "num": "#1",
      "name": "Serious Effect"
+    }
+   ]
+  },
+  {
+   "era": "Dangerous",
+   "name": "\"EXXTRA DANGEROUS (Unreleased Tracks From Dangerous)\"",
+   "date": "1991",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/LstSzLIT#UIQGiZaU5JQoW5RJabtT9w"
+   ],
+   "description": "Alternatively known as \"XXTRA DANGEROUS: UNFINISHED & UNRELEASED\". Compilation tape acquired by Shana Mangatal sometime during the production of the Dangerous album. Also includes Janet Jackson's \"Work\" for some reason.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Serious Effect (MJ only)"
     },
     {
      "num": "#2",
-     "name": "Son Of Thriller"
+     "name": "Son Of Thriller (instrumental)"
     },
     {
      "num": "#3",
@@ -1423,7 +2016,7 @@
     },
     {
      "num": "#4",
-     "name": "Superfly Soul Sister"
+     "name": "Superfly Soul Sister (Superfly Sister)"
     },
     {
      "num": "#5",
@@ -1431,7 +2024,7 @@
     },
     {
      "num": "#6",
-     "name": "All The Truth You Need"
+     "name": "All The Truth You Need (All The Truth)"
     },
     {
      "num": "#7",
@@ -1443,56 +2036,66 @@
     },
     {
      "num": "#9",
-     "name": "Don't Believe It"
+     "name": "Don't Believe It (labelled as \"rough cut\")"
     },
     {
      "num": "#10",
-     "name": "Work"
+     "name": "Janet Jackson - Work"
     },
     {
      "num": "#11",
      "name": "To Satisfy You"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-37-0.jpg"
    ]
   },
   {
-   "era": "A compilation of mixes for songs produced by Bill Bottrell.\n\n1. Black Or White (Edited Mix 6G w/Father and Son Intro)\n2. Monkey Biz (Toad Hall Mix)\n3. Who Is It (Mix from 8.2.91 w/Fake Out End)\n4. Earth Song (4.24.91 - New Ruff Voc - from DAT)\n5. Dangerous (GML Mix 14 from 3.29.91 - from DAT)",
-   "name": "\"B.B. Stuff\" [08.XX.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "A compilation of mixes for songs produced by Bill Bottrell.",
+   "era": "Dangerous",
+   "name": "\"Mixes B.B.\"",
+   "date": "Aug 1991",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/G1EgVZRL#Jui1HkLGHkq900JFqNmwuQ"
+   ],
+   "description": "A compilation of mixes for songs produced by Bill Bottrell. Also exists as a copy titled \"B.B. Stuff\".",
    "tracks": [
     {
      "num": "#1",
-     "name": "Black Or White (Edited Mix 6G w/Father and Son Intro)"
+     "name": "Black Or White (edited mix 6g w/FATHER & SON INTRO)"
     },
     {
      "num": "#2",
-     "name": "Monkey Biz (Toad Hall Mix)"
+     "name": "Monkey Biz (Monkey Business) (toad hall mix)"
     },
     {
      "num": "#3",
-     "name": "Who Is It (Mix from 8.2.91 w/Fake Out End)"
+     "name": "Who Is It (mix 8.2.91c w/FAKE OUT END)"
     },
     {
      "num": "#4",
-     "name": "Earth Song (4.24.91 - New Ruff Voc - from DAT)"
+     "name": "Earth Song (4.24.91 - new ruff voc - from DAT)"
     },
     {
      "num": "#5",
-     "name": "Dangerous (GML Mix 14 from 3.29.91 - from DAT)"
+     "name": "Dangerous (GML mix 14 3.29.91 - from DAT)"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-38-0.jpg"
    ]
   },
   {
-   "era": "Found on a Future Records CD containing the entire Dangerous album. Only nine tracks are known.\n\n1. Can't Let Her Get Away\n2. Remember The Time\n3. Jam\n4. Keep The Faith\n5. Heal The World\n6. Gone Too Soon\n7. Dangerous\n8. Who Is It\n9. Black Or White",
-   "name": "Dangerous [10.XX.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Dangerous",
+   "name": "Dangerous",
+   "date": "Oct 1991",
+   "quality": "Blocked",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/C00kDDwD#hwHBzY1IbKqPokeYAd2lKg"
+   ],
    "description": "Found on a Future Records CD containing the entire Dangerous album. Only nine tracks are known.",
    "tracks": [
     {
@@ -1521,7 +2124,7 @@
     },
     {
      "num": "#7",
-     "name": "Dangerous"
+     "name": "Dangerous (Dangerous II)"
     },
     {
      "num": "#8",
@@ -1531,15 +2134,21 @@
      "num": "#9",
      "name": "Black Or White"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-39-0.jpg"
    ]
   },
   {
-   "era": "Penultimate tracklist, found on a video that was leaked from Brad Sundberg's laptop.\n\n1. Jam\n2. Why You Wanna Trip On Me\n3. In The Closet\n4. She Drives Me Wild\n5. Remember The Time\n6. Can't Let Her Get Away\n7. Someone Put Your Hand Out\n8. Black Or White\n9. Who Is It\n10. Will You Be There\n11. Gone Too Soon\n12. Heal The World\n13. Blood On The Dance Floor\n14. Dangerous",
-   "name": "Dangerous [10.30.91]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Dangerous",
+   "name": "Dangerous",
+   "date": "1991-10-30",
+   "quality": "Blurry",
+   "source": "Leaked",
+   "links": [
+    "https://pillows.su/f/8044461dce035b43b1d15b75f95af2e5",
+    "https://pillows.su/f/eb275a3b9e7ad84d85f868ac54defbc4"
+   ],
    "description": "Penultimate tracklist, found on a video that was leaked from Brad Sundberg's laptop.",
    "tracks": [
     {
@@ -1596,18 +2205,23 @@
     },
     {
      "num": "#14",
-     "name": "Dangerous"
+     "name": "Dangerous (Dangerous II)"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-40-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the album and the Special Edition.\n\n1. Jam\n2. Why You Wanna Trip On Me\n3. In The Closet\n4. She Drives Me Wild\n5. Remember The Time\n6. Can't Let Her Get Away\n7. Heal The World\n8. Black Or White\n9. Who Is It\n10. Give In To Me\n11. Will You Be There\n12. Keep The Faith\n13. Gone Too Soon\n14. Dangerous",
-   "name": "Dangerous [11.21.91] and Dangerous: Special Edition [10.XX.01]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Official tracklist for the album and the Special Edition.",
+   "era": "Dangerous",
+   "name": "Dangerous",
+   "date": "1991-11-21",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/0oX4SealMgNXrvRDhqqOKg"
+   ],
+   "description": "Official tracklist for the album, as well as the Special Edition released in October 2001.",
    "tracks": [
     {
      "num": "#1",
@@ -1668,12 +2282,16 @@
    ]
   },
   {
-   "era": "Earlier tracklist for the Special Edition. The released version is simply a remaster of the original album with no extra content.\n\nDisc One\n\n1. Jam\n2. Why You Wanna Trip On Me\n3. In The Closet\n4. She Drives Me Wild\n5. Remember The Time\n6. Can't Let Her Get Away\n7. Heal The World\n8. Black Or White\n9. Who Is It\n10. Give In To Me\n11. Will You Be There\n12. Keep The Faith\n13. Gone Too Soon\n14. Dangerous\n\nBonus Cuts\n\n1. Bumper Snippet (Kid Part)\n2. Monkey Business\n3. Work That Body\n4. If You Don't Love Me\n5. Serious Effect\n6. Happy Birthday Lisa (from \"The Simpsons\")\n7. She Got It\n8. Black Or White (Remix)\n9. Dangerous (Alt. Ver)\n10. Who Is It (IHS Mix)",
-   "name": "Dangerous: Special Edition [1.12.00]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Dangerous",
+   "name": "Dangerous (Special Edition)",
+   "date": "2000-01-12",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/mscCDB4A#9oPOYnPZyTpVBQM1QI68xA",
+    "https://pillows.su/f/357f5ba0ee9cff3f89d476cc46173783",
+    "https://pillows.su/f/8a321f311dda6d6ed4c33fbd2d4f0c92"
+   ],
    "description": "Earlier tracklist for the Special Edition. The released version is simply a remaster of the original album with no extra content.\n\nDisc One",
    "tracks": [
     {
@@ -1734,7 +2352,7 @@
     },
     {
      "num": "#1",
-     "name": "Bumper Snippet (Kid Part)"
+     "name": "Bumper Snippet (Kid P(art))"
     },
     {
      "num": "#2",
@@ -1754,7 +2372,7 @@
     },
     {
      "num": "#6",
-     "name": "Happy Birthday Lisa (from \"The Simpsons\")"
+     "name": "Happy Birthday Lisa (Happy Birthday, Lisa) (from \"The Simpsons\")"
     },
     {
      "num": "#7",
@@ -1762,26 +2380,33 @@
     },
     {
      "num": "#8",
-     "name": "Black Or White (Remix)"
+     "name": "Black Or White (Remix) (Black Or White (The Clivillés & Cole Radio Mix))"
     },
     {
      "num": "#9",
-     "name": "Dangerous (Alt. Ver)"
+     "name": "Dangerous (Alt. Ver) (Dangerous (Early Version))"
     },
     {
      "num": "#10",
-     "name": "Who Is It (IHS Mix)"
+     "name": "Who Is It (Remix) (Who Is It (IHS Mix))"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-42-0.jpg"
    ]
   },
   {
-   "era": "A CDr previously owned by a Sony Music executive. Likely originates from the final months Michael spent in New York.\n\n1. They Don't Care About Us\n2. Stranger In Moscow\n3. Childhood\n4. Money\n5. Little Suzie\n6. Much Too Soon\n7. Smile\n8. Earth Song",
-   "name": "\"History - Rough Mixes And Vocals\" [10.XX.94]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "A CDr previously owned by a Sony Music executive. Likely originates from the final months Michael spent in New York.",
+   "era": "HIStory: Past, Present, And Future: Book I",
+   "name": "\"History - Rough Mixes And Vocals\"",
+   "date": "Oct 1994",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://www.discogs.com/release/3530246-Michael-Jackson-HIStory",
+    "https://www.mjjcommunity.com/threads/history-acetate-early-alternate-versions.122606/",
+    "https://mega.nz/file/D9kxTbzB#vBjn5WWK8T6R0clohNoARX6mxL88_RcNT-JoDuSpREg"
+   ],
+   "description": "A CDr previously owned by a Sony Music executive. Likely originates from the final months Michael spent in New York. Owned by Korgnex and listed on eBay in May 2012.",
    "tracks": [
     {
      "num": "#1",
@@ -1801,7 +2426,7 @@
     },
     {
      "num": "#5",
-     "name": "Little Suzie"
+     "name": "Little Suzie (Little Susie)"
     },
     {
      "num": "#6",
@@ -1815,15 +2440,20 @@
      "num": "#8",
      "name": "Earth Song"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-43-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the album.\n\nHIStory Begins:\n\n1. Billie Jean\n2. The Way You Make Me Feel\n3. Black Or White\n4. Rock With You\n5. She's Out Of My Life\n6. Bad\n7. I Just Can't Stop Loving You\n8. Man In The Mirror\n9. Thriller\n10. Beat It\n11. The Girl Is Mine (with Paul McCartney)\n12. Remember The Time\n13. Don't Stop 'Til You Get Enough\n14. Wanna Be Startin' Somethin'\n15. Heal The World\n\nHIStory Continues:\n\n1. Scream\n2. They Don't Care About Us\n3. Stranger In Moscow\n4. This Time Around (with The Notorious B.I.G.)\n5. Earth Song\n6. D.S.\n7. Money\n8. Come Together\n9. You Are Not Alone\n10. Childhood\n11. Tabloid Junkie\n12. 2 Bad\n13. History\n14. Little Susie\n15. Smile",
-   "name": "HIStory: Past, Present, And Future: Book I [6.20.95]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "HIStory: Past, Present, And Future: Book I",
+   "name": "HIStory: Past, Present, And Future: Book I",
+   "date": "1995-06-20",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/3OBhnTLrvkoEEETjFA3Qfk"
+   ],
    "description": "Official tracklist for the album.\n\nHIStory Begins:",
    "tracks": [
     {
@@ -1900,7 +2530,7 @@
     },
     {
      "num": "#4",
-     "name": "This Time Around (with The Notorious B.I.G.)"
+     "name": "This Time Around"
     },
     {
      "num": "#5",
@@ -1924,7 +2554,7 @@
     },
     {
      "num": "#10",
-     "name": "Childhood"
+     "name": "Childhood (Theme From \"Free Willy 2\")"
     },
     {
      "num": "#11",
@@ -1949,13 +2579,15 @@
    ]
   },
   {
-   "era": "Alternate tracklist leaked a month prior to release.\n\n1. Blood On The Dance Floor\n2. In The Back\n3. Morphine\n4. Is This Scary (it's unknown whether this is a mistake or whether the song was retitled)\n5. Scream (Def Radio Mix)\n6. They Don't Care About Us (Love To Infinity's Walk In The Park Radio Mix)\n7. Money (Farley And Heller Remix) (later retitled \"Fire Island Remix\")\n8. 2 Bad (Rhythm Masters Remix) \n9. Stranger In Moscow (Tee's In-House Club Mix)\n10. This Time Around (D.M. Radio Mix)\n11. Earth Song (Hani's Club Experience)\n12. You Are Not Alone (Frankie Knuckles Classic Club Mix)\n13. History (Tony Moran's HIStory Lesson)",
-   "name": "Blood On The Dance Floor: HIStory In The Mix [4.XX.97]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Alternate tracklist leaked a month prior to release.",
+   "era": "Blood On The Dance Floor: HIStory In The Mix",
+   "name": "Blood On The Dance Floor: HIStory In The Mix",
+   "date": "Apr 1997",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://groups.google.com/g/relcom.music/c/xtBvPoB0Fd0/m/ak4CwWmQWOIJ?pli=1"
+   ],
+   "description": "Alternate tracklist leaked a month prior to release. Was posted on the relcom.music Usenet newsgroup on April 2nd, 1997, which has since been hosted by Google on Google Groups.",
    "tracks": [
     {
      "num": "#1",
@@ -1971,7 +2603,7 @@
     },
     {
      "num": "#4",
-     "name": "Is This Scary (it's unknown whether this is a mistake or whether the song was retitled)"
+     "name": "Is This Scary (Is It Scary)"
     },
     {
      "num": "#5",
@@ -1979,7 +2611,7 @@
     },
     {
      "num": "#6",
-     "name": "They Don't Care About Us (Love To Infinity's Walk In The Park Radio Mix)"
+     "name": "They Don't Care About Us (Love To Infinity's Classic Paradise Radio Mix)"
     },
     {
      "num": "#7",
@@ -2003,21 +2635,26 @@
     },
     {
      "num": "#12",
-     "name": "You Are Not Alone (Frankie Knuckles Classic Club Mix)"
+     "name": "You Are Not Alone (Frankie Knuckles Classic Club Mix) (You Are Not Alone (Classic Club Mix))"
     },
     {
      "num": "#13",
      "name": "History (Tony Moran's HIStory Lesson)"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-45-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the album.\n\n1. Blood On The Dance Floor\n2. Morphine\n3. Superfly Sister\n4. Ghosts\n5. Is It Scary\n6. Scream Louder (Flyte Tyme Remix)\n7. Money (Fire Island Radio Edit)\n8. 2 Bad (Refugee Camp Remix)\n9. Stranger In Moscow (Tee's In-House Club Mix)\n10. This Time Around (D.M. Radio Mix)\n11. Earth Song (Hani's Club Experience)\n12. You Are Not Alone (Classic Club Mix)\n13. History (Tony Moran's HIStory Lesson)",
-   "name": "Blood On The Dance Floor: HIStory In The Mix [5.20.97]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Blood On The Dance Floor: HIStory In The Mix",
+   "name": "Blood On The Dance Floor: HIStory In The Mix",
+   "date": "1997-05-20",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/0RNsFWWdiz1rrdLI1pwbvJ"
+   ],
    "description": "Official tracklist for the album.",
    "tracks": [
     {
@@ -2075,25 +2712,29 @@
    ]
   },
   {
-   "era": "Taken from a DAT containing earlier mixes.\n\n1. Unbreakable (with The Notorious B.I.G.)\n2. Heartbreaker (with Fats)\n3. Invincible (with Fats)\n4. Break Of Dawn\n5. Heaven Can Wait - Incomplete\n6. Rock My World\n7. Butterflies\n8. Shout - Incorrectly listed as track #9\n9. 2000 Watts - Incorrectly listed as track #8, Incomplete\n10. Don't Walk Away\n11. Privacy\n12. Cry - Incomplete\n13. The Lost Children - Incomplete\n14. Speechless\n15. Threatened - Incomplete",
-   "name": "\"Invincible - Mixes\" [6.12.01]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Taken from a DAT containing earlier mixes.",
+   "era": "Invincible",
+   "name": "Invincible",
+   "date": "2001-06-12",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://www.gottahaverockandroll.com/Michael_Jackson__Invincible__Alternate_Unreleased_-LOT27983.aspx",
+    "https://web.archive.org/web/20250907162149/https://www.ebay.com/itm/256049896203",
+    "https://mega.nz/folder/it0zyZID#wFJ_DCn220BxR1TiwCYjNg"
+   ],
+   "description": "Taken from a DAT containing earlier mixes. Owned by Korgnex.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Unbreakable (with The Notorious B.I.G.)"
+     "name": "Unbreakable"
     },
     {
      "num": "#2",
-     "name": "Heartbreaker (with Fats)"
+     "name": "Heartbreaker"
     },
     {
      "num": "#3",
-     "name": "Invincible (with Fats)"
+     "name": "Invincible"
     },
     {
      "num": "#4",
@@ -2101,11 +2742,11 @@
     },
     {
      "num": "#5",
-     "name": "Heaven Can Wait - Incomplete"
+     "name": "Heaven Can Wait (\"not finished\")"
     },
     {
      "num": "#6",
-     "name": "Rock My World"
+     "name": "Rock My World (You Rock My World)"
     },
     {
      "num": "#7",
@@ -2113,11 +2754,11 @@
     },
     {
      "num": "#8",
-     "name": "Shout - Incorrectly listed as track #9"
+     "name": "Shout (incorrectly listed as track #9)"
     },
     {
      "num": "#9",
-     "name": "2000 Watts - Incorrectly listed as track #8, Incomplete"
+     "name": "2000 Watts (incorrectly listed as track #8, \"not finished\")"
     },
     {
      "num": "#10",
@@ -2129,11 +2770,11 @@
     },
     {
      "num": "#12",
-     "name": "Cry - Incomplete"
+     "name": "Cry (\"not finished\")"
     },
     {
      "num": "#13",
-     "name": "The Lost Children - Incomplete"
+     "name": "The Lost Children (\"not finished\")"
     },
     {
      "num": "#14",
@@ -2141,30 +2782,35 @@
     },
     {
      "num": "#15",
-     "name": "Threatened - Incomplete"
+     "name": "Threatened (\"not finished\")"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-47-0.jpg"
    ]
   },
   {
-   "era": "Official tracklist for the album.\n\n1. Unbreakable (with The Notorious B.I.G.)\n2. Heartbreaker (with Fats)\n3. Invincible (with Fats)\n4. Break Of Dawn\n5. Heaven Can Wait\n6. You Rock My World\n7. Butterflies\n8. Speechless\n9. 2000 Watts\n10. You Are My Life\n11. Privacy\n12. Don't Walk Away\n13. Cry\n14. The Lost Children\n15. Whatever Happens (with Carlos Santana)\n16. Threatened",
-   "name": "Invincible [10.30.01]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Invincible",
+   "name": "Invincible",
+   "date": "2001-10-30",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/52E4RP7XDzalpIrOgSTgiQ"
+   ],
    "description": "Official tracklist for the album.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Unbreakable (with The Notorious B.I.G.)"
+     "name": "Unbreakable"
     },
     {
      "num": "#2",
-     "name": "Heartbreaker (with Fats)"
+     "name": "Heartbreaker"
     },
     {
      "num": "#3",
-     "name": "Invincible (with Fats)"
+     "name": "Invincible"
     },
     {
      "num": "#4",
@@ -2212,7 +2858,7 @@
     },
     {
      "num": "#15",
-     "name": "Whatever Happens (with Carlos Santana)"
+     "name": "Whatever Happens"
     },
     {
      "num": "#16",
@@ -2221,25 +2867,27 @@
    ]
   },
   {
-   "era": "Official tracklist for the album.\n\nDisc One:\n\n1. I Want You Back\n2. ABC\n3. I'll Be There\n4. Got To Be There\n5. I Wanna Be Where You Are\n6. Ben\n7. Dancing Machine [Single Version]\n8. Enjoy Yourself [Alternate Version]\n9. Ease On Down The Road (with Diana Ross)\n10. You Can't Win [Alternate Version]\n11. Shake A Body [Early Demo]\n12. Shake Your Body (Down To The Ground) [Single Version]\n13. Don't Stop 'Til You Get Enough\n14. Rock With You\n15. Off The Wall\n16. She's Out Of My Life\n17. Sunset Driver [1982 Demo]\n18. Lovely One\n19. This Place Hotel (aka Heartbreak Hotel)\n\nDisc Two:\n\n1. Wanna Be Startin' Somethin'\n2. The Girl Is Mine (with Paul McCartney)\n3. Thriller (with Vincent Price)\n4. Beat It (with a guitar performance by Eddie Van Halen)\n5. Billie Jean\n6. P.Y.T. (Pretty Young Thing) [Demo]\n7. Someone In The Dark [Opening Version]\n8. State Of Shock (with Mick Jagger)\n9. Scared Of The Moon [Demo]\n10. We Are The World [Demo]\n11. We Are Here To Change The World\n\nDisc Three:\n\n1. Bad\n2. The Way You Make Me Feel\n3. Man In The Mirror (with Siedah Garrett)\n4. I Just Can't Stop Lovin' You (with Siedah Garrett)\n5. Dirty Diana\n6. Smooth Criminal\n7. Cheater [Demo]\n8. Dangerous [Early Version]\n9. Monkey Business\n10. Jam (with Heavy D)\n11. Remember The Time\n12. Black Or White\n13. Who Is It (IHS Mix)\n14. Someone Put Your Hand Out\n\nDisc Four:\n\n1. You Are Not Alone [Extended Version]\n2. Stranger In Moscow\n3. Childhood\n4. On The Line\n5. Blood On The Dance Floor\n6. Fall Again [Demo]\n7. In The Back\n8. Unbreakable (with The Notorious B.I.G.)\n9. You Rock My World [Album Edit]\n10. Butterflies\n11. Beautiful Girl [Demo]\n12. The Way You Love Me\n13. We've Had Enough",
-   "name": "The Ultimate Collection [11.16.04]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "The Ultimate Collection",
+   "name": "The Ultimate Collection",
+   "date": "2004-11-16",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/master/198280-Michael-Jackson-The-Ultimate-Collection"
+   ],
    "description": "Official tracklist for the album.\n\nDisc One:",
    "tracks": [
     {
      "num": "#1",
-     "name": "I Want You Back"
+     "name": "The Jackson 5 - I Want You Back"
     },
     {
      "num": "#2",
-     "name": "ABC"
+     "name": "The Jackson 5 - ABC"
     },
     {
      "num": "#3",
-     "name": "I'll Be There"
+     "name": "The Jackson 5 - I'll Be There"
     },
     {
      "num": "#4",
@@ -2255,11 +2903,11 @@
     },
     {
      "num": "#7",
-     "name": "Dancing Machine [Single Version]"
+     "name": "The Jackson 5 - Dancing Machine (Single Version)"
     },
     {
      "num": "#8",
-     "name": "Enjoy Yourself [Alternate Version]"
+     "name": "The Jacksons - Enjoy Yourself (Alternate Version)"
     },
     {
      "num": "#9",
@@ -2267,15 +2915,15 @@
     },
     {
      "num": "#10",
-     "name": "You Can't Win [Alternate Version]"
+     "name": "You Can't Win (From \"The Wiz\") (Alternate Version)"
     },
     {
      "num": "#11",
-     "name": "Shake A Body [Early Demo]"
+     "name": "The Jacksons - Shake A Body (Early Demo)"
     },
     {
      "num": "#12",
-     "name": "Shake Your Body (Down To The Ground) [Single Version]"
+     "name": "The Jacksons - Shake Your Body (Down To The Ground) (Single Version)"
     },
     {
      "num": "#13",
@@ -2295,15 +2943,15 @@
     },
     {
      "num": "#17",
-     "name": "Sunset Driver [1982 Demo]"
+     "name": "Sunset Driver (Demo)"
     },
     {
      "num": "#18",
-     "name": "Lovely One"
+     "name": "The Jacksons - Lovely One"
     },
     {
      "num": "#19",
-     "name": "This Place Hotel (aka Heartbreak Hotel)"
+     "name": "The Jacksons - This Place Hotel (Heartbreak Hotel)"
     },
     {
      "num": "#1",
@@ -2315,11 +2963,11 @@
     },
     {
      "num": "#3",
-     "name": "Thriller (with Vincent Price)"
+     "name": "Thriller"
     },
     {
      "num": "#4",
-     "name": "Beat It (with a guitar performance by Eddie Van Halen)"
+     "name": "Beat It"
     },
     {
      "num": "#5",
@@ -2327,27 +2975,27 @@
     },
     {
      "num": "#6",
-     "name": "P.Y.T. (Pretty Young Thing) [Demo]"
+     "name": "P.Y.T. (Pretty Young Thing) (Demo)"
     },
     {
      "num": "#7",
-     "name": "Someone In The Dark [Opening Version]"
+     "name": "Someone In The Dark (Opening Version)"
     },
     {
      "num": "#8",
-     "name": "State Of Shock (with Mick Jagger)"
+     "name": "The Jacksons - State Of Shock (with Mick Jagger)"
     },
     {
      "num": "#9",
-     "name": "Scared Of The Moon [Demo]"
+     "name": "Scared Of The Moon (Demo)"
     },
     {
      "num": "#10",
-     "name": "We Are The World [Demo]"
+     "name": "We Are The World (Demo)"
     },
     {
      "num": "#11",
-     "name": "We Are Here To Change The World"
+     "name": "We Are Here To Change The World (From \"Captain EO\")"
     },
     {
      "num": "#1",
@@ -2359,11 +3007,11 @@
     },
     {
      "num": "#3",
-     "name": "Man In The Mirror (with Siedah Garrett)"
+     "name": "Man In The Mirror"
     },
     {
      "num": "#4",
-     "name": "I Just Can't Stop Lovin' You (with Siedah Garrett)"
+     "name": "I Just Can't Stop Loving You"
     },
     {
      "num": "#5",
@@ -2375,11 +3023,11 @@
     },
     {
      "num": "#7",
-     "name": "Cheater [Demo]"
+     "name": "Cheater (Demo)"
     },
     {
      "num": "#8",
-     "name": "Dangerous [Early Version]"
+     "name": "Dangerous (Early Version)"
     },
     {
      "num": "#9",
@@ -2387,7 +3035,7 @@
     },
     {
      "num": "#10",
-     "name": "Jam (with Heavy D)"
+     "name": "Jam"
     },
     {
      "num": "#11",
@@ -2407,7 +3055,7 @@
     },
     {
      "num": "#1",
-     "name": "You Are Not Alone [Extended Version]"
+     "name": "You Are Not Alone (Extended Version)"
     },
     {
      "num": "#2",
@@ -2415,7 +3063,7 @@
     },
     {
      "num": "#3",
-     "name": "Childhood"
+     "name": "Childhood (Theme From \"Free Willy 2\")"
     },
     {
      "num": "#4",
@@ -2427,7 +3075,7 @@
     },
     {
      "num": "#6",
-     "name": "Fall Again [Demo]"
+     "name": "Fall Again (Demo)"
     },
     {
      "num": "#7",
@@ -2435,11 +3083,11 @@
     },
     {
      "num": "#8",
-     "name": "Unbreakable (with The Notorious B.I.G.)"
+     "name": "Unbreakable"
     },
     {
      "num": "#9",
-     "name": "You Rock My World [Album Edit]"
+     "name": "You Rock My World (Album Edit)"
     },
     {
      "num": "#10",
@@ -2447,7 +3095,7 @@
     },
     {
      "num": "#11",
-     "name": "Beautiful Girl [Demo]"
+     "name": "Beautiful Girl (Demo)"
     },
     {
      "num": "#12",
@@ -2460,25 +3108,27 @@
    ]
   },
   {
-   "era": "Official tracklist for the Japanese release of the album. Features additional tracks missing from the main version - \"Blame It On The Boogie\", \"Human Nature\", \"Another Part Of Me\", \"Heal The World\", and \"One More Chance\".\n\nDisc One:\n\n1. I Want You Back\n2. ABC\n3. I'll Be There\n4. Got To Be There\n5. I Wanna Be Where You Are\n6. Ben\n7. Dancing Machine [Single Version]\n8. Enjoy Yourself [Alternate Version]\n9. Ease On Down The Road (with Diana Ross)\n10. You Can't Win [Alternate Version]\n11. Blame It On The Boogie\n12. Shake A Body [Early Demo]\n13. Shake Your Body (Down To The Ground) [Single Version]\n14. Don't Stop 'Til You Get Enough\n15. Rock With You\n16. Off The Wall\n17. She's Out Of My Life\n18. Sunset Driver [1986 Mix]\n19. Lovely One\n20. This Place Hotel (aka Heartbreak Hotel)\n\nDisc Two:\n\n1. Wanna Be Startin' Somethin'\n2. The Girl Is Mine (with Paul McCartney)\n3. Thriller (with Vincent Price)\n4. Beat It (with a guitar performance by Eddie Van Halen)\n5. Billie Jean\n6. Human Nature\n7. P.Y.T. (Pretty Young Thing) [Demo]\n8. Someone In The Dark [Opening Version]\n9. State Of Shock (with Mick Jagger)\n10. Scared Of The Moon [Demo]\n11. We Are The World [Demo]\n12. We Are Here To Change The World\n\nDisc Three:\n\n1. Bad\n2. The Way You Make Me Feel\n3. Another Part Of Me\n4. Man In The Mirror (with Siedah Garrett)\n5. I Just Can't Stop Lovin' You (with Siedah Garrett)\n6. Dirty Diana\n7. Smooth Criminal\n8. Cheater [Demo]\n9. Dangerous [Early Version]\n10. Monkey Business\n11. Jam (with Heavy D)\n12. Remember The Time\n13. Black Or White\n14. Heal The World\n15. Who Is It (IHS Mix)\n\nDisc Four:\n\n1. Someone Put Your Hand Out\n2. You Are Not Alone [Extended Version]\n3. Stranger In Moscow\n4. Childhood\n5. On The Line\n6. Blood On The Dance Floor\n7. Fall Again [Demo]\n8. In The Back\n9. Unbreakable (with The Notorious B.I.G.)\n10. You Rock My World [Album Edit]\n11. Butterflies\n12. One More Chance\n13. Beautiful Girl [Demo]\n14. The Way You Love Me\n15. We've Had Enough",
-   "name": "The Ultimate Collection [12.15.04]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "The Ultimate Collection",
+   "name": "The Ultimate Collection [Japanese Release]",
+   "date": "2004-12-15",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/4736336-Michael-Jackson-The-Ultimate-Collection"
+   ],
    "description": "Official tracklist for the Japanese release of the album. Features additional tracks missing from the main version - \"Blame It On The Boogie\", \"Human Nature\", \"Another Part Of Me\", \"Heal The World\", and \"One More Chance\".\n\nDisc One:",
    "tracks": [
     {
      "num": "#1",
-     "name": "I Want You Back"
+     "name": "The Jackson 5 - I Want You Back"
     },
     {
      "num": "#2",
-     "name": "ABC"
+     "name": "The Jackson 5 - ABC"
     },
     {
      "num": "#3",
-     "name": "I'll Be There"
+     "name": "The Jackson 5 - I'll Be There"
     },
     {
      "num": "#4",
@@ -2494,11 +3144,11 @@
     },
     {
      "num": "#7",
-     "name": "Dancing Machine [Single Version]"
+     "name": "The Jackson 5 - Dancing Machine (Single Version)"
     },
     {
      "num": "#8",
-     "name": "Enjoy Yourself [Alternate Version]"
+     "name": "The Jacksons - Enjoy Yourself (Alternate Version)"
     },
     {
      "num": "#9",
@@ -2506,19 +3156,19 @@
     },
     {
      "num": "#10",
-     "name": "You Can't Win [Alternate Version]"
+     "name": "You Can't Win (From \"The Wiz\") (Alternate Version)"
     },
     {
      "num": "#11",
-     "name": "Blame It On The Boogie"
+     "name": "The Jacksons - Blame It On The Boogie"
     },
     {
      "num": "#12",
-     "name": "Shake A Body [Early Demo]"
+     "name": "The Jacksons - Shake A Body (Early Demo)"
     },
     {
      "num": "#13",
-     "name": "Shake Your Body (Down To The Ground) [Single Version]"
+     "name": "The Jacksons - Shake Your Body (Down To The Ground) (Single Version)"
     },
     {
      "num": "#14",
@@ -2538,15 +3188,15 @@
     },
     {
      "num": "#18",
-     "name": "Sunset Driver [1986 Mix]"
+     "name": "Sunset Driver (Demo)"
     },
     {
      "num": "#19",
-     "name": "Lovely One"
+     "name": "The Jacksons - Lovely One"
     },
     {
      "num": "#20",
-     "name": "This Place Hotel (aka Heartbreak Hotel)"
+     "name": "The Jacksons - This Place Hotel (Heartbreak Hotel)"
     },
     {
      "num": "#1",
@@ -2558,11 +3208,11 @@
     },
     {
      "num": "#3",
-     "name": "Thriller (with Vincent Price)"
+     "name": "Thriller"
     },
     {
      "num": "#4",
-     "name": "Beat It (with a guitar performance by Eddie Van Halen)"
+     "name": "Beat It"
     },
     {
      "num": "#5",
@@ -2574,27 +3224,27 @@
     },
     {
      "num": "#7",
-     "name": "P.Y.T. (Pretty Young Thing) [Demo]"
+     "name": "P.Y.T. (Pretty Young Thing) (Demo)"
     },
     {
      "num": "#8",
-     "name": "Someone In The Dark [Opening Version]"
+     "name": "Someone In The Dark (Opening Version)"
     },
     {
      "num": "#9",
-     "name": "State Of Shock (with Mick Jagger)"
+     "name": "The Jacksons - State Of Shock (with Mick Jagger)"
     },
     {
      "num": "#10",
-     "name": "Scared Of The Moon [Demo]"
+     "name": "Scared Of The Moon (Demo)"
     },
     {
      "num": "#11",
-     "name": "We Are The World [Demo]"
+     "name": "We Are The World (Demo)"
     },
     {
      "num": "#12",
-     "name": "We Are Here To Change The World"
+     "name": "We Are Here To Change The World (From \"Captain EO\")"
     },
     {
      "num": "#1",
@@ -2610,11 +3260,11 @@
     },
     {
      "num": "#4",
-     "name": "Man In The Mirror (with Siedah Garrett)"
+     "name": "Man In The Mirror"
     },
     {
      "num": "#5",
-     "name": "I Just Can't Stop Lovin' You (with Siedah Garrett)"
+     "name": "I Just Can't Stop Loving You"
     },
     {
      "num": "#6",
@@ -2626,11 +3276,11 @@
     },
     {
      "num": "#8",
-     "name": "Cheater [Demo]"
+     "name": "Cheater (Demo)"
     },
     {
      "num": "#9",
-     "name": "Dangerous [Early Version]"
+     "name": "Dangerous (Early Version)"
     },
     {
      "num": "#10",
@@ -2638,7 +3288,7 @@
     },
     {
      "num": "#11",
-     "name": "Jam (with Heavy D)"
+     "name": "Jam"
     },
     {
      "num": "#12",
@@ -2662,7 +3312,7 @@
     },
     {
      "num": "#2",
-     "name": "You Are Not Alone [Extended Version]"
+     "name": "You Are Not Alone (Extended Version)"
     },
     {
      "num": "#3",
@@ -2670,7 +3320,7 @@
     },
     {
      "num": "#4",
-     "name": "Childhood"
+     "name": "Childhood (Theme From \"Free Willy 2\")"
     },
     {
      "num": "#5",
@@ -2682,7 +3332,7 @@
     },
     {
      "num": "#7",
-     "name": "Fall Again [Demo]"
+     "name": "Fall Again (Demo)"
     },
     {
      "num": "#8",
@@ -2690,11 +3340,11 @@
     },
     {
      "num": "#9",
-     "name": "Unbreakable (with The Notorious B.I.G.)"
+     "name": "Unbreakable"
     },
     {
      "num": "#10",
-     "name": "You Rock My World [Album Edit]"
+     "name": "You Rock My World (Album Edit)"
     },
     {
      "num": "#11",
@@ -2706,7 +3356,7 @@
     },
     {
      "num": "#13",
-     "name": "Beautiful Girl [Demo]"
+     "name": "Beautiful Girl (Demo)"
     },
     {
      "num": "#14",
@@ -2719,13 +3369,15 @@
    ]
   },
   {
-   "era": "Official tracklist for Thriller 25.\n\n1. Wanna Be Startin' Somethin'\n2. Baby Be Mine\n3. The Girl is Mine\n4. Thriller\n5. Beat It\n6. Billie Jean\n7. Human Nature\n8. P.Y.T. (Pretty Young Thing)\n9. The Lady In My Life\n10. Vincent Price Excerpt From \"Thriller\" Voice-Over Session\n11. The Girl Is Mine 2008 (with will. i. am)\n12. P.Y.T. (Pretty Young Thing) 2008 (with will. i. am)\n13. Wanna Be Startin' Somethin' 2008 (with Akon)\n14. Beat It 2008 (with Fergie)\n15. Billie Jean 2008 (Kanye West Mix)\n16. For All Time\n17. Quincy Jones Interview #1\n18. Someone In The Dark\n19. Voice-Over Intro/Quincy Jones Interview #2/Voice Over Intro for Billie Jean (Demo)\n20. Billie Jean (Home Demo from 1981)\n21. Quincy Jones Interview #3\n22. Voice-Over Intro/Rod Temperton Interview #1\n23. Quincy Jones Interview #4\n24. Voice-Over Intro/Voice-Over Session for Thriller\n25. Voice-Over Intro/Rod Temperton Interview #2\n26. Quincy Jones Interview #5\n27. Carousel\n28. Voice-Over Intro/Quincy Jones Interview #6\n29. Billie Jean (Underground Mix)\n30. Thriller (Instrumental)",
-   "name": "Thriller 25 [2.8.08]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Official tracklist for Thriller 25.",
+   "era": "Thriller 25",
+   "name": "Thriller 25",
+   "date": "2008-02-08",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/10408894-Michael-Jackson-Thriller-25"
+   ],
+   "description": "Official tracklist for the base release of Thriller 25. \"For All Time\" is actually a Dangerous-era track despite the release claiming it is from the Thriller sessions. Further work was done on the song for Thriller 25.",
    "tracks": [
     {
      "num": "#1",
@@ -2737,7 +3389,7 @@
     },
     {
      "num": "#3",
-     "name": "The Girl is Mine"
+     "name": "The Girl is Mine (with Paul McCartney)"
     },
     {
      "num": "#4",
@@ -2769,11 +3421,88 @@
     },
     {
      "num": "#11",
-     "name": "The Girl Is Mine 2008 (with will. i. am)"
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
     },
     {
      "num": "#12",
-     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will. i. am)"
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
+    },
+    {
+     "num": "#13",
+     "name": "Wanna Be Startin' Somethin' 2008 (with Akon)"
+    },
+    {
+     "num": "#14",
+     "name": "Beat It 2008 (with Fergie)"
+    },
+    {
+     "num": "#15",
+     "name": "Billie Jean 2008 (Kanye West Mix)"
+    },
+    {
+     "num": "#16",
+     "name": "For All Time"
+    }
+   ]
+  },
+  {
+   "era": "Thriller 25",
+   "name": "Thriller 25 [Japanese Release]",
+   "date": "2008-02-08",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/2994373-Michael-Jackson-%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB%E3%82%B8%E3%83%A3%E3%82%AF%E3%82%BD%E3%83%B3-Thriller-25-%E3%82%B9%E3%83%AA%E3%83%A9%E3%83%BC-25%E5%91%A8%E5%B9%B4%E8%A8%98%E5%BF%B5%E3%83%AA%E3%83%9F%E3%83%86%E3%83%83%E3%83%89"
+   ],
+   "description": "Official tracklist for the Japanese release of Thriller 25. Includes \"Got The Hots\" as a bonus track.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Wanna Be Startin' Somethin'"
+    },
+    {
+     "num": "#2",
+     "name": "Baby Be Mine"
+    },
+    {
+     "num": "#3",
+     "name": "The Girl is Mine (with Paul McCartney)"
+    },
+    {
+     "num": "#4",
+     "name": "Thriller"
+    },
+    {
+     "num": "#5",
+     "name": "Beat It"
+    },
+    {
+     "num": "#6",
+     "name": "Billie Jean"
+    },
+    {
+     "num": "#7",
+     "name": "Human Nature"
+    },
+    {
+     "num": "#8",
+     "name": "P.Y.T. (Pretty Young Thing)"
+    },
+    {
+     "num": "#9",
+     "name": "The Lady In My Life"
+    },
+    {
+     "num": "#10",
+     "name": "Vincent Price Excerpt From \"Thriller\" Voice-Over Session"
+    },
+    {
+     "num": "#11",
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
+    },
+    {
+     "num": "#12",
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
     },
     {
      "num": "#13",
@@ -2793,7 +3522,88 @@
     },
     {
      "num": "#17",
-     "name": "Quincy Jones Interview #1"
+     "name": "Got The Hots"
+    }
+   ]
+  },
+  {
+   "era": "Thriller 25",
+   "name": "Thriller 25 (Super Deluxe Edition)",
+   "date": "2008-02-08",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/1C2h7mLntPSeVYciMRTF4a"
+   ],
+   "description": "Official tracklist for the digital only Thriller 25 Super Deluxe Edition. Same as base Thriller 25, except for the addition of the 2001 Special Edition material, as well as \"Billie Jean (Underground Mix)\" and \"Thriller (Instrumental)\".",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Wanna Be Startin' Somethin'"
+    },
+    {
+     "num": "#2",
+     "name": "Baby Be Mine"
+    },
+    {
+     "num": "#3",
+     "name": "The Girl is Mine (with Paul McCartney)"
+    },
+    {
+     "num": "#4",
+     "name": "Thriller"
+    },
+    {
+     "num": "#5",
+     "name": "Beat It"
+    },
+    {
+     "num": "#6",
+     "name": "Billie Jean"
+    },
+    {
+     "num": "#7",
+     "name": "Human Nature"
+    },
+    {
+     "num": "#8",
+     "name": "P.Y.T. (Pretty Young Thing)"
+    },
+    {
+     "num": "#9",
+     "name": "The Lady In My Life"
+    },
+    {
+     "num": "#10",
+     "name": "Vincent Price Excerpt From \"Thriller\" Voice-Over Session"
+    },
+    {
+     "num": "#11",
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
+    },
+    {
+     "num": "#12",
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
+    },
+    {
+     "num": "#13",
+     "name": "Wanna Be Startin' Somethin' 2008 (with Akon)"
+    },
+    {
+     "num": "#14",
+     "name": "Beat It 2008 (with Fergie)"
+    },
+    {
+     "num": "#15",
+     "name": "Billie Jean 2008 (Kanye West Mix)"
+    },
+    {
+     "num": "#16",
+     "name": "For All Time"
+    },
+    {
+     "num": "#17",
+     "name": "Voice-Over Intro Quincy Jones Interview #1 / Quincy Jones Interview #1"
     },
     {
      "num": "#18",
@@ -2801,11 +3611,11 @@
     },
     {
      "num": "#19",
-     "name": "Voice-Over Intro/Quincy Jones Interview #2/Voice Over Intro for Billie Jean (Demo)"
+     "name": "Voice-Over Intro Quincy Jones Interview #2 / Quincy Jones Interview #2 / Voice-Over Intro Billie Jean (Demo)"
     },
     {
      "num": "#20",
-     "name": "Billie Jean (Home Demo from 1981)"
+     "name": "Billie Jean (1981 Home Demo) (Billie Jean (Home Demo from 1981))"
     },
     {
      "num": "#21",
@@ -2813,7 +3623,7 @@
     },
     {
      "num": "#22",
-     "name": "Voice-Over Intro/Rod Temperton Interview #1"
+     "name": "Voice-Over Intro Rod Temperton Interview #1 / Rod Temperton Interview #1"
     },
     {
      "num": "#23",
@@ -2821,11 +3631,11 @@
     },
     {
      "num": "#24",
-     "name": "Voice-Over Intro/Voice-Over Session for Thriller"
+     "name": "Voice-Over Intro / Voice-Over Session for Thriller"
     },
     {
      "num": "#25",
-     "name": "Voice-Over Intro/Rod Temperton Interview #2"
+     "name": "Voice-Over Intro Rod Temperton Interview #2 / Rod Temperton Interview #2"
     },
     {
      "num": "#26",
@@ -2837,7 +3647,7 @@
     },
     {
      "num": "#28",
-     "name": "Voice-Over Intro/Quincy Jones Interview #6"
+     "name": "Voice-Over Intro Quincy Jones Interview #6 / Quincy Jones Interview #6"
     },
     {
      "num": "#29",
@@ -2850,12 +3660,339 @@
    ]
   },
   {
-   "era": "Two-page list of songs printed by Michael and found in his room shortly after his death.\n\n1. Lonely Bird\n2. Broken Chair\n3. Red Eye\n4. Ways You Love Me\n5. The Loser\n6. Best Of Joy\n7. D.I.E.\n8. Is She Coming Back\n9. Dark Lady H2O\n10. Bottom Of My Heart\n11. Hold My Hand\n12. Remember What I Told You\n13. Can't Stop Lovin' You\n14. Silent Spring\n15. You Were There\n16. Lady Of Summer\n17. I Love You (later added in handwriting)\n18. Lady Of Summer (added a 2nd time by mistake)\n19. Hollywood Tonight\n20. Shut Up And Dance\n21. Rock Tonight\n22. Adore You\n23. Breath\n24. I Am That One\n25. Everybody Wants To Be A Movie Star\n26. Beautiful Girl\n27. MJ Barri Gibb Song\n28. Scared Of Moon\n29. Thank Heaven\n30. Ghost Of Another Lover\n31. Gloucestershire\n32. Throwing Your Life Away (later added in handwriting)\n33. Leaving Today To Benin (later added in handwriting)",
+   "era": "Thriller 25",
+   "name": "Thriller 25 [Target Exclusive]",
+   "date": "2008-02-11",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/1418209-Michael-Jackson-Thriller-25"
+   ],
+   "description": "Official tracklist for the Target exclusive release of Thriller 25. Includes \"Billie Jean (Four On The Floor Remix)\" from the Classic Remix Series as a bonus track, remixed by Georgie Porgie. This is mislabelled as the \"1982 Club Remix\".",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Wanna Be Startin' Somethin'"
+    },
+    {
+     "num": "#2",
+     "name": "Baby Be Mine"
+    },
+    {
+     "num": "#3",
+     "name": "The Girl is Mine (with Paul McCartney)"
+    },
+    {
+     "num": "#4",
+     "name": "Thriller"
+    },
+    {
+     "num": "#5",
+     "name": "Beat It"
+    },
+    {
+     "num": "#6",
+     "name": "Billie Jean"
+    },
+    {
+     "num": "#7",
+     "name": "Human Nature"
+    },
+    {
+     "num": "#8",
+     "name": "P.Y.T. (Pretty Young Thing)"
+    },
+    {
+     "num": "#9",
+     "name": "The Lady In My Life"
+    },
+    {
+     "num": "#10",
+     "name": "Vincent Price Excerpt From \"Thriller\" Voice-Over Session"
+    },
+    {
+     "num": "#11",
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
+    },
+    {
+     "num": "#12",
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
+    },
+    {
+     "num": "#13",
+     "name": "Wanna Be Startin' Somethin' 2008 (with Akon)"
+    },
+    {
+     "num": "#14",
+     "name": "Beat It 2008 (with Fergie)"
+    },
+    {
+     "num": "#15",
+     "name": "Billie Jean 2008 (Kanye West Mix)"
+    },
+    {
+     "num": "#16",
+     "name": "For All Time"
+    },
+    {
+     "num": "#17",
+     "name": "Billie Jean (Four On The Floor Remix)"
+    }
+   ]
+  },
+  {
+   "era": "Thriller 25",
+   "name": "Thriller 25 [Independent Music Stores Exclusive]",
+   "date": "2008-02-11",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/1418365-Michael-Jackson-Thriller-25"
+   ],
+   "description": "Official tracklist for the independent music stores exclusive release of Thriller 25. Includes \"Billie Jean (Four On The Floor Remix - Radio Edit)\" from the Classic Remix Series as a bonus track, remixed by Georgie Porgie. This is mislabelled as the \"1982 Radio Edit Remix\".",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Wanna Be Startin' Somethin'"
+    },
+    {
+     "num": "#2",
+     "name": "Baby Be Mine"
+    },
+    {
+     "num": "#3",
+     "name": "The Girl is Mine (with Paul McCartney)"
+    },
+    {
+     "num": "#4",
+     "name": "Thriller"
+    },
+    {
+     "num": "#5",
+     "name": "Beat It"
+    },
+    {
+     "num": "#6",
+     "name": "Billie Jean"
+    },
+    {
+     "num": "#7",
+     "name": "Human Nature"
+    },
+    {
+     "num": "#8",
+     "name": "P.Y.T. (Pretty Young Thing)"
+    },
+    {
+     "num": "#9",
+     "name": "The Lady In My Life"
+    },
+    {
+     "num": "#10",
+     "name": "Vincent Price Excerpt From \"Thriller\" Voice-Over Session"
+    },
+    {
+     "num": "#11",
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
+    },
+    {
+     "num": "#12",
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
+    },
+    {
+     "num": "#13",
+     "name": "Wanna Be Startin' Somethin' 2008 (with Akon)"
+    },
+    {
+     "num": "#14",
+     "name": "Beat It 2008 (with Fergie)"
+    },
+    {
+     "num": "#15",
+     "name": "Billie Jean 2008 (Kanye West Mix)"
+    },
+    {
+     "num": "#16",
+     "name": "For All Time"
+    },
+    {
+     "num": "#17",
+     "name": "Billie Jean (Four On The Floor Remix - Radio Edit)"
+    }
+   ]
+  },
+  {
+   "era": "Thriller 25",
+   "name": "Thriller 25 [Best Buy Exclusive]",
+   "date": "2008-02-11",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/1418457-Michael-Jackson-Thriller-25"
+   ],
+   "description": "Official tracklist for the Best Buy exclusive release of Thriller 25. Includes \"Thriller (Def Thrill Mix)\" from the Classic Remix Series as a bonus track, remixed by David Morales & Frankie Knuckles. This is mislabelled as the \"1982 Def Remix\".",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Wanna Be Startin' Somethin'"
+    },
+    {
+     "num": "#2",
+     "name": "Baby Be Mine"
+    },
+    {
+     "num": "#3",
+     "name": "The Girl is Mine (with Paul McCartney)"
+    },
+    {
+     "num": "#4",
+     "name": "Thriller"
+    },
+    {
+     "num": "#5",
+     "name": "Beat It"
+    },
+    {
+     "num": "#6",
+     "name": "Billie Jean"
+    },
+    {
+     "num": "#7",
+     "name": "Human Nature"
+    },
+    {
+     "num": "#8",
+     "name": "P.Y.T. (Pretty Young Thing)"
+    },
+    {
+     "num": "#9",
+     "name": "The Lady In My Life"
+    },
+    {
+     "num": "#10",
+     "name": "Vincent Price Excerpt From \"Thriller\" Voice-Over Session"
+    },
+    {
+     "num": "#11",
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
+    },
+    {
+     "num": "#12",
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
+    },
+    {
+     "num": "#13",
+     "name": "Wanna Be Startin' Somethin' 2008 (with Akon)"
+    },
+    {
+     "num": "#14",
+     "name": "Beat It 2008 (with Fergie)"
+    },
+    {
+     "num": "#15",
+     "name": "Billie Jean 2008 (Kanye West Mix)"
+    },
+    {
+     "num": "#16",
+     "name": "For All Time"
+    },
+    {
+     "num": "#17",
+     "name": "Thriller (Def Thrill Mix)"
+    }
+   ]
+  },
+  {
+   "era": "Thriller 25",
+   "name": "Thriller 25 [Circuit City Exclusive]",
+   "date": "2008-02-11",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/1418411-Michael-Jackson-Thriller-25"
+   ],
+   "description": "Official tracklist for the Circuit City exclusive release of Thriller 25. Includes the extended version of \"Wanna Be Startin' Somethin'\" as a bonus track.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Wanna Be Startin' Somethin'"
+    },
+    {
+     "num": "#2",
+     "name": "Baby Be Mine"
+    },
+    {
+     "num": "#3",
+     "name": "The Girl is Mine (with Paul McCartney)"
+    },
+    {
+     "num": "#4",
+     "name": "Thriller"
+    },
+    {
+     "num": "#5",
+     "name": "Beat It"
+    },
+    {
+     "num": "#6",
+     "name": "Billie Jean"
+    },
+    {
+     "num": "#7",
+     "name": "Human Nature"
+    },
+    {
+     "num": "#8",
+     "name": "P.Y.T. (Pretty Young Thing)"
+    },
+    {
+     "num": "#9",
+     "name": "The Lady In My Life"
+    },
+    {
+     "num": "#10",
+     "name": "Vincent Price Excerpt From \"Thriller\" Voice-Over Session"
+    },
+    {
+     "num": "#11",
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
+    },
+    {
+     "num": "#12",
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
+    },
+    {
+     "num": "#13",
+     "name": "Wanna Be Startin' Somethin' 2008 (with Akon)"
+    },
+    {
+     "num": "#14",
+     "name": "Beat It 2008 (with Fergie)"
+    },
+    {
+     "num": "#15",
+     "name": "Billie Jean 2008 (Kanye West Mix)"
+    },
+    {
+     "num": "#16",
+     "name": "For All Time"
+    },
+    {
+     "num": "#17",
+     "name": "Wanna Be Startin' Somethin' (1982 Dance Mix)"
+    }
+   ]
+  },
+  {
+   "era": "Final Sessions",
    "name": "Song List",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "date": "2009",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/f0dCDLCD#qz0jt7efaQC21hVgr4vS7A",
+    "https://www.tmz.com/2013/06/15/michael-jackson-death-photo-scene-gallery/"
+   ],
    "description": "Two-page list of songs printed by Michael and found in his room shortly after his death.",
    "tracks": [
     {
@@ -2872,11 +4009,11 @@
     },
     {
      "num": "#4",
-     "name": "Ways You Love Me"
+     "name": "Ways You Love Me (The Way You Love Me)"
     },
     {
      "num": "#5",
-     "name": "The Loser"
+     "name": "The Loser (I Was The Loser)"
     },
     {
      "num": "#6",
@@ -2892,11 +4029,11 @@
     },
     {
      "num": "#9",
-     "name": "Dark Lady H2O"
+     "name": "Dark Lady H2O (both titles written as one)"
     },
     {
      "num": "#10",
-     "name": "Bottom Of My Heart"
+     "name": "Bottom Of My Heart (From The Bottom Of My Heart)"
     },
     {
      "num": "#11",
@@ -2904,11 +4041,11 @@
     },
     {
      "num": "#12",
-     "name": "Remember What I Told You"
+     "name": "Remember What I Told You (Just Remember)"
     },
     {
      "num": "#13",
-     "name": "Can't Stop Lovin' You"
+     "name": "Can't Stop Lovin' You (Can't Stop Loving You)"
     },
     {
      "num": "#14",
@@ -2948,7 +4085,7 @@
     },
     {
      "num": "#23",
-     "name": "Breath"
+     "name": "Breath (Breathe)"
     },
     {
      "num": "#24",
@@ -2964,11 +4101,11 @@
     },
     {
      "num": "#27",
-     "name": "MJ Barri Gibb Song"
+     "name": "MJ Barri Gibb Song (unknown which MJ + Barry Gibb song this is referring to)"
     },
     {
      "num": "#28",
-     "name": "Scared Of Moon"
+     "name": "Scared Of Moon (Scared Of The Moon)"
     },
     {
      "num": "#29",
@@ -2980,35 +4117,42 @@
     },
     {
      "num": "#31",
-     "name": "Gloucestershire"
+     "name": "Gloucestershire (Days In Gloucestershire)"
     },
     {
      "num": "#32",
      "name": "Throwing Your Life Away (later added in handwriting)"
-    },
-    {
-     "num": "#33",
-     "name": "Leaving Today To Benin (later added in handwriting)"
     }
+   ],
+   "images": [
+    "/mjgold/art/tl-58-0.jpg"
    ]
   },
   {
-   "era": "Handwritten list of songs found in Michael's room shortly after he died. Please note that all titles are in a random order on the sheet. \"Cheater\", \"Scared Of The Moon\", and \"Beautiful Girl\" are in a subsection of songs to finish.\n\n\nRed Eye\nWays You Love Me\nThe Loser\nBest Of Joy\nLady Of Summer\nIs She Coming Back (\"Freeze\" is written beside)\nBeautiful Girl\nD.I.E.\nDark Lady H20\nBottom Of My Heart\nHold My Hand\nRemember What I Told You\nCan’t Stop Loving You\nSilent Spring\nYou Were There\nHollywood Tonight\nShut Up And Dance\nRock Tonight\nAdore You\nBreath\nI Am That One\nEverybody Wants To Be A Movie Star\nDon’t Walk Away\nBarri Gibb MJ Song\nCoco Butter!\nScared Of The Moon\nBeautiful Girl (written again)\nCheater\nToo Late To Turn Back Now\nGhost Of Another Lover",
+   "era": "Final Sessions",
    "name": "Song List",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Handwritten list of songs found in Michael's room shortly after he died. Please note that all titles are in a random order on the sheet. \"Cheater\", \"Scared Of The Moon\", and \"Beautiful Girl\" are in a subsection of songs to finish.\n\n\nRed Eye\nWays You Love Me\nThe Loser\nBest Of Joy\nLady Of Summer\nIs She Coming Back (\"Freeze\" is written beside)\nBeautiful Girl\nD.I.E.\nDark Lady H20\nBottom Of My Heart\nHold My Hand\nRemember What I Told You\nCan’t Stop Loving You\nSilent Spring\nYou Were There\nHollywood Tonight\nShut Up And Dance\nRock Tonight\nAdore You\nBreath\nI Am That One\nEverybody Wants To Be A Movie Star\nDon’t Walk Away\nBarri Gibb MJ Song\nCoco Butter!\nScared Of The Moon\nBeautiful Girl (written again)\nCheater\nToo Late To Turn Back Now\nGhost Of Another Lover",
-   "tracks": []
+   "date": "2009",
+   "quality": "Blurry",
+   "source": "Leaked",
+   "links": [
+    "https://mega.nz/folder/350mXajb#dJWf1pQL5welrd74T0W51w",
+    "https://www.tmz.com/2013/06/15/michael-jackson-death-photo-scene-gallery/"
+   ],
+   "description": "Handwritten list of songs found in Michael's room shortly after he died. Please note that all titles are in a random order on the sheet. \"Cheater\", \"Scared Of The Moon\", and \"Beautiful Girl\" are in a subsection of songs to finish.\n\nRed Eye\nWays You Love Me (The Way You Love Me)\nThe Loser (I Was The Loser)\nBest Of Joy\nLady Of Summer\nIs She Coming Back (\"Freeze\" is written beside)\nBeautiful Girl\nD.I.E.\nDark Lady H2O (both titles written as one)\nBottom Of My Heart (From The Bottom Of My Heart)\nHold My Hand\nRemember What I Told You (Just Remember)\nCan’t Stop Loving You (Can't Stop Lovin' You) (has an arrow pointing to it with a note that might say \"Melodine Now\", presumably referring to \"Melodyne\")\nSilent Spring\nYou Were There\nHollywood Tonight (Hollywood)\nShut Up And Dance\nRock Tonight\nAdore You\nBreath (Breathe)\nI Am That One\nEverybody Wants To Be A Movie Star\nDon’t Walk Away\nBarri Gibb MJ Song (unknown which MJ + Barry Gibb song this is referring to)\nCoco Butter!\nScared Of The Moon (marked as a song to finish)\nBeautiful Girl (written again, marked as a song to finish)\nCheater (marked as a song to finish)\nToo Late To Turn Back Now\nGhost Of Another Lover",
+   "tracks": [],
+   "images": [
+    "/mjgold/art/tl-59-0.jpg"
+   ]
   },
   {
-   "era": "Official tracklist for the album.\n\nDisc One:\n\n1. Wanna Be Startin' Somethin'\n2. Jam\n3. They Don't Care About Us\n4. Human Nature\n5. Smooth Criminal\n6. The Way You Make Me Feel\n7. Shake Your Body (Down To The Ground) [7\" Version]\n8. I Just Can't Stop Loving You (featuring Siedah Garrett)\n9. Thriller\n10. Beat It\n11. Black Or White\n12. Earth Song\n13. Billie Jean\n14. Man In The Mirror\n15. This Is It\n16. This Is It [Orchestra Version]\n\nDisc Two:\n\n1. She's Out Of My Life [Demo]\n2. Wanna Be Startin' Somethin' [Demo]\n3. Beat It [Demo]\n4. Planet Earth [Poem]",
-   "name": "This Is It [10.26.09]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "This Is It",
+   "name": "This Is It",
+   "date": "2009-10-26",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/7pMVCMwGykuEu9rzTHxLCm"
+   ],
    "description": "Official tracklist for the album.\n\nDisc One:",
    "tracks": [
     {
@@ -3029,7 +4173,7 @@
     },
     {
      "num": "#5",
-     "name": "Smooth Criminal"
+     "name": "Smooth Criminal (Radio Edit)"
     },
     {
      "num": "#6",
@@ -3037,11 +4181,11 @@
     },
     {
      "num": "#7",
-     "name": "Shake Your Body (Down To The Ground) [7\" Version]"
+     "name": "The Jacksons - Shake Your Body (Down To The Ground) (7\" Version)"
     },
     {
      "num": "#8",
-     "name": "I Just Can't Stop Loving You (featuring Siedah Garrett)"
+     "name": "I Just Can't Stop Loving You"
     },
     {
      "num": "#9",
@@ -3073,38 +4217,40 @@
     },
     {
      "num": "#16",
-     "name": "This Is It [Orchestra Version]"
+     "name": "This Is It (Orchestra Version)"
     },
     {
      "num": "#1",
-     "name": "She's Out Of My Life [Demo]"
+     "name": "She's Out Of My Life (Demo)"
     },
     {
      "num": "#2",
-     "name": "Wanna Be Startin' Somethin' [Demo]"
+     "name": "Wanna Be Startin' Somethin' (Demo)"
     },
     {
      "num": "#3",
-     "name": "Beat It [Demo]"
+     "name": "Beat It (Demo)"
     },
     {
      "num": "#4",
-     "name": "Planet Earth [Poem]"
+     "name": "Planet Earth (Poem)"
     }
    ]
   },
   {
-   "era": "Official tracklist for the original release of the album, featuring the Cascio tracks.\n\n1. Hold My Hand [Duet with Akon]\n2. Hollywood Tonight\n3. Keep Your Head Up\n4. (I Like) The Way You Love Me\n5. Monster (featuring 50 Cent)\n6. Best Of Joy\n7. Breaking News\n8. (I Can't Make It) Another Day (featuring Lenny Kravitz)\n9. Behind The Mask\n10. Much Too Soon",
-   "name": "Michael [12.10.10]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Michael",
+   "name": "Michael",
+   "date": "2010-12-10",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/master/293695-Michael-Jackson-Michael"
+   ],
    "description": "Official tracklist for the original release of the album, featuring the Cascio tracks.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Hold My Hand [Duet with Akon]"
+     "name": "Hold My Hand (with Akon)"
     },
     {
      "num": "#2",
@@ -3112,7 +4258,7 @@
     },
     {
      "num": "#3",
-     "name": "Keep Your Head Up"
+     "name": "Keep Your Head Up (Cascio track - not MJ)"
     },
     {
      "num": "#4",
@@ -3120,7 +4266,7 @@
     },
     {
      "num": "#5",
-     "name": "Monster (featuring 50 Cent)"
+     "name": "Monster (feat. 50 Cent) (Cascio track - not MJ)"
     },
     {
      "num": "#6",
@@ -3128,11 +4274,11 @@
     },
     {
      "num": "#7",
-     "name": "Breaking News"
+     "name": "Breaking News (Cascio track - not MJ)"
     },
     {
      "num": "#8",
-     "name": "(I Can't Make It) Another Day (featuring Lenny Kravitz)"
+     "name": "(I Can't Make It) Another Day (feat. Lenny Kravitz)"
     },
     {
      "num": "#9",
@@ -3145,17 +4291,19 @@
    ]
   },
   {
-   "era": "Official tracklist for the 2022 reissue of the album.\n\n1. Hold My Hand [Duet with Akon]\n2. Hollywood Tonight\n3. (I Like) The Way You Love Me\n4. Best Of Joy\n5. (I Can't Make It) Another Day (featuring Lenny Kravitz)\n6. Behind The Mask\n7. Much Too Soon",
-   "name": "Michael [09.09.22]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Official tracklist for the 2022 reissue of the album.",
+   "era": "Michael",
+   "name": "Michael [Reissue]",
+   "date": "2022-09-09",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/5S7ySBYbWKsZdVYQrNtrWf"
+   ],
+   "description": "Official tracklist for the 2022 reissue of the album. This is the version currently on streaming.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Hold My Hand [Duet with Akon]"
+     "name": "Hold My Hand (with Akon)"
     },
     {
      "num": "#2",
@@ -3171,7 +4319,7 @@
     },
     {
      "num": "#5",
-     "name": "(I Can't Make It) Another Day (featuring Lenny Kravitz)"
+     "name": "(I Can't Make It) Another Day (feat. Lenny Kravitz)"
     },
     {
      "num": "#6",
@@ -3184,12 +4332,14 @@
    ]
   },
   {
-   "era": "Official tracklist for Bad 25.\n\nDisc 1: Original Album\n\n1. Bad\n2. The Way You Make Me Feel\n3. Speed Demon\n4. Liberian Girl\n5. Just Good Friends (with Stevie Wonder)\n6. Another Part Of Me\n7. Man In The Mirror\n8. I Just Can't Stop Loving You\n9. Dirty Diana\n10. Smooth Criminal\n11. Leave Me Alone\n\nDisc 2: Bonus Material\n\n1. Don't Be Messin' 'Round\n2. I'm So Blue\n3. Song Groove (a.k.a. Abortion Papers)\n4. Free\n5. Price Of Fame\n6. Al Capone\n7. Streetwalker\n8. Fly Away\n9. Todo Mi Amor Eres Tu\n10. Je Ne Veux Pas La Fin De Nous\n11. Bad (Afrojack Remix w/Pitbull - DJ Buddha Edit)\n12. Speed Demon (Remix by Nero)\n13. Bad (Remix by Afrojack)\n14. Bad (Live at Yokohama Stadium - September 26th, 1987) [Japanese release only]",
-   "name": "Bad 25 [9.18.12]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad 25",
+   "name": "Bad 25",
+   "date": "2012-09-18",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/24TAupSNVWSAHL0R7n71vm"
+   ],
    "description": "Official tracklist for Bad 25.\n\nDisc 1: Original Album",
    "tracks": [
     {
@@ -3210,7 +4360,7 @@
     },
     {
      "num": "#5",
-     "name": "Just Good Friends (with Stevie Wonder)"
+     "name": "Just Good Friends"
     },
     {
      "num": "#6",
@@ -3278,7 +4428,7 @@
     },
     {
      "num": "#11",
-     "name": "Bad (Afrojack Remix w/Pitbull - DJ Buddha Edit)"
+     "name": "Bad (Remix By Afrojack Featuring Pitbull - DJ Buddha Edit)"
     },
     {
      "num": "#12",
@@ -3286,21 +4436,177 @@
     },
     {
      "num": "#13",
-     "name": "Bad (Remix by Afrojack)"
-    },
-    {
-     "num": "#14",
-     "name": "Bad (Live at Yokohama Stadium - September 26th, 1987) [Japanese release only]"
+     "name": "Bad (Remix by Afrojack - Club Mix)"
     }
    ]
   },
   {
-   "era": "Official tracklist for the deluxe edition of the album.\n\n1. Love Never Felt So Good\n2. Chicago\n3. Loving You\n4. A Place With No Name\n5. Slave To The Rhythm\n6. Do You Know Where Your Children Are\n7. Blue Gangsta\n8. Xscape\n9. Love Never Felt So Good [Original Version]\n10. Chicago [Original Version]\n11. Loving You [Original Version]\n12. A Place With No Name [Original Version]\n13. Slave To The Rhythm [Original Version]\n14. Do You Know Where Your Children Are [Original Version]\n15. Blue Gangsta [Original Version]\n16. Xscape [Original Version]\n17. Love Never Felt So Good (featuring Justin Timberlake)",
-   "name": "XSCAPE [05.09.14]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Bad 25",
+   "name": "Bad 25 [Japanese Release]",
+   "date": "2012-09-19",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/15537729-Michael-Jackson-Bad-25"
+   ],
+   "description": "Official tracklist for the Japanese release of Bad 25. Features \"Bad (Live at Yokohama Stadium)\" as a bonus track on disc 2.\n\nDisc 1: Original Album",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Bad"
+    },
+    {
+     "num": "#2",
+     "name": "The Way You Make Me Feel"
+    },
+    {
+     "num": "#3",
+     "name": "Speed Demon"
+    },
+    {
+     "num": "#4",
+     "name": "Liberian Girl"
+    },
+    {
+     "num": "#5",
+     "name": "Just Good Friends"
+    },
+    {
+     "num": "#6",
+     "name": "Another Part Of Me"
+    },
+    {
+     "num": "#7",
+     "name": "Man In The Mirror"
+    },
+    {
+     "num": "#8",
+     "name": "I Just Can't Stop Loving You"
+    },
+    {
+     "num": "#9",
+     "name": "Dirty Diana"
+    },
+    {
+     "num": "#10",
+     "name": "Smooth Criminal"
+    },
+    {
+     "num": "#11",
+     "name": "Leave Me Alone"
+    },
+    {
+     "num": "#1",
+     "name": "Don't Be Messin' 'Round"
+    },
+    {
+     "num": "#2",
+     "name": "I'm So Blue"
+    },
+    {
+     "num": "#3",
+     "name": "Song Groove (a.k.a. Abortion Papers)"
+    },
+    {
+     "num": "#4",
+     "name": "Free"
+    },
+    {
+     "num": "#5",
+     "name": "Price Of Fame"
+    },
+    {
+     "num": "#6",
+     "name": "Al Capone"
+    },
+    {
+     "num": "#7",
+     "name": "Streetwalker"
+    },
+    {
+     "num": "#8",
+     "name": "Fly Away"
+    },
+    {
+     "num": "#9",
+     "name": "Todo Mi Amor Eres Tu"
+    },
+    {
+     "num": "#10",
+     "name": "Je Ne Veux Pas La Fin De Nous"
+    },
+    {
+     "num": "#11",
+     "name": "Bad (Remix By Afrojack Featuring Pitbull - DJ Buddha Edit)"
+    },
+    {
+     "num": "#12",
+     "name": "Speed Demon (Remix by Nero)"
+    },
+    {
+     "num": "#13",
+     "name": "Bad (Remix by Afrojack - Club Mix)"
+    },
+    {
+     "num": "#14",
+     "name": "Bad (Live at Yokohama Stadium - September 26th, 1987)"
+    }
+   ]
+  },
+  {
+   "era": "XSCAPE",
+   "name": "XSCAPE",
+   "date": "2014-05-09",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/5sXEWtPp2JZG88ji9bLmwZ"
+   ],
+   "description": "Official tracklist for the standard edition of the album.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Love Never Felt So Good"
+    },
+    {
+     "num": "#2",
+     "name": "Chicago"
+    },
+    {
+     "num": "#3",
+     "name": "Loving You"
+    },
+    {
+     "num": "#4",
+     "name": "A Place With No Name"
+    },
+    {
+     "num": "#5",
+     "name": "Slave To The Rhythm"
+    },
+    {
+     "num": "#6",
+     "name": "Do You Know Where Your Children Are"
+    },
+    {
+     "num": "#7",
+     "name": "Blue Gangsta"
+    },
+    {
+     "num": "#8",
+     "name": "Xscape"
+    }
+   ]
+  },
+  {
+   "era": "XSCAPE",
+   "name": "XSCAPE (Deluxe)",
+   "date": "2014-05-09",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/7pomP86PUhoJpY3fsC0WDQ"
+   ],
    "description": "Official tracklist for the deluxe edition of the album.",
    "tracks": [
     {
@@ -3337,49 +4643,51 @@
     },
     {
      "num": "#9",
-     "name": "Love Never Felt So Good [Original Version]"
+     "name": "Love Never Felt So Good (Original Version)"
     },
     {
      "num": "#10",
-     "name": "Chicago [Original Version]"
+     "name": "Chicago (Original Version) (She Was Loving Me)"
     },
     {
      "num": "#11",
-     "name": "Loving You [Original Version]"
+     "name": "Loving You (Original Version)"
     },
     {
      "num": "#12",
-     "name": "A Place With No Name [Original Version]"
+     "name": "A Place With No Name (Original Version)"
     },
     {
      "num": "#13",
-     "name": "Slave To The Rhythm [Original Version]"
+     "name": "Slave To The Rhythm (Original Version)"
     },
     {
      "num": "#14",
-     "name": "Do You Know Where Your Children Are [Original Version]"
+     "name": "Do You Know Where Your Children Are (Original Version)"
     },
     {
      "num": "#15",
-     "name": "Blue Gangsta [Original Version]"
+     "name": "Blue Gangsta (Original Version)"
     },
     {
      "num": "#16",
-     "name": "Xscape [Original Version]"
+     "name": "Xscape (Original Version)"
     },
     {
      "num": "#17",
-     "name": "Love Never Felt So Good (featuring Justin Timberlake)"
+     "name": "Love Never Felt So Good (feat. Justin Timberlake)"
     }
    ]
   },
   {
-   "era": "Official tracklist for Thriller 40 containing 7 previously unreleased tracks. For some reason some songs are labeled as non-demos when they are demos and vice versa.\n\n1. Wanna Be Startin' Somethin'\n2. Baby Be Mine\n3. The Girl is Mine\n4. Thriller\n5. Beat It\n6. Billie Jean\n7. Human Nature\n8. P.Y.T. (Pretty Young Thing)\n9. The Lady In My Life\n10. Starlight\n11. Got The Hots (Demo)\n12. Who Do You Know (Demo)\n13. Carousel (Full Version)\n14. Behind The Mask (Mike's Mix; Demo)\n15. Can't Get Outta The Rain\n16. The Toy (Demo)\n17. Sunset Driver (Demo)\n18. What A Lovely Way To Go (Demo)\n19. She's Trouble (Demo)",
-   "name": "Thriller 40 [11.18.22]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Thriller 40",
+   "name": "Thriller 40",
+   "date": "2022-11-18",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://www.discogs.com/release/25201522-Michael-Jackson-Thriller-40"
+   ],
    "description": "Official tracklist for Thriller 40 containing 7 previously unreleased tracks. For some reason some songs are labeled as non-demos when they are demos and vice versa.",
    "tracks": [
     {
@@ -3392,7 +4700,7 @@
     },
     {
      "num": "#3",
-     "name": "The Girl is Mine"
+     "name": "The Girl is Mine (with Paul McCartney)"
     },
     {
      "num": "#4",
@@ -3432,11 +4740,11 @@
     },
     {
      "num": "#13",
-     "name": "Carousel (Full Version)"
+     "name": "Carousel"
     },
     {
      "num": "#14",
-     "name": "Behind The Mask (Mike's Mix; Demo)"
+     "name": "Behind The Mask (Mike's Mix) (Demo)"
     },
     {
      "num": "#15",
@@ -3461,12 +4769,14 @@
    ]
   },
   {
-   "era": "Official expanded tracklist for the digital version of Thriller 40 containing all original tracks from the Thriller 25 celebration, except for the demo of \"The Girl Is Mine\".\n\n1. Wanna Be Startin' Somethin'\n2. Baby Be Mine\n3. The Girl is Mine\n4. Thriller\n5. Beat It\n6. Billie Jean\n7. Human Nature\n8. P.Y.T. (Pretty Young Thing)\n9. The Lady In My Life\n10. Starlight\n11. Got The Hots (Demo)\n12. Who Do You Know (Demo)\n13. Carousel (Full Version)\n14. Behind The Mask (Mike's Mix; Demo)\n15. Can't Get Outta The Rain\n16. The Toy (Demo)\n17. Sunset Driver (Demo)\n18. What A Lovely Way To Go (Demo)\n19. She's Trouble (Demo)\n20. Billie Jean (Home Demo from 1981)\n21. Billie Jean (Long Version)\n22. Billie Jean 2008 (Kanye West Mix)\n23. Beat It (Demo)\n24. Beat It 2008 (with Fergie)\n25. Wanna Be Startin' Somethin' (Demo)\n26. Wanna Be Startin' Somethin' (Tommy D's Main Mix)\n27. Wanna Be Startin' Somethin' 2008 (with Akon)\n28. Human Nature (7\" Remix)\n29. P.Y.T. (Pretty Young Thing) (Demo Version)\n30. P.Y.T. (Pretty Young Thing) 2008 (with will. i. am)\n31. The Girl Is Mine 2008 (with will. i. am)\n32. Thriller (7\" Special Edit)\n33. Thriller (Def Thriller Mix)\n34. Thriller Megamix",
-   "name": "Thriller 40 (Digital Expanded Edition) [11.18.22]",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
+   "era": "Thriller 40",
+   "name": "Thriller 40 (Digital Expanded Edition)",
+   "date": "2022-11-18",
+   "quality": "Clear",
+   "source": "Official",
+   "links": [
+    "https://open.spotify.com/album/57TzZhbqvYoUBzJSVKFVlG"
+   ],
    "description": "Official expanded tracklist for the digital version of Thriller 40 containing all original tracks from the Thriller 25 celebration, except for the demo of \"The Girl Is Mine\".",
    "tracks": [
     {
@@ -3479,7 +4789,7 @@
     },
     {
      "num": "#3",
-     "name": "The Girl is Mine"
+     "name": "The Girl is Mine (with Paul McCartney)"
     },
     {
      "num": "#4",
@@ -3519,11 +4829,11 @@
     },
     {
      "num": "#13",
-     "name": "Carousel (Full Version)"
+     "name": "Carousel"
     },
     {
      "num": "#14",
-     "name": "Behind The Mask (Mike's Mix; Demo)"
+     "name": "Behind The Mask (Mike's Mix) (Demo)"
     },
     {
      "num": "#15",
@@ -3547,7 +4857,7 @@
     },
     {
      "num": "#20",
-     "name": "Billie Jean (Home Demo from 1981)"
+     "name": "Billie Jean (1981 Home Demo) (Billie Jean (Home Demo from 1981))"
     },
     {
      "num": "#21",
@@ -3579,7 +4889,7 @@
     },
     {
      "num": "#28",
-     "name": "Human Nature (7\" Remix)"
+     "name": "Human Nature (7\")"
     },
     {
      "num": "#29",
@@ -3587,11 +4897,11 @@
     },
     {
      "num": "#30",
-     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will. i. am)"
+     "name": "P.Y.T. (Pretty Young Thing) 2008 (with will.i.am)"
     },
     {
      "num": "#31",
-     "name": "The Girl Is Mine 2008 (with will. i. am)"
+     "name": "The Girl Is Mine 2008 (with will.i.am)"
     },
     {
      "num": "#32",
@@ -3599,113 +4909,54 @@
     },
     {
      "num": "#33",
-     "name": "Thriller (Def Thriller Mix)"
+     "name": "Thriller (Def Thrill Mix)"
     },
     {
      "num": "#34",
-     "name": "Thriller Megamix"
+     "name": "Thriller (Megamix)"
     }
    ]
   },
   {
-   "era": "Current Editors",
-   "name": "Current Editors",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Current Editors",
-   "tracks": []
-  },
-  {
-   "era": "Pathfinder (aka Harpseals)",
-   "name": "Pathfinder (aka Harpseals)",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Pathfinder (aka Harpseals)",
-   "tracks": []
-  },
-  {
-   "era": "Reardon",
-   "name": "Reardon",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Reardon",
-   "tracks": []
-  },
-  {
-   "era": "Leon_rd",
-   "name": "Leon_rd",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Leon_rd",
-   "tracks": []
-  },
-  {
-   "era": "xscapee",
-   "name": "xscapee",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "xscapee",
-   "tracks": []
-  },
-  {
-   "era": "segaretro92",
-   "name": "segaretro92",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "segaretro92",
-   "tracks": []
-  },
-  {
-   "era": "ToMi",
-   "name": "ToMi",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "ToMi",
-   "tracks": []
-  },
-  {
-   "era": "hannahandevelyn (aka Clay7)",
-   "name": "hannahandevelyn (aka Clay7)",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "hannahandevelyn (aka Clay7)",
-   "tracks": []
-  },
-  {
-   "era": "Todo",
-   "name": "Todo",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Todo",
-   "tracks": []
-  },
-  {
-   "era": "List of goals you have for the Tracker",
-   "name": "List of goals you have for the Tracker",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "List of goals you have for the Tracker",
-   "tracks": []
+   "era": "Ongoing",
+   "name": "Michael: Score From The Motion Picture",
+   "date": "2026-05-05",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://www.rosnermusic.com/"
+   ],
+   "description": "Collection of tracks from the \"Michael\" biopic score, uploaded to the composer's site. The tracklist here reflects how the tracks are ordered on the site's playlist, and all names are taken from the playlist.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "MJ Tunnel to Indiana"
+    },
+    {
+     "num": "#2",
+     "name": "LA Gangs"
+    },
+    {
+     "num": "#3",
+     "name": "Peter Pan"
+    },
+    {
+     "num": "#4",
+     "name": "It's Not Your Fault"
+    },
+    {
+     "num": "#5",
+     "name": "Childhood_Orchestral Version"
+    },
+    {
+     "num": "#6",
+     "name": "Hospital to Stadium"
+    },
+    {
+     "num": "#7",
+     "name": "House of Wax Remake"
+    }
+   ]
   }
  ]
 }

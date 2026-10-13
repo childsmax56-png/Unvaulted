@@ -1,12 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SiDiscord, SiReddit, SiTiktok, SiX } from 'react-icons/si';
-import { RefreshCw, LogIn, LogOut, User, X } from 'lucide-react';
+import { RefreshCw, LogIn, LogOut, User, X, ShieldCheck } from 'lucide-react';
 import { ARTIST_LIST } from './artists/registry';
 import type { ArtistConfig } from './artists/types';
 import { useSettings, LOADING_SCREENS } from './SettingsContext';
 import { Img } from './utils';
-import { SOCIALS_DATA, hasSocials, type SocialEntry } from './socialsData';
+import { useHasActiveAudio } from './player/audioStore';
+import { fetchGlobalVisitCounts, getUserVisitCounts, type VisitCounts } from './visits';
+import { AlternateTrackerButton } from './components/AlternateTrackerButton';
+import { AlertsBell } from './components/AlertsBell';
+
+type SortMode = 'featured' | 'az' | 'popular' | 'yours';
+const SORT_OPTIONS: { id: SortMode; label: string }[] = [
+  { id: 'featured', label: 'Featured' },
+  { id: 'az', label: 'A–Z' },
+  { id: 'popular', label: 'Most visited' },
+  { id: 'yours', label: 'Your most visited' },
+];
 
 // Handles the Spotify PKCE OAuth callback that redirects back to unvaulted.cc/?code=...
 // Exchanges the code for tokens and forwards them back to whichever tracker initiated the flow.
@@ -594,7 +605,32 @@ function useVGAuth() {
     setUser(null);
   };
 
-  return { user, signInWithGoogle, signOut };
+  const signIn = (token: string, vgUser: VGUser) => {
+    localStorage.setItem(TOKEN_KEY, token);
+    localStorage.setItem(USER_KEY, JSON.stringify(vgUser));
+    setUser(vgUser);
+  };
+
+  return { user, signIn, signInWithGoogle, signOut };
+}
+
+// Whether the signed-in user is a site moderator (owner or yeditsgold admin),
+// which unlocks the Admin button linking to /admin.
+function useIsAdmin(user: VGUser | null): boolean {
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    const token = localStorage.getItem(TOKEN_KEY);
+    if (!user || !token) { setIsAdmin(false); return; }
+    let cancelled = false;
+    fetch('/api/yeditsgold-admin-check', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token }),
+    })
+      .then(r => r.ok ? r.json() : {})
+      .then((d: { admin?: boolean }) => { if (!cancelled) setIsAdmin(!!d.admin); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [user]);
+  return isAdmin;
 }
 
 // ─── Card components ──────────────────────────────────────────────────────────
@@ -689,8 +725,11 @@ function EditorialArtistCard({ config, showPhoto, variant, isFavorite, onToggleF
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: config.photoObjectPosition ?? 'top center' }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 55%, transparent 100%)' }} />
-        <div style={{ position: 'absolute', top: 10, right: 10, width: 7, height: 7, borderRadius: '50%', background: accent }} />
+        {!config.alternateTrackers?.length && (
+          <div style={{ position: 'absolute', top: 10, right: 10, width: 7, height: 7, borderRadius: '50%', background: accent }} />
+        )}
         {onToggleFavorite && <FavoriteButton active={!!isFavorite} onToggle={handleToggleFavorite} />}
+        <AlternateTrackerButton config={config} />
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: CARD_PADDING[variant] }}>
           {variant === 'featured' && (
             <div style={{ display: 'inline-block', fontSize: 9, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'rgba(201,162,36,0.25)', color: '#C9A224', padding: '2px 7px', borderRadius: 4, marginBottom: 6 }}>Featured</div>
@@ -718,6 +757,7 @@ function EditorialArtistCard({ config, showPhoto, variant, isFavorite, onToggleF
       }}
     >
       {onToggleFavorite && <FavoriteButton active={!!isFavorite} onToggle={handleToggleFavorite} />}
+      <AlternateTrackerButton config={config} />
       <div>
         {variant === 'featured' && (
           <div style={{ display: 'inline-block', fontSize: 9, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', background: `${accent}20`, color: accent, padding: '2px 7px', borderRadius: 4, marginBottom: 10 }}>Featured</div>
@@ -844,7 +884,8 @@ function BigLinkCard({ href, accent, badge, titleMain, titleAccent, subtitle, wa
 
 const SHEET_URLS: Record<string, string> = {
   yzygold:    'https://docs.google.com/spreadsheets/d/12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM/edit?gid=199908479#gid=199908479',
-  yetrackergold: 'https://docs.google.com/spreadsheets/d/1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo/edit?gid=34972268#gid=34972268',
+  yegold:     'https://docs.google.com/spreadsheets/d/1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y/edit?gid=34972268#gid=34972268',
+  yelolgold:  'https://docs.google.com/spreadsheets/d/1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA/edit?gid=199908479#gid=199908479',
   vampgold:   'https://docs.google.com/spreadsheets/d/1Irtfvymu26CShYowLMMfD-rM0o9CJqE6-BBSlYsAaF4/edit?gid=0#gid=0',
   wolfgold:   'https://docs.google.com/spreadsheets/d/19GJTNp7PxK1OtyVBmGelZSMm5i8Fy82EGtcFdIkBpsY/edit?gid=1246511510#gid=1246511510',
   drizzygold: 'https://docs.google.com/spreadsheets/d/1v55XAPLzw1iuWxH1OQKajCIYPhW2BXcLoV4mXDZ55DI/edit?gid=755606328#gid=755606328',
@@ -855,7 +896,7 @@ const SHEET_URLS: Record<string, string> = {
   twizzygold: 'https://docs.google.com/spreadsheets/d/1FUzAZyTCgFTVxQ--qbCAS2bUk4dsAw6ASxwjURPHbyI',
   uzigold:    'https://docs.google.com/spreadsheets/d/1zqqdIds1iwnx4lh29iF1IlraeuqfGhxH9qLNlWOnryo/edit?gid=1160569231#gid=1160569231',
   dregold:    'https://docs.google.com/spreadsheets/d/10_QK8xP-WCdrfO6RaIkhdDtYUXaM966e6D1xWD__iIo/edit?gid=1520634709#gid=1520634709',
-  pushagold:  'https://docs.google.com/spreadsheets/d/19wsRrbQxQ7sz-LhkEYUlKIcVFvXdcG1hvT58zEY03sA/edit?gid=1932839414#gid=1932839414',
+  pushagold:  'https://docs.google.com/spreadsheets/d/1bZ66RGgo5i_RorCtSTh4xX2tXwag2R-Zu3MsEGzrp1A/edit?gid=44489322#gid=44489322',
   juicegold:  'https://docs.google.com/spreadsheets/d/1tD3ytt5wPx4zfcefXi5ATeYhIiDaugWjMS46nZrP568/edit?gid=0#gid=0',
   shadygold:  'https://docs.google.com/spreadsheets/d/1x9tTOOqH5WpKOoptdQzABSN_x8oZbMgzIGlGH9w1IKA/edit?gid=1792554832#gid=1792554832',
   aapgold:    'https://docs.google.com/spreadsheets/d/1rbt_VyQyHEfVRv_XmVBNrwMyF0uMx7FF-1T8-N0wf0E/edit?gid=1701548408#gid=1701548408',
@@ -877,12 +918,28 @@ const SHEET_URLS: Record<string, string> = {
   futuregold: 'https://docs.google.com/spreadsheets/d/1OGAthACjwPcq3vHIVTAoaT8blFXjyBLtVcP0m5u80-U/edit',
   gorillazgold: 'https://docs.google.com/spreadsheets/d/1jauTeMKDULPud0hGD-gPeD-HM70HiBSedrLyOyAqUh0/edit?gid=339324838#gid=339324838',
   cudigold:   'https://docs.google.com/spreadsheets/d/1fj9HcbyLbu5NGwJzbl1lExQud3FNKv-JUU6NY4OKM9Y/edit',
-  rihannagold: 'https://docs.google.com/spreadsheets/d/1DKf6MBZ6KcKoKFH5Vnl1qc3CrPIiHey-EgOrpKpLZQo/edit',
+  rihannagold: 'https://docs.google.com/spreadsheets/d/1HMqjw55sCPUGyI_UBc-JcO881FHzUTX08NvQY9oa61k/edit',
   jayzgold:   'https://docs.google.com/spreadsheets/d/18GwItf2M92QimNMAbUCfFsxCkiHlkf8DPJPLWHAcoxQ/edit?gid=1202580443#gid=1202580443',
   kengold:    'https://docs.google.com/spreadsheets/d/1OARID98xCqRaBr8gyQCvI3aD4jKQDGgtedyRaiP_pyo/edit?gid=1367980602#gid=1367980602',
   szagold:        'https://docs.google.com/spreadsheets/d/1mPq6ZvoQ1_kWqIH9JS8I2VbBb8WboFYyeMP2yqjtz7s/edit',
   ushergold:      'https://docs.google.com/spreadsheets/d/10b5EFPYc5Qhn3A7arsruyeVOYdU4Ab9TuQqELV9joa8/edit',
   wutanggold:     'https://docs.google.com/spreadsheets/d/1dA2h1kQffOmUUeCy6YMu8IYdGGqnhnWuabKdK7emyyU/edit?gid=1275210512#gid=1275210512',
+  clipsegold:     'https://docs.google.com/spreadsheets/d/1XUtY5ris3U5R9sRBTOQdTxTNhvCbmjNAQbmLHGHTMGQ/edit?gid=1520634709#gid=1520634709',
+  daxgold:        'https://docs.google.com/spreadsheets/d/1t1IuCgKrx3QjCt9CLrcu3FqA32qGAF8TeQjhCQHO4AY/edit?gid=199908479#gid=199908479',
+  deathgripsgold: 'https://docs.google.com/spreadsheets/d/1Eh-9UyWUtyEpi_ELEhq5pD41ivFJHuQcvz2wFR2ml9g/edit?gid=0#gid=0',
+  delasoulgold:   'https://docs.google.com/spreadsheets/d/19KA4hq1j8sVhTEt4gqWWn6Potw9N_IGGJ2bwgZeVYHI/edit?gid=1493533867#gid=1493533867',
+  premiergold:    'https://docs.google.com/spreadsheets/d/1RaAzCb3IAg0FZas9dsAMqU785xw1sDYIvx3-SVFEVsY/edit?gid=306146520#gid=306146520',
+  dmxgold:        'https://docs.google.com/spreadsheets/d/101y0kCIzwGoT0YmGHIchehUpO7tzAdjXSZZVRrEobOg/edit?gid=1792554832#gid=1792554832',
+  dualipagold:    'https://docs.google.com/spreadsheets/d/1gi_foSEziQ48hTlq8hBqIwZCHz6hma1rYXr8qykBq6c/edit?gid=698378858#gid=698378858',
+  earlgold:       'https://docs.google.com/spreadsheets/d/1EKEnvdiwSudiPJSePPzfCXIQ_W-AYeAIY6_r-a12bdM/edit?gid=793972257#gid=793972257',
+  olivertreegold: 'https://docs.google.com/spreadsheets/d/1rhvQ9F8VRAj-jOyTLsvhORsVCyvcMRXJuGoDR1-z4jY/edit?gid=1170668970#gid=1170668970',
+  fiviogold:      'https://docs.google.com/spreadsheets/d/1K8WDS6pL7uOPvf7j78Om5kO1k0-h-beqMZaXpMAUy74/edit?gid=0#gid=0',
+  jpegmafiagold:  'https://docs.google.com/spreadsheets/d/1IhfNqEOtwczA6JH52gv2feerMqlJEbaDV4bxaIr7gkI/edit?gid=2012820373#gid=2012820373',
+  migosgold:      'https://docs.google.com/spreadsheets/d/1MgVRlGs5DL7keB_I6YPEj4FYLOHb8DVJbxN5-h6yxOE/edit?gid=335484962#gid=335484962',
+  nbayoungboygold: 'https://docs.google.com/spreadsheets/d/1-eJxsD-YciRGsQ6367NQ8zKdVJKEq8pirJPcwncgSwg/edit?gid=0#gid=0',
+  vincegold:      'https://docs.google.com/spreadsheets/d/1_NjFkevi7tbhqAGHSfgaEsKrzRgvPePUeCLv0GG2GgU/edit?gid=306146520#gid=306146520',
+  xzibitgold:     'https://docs.google.com/spreadsheets/d/1EVBoDCk8uZ5ft1wRpTsqJlHxfdYDnFVbbD5bRMR6qpw/edit?gid=1520634709#gid=1520634709',
+  thundercatgold: 'https://docs.google.com/spreadsheets/d/1KN1eE89gaCsf8Lh_mnjxjfrz7HNQd7V833uxMPibZkU/edit?gid=321437127#gid=321437127',
   aaliyahgold:    'https://docs.google.com/spreadsheets/d/1QJR4Ku4Si5kLUL1P_vi9hCkkjDQvDWqafWiYc1v_Z8E/edit',
   antclemonsgold: 'https://docs.google.com/spreadsheets/d/11Ta0gixhRv9uUq-_O9nID_rjUf3oembw57f2sblMP3k/edit?gid=1295931150#gid=1295931150',
   badbunnygold:   'https://docs.google.com/spreadsheets/d/1O5RFNuOF4-K7xWCYMRQXy3Y_WkYOWu6o9zClsw8lPi4/edit?gid=1545615123#gid=1545615123',
@@ -1000,193 +1057,214 @@ function SheetButton({ href, accent }: { href: string; accent?: string }) {
   );
 }
 
-function SocialsButton({ accent, onOpen }: { accent?: string; onOpen: () => void }) {
-  const color = accent ?? 'rgba(255,255,255,0.4)';
-  return (
-    <button
-      onClick={e => { e.stopPropagation(); onOpen(); }}
-      title="Socials & links"
-      aria-label="Socials & links"
-      style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        padding: '7px 9px', borderRadius: 8,
-        background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)',
-        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', flex: '0 0 auto',
-        transition: 'background 0.15s, color 0.15s, border-color 0.15s',
-      }}
-      onMouseEnter={e => {
-        const el = e.currentTarget;
-        el.style.background = `${color}18`;
-        el.style.borderColor = `${color}44`;
-        el.style.color = color;
-      }}
-      onMouseLeave={e => {
-        const el = e.currentTarget;
-        el.style.background = 'rgba(255,255,255,0.04)';
-        el.style.borderColor = 'rgba(255,255,255,0.08)';
-        el.style.color = 'rgba(255,255,255,0.45)';
-      }}
-    >
-      {/* @-mention / socials glyph */}
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="4" />
-        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-3.5 7.1" />
-      </svg>
-    </button>
-  );
-}
-
-function SocialsModal({ config, onClose }: { config: ArtistConfig; onClose: () => void }) {
-  const [q, setQ] = useState('');
-  const accent = config.accentColor;
-  const entries = SOCIALS_DATA[config.slug] ?? [];
-
-  const query = q.trim().toLowerCase();
-  const filtered = query
-    ? entries.filter(e =>
-        e.platform.toLowerCase().includes(query) ||
-        e.handle.toLowerCase().includes(query) ||
-        e.notes.toLowerCase().includes(query) ||
-        e.type.toLowerCase().includes(query))
-    : entries;
-
-  // Group by Type, preserving first-seen order.
-  const groups: { type: string; items: SocialEntry[] }[] = [];
-  const byType: Record<string, SocialEntry[]> = {};
-  for (const e of filtered) {
-    const t = e.type || 'Other';
-    if (!byType[t]) { byType[t] = []; groups.push({ type: t, items: byType[t] }); }
-    byType[t].push(e);
-  }
-
-  return (
-    <div onClick={onClose}
-      style={{ position: 'fixed', inset: 0, zIndex: 300, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(6px)', padding: 16 }}>
-      <div onClick={e => e.stopPropagation()}
-        style={{ position: 'relative', background: 'rgba(16,16,18,0.98)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 18, width: 'min(560px, 100%)', maxHeight: '82vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        <div style={{ padding: '18px 20px 12px', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-          <button onClick={onClose}
-            style={{ position: 'absolute', top: 14, right: 14, background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', fontSize: 20, lineHeight: 1 }}>✕</button>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: accent, textTransform: 'uppercase' }}>Socials & Links</div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: '#fff', marginTop: 2 }}>{config.artistLabel}</div>
-          <input
-            type="text"
-            value={q}
-            onChange={e => setQ(e.target.value)}
-            placeholder="Filter platforms, handles, notes…"
-            style={{ width: '100%', marginTop: 12, padding: '9px 12px', borderRadius: 9, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: 13, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' }}
-          />
-        </div>
-
-        <div style={{ overflowY: 'auto', padding: '8px 12px 16px' }}>
-          {filtered.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '32px 0', fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>No matches</div>
-          ) : groups.map(g => (
-            <div key={g.type} style={{ marginTop: 12 }}>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase', padding: '0 8px 6px' }}>{g.type}</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                {g.items.map((e, i) => <SocialRow key={g.type + i} entry={e} accent={accent} />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SocialRow({ entry, accent }: { entry: SocialEntry; accent: string }) {
-  const inactive = entry.status === 'Inactive';
-  const inner = (
-    <>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 13, fontWeight: 700, color: '#fff' }}>{entry.platform}</span>
-          {entry.handle && <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>{entry.handle}</span>}
-          {entry.status && (
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '1px 6px', borderRadius: 4,
-              background: inactive ? 'rgba(255,255,255,0.06)' : `${accent}20`,
-              color: inactive ? 'rgba(255,255,255,0.4)' : accent }}>{entry.status}</span>
-          )}
-        </div>
-        {entry.notes && <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 3, lineHeight: 1.4 }}>{entry.notes}</div>}
-      </div>
-      {entry.link && (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={accent} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 3 }}>
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" />
-        </svg>
-      )}
-    </>
-  );
-  const baseStyle: React.CSSProperties = {
-    display: 'flex', alignItems: 'flex-start', gap: 10, padding: '9px 8px', borderRadius: 9,
-    textDecoration: 'none', opacity: inactive && !entry.link ? 0.7 : 1,
-  };
-  if (entry.link) {
-    return (
-      <a href={entry.link} target="_blank" rel="noopener noreferrer"
-        style={{ ...baseStyle, cursor: 'pointer', transition: 'background 0.15s' }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
-      >{inner}</a>
-    );
-  }
-  return <div style={baseStyle}>{inner}</div>;
-}
-
 // ─── Main page ────────────────────────────────────────────────────────────────
 
-function ConsentModal({ onAccept, onClose }: { onAccept: () => void; onClose: () => void }) {
+const authInputStyle: React.CSSProperties = {
+  width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.05)',
+  border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '10px 12px',
+  color: '#fff', fontSize: 13, outline: 'none',
+};
+
+function AuthModal({ onGoogle, onSignedIn, onClose }: {
+  onGoogle: () => void;
+  onSignedIn: (token: string, user: VGUser) => void;
+  onClose: () => void;
+}) {
+  const [tab, setTab] = useState<'login' | 'register'>('login');
+  const [loginVal, setLoginVal] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [agreed, setAgreed] = useState(false);
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  const switchTab = (t: 'login' | 'register') => { setTab(t); setError(''); };
+
+  const submit = async () => {
+    if (busy) return;
+    setError('');
+    if (tab === 'register' && !agreed) return setError('Please agree to the Terms of Service and Privacy Policy');
+    setBusy(true);
+    try {
+      const res = await fetch(`${VG_API}/api/auth/${tab}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(tab === 'login' ? { login: loginVal, password } : { username, email, password }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) return setError(data.error || (tab === 'login' ? 'Sign in failed' : 'Registration failed'));
+      onSignedIn(data.token, data.user);
+      onClose();
+    } catch {
+      setError('Network error — please try again');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const google = () => {
+    if (!agreed) return setError('Please agree to the Terms of Service and Privacy Policy');
+    onClose();
+    onGoogle();
+  };
+
+  const onEnter = (e: React.KeyboardEvent) => { if (e.key === 'Enter') submit(); };
+
   return (
     <div
       onClick={onClose}
       style={{
         position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', zIndex: 1000,
-        display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24,
+        display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16,
       }}
     >
       <div
         onClick={e => e.stopPropagation()}
         style={{
-          background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14,
-          padding: '28px 28px 24px', maxWidth: 400, width: '100%',
+          position: 'relative', background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14,
+          padding: '24px 24px 20px', maxWidth: 400, width: '100%',
         }}
       >
-        <h2 style={{ margin: '0 0 8px', fontSize: 18, fontWeight: 700, color: '#fff' }}>
-          Create your account
-        </h2>
-        <p style={{ margin: '0 0 20px', fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
-          Sign in with Google to track your vault rankings and claim your profile.
-        </p>
-        <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', marginBottom: 20 }}>
-          <input
-            type="checkbox"
-            checked={agreed}
-            onChange={e => setAgreed(e.target.checked)}
-            style={{ marginTop: 2, accentColor: '#C9A224', width: 15, height: 15, flexShrink: 0 }}
-          />
-          <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>
-            I agree to the{' '}
-            <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Terms of Service</a>
-            {' '}and{' '}
-            <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Privacy Policy</a>
-          </span>
-        </label>
         <button
-          onClick={() => { if (agreed) { onClose(); onAccept(); } }}
-          disabled={!agreed}
-          style={{
-            width: '100%', padding: '11px 0', borderRadius: 10,
-            background: agreed ? 'rgba(201,162,36,0.15)' : 'rgba(255,255,255,0.05)',
-            color: agreed ? '#C9A224' : 'rgba(255,255,255,0.25)',
-            fontSize: 14, fontWeight: 600, letterSpacing: '0.04em',
-            cursor: agreed ? 'pointer' : 'not-allowed', transition: 'all 0.15s',
-            border: `1px solid ${agreed ? 'rgba(201,162,36,0.3)' : 'rgba(255,255,255,0.08)'}`,
-          }}
+          onClick={onClose}
+          aria-label="Close"
+          style={{ position: 'absolute', top: 14, right: 14, background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.4)' }}
         >
-          Continue with Google
+          <X size={16} />
         </button>
+        <h2 style={{ margin: '0 0 6px', fontSize: 18, fontWeight: 700, color: '#fff' }}>
+          {tab === 'login' ? 'Sign in to UNVAULTED' : 'Create your account'}
+        </h2>
+        <p style={{ margin: '0 0 18px', fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
+          Track your vault rankings, sync favorites and playlists, and claim your profile.
+        </p>
+
+        <div style={{ display: 'flex', gap: 4, marginBottom: 16, borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+          {(['login', 'register'] as const).map(t => (
+            <button
+              key={t}
+              onClick={() => switchTab(t)}
+              style={{
+                padding: '0 8px 10px', background: 'none', border: 'none', cursor: 'pointer',
+                fontSize: 13, fontWeight: 700, marginBottom: -1,
+                borderBottom: `2px solid ${tab === t ? '#C9A224' : 'transparent'}`,
+                color: tab === t ? '#C9A224' : 'rgba(255,255,255,0.4)',
+              }}
+            >
+              {t === 'login' ? 'Sign In' : 'Create Account'}
+            </button>
+          ))}
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {tab === 'login' ? (
+            <input
+              placeholder="Username or email"
+              value={loginVal}
+              onChange={e => setLoginVal(e.target.value)}
+              onKeyDown={onEnter}
+              autoComplete="username"
+              autoFocus
+              style={authInputStyle}
+            />
+          ) : (
+            <>
+              <div>
+                <input
+                  placeholder="Choose a username"
+                  value={username}
+                  onChange={e => setUsername(e.target.value)}
+                  onKeyDown={onEnter}
+                  autoComplete="username"
+                  autoFocus
+                  style={authInputStyle}
+                />
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>
+                  3–32 characters, letters, numbers, _ . -
+                </div>
+              </div>
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                onKeyDown={onEnter}
+                autoComplete="email"
+                style={authInputStyle}
+              />
+            </>
+          )}
+          <input
+            type="password"
+            placeholder={tab === 'register' ? 'Password (min. 8 characters)' : 'Password'}
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            onKeyDown={onEnter}
+            autoComplete={tab === 'login' ? 'current-password' : 'new-password'}
+            style={authInputStyle}
+          />
+
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', margin: '2px 0' }}>
+            <input
+              type="checkbox"
+              checked={agreed}
+              onChange={e => setAgreed(e.target.checked)}
+              style={{ marginTop: 2, accentColor: '#C9A224', width: 15, height: 15, flexShrink: 0 }}
+            />
+            <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>
+              I agree to the{' '}
+              <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Terms of Service</a>
+              {' '}and{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#C9A224', textDecoration: 'underline' }}>Privacy Policy</a>
+            </span>
+          </label>
+
+          <button
+            onClick={submit}
+            disabled={busy}
+            style={{
+              width: '100%', padding: '11px 0', borderRadius: 10,
+              background: 'rgba(201,162,36,0.15)', color: '#C9A224',
+              border: '1px solid rgba(201,162,36,0.3)',
+              fontSize: 14, fontWeight: 600, letterSpacing: '0.04em',
+              cursor: busy ? 'wait' : 'pointer', opacity: busy ? 0.6 : 1,
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            }}
+          >
+            {tab === 'login' ? <LogIn size={14} /> : <User size={14} />}
+            {busy ? 'Please wait…' : tab === 'login' ? 'Sign In' : 'Create Account'}
+          </button>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '2px 0' }}>
+            <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.1)' }} />
+            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>or</span>
+            <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.1)' }} />
+          </div>
+
+          <button
+            onClick={google}
+            style={{
+              width: '100%', padding: '11px 0', borderRadius: 10, border: 'none',
+              background: '#fff', color: '#000', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+            }}
+          >
+            <GoogleIcon /> Continue with Google
+          </button>
+
+          {error && <p style={{ fontSize: 12, color: '#ef4444', textAlign: 'center', margin: 0 }}>{error}</p>}
+
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', textAlign: 'center', margin: '4px 0 0' }}>
+            {tab === 'login' ? "Don't have an account? " : 'Already have an account? '}
+            <button
+              onClick={() => switchTab(tab === 'login' ? 'register' : 'login')}
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: '#C9A224', fontSize: 12, fontWeight: 600 }}
+            >
+              {tab === 'login' ? 'Create one' : 'Sign in'}
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -1198,11 +1276,14 @@ export function LandingPage() {
   const [showAll, setShowAll] = useState(false);
   const [showConsent, setShowConsent] = useState(false);
   const [socialOpen, setSocialOpen] = useState(false);
-  const [socialsFor, setSocialsFor] = useState<ArtistConfig | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [sortMode, setSortMode] = useState<SortMode>('featured');
+  const [globalVisits, setGlobalVisits] = useState<VisitCounts>({});
+  const [userVisits] = useState<VisitCounts>(getUserVisitCounts);
   const { settings } = useSettings();
   const showPhotos = true;
-  const { user, signInWithGoogle, signOut } = useVGAuth();
+  const { user, signIn, signInWithGoogle, signOut } = useVGAuth();
+  const isAdmin = useIsAdmin(user);
   const { favorites, toggleFavorite } = useFavoriteArtists();
   const isFavorite = (slug: string) => favorites.includes(slug);
 
@@ -1226,9 +1307,33 @@ export function LandingPage() {
     ? ARTIST_LIST.filter(matchesQuery).sort((a, b) => Number(isFavorite(b.slug)) - Number(isFavorite(a.slug)))
     : null;
 
+  // Load global visit counts once, but only when a sort that needs them is
+  // first selected (keeps the default view request-free).
+  const [visitsLoaded, setVisitsLoaded] = useState(false);
+  useEffect(() => {
+    if (sortMode !== 'popular' || visitsLoaded) return;
+    setVisitsLoaded(true);
+    fetchGlobalVisitCounts().then(setGlobalVisits);
+  }, [sortMode, visitsLoaded]);
+
   const gridList = ARTIST_LIST.filter(c => !c.hidden);
 
   const favoriteConfigs = gridList.filter(c => isFavorite(c.slug));
+
+  // Sorted flat list for the non-featured sort modes. A stable sort keeps the
+  // original (featured) order as the tiebreaker for equal keys.
+  const sortedList = (() => {
+    if (sortMode === 'az') {
+      return [...gridList].sort((a, b) => a.artistLabel.localeCompare(b.artistLabel));
+    }
+    if (sortMode === 'popular') {
+      return [...gridList].sort((a, b) => (globalVisits[b.slug] ?? 0) - (globalVisits[a.slug] ?? 0));
+    }
+    if (sortMode === 'yours') {
+      return [...gridList].sort((a, b) => (userVisits[b.slug] ?? 0) - (userVisits[a.slug] ?? 0));
+    }
+    return gridList;
+  })();
 
   const featured = gridList[0];
   // Pinned 2×2 next to the featured card: Carti, Tyler, A$AP Rocky, Drake
@@ -1250,33 +1355,18 @@ export function LandingPage() {
       padding: '16px 24px 48px',
       // iOS PWA (standalone) renders behind the status bar / Dynamic Island because of
       // viewport-fit=cover + apple-mobile-web-app-status-bar-style=black-translucent.
-      // Offset the top so the header (logo, gear, "The Heist") stays reachable.
+      // Offset the top so the header (logo, gear, game buttons) stays reachable.
       paddingTop: 'max(16px, calc(env(safe-area-inset-top) + 8px))',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
     }}>
       {showSettings && <LandingSettingsPanel onClose={() => setShowSettings(false)} />}
-      {showConsent && <ConsentModal onAccept={signInWithGoogle} onClose={() => setShowConsent(false)} />}
-      {socialsFor && <SocialsModal config={socialsFor} onClose={() => setSocialsFor(null)} />}
+      {showConsent && <AuthModal onGoogle={signInWithGoogle} onSignedIn={signIn} onClose={() => setShowConsent(false)} />}
 
       <header style={{ textAlign: 'center', marginBottom: 40, width: '100%', maxWidth: 900, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: 8 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-            <a
-              href="/game"
-              title="Play The Heist"
-              style={{
-                background: 'rgba(255,215,0,0.08)', border: '1px solid rgba(255,215,0,0.35)',
-                borderRadius: 8, padding: '8px 12px', cursor: 'pointer', color: '#FFD700',
-                display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 700,
-                textDecoration: 'none', transition: 'background 0.15s', flexShrink: 0,
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,215,0,0.18)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,215,0,0.08)'; }}
-            >
-              🎮 <span className="game-btn-label">The Heist</span>
-            </a>
             <a
               href="/guess"
               title="Play Leakle"
@@ -1333,7 +1423,32 @@ export function LandingPage() {
           />
         </div>
 
-        {!query && favoriteConfigs.length > 0 && (
+        {!query && (
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 2 }}>
+            {SORT_OPTIONS.map(opt => {
+              const active = sortMode === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setSortMode(opt.id)}
+                  style={{
+                    padding: '6px 12px', borderRadius: 8, cursor: 'pointer',
+                    fontSize: 12, fontWeight: 600, letterSpacing: '0.02em',
+                    border: '1px solid',
+                    borderColor: active ? 'rgba(255,215,0,0.5)' : 'rgba(255,255,255,0.1)',
+                    background: active ? 'rgba(255,215,0,0.12)' : 'rgba(255,255,255,0.04)',
+                    color: active ? '#FFD700' : 'rgba(255,255,255,0.55)',
+                    transition: 'all 0.15s',
+                  }}
+                >
+                  {opt.label}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {!query && sortMode === 'featured' && favoriteConfigs.length > 0 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>Favorites</span>
             <div className="grid-small">
@@ -1342,7 +1457,6 @@ export function LandingPage() {
                   <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                   <div style={{ display: 'flex', gap: 6 }}>
                     {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                    {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                     <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                   </div>
                 </div>
@@ -1361,12 +1475,23 @@ export function LandingPage() {
                   <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                   <div style={{ display: 'flex', gap: 6 }}>
                     {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                    {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                     <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                   </div>
                 </div>
               ))
             )}
+          </div>
+        ) : sortMode !== 'featured' ? (
+          <div className="grid-small">
+            {sortedList.map(config => (
+              <div key={config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
+                <div style={{ display: 'flex', gap: 6 }}>
+                  {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
+                  <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
+                </div>
+              </div>
+            ))}
           </div>
         ) : (
           <>
@@ -1376,7 +1501,6 @@ export function LandingPage() {
                 <EditorialArtistCard config={featured} showPhoto={showPhotos} variant="featured" isFavorite={isFavorite(featured.slug)} onToggleFavorite={toggleFavorite} />
                 <div style={{ display: 'flex', gap: 6 }}>
                   {SHEET_URLS[featured.slug] && <SheetButton href={SHEET_URLS[featured.slug]} accent={featured.accentColor} />}
-                  {hasSocials(featured.slug) && <SocialsButton accent={featured.accentColor} onOpen={() => setSocialsFor(featured)} />}
                   <ShareButton url={`${window.location.origin}/${featured.slug}`} accent={featured.accentColor} />
                 </div>
               </div>
@@ -1386,7 +1510,6 @@ export function LandingPage() {
                     <EditorialArtistCard config={config} showPhoto={showPhotos} variant="medium" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
                     <div style={{ display: 'flex', gap: 6 }}>
                       {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                      {hasSocials(config.slug) && <SocialsButton accent={config.accentColor} onOpen={() => setSocialsFor(config)} />}
                       <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
                     </div>
                   </div>
@@ -1402,7 +1525,6 @@ export function LandingPage() {
                     <EditorialArtistCard config={item.config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(item.config.slug)} onToggleFavorite={toggleFavorite} />
                     <div style={{ display: 'flex', gap: 6 }}>
                       {SHEET_URLS[item.config.slug] && <SheetButton href={SHEET_URLS[item.config.slug]} accent={item.config.accentColor} />}
-                      {hasSocials(item.config.slug) && <SocialsButton accent={item.config.accentColor} onOpen={() => setSocialsFor(item.config)} />}
                       <ShareButton url={`${window.location.origin}/${item.config.slug}`} accent={item.config.accentColor} />
                     </div>
                   </div>
@@ -1492,6 +1614,42 @@ export function LandingPage() {
           watermark="TL"
         />
         <BigLinkCard
+          href="/rooms"
+          accent="#22C55E"
+          badge="Live"
+          titleMain="LISTENING"
+          titleAccent="ROOMS"
+          subtitle="Listen together with a shared queue & chat"
+          watermark="LR"
+        />
+        <BigLinkCard
+          href="/changes"
+          accent="#F5C518"
+          badge="New"
+          titleMain="TRACKER"
+          titleAccent="CHANGELOG"
+          subtitle="Every new song & link, with alerts"
+          watermark="CL"
+        />
+        <BigLinkCard
+          href="/producers"
+          accent="#F59E0B"
+          badge="New"
+          titleMain="PRODUCERS"
+          titleAccent="& FEATURES"
+          subtitle="Every song, beat and verse, across every artist"
+          watermark="PR"
+        />
+        <BigLinkCard
+          href="/archive"
+          accent="#22D3EE"
+          badge="New"
+          titleMain="TRACKER"
+          titleAccent="ARCHIVE"
+          subtitle="Every tracker copy, the Leaktionary, templates & more"
+          watermark="TA"
+        />
+        <BigLinkCard
           href="/foryou"
           accent="#7C5CFF"
           badge="New"
@@ -1554,7 +1712,22 @@ export function LandingPage() {
         )}
         {user ? (
           <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>{user.username}</span>
+            <AlertsBell />
+            <a
+              href={`/u/${encodeURIComponent(user.username)}`}
+              title="View your public profile"
+              style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 600, textDecoration: 'none', padding: '10px 4px' }}
+            >
+              {user.username}
+            </a>
+            {isAdmin && (
+              <a
+                href="/admin"
+                style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 16px', borderRadius: 10, background: 'rgba(96,165,250,0.12)', border: '1px solid rgba(96,165,250,0.3)', color: '#60a5fa', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textDecoration: 'none' }}
+              >
+                <ShieldCheck size={14} /> Admin
+              </a>
+            )}
             <button
               onClick={signOut}
               style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(201,162,36,0.12)', border: '1px solid rgba(201,162,36,0.3)', color: '#C9A224', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}
@@ -1567,7 +1740,7 @@ export function LandingPage() {
             onClick={() => setShowConsent(true)}
             style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}
           >
-            <GoogleIcon /> Sign in with Google
+            <LogIn size={14} /> Sign In
           </button>
         )}
       </div>

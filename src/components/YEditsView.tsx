@@ -25,7 +25,7 @@ const IMAGE_EXTS = /\.(png|jpe?g|gif|webp)$/i;
 const BACK_COVER_FILE = /back\s*cover/i;
 
 // Creator profile that is always pinned first in the Creators row and given a
-// persistent gold glow. Matched exactly (case-sensitive) so the "Unvaulted
+// persistent blue glow. Matched exactly (case-sensitive) so the "Unvaulted
 // Records" profile is pinned and the all-caps "UNVAULTED Records" label is not.
 const PINNED_CREATOR = 'Unvaulted Records';
 const isPinnedCreator = (name: string) => name === PINNED_CREATOR;
@@ -2127,10 +2127,10 @@ export function YEditsView({ searchQuery, onPlaySong, currentSong, isPlaying, cl
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => setSelectedCreator(isActive ? null : creator.name)}
-                  style={isLabel ? { boxShadow: '0 0 0 1px rgba(255,215,0,0.5), 0 0 12px 2px rgba(255,215,0,0.45)' } : undefined}
+                  style={isLabel ? { boxShadow: '0 0 0 1px rgba(36,143,245,0.5), 0 0 12px 2px rgba(36,143,245,0.45)' } : undefined}
                   className={`flex items-center gap-3 pl-1 pr-4 py-1 rounded-full border transition-all cursor-pointer ${
                     isLabel
-                      ? 'bg-[#FFD700]/10 border-[#FFD700]/50 text-white'
+                      ? 'bg-[#248ff5]/10 border-[#248ff5]/50 text-white'
                       : isActive
                       ? 'bg-[var(--theme-color)]/15 border-[var(--theme-color)]/40 text-white'
                       : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20'

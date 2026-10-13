@@ -19,7 +19,7 @@ import { handleShareSilent } from './components/EraDetail';
 import { TrackerData, Era, Song, SearchFilters } from './types';
 import { ContributorContext } from './ContributorContext';
 import { ContributorView } from './components/ContributorView';
-import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, handleDownloadFile, pixeldrainProxyBase } from './utils';
+import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, pixeldrainProxyBase } from './utils';
 import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName } from './lastfm';
 import { logListen, isListeningLoggedIn } from './listening';
 import { isSpotifyLoggedIn, clearSpotifySession, startSpotifyAuth, handleSpotifyCallback } from './spotify';
@@ -45,13 +45,35 @@ function normalizeCredits(extra: string | undefined | null): string {
     .join(' ');
 }
 
+// Reduce a song title to a version-insensitive key so a "[V7]" → "[V8]" edit in the
+// live sheet is recognised as the SAME song as the committed-CSV snapshot entry.
+// Only NUMBERED version tags are stripped ([V1], (V2), bare "v3") — descriptive tags
+// like [Remix], [OG] or [Original] are preserved so genuinely different variants are
+// never collapsed together.
+function stripVersionTags(name: string | undefined | null): string {
+  return (name || '')
+    .toLowerCase()
+    .replace(/\[\s*v\s*\d+\s*\]/g, ' ') // [V1], [ V2 ]
+    .replace(/\(\s*v\s*\d+\s*\)/g, ' ') // (V1)
+    .replace(/\bv\d+\b/g, ' ')          // bare v3
+    .replace(/[^a-z0-9]+/g, ' ')
+    .split(' ')
+    .filter(Boolean)
+    .join(' ');
+}
+
 function normalizeParsedRows(rows: Record<string, string>[]): Record<string, string>[] {
   if (rows.length === 0) return rows;
   const keys = Object.keys(rows[0]);
+  const hasEra = keys.some(k => k === 'Era');
   const buildMap = (): Record<string, string> => {
     const map: Record<string, string> = {};
     for (const k of keys) {
       if (k === 'Name' || k === 'Notes') continue; // already clean
+      // Some live sheet tabs (e.g. yzygold's Art tab) leave the first/era column header
+      // blank; the committed CSV snapshots renamed it to "Era". Map a blank first-column
+      // header to "Era" so era grouping works — but only when there's no real Era column.
+      if (!hasEra && k === keys[0] && k.trim() === '') { map[k] = 'Era'; continue; }
       if (k.startsWith('Name')) { map[k] = 'Name'; continue; }
       if (k.startsWith('Notes')) { map[k] = 'Notes'; continue; }
       // music-videos: "Media \nLength" → "Length", "Release\nDate" → "Date Made",
@@ -94,14 +116,65 @@ function parseCSVText(text: string): Record<string, string>[] {
   }
   if (field || current.length > 0) { current.push(field); rows.push(current); }
   if (rows.length < 2) return [];
-  const headers = rows[0];
-  return rows.slice(1)
+  // Skip leading formula-artifact rows (e.g. a `&COUNTIFS(...)` cell spilled above the
+  // real header on some franktracker-template tabs) so the true header row is used.
+  const isFormulaArtifact = (row: string[]): boolean => {
+    const first = (row[0] ?? '').trim();
+    if (!first) return false;
+    return /^[&=]/.test(first) || first.includes('COUNTIFS(') || first.includes('INDIRECT(');
+  };
+  let headerIdx = 0;
+  while (headerIdx < rows.length - 1 && isFormulaArtifact(rows[headerIdx])) headerIdx++;
+  const headers = rows[headerIdx];
+  return rows.slice(headerIdx + 1)
     .filter(row => row.some(cell => cell.trim() !== ''))
     .map(row => {
       const obj: Record<string, string> = {};
       headers.forEach((header, i) => { obj[header] = row[i] ?? ''; });
       return obj;
     });
+}
+
+// The Individual Tracklists sheet (e.g. wutanggold's members' solo discographies) has
+// no Era column of its own — instead a bare-Name, empty-Tracklist row is a section
+// divider naming the member/artist, and every following row with tracklist text is one
+// of their albums, grouped under that divider until the next one. Turn that into the
+// same TracklistAlbum[] shape the main Tracklists tab uses, keyed by the divider name
+// so it lines up with that name's own era in the Individual Projects catalog.
+function parseIndividualTracklists(rows: Record<string, string>[]): TracklistAlbum[] {
+  const albums: TracklistAlbum[] = [];
+  let currentSection = '';
+  for (const row of rows) {
+    const nameKey = Object.keys(row).find(k => k.startsWith('Name')) ?? 'Name';
+    const tracklistKey = Object.keys(row).find(k => k.startsWith('Tracklist'));
+    const name = (row[nameKey] ?? '').trim();
+    if (!name) continue;
+    const tracklistRaw = tracklistKey ? (row[tracklistKey] ?? '') : '';
+    if (!tracklistRaw.trim()) {
+      currentSection = name;
+      continue;
+    }
+    const lines = tracklistRaw.split('\n').map(l => l.trim()).filter(Boolean);
+    const tracks: { num: string; name: string }[] = [];
+    const descLines: string[] = [];
+    for (const line of lines) {
+      const m = line.match(/^([A-Za-z]?\d+)[.)]\s*(.+)$/);
+      if (m) tracks.push({ num: m[1], name: m[2].trim() });
+      else if (tracks.length === 0) descLines.push(line);
+    }
+    if (tracks.length === 0) continue;
+    albums.push({
+      era: currentSection || name,
+      name,
+      date: row['Date(s)'] ?? '',
+      quality: row['Portion'] ?? '',
+      source: row['Source'] ?? '',
+      links: (row['Link(s)'] ?? '').split('\n').map(l => l.trim()).filter(Boolean),
+      tracks,
+      description: descLines.join(' ') || undefined,
+    });
+  }
+  return albums;
 }
 
 export interface MvEntry {
@@ -152,7 +225,7 @@ import { AlbumCopiesView, AlbumCopyEra } from './components/AlbumCopiesView';
 import { GroupbuysView, GroupbuysData } from './components/GroupbuysView';
 import { CompsView } from './components/CompsView';
 import { ConcertsView } from './components/ConcertsView';
-import { YEditsView } from './components/YEditsView';
+import { SocialsView } from './components/SocialsView';
 import { ReleasedView, ReleasedEntry } from './components/ReleasedView';
 import { VideosView, VideoRawEntry } from './components/VideosView';
 import { SubAlbumsView, SubAlbumEntry } from './components/SubAlbumsView';
@@ -164,6 +237,7 @@ import { PlaylistProvider } from './PlaylistContext';
 import { initDataSync, scheduleDataPush } from './dataSync';
 import { recordListeningHistory } from './history';
 import { activeConfig } from './artists/activeConfig';
+import { reportBrokenLink } from './linkStatus';
 
 // When viewing a community (user-built) tracker, attach the signed-in account's
 // token to our own /api/ data requests. This lets the creator/admin preview a
@@ -221,6 +295,10 @@ export default function App() {
   const [albumCopiesData, setAlbumCopiesData] = useState<AlbumCopyEra[]>([]);
   const [groupbuysData, setGroupbuysData] = useState<GroupbuysData>({ years: [], grandTotal: '' });
   const [productionData, setProductionData] = useState<TrackerData | null>(null);
+  const [individualData, setIndividualData] = useState<TrackerData | null>(null);
+  // group trackers: per-member Unreleased tabs (activeConfig.memberTabs), keyed by member key
+  const [memberData, setMemberData] = useState<Record<string, TrackerData>>({});
+  const [individualTracklistsData, setIndividualTracklistsData] = useState<TracklistAlbum[]>([]);
   const [tracklistsData, setTracklistsData] = useState<TracklistAlbum[]>([]);
   const [tracklistsLegend, setTracklistsLegend] = useState<TracklistLegendItem[]>([]);
   const [releasedData, setReleasedData] = useState<ReleasedEntry[]>([]);
@@ -266,10 +344,13 @@ export default function App() {
     if (path.startsWith('/tracklists')) return 'tracklists';
     if (path.startsWith('/videos')) return 'videos';
     if (path.startsWith('/comps')) return 'comps';
-    if (path.startsWith('/yedits')) return 'yedits';
     if (path.startsWith('/subalbums')) return 'subalbums';
     if (path.startsWith('/concerts')) return 'concerts';
     if (path.startsWith('/production')) return 'production';
+    if (path.startsWith('/individualtracklists')) return 'individualtracklists';
+    if (path.startsWith('/individual')) return 'individual';
+    if (path.startsWith('/member/')) return `member-${path.split('/')[2]}` as Category;
+    if (path.startsWith('/socials')) return 'socials';
     return 'music';
   });
 
@@ -728,10 +809,16 @@ export default function App() {
   function applyTrackerSheetSongs(targetJson: any, sheetData: any) {
     if (!Array.isArray(sheetData)) return;
 
-    // Find the actual name key (header is "Name\n(Join The Discord!)")
+    // Find the actual name/notes keys — the live sheet decorates these headers with a
+    // second line ("Name\n(Check out the Tracker website!)", "Notes\n(Join the Discord!)"),
+    // so a literal item.Notes lookup misses and live-only eras (e.g. new eras absent from
+    // the committed base JSON) render with blank notes.
     const nameKey = sheetData.length > 0
       ? Object.keys(sheetData[0]).find(k => k.startsWith('Name')) || 'Name'
       : 'Name';
+    const notesKey = sheetData.length > 0
+      ? Object.keys(sheetData[0]).find(k => k.startsWith('Notes')) || 'Notes'
+      : 'Notes';
 
     const avLenToCategory = (avLen: string, categories: Record<string, Song[]>): string => {
       const al = avLen.toLowerCase().trim();
@@ -795,7 +882,7 @@ export default function App() {
       const newSong: Song = {
         name: songName,
         extra,
-        description: item.Notes || '',
+        description: item[notesKey] || item.Notes || '',
         track_length: item['Track Length'] || '',
         leak_date: item['Leak\nDate'] || item['Leak Date'] || '',
         file_date: item['File\nDate'] || item['File Date'] || '',
@@ -808,21 +895,55 @@ export default function App() {
 
       const categories = targetJson.eras[eraName].data || {};
 
-      // Skip if a song with the same name and credits already exists in the era.
-      // Credits (the parenthetical feat./prod. line) are compared order-independently:
-      // the committed CSV and the live sheet often list the same producers in a
-      // different order, and an exact string match would let that slip through as a
-      // duplicate entry. normalizeCredits() reduces the line to a sorted token set so
-      // "prod. A, B, C" and "prod. C, A, B" collapse to the same key.
+      // De-duplicate the live-sheet row against songs already present from the committed
+      // CSV snapshot. The snapshot is a periodic export of this same sheet, so when an
+      // editor edits a row after the snapshot was taken (a version bump "[V7]" → "[V8]",
+      // a fixed title typo, or reordered producer credits) the row no longer matches the
+      // snapshot entry by exact name and would otherwise be appended as a DUPLICATE.
+      // With no stable per-song id, match on the most reliable signals available and
+      // UPDATE the snapshot entry in place (the live sheet is newer, so it wins):
+      //   1. a shared audio link — survives ANY title/credit edit, so it's tried first;
+      //   2. exact title + order-independent credits (normalizeCredits sorts the tokens
+      //      so "prod. A, B" and "prod. B, A" collapse);
+      //   3. version-insensitive title + credits, but only when it's unambiguous (a
+      //      single candidate) so two legitimately-distinct numbered versions are never
+      //      merged into one.
       const nameNorm = songName.toLowerCase().trim();
       const extraNorm = normalizeCredits(extra);
-      const alreadyExists = Object.values(categories).some((list: any) =>
-        (list as Song[]).some(s =>
-          s.name?.toLowerCase().trim() === nameNorm &&
-          normalizeCredits(s.extra) === extraNorm
-        )
-      );
-      if (alreadyExists) return;
+      const baseName = stripVersionTags(songName);
+      const newUrls = (newSong.urls || []).map(u => (u || '').trim()).filter(Boolean);
+
+      const sameByUrl = (s: Song) => {
+        const sUrls = (s.urls || []).map(u => (u || '').trim()).filter(Boolean);
+        return newUrls.length > 0 && sUrls.some(u => newUrls.includes(u));
+      };
+      const sameByExactName = (s: Song) =>
+        (s.name || '').toLowerCase().trim() === nameNorm && normalizeCredits(s.extra) === extraNorm;
+      const sameByBaseName = (s: Song) =>
+        !!baseName && stripVersionTags(s.name) === baseName && normalizeCredits(s.extra) === extraNorm;
+
+      // Try each strategy in turn; replace the first matching entry in place.
+      let replaced = false;
+      for (const match of [sameByUrl, sameByExactName]) {
+        for (const list of Object.values(categories) as Song[][]) {
+          const idx = list.findIndex(match);
+          if (idx !== -1) { list[idx] = newSong; replaced = true; break; }
+        }
+        if (replaced) break;
+      }
+      if (!replaced) {
+        // Version-insensitive fallback — only merge when exactly one candidate matches
+        // across the whole era, to avoid collapsing distinct versions.
+        const candidates: { list: Song[]; idx: number }[] = [];
+        for (const list of Object.values(categories) as Song[][]) {
+          list.forEach((s, idx) => { if (sameByBaseName(s)) candidates.push({ list, idx }); });
+        }
+        if (candidates.length === 1) {
+          candidates[0].list[candidates[0].idx] = newSong;
+          replaced = true;
+        }
+      }
+      if (replaced) return;
 
       const catKey = avLenToCategory(item['Available Length'] || '', categories);
       if (catKey) {
@@ -1017,16 +1138,19 @@ export default function App() {
               }
             }
           }
+          // Some trackers (sosagold/jayzgold/cudigold/macgold) use 'Currently Available'
+          // for availability, 'Length' for track length, and a plain 'Link' column.
+          const links = item['Link(s)'] || item['Link'] || '';
           return {
             name, extra, extra2,
             description: item.Notes,
-            track_length: item['Track Length'],
+            track_length: item['Track Length'] || item['Length'],
             leak_date: item['Leak\nDate'] || item['Leak Date'],
             file_date: item['File\nDate'] || item['File Date'],
-            available_length: item['Available Length'],
+            available_length: item['Available Length'] || item['Currently Available'],
             quality: item.Quality,
-            url: item['Link(s)'] ? item['Link(s)'].split('\n')[0] : '',
-            urls: item['Link(s)'] ? item['Link(s)'].split('\n') : [],
+            url: links ? links.split('\n')[0] : '',
+            urls: links ? links.split('\n') : [],
           };
         };
         const recentMapped: Song[] = (recentRes.data as any[]).map(mapRecentItem);
@@ -1052,7 +1176,7 @@ export default function App() {
         const sheetQualityKey = findRecentKey('Quality');
         const sheetLeakDateKey = findRecentKey('Leak\nDate', 'Leak Date', 'Surface\nDate', 'Surface Date');
         const sheetFileDateKey = findRecentKey('File\nDate', 'File Date', 'Date of Recording');
-        const sheetAvailableKey = findRecentKey('Available Length', 'Availability');
+        const sheetAvailableKey = findRecentKey('Available Length', 'Availability', 'Currently Available');
         const sheetRecentSongs: Song[] = (SHEET_URL_RECENT && Array.isArray(recentTabRes.data))
           ? (recentTabRes.data as any[])
               .filter((item: any) => {
@@ -1167,8 +1291,8 @@ export default function App() {
           }
         } else if (path.startsWith('/tracklists')) {
           setActiveCategory('tracklists');
-        } else if (path.startsWith('/yedits')) {
-          setActiveCategory('yedits');
+        } else if (path.startsWith('/socials')) {
+          setActiveCategory('socials');
         } else if (path.startsWith('/subalbums')) {
           setActiveCategory('subalbums');
         } else if (path.startsWith('/related/')) {
@@ -1303,9 +1427,44 @@ export default function App() {
         });
     }
 
+    for (const mt of activeConfig.memberTabs ?? []) {
+      axios.get(`/api/${ARTIST_SLUG}/individual?member=${encodeURIComponent(mt.key)}`)
+        .then(res => {
+          setMemberData(prev => ({ ...prev, [mt.key]: JSON.parse(JSON.stringify(res.data)) }));
+        })
+        .catch(err => {
+          console.error(`Failed to fetch ${mt.label} data:`, err);
+        });
+    }
+
+    if (activeConfig.hasIndividualProjectsTab) {
+      axios.get(`/api/${ARTIST_SLUG}/individual`)
+        .then(res => {
+          setIndividualData(JSON.parse(JSON.stringify(res.data)));
+        })
+        .catch(err => {
+          console.error("Failed to fetch Individual Projects data:", err);
+        });
+    }
+
+    if (activeConfig.hasIndividualTracklistsTab) {
+      axios.get(`/api/${ARTIST_SLUG}/individual-tracklists`)
+        .then(res => {
+          const rows = (Array.isArray(res.data) ? res.data : []) as Record<string, string>[];
+          const albums = parseIndividualTracklists(rows);
+          setIndividualTracklistsData(albums);
+          setFetchedTabs(prev => new Set([...prev, 'individualtracklists']));
+          if (albums.length > 0) setTabsWithData(prev => new Set([...prev, 'individualtracklists']));
+        })
+        .catch(err => {
+          console.error("Failed to fetch Individual Tracklists data:", err);
+          setFetchedTabs(prev => new Set([...prev, 'individualtracklists']));
+        });
+    }
+
     axios.get(`/api/${ARTIST_SLUG}/released`)
       .then(res => {
-        setReleasedData(normalizeParsedRows(res.data) as ReleasedEntry[]);
+        setReleasedData(normalizeEraField(normalizeParsedRows(res.data)) as ReleasedEntry[]);
       })
       .catch(err => {
         console.error("Failed to fetch Released data:", err);
@@ -1496,7 +1655,7 @@ export default function App() {
         const sheetQualityKey = findRecentKey('Quality');
         const sheetLeakDateKey = findRecentKey('Leak\nDate', 'Leak Date', 'Surface\nDate', 'Surface Date');
         const sheetFileDateKey = findRecentKey('File\nDate', 'File Date', 'Date of Recording');
-        const sheetAvailableKey = findRecentKey('Available Length', 'Availability');
+        const sheetAvailableKey = findRecentKey('Available Length', 'Availability', 'Currently Available');
         const sheetRecentSongs: Song[] = (SHEET_URL_RECENT && Array.isArray(recentTabRes.data))
           ? (recentTabRes.data as any[])
               .filter((item: any) => { const r = (item.Era || '').trim(); return r && !r.includes('\n'); })
@@ -1621,9 +1780,9 @@ export default function App() {
       if (!currentPath.startsWith('/comps')) {
         window.history.pushState({ category: 'comps' }, '', absPath('/comps'));
       }
-    } else if (activeCategory === 'yedits') {
-      if (!currentPath.startsWith('/yedits')) {
-        window.history.pushState({ category: 'yedits' }, '', absPath('/yedits'));
+    } else if (activeCategory === 'socials') {
+      if (!currentPath.startsWith('/socials')) {
+        window.history.pushState({ category: 'socials' }, '', absPath('/socials'));
       }
     } else if (activeCategory === 'subalbums') {
       if (!currentPath.startsWith('/subalbums')) {
@@ -1636,6 +1795,19 @@ export default function App() {
     } else if (activeCategory === 'production') {
       if (!currentPath.startsWith('/production')) {
         window.history.pushState({ category: 'production' }, '', absPath('/production'));
+      }
+    } else if (activeCategory.startsWith('member-')) {
+      const memberPath = `/member/${activeCategory.slice('member-'.length)}`;
+      if (!currentPath.startsWith(memberPath)) {
+        window.history.pushState({ category: activeCategory }, '', absPath(memberPath));
+      }
+    } else if (activeCategory === 'individual') {
+      if (!currentPath.startsWith('/individual')) {
+        window.history.pushState({ category: 'individual' }, '', absPath('/individual'));
+      }
+    } else if (activeCategory === 'individualtracklists') {
+      if (!currentPath.startsWith('/individualtracklists')) {
+        window.history.pushState({ category: 'individualtracklists' }, '', absPath('/individualtracklists'));
       }
     } else if (activeCategory === 'contributor' && selectedContributor) {
       const newPath = `/contributor/${encodeURIComponent(selectedContributor)}`;
@@ -1721,14 +1893,20 @@ export default function App() {
         setActiveCategory('settings');
       } else if (path.startsWith('/history')) {
         setActiveCategory('history');
-      } else if (path.startsWith('/yedits')) {
-        setActiveCategory('yedits');
+      } else if (path.startsWith('/socials')) {
+        setActiveCategory('socials');
       } else if (path.startsWith('/subalbums')) {
         setActiveCategory('subalbums');
       } else if (path.startsWith('/concerts')) {
         setActiveCategory('concerts');
       } else if (path.startsWith('/production')) {
         setActiveCategory('production');
+      } else if (path.startsWith('/individualtracklists')) {
+        setActiveCategory('individualtracklists');
+      } else if (path.startsWith('/individual')) {
+        setActiveCategory('individual');
+      } else if (path.startsWith('/member/')) {
+        setActiveCategory(`member-${path.split('/')[2]}` as Category);
       } else if (path.startsWith('/contributor/')) {
         const name = decodeURIComponent(path.split('/contributor/')[1]);
         setSelectedContributor(name);
@@ -1817,7 +1995,7 @@ export default function App() {
     const isNotAvailable = isSongNotAvailable(song, rawUrl);
     
     const lowerUrl = (rawUrl || '').toLowerCase();
-    const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed');
+    const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
 
     if (isTrulyEmptyLink) return;
 
@@ -1944,7 +2122,7 @@ export default function App() {
     } else if (rawUrl.includes('archive.org/details/')) {
       const archiveId = rawUrl.split('archive.org/details/')[1].split('?')[0];
       handlePlayArchiveTrack(archiveId, song.name, era.name);
-    } else if (rawUrl.startsWith('/') || /\.(mp3|m4a|wav|ogg|flac|aac)(\?|$)/i.test(rawUrl)) {
+    } else if (!isChallengeGatedAudioHost(rawUrl) && (rawUrl.startsWith('/') || /\.(mp3|m4a|wav|ogg|flac|aac)(\?|$)/i.test(rawUrl))) {
       const playableSongs = contextTracks && contextTracks.length > 0 ? contextTracks : [song];
       setPlaylist(playableSongs);
       const newIndex = playableSongs.findIndex(s =>
@@ -2243,10 +2421,9 @@ export default function App() {
         const rawUrl = currentSong.url || (currentSong.urls && currentSong.urls.length > 0 ? currentSong.urls[0] : '');
         const kbEraName = (currentSong as any).realEra?.name || currentEra?.name || '';
         const kbArtUrl = currentSong.image || CUSTOM_IMAGES[kbEraName] || (currentSong as any).realEra?.image || currentEra?.image;
-        const kbTitle = currentSong.name.includes(' - ') ? currentSong.name.substring(currentSong.name.indexOf(' - ') + 3) : currentSong.name;
-        handleDownloadFile(rawUrl, currentSong.name, settings.tagsAsEmojis, settings.embedMetadata ? {
-          title: kbTitle,
-          artist: buildArtistTag(currentSong.name, kbEraName),
+        handleDownloadFile(rawUrl, buildDownloadName(currentSong.name, settings.tagFeaturedArtists, settings.tagsAsEmojis), settings.tagsAsEmojis, settings.embedMetadata ? {
+          title: buildTitleTag(currentSong.name, settings.tagFeaturedArtists),
+          artist: buildArtistTag(currentSong.name, kbEraName, settings.tagFeaturedArtists),
           album: kbEraName,
           year: ALBUM_RELEASE_DATES[kbEraName]?.split('/').pop(),
           artworkUrl: kbArtUrl,
@@ -2256,7 +2433,7 @@ export default function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentSong, isPlayerClosed, settings.keyboardShortcuts, currentEra]);
+  }, [currentSong, isPlayerClosed, settings.keyboardShortcuts, settings.tagFeaturedArtists, currentEra]);
 
   useEffect(() => {
     const handleEasterEgg = () => {
@@ -2359,6 +2536,18 @@ export default function App() {
     const err = el.error;
     console.error('Audio element error', err?.code, err?.message, 'src:', el.src, 'crossOrigin:', el.crossOrigin, 'networkState:', el.networkState, 'readyState:', el.readyState);
     if (el.src) showToast("Failed to load audio - the source may be unreachable");
+    // Let the server re-check the link; it's only badged dead if the host
+    // confirms the file is gone (a down proxy or network blip won't count).
+    const rawUrl = currentSong ? (currentSong.url || currentSong.urls?.[0] || '') : '';
+    if (el.src && rawUrl && !activeConfig.community) {
+      reportBrokenLink({
+        tracker: currentSong?.commentTracker || ARTIST_SLUG,
+        url: rawUrl,
+        label: currentSong?.name,
+        era: (currentSong as any)?.realEra?.name || currentEra?.name,
+        reason: 'playback',
+      });
+    }
   };
 
   const handleSeek = (time: number) => {
@@ -2631,11 +2820,26 @@ export default function App() {
       if (!productionErasArray.find(e => e.name === selectedAlbum.name)) {
         setSelectedAlbum(null);
       }
+    } else if (cat.startsWith('member-') && selectedAlbum) {
+      if (!Object.values(memberData[cat.slice('member-'.length)]?.eras || {}).find((e: any) => e.name === selectedAlbum.name)) {
+        setSelectedAlbum(null);
+      }
+    } else if ((cat === 'individual' || cat === 'individualtracklists') && selectedAlbum) {
+      if (!individualErasArray.find(e => e.name === selectedAlbum.name)) {
+        setSelectedAlbum(null);
+      }
     } else {
       setSelectedAlbum(null);
     }
     setActiveCategory(cat);
   };
+
+  // On phones the page scrolls as a document, so start each view at the top.
+  // iOS WebKit can otherwise keep a stale scroll offset (from the previous view
+  // or the landing page), leaving the header scrolled out of sight.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeCategory, selectedAlbum, loading]);
 
   const handleHomeClick = () => {
     setSelectedAlbum(null);
@@ -2703,6 +2907,10 @@ let erasArray = (Object.values(data.eras || {}) as Era[])
   }) as Era[];
 
 const productionErasArray = (Object.values(productionData?.eras || {}) as Era[]);
+const individualErasArray = (Object.values(individualData?.eras || {}) as Era[]);
+const memberErasArray = activeCategory.startsWith('member-')
+  ? (Object.values(memberData[activeCategory.slice('member-'.length)]?.eras || {}) as Era[])
+  : [];
 
 const RELATED_ERA_ORDER = [
   'Donda',
@@ -2999,7 +3207,11 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
   return (
     <ContributorContext.Provider value={{ navigateToContributor }}>
     <PlaylistProvider>
-    <div className="h-dvh w-full flex overflow-hidden relative bg-yzy-black" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+    {/* On phones the page scrolls as a normal document (header included) so the
+        browser's own toolbars can collapse/expand around it. A locked full-height
+        shell with an inner scroller leaves the top of the header stuck under the
+        iOS address bar. Desktop keeps the fixed app shell. */}
+    <div className="relative min-h-dvh md:fixed md:inset-0 md:min-h-0 w-full flex md:overflow-hidden bg-yzy-black" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
       {/* The <audio> element lives in the global audioStore so playback persists
           across route changes; App attaches its scrobble/error listeners to it. */}
 
@@ -3063,13 +3275,8 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
           tabsWithData={tabsWithData}
         />
 
-        <main className={`flex-1 overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
+        <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
-            {ARTIST_SLUG === 'pushagold' && (
-              <div className="mx-6 mt-6 p-4 rounded-xl border border-[var(--theme-color)]/30 bg-[var(--theme-color)]/5 text-sm text-white/60">
-                ⚠️ This tracker is a work in progress. Some eras and songs may be incomplete or missing.
-              </div>
-            )}
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
                 <SettingsView key="settings" onCategoryChange={setActiveCategory} searchQuery={searchQuery} eras={erasArray} artData={artData} stemsData={stemsData} miscData={miscData} />
@@ -3287,6 +3494,56 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                   const q = searchQuery.toLowerCase();
                   return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));
                 })} onSelectEra={setSelectedAlbum} />
+              ) : activeCategory.startsWith('member-') && selectedAlbum ? (
+                <EraDetail
+                  key={`${activeCategory}-${selectedAlbum.name}`}
+                  era={selectedAlbum}
+                  searchQuery={searchQuery}
+                  filters={filters}
+                  onPlaySong={handlePlaySong}
+                  currentSong={currentSong}
+                  isPlaying={isPlaying}
+                  toggleFavorite={toggleFavorite}
+                  favoriteKeys={favoriteKeys}
+                />
+              ) : activeCategory.startsWith('member-') ? (
+                <EraGrid key={`${activeCategory}-grid`} eras={memberErasArray.filter(e => {
+                  if (!searchQuery) return true;
+                  const q = searchQuery.toLowerCase();
+                  return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));
+                })} onSelectEra={setSelectedAlbum} />
+              ) : activeCategory === 'individual' && selectedAlbum ? (
+                <EraDetail
+                  key={`individual-${selectedAlbum.name}`}
+                  era={selectedAlbum}
+                  searchQuery={searchQuery}
+                  filters={filters}
+                  onPlaySong={handlePlaySong}
+                  currentSong={currentSong}
+                  isPlaying={isPlaying}
+                  toggleFavorite={toggleFavorite}
+                  favoriteKeys={favoriteKeys}
+                />
+              ) : activeCategory === 'individual' ? (
+                <EraGrid key="individual-grid" eras={individualErasArray.filter(e => {
+                  if (!searchQuery) return true;
+                  const q = searchQuery.toLowerCase();
+                  return e.name.toLowerCase().includes(q) || Object.values(e.data || {}).flat().some((s: any) => s.name?.toLowerCase().includes(q));
+                })} onSelectEra={setSelectedAlbum} />
+              ) : activeCategory === 'individualtracklists' && selectedAlbum ? (
+                <TracklistsView
+                  key={`individualtracklists-${selectedAlbum.name}`}
+                  data={individualTracklistsData.filter(t => t.era.toLowerCase() === selectedAlbum.name.toLowerCase())}
+                  searchQuery={searchQuery}
+                  eras={individualErasArray}
+                  onPlaySong={handlePlaySong}
+                  currentSong={currentSong}
+                  isPlaying={isPlaying}
+                  era={selectedAlbum}
+                  onBack={() => setSelectedAlbum(null)}
+                />
+              ) : activeCategory === 'individualtracklists' ? (
+                <EraGrid key="individualtracklists-grid" eras={individualErasArray.filter(e => individualTracklistsData.some(t => t.era.toLowerCase() === e.name.toLowerCase()))} onSelectEra={setSelectedAlbum} />
               ) : activeCategory === 'contributor' && selectedContributor ? (
                 <ContributorView
                   key={`contributor-${selectedContributor}`}
@@ -3306,14 +3563,8 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                   eras={erasArray}
                   searchQuery={searchQuery}
                 />
-              ) : activeCategory === 'yedits' ? (
-                <YEditsView
-                  key="yedits"
-                  searchQuery={searchQuery}
-                  onPlaySong={handlePlaySong}
-                  currentSong={currentSong}
-                  isPlaying={isPlaying}
-                />
+              ) : activeCategory === 'socials' ? (
+                <SocialsView key="socials" searchQuery={searchQuery} />
               ) : activeCategory === 'related' ? (
                 <EraGrid key="related-grid" eras={filteredRelatedEras} onSelectEra={setSelectedAlbum} />
               ) : isTimelineMode ? (

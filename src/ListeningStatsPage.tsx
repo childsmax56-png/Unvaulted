@@ -10,6 +10,7 @@ import {
   type ImportResult,
 } from './listening';
 import { getLastfmUsername } from './lastfm';
+import { ShareStatsCard } from './components/ShareStatsCard';
 
 const ACCENT = '#C9A224';
 
@@ -272,6 +273,7 @@ export function ListeningStatsPage() {
 
           {/* Share */}
           <Section title="Share your stats">
+            {getVGUser() && <ShareStatsCard username={getVGUser()!.username} accent={ACCENT} />}
             <pre style={sharePre}>{summaryText}</pre>
             <button onClick={copySummary} style={btnPrimary}>{copied ? 'Copied!' : 'Copy summary'}</button>
           </Section>

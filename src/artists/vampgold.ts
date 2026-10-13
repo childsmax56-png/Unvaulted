@@ -114,6 +114,7 @@ export const vampgoldConfig: ArtistConfig = {
     "VULTURES": "??/??/2024",
     "CARTI YE": "??/??/2025",
     "BABY BOI": "??/??/2024",
+    "004PF": "??/??/????",
   },
 
   HIDDEN_ALBUMS: ["CARTI YE", "Ye - DONDA", "Donda", "VULTURES"],

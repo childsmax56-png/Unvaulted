@@ -17,7 +17,7 @@ import axios from 'axios';
 import { useCallback, useSyncExternalStore } from 'react';
 import type { Song, Era } from '../types';
 import { parseArtistFromSong } from '../lastfm';
-import { pixeldrainProxyBase } from '../utils';
+import { pixeldrainProxyBase, isChallengeGatedAudioHost } from '../utils';
 
 export type ActivePlayer = 'audio' | 'spotify' | 'youtube' | 'soundcloud';
 
@@ -215,6 +215,31 @@ export function registerHost(handlers: {
   };
 }
 
+// --- Transport override (listening rooms) -----------------------------------
+// While the user is in a listening room (src/rooms/*), the room owns the queue:
+// next/prev/ended and play/pause (incl. media-session + mini-player buttons) are
+// routed to it instead of the local playlist.
+export interface TransportOverride {
+  onEnded: () => void;
+  onNext: () => void;
+  onPrev: () => void;
+  onPlayPause: (play: boolean) => void;
+}
+let transportOverride: TransportOverride | null = null;
+
+export function setTransportOverride(o: TransportOverride): () => void {
+  transportOverride = o;
+  return () => { if (transportOverride === o) transportOverride = null; };
+}
+
+// Raw element control for the room sync loop (bypasses the override).
+export function rawPlay() {
+  const a = getAudioEl();
+  if (!a) return;
+  a.volume = state.volume;
+  playSafe(a);
+}
+
 // --- Stream resolution (mirrors App's resolveStreamUrl) --------------------
 
 export async function resolveStreamUrl(rawUrl: string): Promise<string> {
@@ -242,7 +267,8 @@ export async function resolveStreamUrl(rawUrl: string): Promise<string> {
   return rawUrl;
 }
 
-function isDirectlyPlayableAudio(rawUrl: string): boolean {
+export function isDirectlyPlayableAudio(rawUrl: string): boolean {
+  if (isChallengeGatedAudioHost(rawUrl)) return false;
   return (
     rawUrl.includes('pillows.su/f/') ||
     rawUrl.includes('pillowcase.su/f/') ||
@@ -261,6 +287,7 @@ function isDirectlyPlayableAudio(rawUrl: string): boolean {
 export function togglePlay() {
   const a = getAudioEl();
   if (!a) return;
+  if (transportOverride) { transportOverride.onPlayPause(a.paused); return; }
   if (a.paused) {
     a.volume = state.volume;
     playSafe(a);
@@ -272,11 +299,13 @@ export function togglePlay() {
 export function play() {
   const a = getAudioEl();
   if (!a) return;
+  if (transportOverride) { transportOverride.onPlayPause(true); return; }
   a.volume = state.volume;
   playSafe(a);
 }
 
 export function pause() {
+  if (transportOverride) { transportOverride.onPlayPause(false); return; }
   getAudioEl()?.pause();
 }
 
@@ -475,6 +504,7 @@ function advanceAudioOnly(direction: 1 | -1) {
 }
 
 export function playNext() {
+  if (transportOverride) { transportOverride.onNext(); return; }
   if (hostNext) {
     hostNext();
     return;
@@ -483,6 +513,7 @@ export function playNext() {
 }
 
 export function playPrev() {
+  if (transportOverride) { transportOverride.onPrev(); return; }
   if (hostPrev) {
     hostPrev();
     return;
@@ -521,6 +552,7 @@ function advancePrefetchedSync(): boolean {
 }
 
 function handleEnded() {
+  if (transportOverride) { transportOverride.onEnded(); return; }
   const { loopMode, hasLoopedOnce } = state;
   const a = getAudioEl();
 
@@ -572,4 +604,16 @@ export function usePlayerField<K extends keyof AudioState>(key: K): [AudioState[
 // Read the whole state reactively (used by the global mini-player).
 export function useAudioState(): AudioState {
   return useSyncExternalStore(subscribe, getState, getState);
+}
+
+// Lightweight selector: true when the persistent HTML5-audio mini player is
+// showing a track. Unlike useAudioState this only re-renders when that fact
+// flips, not on every currentTime tick — so pages can reserve bottom space for
+// the mini player without re-rendering their whole tree during playback.
+export function useHasActiveAudio(): boolean {
+  return useSyncExternalStore(
+    subscribe,
+    () => state.activePlayer === 'audio' && !!state.currentSong,
+    () => false,
+  );
 }

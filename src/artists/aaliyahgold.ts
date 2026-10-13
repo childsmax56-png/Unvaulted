@@ -64,4 +64,6 @@ export const aaliyahgoldConfig: ArtistConfig = {
   TAG_TOOLTIP_MAP: {},
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
+  hasRecentTab: false, // sheet has no Recent tab
+  hasReleasedTab: false, // sheet has no Released tab
 };

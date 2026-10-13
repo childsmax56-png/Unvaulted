@@ -1,0 +1,8 @@
+INFO TO BYPASS ARCHIVE.ORG LINKS MARKED AS UNRELEASED TAB ONLY,,,
+,,,
+,,,STEP 1:
+,,,"You might see this pop-up at the moment of going on the provided link, so what you're going to do is press the archive notification, do not press the Google Sheets one."
+,,,STEP 2:
+,,,"Get on Inspect Element and select the pop up linked to the google sheets notifications, with the Click option shown on the second image"
+,,,STEP 3:
+,,,"Right click on it, and Press Hide Element. you should be done now if you did it properly!"

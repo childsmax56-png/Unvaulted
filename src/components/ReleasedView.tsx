@@ -26,6 +26,13 @@ export interface ReleasedEntry {
   Type: string;
   Streaming: string;
   'Link(s)': string;
+  // Some trackers' Released tabs use the live sheet's raw header names instead of the
+  // committed-CSV ones (e.g. the pushagold sheet): "Links"/"Link" for the links column,
+  // "Track Length" for Length, and "Release\nDate" for Release Date. Read all as fallbacks.
+  Links?: string;
+  Link?: string;
+  'Track Length'?: string;
+  'Release\nDate'?: string;
 }
 
 interface ReleasedViewProps {
@@ -197,6 +204,13 @@ function groupByEra(data: ReleasedEntry[], allEras: Era[]): ReleasedEraGroup[] {
   for (const entry of data) {
     const era = entry.Era?.trim();
     if (!era) continue;
+    // Skip section-header/stats-banner rows (e.g. "13 Full\n5 Tagged\n...") that some
+    // sheets (jayzgold) place above each album's songs instead of a real song row.
+    if (era.includes('\n')) continue;
+    // Same banner pattern, but as a single-line count (e.g. chrisbrowngold's
+    // "20 Mixtape Tracks") — these also carry no Type/Link data, unlike a real song row.
+    const links = entry['Link(s)'] ?? entry.Links ?? entry.Link ?? '';
+    if (/^\d+\s/.test(era) && !entry.Type?.trim() && !links.trim()) continue;
     if (!map[era]) {
       map[era] = [];
       order.push(era);
@@ -337,10 +351,12 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
           </div>
 
           {filteredTracks.map((track, trackIdx) => {
-            const links = parseLinks(track['Link(s)'] ?? '');
+            const links = parseLinks(track['Link(s)'] ?? track.Links ?? track.Link ?? '');
             const nameParts = track.Name.split('\n').map(s => s.trim()).filter(Boolean);
             const mainName = nameParts[0] ?? track.Name;
             const subName = nameParts.slice(1).join(' ') || undefined;
+            const trackLength = track.Length || track['Track Length'] || '';
+            const releaseDate = track['Release Date'] || track['Release\nDate'] || '';
 
             return (
               <div key={trackIdx} className="border-b border-white/5 last:border-0">
@@ -361,11 +377,11 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
                   </div>
 
                   <div className="w-32 shrink-0 text-right pr-2 text-xs text-white/40 hidden sm:block">
-                    {track['Release Date']}
+                    {releaseDate}
                   </div>
 
                   <div className="w-20 shrink-0 text-right pr-2 text-xs text-white/40 hidden sm:block font-mono">
-                    {track.Length}
+                    {trackLength}
                   </div>
 
                   <div className="w-28 shrink-0 hidden sm:block">
@@ -411,7 +427,7 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
                             } else if (useYoutubeSDK && ytVideoId) {
                               onPlayYoutube!(ytVideoId, track.Name.split('\n')[0]);
                             } else if (useAudioSDK) {
-                              onPlayAudio!(link.url, track.Name.split('\n')[0], selectedGroup.eraName, track.Length);
+                              onPlayAudio!(link.url, track.Name.split('\n')[0], selectedGroup.eraName, trackLength);
                             } else if (useSoundCloudSDK) {
                               onPlaySoundCloud!(link.url);
                             } else if (useArchiveSDK && archiveIdMatch) {
@@ -444,7 +460,7 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
                   <div className="shrink-0 hidden sm:flex items-center justify-end gap-1 pl-1">
                     {links.length > 0 && (
                       <AddToPlaylistButton
-                        song={{ name: mainName, url: links[0].url, track_length: track.Length } as unknown as Song}
+                        song={{ name: mainName, url: links[0].url, track_length: trackLength } as unknown as Song}
                         eraName={selectedGroup.eraName}
                         url={links[0].url}
                         isCurrentlyPlaying={false}

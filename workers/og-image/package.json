@@ -1,0 +1,13 @@
+{
+  "name": "unvaulted-og-image",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.0.18",
+    "workers-og": "0.0.27"
+  }
+}

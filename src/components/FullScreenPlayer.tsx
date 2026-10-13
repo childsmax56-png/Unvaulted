@@ -3,7 +3,7 @@ import { Play, Pause, X, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Mic2, 
 import { parseArtistFromSong, cleanTrackName } from '../lastfm';
 import { Song, Era } from '../types';
 import { useEffect, useRef, useState } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, CUSTOM_IMAGES, parseNoteDescription, ERA_THEMES , Img} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, CUSTOM_IMAGES, parseNoteDescription, ERA_THEMES , Img, looksLikeRealLink} from '../utils';
 import { useLyrics } from '../useLyrics';
 
 function formatTime(seconds: number) {
@@ -261,7 +261,7 @@ export function FullScreenPlayer({
   const isLyricsDisabled = currentSong.name.includes('???') || currentSong.name.toLowerCase().includes('remix') || currentSong.extra?.toLowerCase().includes('remix') || era?.name.toLowerCase().includes('remix');
 
   const rawUrl = currentSong.url || (currentSong.urls && currentSong.urls.length > 0 ? currentSong.urls[0] : '');
-  const pillowcaseUrl = rawUrl && rawUrl.includes('pillows.su/f/') ? rawUrl : null;
+  const originalLinkUrl = rawUrl && looksLikeRealLink(rawUrl) ? rawUrl : null;
 
   const actualEraName = (currentSong as any).realEra?.name || era?.name || '';
   const currentImgUrl = artworkOverride || currentSong.image || CUSTOM_IMAGES[actualEraName] || (currentSong as any).realEra?.image || era?.image;
@@ -359,13 +359,13 @@ export function FullScreenPlayer({
               <Mic2 className="w-5 h-5" />
             </button>
           )}
-          {pillowcaseUrl && (
+          {originalLinkUrl && (
             <a
-              href={pillowcaseUrl}
+              href={originalLinkUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors shrink-0"
-              title="Visit on Pillowcase"
+              title="Visit Original Link"
             >
               <ExternalLink className="w-5 h-5" />
             </a>

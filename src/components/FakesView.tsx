@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, ExternalLink, Play, Volume2, X, Star, Share2, Download } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, createSlug, isSongNotAvailable, matchesFilters, CUSTOM_IMAGES, parseNoteDescription , Img} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, createSlug, isSongNotAvailable, looksLikeRealLink, matchesFilters, CUSTOM_IMAGES, parseNoteDescription , Img} from '../utils';
 import { SongTitle } from './SongTitle';
 import { FakesEntry } from '../App';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
@@ -347,7 +347,7 @@ export function FakesView({ eras, fakesData, searchQuery, filters, onPlaySong, c
                   const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
                   const isNotAvailable = isSongNotAvailable(song, rawUrl);
                   const lowerUrl = (rawUrl || '').toLowerCase();
-                  const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed');
+                  const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
                   const isPlayable = rawUrl.includes('pillows.su/f/') || rawUrl.includes('imgur.gg/f/') || rawUrl.includes('i.imgur.com') || rawUrl.includes('krakenfiles.com/view/') || rawUrl.includes('pixeldrain.com/u/');
                   const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
                   const isCurrentlyPlaying = (currentSong?.url && song.url && currentSong.url === song.url);

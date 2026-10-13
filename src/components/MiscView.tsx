@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, CUSTOM_IMAGES, getArtistName, buildArtistTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle } from './SongTitle';
 import { saveAs } from 'file-saver';
@@ -303,7 +303,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
         if (ct.startsWith('text/html') || ct.startsWith('application/json')) throw new Error('non-audio response');
         let blob = await res.blob();
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
-        const fileName = settings.tagsAsEmojis ? song.name : formatTextForNotification(song.name, false);
+        const fileName = buildDownloadName(song.name, settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
         if (isImage) {
           ext = imageExt || await detectAudioExt(blob);
@@ -319,8 +319,8 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
           if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
             const artUrl = selectedEraData!.image || CUSTOM_IMAGES[miscEraName];
             const tagMeta = {
-              title: songTitle,
-              artist: buildArtistTag(song.name, miscEraName),
+              title: buildTitleTag(song.name, settings.tagFeaturedArtists),
+              artist: buildArtistTag(song.name, miscEraName, settings.tagFeaturedArtists),
               album: miscEraName,
               year: ALBUM_RELEASE_DATES[miscEraName]?.split('/').pop(),
               artworkUrl: artUrl,
@@ -476,7 +476,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                   const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
                   const isNotAvailable = isSongNotAvailable(song, rawUrl);
                   const lowerUrl = (rawUrl || '').toLowerCase();
-                  const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed');
+                  const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
                   const isPlayable = rawUrl.includes('pillows.su/f/') && !isNotAvailable;
                   const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
                   const isCurrentlyPlaying = (currentSong?.url && song.url && currentSong.url === song.url) ||

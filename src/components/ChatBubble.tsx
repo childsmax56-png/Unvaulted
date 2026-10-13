@@ -166,10 +166,10 @@ export function ChatBubble({ data, screenContext, showPlayer, open, onOpenChange
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
             transition={{ duration: 0.2, ease: [0.2, 0, 0, 1] }}
-            className={`fixed right-6 z-[9000] w-96 flex flex-col rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#111]`}
+            className={`fixed right-4 sm:right-6 z-[9000] w-[calc(100vw-2rem)] sm:w-96 flex flex-col rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#111]`}
             style={{
               bottom: showPlayer ? 'calc(5.5rem + 1.5rem)' : '5rem',
-              maxHeight: '600px',
+              maxHeight: 'min(600px, calc(100dvh - 8rem - env(safe-area-inset-top)))',
             }}
           >
             <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-[#181818]">

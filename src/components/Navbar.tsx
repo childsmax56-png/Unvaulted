@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, LogIn, LogOut, Settings, Dice5, X, ChevronDown, GanttChart, LayoutGrid, UserPlus, Share2, Check, Home } from 'lucide-react';
+import { Search, LogIn, LogOut, Settings, Dice5, X, ChevronDown, GanttChart, LayoutGrid, UserPlus, Share2, Check, Home, History } from 'lucide-react';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { SiDiscord, SiReddit, SiTiktok, SiX } from 'react-icons/si';
 import { Users } from 'lucide-react';
@@ -10,10 +10,11 @@ import { useSettings } from '../SettingsContext';
 import { retryImageOnError } from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { GlobalSearchPanel, GlobalSearchResult } from './GlobalSearchPanel';
+import { hasSocials } from '../socialsData';
 
-export type Category = 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'yedits' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor';
+export type Category = `member-${string}` | 'music' | 'art' | 'recent' | 'recent-production' | 'stems' | 'misc' | 'fakes' | 'albumcopies' | 'groupbuys' | 'related' | 'settings' | 'history' | 'tracklists' | 'released' | 'comps' | 'videos' | 'playlists' | 'subalbums' | 'concerts' | 'production' | 'contributor' | 'individual' | 'individualtracklists' | 'socials';
 
-const DATA_DRIVEN_TABS = new Set(['art', 'stems', 'misc', 'fakes', 'albumcopies', 'groupbuys', 'videos', 'tracklists', 'subalbums']);
+const DATA_DRIVEN_TABS = new Set(['art', 'stems', 'misc', 'fakes', 'albumcopies', 'groupbuys', 'videos', 'tracklists', 'subalbums', 'individualtracklists']);
 
 interface NavbarProps {
   searchQuery: string;
@@ -48,12 +49,14 @@ const NAV_CATEGORIES: { key: Category; label: string }[] = [
   { key: 'recent', label: 'Recent' },
   { key: 'recent-production', label: 'Recent Production' },
   { key: 'tracklists', label: 'Tracklists' },
-  { key: 'yedits', label: 'Yedit Affiliates' },
   { key: 'comps', label: 'Comps' },
   { key: 'videos', label: 'Videos' },
   { key: 'subalbums', label: 'Sub Albums' },
   { key: 'concerts', label: 'Concerts' },
   { key: 'production', label: 'Production Projects' },
+  { key: 'individual', label: 'Individual Projects' },
+  { key: 'individualtracklists', label: 'Individual Tracklists' },
+  { key: 'socials', label: 'Socials' },
 ];
 
 export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHomeClick, activeCategory, onCategoryChange, onRandomSongClick, isRandomMode, isTimelineMode, onTimelineToggle, yeiOpen, onYEIClick, globalSearchResults, onSelectGlobalResult, fetchedTabs, tabsWithData }: NavbarProps) {
@@ -101,13 +104,13 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
 
   const visibleCategories = baseCategories.filter(({ key }) => {
     if (key === 'stems' && activeConfig.hasStemsTab === false) return false;
-    if (key === 'yedits' && !activeConfig.hasYeditsTab) return false;
     if (key === 'production' && !activeConfig.hasProductionTab) return false;
     if (key === 'concerts' && !activeConfig.hasConcertsTab) return false;
     if (key === 'recent' && activeConfig.hasRecentTab === false) return false;
+    if (key === 'released' && activeConfig.hasReleasedTab === false) return false;
     if (key === 'recent-production' && !activeConfig.SHEET_URL_RECENT_PRODUCTION) return false;
     if (key === 'comps' && !activeConfig.hasCompsTab) return false;
-    if (key === 'subalbums' && activeConfig.hasSubAlbumsTab === false) return false;
+    if (key === 'subalbums' && !activeConfig.hasSubAlbumsTab) return false;
     if (key === 'related' && activeConfig.HIDDEN_ALBUMS.length === 0) return false;
     if (key === 'art' && activeConfig.hasArtTab === false) return false;
     if (key === 'videos' && activeConfig.hasVideosTab === false) return false;
@@ -115,9 +118,19 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
     if (key === 'tracklists' && activeConfig.hasTracklistsTab === false) return false;
     if (key === 'albumcopies' && !activeConfig.hasAlbumCopiesTab) return false;
     if (key === 'groupbuys' && !activeConfig.hasGroupbuysTab) return false;
+    if (key === 'individual' && !activeConfig.hasIndividualProjectsTab) return false;
+    if (key === 'individualtracklists' && !activeConfig.hasIndividualTracklistsTab) return false;
+    if (key === 'socials' && !hasSocials(activeConfig.slug)) return false;
     if (DATA_DRIVEN_TABS.has(key) && fetchedTabs?.has(key) && !tabsWithData?.has(key)) return false;
     return true;
-  }).map(cat => cat.key === 'misc' && activeConfig.miscLabel ? { ...cat, label: activeConfig.miscLabel } : cat);
+  }).flatMap(cat => cat.key === 'music' && (activeConfig.musicLabel || activeConfig.memberTabs?.length)
+    ? [{ ...cat, label: activeConfig.musicLabel ?? cat.label },
+       ...(activeConfig.memberTabs ?? []).map(mt => ({ key: `member-${mt.key}` as Category, label: mt.label }))]
+    : [cat]).map(cat => cat.key === 'misc' && activeConfig.miscLabel
+    ? { ...cat, label: activeConfig.miscLabel }
+    : cat.key === 'individual' && activeConfig.individualProjectsLabel
+    ? { ...cat, label: activeConfig.individualProjectsLabel }
+    : cat);
   const activeLabel = visibleCategories.find(c => c.key === activeCategory)?.label ?? 'Navigate';
 
   const handleCategoryClick = (cat: Category) => {
@@ -317,6 +330,16 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
             >
               <Users className="w-5 h-5" />
             </button>
+            {!activeConfig.community && (
+              <a
+                href={`/changes/${activeConfig.slug}`}
+                onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate(`/changes/${activeConfig.slug}`); } }}
+                className="flex items-center p-2.5 rounded-full transition-all duration-300 bg-white/5 text-white/50 hover:bg-white/10 hover:text-white"
+                title="Changelog & alerts"
+              >
+                <History className="w-5 h-5" />
+              </a>
+            )}
             <a
               href="/"
               onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate('/'); } }}
@@ -435,6 +458,17 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
           <Users className="w-4 h-4" />
           <span className="text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Community / Socials</span>
         </button>
+        {!activeConfig.community && (
+          <a
+            href={`/changes/${activeConfig.slug}`}
+            onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate(`/changes/${activeConfig.slug}`); } }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 cursor-pointer bg-white/5 text-white/50 hover:bg-white/10 hover:text-white hover:scale-105"
+            title="What changed on this tracker — and alerts"
+          >
+            <History className="w-4 h-4" />
+            <span className="text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Changelog</span>
+          </a>
+        )}
         <a
           href="/"
           onClick={(e) => { if (!e.metaKey && !e.ctrlKey && e.button === 0) { e.preventDefault(); navigate('/'); } }}

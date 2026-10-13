@@ -1,10 +1,13 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, MessageCircle, Loader2, Trash2, CornerDownRight, Send } from 'lucide-react';
 import {
   CommentNode, VGUser, fetchComments, postComment, deleteComment, getUser,
 } from '../comments';
+
+const profileHref = (username: string) => `/u/${encodeURIComponent(username)}`;
 
 // Owner accounts mirror functions/api/_yedits-auth OWNER_EMAILS — used only to
 // surface the delete affordance on others' comments; the API is the real gate.
@@ -84,22 +87,24 @@ export function CommentsModal({ isOpen, onClose, tracker, entryKey, entryLabel, 
   const renderComment = (c: CommentNode, isReply = false) => (
     <div key={c.id} className={isReply ? 'pl-4 border-l border-white/10' : ''}>
       <div className="flex items-start gap-2 py-2">
-        {c.avatarUrl ? (
-          <img
-            src={c.avatarUrl}
-            alt={c.username}
-            className="w-7 h-7 rounded-full object-cover shrink-0 mt-0.5 bg-white/5"
-            loading="lazy"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-          />
-        ) : (
-          <div className="w-7 h-7 rounded-full bg-[var(--theme-color)]/20 text-[var(--theme-color)] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-            {(c.username || '?').charAt(0).toUpperCase()}
-          </div>
-        )}
+        <Link to={profileHref(c.username)} onClick={onClose} title={`${c.username}'s profile`} className="shrink-0">
+          {c.avatarUrl ? (
+            <img
+              src={c.avatarUrl}
+              alt={c.username}
+              className="w-7 h-7 rounded-full object-cover shrink-0 mt-0.5 bg-white/5"
+              loading="lazy"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+            />
+          ) : (
+            <div className="w-7 h-7 rounded-full bg-[var(--theme-color)]/20 text-[var(--theme-color)] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+              {(c.username || '?').charAt(0).toUpperCase()}
+            </div>
+          )}
+        </Link>
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-2 flex-wrap">
-            <span className="text-sm font-semibold text-white">{c.username}</span>
+            <Link to={profileHref(c.username)} onClick={onClose} className="text-sm font-semibold text-white hover:text-[var(--theme-color)] hover:underline">{c.username}</Link>
             <span className="text-[11px] text-white/40">{timeAgo(c.createdAt)}</span>
           </div>
           <p className="text-sm text-white/80 whitespace-pre-wrap break-words leading-snug mt-0.5">{c.body}</p>

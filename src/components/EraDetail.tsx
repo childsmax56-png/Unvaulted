@@ -5,7 +5,7 @@ import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loa
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
 import { addItemsToGlobalTierList, readGlobalTierLists } from '../tierListStore';
@@ -18,6 +18,9 @@ import { SiLastdotfm } from 'react-icons/si';
 import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { FollowButton } from './FollowButton';
+import { ReportLinkButton } from './ReportLinkButton';
+import { useDeadLinks, isDeadLink } from '../linkStatus';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { usePlaylists } from '../PlaylistContext';
 import { useIsClamped } from '../hooks/useIsClamped';
@@ -207,6 +210,7 @@ export const handleShareSilent = (song: Song, era: Era): string => {
 
 export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
   const { settings, updateSettings } = useSettings();
+  const deadLinks = useDeadLinks(activeConfig.slug);
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [zoomedImage, setZoomedImage] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -304,7 +308,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         let blob = await res.blob();
         const songEraName = (song as any).realEra?.name || era.name;
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
-        const fileName = settings.tagsAsEmojis ? song.name : formatTextForNotification(song.name, false);
+        const fileName = buildDownloadName(song.name, settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
         if (isImage) {
           ext = imageExt || await detectAudioExt(blob);
@@ -325,10 +329,10 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           // Skip artwork in zip path — concurrent artwork fetches across all songs saturate
           // the browser's connection limit and cause the download to hang.
           const tagMeta = {
-            title: songTitle,
-            artist: buildArtistTag(song.name, songEraName),
+            title: buildTitleTag(song.name, settings.tagFeaturedArtists),
+            artist: buildArtistTag(song.name, songEraName, settings.tagFeaturedArtists),
             album: songEraName,
-            year: ALBUM_RELEASE_DATES[songEraName]?.split('/').pop(),
+            year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
             artworkUrl: undefined,
           };
           try {
@@ -410,7 +414,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         let blob = await res.blob();
         const songEraName = (song as any).realEra?.name || era.name;
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
-        const fileName = settings.tagsAsEmojis ? song.name : formatTextForNotification(song.name, false);
+        const fileName = buildDownloadName(song.name, settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
         if (isImage) { ext = imageExt || await detectAudioExt(blob); }
         else { ext = await detectAudioExt(blob); }
@@ -424,10 +428,10 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         const isLossless = song.quality?.toLowerCase().includes('lossless');
         if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
           const tagMeta = {
-            title: songTitle,
-            artist: buildArtistTag(song.name, songEraName),
+            title: buildTitleTag(song.name, settings.tagFeaturedArtists),
+            artist: buildArtistTag(song.name, songEraName, settings.tagFeaturedArtists),
             album: songEraName,
-            year: ALBUM_RELEASE_DATES[songEraName]?.split('/').pop(),
+            year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
             artworkUrl: undefined,
           };
           try {
@@ -685,7 +689,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             <div className="flex items-center gap-4 mb-3 flex-wrap">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap">
                 <div className="truncate">{formatTextWithTags(era.name)}</div>
-                {ALBUM_RELEASE_DATES[era.name] && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name]}</div>}
+                {(ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]) && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]}</div>}
               </h1>
 
               <div className="flex items-center gap-2">
@@ -712,6 +716,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                     entryKey={makeEraKey(era.name)}
                     entryLabel={baseEraName(era.name)}
                     entryType="Era"
+                    variant="pill"
+                  />
+                )}
+                {era.name !== 'Favorites' && era.name !== 'Recent Leaks' && !activeConfig.community && (
+                  <FollowButton
+                    slug={activeConfig.slug}
+                    scope="era"
+                    target={baseEraName(era.name)}
+                    label={baseEraName(era.name)}
                     variant="pill"
                   />
                 )}
@@ -969,10 +982,11 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                     const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
                     const isNotAvailable = isSongNotAvailable(song, rawUrl);
                     const lowerUrl = (rawUrl || '').toLowerCase();
-                    const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed');
+                    const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
                     const isYoutubeLink = (rawUrl.includes('youtube.com/watch') || rawUrl.includes('youtu.be/')) && !isNotAvailable;
                     const isPlayable = (rawUrl.includes('pillows.su/f/') || rawUrl.includes('imgur.gg/f/') || rawUrl.includes('i.imgur.com') || rawUrl.includes('krakenfiles.com/view/') || rawUrl.includes('pixeldrain.com/u/')) && !isNotAvailable;
                     const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
+                    const isDead = !isEmpty && isDeadLink(deadLinks, rawUrl);
                     const isCurrentlyPlaying = (currentSong?.name === song.name && currentSong?.description === song.description) ||
                       (currentSong?.url && song.url && currentSong.url === song.url) ||
                       (currentSong?.urls && song.urls && currentSong.urls.length > 0 && song.urls.length > 0 && currentSong.urls[0] === song.urls[0]);
@@ -1039,6 +1053,14 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                           <div className={`flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 font-medium ${isCurrentlyPlaying ? 'text-[var(--theme-color)]' : 'text-white'}`}>
                             <SongTitle name={song.name} className="break-words whitespace-normal leading-snug" />
                             {song.extra && <SongExtra extra={song.extra} className={`text-xs break-words whitespace-normal leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`} />}
+                            {isDead && (
+                              <span
+                                title="This file has been deleted from its host"
+                                className="self-start sm:self-auto shrink-0 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded border border-red-500/30 text-red-400/90 bg-red-500/10"
+                              >
+                                Dead link
+                              </span>
+                            )}
                           </div>
                           {song.description && (() => {
                             const { ogFilename, note } = parseNoteDescription(song.description);
@@ -1119,6 +1141,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                               />
                             );
                           })()}
+                          {!isEmpty && !isDead && !activeConfig.community && (
+                            <ReportLinkButton
+                              tracker={activeConfig.slug}
+                              url={rawUrl}
+                              label={song.name}
+                              era={(song as any).realEra?.name || era.name}
+                              isCurrentlyPlaying={isCurrentlyPlaying}
+                            />
+                          )}
                           {(() => {
                             const commentEra = (song as any).realEra?.name || era.name;
                             return (
@@ -1131,6 +1162,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                               />
                             );
                           })()}
+                          {!activeConfig.community && (
+                            <FollowButton
+                              slug={activeConfig.slug}
+                              scope="song"
+                              target={song.name}
+                              label={song.name}
+                              isCurrentlyPlaying={isCurrentlyPlaying}
+                            />
+                          )}
                           {(() => {
                             const mvs = findMvsForSong(song.name, era.name, mvData);
                             if (mvs.length === 0) return null;

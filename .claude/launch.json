@@ -4,15 +4,54 @@
     {
       "name": "vaultgold-unified",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5173,
       "autoPort": true
     },
     {
       "name": "vaultgold-wrangler",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["wrangler", "pages", "dev", "dist", "--port", "8788", "--compatibility-date=2025-01-01"],
+      "runtimeArgs": [
+        "wrangler",
+        "pages",
+        "dev",
+        "dist",
+        "--port",
+        "8788",
+        "--compatibility-date=2025-01-01"
+      ],
       "port": 8788
+    },
+    {
+      "name": "og-image-worker",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--config",
+        "workers/og-image/wrangler.toml",
+        "--port",
+        "8790"
+      ],
+      "port": 8790
+    },
+    {
+      "name": "rooms-worker",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--config",
+        "workers/rooms/wrangler.toml",
+        "--port",
+        "8791",
+        "--persist-to",
+        ".wrangler/state"
+      ],
+      "port": 8791
     }
   ]
 }

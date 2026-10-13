@@ -56,6 +56,7 @@ export const dongoldConfig: ArtistConfig = {
     'Love Sick': '01/31/2023',
     'Hardstone Psycho': '06/14/2024',
     'OCTANE': '07/12/2024',
+    'Nitrous': '??/??/????',
     'JACKBOYS 2': '07/08/2025',
     'DT6': '01/30/2026',
   },
@@ -97,7 +98,7 @@ export const dongoldConfig: ArtistConfig = {
     'Love Sick',
     'Hardstone Psycho',
     'JACKBOYS 2',
-    'OCTANE',
+    'OCTANE', 'Nitrous',
     'DT6',
   ],
 

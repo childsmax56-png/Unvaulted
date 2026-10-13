@@ -52,13 +52,22 @@ export async function runWithConcurrencyLimit<T>(
 
 // Cover art and photos are stored as full-resolution originals on slow, free
 // hosts (i.ibb.co accounts for 400+ of them). Loading those originals for a
-// 48px thumbnail is the main reason images crawl in. Route remote images
-// through Cloudflare Image Transformations so they're resized to roughly the
-// size we display and cached on Cloudflare's edge instead of hammering the
-// origin host on every view. The feature is only enabled on the production
-// zone; on local dev and *.pages.dev previews we serve the original untouched
-// (and retryImageOnError below falls back to the original if a transform ever
-// fails, so enabling/disabling the feature can never blank an image).
+// 48px thumbnail is the main reason images crawl in. Route images through
+// Cloudflare Image Transformations so they're resized to roughly the size we
+// display and cached on Cloudflare's edge instead of hammering the origin host
+// on every view. The feature is only enabled on the production zone; on local
+// dev and *.pages.dev previews we serve the original untouched.
+//
+// IMPORTANT: the unvaulted.cc zone has Transformations enabled but currently
+// only permits transforming images the zone itself serves. Transforming a
+// REMOTE origin (i.ibb.co, pillows.su, …) returns `403 cf-not-resized`, so
+// sending remote covers through the transform just wastes a round-trip before
+// the onError fallback re-fetches the full original — which is why era covers
+// (e.g. in the mini player) appeared to hang. Until the zone has "resize images
+// from any origin" enabled, we serve remote images directly. Once that toggle
+// is on in the Cloudflare dashboard, flip REMOTE_IMAGE_RESIZE to true to
+// re-enable resizing of the big remote originals.
+const REMOTE_IMAGE_RESIZE = false;
 export function optimizedImage(src: string | undefined | null, width = 400): string | undefined {
   if (!src) return src ?? undefined;
   if (src.startsWith('data:') || src.startsWith('blob:')) return src; // inline / object URLs
@@ -66,6 +75,11 @@ export function optimizedImage(src: string | undefined | null, width = 400): str
   if (src.includes('/cdn-cgi/image/')) return src;                    // already transformed
   if (typeof window === 'undefined') return src;
   if (!window.location.hostname.endsWith('unvaulted.cc')) return src; // feature only on prod zone
+  if (!REMOTE_IMAGE_RESIZE) {                                         // remote origins 403 until the zone allows them
+    let host = '';
+    try { host = new URL(src).hostname; } catch { return src; }
+    if (!host.endsWith('unvaulted.cc')) return src;                   // serve remote covers directly
+  }
   const opts = `width=${Math.round(width)},quality=82,format=auto,fit=cover`;
   return `/cdn-cgi/image/${opts}/${src}`;
 }
@@ -335,7 +349,7 @@ export function getSongSlug(song: any, allSongsInCollection: any[]): string {
   return createSlug(song.name) || 'NoName1';
 }
 
-export function buildArtistTag(songName: string, eraName: string | undefined): string {
+export function buildArtistTag(songName: string, eraName: string | undefined, includeFeatures = true, fallbackArtist?: string): string {
   let primary: string;
   const dashIdx = songName.indexOf(' - ');
   if (dashIdx !== -1) {
@@ -343,14 +357,60 @@ export function buildArtistTag(songName: string, eraName: string | undefined): s
     Object.keys(TAG_MAP).forEach(emoji => { primary = primary.replaceAll(emoji, ''); });
     primary = primary.replace(/[️]/g, '').trim();
   } else {
-    primary = getArtistName(eraName);
+    primary = fallbackArtist || getArtistName(eraName);
   }
+  if (!includeFeatures) return primary;
 
-  const featMatch = songName.match(/\(feat\.\s*([^)]+)\)/i);
-  if (featMatch) {
-    return `${primary} feat. ${featMatch[1].trim()}`;
+  const featured = collectFeatured(songName);
+  const primaryLower = primary.toLowerCase();
+  const unique = featured.filter(n => !primaryLower.includes(n.toLowerCase()));
+  return unique.length ? `${primary} feat. ${unique.join(', ')}` : primary;
+}
+
+const FEATURE_GROUP = /[\[(](?:feat\.|ft\.|with\s+|w\/)\s*([^\])\n]+)[\])]/gi;
+const CREDIT_GROUP = /\s*[\[(](?:feat\.|ft\.|prod\.|add\.|perf\.|ref\.|with\s+|w\/)[^\])\n]*[\])]/gi;
+
+function collectFeatured(songName: string): string[] {
+  const featured: string[] = [];
+  for (const m of songName.matchAll(FEATURE_GROUP)) {
+    m[1].split(/,|&/).map(n => n.replace(/[\uFE0F]/g, '').trim()).filter(n => n && n !== '???').forEach(n => featured.push(n));
   }
-  return primary;
+  return [...new Set(featured)];
+}
+
+/**
+ * Builds the title tag for a downloaded song, e.g.
+ * "Ye - ⭐ Hurricane [V3]\n(Alt Name)\n(feat. The Weeknd)" → "Hurricane (ft. The Weeknd) [V3] [BEST OF]".
+ * Alt-name lines and credit groups are dropped; version brackets and tags are kept.
+ */
+export function buildTitleTag(songName: string, includeFeatures = true, keepEmojis = false): string {
+  let rest = songName.includes(' - ') ? songName.substring(songName.indexOf(' - ') + 3) : songName;
+
+  const tags: string[] = [];
+  if (!keepEmojis) Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
+    if (rest.includes(emoji)) {
+      tags.push(`[${tag.toUpperCase()}]`);
+      rest = rest.split(emoji).join('');
+    }
+  });
+  if (!keepEmojis) rest = rest.replace(/[\uFE0F]/g, '');
+
+  const firstLine = rest.split('\n')[0].replace(CREDIT_GROUP, '');
+  const brackets = firstLine.match(/\[[^\]]*\]/g) || [];
+  let base = firstLine.replace(/\s*\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();
+  if (!base) base = rest.replace(/\s+/g, ' ').trim();
+
+  const featured = includeFeatures ? collectFeatured(songName) : [];
+  const parts = [base];
+  if (featured.length) parts.push(`(ft. ${featured.join(', ')})`);
+  parts.push(...brackets, ...tags);
+  return parts.join(' ');
+}
+
+/** Download filename for a song: the tagged title format when Tag Featured Artists is on, else the raw name. */
+export function buildDownloadName(songName: string, tagFeaturedArtists: boolean, tagsAsEmojis: boolean): string {
+  if (tagFeaturedArtists) return buildTitleTag(songName, true, tagsAsEmojis);
+  return tagsAsEmojis ? songName : formatTextForNotification(songName, false);
 }
 
 /**
@@ -1155,18 +1215,26 @@ export function pixeldrainProxyUrl(url: string): string | null {
   return id ? `${pixeldrainProxyBase()}/api/${id}` : null;
 }
 
+// Look up an imgur.gg/f/<id> page link via its file API. Besides the direct CDN
+// URL this returns the real MIME type + filename — imgur.gg also hosts videos,
+// images and zips, which must not be treated (and ID3-tagged) as audio.
+export async function resolveImgurGg(url: string): Promise<{ cdnUrl: string; type: string; ext: string } | null> {
+  const id = url.split('/f/')[1]?.split(/[?#/]/)[0]?.trim();
+  if (!id) return null;
+  const host = new URL(url).host;
+  const res = await fetch(`https://${host}/api/file/${id}`).catch(() => null);
+  if (!res || !res.ok) return null;
+  const data = await res.json().catch(() => null);
+  if (!data?.cdnUrl) return null;
+  const ext = String(data.name ?? '').match(/\.[a-z0-9]{2,4}$/i)?.[0].toLowerCase() ?? '';
+  return { cdnUrl: data.cdnUrl, type: String(data.type ?? ''), ext };
+}
+
 export async function resolveUrl(url: string): Promise<{ fetchUrl: string; isImage: boolean; imageExt?: string; headers?: Record<string, string> }> {
   if (url.includes('imgur.gg/f/')) {
-    const id = url.split('/f/')[1];
-    const host = new URL(url).host;
-    if (id) {
-      const res = await fetch(`https://${host}/api/file/${id}`).catch(() => null);
-      if (res && res.ok) {
-        const data = await res.json().catch(() => null);
-        if (data?.cdnUrl) return { fetchUrl: data.cdnUrl, isImage: false };
-      }
-    }
-    return { fetchUrl: url, isImage: false };
+    const info = await resolveImgurGg(url);
+    if (info?.type.startsWith('image/')) return { fetchUrl: info.cdnUrl, isImage: true, imageExt: info.ext || '.jpg' };
+    return { fetchUrl: info?.cdnUrl ?? url, isImage: false };
   }
   if (url.includes('pillows.su/f/')) {
     const pathPart = url.split('/f/')[1];
@@ -1238,15 +1306,23 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
 
     let isImage = false;
     let ext = '.mp3';
+    // Set for files we know aren't audio (e.g. an imgur.gg video or zip): saved
+    // byte-for-byte with this extension, skipping audio detection/tagging.
+    let nonAudioExt: string | null = null;
+    // Same-origin proxy to retry through when the direct cross-origin fetch fails.
+    let proxyUrl: string | null = null;
 
     if (url.includes('imgur.gg/f/')) {
-        const id = url.split('/f/')[1];
-        const host = new URL(url).host;
-        if (id) {
-            const res = await fetch(`https://${host}/api/file/${id}`).catch(() => null);
-            if (res && res.ok) {
-                const data = await res.json().catch(() => null);
-                if (data?.cdnUrl) finalUrl = data.cdnUrl;
+        const info = await resolveImgurGg(url);
+        if (info) {
+            finalUrl = info.cdnUrl;
+            proxyUrl = `/api/audio-proxy?url=${encodeURIComponent(info.cdnUrl)}`;
+            if (info.type.startsWith('image/')) {
+                isImage = true;
+                ext = info.ext || '.jpg';
+            } else if (!info.type.startsWith('audio/') && info.ext) {
+                nonAudioExt = info.ext;
+                ext = info.ext;
             }
         }
     } else if (url.includes('pillows.su/f/')) {
@@ -1326,12 +1402,19 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       // Use plain fetch (no timeout) for audio — mirrors the zip download path.
       // The 3-second getWithTimeout was aborting before pillows.su responded.
       // Images still get the short timeout + proxy fallback chain.
-      let response: Response | null = isImage
+      // no-store when a proxy fallback exists (imgur.gg): an <audio> element that
+      // already played the file cached it without CORS headers, and reusing that
+      // cache entry makes this cross-origin fetch fail.
+      let response: Response | null = isImage && !proxyUrl
         ? await getWithTimeout(finalUrl, 3000)
-        : await fetch(finalUrl).catch(() => null);
+        : await fetch(finalUrl, proxyUrl ? { cache: 'no-store' } : undefined).catch(() => null);
+
+      if ((!response || !response.ok) && proxyUrl) {
+        response = await fetch(proxyUrl).catch(() => null);
+      }
 
       if (!response || !response.ok) {
-        if (isImage) {
+        if (isImage && !proxyUrl) {
           const proxies = [
             `https://corsproxy.io/?${encodeURIComponent(finalUrl)}`,
             `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(finalUrl)}`,
@@ -1367,7 +1450,9 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       }
 
       blob = await response.blob();
-      if (isImage) {
+      if (nonAudioExt) {
+        // Not audio — save as-is; tagging/transcoding would corrupt it.
+      } else if (isImage) {
         blob = await compressImageBlob(blob);
         fileName = fileName.replace(/\.(png|jpeg|jpg)$/i, '') + '.jpg';
       } else {
@@ -1438,7 +1523,9 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       }
     } catch (e) {
       console.error('Download failed:', e);
-      openFallback(finalUrl, fileName);
+      // Prefer the same-origin proxy: the download attribute is honoured there,
+      // whereas a cross-origin CDN link just opens and plays in a new tab.
+      openFallback(proxyUrl ?? finalUrl, fileName);
       return;
     }
 
@@ -1447,6 +1534,29 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
     console.error('Download failed:', e);
     openFallback(finalUrl, formatTextForNotification(suggestedName, false));
   }
+}
+
+// Some sheets have viewer-downloads disabled or use hyperlinked display text
+// ("Snippet", "Link", "Interview") that the CSV/gviz export strips to plain
+// text, leaving no href behind. Treating that text as a playable URL sends
+// window.open()/audio playback down a bogus path (e.g. window.open('Snippet')
+// navigates the app to a nonexistent route), which looks like the tracker
+// crashing when a song is clicked. A real link is always a full URL, a
+// same-origin proxy path, or a bare audio file — anything else isn't one.
+export function looksLikeRealLink(rawUrl: string): boolean {
+  if (!rawUrl) return false;
+  const u = rawUrl.trim();
+  return /:\/\//.test(u) || u.startsWith('/') || /\.(mp3|m4a|wav|ogg|flac|aac|mp4|mov|zip)(\?|$)/i.test(u);
+}
+
+// fileditchfiles.me sits behind a Cloudflare "Managed Challenge" that intercepts
+// every request lacking a browser-solved cf_clearance cookie — an <audio> tag
+// load or a server-side proxy fetch gets back the "Just a moment..." HTML page
+// instead of the file, so these links can never be streamed inline. Treat them
+// like any other non-embeddable host and let the UI open them in a new tab
+// instead of silently failing to play.
+export function isChallengeGatedAudioHost(rawUrl: string): boolean {
+  return rawUrl.includes('fileditchfiles.me');
 }
 
 export function isSongNotAvailable(song: any, rawUrl: string): boolean {

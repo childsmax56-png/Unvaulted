@@ -82,4 +82,5 @@ export const westsidegoldConfig: ArtistConfig = {
   TAG_TOOLTIP_MAP: {},
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
+  hasReleasedTab: false, // sheet has no Released tab
 };

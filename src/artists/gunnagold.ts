@@ -88,6 +88,7 @@ export const gunnagoldConfig: ArtistConfig = {
     'One of Wun': '??/??/????',
     'Collaboration with Offset': '??/??/????',
     'The Last Wun': '??/??/????',
+    'Splurge': '??/??/????',
     'Ongoing': '??/??/????'
   },
 
@@ -124,7 +125,7 @@ export const gunnagoldConfig: ArtistConfig = {
     'a Gift & a Curse',
     'One of Wun',
     'Collaboration with Offset',
-    'The Last Wun',
+    'The Last Wun', 'Splurge',
     'Ongoing'
   ],
 

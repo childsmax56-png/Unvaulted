@@ -4,5 +4,9 @@ release/
 .env
 .env.local
 *.local
+.dev.vars
 .wrangler/
 .vite/
+
+# cover→R2 migration working files (manifest, temp images, CF token)
+scripts/.cover-migration/

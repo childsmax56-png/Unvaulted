@@ -23,6 +23,55 @@
  ],
  "albums": [
   {
+   "era": "Preasonable Doubt",
+   "name": "Demo Tape",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for a demo tape made by JAY-Z around 1994.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Greatest MC"
+    },
+    {
+     "num": "#2",
+     "name": "What’s in a Name?"
+    },
+    {
+     "num": "#3",
+     "name": "Get Off My Dick (feat. Sauce Money)"
+    },
+    {
+     "num": "#4",
+     "name": "Understand Me"
+    },
+    {
+     "num": "#5",
+     "name": "Pass the Roc"
+    },
+    {
+     "num": "#6",
+     "name": "Broken English & Drug Sellin'"
+    },
+    {
+     "num": "#7",
+     "name": "Rippin' It Up, Right? (feat. Sauce Money)"
+    },
+    {
+     "num": "#8",
+     "name": "Nuthin' But Love (feat. Sauce Money)"
+    },
+    {
+     "num": "#9",
+     "name": "Under Pressure (feat. Sauce Money)"
+    }
+   ],
+   "availColor": "#999999",
+   "availLabel": "Unknown"
+  },
+  {
    "era": "Reasonable Doubt",
    "name": "Reasonable Doubt",
    "date": "",
@@ -70,8 +119,8 @@
    ]
   },
   {
-   "era": "0.19722222222222222",
-   "name": "0.19722222222222222",
+   "era": "4:44",
+   "name": "4:44",
    "date": "",
    "quality": "",
    "source": "",

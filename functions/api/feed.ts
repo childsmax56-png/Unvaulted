@@ -10,13 +10,13 @@
 
 // Slugs to aggregate. Kept in sync with src/artists/registry.ts.
 const ARTIST_SLUGS = [
-  'yzygold', 'vampgold', 'wolfgold', 'drizzygold', 'xgold', 'cactigold',
+  'yegold', 'vampgold', 'wolfgold', 'drizzygold', 'xgold', 'cactigold',
   'kdotgold', 'uzigold', 'pushagold', 'shadygold', 'twizzygold', 'dregold',
   'juicegold', 'luckigold',
 ];
 
 const MAX_ITEMS = 150;
-// Cap per artist so one prolific tracker (e.g. yzygold) can't flood the feed —
+// Cap per artist so one prolific tracker (e.g. yegold) can't flood the feed —
 // this is a *cross-artist* feed, so diversity matters more than raw recency.
 const PER_ARTIST_CAP = 25;
 // Reject leak dates in the future (CSV typos like "Apr 20, 2029"), with a small

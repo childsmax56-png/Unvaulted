@@ -12,8 +12,8 @@ import { ErrorBoundary } from './ErrorBoundary.tsx';
 import { setActiveConfig, activeConfig } from './artists/activeConfig.ts';
 import { getArtistConfig } from './artists/registry.ts';
 import { buildCommunityConfig } from './artists/communityConfigBase.ts';
+import { recordArtistVisit } from './visits.ts';
 import { MyTrackerPage } from './MyTrackerPage.tsx';
-import { GamePage } from './GamePage.tsx';
 import { SnippetGamePage } from './SnippetGamePage.tsx';
 import { YEditsGoldPage } from './YEditsGoldPage.tsx';
 import { ListeningStatsPage } from './ListeningStatsPage.tsx';
@@ -25,6 +25,14 @@ import { DownloadPage } from './DownloadPage.tsx';
 import { CreateTrackerPage } from './CreateTrackerPage.tsx';
 import { CommunityPage } from './CommunityPage.tsx';
 import { PlaylistsPage } from './PlaylistsPage.tsx';
+import { ProducersPage } from './ProducersPage.tsx';
+import { TrackerArchivePage } from './TrackerArchivePage.tsx';
+import { ChangesPage } from './ChangesPage.tsx';
+import { AlertsPage } from './AlertsPage.tsx';
+import { RoomsPage } from './RoomsPage.tsx';
+import { RoomPage } from './RoomPage.tsx';
+import { AdminPage } from './AdminPage.tsx';
+import { ProfilePage } from './ProfilePage.tsx';
 import { GlobalPlaylistProvider } from './GlobalPlaylistContext.tsx';
 import { GlobalMiniPlayer } from './player/GlobalMiniPlayer.tsx';
 
@@ -33,8 +41,18 @@ import { GlobalMiniPlayer } from './player/GlobalMiniPlayer.tsx';
 const RESERVED_TOP_SEGMENTS = new Set([
   'my-tracker', 'game', 'guess', 'yeditsgold', 'listening', 'tierlist',
   'terms', 'privacy', 'download', 'create-tracker', 'community', 'playlists',
-  'foryou',
+  'foryou', 'admin', 'u', 'producers', 'archive', 'changes', 'alerts', 'rooms',
 ]);
+
+// iOS WebKit doesn't always clamp/reset the window scroll on client-side route
+// changes, so a page can open already scrolled past its header. Always start
+// a new route at the top.
+if (typeof history !== 'undefined' && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 // Renders the persistent mini player on any route where the per-artist <App>
 // is NOT mounted (landing page, /my-tracker, etc.). On artist routes App shows
@@ -87,6 +105,15 @@ function CommunityArtistRoute({ slug }: { slug: string }) {
   );
 }
 
+// Records one visit whenever an artist tracker mounts. Rendered inside the
+// keyed ErrorBoundary so it re-runs on every artist change.
+function ArtistVisitTracker({ slug }: { slug: string }) {
+  useEffect(() => {
+    recordArtistVisit(slug);
+  }, [slug]);
+  return null;
+}
+
 function ArtistRoute() {
   const { artist } = useParams<{ artist: string }>();
 
@@ -104,6 +131,7 @@ function ArtistRoute() {
 
   return (
     <ErrorBoundary key={artist}>
+      <ArtistVisitTracker slug={config.slug} />
       <SettingsProvider storagePrefix={config.STORAGE_PREFIX}>
         <App key={artist} />
       </SettingsProvider>
@@ -116,10 +144,10 @@ createRoot(document.getElementById('root')!).render(
     <DownloadManagerProvider>
       <GlobalPlaylistProvider>
       <BrowserRouter>
+        <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<SettingsProvider><LandingPage /></SettingsProvider>} />
           <Route path="/my-tracker" element={<SettingsProvider><MyTrackerPage /></SettingsProvider>} />
-          <Route path="/game" element={<GamePage />} />
           <Route path="/guess" element={<SnippetGamePage />} />
           <Route path="/yeditsgold" element={<SettingsProvider><YEditsGoldPage /></SettingsProvider>} />
           <Route path="/listening" element={<SettingsProvider><ListeningStatsPage /></SettingsProvider>} />
@@ -129,7 +157,18 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/community" element={<SettingsProvider><CommunityPage /></SettingsProvider>} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/u/:username" element={<SettingsProvider><ProfilePage /></SettingsProvider>} />
           <Route path="/playlists" element={<SettingsProvider><PlaylistsPage /></SettingsProvider>} />
+          <Route path="/producers" element={<SettingsProvider><ProducersPage /></SettingsProvider>} />
+          <Route path="/producers/:key" element={<SettingsProvider><ProducersPage /></SettingsProvider>} />
+          <Route path="/archive" element={<TrackerArchivePage />} />
+          <Route path="/archive/:tab" element={<TrackerArchivePage />} />
+          <Route path="/changes" element={<ChangesPage />} />
+          <Route path="/changes/:slug" element={<ChangesPage />} />
+          <Route path="/alerts" element={<AlertsPage />} />
+          <Route path="/rooms" element={<RoomsPage />} />
+          <Route path="/rooms/:code" element={<RoomPage />} />
           <Route path="/create-tracker" element={<SettingsProvider><CreateTrackerPage /></SettingsProvider>} />
           <Route path="/create-tracker/:id" element={<SettingsProvider><CreateTrackerPage /></SettingsProvider>} />
           <Route path="/:artist/*" element={<ArtistRoute />} />

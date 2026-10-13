@@ -1,0 +1,20 @@
+# Share-card PNG renderer (unvaulted.cc/og/*). Card data comes from the Pages
+# app's /api/og/card; see functions/api/og/_card.ts.
+#
+# Deploy:  cd workers/og-image && npm install && npx wrangler deploy
+# Then set OG_CARDS=1 on the Pages project so link previews point here.
+name = "unvaulted-og-image"
+main = "index.ts"
+compatibility_date = "2025-01-01"
+
+routes = [
+  { pattern = "unvaulted.cc/og/*", zone_name = "unvaulted.cc" },
+]
+
+[vars]
+SITE_ORIGIN = "https://unvaulted.cc"
+
+[[rules]]
+type = "Data"
+globs = ["**/*.woff"]
+fallthrough = true

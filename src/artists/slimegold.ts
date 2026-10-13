@@ -103,6 +103,7 @@ export const slimegoldConfig: ArtistConfig = {
     'UY SCUTI': '01/02/2025',
     'Day Before Coachella': '10/17/2025',
     'GØŁDMØÜFDÖG': '??/??/????',
+    'Slime Language 3': '??/??/????',
   },
 
   HIDDEN_ALBUMS: [],
@@ -163,6 +164,7 @@ export const slimegoldConfig: ArtistConfig = {
     'Slime WRLD', 'So Much Fun', 'So Much Fun (Deluxe)', 'SUPER SLIMEY: SURFER EDITION',
     'Punk [V1]', 'Slime Language 2', 'Punk [V2]', 'Unknown (2022)', 'BUSINESS IS BUSINESS',
     'LOVE YOU LATER', 'Slime Sea4on', 'Edd, Ed n Eddy', 'UY SCUTI', 'Day Before Coachella', 'GØŁDMØÜFDÖG',
+    'Slime Language 3',
   ],
 
   TAG_MAP: {},

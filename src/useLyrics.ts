@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Song, Era } from './types';
 import { parseArtistFromSong } from './lastfm';
+import { getArtistName } from './utils';
 
 export interface Annotation {
   fragment: string;
@@ -139,9 +140,15 @@ export function useLyrics(currentSong: Song | null, era: Era | null) {
         artistsToTry = ["Kendrick Lamar"];
         trackNamesToTry = ["Alright"];
       } else {
+        // Fall back to the active tracker's primary artist (not a hardcoded one),
+        // so songs credited to collaborators still resolve lyrics under the main artist.
+        const primaryArtist = getArtistName(undefined);
         const lowerArtist = initialArtist.toLowerCase();
-        if (!lowerArtist.includes('kanye west') && !lowerArtist.includes('ye')) {
-          artistsToTry.push('Kanye West', 'Ye');
+        const lowerPrimary = primaryArtist.toLowerCase();
+        if (primaryArtist && !lowerArtist.includes(lowerPrimary)) {
+          artistsToTry.push(primaryArtist);
+          // Kanye is commonly credited as "Ye" on Genius — add the alias only for that tracker.
+          if (lowerPrimary.includes('kanye')) artistsToTry.push('Ye');
         }
       }
 

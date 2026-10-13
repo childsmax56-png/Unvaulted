@@ -12,7 +12,7 @@
 // (Bearer vg_token). A comment can be deleted by its author or a moderator.
 import { json, options, getSession, generateId } from './_auth';
 import { isYeditsAdmin } from './_yedits-auth';
-import { ensureCommentTables, normTracker } from './comments/_schema';
+import { ensureCommentTables, normTracker, commentGroup } from './comments/_schema';
 import { ensureProfileColumns } from './auth/_profile-schema';
 
 export const onRequestOptions = options;
@@ -48,6 +48,9 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const entry = (url.searchParams.get('entry') || '').slice(0, MAX_KEY);
   if (!tracker || !entry) return json({ error: 'Missing tracker or entry' }, 400);
 
+  const group = commentGroup(tracker);
+  const groupIn = group.map(() => '?').join(',');
+
   // avatar_url is joined live from users so an updated profile picture shows on
   // every past comment, rather than the value at post time.
   const { results } = await env.DB.prepare(
@@ -55,9 +58,9 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
             u.avatar_url
        FROM entry_comments ec
        LEFT JOIN users u ON u.id = ec.user_id
-      WHERE ec.tracker_id = ? AND ec.entry_key = ? AND ec.deleted = 0
+      WHERE ec.tracker_id IN (${groupIn}) AND ec.entry_key = ? AND ec.deleted = 0
       ORDER BY ec.created_at ASC`
-  ).bind(tracker, entry).all<Row>();
+  ).bind(...group, entry).all<Row>();
 
   // Build a one-level thread: top-level comments in post order, replies nested.
   const byId = new Map<string, CommentNode>();
@@ -100,10 +103,11 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   // any deeper nesting to the reply's own root so the thread stays one level.
   let parentId: string | null = null;
   if (payload.parentId) {
+    const group = commentGroup(tracker);
     const parent = await env.DB.prepare(
       `SELECT id, parent_id FROM entry_comments
-        WHERE id = ? AND tracker_id = ? AND entry_key = ? AND deleted = 0`
-    ).bind(payload.parentId, tracker, entry).first<{ id: string; parent_id: string | null }>();
+        WHERE id = ? AND tracker_id IN (${group.map(() => '?').join(',')}) AND entry_key = ? AND deleted = 0`
+    ).bind(payload.parentId, ...group, entry).first<{ id: string; parent_id: string | null }>();
     if (!parent) return json({ error: 'Parent comment not found' }, 400);
     parentId = parent.parent_id || parent.id;
   }

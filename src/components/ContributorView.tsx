@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, ChevronDown, ChevronRight, X } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronRight, X, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Era, Song } from '../types';
 import { parseContributors, formatTextWithTags, isSongNotAvailable, CUSTOM_IMAGES , Img} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
@@ -178,6 +179,10 @@ export function ContributorView({ contributorName, eras, onBack, onPlaySong, cur
             {filtered.length !== allMatches.length
               ? `${filtered.length} of ${allMatches.length} song${allMatches.length !== 1 ? 's' : ''}`
               : `${allMatches.length} song${allMatches.length !== 1 ? 's' : ''}`} on this tracker
+            {' · '}
+            <Link to={`/producers/${encodeURIComponent(contributorName)}`} className="inline-flex items-center gap-1 text-[var(--theme-color)] hover:underline">
+              Credits across all trackers <ExternalLink className="w-3 h-3" />
+            </Link>
           </p>
         </div>
       </div>

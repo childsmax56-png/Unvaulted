@@ -1,0 +1,15 @@
+# Tiny cron Worker that drives the tracker changelog / leak-alert scans.
+# The scan logic itself lives in the Pages app (functions/api/changes/scan.ts);
+# this just calls it shard by shard on a schedule.
+#
+# Deploy:  cd workers/changes-cron && npx wrangler deploy
+# Secret:  npx wrangler secret put CHANGES_CRON_SECRET   (same value as the Pages project's)
+name = "unvaulted-changes-cron"
+main = "index.ts"
+compatibility_date = "2025-01-01"
+
+[triggers]
+crons = ["*/15 * * * *"]
+
+[vars]
+SITE_ORIGIN = "https://unvaulted.cc"

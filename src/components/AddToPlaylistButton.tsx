@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Plus, Check, ListMusic } from 'lucide-react';
 import { useGlobalPlaylists } from '../GlobalPlaylistContext';
 import { activeConfig } from '../artists/activeConfig';
+import { getArtistConfig } from '../artists/registry';
 import { eraArtwork } from '../eraArtwork';
 import { Song, PlaylistSong } from '../types';
 
@@ -10,15 +11,19 @@ interface Props {
   eraName: string;
   url: string;
   isCurrentlyPlaying?: boolean;
+  // Source tracker slug when rendered outside that tracker (e.g. /producers).
+  // Defaults to the active tracker.
+  tracker?: string;
 }
 
-export function AddToPlaylistButton({ song, eraName, url, isCurrentlyPlaying }: Props) {
+export function AddToPlaylistButton({ song, eraName, url, isCurrentlyPlaying, tracker }: Props) {
   const { playlists, addToPlaylist, createPlaylist } = useGlobalPlaylists();
   const [open, setOpen] = useState(false);
 
   // Capture the source tracker + display artwork/artist so this song is
   // playable/renderable from the global (cross-tracker) playlist.
   const buildEntry = (): PlaylistSong => {
+    const cfg = (tracker && getArtistConfig(tracker)) || activeConfig;
     const cleanSong = { ...song };
     delete (cleanSong as any).realEra;
     return {
@@ -26,9 +31,9 @@ export function AddToPlaylistButton({ song, eraName, url, isCurrentlyPlaying }: 
       eraName,
       url,
       song: cleanSong,
-      tracker: activeConfig.slug,
-      image: eraArtwork(activeConfig.slug, eraName) || song.image || activeConfig.logoUrl,
-      artist: activeConfig.getArtistName(eraName),
+      tracker: cfg.slug,
+      image: eraArtwork(cfg.slug, eraName) || song.image || cfg.logoUrl,
+      artist: cfg.getArtistName(eraName),
     };
   };
   const [creating, setCreating] = useState(false);
