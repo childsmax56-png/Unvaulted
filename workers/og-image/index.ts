@@ -146,10 +146,16 @@ export default {
     if (hit) return hit;
 
     const fallback = () => Response.redirect(`${env.SITE_ORIGIN}/og-image.jpg`, 302);
-    const dataRes = await fetch(`${env.SITE_ORIGIN}/api/og/card?path=${encodeURIComponent(path)}`);
-    if (!dataRes.ok) return fallback();
-    const card = await dataRes.json() as Card | null;
-    if (!card) return fallback();
+    // Any problem fetching card data (site down, endpoint not deployed and the
+    // SPA answering with HTML, …) falls back to the default share image.
+    let card: Card | null = null;
+    try {
+      const dataRes = await fetch(`${env.SITE_ORIGIN}/api/og/card?path=${encodeURIComponent(path)}`);
+      if (dataRes.ok && (dataRes.headers.get('content-type') || '').includes('application/json')) {
+        card = await dataRes.json() as Card | null;
+      }
+    } catch { /* fall through */ }
+    if (!card || typeof card.title !== 'string') return fallback();
 
     try {
       const rendered = new ImageResponse(layout(card, await loadImage(card.image)) as any, {
