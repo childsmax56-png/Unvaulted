@@ -82,6 +82,7 @@ export const migosgoldConfig: ArtistConfig = {
     'SET IT OFF': 'Album was scheduled to drop on November 11 2022, but was delayed due to Takeoff passing',
     'Collaboration with Gunna': 'On December 19, 2023, Gunna and Offset were pictured together in Dubai. 3 months later, "Prada Dem" was released as a single for One of Wun on March 15, 2024. The duo also released the single "Style Rare" on June 28, 2024. Throughout 2024 and 2025, Offset liked and reposted several posts and comments hinting at a collaborative project with Gunna, such as this tweet on February 28, 2025',
     'KIARI': 'KIARI is Offset\'s third solo album, described as his most personal album, Kiari being is real name',
+    'Unknown': 'Any songs that can\'t be accurately placed within an era, and can\'t really be guessed go in this era.',
   },
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},
@@ -118,6 +119,7 @@ export const migosgoldConfig: ArtistConfig = {
   },
   ERA_THEMES: {},
   hasSubAlbumsTab: false, // no sub-albums data for this tracker
+  hasReleasedTab: false, // the sheet has no Released tab
   musicLabel: 'Migos',
   memberTabs: [
     { key: 'quavo', label: 'Quavo' },

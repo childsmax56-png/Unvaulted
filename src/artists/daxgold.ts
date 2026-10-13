@@ -30,7 +30,14 @@ export const daxgoldConfig: ArtistConfig = {
     return 'Dax';
   },
 
-  CUSTOM_IMAGES: {},
+  CUSTOM_IMAGES: {
+    '2pac Reincarnation Vol 2: By Dax': '/daxgold/eras/2pac-reincarnation-vol-2-by-dax.jpg',
+    'It\'s Different Now': '/daxgold/eras/it-s-different-now.jpg',
+    'I\'ll Say It For You': '/daxgold/eras/i-ll-say-it-for-you.jpg',
+    'Pain Paints Paintings': '/daxgold/eras/pain-paints-paintings.jpg',
+    'What is life?': '/daxgold/eras/what-is-life.jpg',
+    'From A Man\'s Perspective': '/daxgold/eras/from-a-man-s-perspective.jpg',
+  },
 
   ALBUM_RELEASE_DATES: {
     'Daniel Dax': '07/13/2017',

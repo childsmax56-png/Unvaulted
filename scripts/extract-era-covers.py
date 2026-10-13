@@ -11,7 +11,7 @@ reads covers.json into the config's CUSTOM_IMAGES — re-run it afterwards.
 
 Usage: python3 scripts/extract-era-covers.py [batch] [folder ...]
 """
-import csv, importlib.util, io, json, os, posixpath, re, subprocess, sys, tempfile, urllib.request, zipfile
+import csv, html, importlib.util, io, json, os, posixpath, re, subprocess, sys, tempfile, urllib.request, zipfile
 from xml.etree import ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -83,6 +83,46 @@ def flatten_alpha(path):
             bg.convert("RGB").save(path)
 
 
+def unreleased_gid(src_root, folder):
+    """The Unreleased tab's gid from the batch's list.tsv (name<TAB>sheet<TAB>Tab:gid ...)."""
+    path = os.path.join(src_root, "list.tsv")
+    if not os.path.exists(path):
+        return None
+    for line in open(path, encoding="utf-8"):
+        parts = line.rstrip("\n").split("\t")
+        if len(parts) == 3 and parts[0] == folder:
+            return next((t.split(":")[1] for t in parts[2].split() if t.split(":")[0] == "Unreleased"), None)
+    return None
+
+
+def htmlview_images(sheet_id, gid):
+    """[(row, image URL)] from the tab's web view. Fallback for sheets whose
+    downloads are disabled (xlsx export 401s, e.g. NBA YoungBoy): the view still
+    renders pasted images, as w120 thumbnails — '=s0' fetches the original."""
+    req = urllib.request.Request(
+        f"https://docs.google.com/spreadsheets/d/{sheet_id}/htmlview/sheet?headers=true&gid={gid}",
+        headers={"User-Agent": "Mozilla/5.0"})
+    page = urllib.request.urlopen(req).read().decode("utf-8", "replace")
+    out = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+        img = re.search(r'<img[^>]*src="([^"]+)"', tr)
+        num = re.search(r"<th[^>]*>(?:<[^>]+>)*\s*(\d+)\s*<", tr)
+        if img and num:
+            url = html.unescape(img.group(1))
+            out.append((int(num.group(1)) - 1, re.sub(r"=[wsh][^/=]*$", "", url) + "=s0"))
+    return out
+
+
+def image_ext(data):
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return ".png"
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return ".webp"
+    if data[:3] == b"GIF":
+        return ".gif"
+    return ".jpg"
+
+
 def slugify(s):
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-") or "era"
 
@@ -99,21 +139,28 @@ def main():
         if not sheet_id or not os.path.exists(unrel_csv):
             continue
         print(f"\n{folder} -> {slug}")
+        z = None
         try:
             data = urllib.request.urlopen(
                 f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=xlsx").read()
             z = zipfile.ZipFile(io.BytesIO(data))
-        except Exception as e:  # private sheet (e.g. Dax) — export 401s
-            print(f"    !! xlsx export unavailable: {e}")
-            continue
+        except Exception as e:  # downloads disabled (Dax, NBA YoungBoy) — export 401s
+            gid = unreleased_gid(src_root, folder)
+            print(f"    xlsx export unavailable ({e}); trying the web view" + ("" if gid else " — no gid in list.tsv"))
+            if not gid:
+                continue
 
-        # the Unreleased tab: the workbook sheet whose name canon_tab maps to unreleased
-        wb = ET.fromstring(z.read("xl/workbook.xml"))
-        names = [s.get("name") for s in wb.find("m:sheets", NS)]
-        tab = UNRELEASED_TAB.get(slug) or next(
-            (n for n in names if imp.canon_tab(n) == "unreleased"
-             and not re.search(r"backup|copy|before|old", n, re.I)), None)
-        pairs = MEMBER_TABS.get(slug) or ([(tab, "x - Unreleased.csv")] if tab else [])
+        if z is not None:
+            # the Unreleased tab: the workbook sheet whose name canon_tab maps to unreleased
+            wb = ET.fromstring(z.read("xl/workbook.xml"))
+            names = [s.get("name") for s in wb.find("m:sheets", NS)]
+            tab = UNRELEASED_TAB.get(slug) or next(
+                (n for n in names if imp.canon_tab(n) == "unreleased"
+                 and not re.search(r"backup|copy|before|old", n, re.I)), None)
+        else:
+            tab = gid  # web-view fallback addresses the tab by gid
+        pairs = MEMBER_TABS.get(slug) if z is not None and MEMBER_TABS.get(slug) else \
+            ([(tab, "x - Unreleased.csv")] if tab else [])
         if not pairs:
             print("    !! no Unreleased tab in workbook")
             continue
@@ -137,7 +184,20 @@ def main():
             if exact:
                 return exact[0]
             pref = [e for e in eras if imp.era_key(e).startswith(k) or k.startswith(imp.era_key(e))]
-            return pref[0] if len(pref) == 1 else None
+            if len(pref) == 1:
+                return pref[0]
+            # eras named after their songs' Era cells (prefer_song_era, NBA YoungBoy):
+            # the header's era is the one filed on the first song row below it
+            if row < len(raw) and imp.era_header_cell(raw[row]):
+                songs = imp.ERA_FIXES.get(slug, {}).get("songs", {})
+                for r in raw[row + 1:]:
+                    if r and imp.era_header_cell(r):
+                        break
+                    era = re.sub(r"\s+", " ", r[0]).strip().rstrip("*").strip() if r else ""
+                    if era:
+                        era = songs.get(era, era)
+                        return era if era in eras else None
+            return None
 
         out_dir = os.path.join(HERE, "..", "public", slug, "eras")
         os.makedirs(out_dir, exist_ok=True)
@@ -147,18 +207,23 @@ def main():
             raw = imp.read_rows(os.path.join(src_root, folder, fn))
             h = raw[imp.find_header(raw)]
             name_i = imp.col(h, "name") or imp.col(h, "title") or 1
-            images += [(row, media, raw, name_i) for row, _col, media in sorted(sheet_images(z, tab))]
-        for row, media, raw, name_i in images:
+            if z is not None:
+                images += [(row, (lambda m=media: z.read(m)), raw, name_i)
+                           for row, _col, media in sorted(sheet_images(z, tab))]
+            else:
+                images += [(row, (lambda u=url: urllib.request.urlopen(urllib.request.Request(
+                               u, headers={"User-Agent": "Mozilla/5.0"})).read()), raw, name_i)
+                           for row, url in htmlview_images(sheet_id, tab)]
+        for row, load, raw, name_i in images:
             era = era_for_row(row, raw, name_i)
             if not era or era in covers:
                 print(f"    skip image at row {row + 1}" + (f" ({era} already has one)" if era else " (not an era header)"))
                 continue
-            ext = os.path.splitext(media)[1].lower()
-            ext = ".jpg" if ext in (".jpeg", ".jpg") else ext
-            fn = slugify(era) + ext
+            data = load()
+            fn = slugify(era) + image_ext(data)
             dst = os.path.join(out_dir, fn)
             with open(dst, "wb") as f:
-                f.write(z.read(media))
+                f.write(data)
             # downscale big pastes; covers render at card size
             subprocess.run(["sips", "-Z", "600", dst], capture_output=True)
             flatten_alpha(dst)
