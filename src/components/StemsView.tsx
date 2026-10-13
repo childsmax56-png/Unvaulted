@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
-import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star } from 'lucide-react';
+import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star, FileArchive } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle, SongExtra } from './SongTitle';
@@ -14,12 +14,15 @@ import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { isDirectlyPlayableAudio } from '../player/audioStore';
+import { FileKind, getCachedFileKind, isNonPlayableKind, isProbeableLink, probeFileKind, useFileKind } from '../fileKind';
 
 export interface StemEntry {
   Era: string;
   Name: string;
   "Notes\n(Join the Discord to help fix any issues + help with dead links)"?: string;
   "File\nDate"?: string;
+  "File Date"?: string;
   "Leak Date"?: string | { valueType: string };
   "Full Length"?: string;
   BPM?: string | number;
@@ -160,7 +163,7 @@ function parseStemsToEras(stemsData: StemEntry[], allEras: Era[]): { eraName: st
         description: typeof notes === 'string' ? notes : '',
         track_length: trackLength,
         leak_date: formatDate(item["Leak Date"]),
-        file_date: formatDate(item["File\nDate"]),
+        file_date: formatDate(item["File\nDate"] || item["File Date"]),
         available_length: typeof item["Available Length"] === 'string' ? item["Available Length"] : '',
         quality: typeof item.Quality === 'string' ? item.Quality : '',
         url: links.length > 0 ? links[0] : '',
@@ -204,11 +207,165 @@ function parseStemsToEras(stemsData: StemEntry[], allEras: Era[]): { eraName: st
   return merged;
 }
 
+const songUrl = (s: Song) => s.url || (s.urls && s.urls.length > 0 ? s.urls[0] : '');
+
+function rowState(song: Song) {
+  const rawUrl = songUrl(song);
+  const lowerUrl = rawUrl.toLowerCase();
+  const isNotAvailable = isSongNotAvailable(song, rawUrl);
+  const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
+  const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
+  // Hosts the in-app player streams directly (vs. opening an external page).
+  const isPlayableHost = !isEmpty && isDirectlyPlayableAudio(rawUrl) && !/\.(zip|rar|7z)(\?|$)/i.test(rawUrl);
+  return { rawUrl, isEmpty, isPlayableHost };
+}
+
+// # | title | bpm | quality | length | actions — shared by the header and rows.
+const ROW_GRID = 'grid grid-cols-[1.5rem_minmax(0,1fr)_5.5rem] sm:grid-cols-[2rem_minmax(0,1fr)_4.5rem_10rem_3.5rem_7rem] items-center gap-x-3';
+
+const KIND_LABEL: Partial<Record<FileKind, string>> = { archive: 'ZIP', image: 'Image', missing: 'Dead link' };
+
+interface StemRowProps {
+  song: Song;
+  index: number;
+  entryKey: string;
+  isCurrentlyPlaying: boolean;
+  isPlaying: boolean;
+  isStarred: boolean;
+  onActivate: () => Promise<void> | void;
+  onToggleFavorite?: () => void;
+  onShare: (e: React.MouseEvent) => void;
+}
+
+function StemRow({ song, index, entryKey, isCurrentlyPlaying, isPlaying, isStarred, onActivate, onToggleFavorite, onShare }: StemRowProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [busy, setBusy] = useState(false);
+  const { rawUrl, isEmpty, isPlayableHost } = rowState(song);
+  const kind = useFileKind(rawUrl, ref, isPlayableHost);
+  const opensExternally = !isEmpty && (!isPlayableHost || isNonPlayableKind(kind));
+  const canPlay = isPlayableHost && !isNonPlayableKind(kind);
+  const kindLabel = kind ? KIND_LABEL[kind] : (/\.(zip|rar|7z)(\?|$)/i.test(rawUrl) ? 'ZIP' : undefined);
+  const bpm = song.bpm || '';
+
+  const activate = async () => {
+    if (isEmpty || busy) return;
+    setBusy(true);
+    try { await onActivate(); } finally { setBusy(false); }
+  };
+
+  const accent = isCurrentlyPlaying;
+  const chip = (extra = '') => `text-[10px] leading-4 px-1.5 sm:px-2 py-0.5 rounded border whitespace-nowrap ${accent ? 'border-[var(--theme-color)]/20 text-[var(--theme-color)]/80 bg-[var(--theme-color)]/5' : 'border-white/10 text-white/60 bg-white/5'} ${extra}`;
+  const bpmChip = `text-[10px] leading-4 px-1.5 sm:px-2 py-0.5 rounded border whitespace-nowrap ${accent ? 'border-[var(--theme-color)]/20 text-[var(--theme-color)]/80 bg-[var(--theme-color)]/5' : 'border-amber-500/20 text-amber-400/70 bg-amber-500/5'}`;
+  const kindChip = kindLabel && (
+    <span className={`inline-flex items-center gap-1 text-[10px] leading-4 px-1.5 sm:px-2 py-0.5 rounded border whitespace-nowrap ${kind === 'missing' ? 'border-red-500/25 text-red-300/80 bg-red-500/5' : 'border-sky-400/25 text-sky-300/80 bg-sky-400/5'}`} title={kind === 'archive' ? 'Archive file — opens on the host to download' : undefined}>
+      {kind === 'archive' || !kind ? <FileArchive className="w-3 h-3" /> : <ExternalLink className="w-3 h-3" />}
+      {kindLabel}
+    </span>
+  );
+
+  const description = (() => {
+    if (!song.description) return null;
+    const { note, ogFilename } = parseNoteDescription(song.description);
+    return note ? note.split('\n')[0] : ogFilename ? `OG: ${ogFilename}` : null;
+  })();
+
+  const HoverIcon = isEmpty ? X : opensExternally ? ExternalLink : Play;
+
+  return (
+    <div
+      ref={ref}
+      role="button"
+      tabIndex={isEmpty ? -1 : 0}
+      aria-disabled={isEmpty}
+      onClick={activate}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } }}
+      className={`group ${ROW_GRID} px-2 sm:px-4 py-2.5 rounded-lg transition-colors outline-none focus-visible:ring-1 focus-visible:ring-white/30 ${isEmpty ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white/5 active:bg-white/[0.07] cursor-pointer'} ${accent ? 'bg-white/5' : ''}`}
+    >
+      {/* # / state icon */}
+      <div className={`text-xs sm:text-sm font-mono flex items-center justify-center sm:justify-start ${accent ? 'text-[var(--theme-color)]' : 'text-white/40 group-hover:text-white'}`}>
+        {busy ? (
+          <Loader2 className="w-4 h-4 animate-spin" />
+        ) : (
+          <>
+            <span className="sm:group-hover:hidden">
+              {accent ? <Volume2 className={`w-4 h-4 ${isPlaying ? 'animate-pulse' : ''}`} /> : (index + 1)}
+            </span>
+            <HoverIcon className="w-4 h-4 hidden sm:group-hover:block" />
+          </>
+        )}
+      </div>
+
+      {/* Title, note, and (mobile) meta chips */}
+      <div className="min-w-0">
+        <div className={`flex items-baseline gap-2 min-w-0 font-medium text-sm sm:text-base ${accent ? 'text-[var(--theme-color)]' : 'text-white'}`}>
+          <span className="truncate min-w-0"><SongTitle name={song.name} /></span>
+          {song.extra && <SongExtra extra={song.extra} className={`hidden sm:block text-xs truncate min-w-0 ${accent ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`} />}
+        </div>
+        {song.extra && <SongExtra extra={song.extra} className={`sm:hidden block text-[11px] truncate ${accent ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`} />}
+        {description && (
+          <div className={`text-xs mt-0.5 line-clamp-2 sm:line-clamp-1 break-words ${accent ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>
+            {formatTextWithTags(description)}
+          </div>
+        )}
+        <div className="sm:hidden flex flex-wrap items-center gap-1 mt-1.5 empty:hidden">
+          {kindChip}
+          {bpm && <span className={bpmChip}>{bpm} BPM</span>}
+          {song.quality && <span className={chip()}>{song.quality}</span>}
+          {song.available_length && <span className={chip()}>{song.available_length}</span>}
+          {song.track_length && <span className={`text-[10px] font-mono ${accent ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`}>{song.track_length}</span>}
+        </div>
+      </div>
+
+      {/* Desktop columns */}
+      <div className="hidden sm:flex justify-center">
+        {bpm && <span className={bpmChip}>{bpm}</span>}
+      </div>
+      <div className="hidden sm:flex flex-wrap items-center gap-1">
+        {kindChip}
+        {song.quality && <span className={chip()}>{song.quality}</span>}
+        {song.available_length && <span className={chip()}>{song.available_length}</span>}
+      </div>
+      <div className={`hidden sm:block text-right text-xs font-mono whitespace-nowrap ${accent ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`}>
+        {song.track_length || '-:--'}
+      </div>
+
+      {/* Actions */}
+      <div className="flex items-center justify-end gap-0.5 sm:gap-1" onClick={(e) => e.stopPropagation()}>
+        {canPlay && onToggleFavorite && (
+          <button
+            onClick={onToggleFavorite}
+            className={`p-1.5 sm:p-1 rounded transition-all hover:bg-[var(--theme-color)]/20 cursor-pointer ${isStarred ? 'text-[var(--theme-color)]' : 'text-white/25 hover:text-[var(--theme-color)]'}`}
+            title={isStarred ? "Remove from Favorites" : "Add to Favorites"}
+          >
+            <Star className="w-4 h-4 sm:w-3.5 sm:h-3.5" fill={isStarred ? "currentColor" : "none"} />
+          </button>
+        )}
+        {canPlay && (
+          <AddToPlaylistButton song={song} eraName="Stems" url={rawUrl} isCurrentlyPlaying={isCurrentlyPlaying} />
+        )}
+        {!isEmpty && (
+          <button onClick={onShare} className="hidden sm:block p-1 hover:bg-white/10 rounded cursor-pointer" title="Copy link">
+            <Share2 className="w-3.5 h-3.5 text-white/50 hover:text-white" />
+          </button>
+        )}
+        <CommentButton
+          tracker={activeConfig.slug}
+          entryKey={entryKey}
+          entryLabel={song.name}
+          entryType="Stems"
+          isCurrentlyPlaying={isCurrentlyPlaying}
+        />
+      </div>
+    </div>
+  );
+}
+
 export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], toggleFavorite, favoriteKeys = [] }: StemsViewProps) {
   const { settings } = useSettings();
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [selectedEra, setSelectedEra] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastHref, setToastHref] = useState<string | null>(null);
 
   const parsedEras = useMemo(() => {
     try {
@@ -230,14 +387,20 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
     }
   }, [parsedEras]);
 
+  // Only collapse the URL back to /stems when the user actually left an era —
+  // on first mount selectedEra is null while the data is still loading, and
+  // rewriting the URL then broke /stems/{era} deep links.
+  const prevSelectedEra = useRef<string | null>(null);
   useEffect(() => {
     const currentPath = relPath(window.location.pathname);
+    const hadEra = prevSelectedEra.current !== null;
+    prevSelectedEra.current = selectedEra;
     if (selectedEra) {
       const newPath = `/stems/${createSlug(selectedEra)}`;
       if (currentPath !== newPath) {
         window.history.pushState({ stemsEra: selectedEra }, '', absPath(newPath));
       }
-    } else {
+    } else if (hadEra) {
       if (currentPath.startsWith('/stems/')) {
         window.history.pushState({ stemsEra: null }, '', absPath('/stems'));
       }
@@ -338,14 +501,54 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
     })).filter(cat => cat.songs.length > 0);
   }, [selectedEraData, searchQuery, filters]);
 
+  // Pillowcase-hosted entries the "download all" button bundles into one zip.
   const allPlayableSongs = useMemo(() => {
     if (!filteredCategories) return [];
     return filteredCategories.flatMap(c => c.songs).filter(s => {
-      const rawUrl = s.url || (s.urls && s.urls.length > 0 ? s.urls[0] : '');
+      const rawUrl = songUrl(s);
       const isNotAvailable = isSongNotAvailable(s, rawUrl);
       return rawUrl && rawUrl.includes('pillows.su/f/') && !isNotAvailable;
     }).map(s => stampSongComment(s, { tracker: activeConfig.slug, type: 'Stems', era: selectedEraData?.eraName || '' }));
   }, [filteredCategories, selectedEraData]);
+
+  // Player queue, built at click time so it skips anything already detected as
+  // a zip/image (auto-next into an archive would just error out).
+  const buildPlayQueue = () =>
+    filteredCategories.flatMap(c => c.songs).filter(s => {
+      const rawUrl = songUrl(s);
+      return rowState(s).isPlayableHost && !isNonPlayableKind(getCachedFileKind(rawUrl));
+    }).map(s => stampSongComment(s, { tracker: activeConfig.slug, type: 'Stems', era: selectedEraData?.eraName || '' }));
+
+  const showToast = (text: string, href?: string, ms = 2500) => {
+    setToastMessage(text);
+    setToastHref(href ?? null);
+    setTimeout(() => { setToastMessage(null); setToastHref(null); }, ms);
+  };
+
+  const openOnHost = (rawUrl: string, kind: FileKind) => {
+    const label = kind === 'archive' ? 'Zip archive' : kind === 'image' ? 'Image file' : 'File unavailable for streaming';
+    // No 'noopener' feature string: with it window.open always returns null,
+    // which would hide whether a popup blocker ate the call.
+    const win = window.open(rawUrl, '_blank');
+    // Popup blockers (Safari/iOS especially) drop window.open after an await —
+    // fall back to a tappable link in the toast.
+    if (!win) { showToast(`${label} — tap to open on host`, rawUrl, 6000); return; }
+    try { win.opener = null; } catch { /* cross-origin */ }
+    showToast(`${label} — opened on host`);
+  };
+
+  const handleActivate = async (song: Song, catName: string, dummyEra: Era) => {
+    const rawUrl = songUrl(song);
+    const { isEmpty, isPlayableHost } = rowState(song);
+    if (isEmpty) return;
+    const stamped = stampSongComment(song, { tracker: activeConfig.slug, type: 'Stems', era: selectedEraData?.eraName || catName });
+    // YouTube / SoundCloud / mega / etc. — App already knows what to do.
+    if (!isPlayableHost) { onPlaySong(stamped, dummyEra, buildPlayQueue()); return; }
+    let kind = getCachedFileKind(rawUrl);
+    if (!kind && isProbeableLink(rawUrl)) kind = await probeFileKind(rawUrl);
+    if (isNonPlayableKind(kind)) { openOnHost(rawUrl, kind!); return; }
+    onPlaySong(stamped, dummyEra, buildPlayQueue());
+  };
 
   const handleShare = (song: Song, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -354,20 +557,14 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
     if (settings.shareLinkType === 'pillowcase') {
       const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
       if (rawUrl && rawUrl.includes('pillows.su/f/')) {
-        navigator.clipboard.writeText(rawUrl).then(() => {
-          setToastMessage('Pillowcase link copied!');
-          setTimeout(() => setToastMessage(null), 2000);
-        });
+        navigator.clipboard.writeText(rawUrl).then(() => showToast('Pillowcase link copied!', undefined, 2000));
         return;
       }
     }
 
     const allSongsInEra = selectedEraData.categories.flatMap(c => c.songs);
     const shareUrl = `${window.location.origin}/stems/${createSlug(selectedEra)}?song=${getSongSlug(song, allSongsInEra)}`;
-    navigator.clipboard.writeText(shareUrl).then(() => {
-      setToastMessage('Link copied!');
-      setTimeout(() => setToastMessage(null), 2000);
-    });
+    navigator.clipboard.writeText(shareUrl).then(() => showToast('Link copied!', undefined, 2000));
   };
 
   const [isDownloading, setIsDownloading] = useState(false);
@@ -459,11 +656,47 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
 
   const [zoomedImage, setZoomedImage] = useState(false);
 
+  const headerActions = () => (
+    <>
+      <button
+        onClick={handleDownloadAlbum}
+        disabled={isDownloading || !allPlayableSongs.length}
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+        title="Download all items"
+      >
+        {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+      </button>
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText(window.location.origin + window.location.pathname);
+          showToast('Album link copied!', undefined, 3000);
+        }}
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors cursor-pointer"
+        title="Copy album link"
+      >
+        <Share2 className="w-4 h-4" />
+      </button>
+      {selectedEraData && (
+        <CommentButton
+          tracker={activeConfig.slug}
+          entryKey={makeEraKey(selectedEraData.eraName)}
+          entryLabel={baseEraName(selectedEraData.eraName)}
+          entryType="Era"
+          variant="pill"
+        />
+      )}
+    </>
+  );
+
   if (selectedEraData) {
     const dummyEra: Era = {
       name: selectedEraData.eraName,
       image: selectedEraData.image,
       data: {}
+    };
+    const totalItems = filteredCategories.reduce((n, c) => n + c.songs.length, 0);
+    const jumpTo = (catName: string) => {
+      document.getElementById(`stems-cat-${createSlug(catName)}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
     return (
@@ -489,199 +722,107 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
           animate={{ opacity: 1, filter: 'blur(0px)' }}
           exit={{ opacity: 0, filter: 'blur(10px)' }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto pb-64"
+          className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto overflow-x-hidden pb-64"
         >
-          <div className="p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5 bg-white/5">
-            <button onClick={() => setSelectedEra(null)} className="cursor-pointer mt-1 flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors shrink-0">
-              <ArrowLeft className="w-4 h-4" />
-            </button>
+          <div className="border-b border-white/5 bg-white/[0.03]">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pt-4 pb-5 md:pt-6 md:pb-8">
+              <button
+                onClick={() => setSelectedEra(null)}
+                className="cursor-pointer mb-4 md:mb-6 inline-flex items-center gap-2 h-8 pl-2 pr-3 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs font-medium transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" /> All stems
+              </button>
 
-            <div
-              className={`w-32 h-32 md:w-48 md:h-48 rounded-md overflow-hidden bg-white/5 shrink-0 shadow-xl ${selectedEraData.image ? 'cursor-pointer' : ''}`}
-              onClick={() => { if (selectedEraData.image) setZoomedImage(true); }}
-              title={selectedEraData.image ? "Click to zoom" : undefined}
-            >
-              {selectedEraData.image ? (
-                <Img w={400} src={selectedEraData.image} alt={selectedEraData.eraName} className="w-full h-full object-cover" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-white/20 text-center p-4">{selectedEraData.eraName}</div>
-              )}
-            </div>
+              <div className="flex items-end gap-4 md:gap-8">
+                <div
+                  className={`w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-md overflow-hidden bg-white/5 shrink-0 shadow-xl ${selectedEraData.image ? 'cursor-zoom-in' : ''}`}
+                  onClick={() => { if (selectedEraData.image) setZoomedImage(true); }}
+                  title={selectedEraData.image ? "Click to zoom" : undefined}
+                >
+                  {selectedEraData.image ? (
+                    <Img w={400} src={selectedEraData.image} alt={selectedEraData.eraName} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-sm md:text-2xl font-bold text-white/20 text-center p-2 md:p-4">{baseEraName(selectedEraData.eraName)}</div>
+                  )}
+                </div>
 
-            <div className="flex flex-col justify-end h-full py-2">
-              <div className="flex items-center gap-4 mb-3 flex-wrap">
-                <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap">
-                  <div className="truncate">{formatTextWithTags(selectedEraData.eraName)}</div>
-                </h1>
-                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[var(--theme-color)]/10 text-[var(--theme-color)] border border-[var(--theme-color)]/20">
-                  Stems
-                </span>
+                <div className="min-w-0 flex-1">
+                  <span className="inline-block text-[10px] md:text-xs font-bold uppercase tracking-widest px-2.5 py-0.5 md:px-3 md:py-1 rounded-full bg-[var(--theme-color)]/10 text-[var(--theme-color)] border border-[var(--theme-color)]/20 mb-2">
+                    Stems
+                  </span>
+                  <h1 className="text-xl sm:text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight line-clamp-2 break-words">
+                    {formatTextWithTags(baseEraName(selectedEraData.eraName))}
+                  </h1>
+                  <p className="text-white/50 text-xs md:text-sm mt-1 md:mt-2">
+                    {totalItems} {totalItems === 1 ? 'item' : 'items'} · {filteredCategories.length} {filteredCategories.length === 1 ? 'category' : 'categories'}
+                  </p>
 
-                <div className="flex items-center gap-2 ml-2">
-                  <button
-                    onClick={handleDownloadAlbum}
-                    disabled={isDownloading}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors cursor-pointer"
-                    title="Download all items"
-                  >
-                    {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                  </button>
-                  <button
-                    onClick={() => {
-                      const baseUrl = window.location.origin + window.location.pathname;
-                      navigator.clipboard.writeText(baseUrl);
-                      setToastMessage("Album link copied!");
-                      setTimeout(() => setToastMessage(null), 3000);
-                    }}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors cursor-pointer"
-                    title="Copy album link"
-                  >
-                    <Share2 className="w-4 h-4" />
-                  </button>
-                  <CommentButton
-                    tracker={activeConfig.slug}
-                    entryKey={makeEraKey(selectedEraData.eraName)}
-                    entryLabel={baseEraName(selectedEraData.eraName)}
-                    entryType="Era"
-                    variant="pill"
-                  />
+                  <div className="hidden sm:flex items-center gap-2 mt-4">
+                    {headerActions()}
+                  </div>
                 </div>
               </div>
-              <p className="text-white/50 text-sm">Instrumentals, Sessions, Acapellas & Studio Stems</p>
+
+              <div className="flex sm:hidden items-center gap-2 mt-4">
+                {headerActions()}
+              </div>
             </div>
           </div>
 
-          <div className="px-6 md:px-8 mt-8 max-w-6xl mx-auto">
+          {filteredCategories.length > 1 && (
+            <div className="sticky top-0 z-20 bg-yzy-black/90 backdrop-blur border-b border-white/5">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-2.5 flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {filteredCategories.map(c => (
+                  <button
+                    key={c.name}
+                    onClick={() => jumpTo(c.name)}
+                    className="shrink-0 cursor-pointer text-xs font-medium px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 transition-colors whitespace-nowrap"
+                  >
+                    {c.name === 'Default' ? 'Stems' : c.name} <span className="text-white/35 ml-1">{c.songs.length}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="px-2 sm:px-6 md:px-8 mt-6 md:mt-8 max-w-6xl mx-auto">
             {filteredCategories.map(({ name: catName, songs }) => (
-              <div key={catName} className="mb-10">
-                <h3 className="text-lg font-bold text-white mb-4 pb-2 border-b border-white/10">{catName}</h3>
+              <section key={catName} id={`stems-cat-${createSlug(catName)}`} className="mb-8 md:mb-10 scroll-mt-16">
+                <h3 className="flex items-baseline gap-2 text-base md:text-lg font-bold text-white mb-2 md:mb-3 px-2 sm:px-0 pb-2 border-b border-white/10">
+                  {catName === 'Default' ? 'Stems' : catName}
+                  <span className="text-xs font-medium text-white/35">{songs.length}</span>
+                </h3>
+
+                <div className={`${ROW_GRID} hidden sm:grid px-4 py-2 text-[11px] font-semibold text-white/40 uppercase tracking-wider`}>
+                  <div>#</div>
+                  <div>Title</div>
+                  <div className="text-center">BPM</div>
+                  <div>Quality</div>
+                  <div className="text-right">Length</div>
+                  <div />
+                </div>
 
                 <div className="flex flex-col">
-                  <div className="flex items-center px-4 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider border-b border-white/5 mb-2 hidden sm:flex">
-                    <div className="w-8">#</div>
-                    <div className="flex-1">Title</div>
-                    <div className="w-20 text-center">BPM</div>
-                    <div className="w-28">Quality</div>
-                    <div className="w-20 text-right">Length</div>
-                    <div className="w-10"></div>
-                  </div>
-
                   {songs.map((song, i) => {
-                    const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
-                    const isNotAvailable = isSongNotAvailable(song, rawUrl);
-                    const lowerUrl = (rawUrl || '').toLowerCase();
-                    const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
-                    const isPlayable = rawUrl.includes('pillows.su/f/') && !isNotAvailable;
-                    const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
-                    const isCurrentlyPlaying = (currentSong?.url && song.url && currentSong.url === song.url) ||
-                      (currentSong?.urls && song.urls && currentSong.urls.length > 0 && song.urls.length > 0 && currentSong.urls[0] === song.urls[0]);
-
-                    const bpm = song.bpm || '';
-
+                    const rawUrl = songUrl(song);
+                    const isCurrentlyPlaying = !!rawUrl && !!currentSong && songUrl(currentSong) === rawUrl;
                     return (
-                      <div
-                        key={i}
-                        onClick={() => !isEmpty && onPlaySong(stampSongComment(song, { tracker: activeConfig.slug, type: 'Stems', era: selectedEraData?.eraName || catName }), dummyEra, allPlayableSongs)}
-                        className={`group flex items-center px-4 py-2.5 rounded-md transition-colors ${isEmpty ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white/5 cursor-pointer'} ${isCurrentlyPlaying ? 'bg-white/5' : ''}`}
-                      >
-                        <div className={`w-8 text-sm font-mono flex items-center ${isCurrentlyPlaying ? 'text-[var(--theme-color)]' : 'text-white/40 group-hover:text-white'}`}>
-                          <span className="group-hover:hidden">
-                            {isCurrentlyPlaying ? <Volume2 className={`w-4 h-4 ${isPlaying ? 'animate-pulse' : ''}`} /> : (i + 1)}
-                          </span>
-                          {isEmpty ? (
-                            <X className="w-4 h-4 hidden group-hover:block" />
-                          ) : isPlayable ? (
-                            <Play className="w-4 h-4 hidden group-hover:block" />
-                          ) : (
-                            <ExternalLink className="w-4 h-4 hidden group-hover:block" />
-                          )}
-                        </div>
-
-                        <div className="flex-1 min-w-0 pr-4">
-                          <div className={`flex items-baseline gap-2 truncate font-medium ${isCurrentlyPlaying ? 'text-[var(--theme-color)]' : 'text-white'}`}>
-                            <SongTitle name={song.name} />
-                            {song.extra && <SongExtra extra={song.extra} className={`text-xs truncate ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`} />}
-                          </div>
-                          {song.description && (() => {
-                            const { note, ogFilename } = parseNoteDescription(song.description);
-                            const display = note ? note.split('\n')[0] : ogFilename ? `OG: ${ogFilename}` : null;
-                            return display ? <div className={`flex items-center gap-2 text-xs truncate mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(display)}</div> : null;
-                          })()}
-                        </div>
-
-                        <div className="w-20 text-center shrink-0 hidden sm:flex items-center justify-center">
-                          {bpm && (
-                            <span className={`text-[10px] px-2 py-0.5 rounded border ${isCurrentlyPlaying ? 'border-[var(--theme-color)]/20 text-[var(--theme-color)]/80 bg-[var(--theme-color)]/5' : 'border-amber-500/20 text-amber-400/70 bg-amber-500/5'}`}>
-                              {bpm}
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="w-28 shrink-0 hidden sm:flex items-center gap-1.5 flex-wrap">
-                          {song.quality && (
-                            <span className={`text-[10px] px-2 py-0.5 rounded border ${isCurrentlyPlaying ? 'border-[var(--theme-color)]/20 text-[var(--theme-color)]/80 bg-[var(--theme-color)]/5' : 'border-white/10 text-white/60 bg-white/5'}`}>
-                              {song.quality}
-                            </span>
-                          )}
-                          {song.available_length && (
-                            <span className={`text-[10px] px-2 py-0.5 rounded border ${isCurrentlyPlaying ? 'border-[var(--theme-color)]/20 text-[var(--theme-color)]/80 bg-[var(--theme-color)]/5' : 'border-white/10 text-white/60 bg-white/5'}`}>
-                              {song.available_length}
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="w-20 shrink-0 hidden sm:flex items-center justify-end text-right text-xs font-mono whitespace-nowrap">
-                          <span className={`${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`}>{song.track_length || '-:--'}</span>
-                        </div>
-
-                        <div className="w-10 shrink-0 flex items-center justify-end gap-2">
-                          {(() => {
-                            if (!isPlayable || !toggleFavorite || song.name === "Alright but the beat is Father Stretch My Hands Pt. 1") return null;
-                            const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
-                            const isStarred = favoriteKeys.some(k => k.songName === song.name && k.url === rawUrl);
-                            return (
-                              <button
-                                onClick={(e) => { e.stopPropagation(); toggleFavorite(song, 'Stems'); }}
-                                className={`p-1 rounded transition-all hover:bg-[var(--theme-color)]/20 cursor-pointer ${isStarred ? 'text-[var(--theme-color)]' : 'text-white/20 hover:text-[var(--theme-color)]'}`}
-                                title={isStarred ? "Remove from Favorites" : "Add to Favorites"}
-                              >
-                                <Star className="w-3.5 h-3.5" fill={isStarred ? "currentColor" : "none"} />
-                              </button>
-                            );
-                          })()}
-                          {isPlayable && (() => {
-                            const songUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
-                            return (
-                              <AddToPlaylistButton
-                                song={song}
-                                eraName="Stems"
-                                url={songUrl}
-                                isCurrentlyPlaying={isCurrentlyPlaying}
-                              />
-                            );
-                          })()}
-                          {!isEmpty && (
-                            <button
-                              onClick={(e) => handleShare(song, e)}
-                              className="p-1 hover:bg-white/10 rounded cursor-pointer"
-                              title="Copy link"
-                            >
-                              <Share2 className="w-3.5 h-3.5 text-white/50 hover:text-white" />
-                            </button>
-                          )}
-                          <CommentButton
-                            tracker={activeConfig.slug}
-                            entryKey={makeEntryKey('Stems', selectedEraData?.eraName || catName, song.name)}
-                            entryLabel={song.name}
-                            entryType="Stems"
-                            isCurrentlyPlaying={isCurrentlyPlaying}
-                          />
-                        </div>
-                      </div>
+                      <StemRow
+                        key={`${i}-${rawUrl}`}
+                        song={song}
+                        index={i}
+                        entryKey={makeEntryKey('Stems', selectedEraData?.eraName || catName, song.name)}
+                        isCurrentlyPlaying={isCurrentlyPlaying}
+                        isPlaying={!!isPlaying}
+                        isStarred={favoriteKeys.some(k => k.songName === song.name && k.url === rawUrl)}
+                        onActivate={() => handleActivate(song, catName, dummyEra)}
+                        onToggleFavorite={toggleFavorite && song.name !== "Alright but the beat is Father Stretch My Hands Pt. 1" ? () => toggleFavorite(song, 'Stems') : undefined}
+                        onShare={(e) => handleShare(song, e)}
+                      />
                     );
                   })}
                 </div>
-              </div>
+              </section>
             ))}
           </div>
         </motion.div>
@@ -693,10 +834,14 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 50, scale: 0.9 }}
-                className="fixed bottom-12 left-1/2 -translate-x-1/2 bg-[#0ba345] text-white px-6 py-3.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] text-[15px] font-medium tracking-wide z-[9999] flex items-center gap-3"
+                className="fixed bottom-28 sm:bottom-12 left-1/2 -translate-x-1/2 w-max max-w-[calc(100vw-32px)] bg-[#0ba345] text-white px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] text-sm sm:text-[15px] font-medium tracking-wide z-[9999] flex items-center gap-3"
               >
-                <Check className="w-5 h-5 stroke-[2.5]" />
-                {toastMessage}
+                {toastHref ? <ExternalLink className="w-5 h-5 shrink-0" /> : <Check className="w-5 h-5 stroke-[2.5] shrink-0" />}
+                {toastHref ? (
+                  <a href={toastHref} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2" onClick={() => setToastMessage(null)}>
+                    {toastMessage}
+                  </a>
+                ) : toastMessage}
               </motion.div>
             )}
           </AnimatePresence>,
@@ -713,7 +858,7 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
       animate={{ opacity: 1, filter: 'blur(0px)' }}
       exit={{ opacity: 0, filter: 'blur(10px)' }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="p-6 md:p-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 pb-32"
+      className="p-4 sm:p-6 md:p-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 pb-32"
     >
       {filteredEras.map((era, i) => {
         const totalSongs = era.categories.reduce((acc, cat) => acc + cat.songs.length, 0);
