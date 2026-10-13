@@ -1,11 +1,13 @@
-// Cross-artist producer pages.
+// Cross-artist credit pages: producers AND featured artists.
 //
-//   /producers       — searchable directory of every credited producer
-//   /producers/:key  — everything one producer touched, across every tracker,
-//                      grouped artist → era, playable through the global player
+//   /producers       — searchable directory of every credited person
+//   /producers/:key  — everything one person produced, featured on or did a
+//                      reference for, across every tracker, grouped
+//                      artist → era, playable through the global player
 //
-// Credits come from the "(prod. …)" text on each song, indexed server-side by
-// functions/api/producers/* (edge-cached, refreshed hourly).
+// Credits come from the "(prod. …)" / "(feat. …)" / "(with …)" / "(ref. …)"
+// text on each song, indexed server-side by functions/api/producers/*
+// (edge-cached, refreshed hourly).
 
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
@@ -23,10 +25,15 @@ const PAGE_SIZE = 120;
 // otherwise render tens of thousands of DOM nodes.
 const ARTIST_ROW_CAP = 50;
 
-interface ProducerSummary { k: string; n: string; c: number; v: number; a: Record<string, number> }
+interface ProducerSummary {
+  k: string; n: string; c: number; v: number; a: Record<string, number>;
+  p: number; f: number; r: number; // unique songs produced / featured on / reference vocals
+}
 interface CreditedSong {
   s: string; e: string; n: string; x?: string; u?: string; q?: string;
-  l?: string; f?: string; d?: string; p: string[];
+  l?: string; f?: string; d?: string;
+  p: string[]; // credited person keys
+  r: string[]; // roles per key: "p" prod, "f" feat, "w" with, "r" ref
 }
 interface ProducerDetail {
   key: string;
@@ -34,6 +41,26 @@ interface ProducerDetail {
   aliases: string[];
   songs: CreditedSong[];
   collaborators: { k: string; n: string; c: number }[];
+}
+
+// Role buckets shown in the UI ("with" credits count as features).
+type Bucket = 'p' | 'f' | 'r';
+const BUCKETS: { id: Bucket; label: string; noun: string; title: string }[] = [
+  { id: 'p', label: 'Production', noun: 'produced', title: 'Producer' },
+  { id: 'f', label: 'Features', noun: 'features', title: 'Featured artist' },
+  { id: 'r', label: 'Reference', noun: 'references', title: 'Reference vocals' },
+];
+const ROLE_BUCKET: Record<string, Bucket> = { p: 'p', f: 'f', w: 'f', r: 'r' };
+const ROLE_BADGE: Record<string, string> = { p: 'prod.', f: 'feat.', w: 'with', r: 'ref.' };
+
+// This person's role letters on one row ("" if absent).
+function rolesOn(row: CreditedSong, key: string): string {
+  const i = row.p.indexOf(key);
+  return i === -1 ? '' : (row.r?.[i] ?? 'p');
+}
+
+function bucketsOn(row: CreditedSong, key: string): Set<Bucket> {
+  return new Set([...rolesOn(row, key)].map((ch) => ROLE_BUCKET[ch]).filter(Boolean));
 }
 
 function artistLabel(slug: string): string {
@@ -86,7 +113,7 @@ function TopBar({ title, back }: { title: string; back?: () => void }) {
       </button>
       {back && (
         <button onClick={back} className="flex items-center gap-1.5 text-white/60 hover:text-white text-sm cursor-pointer transition-colors">
-          <ArrowLeft className="w-4 h-4" /> <span className="hidden sm:inline">All producers</span>
+          <ArrowLeft className="w-4 h-4" /> <span className="hidden sm:inline">All credits</span>
         </button>
       )}
       <h1 className="text-lg md:text-xl font-black tracking-tight ml-1 truncate">{title}</h1>
@@ -114,10 +141,11 @@ function ProducerDirectory() {
   const [query, setQuery] = useState('');
   const [artist, setArtist] = useState('');
   const [sort, setSort] = useState<'songs' | 'artists' | 'az'>('songs');
+  const [role, setRole] = useState<Bucket | ''>('');
   const [limit, setLimit] = useState(PAGE_SIZE);
 
   useEffect(() => {
-    document.title = 'Producers · unvaulted';
+    document.title = 'Producers & Features · unvaulted';
     fetch('/api/producers')
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d: { producers: ProducerSummary[] }) => setProducers(d.producers))
@@ -133,23 +161,23 @@ function ProducerDirectory() {
   const filtered = useMemo(() => {
     if (!producers) return [];
     const q = query.trim().toLowerCase();
-    const list = producers.filter((p) => (!q || p.n.toLowerCase().includes(q)) && (!artist || p.a[artist]));
-    const count = (p: ProducerSummary) => (artist ? p.a[artist] : p.c);
+    const list = producers.filter((p) => (!q || p.n.toLowerCase().includes(q)) && (!artist || p.a[artist]) && (!role || p[role] > 0));
+    const count = (p: ProducerSummary) => (role ? p[role] : artist ? p.a[artist] : p.c);
     if (sort === 'az') return [...list].sort((a, b) => a.n.localeCompare(b.n));
     if (sort === 'artists') return [...list].sort((a, b) => Object.keys(b.a).length - Object.keys(a.a).length || b.c - a.c);
     return [...list].sort((a, b) => count(b) - count(a));
-  }, [producers, query, artist, sort]);
+  }, [producers, query, artist, sort, role]);
 
-  useEffect(() => { setLimit(PAGE_SIZE); }, [query, artist, sort]);
+  useEffect(() => { setLimit(PAGE_SIZE); }, [query, artist, sort, role]);
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col pb-32">
-      <TopBar title="Producers" />
+      <TopBar title="Producers & Features" />
 
       <div className="px-4 md:px-8 pt-6 pb-4 max-w-6xl w-full mx-auto">
         <p className="text-white/50 text-sm">
-          Every producer credited on the trackers, with all the songs they made across every artist.
-          {producers && <span className="text-white/30"> · {producers.length.toLocaleString()} producers</span>}
+          Every producer and featured artist credited on the trackers, with all their songs across every artist.
+          {producers && <span className="text-white/30"> · {producers.length.toLocaleString()} people</span>}
         </p>
 
         <div className="mt-4 flex flex-col sm:flex-row gap-2">
@@ -158,7 +186,7 @@ function ProducerDirectory() {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search producers…"
+              placeholder="Search producers & artists…"
               className="bg-transparent outline-none text-sm flex-1 min-w-0 placeholder:text-white/30"
               autoFocus
             />
@@ -181,11 +209,18 @@ function ProducerDirectory() {
             <option value="az">A–Z</option>
           </select>
         </div>
+
+        <div className="mt-3 flex gap-2 overflow-x-auto -mx-1 px-1 pb-1">
+          <Chip active={!role} onClick={() => setRole('')}>Everyone</Chip>
+          {BUCKETS.map((b) => (
+            <Chip key={b.id} active={role === b.id} onClick={() => setRole(role === b.id ? '' : b.id)}>{b.label}</Chip>
+          ))}
+        </div>
       </div>
 
       {error ? <Status text="Couldn't load producers. Try again in a minute." />
-        : !producers ? <Status text="Indexing producer credits across every tracker…" />
-        : filtered.length === 0 ? <Status text="No producers match that search." />
+        : !producers ? <Status text="Indexing credits across every tracker…" />
+        : filtered.length === 0 ? <Status text="Nobody matches that search." />
         : (
           <div className="px-4 md:px-8 max-w-6xl w-full mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -201,7 +236,8 @@ function ProducerDirectory() {
                     <div className="flex-1 min-w-0">
                       <div className="font-semibold truncate">{p.n}</div>
                       <div className="text-[11px] text-white/40 truncate">
-                        {(artist ? p.a[artist] : p.c).toLocaleString()} song{(artist ? p.a[artist] : p.c) !== 1 ? 's' : ''}
+                        {BUCKETS.filter((b) => p[b.id] > 0 && (!role || role === b.id))
+                          .map((b) => `${p[b.id].toLocaleString()} ${b.noun}`).join(' · ')}
                         {' · '}{artists.length} artist{artists.length !== 1 ? 's' : ''}
                       </div>
                     </div>
@@ -239,6 +275,7 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
   const [detail, setDetail] = useState<ProducerDetail | null>(null);
   const [error, setError] = useState(false);
   const [artistFilter, setArtistFilter] = useState<string>('');
+  const [roleFilter, setRoleFilter] = useState<Bucket | ''>('');
   const [playableOnly, setPlayableOnly] = useState(false);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
@@ -246,13 +283,14 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
     setDetail(null);
     setError(false);
     setArtistFilter('');
+    setRoleFilter('');
     setExpanded(new Set());
     window.scrollTo(0, 0);
     fetch(`/api/producers/${encodeURIComponent(producerKey)}`)
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d: ProducerDetail) => {
         setDetail(d);
-        document.title = `${d.name || 'Producer'} · Producers · unvaulted`;
+        document.title = `${d.name || 'Credits'} · Producers & Features · unvaulted`;
       })
       .catch(() => setError(true));
   }, [producerKey]);
@@ -263,12 +301,22 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [detail]);
 
+  // Unique songs per role bucket, for the role chips and the hero label.
+  const bucketCounts = useMemo(() => {
+    const sets: Record<Bucket, Set<string>> = { p: new Set(), f: new Set(), r: new Set() };
+    for (const row of detail?.songs ?? []) for (const b of bucketsOn(row, detail!.key)) sets[b].add(songKey(row.n));
+    return { p: sets.p.size, f: sets.f.size, r: sets.r.size };
+  }, [detail]);
+
   const visible = useMemo(
-    () => (detail?.songs ?? []).filter((s) => (!artistFilter || s.s === artistFilter) && (!playableOnly || isPlayable(s))),
-    [detail, artistFilter, playableOnly],
+    () => (detail?.songs ?? []).filter((s) =>
+      (!artistFilter || s.s === artistFilter)
+      && (!roleFilter || bucketsOn(s, detail!.key).has(roleFilter))
+      && (!playableOnly || isPlayable(s))),
+    [detail, artistFilter, roleFilter, playableOnly],
   );
 
-  // artist → era → rows, artists ordered by how much this producer did for them.
+  // artist → era → rows, artists ordered by how much this person did for them.
   const grouped = useMemo(() => {
     const order = new Map(artistCounts.map(([s], i) => [s, i]));
     const byArtist = new Map<string, Map<string, CreditedSong[]>>();
@@ -315,14 +363,15 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
 
   const back = () => navigate('/producers');
 
-  if (error) return <div className="min-h-screen bg-black text-white flex flex-col"><TopBar title="Producer" back={back} /><Status text="Couldn't load this producer." /></div>;
-  if (!detail) return <div className="min-h-screen bg-black text-white flex flex-col"><TopBar title="Producer" back={back} /><Status text="Loading credits…" /></div>;
-  if (detail.songs.length === 0) return <div className="min-h-screen bg-black text-white flex flex-col"><TopBar title="Producer" back={back} /><Status text="No credited songs found for this producer." /></div>;
+  if (error) return <div className="min-h-screen bg-black text-white flex flex-col"><TopBar title="Credits" back={back} /><Status text="Couldn't load these credits." /></div>;
+  if (!detail) return <div className="min-h-screen bg-black text-white flex flex-col"><TopBar title="Credits" back={back} /><Status text="Loading credits…" /></div>;
+  if (detail.songs.length === 0) return <div className="min-h-screen bg-black text-white flex flex-col"><TopBar title="Credits" back={back} /><Status text="No credited songs found for this name." /></div>;
 
   const songCount = new Set(detail.songs.map((s) => songKey(s.n))).size;
   const eraCount = new Set(detail.songs.map((s) => `${s.s}|${s.e}`)).size;
   const playableCount = detail.songs.filter(isPlayable).length;
   const aliases = detail.aliases.filter((a) => a !== detail.name);
+  const presentBuckets = BUCKETS.filter((b) => bucketCounts[b.id] > 0);
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col pb-40">
@@ -330,7 +379,9 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
 
       {/* Hero */}
       <div className="px-4 md:px-8 pt-8 pb-6 max-w-6xl w-full mx-auto">
-        <div className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ color: ACCENT }}>Producer</div>
+        <div className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
+          {presentBuckets.map((b) => b.title).join(' · ')}
+        </div>
         <h2 className="text-3xl md:text-5xl font-black tracking-tight mt-1 break-words">{detail.name}</h2>
         {aliases.length > 0 && (
           <p className="text-white/40 text-xs mt-2">Also credited as {aliases.slice(0, 6).join(', ')}</p>
@@ -343,6 +394,17 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
           <Stat icon={<Disc3 className="w-4 h-4" />} value={eraCount} label="eras" />
           <Stat icon={<Play className="w-4 h-4" />} value={playableCount} label="playable" />
         </div>
+
+        {presentBuckets.length > 1 && (
+          <div className="flex flex-wrap gap-2 mt-5">
+            <Chip active={!roleFilter} onClick={() => setRoleFilter('')}>All credits</Chip>
+            {presentBuckets.map((b) => (
+              <Chip key={b.id} active={roleFilter === b.id} onClick={() => setRoleFilter(roleFilter === b.id ? '' : b.id)}>
+                {b.label} · {bucketCounts[b.id].toLocaleString()}
+              </Chip>
+            ))}
+          </div>
+        )}
 
         <div className="flex flex-wrap items-center gap-2 mt-6">
           <button onClick={() => playAll(false)} disabled={!queue.songs.length}
@@ -441,7 +503,14 @@ function ProducerDetailView({ producerKey }: { producerKey: string }) {
                               : <Play className="w-3.5 h-3.5" style={current ? { color: ACCENT } : undefined} />}
                           </button>
                           <div className="flex-1 min-w-0">
-                            <div className={`text-sm truncate ${current ? 'font-semibold' : ''}`} style={current ? { color: ACCENT } : undefined}>{row.n}</div>
+                            <div className="flex items-center gap-1.5 min-w-0">
+                              {[...rolesOn(row, detail.key)].map((ch) => (
+                                <span key={ch} className={`shrink-0 px-1.5 py-px rounded text-[10px] font-bold uppercase tracking-wide ${
+                                  ch === 'p' ? 'bg-amber-500/15 text-amber-300' : ch === 'r' ? 'bg-sky-500/15 text-sky-300' : 'bg-fuchsia-500/15 text-fuchsia-300'
+                                }`}>{ROLE_BADGE[ch]}</span>
+                              ))}
+                              <div className={`text-sm truncate ${current ? 'font-semibold' : ''}`} style={current ? { color: ACCENT } : undefined}>{row.n}</div>
+                            </div>
                             {row.x && <div className="text-[11px] text-white/40 truncate">{row.x.replace(/\n+/g, ' ')}</div>}
                           </div>
                           <div className="hidden sm:flex items-center gap-2 shrink-0 text-[11px] text-white/40">

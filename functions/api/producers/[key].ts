@@ -1,4 +1,4 @@
-// GET /api/producers/:key — every credited song for one producer across all
+// GET /api/producers/:key — every song one person is credited on (prod./feat./with/ref.) across all
 // public trackers, plus their most frequent collaborators.
 import { cached, displayName, loadAllShards, producerKey } from './_index';
 

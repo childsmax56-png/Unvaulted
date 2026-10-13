@@ -1,9 +1,9 @@
-// Shared builder for the cross-artist producer index (/producers pages).
+// Shared builder for the cross-artist credits index (/producers pages).
 //
-// Producer credits live in each song's name/extra cell as "(prod. A, B & C)".
-// We parse those out of every public tracker's /api/{slug}/a catalog and group
-// songs by a normalized producer key so "Pi'erre Bourne" and "Pierre Bourne"
-// land on the same page.
+// Credits live in each song's name/extra cell as "(prod. A, B & C)",
+// "(feat. X)", "(with Y)", "(ref. Z)". We parse those out of every public
+// tracker's /api/{slug}/a catalog and group songs by a normalized person key so
+// "Pi'erre Bourne" and "Pierre Bourne" land on the same page.
 //
 // Fanning out to ~75 trackers from one Function would blow the subrequest
 // limit, so the work is sharded: /api/producers/shard?i=N handles SHARD_SIZE
@@ -32,7 +32,7 @@ export const PRODUCER_SLUGS = [
 export const SHARD_SIZE = 10;
 export const SHARD_COUNT = Math.ceil(PRODUCER_SLUGS.length / SHARD_SIZE);
 // Bump to invalidate every cached shard/list/detail response at once.
-export const INDEX_VERSION = 'v2';
+export const INDEX_VERSION = 'v3';
 export const CACHE_HEADERS = {
   'Content-Type': 'application/json',
   'Access-Control-Allow-Origin': '*',
@@ -50,12 +50,15 @@ export interface CreditedSong {
   l?: string;   // leak date
   f?: string;   // file / recording date
   d?: string;   // availability ("Full", "Snippet", …)
-  p: string[];  // producer keys
+  p: string[];  // credited person keys
+  r: string[];  // roles per key, parallel to p: any of "p" prod, "f" feat, "w" with, "r" ref — e.g. "pf"
 }
+
+export type Role = 'p' | 'f' | 'w' | 'r';
 
 export interface ShardPayload {
   songs: CreditedSong[];
-  // producer key -> display-name variant -> occurrences (picks the canonical spelling)
+  // person key -> display-name variant -> occurrences (picks the canonical spelling)
   names: Record<string, Record<string, number>>;
 }
 
@@ -70,6 +73,10 @@ const KEY_ALIASES: Record<string, string> = {
   '40': 'noah40shebib',
   noah40shebib: 'noah40shebib',
   noahshebib: 'noah40shebib',
+  carti: 'playboicarti',
+  uzi: 'liluzivert',
+  thug: 'youngthug',
+  travis: 'travisscott',
 };
 
 // Placeholder credits that aren't a person.
@@ -81,15 +88,25 @@ const JUNK = new Set([
 export function producerKey(name: string): string {
   const k = name
     .normalize('NFKD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/\$/g, 's')
     .replace(/[^a-z0-9]/g, '');
   return KEY_ALIASES[k] ?? k;
 }
 
-// "(prod. A, B & C)" / "[prod. by A]" / "(co-prod. A)" → ["A", "B", "C"]
-const PROD_GROUP = /[\[(]\s*(?:co-?)?prod(?:\.|uced|uction)?(?:\s*by)?\.?:?\s*([^\])\n]+)[\])]/gi;
+// One credit role keyword at the start of a bracket group (or of a ";"-separated
+// segment inside one, e.g. "(ref. Fat Money; feat. Travis Scott)"). The
+// negative lookahead keeps "(Without Me)" / "(Featherweight)" from matching.
+const ROLE_PREFIX = /^\s*(co-?prod(?:uced|uction)?|prod(?:uced|uction)?|feat(?:uring)?|ft|with|w\/|ref)(?![a-z])[\s.:]*(?:by\b[\s.:]*)?/i;
+
+function roleOf(token: string): Role {
+  const t = token.toLowerCase();
+  if (t.includes('prod')) return 'p';
+  if (t.startsWith('f')) return 'f';
+  if (t.startsWith('w')) return 'w';
+  return 'r';
+}
 
 // Names that contain a separator and must not be split. Their separators are
 // swapped for placeholders before splitting and restored afterwards
@@ -102,28 +119,42 @@ const UNSPLITTABLE: [RegExp, string][] = [
   [/nard\s*&\s*b\b/gi, 'Nard\u0000B'],
 ];
 
-export function parseProducers(text: string): string[] {
-  if (!text) return [];
+function splitNames(group: string): string[] {
+  for (const [re, keep] of UNSPLITTABLE) group = group.replace(re, keep);
   const out: string[] = [];
-  for (const m of text.matchAll(PROD_GROUP)) {
-    let group = m[1];
-    for (const [re, keep] of UNSPLITTABLE) group = group.replace(re, keep);
-    // A bare "&" inside a word ("Earl&E", "L&X Music") is part of the name.
-    for (const part of group.split(/,|\s&\s|\s&|&\s|\+|\s+x\s+|\s+and\s+|\s*\/\s*/i)) {
-      const name = part
-        .replace(/\u0000/g, ' & ')
-        .replace(/\u0001/g, ',')
-        .replace(/[\uFE0F\u200D]/g, '')
-        .replace(/\p{Extended_Pictographic}/gu, '')
-        .replace(/[*?]+$/g, '')
-        .replace(/^\s*(?:co-?prod\.?|add(?:itional)?\.?|prod\.?)\s*/i, '')
-        .trim();
-      if (!name || name.length > 40 || name.includes('?')) continue;
-      if (JUNK.has(producerKey(name))) continue;
-      out.push(name);
+  // A bare "&" inside a word ("Earl&E", "L&X Music") is part of the name.
+  for (const part of group.split(/,|\s&\s|\s&|&\s|\+|\s+x\s+|\s+and\s+|\s*\/\s*/i)) {
+    const name = part
+      .replace(/\u0000/g, ' & ')
+      .replace(/\u0001/g, ',')
+      .replace(/\s*[(\[].*$/, '') // nested "(?)" / "[uncredited]" after the name
+      .replace(/[\uFE0F\u200D]/g, '')
+      .replace(/\p{Extended_Pictographic}/gu, '')
+      .replace(/[*?]+$/g, '')
+      .replace(/^\s*(?:co-?prod\.?|add(?:itional)?\.?|prod\.?)\s*/i, '')
+      .trim();
+    if (!name || name.length > 40 || name.includes('?')) continue;
+    if (JUNK.has(producerKey(name))) continue;
+    out.push(name);
+  }
+  return out;
+}
+
+// "(prod. A & B) (feat. C) [with D]" → [{A,p},{B,p},{C,f},{D,w}]
+export function parseCredits(text: string): { name: string; role: Role }[] {
+  if (!text) return [];
+  const out: { name: string; role: Role }[] = [];
+  for (const m of text.matchAll(/[\[(]([^\])\n]+)[\])]/g)) {
+    for (const seg of m[1].split(';')) {
+      const rm = seg.match(ROLE_PREFIX);
+      if (!rm) continue;
+      // Credits use lowercase "with"; a capitalised "(With That)" is an alt title.
+      if (/^with$/i.test(rm[1]) && rm[1] !== 'with') continue;
+      const role = roleOf(rm[1]);
+      for (const name of splitNames(seg.slice(rm[0].length))) out.push({ name, role });
     }
   }
-  return [...new Set(out)];
+  return out;
 }
 
 // Index one tracker's catalog into credited rows.
@@ -136,18 +167,25 @@ export function indexCatalog(slug: string, data: { eras?: Record<string, any> },
       for (const song of bucket) {
         const name = String(song?.name ?? '').trim();
         if (!name) continue;
-        const names = parseProducers(`${name}\n${song.extra ?? ''}`);
-        if (names.length === 0) continue;
+        const credits = parseCredits(`${name}\n${song.extra ?? ''}`);
+        if (credits.length === 0) continue;
         const keys: string[] = [];
-        for (const n of names) {
+        const roles: string[] = [];
+        for (const { name: n, role } of credits) {
           const k = producerKey(n);
-          if (!k || keys.includes(k)) continue;
-          keys.push(k);
-          const variants = (into.names[k] ??= {});
-          variants[n] = (variants[n] ?? 0) + 1;
+          if (!k) continue;
+          let i = keys.indexOf(k);
+          if (i === -1) {
+            i = keys.push(k) - 1;
+            roles.push('');
+            const variants = (into.names[k] ??= {});
+            variants[n] = (variants[n] ?? 0) + 1;
+          }
+          if (!roles[i].includes(role)) roles[i] += role;
         }
+        if (keys.length === 0) continue;
         const url = song.url || (Array.isArray(song.urls) ? song.urls[0] : '') || '';
-        const row: CreditedSong = { s: slug, e: eraName, n: name, p: keys };
+        const row: CreditedSong = { s: slug, e: eraName, n: name, p: keys, r: roles };
         if (song.extra) row.x = String(song.extra);
         if (url) row.u = url;
         if (song.quality) row.q = song.quality;

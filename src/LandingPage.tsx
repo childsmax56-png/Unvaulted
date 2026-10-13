@@ -1635,9 +1635,9 @@ export function LandingPage() {
           href="/producers"
           accent="#F59E0B"
           badge="New"
-          titleMain="PRODUCER"
-          titleAccent="PAGES"
-          subtitle="Every beat a producer made, across every artist"
+          titleMain="PRODUCERS"
+          titleAccent="& FEATURES"
+          subtitle="Every beat and every verse, across every artist"
           watermark="PR"
         />
         <BigLinkCard

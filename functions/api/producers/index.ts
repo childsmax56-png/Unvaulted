@@ -1,6 +1,8 @@
-// GET /api/producers — every credited producer across all public trackers,
-// sorted by song count. Each entry: { k: key, n: name, c: unique songs,
-// v: version rows, a: { slug: unique songs } }.
+// GET /api/producers — every credited person (producers, featured artists,
+// reference vocalists) across all public trackers, sorted by song count.
+// Each entry: { k: key, n: name, c: unique songs, v: version rows,
+// a: { slug: unique songs }, p/f/r: unique songs produced / featured on
+// (feat. + with) / reference vocals }.
 import { cached, displayName, loadAllShards, songKey } from './_index';
 
 export interface ProducerSummary {
@@ -9,30 +11,36 @@ export interface ProducerSummary {
   c: number;
   v: number;
   a: Record<string, number>;
+  p: number;
+  f: number;
+  r: number;
 }
+
+// Row role letters → summary bucket ("w" with-credits count as features).
+const BUCKET: Record<string, 'p' | 'f' | 'r'> = { p: 'p', f: 'f', w: 'f', r: 'r' };
 
 export const onRequestGet: PagesFunction = async (context) => {
   const origin = new URL(context.request.url).origin;
   return cached(context.request, context.waitUntil.bind(context), 'list', async () => {
     const { songs, names } = await loadAllShards(origin);
     const byKey = new Map<string, ProducerSummary>();
-    const seen = new Map<string, Set<string>>(); // producer key -> unique song keys
-    const seenPerArtist = new Set<string>();     // `${producer}|${slug}|${song}`
+    const seen = new Set<string>(); // `${person}|${scope}|${song}` dedupe for every counter
+    const once = (id: string) => (seen.has(id) ? false : (seen.add(id), true));
     for (const song of songs) {
       const sk = songKey(song.n);
-      for (const k of song.p) {
+      song.p.forEach((k, i) => {
         let entry = byKey.get(k);
         if (!entry) {
-          entry = { k, n: displayName(names[k] ?? {}), c: 0, v: 0, a: {} };
+          entry = { k, n: displayName(names[k] ?? {}), c: 0, v: 0, a: {}, p: 0, f: 0, r: 0 };
           byKey.set(k, entry);
-          seen.set(k, new Set());
         }
         entry.v++;
-        const mine = seen.get(k)!;
-        if (!mine.has(sk)) { mine.add(sk); entry.c++; }
-        const ak = `${k}|${song.s}|${sk}`;
-        if (!seenPerArtist.has(ak)) { seenPerArtist.add(ak); entry.a[song.s] = (entry.a[song.s] ?? 0) + 1; }
-      }
+        if (once(`${k}|*|${sk}`)) entry.c++;
+        if (once(`${k}|@${song.s}|${sk}`)) entry.a[song.s] = (entry.a[song.s] ?? 0) + 1;
+        for (const b of new Set([...(song.r?.[i] ?? 'p')].map((ch) => BUCKET[ch]))) {
+          if (b && once(`${k}|${b}|${sk}`)) entry[b]++;
+        }
+      });
     }
     const producers = [...byKey.values()]
       .filter((p) => p.n)
