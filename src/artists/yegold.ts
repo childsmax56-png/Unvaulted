@@ -81,7 +81,7 @@ export const yegoldConfig: ArtistConfig = {
     "¥$": "https://i.ibb.co/jknzBvyZ/image.png",
     "VULTURES 2": "https://i.ibb.co/35h4bhzG/image-2026-05-04-075431548.png",
     "VULTURES 3": "https://yetracker.cc/img/9c928643e77b50cd0f0e71ea740e6a53",
-    "BULLY [V1]": "https://a5.mzstatic.com/us/r1000/0/Music221/v4/4b/38/d1/4b38d146-381d-ace2-73df-24074576e62b/656465138828_cover.jpg",
+    "BULLY [V1]": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/38/d1/4b38d146-381d-ace2-73df-24074576e62b/656465138828_cover.jpg/1000x1000bb.jpg",
     "CUCK": "https://yetracker.cc/img/f67f57cf09620b30726b0b7df91a65b8",
     "DONDA 2 [V2]": "https://i.ibb.co/b5ZNpDXk/cover.jpg",
     "Be": "https://i.ibb.co/RGmHbWZk/Common-Be.png",
