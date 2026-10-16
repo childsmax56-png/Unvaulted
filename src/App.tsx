@@ -280,8 +280,6 @@ export default function App() {
     }
     return null;
   });
-  const [showChangelog, setShowChangelog] = useState(false);
-  const [showV21Popup, setShowV21Popup] = useState(false);
   const [showSafariWarning, setShowSafariWarning] = useState(false);
   const [mvData, setMvData] = useState<MvEntry[]>([]);
   const [remixData, setRemixData] = useState<RemixEntry[]>([]);
@@ -1582,11 +1580,7 @@ export default function App() {
     const userAgent = navigator.userAgent.toLowerCase();
     const isBrowserSafari = userAgent.includes('safari') && !userAgent.includes('chrome') && !userAgent.includes('crios') && !userAgent.includes('android');
 
-    if (!localStorage.getItem('v2_1_seen')) {
-      setShowV21Popup(true);
-    } else if (!localStorage.getItem('v2_0_seen')) {
-      setShowChangelog(true);
-    } else if (isBrowserSafari) {
+    if (isBrowserSafari) {
       setShowSafariWarning(true);
     }
 
@@ -3786,137 +3780,6 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 className="w-full bg-[var(--theme-color)] text-black font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-[var(--theme-color)]/90 transition-colors"
               >
                 I Understand
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {showV21Popup && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.95, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 20 }}
-              className="bg-[#111] border border-white/10 rounded-xl max-w-lg w-full p-6 md:p-8"
-            >
-              <h2 className="text-2xl font-bold text-white mb-1 tracking-tight font-display">
-                Version 2.1
-              </h2>
-              <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-6">What's New</p>
-
-              <div className="space-y-4 mb-8 text-sm text-white/70 leading-relaxed">
-                <ul className="space-y-4">
-                  <li>
-                    <strong className="text-white">Global Search</strong>
-                    <p className="mt-1">Search across all eras and songs from any tab at once</p>
-                  </li>
-                  <li>
-                    <strong className="text-white">Shareable Era Cards</strong>
-                    <p className="mt-1">Every era now has a shareable link with a rich preview card for social media</p>
-                  </li>
-                  <li>
-                    <strong className="text-white">Timeline View</strong>
-                    <p className="mt-1">Browse all eras in chronological order — toggle it in the Unreleased tab</p>
-                  </li>
-                  <li>
-                    <strong className="text-white">FLAC → WAV Downloads</strong>
-                    <p className="mt-1">Lossless downloads now include full metadata and embedded artwork</p>
-                  </li>
-                  <li>
-                    <strong className="text-white">UNVAULTED My Tracker</strong>
-                    <p className="mt-1">Load any custom Google Sheets tracker with audio playback at unvaulted.cc</p>
-                  </li>
-                </ul>
-              </div>
-
-              <button
-                onClick={() => {
-                  setShowV21Popup(false);
-                  localStorage.setItem('v2_0_seen', 'true');
-                  localStorage.setItem('v2_1_seen', 'true');
-
-                  const userAgent = navigator.userAgent.toLowerCase();
-                  const isBrowserSafari = userAgent.includes('safari') && !userAgent.includes('chrome') && !userAgent.includes('crios') && !userAgent.includes('android');
-                  if (isBrowserSafari) {
-                    setTimeout(() => setShowSafariWarning(true), 400);
-                  }
-                }}
-                className="w-full bg-[var(--theme-color)] text-black font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-[var(--theme-color)]/90 transition-colors"
-              >
-                Got It
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {showChangelog && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.95, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 20 }}
-              className="bg-[#111] border border-white/10 rounded-xl max-w-lg w-full p-6 md:p-8"
-            >
-              <h2 className="text-2xl font-bold text-white mb-1 tracking-tight font-display">
-                Version 2.0
-              </h2>
-              <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-6">What's New</p>
-
-              <div className="space-y-4 mb-8 text-sm text-white/70 leading-relaxed">
-                <ul className="space-y-4">
-                  <li>
-                    <strong className="text-white">Playlists</strong>
-                    <p className="mt-1">You can now create playlists of released and unreleased leaks and share and download them</p>
-                  </li>
-                  <li>
-                    <strong className="text-white">Sub Albums</strong>
-                    <p className="mt-1">This tab was created for albums that don't really have that many songs or are apart of different eras</p>
-                  </li>
-                  <li>
-                    <strong className="text-white">UNVAULTED Accounts</strong>
-                    <p className="mt-1">This was made so to link your Spotify and Last.fm accounts easier, just make an account in settings</p>
-                  </li>
-                  <li className="text-white/50">And more general stability and bug fixes</li>
-                </ul>
-
-                <div className="border-t border-white/10 pt-4 space-y-2">
-                  <p className="text-white font-semibold">TUNE IN TOMORROW FOR THE NEW VAULT GOLD TRACKERS</p>
-                  <p className="text-xs space-x-3">
-                    <a href="https://discord.gg/ZE5gHFYYGy" target="_blank" rel="noopener noreferrer" className="text-[var(--theme-color)]/70 hover:text-[var(--theme-color)] transition-colors underline">Discord</a>
-                    <span>·</span>
-                    <a href="https://www.reddit.com/r/2YZY2GOLD/" target="_blank" rel="noopener noreferrer" className="text-[var(--theme-color)]/70 hover:text-[var(--theme-color)] transition-colors underline">Reddit</a>
-                  </p>
-                </div>
-              </div>
-
-              <button
-                onClick={() => {
-                  setShowChangelog(false);
-                  localStorage.setItem('v2_0_seen', 'true');
-
-                  const userAgent = navigator.userAgent.toLowerCase();
-                  const isBrowserSafari = userAgent.includes('safari') && !userAgent.includes('chrome') && !userAgent.includes('crios') && !userAgent.includes('android');
-                  if (isBrowserSafari) {
-                    setTimeout(() => setShowSafariWarning(true), 400);
-                  }
-                }}
-                className="w-full bg-[var(--theme-color)] text-black font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-[var(--theme-color)]/90 transition-colors"
-              >
-                Got It
               </button>
             </motion.div>
           </motion.div>
