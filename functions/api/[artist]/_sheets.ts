@@ -803,7 +803,8 @@ const HEADER_ALIASES_TAB: Record<string, Record<string, string>> = {
   fakes: { 'Currently Available': 'Available Length', 'when it leeked': 'Leak Date' },
   released: { Date: 'Release Date' },
 };
-const CANONICALIZED_TABS = new Set(Object.keys(HEADER_ALIASES_TAB).concat('stems'));
+// recent: some sheets suffix the link header with a hint ("Link(s)\n(for 1+ links, ...)").
+const CANONICALIZED_TABS = new Set(Object.keys(HEADER_ALIASES_TAB).concat('stems', 'recent'));
 
 function canonicalizeLiveHeaders(tab: string, csv: string): string {
   if (!CANONICALIZED_TABS.has(tab)) return csv;

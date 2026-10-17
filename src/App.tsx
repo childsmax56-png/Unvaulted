@@ -812,12 +812,14 @@ export default function App() {
     // second line ("Name\n(Check out the Tracker website!)", "Notes\n(Join the Discord!)"),
     // so a literal item.Notes lookup misses and live-only eras (e.g. new eras absent from
     // the committed base JSON) render with blank notes.
-    const nameKey = sheetData.length > 0
-      ? Object.keys(sheetData[0]).find(k => k.startsWith('Name')) || 'Name'
-      : 'Name';
-    const notesKey = sheetData.length > 0
-      ? Object.keys(sheetData[0]).find(k => k.startsWith('Notes')) || 'Notes'
-      : 'Notes';
+    // Headers can also carry stray whitespace (" Name") or a hint line
+    // ("Link(s)\n(for 1+ links, highlight a link...)") — match on the trimmed first line.
+    const headerKeys = sheetData.length > 0 ? Object.keys(sheetData[0]) : [];
+    const findKey = (...labels: string[]) =>
+      headerKeys.find(k => labels.includes(k.split('\n')[0].trim().toLowerCase()));
+    const nameKey = findKey('name') || headerKeys.find(k => k.trim().startsWith('Name')) || 'Name';
+    const notesKey = findKey('notes') || headerKeys.find(k => k.trim().startsWith('Notes')) || 'Notes';
+    const linkKey = findKey('link(s)', 'links', 'link') || 'Link(s)';
 
     const avLenToCategory = (avLen: string, categories: Record<string, Song[]>): string => {
       const al = avLen.toLowerCase().trim();
@@ -874,7 +876,7 @@ export default function App() {
         targetJson.eras[eraName] = { name: eraName, data: { 'Unreleased Tracks': [] } };
       }
 
-      let rawUrl = (item['Link(s)'] || '').trim();
+      let rawUrl = (item[linkKey] || '').trim();
       const linkMatch = rawUrl.match(/\]\((.*?)\)/);
       if (linkMatch?.[1]) rawUrl = linkMatch[1];
 
