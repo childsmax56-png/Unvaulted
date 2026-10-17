@@ -16,7 +16,7 @@ import { mapEraName } from './_eraNames';
 
 const CACHE_TTL = 15 * 60;
 // Bump when the response shape/parsing changes so stale edge entries are skipped.
-const CACHE_VERSION = 3;
+const CACHE_VERSION = 4;
 
 const json = (data: unknown, maxAge: number) => new Response(JSON.stringify(data), {
   headers: {

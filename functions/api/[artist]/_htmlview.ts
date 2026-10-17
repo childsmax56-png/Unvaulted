@@ -26,33 +26,60 @@ const decodeEntities = (s: string): string => s
   .replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
   .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&');
 
-// Ask Google for a bigger rendition than the thumbnail the view embeds, served
-// through our /api/sheet-image proxy (the raw URL fails for browsers that send
-// Google cookies). Non-sheets-images URLs are returned unchanged.
-export function sheetImageUrl(src: string, width: number): string {
-  const m = src.match(/^https:\/\/docs\.google\.com\/sheets-images-rt\/([A-Za-z0-9_-]+)/);
-  return m ? `/api/sheet-image?u=${m[1]}=w${width}` : src;
+// The sheets-images-rt tokens in the view rotate every few minutes and the old
+// ones then 403, so they can't be handed to browsers (or cached by token). Each
+// image is instead addressed by a stable key — a fingerprint of its row's text
+// plus its cell position — via /api/sheet-image?s=&g=&k=&w=. That proxy maps the
+// key back to a current token using the token map this function caches (or by
+// re-reading the view), then stores the image in R2.
+//
+// The rewritten URLs are relative (/api/sheet-image?...), served same-origin —
+// the raw Google URLs also fail in browsers (CORP same-site).
+
+const TOKEN_MAP_TTL = 3 * 60; // shorter than the token lifetime
+
+const tokenMapKey = (sheetId: string, gid: string) =>
+  new Request(`https://sheet-image.cache/map/${sheetId}/${gid}`);
+
+// FNV-1a, two 32-bit lanes → 16 hex chars. Only needs to tell rows apart.
+function fingerprint(text: string): string {
+  let h1 = 0x811c9dc5, h2 = 0x01000193 ^ text.length;
+  for (let i = 0; i < text.length; i++) {
+    const c = text.charCodeAt(i);
+    h1 = Math.imul(h1 ^ c, 0x01000193);
+    h2 = Math.imul(h2 ^ c, 0x5bd1e995);
+  }
+  return (h1 >>> 0).toString(16).padStart(8, '0') + (h2 >>> 0).toString(16).padStart(8, '0');
 }
 
-export async function fetchSheetRowImages(
-  sheetId: string,
-  gid: string,
-  opts: { withText?: boolean; width?: number } = {},
-): Promise<Map<number, HtmlviewRow>> {
+export const sheetImageUrl = (sheetId: string, gid: string, key: string, width: number): string =>
+  `/api/sheet-image?s=${sheetId}&g=${gid}&k=${key}&w=${width}`;
+
+// key ("{fingerprint}-{cell}") → current token, read from a fresh htmlview.
+export async function getSheetImageTokens(sheetId: string, gid: string): Promise<Record<string, string>> {
+  const hit = await caches.default.match(tokenMapKey(sheetId, gid));
+  if (hit) return hit.json();
+  return (await scrapeSheetView(sheetId, gid)).tokens;
+}
+
+interface RawRow { images: string[]; imageCells: number[]; cells: string[] }
+
+async function scrapeSheetView(sheetId: string, gid: string): Promise<{
+  rows: Map<number, RawRow>; tokens: Record<string, string>;
+}> {
   const res = await fetch(
     `https://docs.google.com/spreadsheets/d/${sheetId}/htmlview/sheet?headers=true&gid=${gid}`,
     { headers: { 'User-Agent': 'Mozilla/5.0' } },
   );
   if (!res.ok) throw new Error(`Sheet htmlview HTTP ${res.status}`);
 
-  const rows = new Map<number, HtmlviewRow>();
-  let current: HtmlviewRow | null = null;
+  const rows = new Map<number, RawRow>();
+  let current: RawRow | null = null;
   let cell = -1;
-  const width = opts.width ?? 1000;
 
   const rewriter = new HTMLRewriter()
     .on('tr', {
-      element() { current = { images: [], imageCells: [], cells: opts.withText ? [] : undefined }; cell = -1; },
+      element() { current = { images: [], imageCells: [], cells: [] }; cell = -1; },
     })
     .on('th', {
       element(el) {
@@ -61,17 +88,18 @@ export async function fetchSheetRowImages(
       },
     })
     .on('td', {
-      element() { cell++; current?.cells?.push(''); },
-      text(t) { if (current?.cells && cell >= 0) current.cells[cell] += t.text; },
+      element() { cell++; current?.cells.push(''); },
+      text(t) { if (current && cell >= 0) current.cells[cell] += t.text; },
     })
     .on('td br', {
-      element() { if (current?.cells && cell >= 0) current.cells[cell] += '\n'; },
+      element() { if (current && cell >= 0) current.cells[cell] += '\n'; },
     })
     .on('td img', {
       element(el) {
-        const src = el.getAttribute('src') ?? '';
-        if (current && /^https:\/\/[^/]*google[^/]*\//.test(src)) {
-          current.images.push(sheetImageUrl(decodeEntities(src), width));
+        const m = decodeEntities(el.getAttribute('src') ?? '')
+          .match(/^https:\/\/docs\.google\.com\/sheets-images-rt\/([A-Za-z0-9_-]+)/);
+        if (current && m) {
+          current.images.push(m[1]);
           current.imageCells.push(cell);
         }
       },
@@ -80,10 +108,39 @@ export async function fetchSheetRowImages(
   // Drain the transformed stream; the handlers above do the work.
   await rewriter.transform(res).arrayBuffer();
 
-  // Only keep rows that carry something worth joining.
-  for (const [n, row] of rows) {
-    if (row.cells) row.cells = row.cells.map(c => decodeEntities(c).trim());
-    if (!row.images.length && !opts.withText) rows.delete(n);
+  const tokens: Record<string, string> = {};
+  for (const row of rows.values()) {
+    row.cells = row.cells.map(c => decodeEntities(c).trim());
+    if (!row.images.length) continue;
+    const fp = fingerprint(row.cells.join('\u0001'));
+    // Replace each token with its stable key.
+    row.images = row.images.map((token, i) => {
+      const key = `${fp}-${row.imageCells[i]}`;
+      tokens[key] = token;
+      return key;
+    });
+  }
+  await caches.default.put(tokenMapKey(sheetId, gid), new Response(JSON.stringify(tokens), {
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${TOKEN_MAP_TTL}` },
+  }));
+  return { rows, tokens };
+}
+
+export async function fetchSheetRowImages(
+  sheetId: string,
+  gid: string,
+  opts: { withText?: boolean; width?: number } = {},
+): Promise<Map<number, HtmlviewRow>> {
+  const { rows: raw } = await scrapeSheetView(sheetId, gid);
+  const width = opts.width ?? 1000;
+  const rows = new Map<number, HtmlviewRow>();
+  for (const [n, row] of raw) {
+    if (!row.images.length && !opts.withText) continue;
+    rows.set(n, {
+      images: row.images.map(key => sheetImageUrl(sheetId, gid, key, width)),
+      imageCells: row.imageCells,
+      cells: opts.withText ? row.cells : undefined,
+    });
   }
   return rows;
 }
