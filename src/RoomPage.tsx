@@ -252,7 +252,7 @@ export function RoomPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col pb-32" style={{ ['--theme-color' as any]: ROOM_ACCENT }}>
-      <div className="sticky top-0 z-20 bg-black/90 backdrop-blur border-b border-white/10">
+      <div className="sticky top-[env(safe-area-inset-top)] z-20 bg-black/90 backdrop-blur border-b border-white/10">
         <div className="flex items-center gap-3 px-4 md:px-8 py-3">
           <button onClick={() => navigate('/rooms')} className="flex items-center gap-1.5 text-white/60 hover:text-white text-sm cursor-pointer" title="All rooms">
             <Home className="w-4 h-4" />

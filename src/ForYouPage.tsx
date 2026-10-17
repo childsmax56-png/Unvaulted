@@ -253,7 +253,7 @@ export function ForYouPage() {
 
 function TopBar({ onHome, onRefresh, refreshable }: { onHome: () => void; onRefresh: () => void; refreshable: boolean }) {
   return (
-    <div className="flex items-center gap-3 px-4 md:px-8 py-4">
+    <div className="flex items-center gap-3 px-4 md:px-8 py-4" style={{ paddingTop: 'max(1rem, calc(env(safe-area-inset-top) + 0.5rem))' }}>
       <button onClick={onHome} className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm cursor-pointer transition-colors" title="Home">
         <Home className="w-4 h-4" /> <span className="hidden sm:inline">Home</span>
       </button>

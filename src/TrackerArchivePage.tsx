@@ -152,7 +152,7 @@ export function TrackerArchivePage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col pb-32">
-      <div className="sticky top-0 z-20 bg-black/90 backdrop-blur border-b border-white/10">
+      <div className="sticky top-[env(safe-area-inset-top)] z-20 bg-black/90 backdrop-blur border-b border-white/10">
         <div className="flex items-center gap-3 px-4 md:px-8 py-4">
           <button onClick={() => navigate('/')} className="flex items-center gap-1.5 text-white/60 hover:text-white text-sm cursor-pointer transition-colors" title="Home">
             <Home className="w-4 h-4" /> <span className="hidden sm:inline">Home</span>

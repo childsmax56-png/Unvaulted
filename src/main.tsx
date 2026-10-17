@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useState } from 'react';
+import { StrictMode, useEffect, useState, type ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useParams, Navigate, useLocation } from 'react-router-dom';
 import App from './App.tsx';
@@ -139,6 +139,20 @@ function ArtistRoute() {
   );
 }
 
+// Standalone pages (no tracker shell) don't reserve space for the iOS status
+// bar, so in the installed PWA (black-translucent status bar + viewport-fit=cover)
+// their headers rendered underneath the clock/notch. Pad them down by the safe
+// area and paint a solid strip behind the status bar so scrolled content
+// doesn't show through it.
+function SafeTop({ children }: { children: ReactNode }) {
+  return (
+    <div style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+      <div aria-hidden style={{ position: 'fixed', top: 0, left: 0, right: 0, height: 'env(safe-area-inset-top)', background: '#000', zIndex: 9000, pointerEvents: 'none' }} />
+      {children}
+    </div>
+  );
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <DownloadManagerProvider>
@@ -150,27 +164,27 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/my-tracker" element={<SettingsProvider><MyTrackerPage /></SettingsProvider>} />
           <Route path="/guess" element={<SnippetGamePage />} />
           <Route path="/yeditsgold" element={<SettingsProvider><YEditsGoldPage /></SettingsProvider>} />
-          <Route path="/listening" element={<SettingsProvider><ListeningStatsPage /></SettingsProvider>} />
+          <Route path="/listening" element={<SafeTop><SettingsProvider><ListeningStatsPage /></SettingsProvider></SafeTop>} />
           <Route path="/foryou" element={<SettingsProvider><ForYouPage /></SettingsProvider>} />
-          <Route path="/tierlist" element={<SettingsProvider><TierListPage /></SettingsProvider>} />
+          <Route path="/tierlist" element={<SafeTop><SettingsProvider><TierListPage /></SettingsProvider></SafeTop>} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/download" element={<DownloadPage />} />
-          <Route path="/community" element={<SettingsProvider><CommunityPage /></SettingsProvider>} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/u/:username" element={<SettingsProvider><ProfilePage /></SettingsProvider>} />
-          <Route path="/playlists" element={<SettingsProvider><PlaylistsPage /></SettingsProvider>} />
-          <Route path="/producers" element={<SettingsProvider><ProducersPage /></SettingsProvider>} />
-          <Route path="/producers/:key" element={<SettingsProvider><ProducersPage /></SettingsProvider>} />
-          <Route path="/archive" element={<TrackerArchivePage />} />
-          <Route path="/archive/:tab" element={<TrackerArchivePage />} />
-          <Route path="/changes" element={<ChangesPage />} />
-          <Route path="/changes/:slug" element={<ChangesPage />} />
-          <Route path="/alerts" element={<AlertsPage />} />
-          <Route path="/rooms" element={<RoomsPage />} />
-          <Route path="/rooms/:code" element={<RoomPage />} />
-          <Route path="/create-tracker" element={<SettingsProvider><CreateTrackerPage /></SettingsProvider>} />
-          <Route path="/create-tracker/:id" element={<SettingsProvider><CreateTrackerPage /></SettingsProvider>} />
+          <Route path="/community" element={<SafeTop><SettingsProvider><CommunityPage /></SettingsProvider></SafeTop>} />
+          <Route path="/admin" element={<SafeTop><AdminPage /></SafeTop>} />
+          <Route path="/u/:username" element={<SafeTop><SettingsProvider><ProfilePage /></SettingsProvider></SafeTop>} />
+          <Route path="/playlists" element={<SafeTop><SettingsProvider><PlaylistsPage /></SettingsProvider></SafeTop>} />
+          <Route path="/producers" element={<SafeTop><SettingsProvider><ProducersPage /></SettingsProvider></SafeTop>} />
+          <Route path="/producers/:key" element={<SafeTop><SettingsProvider><ProducersPage /></SettingsProvider></SafeTop>} />
+          <Route path="/archive" element={<SafeTop><TrackerArchivePage /></SafeTop>} />
+          <Route path="/archive/:tab" element={<SafeTop><TrackerArchivePage /></SafeTop>} />
+          <Route path="/changes" element={<SafeTop><ChangesPage /></SafeTop>} />
+          <Route path="/changes/:slug" element={<SafeTop><ChangesPage /></SafeTop>} />
+          <Route path="/alerts" element={<SafeTop><AlertsPage /></SafeTop>} />
+          <Route path="/rooms" element={<SafeTop><RoomsPage /></SafeTop>} />
+          <Route path="/rooms/:code" element={<SafeTop><RoomPage /></SafeTop>} />
+          <Route path="/create-tracker" element={<SafeTop><SettingsProvider><CreateTrackerPage /></SettingsProvider></SafeTop>} />
+          <Route path="/create-tracker/:id" element={<SafeTop><SettingsProvider><CreateTrackerPage /></SettingsProvider></SafeTop>} />
           <Route path="/:artist/*" element={<ArtistRoute />} />
         </Routes>
         <GlobalPlayerMount />

@@ -115,7 +115,7 @@ function toSong(row: CreditedSong): Song {
 function TopBar({ title, back }: { title: string; back?: () => void }) {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center gap-3 px-4 md:px-8 py-4 border-b border-white/10 shrink-0 sticky top-0 bg-black/90 backdrop-blur z-20">
+    <div className="flex items-center gap-3 px-4 md:px-8 py-4 border-b border-white/10 shrink-0 sticky top-[env(safe-area-inset-top)] bg-black/90 backdrop-blur z-20">
       <button onClick={() => navigate('/')} className="flex items-center gap-1.5 text-white/60 hover:text-white text-sm cursor-pointer transition-colors" title="Home">
         <Home className="w-4 h-4" /> <span className="hidden sm:inline">Home</span>
       </button>
