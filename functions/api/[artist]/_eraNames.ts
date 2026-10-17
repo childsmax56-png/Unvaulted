@@ -75,6 +75,9 @@ export const ERA_NAME_MAP: Record<string, string> = {
   // slimegold — CSV uses special characters / different era names
   'Hy!£UN35 [V3]': 'HiTunes [V3]',
   'Collaboration with Juice WRLD': 'Slime WRLD',
+  // uzigold — the live sheet renamed/de-accented these eras
+  'Delta Pink [V1]': 'Pink Tape [V1]',
+  'Super geeky': 'Super gëëky',
 };
 
 export function mapEraName(name: string): string {

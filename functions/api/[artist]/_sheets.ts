@@ -30,28 +30,85 @@ interface SheetSource {
 // (some trackers merge links from a separate source into their committed CSV and the
 // live sheet stores them differently — those must stay committed-CSV-only).
 const SHEET_SOURCES: Record<string, SheetSource> = {
-  // Art-only entries: these trackers' other tabs stay on their committed CSVs
-  // (links merged from separate sources), but the Art tab reads live — its
-  // in-cell images are filled from the htmlview (see _htmlview.ts).
+  // Download-disabled / label-link sheets read through the Sheets API (apiTitles),
+  // enrolled per tab only where the live links match or beat the committed CSV.
+  // Held back (committed CSV): jojigold unreleased (Track/Links layout a.ts can't
+  // parse), juicegold unreleased/released/recent + kengold unreleased/released/
+  // recent/stems (the committed links are merged pixeldrain/lastshare copies; the
+  // sheet has froste/exoshare links the player can't stream).
   jojigold: {
     sheetId: '1FPlWbXnx94y5FODJ2qniLf0BzViNSAmj6Xdfw1ZNwQ4',
-    gids: { art: '1419046321' },
+    gids: {
+      released: '108045339',
+      recent: '583378522',
+      stems: '1821222349',
+      misc: '1199844386',
+      'music-videos': '1271385780',
+      art: '1419046321',
+    },
+    apiTitles: {
+      '108045339': 'Released',
+      '583378522': '📆 Recent',
+      '1821222349': '🌱 Stems',
+      '1199844386': '🌸 Misc',
+      '1271385780': 'Music Videos [WIP]',
+      '1419046321': 'Art [WIP]',
+    },
   },
-  // juicegold/kengold/uzigold: viewer downloads disabled (export 401) → Sheets API.
   juicegold: {
     sheetId: '1tD3ytt5wPx4zfcefXi5ATeYhIiDaugWjMS46nZrP568',
-    gids: { art: '973925715' },
-    apiTitles: { '973925715': 'Art' },
+    gids: {
+      stems: '197907807',
+      misc: '563585202',
+      fakes: '127937350',
+      art: '973925715',
+    },
+    apiTitles: {
+      '197907807': 'Sessions & Stems - TBD',
+      '563585202': 'Misc',
+      '127937350': 'Fakes',
+      '973925715': 'Art',
+    },
   },
   kengold: {
     sheetId: '1OARID98xCqRaBr8gyQCvI3aD4jKQDGgtedyRaiP_pyo',
-    gids: { art: '1908257498' },
-    apiTitles: { '1908257498': 'Art' },
+    gids: {
+      misc: '1210294036',
+      art: '1908257498',
+    },
+    apiTitles: {
+      '1210294036': 'Misc.',
+      '1908257498': 'Art',
+    },
   },
   uzigold: {
     sheetId: '1zqqdIds1iwnx4lh29iF1IlraeuqfGhxH9qLNlWOnryo',
-    gids: { art: '135971633' },
-    apiTitles: { '135971633': '🖼️ Art' },
+    gids: {
+      unreleased: '1160569231',
+      released: '927483225',
+      recent: '1339726772',
+      stems: '12383708',
+      misc: '2052374717',
+      art: '135971633',
+    },
+    apiTitles: {
+      '1160569231': '💿 Unreleased',
+      '927483225': '📻 Released',
+      '1339726772': '🆕 Recent',
+      '12383708': '🎙️ Stems',
+      '2052374717': '📚 Misc (WIP)',
+      '135971633': '🖼️ Art',
+    },
+  },
+  // rihannagold's sheet is exportable again (its htmlview used to 410).
+  rihannagold: {
+    sheetId: '1HMqjw55sCPUGyI_UBc-JcO881FHzUTX08NvQY9oa61k',
+    gids: {
+      unreleased: '415494178',
+      released: '285404113',
+      recent: '1342576935',
+      stems: '196376179',
+    },
   },
   // frankgold: its Google Sheet is gone (export HTTP 410) — served from the committed
   // CSVs scraped from franktracker.net's static mirror, so no live source.
@@ -511,6 +568,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   icecubegold: {
     sheetId: '1bsNrVejh4H27uafX6jpnllbAuiVqRnDUMegKdTYAFQA',
     gids: {
+      recent: '777399216',
       unreleased: '1360798347',
       released: '181755066',
       art: '480621125',
@@ -612,6 +670,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   daftpunkgold: {
     sheetId: '1ua9PA27-_LdSddNcU5i4PsvrzI7NMLalsOsXlDTsjuw',
     gids: {
+      fakes: '259166354',
       unreleased: '0',
     },
   },
