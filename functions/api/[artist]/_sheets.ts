@@ -1,7 +1,8 @@
 import { getCommunityTrackerCsv } from './_community';
-import { fetchSheetApiCsv, hasSheetApiSource } from './_sheetsApi';
-import { fetchApiRows, fetchImportedCsv, hasImportedSource } from './_importedSheets';
+import { fetchSheetApiCsv, getSheetApiTabRef, hasSheetApiSource } from './_sheetsApi';
+import { fetchApiRows, fetchImportedCsv, getImportedTabRef, hasImportedSource } from './_importedSheets';
 import { splitCSVRows, joinCSVRows } from './_csvParser';
+import { fetchSheetRowImages, fillRowsWithImages } from './_htmlview';
 
 // Live Google Sheet fallback for trackers that don't ship committed CSVs.
 //
@@ -814,11 +815,17 @@ function canonicalizeLiveHeaders(tab: string, csv: string): string {
   if (h === -1) h = 0;
   const header = rows[h];
   if (!header) return csv;
+  // Some sheets leave the era column's header blank (yzygold Art: " ") — the
+  // views group rows by row.Era, so name it.
+  let changed = false;
+  if (!header[0]?.trim() && header.some(c => /^\s*name\b/i.test(c)) && !header.some(c => c.trim() === 'Era')) {
+    header[0] = 'Era';
+    changed = true;
+  }
   // Collapse "Leak\nDate" → "Leak Date" and drop a trailing hint like "Link(s)\n(Soon)".
   const clean = (c: string) => c.replace(/\s+/g, ' ').trim().replace(/\s+\([^)]*\)$/, '');
   const present = new Set(header.map(clean));
   const tabAliases = HEADER_ALIASES_TAB[tab] ?? {};
-  let changed = false;
   rows[h] = header.map(cell => {
     const c = clean(cell);
     if (/^(Name|Notes)\b/.test(cell.trim())) return cell;
@@ -832,6 +839,15 @@ function canonicalizeLiveHeaders(tab: string, csv: string): string {
     return target;
   });
   return changed ? joinCSVRows(rows) : csv;
+}
+
+// The live sheet + gid backing a tracker tab, across all three live-source
+// registries (plain export, Sheets-API column specs, bigupdate importer). Used by
+// era-meta to read the Unreleased tab's in-cell era covers.
+export function getLiveTabRef(artist: string, tab: string): { sheetId: string; gid: string } | null {
+  const src = SHEET_SOURCES[artist];
+  if (src?.gids[tab]) return { sheetId: src.sheetId, gid: src.gids[tab] };
+  return getImportedTabRef(artist, tab) ?? getSheetApiTabRef(artist, tab);
 }
 
 export type TrackerCsvSource = 'community' | 'sheets-api' | 'live' | 'committed';
@@ -909,7 +925,13 @@ export async function resolveTrackerCsv(
   if (remote) {
     try {
       const apiKey = env?.GOOGLE_SHEETS_API_KEY;
-      const text = await fetchSheetTabCsv(src, src.gids[tab], apiKey);
+      // Art-tab images are pasted in as in-cell images the export drops; read
+      // them from the sheet's htmlview in parallel and fill them back in.
+      const [rawText, images] = await Promise.all([
+        fetchSheetTabCsv(src, src.gids[tab], apiKey),
+        tab === 'art' ? fetchSheetRowImages(src.sheetId, src.gids[tab]).catch(() => null) : null,
+      ]);
+      const text = images ? joinCSVRows(fillRowsWithImages(splitCSVRows(rawText), images)) : rawText;
       const csv = tab === 'unreleased'
         ? await mergeExtraUnreleasedTabs(artist, text, apiKey)
         : canonicalizeLiveHeaders(tab, text);

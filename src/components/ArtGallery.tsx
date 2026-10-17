@@ -46,7 +46,7 @@ const RENDERABLE_DOMAINS = [
 export function isLinkRenderable(link: string | undefined | null): boolean {
   if (!link) return false;
   const lc = link.toLowerCase();
-  if (link.includes('ibb.co') || link.includes('pillows.su/f/')) return true;
+  if (link.includes('ibb.co') || link.includes('pillows.su/f/') || link.startsWith('/api/sheet-image?')) return true;
   if (lc.endsWith('.png') || lc.endsWith('.jpg') || lc.endsWith('.jpeg') || lc.endsWith('.gif') || lc.endsWith('.webp')) return true;
   try {
     const { hostname } = new URL(link);

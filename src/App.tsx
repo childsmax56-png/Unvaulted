@@ -19,6 +19,7 @@ import { handleShareSilent } from './components/EraDetail';
 import { TrackerData, Era, Song, SearchFilters } from './types';
 import { ContributorContext } from './ContributorContext';
 import { ContributorView } from './components/ContributorView';
+import { applyLiveEras, loadLiveEraArtwork } from './liveEraMeta';
 import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, pixeldrainProxyBase } from './utils';
 import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName } from './lastfm';
 import { logListen, isListeningLoggedIn } from './listening';
@@ -1040,6 +1041,14 @@ export default function App() {
             }
           });
           json[category] = rebuilt;
+        });
+
+        // Register eras the sheet has but the bundled config doesn't, and take the
+        // sheet's era descriptions (see liveEraMeta.ts).
+        applyLiveEras(json.eras);
+        // Era covers come from a heavier endpoint — swap them in once loaded.
+        loadLiveEraArtwork(ARTIST_SLUG, json.eras).then(changed => {
+          if (changed) setData(prev => (prev ? { ...prev } : prev));
         });
 
         const mykData = mykRes.data;

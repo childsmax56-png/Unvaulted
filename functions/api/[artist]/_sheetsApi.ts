@@ -156,6 +156,12 @@ const API_SOURCES: Record<string, ApiSource> = {
   },
 };
 
+export function getSheetApiTabRef(artist: string, tab: string): { sheetId: string; gid: string } | null {
+  const src = API_SOURCES[artist];
+  const spec = src?.tabs[tab];
+  return spec ? { sheetId: src.sheetId, gid: spec.gid } : null;
+}
+
 export function hasSheetApiSource(artist: string, tab: string): boolean {
   return !!API_SOURCES[artist]?.tabs[tab];
 }

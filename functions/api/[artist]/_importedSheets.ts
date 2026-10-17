@@ -14,6 +14,7 @@
 // Keep the transforms (and ERA_FIXES) in step with scripts/build-bigupdate-csvs.py.
 
 import { splitCSVRows, joinCSVRows } from './_csvParser';
+import { fetchSheetRowImages, fillRowsWithImages } from './_htmlview';
 
 type Kind = 'unreleased' | 'recent' | 'released' | 'stems' | 'fakes' | 'passthrough' | 'recent-from-unreleased';
 
@@ -254,6 +255,12 @@ const ERA_FIXES: Record<string, {
 
 export function hasImportedSource(artist: string, tab: string): boolean {
   return !!IMPORTED_SOURCES[artist]?.tabs[tab];
+}
+
+export function getImportedTabRef(artist: string, tab: string): { sheetId: string; gid: string } | null {
+  const src = IMPORTED_SOURCES[artist];
+  const spec = src?.tabs[tab];
+  return spec ? { sheetId: src.sheetId, gid: spec.gid } : null;
 }
 
 // ------------------------------------------------------------------ helpers --
@@ -723,7 +730,11 @@ export async function fetchImportedCsv(artist: string, tab: string, apiKey: stri
     return rows;
   };
   // all-or-nothing: a missing member tab would silently drop that member's songs
+  // Art tabs: in-cell images (dropped by the export/API) come from the htmlview.
+  const imagesP = tab === 'art' ? fetchSheetRowImages(src.sheetId, spec.gid).catch(() => null) : null;
   const [rows, ...memberRows] = await Promise.all([spec, ...(spec.members ?? [])].map(fetchRaw));
+  const images = await imagesP;
+  if (images) fillRowsWithImages(rows, images);
   const members = (spec.members ?? []).map((mb, i) => [mb.member, memberRows[i]] as [string, Row[]]);
   const csv = normalizeImportedTab(artist, spec.kind, rows, members);
   // A structural change in the sheet that leaves (almost) nothing parseable
