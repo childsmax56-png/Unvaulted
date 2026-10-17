@@ -104,10 +104,9 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
     gids: {
       unreleased: '755606328',
       recent: '1786784552',
-      // art intentionally omitted: most Art-tab cover art is pasted in as embedded
-      // images (drawings), which the CSV export drops — 140+ of ~207 rows would come
-      // back blank. The committed public/drizzygold/data/art.csv has those images
-      // extracted to local files (scripts/build-drizzygold-art.py); serve that instead.
+      // Art-tab cover art is mostly in-cell images the CSV export drops; the art
+      // path fills them back in from the sheet's htmlview (see _htmlview.ts).
+      art: '1704963883',
       stems: '271384102',
       fakes: '1413935661',
       'music-videos': '1645905193',
