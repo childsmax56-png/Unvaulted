@@ -659,7 +659,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         animate={{ opacity: 1, filter: 'blur(0px)' }}
         exit={{ opacity: 0, filter: 'blur(10px)' }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto pb-64"
+        className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto overflow-x-hidden pb-64"
       >
         <div
           className={`p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5${!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? ' bg-center md:bg-right' : ''}`}
@@ -686,14 +686,14 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             )}
           </div>
 
-          <div className="flex flex-col justify-end h-full py-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          <div className="flex flex-col justify-end h-full py-2 w-full min-w-0 md:w-auto md:flex-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             <div className="flex items-center gap-4 mb-3 flex-wrap">
-              <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap">
-                <div className="truncate">{formatTextWithTags(era.name)}</div>
+              <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap min-w-0 max-w-full">
+                <div className="truncate max-w-full">{formatTextWithTags(era.name)}</div>
                 {(ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]) && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]}</div>}
               </h1>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => { setIsSelectMode(m => !m); setSelectedKeys(new Set()); }}
                   className={`flex items-center gap-1.5 px-3 h-10 rounded-full text-xs font-bold transition-colors cursor-pointer ${isSelectMode ? 'bg-[var(--theme-color)] text-black' : 'bg-white/5 hover:bg-white/10 text-white/50 hover:text-white'}`}
@@ -739,7 +739,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                       title="Download Final Album"
                     >
                       {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                      <span className="text-[10px] font-bold tracking-wider uppercase">Download Final Album</span>
+                      <span className="text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">Download Final Album</span>
                     </button>
                   ) : showFirstOnly ? (
                     <button
@@ -749,7 +749,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                       title="Download First Versions"
                     >
                       {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                      <span className="text-[10px] font-bold tracking-wider uppercase">Download First Versions</span>
+                      <span className="text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">Download First Versions</span>
                     </button>
                   ) : searchQuery || filters.tags.length > 0 || filters.qualities.length > 0 || filters.availableLengths.length > 0 || filters.playableOnly || filters.hasClips !== null || filters.hasRemixes !== null || filters.hasSamples !== null ? (
                     <button
@@ -759,7 +759,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                       title="Download Filtered Songs"
                     >
                       {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
-                      <span className="text-[10px] font-bold tracking-wider uppercase">Download Filtered Songs</span>
+                      <span className="text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">Download Filtered Songs</span>
                     </button>
                   ) : (
                     <button

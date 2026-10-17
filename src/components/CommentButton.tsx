@@ -36,7 +36,7 @@ export function CommentButton({ tracker, entryKey, entryLabel, entryType, isCurr
           } ${className || ''}`}
         >
           <MessageCircle className="w-4 h-4" />
-          <span className="text-[10px] font-bold tracking-wider uppercase">
+          <span className="text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">
             {hasCount ? `${count > 99 ? '99+' : count} Comment${count === 1 ? '' : 's'}` : 'Comment'}
           </span>
         </button>

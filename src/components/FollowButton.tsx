@@ -41,7 +41,7 @@ export function FollowButton({ slug, scope, target = '', label, variant = 'icon'
           } ${className || ''}`}
         >
           <Icon className="w-4 h-4" />
-          <span className="text-[10px] font-bold tracking-wider uppercase">{following ? 'Following' : 'Alerts'}</span>
+          <span className="text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">{following ? 'Following' : 'Alerts'}</span>
         </button>
       ) : (
         <button
