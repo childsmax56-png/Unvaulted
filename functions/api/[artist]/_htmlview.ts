@@ -151,7 +151,7 @@ export async function fetchSheetRowImages(
 // appended when the tab has none (e.g. yzygold's Art tab is images-only).
 export function fillRowsWithImages(rows: string[][], images: Map<number, HtmlviewRow>): string[][] {
   if (!images.size) return rows;
-  const h = rows.findIndex(r => r.some(c => /^\s*name\b/i.test(c)) && r.some(c => /^\s*(image|link|art|cover)/i.test(c)));
+  const h = rows.findIndex(r => r.some(c => /^\s*(name|title)\b/i.test(c)) && r.some(c => /^\s*(image|link|art|cover)/i.test(c)));
   if (h === -1) return rows;
   const header = rows[h];
   const clean = (c: string) => c.replace(/\s+/g, ' ').trim();

@@ -30,6 +30,29 @@ interface SheetSource {
 // (some trackers merge links from a separate source into their committed CSV and the
 // live sheet stores them differently — those must stay committed-CSV-only).
 const SHEET_SOURCES: Record<string, SheetSource> = {
+  // Art-only entries: these trackers' other tabs stay on their committed CSVs
+  // (links merged from separate sources), but the Art tab reads live — its
+  // in-cell images are filled from the htmlview (see _htmlview.ts).
+  jojigold: {
+    sheetId: '1FPlWbXnx94y5FODJ2qniLf0BzViNSAmj6Xdfw1ZNwQ4',
+    gids: { art: '1419046321' },
+  },
+  // juicegold/kengold/uzigold: viewer downloads disabled (export 401) → Sheets API.
+  juicegold: {
+    sheetId: '1tD3ytt5wPx4zfcefXi5ATeYhIiDaugWjMS46nZrP568',
+    gids: { art: '973925715' },
+    apiTitles: { '973925715': 'Art' },
+  },
+  kengold: {
+    sheetId: '1OARID98xCqRaBr8gyQCvI3aD4jKQDGgtedyRaiP_pyo',
+    gids: { art: '1908257498' },
+    apiTitles: { '1908257498': 'Art' },
+  },
+  uzigold: {
+    sheetId: '1zqqdIds1iwnx4lh29iF1IlraeuqfGhxH9qLNlWOnryo',
+    gids: { art: '135971633' },
+    apiTitles: { '135971633': '🖼️ Art' },
+  },
   // frankgold: its Google Sheet is gone (export HTTP 410) — served from the committed
   // CSVs scraped from franktracker.net's static mirror, so no live source.
   yzygold: {
@@ -140,6 +163,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   mfgold: {
     sheetId: '1zEbzMVXFXzuY4wLdPvdQA23lb3RwCSOKqWtHsllXNk8',
     gids: {
+      art: '1434604144',
       unreleased: '1493533867',
       released: '1686511551',
       recent: '1476766908',
@@ -207,6 +231,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   wolfgold: {
     sheetId: '19GJTNp7PxK1OtyVBmGelZSMm5i8Fy82EGtcFdIkBpsY',
     gids: {
+      art: '538700671',
       unreleased: '1246511510',
       released: '137554735',
       // recent intentionally omitted: the Recent tab is served from the committed
@@ -301,6 +326,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   macgold: {
     sheetId: '17TycQCSpIm-6DyWId4ve8fVaM7Ewg3lgV1DDNRwauh0',
     gids: {
+      art: '1372617490',
       unreleased: '1466156873',
       released: '206286767',
       recent: '336463588',
@@ -827,6 +853,14 @@ function canonicalizeLiveHeaders(tab: string, csv: string): string {
   const tabAliases = HEADER_ALIASES_TAB[tab] ?? {};
   rows[h] = header.map(cell => {
     const c = clean(cell);
+    // ArtGallery reads row.Name / row.Notes exactly (no hint-suffix matching like
+    // the music views), so strip a "Notes\nLinks are being re-uped" hint there.
+    const hinted = cell.trim().match(/^(Name|Notes)\s*\n/);
+    if (tab === 'art' && hinted && !present.has(hinted[1])) {
+      present.add(hinted[1]);
+      changed = true;
+      return hinted[1];
+    }
     if (/^(Name|Notes)\b/.test(cell.trim())) return cell;
     const target = tabAliases[c] ?? HEADER_ALIASES_ALL[c] ?? c;
     if (target === cell) return cell;

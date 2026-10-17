@@ -114,7 +114,28 @@ export function ArtImage({ url, alt, contain = false }: { url: string; alt: stri
   );
 }
 
-export function ArtGallery({ eras, artData, searchQuery, filters }: ArtGalleryProps) {
+const normEra = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]/g, '');
+
+// Live Art tabs name eras the sheet's own way ("How High: The Mixtape", "1017 vs.
+// The World") while the era grid uses the config's names, and the gallery groups by
+// exact name — so resolve each art row's Era to an era in `eras`: exact, then
+// case/punctuation-insensitive, then the longest era name it starts with.
+function matchArtEras(artData: ArtEntry[], eras: Era[]): ArtEntry[] {
+  const exact = new Set(eras.map(e => e.name));
+  const byNorm = new Map(eras.map(e => [normEra(e.name), e.name]));
+  const byLength = [...eras].sort((a, b) => b.name.length - a.name.length);
+  return artData.map(item => {
+    const raw = (item.Era ?? '').trim();
+    if (exact.has(item.Era)) return item;
+    const match = (exact.has(raw) ? raw : undefined)
+      ?? byNorm.get(normEra(raw))
+      ?? byLength.find(e => normEra(e.name).length >= 4 && normEra(raw).startsWith(normEra(e.name)))?.name;
+    return match ? { ...item, Era: match } : item;
+  });
+}
+
+export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: ArtGalleryProps) {
+  const artData = useMemo(() => matchArtEras(rawArtData, eras), [rawArtData, eras]);
   const { settings } = useSettings();
   const [selectedEra, setSelectedEra] = useState<Era | null>(null);
   const [zoomedArt, setZoomedArt] = useState<ArtEntry | null>(null);

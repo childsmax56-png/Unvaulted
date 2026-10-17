@@ -16,7 +16,8 @@ export function splitCSVRows(text: string): string[][] {
         i++;
       } else if (ch === '"') {
         inQuotes = false;
-      } else {
+      } else if (ch !== '\r' || next !== '\n') {
+        // multi-line cells in some exports use \r\n — keep just the \n
         field += ch;
       }
     } else {
