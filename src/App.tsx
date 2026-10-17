@@ -819,7 +819,10 @@ export default function App() {
       headerKeys.find(k => labels.includes(k.split('\n')[0].trim().toLowerCase()));
     const nameKey = findKey('name') || headerKeys.find(k => k.trim().startsWith('Name')) || 'Name';
     const notesKey = findKey('notes') || headerKeys.find(k => k.trim().startsWith('Notes')) || 'Notes';
-    const linkKey = findKey('link(s)', 'links', 'link') || 'Link(s)';
+    // Some sheets name these columns differently (aapgold: "Download / Link(s)" + "Portion",
+    // slimegold: "Source" + "Available Type", dongold: "Main Link").
+    const linkKey = findKey('link(s)', 'links', 'link', 'download / link(s)', 'main link', 'source') || 'Link(s)';
+    const availKey = findKey('available length', 'available type', 'portion') || 'Available Length';
 
     const avLenToCategory = (avLen: string, categories: Record<string, Song[]>): string => {
       const al = avLen.toLowerCase().trim();
@@ -879,6 +882,10 @@ export default function App() {
       let rawUrl = (item[linkKey] || '').trim();
       const linkMatch = rawUrl.match(/\]\((.*?)\)/);
       if (linkMatch?.[1]) rawUrl = linkMatch[1];
+      // Multi-line link cells can mix real URLs with notes ("https://…\nOG File Link Needed");
+      // keep just the URLs so the note doesn't mark a playable song as unavailable.
+      const cellLinks = rawUrl.split('\n').map((l: string) => l.trim()).filter((l: string) => /^https?:\/\//i.test(l));
+      if (cellLinks.length > 0) rawUrl = cellLinks[0];
 
       const newSong: Song = {
         name: songName,
@@ -887,10 +894,10 @@ export default function App() {
         track_length: item['Track Length'] || '',
         leak_date: item['Leak\nDate'] || item['Leak Date'] || '',
         file_date: item['File\nDate'] || item['File Date'] || '',
-        available_length: item['Available Length'] || '',
+        available_length: item[availKey] || '',
         quality: item.Quality || '',
         url: rawUrl,
-        urls: rawUrl ? [rawUrl] : [],
+        urls: cellLinks.length > 0 ? cellLinks : rawUrl ? [rawUrl] : [],
         subera: currentSubera,
       };
 
@@ -946,7 +953,7 @@ export default function App() {
       }
       if (replaced) return;
 
-      const catKey = avLenToCategory(item['Available Length'] || '', categories);
+      const catKey = avLenToCategory(item[availKey] || '', categories);
       if (catKey) {
         if (!categories[catKey]) categories[catKey] = [];
         (categories[catKey] as Song[]).push(newSong);
