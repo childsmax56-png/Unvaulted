@@ -7,6 +7,7 @@ import { Song, Era } from '../types';
 import { ARTIST_LIST } from '../artists/registry';
 import { LABEL_GROUPS, LABEL_NAME, ALBUMS as LABEL_ALBUMS } from '../labelContent';
 import { Img, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { NoteButton } from './NoteButton';
 import { useDownloadManager } from '../DownloadManagerContext';
 
 interface VGUser { id: string; username: string; email: string; }
@@ -1554,7 +1555,10 @@ export function YEditsView({ searchQuery, onPlaySong, currentSong, isPlaying, cl
                           {displayName}
                         </div>
                         {songMeta?.notes && (
-                          <div className="text-xs text-white/30 truncate">{songMeta.notes}</div>
+                          <div className="flex items-center gap-1">
+                            <div className="min-w-0 flex-1 text-xs text-white/30 truncate">{songMeta.notes}</div>
+                            <NoteButton note={songMeta.notes} title={displayName} />
+                          </div>
                         )}
                       </div>
 

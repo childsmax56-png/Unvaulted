@@ -18,6 +18,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { NoteButton } from './NoteButton';
 import { FollowButton } from './FollowButton';
 import { ReportLinkButton } from './ReportLinkButton';
 import { useDeadLinks, isDeadLink } from '../linkStatus';
@@ -1066,7 +1067,12 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                             const { ogFilename, note } = parseNoteDescription(song.description);
                             return (
                               <div className="mt-1">
-                                {note && <div className={`text-xs break-words whitespace-normal leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(note)}</div>}
+                                {note && (
+                                  <div className="flex items-start gap-1">
+                                    <div className={`min-w-0 flex-1 text-xs break-words whitespace-normal leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(note)}</div>
+                                    <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} className="-mt-0.5" />
+                                  </div>
+                                )}
                                 {ogFilename && <div className={`text-[10px] font-mono mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/25' : 'text-white/25'}`}>OG: {ogFilename}</div>}
                               </div>
                             );

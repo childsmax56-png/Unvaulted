@@ -12,6 +12,7 @@ import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { findMvsForSong, findRemixesForSong, findSamplesForSong } from './EraDetail';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 import { isDirectlyPlayableAudio } from '../player/audioStore';
@@ -303,8 +304,11 @@ function StemRow({ song, index, entryKey, isCurrentlyPlaying, isPlaying, isStarr
         </div>
         {song.extra && <SongExtra extra={song.extra} className={`sm:hidden block text-[11px] truncate ${accent ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`} />}
         {description && (
-          <div className={`text-xs mt-0.5 line-clamp-2 sm:line-clamp-1 break-words ${accent ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>
-            {formatTextWithTags(description)}
+          <div className="flex items-start gap-1 mt-0.5">
+            <div className={`min-w-0 flex-1 text-xs line-clamp-2 sm:line-clamp-1 break-words ${accent ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>
+              {formatTextWithTags(description)}
+            </div>
+            <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={accent} className="-mt-0.5" />
           </div>
         )}
         <div className="sm:hidden flex flex-wrap items-center gap-1 mt-1.5 empty:hidden">

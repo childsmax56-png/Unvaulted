@@ -6,6 +6,7 @@ import { Era } from '../types';
 import { createSlug, CUSTOM_IMAGES , Img, relPath, absPath, pixeldrainProxyBase} from '../utils';
 import { useSettings } from '../SettingsContext';
 import { CommentButton } from './CommentButton';
+import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 
@@ -499,7 +500,10 @@ function VideoRow({ entry, miniPlayerMode, activeMiniEntry, onOpenMiniPlayer, on
             )}
           </div>
           {entry.notes && (
-            <p className="text-xs text-white/40 mt-0.5 line-clamp-2">{entry.notes}</p>
+            <div className="flex items-start gap-1 mt-0.5">
+              <p className="min-w-0 flex-1 text-xs text-white/40 line-clamp-2">{entry.notes}</p>
+              <NoteButton note={entry.notes} title={entry.name} className="-mt-0.5" />
+            </div>
           )}
         </div>
 

@@ -12,6 +12,7 @@ import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { findMvsForSong, findRemixesForSong, findSamplesForSong } from './EraDetail';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 
@@ -508,7 +509,12 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         {song.description && (() => {
                           const { note, ogFilename } = parseNoteDescription(song.description);
                           const display = note ? note.split('\n')[0] : ogFilename ? `OG: ${ogFilename}` : null;
-                          return display ? <div className={`flex items-center gap-2 text-xs truncate mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(display)}</div> : null;
+                          return display ? (
+                            <div className="flex items-center gap-1 mt-0.5">
+                              <div className={`min-w-0 flex-1 text-xs truncate ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(display)}</div>
+                              <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} />
+                            </div>
+                          ) : null;
                         })()}
                         {song.file_date && <div className={`text-[10px] mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/30' : 'text-white/30'}`}>Date: {song.file_date}</div>}
                       </div>

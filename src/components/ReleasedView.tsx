@@ -14,6 +14,7 @@ import { CUSTOM_IMAGES, ALBUM_DESCRIPTIONS , Img} from '../utils';
 import { useIsClamped } from '../hooks/useIsClamped';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
 import { CommentButton } from './CommentButton';
+import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 
@@ -372,7 +373,10 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
                       <div className="text-xs text-white/40 truncate mt-0.5">{subName}</div>
                     )}
                     {track.Notes && (
-                      <div className="text-xs text-white/30 line-clamp-1 mt-0.5 italic">{track.Notes}</div>
+                      <div className="flex items-center gap-1 mt-0.5">
+                        <div className="min-w-0 flex-1 text-xs text-white/30 line-clamp-1 italic">{track.Notes}</div>
+                        <NoteButton note={track.Notes} title={mainName} />
+                      </div>
                     )}
                   </div>
 
