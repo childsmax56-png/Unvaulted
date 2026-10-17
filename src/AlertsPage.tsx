@@ -3,14 +3,14 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Home, Bell, BellOff, Loader2, Smartphone, Trash2, Check } from 'lucide-react';
+import { Home, Bell, BellOff, Loader2, Smartphone, Trash2, Check, Inbox as InboxIcon } from 'lucide-react';
 import { SiDiscord } from 'react-icons/si';
 import { getArtistConfig } from './artists/registry';
 import { Img } from './utils';
 import { isLoggedIn } from './comments';
 import {
   fetchNotifications, markAllRead, refreshUnread, useFollows, loadFollows, setFollow,
-  fetchAlertSettings, saveDiscordWebhook, pushSupported, usePushEnabled, enablePush, disablePush,
+  fetchAlertSettings, saveDiscordWebhook, saveExternalDefault, saveTrackerExternal, pushSupported, usePushEnabled, enablePush, disablePush,
   type ChangeItem, type AlertSettings,
 } from './alerts';
 import { ChangeRowItem } from './ChangesPage';
@@ -65,9 +65,37 @@ function Inbox() {
   );
 }
 
+// Per-tracker switch between "push + Discord + inbox" and "inbox only".
+function DeliveryToggle({ external, onChange }: { external: boolean; onChange: (v: boolean) => void }) {
+  const opt = (on: boolean, label: string, Icon: typeof Bell, title: string) => (
+    <button onClick={() => external !== on && onChange(on)} title={title}
+      className={`flex items-center gap-1 px-2 py-1 rounded-full text-[11px] font-semibold transition-colors cursor-pointer ${external === on ? 'bg-white text-black' : 'text-white/50 hover:text-white'}`}>
+      <Icon className="w-3 h-3" /> {label}
+    </button>
+  );
+  return (
+    <div className="ml-auto flex items-center gap-0.5 p-0.5 rounded-full bg-white/5 border border-white/10 shrink-0">
+      {opt(true, 'Phone & Discord', Smartphone, 'Alerts go to push notifications, your Discord webhook and the inbox')}
+      {opt(false, 'Inbox only', InboxIcon, 'Alerts only show up in your UNVAULTED inbox')}
+    </div>
+  );
+}
+
 function Following() {
   const follows = useFollows();
-  useEffect(() => { loadFollows(true); }, []);
+  const [settings, setSettings] = useState<AlertSettings | null>(null);
+  useEffect(() => { loadFollows(true); fetchAlertSettings().then(setSettings); }, []);
+
+  const setTracker = async (slug: string, external: boolean) => {
+    if (!settings) return;
+    const before = settings;
+    // Matching the default needs no override row.
+    const value = external === settings.externalDefault ? null : external;
+    const trackerExternal = { ...settings.trackerExternal };
+    if (value === null) delete trackerExternal[slug]; else trackerExternal[slug] = value;
+    setSettings({ ...settings, trackerExternal });
+    if (!(await saveTrackerExternal(slug, value))) setSettings(before);
+  };
   const bySlug = useMemo(() => {
     const m = new Map<string, typeof follows>();
     for (const f of follows) m.set(f.slug, [...(m.get(f.slug) ?? []), f]);
@@ -85,14 +113,26 @@ function Following() {
   const scopeLabel = { artist: 'Whole tracker', era: 'Era', song: 'Song' } as const;
   return (
     <div className="flex flex-col gap-5">
+      <p className="text-xs text-white/40 px-1">
+        Everything you follow lands in your inbox. Pick which trackers also ping your phone and Discord — the default for
+        trackers you haven’t set is in <span className="text-white/60">Delivery</span>.
+      </p>
       {bySlug.map(([slug, list]) => {
         const cfg = getArtistConfig(slug);
         return (
           <section key={slug}>
-            <Link to={`/changes/${slug}`} className="flex items-center gap-2 mb-1 px-1">
-              <Img src={cfg?.artistPhotoUrl || cfg?.logoUrl || ''} w={48} alt="" className="w-6 h-6 rounded-md object-cover" />
-              <span className="text-sm font-bold">{cfg?.artistLabel || slug}</span>
-            </Link>
+            <div className="flex items-center gap-2 mb-1 px-1">
+              <Link to={`/changes/${slug}`} className="flex items-center gap-2 min-w-0">
+                <Img src={cfg?.artistPhotoUrl || cfg?.logoUrl || ''} w={48} alt="" className="w-6 h-6 rounded-md object-cover" />
+                <span className="text-sm font-bold truncate">{cfg?.artistLabel || slug}</span>
+              </Link>
+              {settings && (
+                <DeliveryToggle
+                  external={settings.trackerExternal[slug] ?? settings.externalDefault}
+                  onChange={(v) => setTracker(slug, v)}
+                />
+              )}
+            </div>
             {list.map((f) => (
               <div key={`${f.scope}|${f.target}`} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5">
                 <span className="text-[10px] uppercase tracking-wider font-bold text-white/35 w-24 shrink-0">{scopeLabel[f.scope]}</span>
@@ -200,6 +240,33 @@ function Delivery() {
                 {hookMsg.ok && <Check className="w-3.5 h-3.5" />}{hookMsg.text}
               </p>
             )}
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+        <div className="flex items-start gap-3">
+          <Bell className="w-5 h-5 text-white/60 mt-0.5 shrink-0" />
+          <div className="flex-1 min-w-0">
+            <div className="font-semibold text-sm">Which trackers ping your phone & Discord</div>
+            <p className="text-xs text-white/45 mt-0.5">
+              Everything always lands in your inbox. Override single trackers in the <span className="text-white/70">Following</span> tab
+              {Object.keys(settings.trackerExternal).length > 0 && ` (${Object.keys(settings.trackerExternal).length} set)`}.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {([[true, 'All trackers'], [false, 'Only ones I pick']] as const).map(([on, label]) => (
+                <button key={label}
+                  onClick={async () => {
+                    if (settings.externalDefault === on) return;
+                    const before = settings;
+                    setSettings({ ...settings, externalDefault: on });
+                    if (!(await saveExternalDefault(on))) setSettings(before);
+                  }}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer transition-colors ${settings.externalDefault === on ? 'bg-white text-black' : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'}`}>
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

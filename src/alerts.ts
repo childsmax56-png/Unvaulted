@@ -147,7 +147,15 @@ export async function fetchChanges(opts: { slug?: string; kinds?: ChangeKind[]; 
 
 // ---- Delivery settings -----------------------------------------------------
 
-export interface AlertSettings { discordWebhook: string | null; pushDevices: number; vapidPublicKey: string | null }
+export interface AlertSettings {
+  discordWebhook: string | null;
+  pushDevices: number;
+  vapidPublicKey: string | null;
+  // Whether trackers without an override also alert via push + Discord.
+  externalDefault: boolean;
+  // Per-tracker overrides: true = push + Discord, false = inbox only.
+  trackerExternal: Record<string, boolean>;
+}
 
 export async function fetchAlertSettings(): Promise<AlertSettings | null> {
   const res = await fetch('/api/alerts/settings', { headers: authHeaders() }).catch(() => null);
@@ -159,6 +167,20 @@ export async function saveDiscordWebhook(url: string | null, test: boolean): Pro
   if (res.ok) return null;
   const d = await res.json().catch(() => ({}));
   return d.error || 'Could not save';
+}
+
+async function postSettings(body: object): Promise<boolean> {
+  const res = await fetch('/api/alerts/settings', { method: 'POST', headers: authHeaders(), body: JSON.stringify(body) }).catch(() => null);
+  return !!res?.ok;
+}
+
+export function saveExternalDefault(on: boolean): Promise<boolean> {
+  return postSettings({ externalDefault: on });
+}
+
+// null clears the override so the tracker follows the default again.
+export function saveTrackerExternal(slug: string, external: boolean | null): Promise<boolean> {
+  return postSettings({ slug, external });
 }
 
 export function pushSupported(): boolean {

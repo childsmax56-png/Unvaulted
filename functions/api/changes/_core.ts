@@ -114,7 +114,20 @@ export async function ensureChangeTables(db: D1Database): Promise<void> {
       )`
     ),
     db.prepare(`CREATE INDEX IF NOT EXISTS idx_alert_push_user ON alert_push_subs(user_id)`),
+    // Per-tracker override of whether alerts also go out as push + Discord
+    // (external = 1) or stay in the in-app inbox only (external = 0).
+    // Trackers without a row follow alert_settings.external_default.
+    db.prepare(
+      `CREATE TABLE IF NOT EXISTS alert_tracker_delivery (
+        user_id TEXT NOT NULL,
+        slug TEXT NOT NULL,
+        external INTEGER NOT NULL,
+        PRIMARY KEY (user_id, slug)
+      )`
+    ),
   ]);
+  // Added after alert_settings shipped; ADD COLUMN throws once it exists.
+  await db.prepare('ALTER TABLE alert_settings ADD COLUMN external_default INTEGER NOT NULL DEFAULT 1').run().catch(() => {});
   ensured = true;
 }
 

@@ -67,24 +67,50 @@ export async function notifyFollowers(env: Env, rows: ChangeRow[], now: number):
   const inserts = [...perUser].flatMap(([uid, m]) => [...m.keys()].map((cid) => insert.bind(uid, cid, now)));
   for (let i = 0; i < inserts.length; i += 50) await env.DB.batch(inserts.slice(i, i + 50));
 
+  // Push + Discord only carry changes from trackers the user hasn't set to
+  // "inbox only"; the inbox rows above are written regardless.
   const userIds = [...perUser.keys()];
   const placeholders = userIds.map(() => '?').join(',');
-  const [subs, settings] = await Promise.all([
+  const [subs, settings, overrides] = await Promise.all([
     env.DB.prepare(`SELECT endpoint, user_id FROM alert_push_subs WHERE user_id IN (${placeholders})`)
       .bind(...userIds).all<{ endpoint: string; user_id: string }>(),
-    env.DB.prepare(`SELECT user_id, discord_webhook FROM alert_settings WHERE discord_webhook IS NOT NULL AND user_id IN (${placeholders})`)
-      .bind(...userIds).all<{ user_id: string; discord_webhook: string }>(),
+    env.DB.prepare(`SELECT user_id, discord_webhook, external_default FROM alert_settings WHERE user_id IN (${placeholders})`)
+      .bind(...userIds).all<{ user_id: string; discord_webhook: string | null; external_default: number }>(),
+    env.DB.prepare(`SELECT user_id, slug, external FROM alert_tracker_delivery WHERE user_id IN (${placeholders}) AND slug IN (${slugs.map(() => '?').join(',')})`)
+      .bind(...userIds, ...slugs).all<{ user_id: string; slug: string; external: number }>(),
   ]);
+  const settingsBy = new Map(settings.results.map((s) => [s.user_id, s]));
+  const overrideBy = new Map(overrides.results.map((o) => [`${o.user_id}|${o.slug}`, !!o.external]));
+  const external = new Map<string, ChangeRow[]>();
+  for (const [uid, m] of perUser) {
+    const def = (settingsBy.get(uid)?.external_default ?? 1) !== 0;
+    const loud = [...m.values()].filter((r) => overrideBy.get(`${uid}|${r.slug}`) ?? def);
+    if (loud.length) external.set(uid, loud);
+  }
 
   const tasks: Promise<unknown>[] = [];
   if (env.VAPID_PUBLIC_KEY && env.VAPID_PRIVATE_KEY) {
-    for (const s of subs.results.slice(0, MAX_PUSHES)) tasks.push(sendPush(env, s.endpoint));
+    for (const s of subs.results.filter((s) => external.has(s.user_id)).slice(0, MAX_PUSHES)) tasks.push(sendPush(env, s.endpoint));
   }
-  for (const s of settings.results.slice(0, MAX_WEBHOOKS)) {
-    tasks.push(sendDiscord(s.discord_webhook, [...perUser.get(s.user_id)!.values()]));
+  const hooks = settings.results.filter((s) => s.discord_webhook && external.has(s.user_id));
+  for (const s of hooks.slice(0, MAX_WEBHOOKS)) {
+    tasks.push(sendDiscord(s.discord_webhook!, external.get(s.user_id)!));
   }
   await Promise.allSettled(tasks);
   return { notified: perUser.size };
+}
+
+// Trackers whose alerts this user keeps inbox-only (no push / Discord).
+export async function externalFilter(db: D1Database, userId: string): Promise<{ quiet: string[]; loud: string[]; def: boolean }> {
+  const [set, rows] = await Promise.all([
+    db.prepare('SELECT external_default FROM alert_settings WHERE user_id = ?').bind(userId).first<{ external_default: number }>(),
+    db.prepare('SELECT slug, external FROM alert_tracker_delivery WHERE user_id = ?').bind(userId).all<{ slug: string; external: number }>(),
+  ]);
+  return {
+    def: (set?.external_default ?? 1) !== 0,
+    quiet: rows.results.filter((r) => !r.external).map((r) => r.slug),
+    loud: rows.results.filter((r) => r.external).map((r) => r.slug),
+  };
 }
 
 // ---- Discord ---------------------------------------------------------------
