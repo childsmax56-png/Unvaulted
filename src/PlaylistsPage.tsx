@@ -62,19 +62,15 @@ function entryToSong(entry: PlaylistSong): Song {
 }
 
 function playEntries(entries: PlaylistSong[], startIndex: number, shuffle = false) {
-  let list = entries.filter(e => e.url);
-  let start = startIndex;
-  if (shuffle) {
-    const startEntry = list[startIndex];
-    for (let i = list.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [list[i], list[j]] = [list[j], list[i]];
-    }
-    start = startEntry ? list.indexOf(startEntry) : 0;
-    if (start < 0) start = 0;
-  }
-  const songs = list.map(entryToSong);
+  const playable = entries.filter(e => e.url);
+  const songs = playable.map(entryToSong);
   if (!songs.length) return;
+  if (shuffle) {
+    void audioStore.playSongListShuffled(songs, songs[0].realEra as Era);
+    return;
+  }
+  // Map the clicked row to its position among the playable entries.
+  const start = Math.max(0, playable.indexOf(entries[startIndex]));
   void audioStore.playSongList(songs, start, songs[start].realEra as Era);
 }
 
@@ -314,6 +310,13 @@ export function PlaylistsPage() {
   };
 
   const isFav = (p: UserPlaylist) => p.id === FAVORITES_ID;
+  // Leave room for the fixed GlobalMiniPlayer so the last rows can scroll into view.
+  const audio = audioStore.useAudioState();
+  // (A spacer, not padding: bottom padding on these flex-row scroll containers
+  // doesn't count toward their height, so it never cleared the player.)
+  const playerSpacer = audio.activePlayer === 'audio' && audio.currentSong
+    ? <div aria-hidden className="h-48 md:h-28 shrink-0" />
+    : null;
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
@@ -354,6 +357,7 @@ export function PlaylistsPage() {
                 </div>
               </button>
             ))}
+            {playerSpacer}
           </div>
         </div>
 
@@ -427,7 +431,7 @@ export function PlaylistsPage() {
                   <div className="flex items-center gap-2 flex-wrap">
                     {selected.songs.length > 0 && (
                       <>
-                        <button onClick={() => playEntries(selected.songs, 0, false)} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer" style={{ background: `${ACCENT}22`, color: ACCENT }}>
+                        <button onClick={() => { audioStore.setState({ isShuffle: false }); playEntries(selected.songs, 0, false); }} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer" style={{ background: `${ACCENT}22`, color: ACCENT }}>
                           <Play className="w-3.5 h-3.5" /> Play
                         </button>
                         <button onClick={() => playEntries(selected.songs, 0, true)} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/5 text-white/60 text-xs font-semibold uppercase tracking-wider hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
@@ -495,6 +499,7 @@ export function PlaylistsPage() {
               </motion.div>
             )}
           </AnimatePresence>
+          {playerSpacer}
         </div>
       </div>
 

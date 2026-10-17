@@ -374,8 +374,19 @@ export function playAudioStream(opts: {
     hasLoopedOnce: false,
     isPlaying: autoPlay,
   };
-  if (opts.artwork !== undefined) patch.currentArtwork = opts.artwork;
-  if (opts.artistLabel !== undefined) patch.currentArtistLabel = opts.artistLabel;
+  // A new list invalidates the old shuffle order (it indexed the previous
+  // playlist), so reshuffle it with the chosen song first.
+  if (state.isShuffle && opts.playlist !== state.playlist) {
+    patch.shuffledQueue = generateShuffledQueue(opts.playlist.length, opts.index);
+  }
+  // Always refresh artwork/artist for the new song; leaving them unset kept the
+  // previous track's cover when advancing via next/prev.
+  patch.currentArtwork = opts.artwork !== undefined
+    ? opts.artwork
+    : (opts.song as any).image || opts.song.image || opts.era?.image || '';
+  patch.currentArtistLabel = opts.artistLabel !== undefined
+    ? opts.artistLabel
+    : (opts.song as any).artist || parseArtistFromSong(opts.song.name, opts.song.extra, opts.era?.name);
   setState(patch);
   const a = getAudioEl();
   if (a) {
@@ -412,6 +423,17 @@ export async function playSongList(songs: Song[], startIndex: number, era: Era):
     artwork: (song as any).image || song.image || realEra?.image || '',
     artistLabel: (song as any).artist || parseArtistFromSong(song.name, song.extra, realEra?.name),
   });
+}
+
+// Start a list in shuffle mode: a random first song and a fresh random order
+// every call, with the player's shuffle toggle switched on so next/prev, the
+// up-next list and the mini player's shuffle icon all follow it.
+export async function playSongListShuffled(songs: Song[], era: Era): Promise<void> {
+  if (!songs.length) return;
+  const start = Math.floor(Math.random() * songs.length);
+  setState({ isShuffle: true });
+  // Copy so playAudioStream sees a new list and builds a new shuffle order.
+  await playSongList(songs.slice(), start, ((songs[start] as any).realEra || era) as Era);
 }
 
 // --- Next-track prefetch (mobile background continuity) ---------------------
