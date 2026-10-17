@@ -155,6 +155,8 @@ export interface AlertSettings {
   externalDefault: boolean;
   // Per-tracker overrides: true = push + Discord, false = inbox only.
   trackerExternal: Record<string, boolean>;
+  // Per-tracker Discord webhooks; used instead of discordWebhook for that tracker.
+  trackerWebhooks: Record<string, string>;
 }
 
 export async function fetchAlertSettings(): Promise<AlertSettings | null> {
@@ -162,8 +164,9 @@ export async function fetchAlertSettings(): Promise<AlertSettings | null> {
   return res?.ok ? res.json() : null;
 }
 
-export async function saveDiscordWebhook(url: string | null, test: boolean): Promise<string | null> {
-  const res = await fetch('/api/alerts/settings', { method: 'POST', headers: authHeaders(), body: JSON.stringify({ discordWebhook: url, test }) });
+// slug set → that tracker's own webhook; otherwise the account-wide one.
+export async function saveDiscordWebhook(url: string | null, test: boolean, slug?: string): Promise<string | null> {
+  const res = await fetch('/api/alerts/settings', { method: 'POST', headers: authHeaders(), body: JSON.stringify({ discordWebhook: url, test, slug }) });
   if (res.ok) return null;
   const d = await res.json().catch(() => ({}));
   return d.error || 'Could not save';

@@ -128,6 +128,8 @@ export async function ensureChangeTables(db: D1Database): Promise<void> {
   ]);
   // Added after alert_settings shipped; ADD COLUMN throws once it exists.
   await db.prepare('ALTER TABLE alert_settings ADD COLUMN external_default INTEGER NOT NULL DEFAULT 1').run().catch(() => {});
+  // Optional per-tracker Discord webhook; replaces the account-wide one for that tracker.
+  await db.prepare('ALTER TABLE alert_tracker_delivery ADD COLUMN discord_webhook TEXT').run().catch(() => {});
   ensured = true;
 }
 

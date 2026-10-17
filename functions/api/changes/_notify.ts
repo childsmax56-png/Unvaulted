@@ -76,11 +76,12 @@ export async function notifyFollowers(env: Env, rows: ChangeRow[], now: number):
       .bind(...userIds).all<{ endpoint: string; user_id: string }>(),
     env.DB.prepare(`SELECT user_id, discord_webhook, external_default FROM alert_settings WHERE user_id IN (${placeholders})`)
       .bind(...userIds).all<{ user_id: string; discord_webhook: string | null; external_default: number }>(),
-    env.DB.prepare(`SELECT user_id, slug, external FROM alert_tracker_delivery WHERE user_id IN (${placeholders}) AND slug IN (${slugs.map(() => '?').join(',')})`)
-      .bind(...userIds, ...slugs).all<{ user_id: string; slug: string; external: number }>(),
+    env.DB.prepare(`SELECT user_id, slug, external, discord_webhook FROM alert_tracker_delivery WHERE user_id IN (${placeholders}) AND slug IN (${slugs.map(() => '?').join(',')})`)
+      .bind(...userIds, ...slugs).all<{ user_id: string; slug: string; external: number; discord_webhook: string | null }>(),
   ]);
   const settingsBy = new Map(settings.results.map((s) => [s.user_id, s]));
   const overrideBy = new Map(overrides.results.map((o) => [`${o.user_id}|${o.slug}`, !!o.external]));
+  const trackerHookBy = new Map(overrides.results.filter((o) => o.discord_webhook).map((o) => [`${o.user_id}|${o.slug}`, o.discord_webhook!]));
   const external = new Map<string, ChangeRow[]>();
   for (const [uid, m] of perUser) {
     const def = (settingsBy.get(uid)?.external_default ?? 1) !== 0;
@@ -92,10 +93,18 @@ export async function notifyFollowers(env: Env, rows: ChangeRow[], now: number):
   if (env.VAPID_PUBLIC_KEY && env.VAPID_PRIVATE_KEY) {
     for (const s of subs.results.filter((s) => external.has(s.user_id)).slice(0, MAX_PUSHES)) tasks.push(sendPush(env, s.endpoint));
   }
-  const hooks = settings.results.filter((s) => s.discord_webhook && external.has(s.user_id));
-  for (const s of hooks.slice(0, MAX_WEBHOOKS)) {
-    tasks.push(sendDiscord(s.discord_webhook!, external.get(s.user_id)!));
+  // Each change goes to its tracker's own webhook if set, else the account-wide one.
+  const byHook = new Map<string, ChangeRow[]>();
+  for (const [uid, rows] of external) {
+    for (const r of rows) {
+      const hook = trackerHookBy.get(`${uid}|${r.slug}`) ?? settingsBy.get(uid)?.discord_webhook;
+      if (!hook) continue;
+      let list = byHook.get(hook);
+      if (!list) byHook.set(hook, (list = []));
+      list.push(r);
+    }
   }
+  for (const [hook, rows] of [...byHook].slice(0, MAX_WEBHOOKS)) tasks.push(sendDiscord(hook, rows));
   await Promise.allSettled(tasks);
   return { notified: perUser.size };
 }
