@@ -776,7 +776,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             </div>
 
             {isLastfmLoggedIn() && era.name !== 'Favorites' && era.name !== 'Recent Leaks' && (
-              <div className="flex items-center gap-2 mb-3">
+              <div className="flex flex-wrap items-center gap-2 mb-3">
                 <SiLastdotfm className="w-4 h-4 text-[#d51007] shrink-0" />
                 {editingLfmName ? (
                   <>
