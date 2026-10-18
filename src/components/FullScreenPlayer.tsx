@@ -337,6 +337,7 @@ export function FullScreenPlayer({
               </button>
             </div>
           )}
+          {playlist && (
           <button 
             onClick={() => {
               setShowQueue(!showQueue);
@@ -347,6 +348,7 @@ export function FullScreenPlayer({
           >
             <ListMusic className="w-5 h-5" />
           </button>
+          )}
           {!isLyricsDisabled && (
             <button 
               onClick={() => {
@@ -365,7 +367,7 @@ export function FullScreenPlayer({
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors shrink-0"
-              title="Visit Original Link"
+              title={originalLinkUrl.includes('open.spotify.com') ? 'Open in Spotify' : 'Visit Original Link'}
             >
               <ExternalLink className="w-5 h-5" />
             </a>
@@ -624,7 +626,8 @@ export function FullScreenPlayer({
         </div>
 
         <div className="flex items-center gap-8">
-          <button onClick={toggleShuffle} className={`w-10 h-10 flex items-center justify-center transition-colors ${isShuffle ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
+          {/* External sources (e.g. Spotify) manage their own queue — keep the slot so the row stays centred */}
+          <button onClick={toggleShuffle} disabled={!toggleShuffle} className={`w-10 h-10 flex items-center justify-center transition-colors ${!toggleShuffle ? 'invisible' : ''} ${isShuffle ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
             <Shuffle className="w-5 h-5" />
           </button>
           <button onClick={onPrev} className="w-12 h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors">
@@ -639,7 +642,7 @@ export function FullScreenPlayer({
           <button onClick={onNext} className="w-12 h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors">
             <SkipForward className="w-8 h-8 fill-current" />
           </button>
-          <button onClick={toggleLoop} className={`w-10 h-10 flex items-center justify-center transition-colors ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
+          <button onClick={toggleLoop} disabled={!toggleLoop} className={`w-10 h-10 flex items-center justify-center transition-colors ${!toggleLoop ? 'invisible' : ''} ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
             {loopMode === 1 ? <Repeat1 className="w-5 h-5" /> : <Repeat className="w-5 h-5" />}
           </button>
         </div>

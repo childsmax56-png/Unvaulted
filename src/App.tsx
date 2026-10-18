@@ -3651,7 +3651,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
               showQueue={showQueue}
               setShowQueue={setShowQueue}
               allowDownload={activeCategory !== 'released'}
-              allowFullScreen={!isSpotifyActive && !isSoundCloudActive}
+              allowFullScreen={!isSoundCloudActive}
               artworkOverride={activePlayer === 'audio' ? (currentArtwork || undefined) : undefined}
               artistOverride={activePlayer === 'audio' ? (currentArtistLabel || undefined) : undefined}
             />
@@ -3706,6 +3706,25 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
               allowFullScreen
             />
           </motion.div>
+        )}
+        {isFullScreen && isSpotifyActive && spotifyState.currentTrack && effectiveSong && (
+          <FullScreenPlayer
+            // extra cleared so the subtitle reads "Artists • Album" instead of repeating the artist
+            currentSong={{ ...effectiveSong, extra: "", url: `https://open.spotify.com/track/${spotifyState.currentTrack.id}` }}
+            isPlaying={effectiveIsPlaying}
+            togglePlay={effectiveTogglePlay}
+            onClose={() => setIsFullScreen(false)}
+            era={effectiveEra}
+            currentTime={effectiveCurrentTime}
+            duration={effectiveDuration}
+            onSeek={effectiveSeek}
+            onNext={effectiveNext}
+            onPrev={effectivePrev}
+            volume={volume}
+            // Spotify's SDK volume isn't mirrored into the store, so update both to keep the slider in sync
+            onVolumeChange={(v) => { setVolume(v); spotifyControls.setVolume(v); }}
+            artistOverride={spotifyState.currentTrack.artists.join(', ')}
+          />
         )}
         {isFullScreen && effectiveSong && !isSpotifyActive && !isYoutubeActive && !isSoundCloudActive && (
           <FullScreenPlayer
