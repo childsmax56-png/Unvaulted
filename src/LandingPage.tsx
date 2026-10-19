@@ -1316,55 +1316,59 @@ export function LandingPage() {
             <ContinueListening />
 
             <div className="home-two-col">
-              <WhatsNewFeed
-                slugs={favorites.length ? favorites : undefined}
-                title={favorites.length ? 'New from artists you follow' : 'Recently leaked'}
-                subtitle={favorites.length ? `${favorites.length} followed` : 'across all trackers'}
-              />
-              <ExploreTiles />
+              <div className="home-col">
+                {favoriteConfigs.length > 0 && (
+                  <section className="home-section home-mobile-only">
+                    <div className="home-section-head"><h2 className="home-h2">Following</h2></div>
+                    <div className="grid-small">{favoriteConfigs.map(config => artistCell(config))}</div>
+                  </section>
+                )}
+
+                <section className="home-section" id="all-trackers">
+                  <div className="home-section-head" style={{ flexWrap: 'wrap', gap: 12 }}>
+                    <h2 className="home-h2">All trackers <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.5)' }}>{gridList.length}</span></h2>
+                    <div role="group" aria-label="Sort trackers" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                      {SORT_OPTIONS.map(opt => (
+                        <button
+                          key={opt.id}
+                          onClick={() => setSortMode(opt.id)}
+                          aria-pressed={sortMode === opt.id}
+                          className={`home-chip${sortMode === opt.id ? ' is-on' : ''}`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {sortMode !== 'featured' ? (
+                    <div className="grid-small">{sortedList.map(config => artistCell(config))}</div>
+                  ) : (
+                    <>
+                      <div className="grid-top">
+                        {artistCell(featured, 'featured')}
+                        <div className="grid-pinned">{topRight.map(config => artistCell(config, 'medium'))}</div>
+                      </div>
+                      <div className="grid-small">{visibleSmall.map(item => artistCell(item.config))}</div>
+                      {hiddenCount > 0 && (
+                        <button onClick={() => setShowAll(v => !v)} className="home-ghost-btn" style={{ alignSelf: 'center' }}>
+                          {showAll ? 'Show less' : `Show ${hiddenCount} more trackers`}
+                        </button>
+                      )}
+                    </>
+                  )}
+                </section>
+              </div>
+              <div className="home-col home-col-side">
+                <ExploreTiles />
+              </div>
             </div>
 
-            {favoriteConfigs.length > 0 && (
-              <section className="home-section home-mobile-only">
-                <div className="home-section-head"><h2 className="home-h2">Following</h2></div>
-                <div className="grid-small">{favoriteConfigs.map(config => artistCell(config))}</div>
-              </section>
-            )}
-
-            <section className="home-section" id="all-trackers">
-              <div className="home-section-head" style={{ flexWrap: 'wrap', gap: 12 }}>
-                <h2 className="home-h2">All trackers <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.5)' }}>{gridList.length}</span></h2>
-                <div role="group" aria-label="Sort trackers" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                  {SORT_OPTIONS.map(opt => (
-                    <button
-                      key={opt.id}
-                      onClick={() => setSortMode(opt.id)}
-                      aria-pressed={sortMode === opt.id}
-                      className={`home-chip${sortMode === opt.id ? ' is-on' : ''}`}
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {sortMode !== 'featured' ? (
-                <div className="grid-small">{sortedList.map(config => artistCell(config))}</div>
-              ) : (
-                <>
-                  <div className="grid-top">
-                    {artistCell(featured, 'featured')}
-                    <div className="grid-pinned">{topRight.map(config => artistCell(config, 'medium'))}</div>
-                  </div>
-                  <div className="grid-small">{visibleSmall.map(item => artistCell(item.config))}</div>
-                  {hiddenCount > 0 && (
-                    <button onClick={() => setShowAll(v => !v)} className="home-ghost-btn" style={{ alignSelf: 'center' }}>
-                      {showAll ? 'Show less' : `Show ${hiddenCount} more trackers`}
-                    </button>
-                  )}
-                </>
-              )}
-            </section>
+            <WhatsNewFeed
+              slugs={favorites.length ? favorites : undefined}
+              title={favorites.length ? 'New from artists you follow' : 'Recently leaked'}
+              subtitle={favorites.length ? `${favorites.length} followed` : 'across all trackers'}
+            />
           </>
         )}
 
@@ -1477,7 +1481,8 @@ export function LandingPage() {
         .home-resume-art { width: 64px; height: 64px; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
         .home-ellipsis { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .home-two-col { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 32px; align-items: start; }
-        .home-two-col > :only-child { grid-column: 1 / -1; }
+        .home-col { display: flex; flex-direction: column; gap: 40px; min-width: 0; }
+        .home-col-side { position: sticky; top: 24px; }
         .home-explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
         .home-explore-tile { display: flex; flex-direction: column; gap: 8px; padding: 14px; min-height: 124px; }
         .home-explore-icon { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.06); color: #F5A524; display: flex; align-items: center; justify-content: center; }
@@ -1491,11 +1496,9 @@ export function LandingPage() {
         .grid-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
         .grid-pinned { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
         .grid-small { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
-        @media (min-width: 1280px) {
-          .grid-small { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-        }
         @media (max-width: 1100px) {
           .home-two-col { grid-template-columns: minmax(0, 1fr); }
+          .home-col-side { position: static; }
         }
         @media (max-width: 900px) {
           .home-sidebar { display: none; }
