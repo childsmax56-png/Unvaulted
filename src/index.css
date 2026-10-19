@@ -73,3 +73,6 @@
     padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 }
+/* Horizontal tab/era strips scroll by touch or wheel without a visible bar. */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

@@ -3476,10 +3476,11 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                   samplesData={samplesData}
                   favoriteKeys={favoriteKeys}
                   toggleFavorite={toggleFavorite}
+                  timelineEras={activeCategory === 'music' ? erasArray.filter(e => Object.values(e.data || {}).some(songs => songs.length > 0)) : undefined}
                   onNavigateToEra={(targetEra) => {
                     const isHidden = HIDDEN_ALBUMS.includes(targetEra.name);
                     const fullEra = [...erasArray, ...relatedErasArray].find(e => e.name === targetEra.name) || targetEra;
-                    setSelectedAlbum(fullEra);
+                    setSelectedAlbum({ ...fullEra, image: CUSTOM_IMAGES[fullEra.name] || fullEra.image });
                     setActiveCategory(isHidden ? 'related' : 'music');
                   }}
                 />

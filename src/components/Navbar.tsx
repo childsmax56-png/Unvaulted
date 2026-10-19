@@ -62,7 +62,6 @@ const NAV_CATEGORIES: { key: Category; label: string }[] = [
 export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHomeClick, activeCategory, onCategoryChange, onRandomSongClick, isRandomMode, isTimelineMode, onTimelineToggle, yeiOpen, onYEIClick, globalSearchResults, onSelectGlobalResult, fetchedTabs, tabsWithData }: NavbarProps) {
   const { settings } = useSettings();
   const navigate = useNavigate();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [socialOpen, setSocialOpen] = useState(false);
@@ -73,20 +72,6 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
     setShareCopied(true);
     setTimeout(() => setShareCopied(false), 2000);
   }, []);
-  const mobileDropdownRef = useRef<HTMLDivElement>(null);
-  const desktopDropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!dropdownOpen) return;
-    const handler = (e: MouseEvent) => {
-      const target = e.target as Node;
-      const insideMobile = mobileDropdownRef.current?.contains(target);
-      const insideDesktop = desktopDropdownRef.current?.contains(target);
-      if (!insideMobile && !insideDesktop) setDropdownOpen(false);
-    };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
-  }, [dropdownOpen]);
 
   const baseCategories = activeConfig.productionFirst
     ? [
@@ -131,7 +116,6 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
     : cat.key === 'individual' && activeConfig.individualProjectsLabel
     ? { ...cat, label: activeConfig.individualProjectsLabel }
     : cat);
-  const activeLabel = visibleCategories.find(c => c.key === activeCategory)?.label ?? 'Navigate';
 
   const handleCategoryClick = (cat: Category) => {
     onCategoryChange(cat);
@@ -141,7 +125,8 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
   };
 
   return (
-    <header className="h-auto md:h-16 w-full glass-panel border-b border-white/5 flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-3 md:py-0 z-30 relative shrink-0 gap-3 md:gap-0">
+    <div className="w-full glass-panel border-b border-white/5 z-30 relative shrink-0">
+    <header className="h-auto md:h-16 w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-3 md:py-0 gap-3 md:gap-0">
       <div className="flex flex-col w-full md:flex-1">
         <div className="flex-1 flex flex-row items-center justify-between md:justify-start w-full relative gap-3">
           <div className="md:hidden flex items-center shrink-0">
@@ -269,54 +254,7 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
           className="md:hidden w-full flex flex-wrap gap-x-4 gap-y-2 items-center"
           style={{ marginTop: '12px' }}
         >
-          {settings.dropdownNav ? (
-            <div className="relative w-full" ref={mobileDropdownRef}>
-              <button
-                onClick={() => setDropdownOpen(o => !o)}
-                className="w-full flex items-center justify-between px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white/90 text-sm font-semibold uppercase tracking-widest transition-colors hover:bg-white/10"
-                style={dropdownOpen ? { borderColor: 'var(--theme-color)', color: 'var(--theme-color)' } : {}}
-              >
-                <span>{activeLabel}</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              <AnimatePresence>
-                {dropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 right-0 mt-1 z-50 bg-[#111] border border-white/10 rounded-lg overflow-hidden shadow-xl"
-                  >
-                    {visibleCategories.map(({ key, label }) => (
-                      <button
-                        key={key}
-                        onClick={() => { handleCategoryClick(key); setDropdownOpen(false); }}
-                        className={`w-full text-left px-4 py-2.5 text-sm font-semibold uppercase tracking-widest transition-colors ${activeCategory === key ? 'text-[var(--theme-color)] bg-[var(--theme-color)]/10' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
-                      >
-                        {label}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ) : (
-            visibleCategories.map(({ key, label }) => (
-              <div className="relative" key={key}>
-                <button
-                  onClick={() => handleCategoryClick(key)}
-                  className={`text-xs font-semibold uppercase tracking-widest pb-1 transition-all duration-300 cursor-pointer ${activeCategory === key ? 'text-[var(--theme-color)]' : 'text-white/50 hover:text-white'}`}
-                >
-                  {label}
-                </button>
-                {activeCategory === key && (
-                  <motion.div layoutId="nav-indicator-mobile" className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--theme-color)]" />
-                )}
-              </div>
-            ))
-          )}
-          <div className="flex items-center gap-4 w-full border-t border-white/10 pt-3 mt-1">
+          <div className="flex items-center gap-4 w-full">
             <button onClick={handleShareTracker} className="flex items-center p-2.5 rounded-full transition-all bg-white/5 text-white/50 hover:bg-white/10 hover:text-white" title="Copy tracker link">
               {shareCopied ? <Check className="w-5 h-5 text-green-400" /> : <Share2 className="w-5 h-5" />}
             </button>
@@ -397,55 +335,6 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
               </button>
             )}
           </div>
-          {settings.dropdownNav ? (
-            <div className="relative" ref={desktopDropdownRef}>
-              <button
-                onClick={() => setDropdownOpen(o => !o)}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/90 text-sm font-semibold uppercase tracking-widest transition-colors hover:bg-white/10 whitespace-nowrap"
-                style={dropdownOpen ? { borderColor: 'var(--theme-color)', color: 'var(--theme-color)' } : {}}
-              >
-                <span>{activeLabel}</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              <AnimatePresence>
-                {dropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 z-50 bg-[#111] border border-white/10 rounded-lg overflow-hidden shadow-xl min-w-[180px]"
-                  >
-                    {visibleCategories.map(({ key, label }) => (
-                      <button
-                        key={key}
-                        onClick={() => { handleCategoryClick(key); setDropdownOpen(false); }}
-                        className={`w-full text-left px-4 py-2.5 text-sm font-semibold uppercase tracking-widest transition-colors ${activeCategory === key ? 'text-[var(--theme-color)] bg-[var(--theme-color)]/10' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
-                      >
-                        {label}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ) : (
-            <div className="flex items-center gap-6 min-w-max">
-              {visibleCategories.map(({ key, label }) => (
-                <div className="relative" key={key}>
-                  <button
-                    onClick={() => handleCategoryClick(key)}
-                    className={`text-sm font-semibold uppercase tracking-widest pb-1.5 transition-all duration-300 cursor-pointer whitespace-nowrap ${activeCategory === key ? 'text-[var(--theme-color)]' : 'text-white/50 hover:text-white'}`}
-                  >
-                    {label}
-                  </button>
-                  {activeCategory === key && (
-                    <motion.div layoutId="nav-indicator-desktop" className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--theme-color)]" />
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
 
@@ -576,5 +465,26 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
         )}
       </AnimatePresence>
     </header>
+    {activeCategory !== 'settings' && activeCategory !== 'history' && (
+      <nav aria-label="Tracker sections" className="w-full px-2 md:px-6 flex gap-1 overflow-x-auto no-scrollbar">
+        {visibleCategories.map(({ key, label }) => {
+          const active = activeCategory === key;
+          return (
+            <button
+              key={key}
+              onClick={() => handleCategoryClick(key)}
+              aria-current={active ? 'page' : undefined}
+              className={`relative shrink-0 min-h-[44px] px-3 md:px-3.5 text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${active ? 'text-white' : 'text-white/50 hover:text-white'}`}
+            >
+              {label}
+              {active && (
+                <motion.span layoutId="nav-tab-indicator" className="absolute left-2 right-2 bottom-0 h-[2px] rounded-full bg-[var(--theme-color)]" />
+              )}
+            </button>
+          );
+        })}
+      </nav>
+    )}
+    </div>
   );
 }

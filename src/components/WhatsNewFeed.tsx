@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ARTIST_LIST } from '../artists/registry';
 import type { ArtistConfig } from '../artists/types';
-import { createSlug } from '../utils';
+import { createSlug, Img } from '../utils';
 
 // One recently-leaked track, as returned by /api/feed.
 interface FeedItem {
@@ -64,141 +64,122 @@ function spreadByArtist(items: FeedItem[], maxRun = 2): FeedItem[] {
   return out;
 }
 
+export const NEW_WINDOW_MS = 7 * 86_400_000;
+
+// Shared /api/feed loader so the home sidebar ("3 new") and the feed section
+// reuse one request.
+let feedPromise: Promise<FeedItem[]> | null = null;
+function loadFeed(): Promise<FeedItem[]> {
+  feedPromise ??= fetch('/api/feed')
+    .then(r => r.ok ? r.json() : Promise.reject(new Error('feed failed')))
+    .then((data: { items: FeedItem[] }) => (data.items ?? []).filter(resolve))
+    .catch(err => { feedPromise = null; throw err; });
+  return feedPromise;
+}
+
+export function useLeakFeed(): { items: FeedItem[] | null; failed: boolean } {
+  const [items, setItems] = useState<FeedItem[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    let cancelled = false;
+    loadFeed()
+      .then(list => { if (!cancelled) setItems(list); })
+      .catch(() => { if (!cancelled) setFailed(true); });
+    return () => { cancelled = true; };
+  }, []);
+  return { items, failed };
+}
+
+// Leaks per tracker within the "new" window, for the sidebar badges.
+export function countNewBySlug(items: FeedItem[] | null): Record<string, number> {
+  const out: Record<string, number> = {};
+  const cutoff = Date.now() - NEW_WINDOW_MS;
+  for (const it of items ?? []) {
+    if (it.leak_ts >= cutoff && it.leak_ts <= Date.now()) out[it.slug] = (out[it.slug] ?? 0) + 1;
+  }
+  return out;
+}
+
 function FeedRow({ item }: { item: FeedItem }) {
   const navigate = useNavigate();
   const resolved = resolve(item);
   if (!resolved) return null;
   const { config, era } = resolved;
   const accent = config.accentColor;
+  const href = `/${config.slug}/album/${createSlug(era)}`;
 
   return (
-    <button
-      onClick={() => navigate(`/${config.slug}/album/${createSlug(era)}`)}
-      style={{
-        display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left',
-        padding: '10px 12px', borderRadius: 10, cursor: 'pointer',
-        background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.07)',
-        transition: 'border-color 0.15s, transform 0.15s, background 0.15s',
-        width: '100%', fontFamily: 'inherit',
-      }}
-      onMouseEnter={e => {
-        const el = e.currentTarget;
-        el.style.borderColor = `${accent}66`;
-        el.style.transform = 'translateY(-2px)';
-        el.style.background = '#141414';
-      }}
-      onMouseLeave={e => {
-        const el = e.currentTarget;
-        el.style.borderColor = 'rgba(255,255,255,0.07)';
-        el.style.transform = '';
-        el.style.background = '#0f0f0f';
-      }}
+    <a
+      href={href}
+      onClick={e => { if (e.metaKey || e.ctrlKey || e.button !== 0) return; e.preventDefault(); navigate(href); }}
+      className="feed-row"
     >
-      <div style={{
-        display: 'flex', width: 34, height: 34, borderRadius: 8, flexShrink: 0,
-        alignItems: 'center', justifyContent: 'center', background: `${accent}22`,
-        color: accent, fontWeight: 900, fontSize: 15,
-      }}>{config.cardLetter}</div>
+      <span style={{
+        display: 'flex', width: 40, height: 40, borderRadius: 999, flexShrink: 0, overflow: 'hidden',
+        alignItems: 'center', justifyContent: 'center', background: `${accent}26`,
+        color: accent, fontWeight: 800, fontSize: 13,
+      }} aria-hidden="true">
+        {config.artistPhotoUrl
+          ? <Img w={80} src={config.artistPhotoUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: config.photoObjectPosition ?? 'top center' }} />
+          : config.cardLetter}
+      </span>
 
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: '#fff', lineHeight: 1.2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+      <span style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <span style={{ fontSize: 15, fontWeight: 500, color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
           {item.name}
-          {item.extra && <span style={{ color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}> {item.extra}</span>}
-        </div>
-        <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginTop: 2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-          <span style={{ color: `${accent}cc`, fontWeight: 600 }}>{config.artistLabel}</span>
-          {' · '}{era}
-        </div>
-      </div>
-
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 3, flexShrink: 0 }}>
-        <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.5)', whiteSpace: 'nowrap' }}>
-          {relativeTime(item.leak_ts)}
+          {item.extra && <span style={{ color: 'rgba(255,255,255,0.45)', fontWeight: 400 }}> {item.extra}</span>}
         </span>
-        {item.quality && (
-          <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', color: `${accent}aa`, background: `${accent}14`, borderRadius: 4, padding: '2px 5px', whiteSpace: 'nowrap' }}>
-            {item.quality}
-          </span>
-        )}
-      </div>
-    </button>
+        <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          {config.artistLabel} · {era}
+        </span>
+      </span>
+
+      {item.quality && <span className="feed-chip">{item.quality}</span>}
+      <span style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: 12, color: 'rgba(255,255,255,0.5)', width: 72, textAlign: 'right', flexShrink: 0 }}>
+        {relativeTime(item.leak_ts)}
+      </span>
+    </a>
   );
 }
 
-export function WhatsNewFeed() {
-  const [items, setItems] = useState<FeedItem[] | null>(null);
-  const [failed, setFailed] = useState(false);
+export function WhatsNewFeed({ slugs, title = 'Recently leaked', subtitle = 'across all trackers' }: { slugs?: string[]; title?: string; subtitle?: string }) {
+  const { items, failed } = useLeakFeed();
   const [showAll, setShowAll] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetch('/api/feed')
-      .then(r => r.ok ? r.json() : Promise.reject(new Error('feed failed')))
-      .then((data: { items: FeedItem[] }) => { if (!cancelled) setItems(data.items ?? []); })
-      .catch(() => { if (!cancelled) setFailed(true); });
-    return () => { cancelled = true; };
-  }, []);
 
   if (failed) return null;
 
-  // Keep only items whose era the site can actually open, then spread artists.
-  const browsable = spreadByArtist((items ?? []).filter(resolve));
-  // Don't render the section at all once we know there's nothing to show.
+  const scoped = slugs && slugs.length ? (items ?? []).filter(i => slugs.includes(i.slug)) : (items ?? []);
+  const browsable = spreadByArtist(scoped);
   if (items && browsable.length === 0) return null;
 
   const visible = showAll ? browsable : browsable.slice(0, INITIAL_COUNT);
 
   return (
-    <div style={{ width: '100%', maxWidth: 900, marginTop: 32 }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 12 }}>
-        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
-          Recently Leaked
-        </span>
-        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)' }}>across all trackers</span>
+    <section className="home-section" style={{ minWidth: 0 }}>
+      <div className="home-section-head">
+        <h2 className="home-h2">{title}</h2>
+        <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>{subtitle}</span>
       </div>
 
-      {items === null ? (
-        <div className="feed-grid">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} style={{ height: 56, borderRadius: 10, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }} />
-          ))}
-        </div>
-      ) : (
-        <>
-          <div className="feed-grid">
-            {visible.map((item, i) => (
-              <FeedRow key={`${item.slug}-${item.era}-${item.name}-${i}`} item={item} />
-            ))}
-          </div>
-          {browsable.length > INITIAL_COUNT && (
-            <button
-              onClick={() => setShowAll(v => !v)}
-              style={{
-                display: 'block', margin: '14px auto 0', padding: '9px 22px', borderRadius: 10,
-                background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)',
-                color: 'rgba(255,255,255,0.5)', fontSize: 13, fontWeight: 600,
-                letterSpacing: '0.04em', cursor: 'pointer', fontFamily: 'inherit',
-                transition: 'background 0.15s, color 0.15s, border-color 0.15s',
-              }}
-              onMouseEnter={e => { const b = e.currentTarget; b.style.background = 'rgba(255,255,255,0.08)'; b.style.color = '#fff'; b.style.borderColor = 'rgba(255,255,255,0.2)'; }}
-              onMouseLeave={e => { const b = e.currentTarget; b.style.background = 'rgba(255,255,255,0.04)'; b.style.color = 'rgba(255,255,255,0.5)'; b.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-            >
-              {showAll ? 'Show less' : `Show ${browsable.length - INITIAL_COUNT} more`}
-            </button>
-          )}
-        </>
+      <div className="feed-list">
+        {items === null
+          ? Array.from({ length: 6 }).map((_, i) => <div key={i} className="feed-row" style={{ background: 'rgba(255,255,255,0.02)' }} />)
+          : visible.map((item, i) => <FeedRow key={`${item.slug}-${item.era}-${item.name}-${i}`} item={item} />)}
+      </div>
+      {browsable.length > INITIAL_COUNT && (
+        <button onClick={() => setShowAll(v => !v)} className="home-ghost-btn" style={{ alignSelf: 'center' }}>
+          {showAll ? 'Show less' : `Show ${browsable.length - INITIAL_COUNT} more`}
+        </button>
       )}
 
       <style>{`
-        .feed-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 8px;
-        }
-        @media (max-width: 600px) {
-          .feed-grid { grid-template-columns: 1fr; }
-        }
+        .feed-list { display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; }
+        .feed-row { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 8px 14px; background: #111114; border-bottom: 1px solid rgba(255,255,255,0.05); text-decoration: none; color: inherit; transition: background 0.15s; }
+        .feed-row:last-child { border-bottom: 0; }
+        .feed-row:hover { background: #17171b; }
+        .feed-chip { font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.8); white-space: nowrap; flex-shrink: 0; }
+        @media (max-width: 600px) { .feed-chip { display: none; } }
       `}</style>
-    </div>
+    </section>
   );
 }

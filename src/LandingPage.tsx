@@ -10,6 +10,10 @@ import { useHasActiveAudio } from './player/audioStore';
 import { fetchGlobalVisitCounts, getUserVisitCounts, type VisitCounts } from './visits';
 import { AlternateTrackerButton } from './components/AlternateTrackerButton';
 import { AlertsBell } from './components/AlertsBell';
+import { HomeSidebar, SpaLink } from './components/home/HomeSidebar';
+import { ContinueListening } from './components/home/ContinueListening';
+import { ExploreTiles } from './components/home/ExploreTiles';
+import { WhatsNewFeed, useLeakFeed, countNewBySlug } from './components/WhatsNewFeed';
 
 type SortMode = 'featured' | 'az' | 'popular' | 'yours';
 const SORT_OPTIONS: { id: SortMode; label: string }[] = [
@@ -768,120 +772,6 @@ function EditorialArtistCard({ config, showPhoto, variant, isFavorite, onToggleF
   );
 }
 
-function ExternalSmallCard({ href, label, logoSrc, logoAlt, accent, photoSrc, variant = 'small' }: {
-  href: string; label: string; logoSrc: string; logoAlt: string; accent: string; photoSrc?: string; variant?: CardVariant;
-}) {
-  const onEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.style.borderColor = `${accent}66`;
-    e.currentTarget.style.transform = 'translateY(-2px)';
-  };
-  const onLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.currentTarget.style.borderColor = photoSrc ? 'transparent' : 'rgba(255,255,255,0.07)';
-    e.currentTarget.style.transform = '';
-  };
-
-  if (photoSrc) {
-    return (
-      <a
-        href={href} target="_blank" rel="noopener noreferrer"
-        onMouseEnter={onEnter} onMouseLeave={onLeave}
-        style={{
-          position: 'relative', borderRadius: 10, overflow: 'hidden', cursor: 'pointer',
-          aspectRatio: '1/1', border: '1px solid transparent', background: '#111',
-          display: 'block', textDecoration: 'none',
-          transition: 'border-color 0.2s, transform 0.15s',
-        }}
-      >
-        <Img w={400} src={photoSrc} alt={label} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 55%, transparent 100%)' }} />
-        <div style={{ position: 'absolute', top: 10, right: 10, width: 7, height: 7, borderRadius: '50%', background: accent }} />
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 10px 8px' }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: '#fff', lineHeight: 1.1 }}>{label}</div>
-          <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.5)', marginTop: 2, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{logoAlt}</div>
-        </div>
-      </a>
-    );
-  }
-
-  return (
-    <a
-      href={href} target="_blank" rel="noopener noreferrer"
-      onMouseEnter={onEnter} onMouseLeave={onLeave}
-      style={{
-        position: 'relative', borderRadius: VARIANT_RADIUS[variant], overflow: 'hidden', cursor: 'pointer',
-        minHeight: VARIANT_LOGO_HEIGHT_PX[variant], background: '#0f0f0f',
-        border: '1px solid rgba(255,255,255,0.07)',
-        padding: LOGO_PADDING.small,
-        display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-        textDecoration: 'none',
-        transition: 'border-color 0.2s, transform 0.15s',
-      }}
-    >
-      <img
-        src={logoSrc} alt={logoAlt}
-        style={{ display: 'block', height: LOGO_HEIGHT.small, width: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'left center' }}
-        onError={e => {
-          const img = e.currentTarget;
-          img.style.display = 'none';
-          const fb = img.nextElementSibling as HTMLElement;
-          if (fb) fb.style.display = 'block';
-        }}
-      />
-      <div style={{ display: 'none', fontSize: 13, fontWeight: 900, color: accent }}>{logoAlt}</div>
-      <div style={{ fontSize: 9, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: `${accent}aa` }}>{label}</div>
-    </a>
-  );
-}
-
-function BigLinkCard({ href, accent, badge, titleMain, titleAccent, subtitle, watermark }: {
-  href: string; accent: string; badge: string; titleMain: string; titleAccent: string; subtitle: string; watermark: string;
-}) {
-  return (
-    <a
-      href={href}
-      style={{
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: '28px 28px 24px',
-        background: '#0f0f0f',
-        border: '1px solid rgba(255,255,255,0.06)',
-        borderRadius: 16,
-        textDecoration: 'none',
-        color: '#fff',
-        overflow: 'hidden',
-        minHeight: 140,
-        transition: 'border-color 0.2s, transform 0.15s, box-shadow 0.2s',
-      }}
-      onMouseEnter={e => {
-        const el = e.currentTarget as HTMLAnchorElement;
-        el.style.borderColor = `${accent}66`;
-        el.style.transform = 'translateY(-3px)';
-        el.style.boxShadow = `0 16px 48px rgba(0,0,0,0.5)`;
-      }}
-      onMouseLeave={e => {
-        const el = e.currentTarget as HTMLAnchorElement;
-        el.style.borderColor = 'rgba(255,255,255,0.06)';
-        el.style.transform = '';
-        el.style.boxShadow = '';
-      }}
-    >
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'inline-block', fontSize: 10, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: accent, background: `${accent}1a`, border: `1px solid ${accent}33`, borderRadius: 4, padding: '3px 8px', marginBottom: 14 }}>{badge}</div>
-        <div style={{ fontSize: 22, fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.1 }}>{titleMain} <span style={{ color: accent }}>{titleAccent}</span></div>
-      </div>
-      <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 24 }}>
-        <span style={{ fontSize: 12, fontWeight: 500, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>{subtitle}</span>
-        <div style={{ width: 28, height: 28, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <svg viewBox="0 0 12 12" fill="none" strokeWidth="1.5" style={{ width: 12, height: 12, stroke: 'rgba(255,255,255,0.45)' }}><path d="M2 10L10 2M10 2H4M10 2v6" /></svg>
-        </div>
-      </div>
-      <div style={{ position: 'absolute', right: -8, bottom: -16, fontSize: 120, fontWeight: 900, letterSpacing: '-0.05em', color: 'rgba(255,255,255,0.025)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>{watermark}</div>
-    </a>
-  );
-}
-
 const SHEET_URLS: Record<string, string> = {
   yzygold:    'https://docs.google.com/spreadsheets/d/12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM/edit?gid=199908479#gid=199908479',
   yegold:     'https://docs.google.com/spreadsheets/d/1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y/edit?gid=34972268#gid=34972268',
@@ -1287,6 +1177,9 @@ export function LandingPage() {
   const { favorites, toggleFavorite } = useFavoriteArtists();
   const isFavorite = (slug: string) => favorites.includes(slug);
 
+  const { items: feedItems } = useLeakFeed();
+  const newCounts = countNewBySlug(feedItems);
+
   const query = searchQuery.trim().toLowerCase();
   const matchesQuery = (c: ArtistConfig) => {
     if (!query) return true;
@@ -1344,353 +1237,156 @@ export function LandingPage() {
   const visibleSmall = showAll ? allSmall : allSmall.slice(0, INITIAL_SMALL);
   const hiddenCount = allSmall.length - INITIAL_SMALL;
 
+  const artistCell = (config: ArtistConfig, variant: CardVariant = 'small') => (
+    <div key={config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      <EditorialArtistCard config={config} showPhoto={showPhotos} variant={variant} isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
+      <div style={{ display: 'flex', gap: 6 }}>
+        {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
+        <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
+      </div>
+    </div>
+  );
+
+  const scrollToTrackers = () => document.getElementById('all-trackers')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
   return (
     <>
-    <div style={{
-      minHeight: '100vh',
-      background: '#050505',
-      color: '#fff',
-      fontFamily: "'Inter', system-ui, sans-serif",
-      WebkitFontSmoothing: 'antialiased',
-      padding: '16px 24px 48px',
-      // iOS PWA (standalone) renders behind the status bar / Dynamic Island because of
-      // viewport-fit=cover + apple-mobile-web-app-status-bar-style=black-translucent.
-      // Offset the top so the header (logo, gear, game buttons) stays reachable.
-      paddingTop: 'max(16px, calc(env(safe-area-inset-top) + 8px))',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    }}>
+    <div className="home-root">
       {showSettings && <LandingSettingsPanel onClose={() => setShowSettings(false)} />}
       {showConsent && <AuthModal onGoogle={signInWithGoogle} onSignedIn={signIn} onClose={() => setShowConsent(false)} />}
 
-      <header style={{ textAlign: 'center', marginBottom: 40, width: '100%', maxWidth: 900, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: 8 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-            <a
-              href="/guess"
-              title="Play Leakle"
-              style={{
-                background: 'rgba(255,215,0,0.08)', border: '1px solid rgba(255,215,0,0.35)',
-                borderRadius: 8, padding: '8px 12px', cursor: 'pointer', color: '#FFD700',
-                display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 700,
-                textDecoration: 'none', transition: 'background 0.15s', flexShrink: 0,
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,215,0,0.18)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,215,0,0.08)'; }}
-            >
-              🎧 <span className="game-btn-label">Leakle</span>
-            </a>
-          </div>
-          <button
-            onClick={() => setShowSettings(true)}
-            style={{
-              background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: 8, padding: '8px', cursor: 'pointer', color: 'rgba(255,255,255,0.5)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              transition: 'background 0.15s, color 0.15s', flexShrink: 0,
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.1)'; (e.currentTarget as HTMLButtonElement).style.color = '#fff'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.05)'; (e.currentTarget as HTMLButtonElement).style.color = 'rgba(255,255,255,0.5)'; }}
-          >
-            <GearIcon />
-          </button>
-        </div>
-        <img
-          src="/logo.png"
-          alt="UNVAULTED"
-          style={{ height: 'auto', width: 'clamp(160px, 28vw, 280px)' }}
-          onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
-        />
-      </header>
+      <HomeSidebar following={favoriteConfigs} newCounts={newCounts} onAddFollow={scrollToTrackers} />
 
-      <main style={{ width: '100%', maxWidth: 900, display: 'flex', flexDirection: 'column', gap: 8 }}>
-        <div style={{ position: 'relative', width: '100%' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-            style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            placeholder="Search artists..."
-            style={{
-              width: '100%', padding: '11px 14px 11px 38px', borderRadius: 10,
-              background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)',
-              color: '#fff', fontSize: 14, fontFamily: 'inherit', outline: 'none',
-            }}
-          />
-        </div>
-
-        {!query && (
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 2 }}>
-            {SORT_OPTIONS.map(opt => {
-              const active = sortMode === opt.id;
-              return (
-                <button
-                  key={opt.id}
-                  onClick={() => setSortMode(opt.id)}
-                  style={{
-                    padding: '6px 12px', borderRadius: 8, cursor: 'pointer',
-                    fontSize: 12, fontWeight: 600, letterSpacing: '0.02em',
-                    border: '1px solid',
-                    borderColor: active ? 'rgba(255,215,0,0.5)' : 'rgba(255,255,255,0.1)',
-                    background: active ? 'rgba(255,215,0,0.12)' : 'rgba(255,255,255,0.04)',
-                    color: active ? '#FFD700' : 'rgba(255,255,255,0.55)',
-                    transition: 'all 0.15s',
-                  }}
-                >
-                  {opt.label}
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {!query && sortMode === 'featured' && favoriteConfigs.length > 0 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>Favorites</span>
-            <div className="grid-small">
-              {favoriteConfigs.map(config => (
-                <div key={config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
-                  <div style={{ display: 'flex', gap: 6 }}>
-                    {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                    <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {query ? (
-          <div className="grid-small">
-            {searchResults!.length === 0 ? (
-              <span style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '24px 0', fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>No artists found</span>
-            ) : (
-              searchResults!.map(config => (
-                <div key={config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
-                  <div style={{ display: 'flex', gap: 6 }}>
-                    {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                    <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-        ) : sortMode !== 'featured' ? (
-          <div className="grid-small">
-            {sortedList.map(config => (
-              <div key={config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <EditorialArtistCard config={config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
-                <div style={{ display: 'flex', gap: 6 }}>
-                  {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                  <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <>
-            {/* Featured on the left, 2×2 grid of pinned cards on the right */}
-            <div className="grid-top">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <EditorialArtistCard config={featured} showPhoto={showPhotos} variant="featured" isFavorite={isFavorite(featured.slug)} onToggleFavorite={toggleFavorite} />
-                <div style={{ display: 'flex', gap: 6 }}>
-                  {SHEET_URLS[featured.slug] && <SheetButton href={SHEET_URLS[featured.slug]} accent={featured.accentColor} />}
-                  <ShareButton url={`${window.location.origin}/${featured.slug}`} accent={featured.accentColor} />
-                </div>
-              </div>
-              <div className="grid-pinned">
-                {topRight.map(config => (
-                  <div key={config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    <EditorialArtistCard config={config} showPhoto={showPhotos} variant="medium" isFavorite={isFavorite(config.slug)} onToggleFavorite={toggleFavorite} />
-                    <div style={{ display: 'flex', gap: 6 }}>
-                      {SHEET_URLS[config.slug] && <SheetButton href={SHEET_URLS[config.slug]} accent={config.accentColor} />}
-                      <ShareButton url={`${window.location.origin}/${config.slug}`} accent={config.accentColor} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Row 2+: remaining artists in a 4-col grid, collapsible */}
-            <div className="grid-small">
-              {visibleSmall.map(item =>
-                item.type === 'artist' ? (
-                  <div key={item.config.slug} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    <EditorialArtistCard config={item.config} showPhoto={showPhotos} variant="small" isFavorite={isFavorite(item.config.slug)} onToggleFavorite={toggleFavorite} />
-                    <div style={{ display: 'flex', gap: 6 }}>
-                      {SHEET_URLS[item.config.slug] && <SheetButton href={SHEET_URLS[item.config.slug]} accent={item.config.accentColor} />}
-                      <ShareButton url={`${window.location.origin}/${item.config.slug}`} accent={item.config.accentColor} />
-                    </div>
-                  </div>
-                ) : (
-                  <div key={item.logoAlt} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    <ExternalSmallCard
-                      href={item.href}
-                      label={item.label}
-                      logoSrc={item.logoSrc}
-                      logoAlt={item.logoAlt}
-                      accent={item.accent}
-                      photoSrc={showPhotos ? item.photo : undefined}
-                    />
-                    <div style={{ display: 'flex', gap: 6 }}>
-                      <SheetButton href={item.href} accent={item.accent} />
-                      <ShareButton url={item.href} accent={item.accent} />
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
-
-            {hiddenCount > 0 && (
-              <button
-                onClick={() => setShowAll(v => !v)}
-                style={{
-                  alignSelf: 'center', padding: '10px 24px', borderRadius: 10,
-                  background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)',
-                  color: 'rgba(255,255,255,0.5)', fontSize: 13, fontWeight: 600,
-                  letterSpacing: '0.04em', cursor: 'pointer',
-                  transition: 'background 0.15s, color 0.15s, border-color 0.15s',
-                }}
-                onMouseEnter={e => { const b = e.currentTarget; b.style.background = 'rgba(255,255,255,0.08)'; b.style.color = '#fff'; b.style.borderColor = 'rgba(255,255,255,0.2)'; }}
-                onMouseLeave={e => { const b = e.currentTarget; b.style.background = 'rgba(255,255,255,0.04)'; b.style.color = 'rgba(255,255,255,0.5)'; b.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-              >
-                {showAll ? 'Show less' : `Show ${hiddenCount} more trackers`}
+      <div className="home-main">
+        <header className="home-topbar">
+          <img src="/logo.png" alt="UNVAULTED" className="home-mobile-logo" onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <label className="home-search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
+            </svg>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder={`Search ${gridList.length} trackers`}
+              aria-label="Search trackers"
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery('')} aria-label="Clear search" className="home-icon-btn" style={{ border: 0 }}>
+                <X size={16} />
               </button>
             )}
+          </label>
+          <div className="home-topbar-actions">
+            {user && <AlertsBell />}
+            {user ? (
+              <a href={`/u/${encodeURIComponent(user.username)}`} title="Your public profile" className="home-avatar">
+                {user.username.slice(0, 1).toUpperCase()}
+              </a>
+            ) : (
+              <button onClick={() => setShowConsent(true)} className="home-ghost-btn">
+                <LogIn size={14} /> Sign in
+              </button>
+            )}
+            <button onClick={() => setShowSettings(true)} aria-label="Settings" className="home-icon-btn home-icon-btn-lg">
+              <GearIcon />
+            </button>
+          </div>
+        </header>
+
+        <nav className="home-quicklinks" aria-label="Quick links">
+          {[['/foryou', 'For You'], ['/playlists', 'Playlists'], ['/rooms', 'Rooms'], ['/guess', 'Leakle'], ['/listening', 'Your Listening']].map(([href, label]) => (
+            <SpaLink key={href} href={href} className="home-pill">{label}</SpaLink>
+          ))}
+        </nav>
+
+        {query ? (
+          <section className="home-section">
+            <div className="home-section-head">
+              <h2 className="home-h2">Trackers matching “{searchQuery.trim()}”</h2>
+            </div>
+            <div className="grid-small">
+              {searchResults!.length === 0 ? (
+                <span style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '24px 0', fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>No artists found</span>
+              ) : searchResults!.map(config => artistCell(config))}
+            </div>
+          </section>
+        ) : (
+          <>
+            <ContinueListening />
+
+            <div className="home-two-col">
+              <WhatsNewFeed
+                slugs={favorites.length ? favorites : undefined}
+                title={favorites.length ? 'New from artists you follow' : 'Recently leaked'}
+                subtitle={favorites.length ? `${favorites.length} followed` : 'across all trackers'}
+              />
+              <ExploreTiles />
+            </div>
+
+            {favoriteConfigs.length > 0 && (
+              <section className="home-section home-mobile-only">
+                <div className="home-section-head"><h2 className="home-h2">Following</h2></div>
+                <div className="grid-small">{favoriteConfigs.map(config => artistCell(config))}</div>
+              </section>
+            )}
+
+            <section className="home-section" id="all-trackers">
+              <div className="home-section-head" style={{ flexWrap: 'wrap', gap: 12 }}>
+                <h2 className="home-h2">All trackers <span style={{ fontWeight: 400, color: 'rgba(255,255,255,0.5)' }}>{gridList.length}</span></h2>
+                <div role="group" aria-label="Sort trackers" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                  {SORT_OPTIONS.map(opt => (
+                    <button
+                      key={opt.id}
+                      onClick={() => setSortMode(opt.id)}
+                      aria-pressed={sortMode === opt.id}
+                      className={`home-chip${sortMode === opt.id ? ' is-on' : ''}`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {sortMode !== 'featured' ? (
+                <div className="grid-small">{sortedList.map(config => artistCell(config))}</div>
+              ) : (
+                <>
+                  <div className="grid-top">
+                    {artistCell(featured, 'featured')}
+                    <div className="grid-pinned">{topRight.map(config => artistCell(config, 'medium'))}</div>
+                  </div>
+                  <div className="grid-small">{visibleSmall.map(item => artistCell(item.config))}</div>
+                  {hiddenCount > 0 && (
+                    <button onClick={() => setShowAll(v => !v)} className="home-ghost-btn" style={{ alignSelf: 'center' }}>
+                      {showAll ? 'Show less' : `Show ${hiddenCount} more trackers`}
+                    </button>
+                  )}
+                </>
+              )}
+            </section>
           </>
         )}
-      </main>
 
-      <div style={{ width: '100%', maxWidth: 900, marginTop: 8, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 8 }}>
-        <BigLinkCard
-          href="/my-tracker"
-          accent="#C9A224"
-          badge="Custom"
-          titleMain="MY"
-          titleAccent="TRACKER"
-          subtitle="Link your own Google Sheet"
-          watermark="MTR"
-        />
-        <BigLinkCard
-          href="/community"
-          accent="#22C55E"
-          badge="New"
-          titleMain="BUILD A"
-          titleAccent="TRACKER"
-          subtitle="Create your own & browse community trackers"
-          watermark="CT"
-        />
-        <BigLinkCard
-          href="/yeditsgold"
-          accent="#FFD700"
-          badge="Edits"
-          titleMain="YEDITS"
-          titleAccent="GOLD"
-          subtitle="Browse fan edits"
-          watermark="YE"
-        />
-        <BigLinkCard
-          href="/playlists"
-          accent="#F43F5E"
-          badge="Music"
-          titleMain="YOUR"
-          titleAccent="PLAYLISTS"
-          subtitle="Favorites & custom playlists from every tracker"
-          watermark="PL"
-        />
-        <BigLinkCard
-          href="/tierlist"
-          accent="#FF5C8A"
-          badge="Rank"
-          titleMain="TIER"
-          titleAccent="LIST"
-          subtitle="Rank songs from any artist"
-          watermark="TL"
-        />
-        <BigLinkCard
-          href="/rooms"
-          accent="#22C55E"
-          badge="Live"
-          titleMain="LISTENING"
-          titleAccent="ROOMS"
-          subtitle="Listen together with a shared queue & chat"
-          watermark="LR"
-        />
-        <BigLinkCard
-          href="/changes"
-          accent="#F5C518"
-          badge="New"
-          titleMain="TRACKER"
-          titleAccent="CHANGELOG"
-          subtitle="Every new song & link, with alerts"
-          watermark="CL"
-        />
-        <BigLinkCard
-          href="/producers"
-          accent="#F59E0B"
-          badge="New"
-          titleMain="PRODUCERS"
-          titleAccent="& FEATURES"
-          subtitle="Every song, beat and verse, across every artist"
-          watermark="PR"
-        />
-        <BigLinkCard
-          href="/archive"
-          accent="#22D3EE"
-          badge="New"
-          titleMain="TRACKER"
-          titleAccent="ARCHIVE"
-          subtitle="Every tracker copy, the Leaktionary, templates & more"
-          watermark="TA"
-        />
-        <BigLinkCard
-          href="/foryou"
-          accent="#7C5CFF"
-          badge="New"
-          titleMain="FOR"
-          titleAccent="YOU"
-          subtitle="A feed picked from what you play"
-          watermark="FY"
-        />
-        <BigLinkCard
-          href="/listening"
-          accent="#7C5CFF"
-          badge="Stats"
-          titleMain="YOUR"
-          titleAccent="LISTENING"
-          subtitle="See your play stats"
-          watermark="ST"
-        />
-        <BigLinkCard
-          href="/download"
-          accent="#4F9DFF"
-          badge="App"
-          titleMain="DOWNLOAD"
-          titleAccent="APP"
-          subtitle="Desktop & mobile apps"
-          watermark="APP"
-        />
-      </div>
+        <footer className="home-footer">
+          <button onClick={() => setSocialOpen(true)} className="home-ghost-btn">Community</button>
+          {isAdmin && (
+            <a href="/admin" className="home-ghost-btn" style={{ color: '#60a5fa' }}>
+              <ShieldCheck size={14} /> Admin
+            </a>
+          )}
+          {user && <button onClick={signOut} className="home-ghost-btn">Sign out</button>}
+          <span style={{ marginLeft: 'auto', fontSize: 12, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>© 2026 UNVAULTED</span>
+        </footer>
 
-      <div style={{ width: '100%', maxWidth: 900, marginTop: 24, display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-        <button onClick={() => setSocialOpen(true)}
-          style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}>
-          Community
-        </button>
         {socialOpen && (
           <div onClick={() => setSocialOpen(false)}
             style={{ position: 'fixed', inset: 0, zIndex: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(6px)' }}>
             <div onClick={e => e.stopPropagation()}
               style={{ position: 'relative', background: 'rgba(18,18,20,0.97)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 20, padding: 24, display: 'flex', flexDirection: 'column', gap: 12, width: 280 }}>
-              <button onClick={() => setSocialOpen(false)}
-                style={{ position: 'absolute', top: 10, right: 10, background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', fontSize: 18, lineHeight: 1 }}>✕</button>
-              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', margin: 0 }}>Community</p>
+              <button onClick={() => setSocialOpen(false)} aria-label="Close"
+                style={{ position: 'absolute', top: 10, right: 10, background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 18, lineHeight: 1 }}>✕</button>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', margin: 0 }}>Community</p>
               <a href="https://discord.gg/ZE5gHFYYGy" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', borderRadius: 12, background: 'rgba(88,101,242,0.15)', border: '1px solid rgba(88,101,242,0.25)', color: '#5865F2', textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>
                 <SiDiscord style={{ width: 18, height: 18 }} /> Discord
@@ -1710,70 +1406,113 @@ export function LandingPage() {
             </div>
           </div>
         )}
-        {user ? (
-          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <AlertsBell />
-            <a
-              href={`/u/${encodeURIComponent(user.username)}`}
-              title="View your public profile"
-              style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 600, textDecoration: 'none', padding: '10px 4px' }}
-            >
-              {user.username}
-            </a>
-            {isAdmin && (
-              <a
-                href="/admin"
-                style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 16px', borderRadius: 10, background: 'rgba(96,165,250,0.12)', border: '1px solid rgba(96,165,250,0.3)', color: '#60a5fa', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textDecoration: 'none' }}
-              >
-                <ShieldCheck size={14} /> Admin
-              </a>
-            )}
-            <button
-              onClick={signOut}
-              style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(201,162,36,0.12)', border: '1px solid rgba(201,162,36,0.3)', color: '#C9A224', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}
-            >
-              Sign Out
-            </button>
-          </div>
-        ) : (
-          <button
-            onClick={() => setShowConsent(true)}
-            style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', cursor: 'pointer' }}
-          >
-            <LogIn size={14} /> Sign In
-          </button>
-        )}
       </div>
 
-      <footer style={{ marginTop: 48, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-          © 2026 UNVAULTED
-        </span>
-      </footer>
-
       <style>{`
-        .grid-top {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-          gap: 8px;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .home-root {
+          min-height: 100vh; background: #0B0B0C; color: #F2F1EE;
+          font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+          display: flex; align-items: flex-start;
         }
-        .grid-pinned {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-          gap: 8px;
+        .home-root a { color: inherit; text-decoration: none; }
+        .home-sidebar {
+          position: sticky; top: 0; height: 100vh; overflow-y: auto; flex: 0 0 248px;
+          display: flex; flex-direction: column; gap: 28px; padding: 24px 14px;
+          padding-top: max(24px, calc(env(safe-area-inset-top) + 12px));
+          background: #0E0E10; border-right: 1px solid rgba(255,255,255,0.07);
         }
-        .grid-small {
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 8px;
+        .home-logo { padding: 0 8px; display: block; }
+        .home-nav-link {
+          display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px;
+          border-radius: 10px; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75) !important;
+          transition: background 0.15s, color 0.15s;
+        }
+        .home-nav-link:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+        .home-nav-link.is-active { background: #F2F1EE; color: #0B0B0C !important; }
+        .home-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+        .home-new-pill { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: rgba(245,165,36,0.15); color: #F5A524; white-space: nowrap; }
+        .home-icon-btn {
+          display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;
+          border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); background: transparent;
+          color: rgba(255,255,255,0.7); cursor: pointer; flex-shrink: 0;
+        }
+        .home-icon-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .home-icon-btn-lg { width: 44px; height: 44px; border-radius: 10px; }
+        .home-main {
+          flex: 1 1 0; min-width: 0; max-width: 1280px; margin: 0 auto;
+          padding: 24px clamp(16px, 4vw, 48px) 48px;
+          padding-top: max(24px, calc(env(safe-area-inset-top) + 12px));
+          display: flex; flex-direction: column; gap: 40px;
+        }
+        .home-topbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .home-mobile-logo { display: none; height: 36px; width: auto; }
+        .home-search {
+          flex: 1 1 320px; max-width: 640px; display: flex; align-items: center; gap: 10px;
+          height: 48px; padding: 0 14px; border-radius: 12px; background: #16161A;
+          border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);
+        }
+        .home-search:focus-within { border-color: rgba(255,255,255,0.3); }
+        .home-search input { flex: 1; min-width: 0; background: transparent; border: 0; outline: none; color: #fff; font: inherit; font-size: 15px; }
+        .home-topbar-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+        .home-avatar { width: 44px; height: 44px; border-radius: 999px; background: #2A2A2F; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+        .home-ghost-btn {
+          display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px;
+          border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: transparent;
+          color: rgba(255,255,255,0.85); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+        }
+        .home-ghost-btn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+        .home-quicklinks { display: none; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-top: -24px; }
+        .home-quicklinks::-webkit-scrollbar { display: none; }
+        .home-pill { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.14); font-size: 14px; }
+        .home-section { display: flex; flex-direction: column; gap: 14px; }
+        .home-section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+        .home-h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+        .home-head-link { font-size: 14px; color: rgba(255,255,255,0.6) !important; }
+        .home-head-link:hover { color: #fff !important; }
+        .home-card { border-radius: 14px; background: #141417; border: 1px solid rgba(255,255,255,0.07); transition: background 0.15s, border-color 0.15s; }
+        .home-card:hover { background: #1A1A1E; border-color: rgba(255,255,255,0.16); }
+        .home-resume-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+        .home-resume-card { display: flex; align-items: center; gap: 14px; padding: 10px; }
+        .home-resume-art { width: 64px; height: 64px; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+        .home-ellipsis { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .home-two-col { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 32px; align-items: start; }
+        .home-two-col > :only-child { grid-column: 1 / -1; }
+        .home-explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+        .home-explore-tile { display: flex; flex-direction: column; gap: 8px; padding: 14px; min-height: 124px; }
+        .home-explore-icon { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.06); color: #F5A524; display: flex; align-items: center; justify-content: center; }
+        .home-chip {
+          min-height: 36px; padding: 0 14px; border-radius: 999px; font: inherit; font-size: 13px; font-weight: 500;
+          border: 1px solid rgba(255,255,255,0.14); background: transparent; color: rgba(255,255,255,0.8); cursor: pointer;
+        }
+        .home-chip.is-on { background: #F2F1EE; border-color: #F2F1EE; color: #0B0B0C; font-weight: 600; }
+        .home-mobile-only { display: none; }
+        .home-footer { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); }
+        .grid-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+        .grid-pinned { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+        .grid-small { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+        @media (min-width: 1280px) {
+          .grid-small { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+        }
+        @media (max-width: 1100px) {
+          .home-two-col { grid-template-columns: minmax(0, 1fr); }
+        }
+        @media (max-width: 900px) {
+          .home-sidebar { display: none; }
+          .home-mobile-logo { display: block; }
+          .home-quicklinks { display: flex; }
+          .home-mobile-only { display: flex; }
+          .home-main { gap: 32px; }
         }
         @media (max-width: 600px) {
-          .grid-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+          .home-search { order: 3; flex-basis: 100%; }
           .grid-top > *:first-child { grid-column: 1 / -1; }
-          .grid-top > *:last-child { grid-column: 1 / -1; }
+          .grid-top { grid-template-columns: minmax(0, 1fr); }
           .grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .home-explore-grid { display: flex; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+          .home-explore-grid::-webkit-scrollbar { display: none; }
+          .home-explore-tile { flex: 0 0 168px; min-height: 0; }
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
       `}</style>
     </div>
     </>

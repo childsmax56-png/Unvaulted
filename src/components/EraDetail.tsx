@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
-import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Film, Disc3, Layers, Star, Pencil, CheckSquare, Square, ListMusic, Plus } from 'lucide-react';
+import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Film, Disc3, Layers, Star, Pencil, CheckSquare, Square, ListMusic, Plus, Shuffle } from 'lucide-react';
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
@@ -25,6 +25,64 @@ import { useDeadLinks, isDeadLink } from '../linkStatus';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { usePlaylists } from '../PlaylistContext';
 import { useIsClamped } from '../hooks/useIsClamped';
+import { classifySong, countAvailability, eraAvailability, AVAILABILITY_META, type Availability } from '../availability';
+import { AvailabilityBar } from './AvailabilityBar';
+
+// Tracklist availability filter. 'available' (the default for real eras) hides
+// songs that never leaked behind a "show them" row instead of mixing them in.
+type AvailFilter = 'available' | Availability | 'all';
+const AVAIL_FILTERS: { id: AvailFilter; label: string }[] = [
+  { id: 'available', label: 'Leaked' },
+  { id: 'full', label: 'Full' },
+  { id: 'partial', label: 'Partial' },
+  { id: 'snippet', label: 'Snippets' },
+  { id: 'none', label: 'Not leaked' },
+  { id: 'all', label: 'Everything' },
+];
+function matchesAvail(f: AvailFilter, a: Availability): boolean {
+  if (f === 'all') return true;
+  if (f === 'available') return a !== 'none';
+  return f === a;
+}
+const AGGREGATE_ERAS = new Set(['Recent Leaks', 'Recent Production Leaks', 'Favorites']);
+
+// Horizontal era switcher pinned above the era header: jump between eras
+// without bouncing back to the grid, with each era's availability at a glance.
+function EraTimelineStrip({ eras, current, onSelect }: { eras: Era[]; current: string; onSelect: (era: Era) => void }) {
+  const activeRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    activeRef.current?.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }, [current]);
+  return (
+    <nav aria-label="Eras" className="flex gap-2 overflow-x-auto no-scrollbar px-4 md:px-8 py-3 border-b border-white/5 bg-black/30">
+      {eras.map(e => {
+        const active = e.name === current;
+        const img = CUSTOM_IMAGES[e.name] || e.image;
+        const counts = eraAvailability(e);
+        return (
+          <button
+            key={e.name}
+            ref={active ? activeRef : undefined}
+            onClick={() => !active && onSelect({ ...e, image: img })}
+            aria-current={active ? 'true' : undefined}
+            className={`shrink-0 w-[132px] flex flex-col gap-1.5 p-2 rounded-lg text-left transition-colors cursor-pointer border ${active ? 'bg-white/10 border-[var(--theme-color)]' : 'bg-white/[0.03] border-white/5 hover:bg-white/[0.07]'}`}
+          >
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-8 h-8 rounded shrink-0 overflow-hidden bg-white/5">
+                {img && <Img w={80} src={img} alt="" className="w-full h-full object-cover" />}
+              </div>
+              <div className="min-w-0">
+                <div className="text-xs font-semibold text-white truncate">{e.name}</div>
+                <div className="font-mono text-[10px] text-white/50">{(ALBUM_RELEASE_DATES[e.name] || '').match(/\d{4}/)?.[0] ?? ''}</div>
+              </div>
+            </div>
+            {counts.total > 0 && <AvailabilityBar counts={counts} height={4} />}
+          </button>
+        );
+      })}
+    </nav>
+  );
+}
 
 function normalizeName(name: string): string {
   return name
@@ -209,7 +267,9 @@ export const handleShareSilent = (song: Song, era: Era): string => {
   return `${baseUrl}?song=${songParam}`;
 };
 
-export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
+export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra, timelineEras }: { key?: string, timelineEras?: Era[], era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
+  const isAggregate = AGGREGATE_ERAS.has(era.name);
+  const [availFilter, setAvailFilter] = useState<AvailFilter>(isAggregate ? 'all' : 'available');
   const { settings, updateSettings } = useSettings();
   const deadLinks = useDeadLinks(activeConfig.slug);
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
@@ -565,7 +625,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
     handleAddSelectedToTierList(null, newTierName.trim());
   };
 
-  const processedCategories = useMemo(() => {
+  const filteredCategories = useMemo(() => {
     return Object.entries(era.data || {}).map(([category, songs]) => {
       let processedSongs = songs.filter(song => {
         if (!matchesFilters(song, searchQuery, filters)) return false;
@@ -644,6 +704,16 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
     }).filter(c => c.songs.length > 0);
   }, [era.data, filters, searchQuery, showLatestOnly, showFirstOnly]);
 
+  const availCounts = useMemo(() => countAvailability(filteredCategories.flatMap(c => c.songs)), [filteredCategories]);
+
+  const processedCategories = useMemo(() => {
+    return filteredCategories.map(c => {
+      const songs = c.songs.filter(s => matchesAvail(availFilter, classifySong(s)));
+      const hiddenNone = availFilter === 'available' ? c.songs.length - songs.length : 0;
+      return { ...c, songs, hiddenNone };
+    }).filter(c => c.songs.length > 0 || c.hiddenNone > 0);
+  }, [filteredCategories, availFilter]);
+
   const allFilteredPlayableSongs = useMemo(() => {
     return processedCategories.flatMap(c => c.songs).filter(song => {
       const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
@@ -661,6 +731,9 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto overflow-x-hidden pb-64"
       >
+        {timelineEras && timelineEras.length > 1 && onNavigateToEra && timelineEras.some(e => e.name === era.name) && (
+          <EraTimelineStrip eras={timelineEras} current={era.name} onSelect={onNavigateToEra} />
+        )}
         <div
           className={`p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5${!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? ' bg-center md:bg-right' : ''}`}
           style={!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? {
@@ -881,53 +954,40 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
               </div>
             )}
             {era.extra && <p className="text-white/60 text-sm max-w-2xl">{formatTextWithTags(era.extra)}</p>}
-            {era.fileInfo && era.fileInfo.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4">
-                {era.fileInfo.map((info, i) => (
-                  <span key={i} className="text-[10px] px-2 py-1 rounded bg-white/10 text-white/70">{info}</span>
-                ))}
+            {!isAggregate && availCounts.total > 0 && (
+              <div className="mt-4 flex flex-col gap-2 max-w-xl">
+                <AvailabilityBar counts={availCounts} />
+                <p className="text-sm text-white/70">
+                  {availCounts.total} songs tracked — <span className="text-white">{availCounts.full}</span> full
+                  {availCounts.partial > 0 && <>, {availCounts.partial} partial</>}
+                  {availCounts.snippet > 0 && <>, {availCounts.snippet} snippets</>}
+                  {availCounts.none > 0 && <>, {availCounts.none} never leaked</>}.
+                </p>
+              </div>
+            )}
+            {allFilteredPlayableSongs.length > 0 && !isSelectMode && (
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => onPlaySong(allFilteredPlayableSongs[0], era, allFilteredPlayableSongs)}
+                  className="flex items-center gap-2 h-12 px-6 rounded-full bg-[var(--theme-color)] text-black text-[15px] font-semibold hover:brightness-110 transition cursor-pointer"
+                >
+                  <Play className="w-4 h-4" fill="currentColor" />
+                  Play {allFilteredPlayableSongs.length} {allFilteredPlayableSongs.length === 1 ? 'song' : 'songs'}
+                </button>
+                {allFilteredPlayableSongs.length > 1 && (
+                  <button
+                    onClick={() => {
+                      const pick = allFilteredPlayableSongs[Math.floor(Math.random() * allFilteredPlayableSongs.length)];
+                      onPlaySong(pick, era, allFilteredPlayableSongs);
+                    }}
+                    className="flex items-center gap-2 h-12 px-5 rounded-full border border-white/15 text-white text-sm hover:bg-white/10 transition cursor-pointer"
+                  >
+                    <Shuffle className="w-4 h-4" /> Shuffle
+                  </button>
+                )}
               </div>
             )}
 
-            {era.name !== 'Recent Leaks' && era.name !== 'Favorites' && (
-              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => {
-                      setShowLatestOnly(!showLatestOnly);
-                      if (!showLatestOnly) setShowFirstOnly(false);
-                    }}
-                    className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${showLatestOnly ? 'bg-[var(--theme-color)]' : 'bg-white/20'}`}
-                  >
-                    <span className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${showLatestOnly ? 'translate-x-4' : 'translate-x-0'}`} />
-                  </button>
-                  <span className="text-sm font-medium text-white/80 cursor-pointer" onClick={() => {
-                      setShowLatestOnly(!showLatestOnly);
-                      if (!showLatestOnly) setShowFirstOnly(false);
-                  }}>
-                    Show Latest Versions Only
-                  </span>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => {
-                      setShowFirstOnly(!showFirstOnly);
-                      if (!showFirstOnly) setShowLatestOnly(false);
-                    }}
-                    className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${showFirstOnly ? 'bg-[var(--theme-color)]' : 'bg-white/20'}`}
-                  >
-                    <span className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${showFirstOnly ? 'translate-x-4' : 'translate-x-0'}`} />
-                  </button>
-                  <span className="text-sm font-medium text-white/80 cursor-pointer" onClick={() => {
-                      setShowFirstOnly(!showFirstOnly);
-                      if (!showFirstOnly) setShowLatestOnly(false);
-                  }}>
-                    Show First Versions Only
-                  </span>
-                </div>
-              </div>
-            )}
           </div>
         </div>
 
@@ -946,8 +1006,47 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             }
           ) : undefined}
         >
-        <div className={`px-6 md:px-8 pt-8 max-w-6xl mx-auto${!settings.disableEraThemes && ERA_THEMES[era.name]?.bottomBanner ? ' drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]' : ''}`}>
-          {processedCategories.map(({ category, songs: processedSongs }) => {
+        <div className={`px-6 md:px-8 pt-6 max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3`}>
+          {!isAggregate && availCounts.total > 0 && (
+            <div role="group" aria-label="Show songs" className="flex flex-wrap gap-1.5">
+              {AVAIL_FILTERS.map(({ id, label }) => {
+                const n = id === 'all' ? availCounts.total : id === 'available' ? availCounts.total - availCounts.none : availCounts[id];
+                if (n === 0 && id !== 'available' && id !== 'all') return null;
+                const on = availFilter === id;
+                return (
+                  <button
+                    key={id}
+                    onClick={() => setAvailFilter(id)}
+                    aria-pressed={on}
+                    className={`flex items-center gap-1.5 h-9 px-3.5 rounded-full text-[13px] font-semibold transition-colors cursor-pointer border ${on ? 'bg-white text-black border-white' : 'border-white/15 text-white/80 hover:bg-white/10'}`}
+                  >
+                    {id !== 'available' && id !== 'all' && <span className="w-2 h-2 rounded-full" style={{ background: AVAILABILITY_META[id].color }} />}
+                    {label} <span className="font-normal opacity-70">{n}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          {!isAggregate && (
+            <div role="group" aria-label="Versions" className="flex items-center gap-1 p-1 rounded-full bg-white/5 border border-white/10 text-[13px]">
+              {([['all', 'All versions'], ['latest', 'Latest'], ['first', 'First']] as const).map(([id, label]) => {
+                const on = id === 'latest' ? showLatestOnly : id === 'first' ? showFirstOnly : !showLatestOnly && !showFirstOnly;
+                return (
+                  <button
+                    key={id}
+                    aria-pressed={on}
+                    onClick={() => { setShowLatestOnly(id === 'latest'); setShowFirstOnly(id === 'first'); }}
+                    className={`h-7 px-3 rounded-full font-medium transition-colors cursor-pointer ${on ? 'bg-white/15 text-white' : 'text-white/60 hover:text-white'}`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+        <div className={`px-6 md:px-8 pt-6 max-w-6xl mx-auto${!settings.disableEraThemes && ERA_THEMES[era.name]?.bottomBanner ? ' drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]' : ''}`}>
+          {processedCategories.map(({ category, songs: processedSongs, hiddenNone }) => {
             return (
               <div key={category} className="mb-10">
                 <h3 className="text-lg font-bold text-white mb-4 pb-2 border-b border-white/10">{category}</h3>
@@ -1331,6 +1430,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                       </Fragment>
                     );
                   })}
+
+                  {hiddenNone > 0 && (
+                    <button
+                      onClick={() => setAvailFilter('all')}
+                      className="mt-2 w-full min-h-[48px] rounded-md border border-dashed border-white/10 text-sm text-white/50 hover:text-white hover:border-white/25 transition-colors cursor-pointer"
+                    >
+                      {hiddenNone} {hiddenNone === 1 ? 'song' : 'songs'} never leaked — names &amp; notes only. Show them
+                    </button>
+                  )}
 
                   {era.name === 'Recent Leaks' && visibleCount < processedSongs.length && (
                     <div className="mt-8 mb-4 flex justify-center w-full">
