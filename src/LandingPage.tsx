@@ -1691,11 +1691,11 @@ export function LandingPage() {
               <button onClick={() => setSocialOpen(false)}
                 style={{ position: 'absolute', top: 10, right: 10, background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', fontSize: 18, lineHeight: 1 }}>✕</button>
               <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', margin: 0 }}>Community</p>
-              <a href="https://discord.gg/ZE5gHFYYGy" target="_blank" rel="noopener noreferrer"
+              <a href="https://discord.gg/GE5bMkTcV5" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', borderRadius: 12, background: 'rgba(88,101,242,0.15)', border: '1px solid rgba(88,101,242,0.25)', color: '#5865F2', textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>
                 <SiDiscord style={{ width: 18, height: 18 }} /> Discord
               </a>
-              <a href="https://www.reddit.com/r/2YZY2GOLD/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.reddit.com/r/unvaulted/" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px', borderRadius: 12, background: 'rgba(255,69,0,0.15)', border: '1px solid rgba(255,69,0,0.25)', color: '#FF4500', textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>
                 <SiReddit style={{ width: 18, height: 18 }} /> Reddit
               </a>
