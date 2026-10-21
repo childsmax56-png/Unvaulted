@@ -436,13 +436,13 @@ export function Navbar({ searchQuery, setSearchQuery, filters, setFilters, onHom
                 <X className="w-4 h-4" />
               </button>
               <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">Community</p>
-              <a href="https://discord.gg/ZE5gHFYYGy" target="_blank" rel="noopener noreferrer"
+              <a href="https://discord.gg/GE5bMkTcV5" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all hover:scale-[1.02]"
                 style={{ background: 'rgba(88,101,242,0.15)', color: '#5865F2', border: '1px solid rgba(88,101,242,0.25)' }}>
                 <SiDiscord className="w-5 h-5 flex-shrink-0" />
                 <span className="text-sm font-semibold">Discord</span>
               </a>
-              <a href="https://www.reddit.com/r/2YZY2GOLD/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.reddit.com/r/unvaulted/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all hover:scale-[1.02]"
                 style={{ background: 'rgba(255,69,0,0.15)', color: '#FF4500', border: '1px solid rgba(255,69,0,0.25)' }}>
                 <SiReddit className="w-5 h-5 flex-shrink-0" />

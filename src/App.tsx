@@ -3614,7 +3614,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
               </p>
             )}
             <p className="text-[10px] text-white/30 leading-relaxed mt-1 space-x-3">
-              <a href="https://discord.gg/ZE5gHFYYGy" target="_blank" rel="noopener noreferrer" className="text-[var(--theme-color)]/50 hover:text-[var(--theme-color)] transition-colors underline">Discord</a>
+              <a href="https://discord.gg/GE5bMkTcV5" target="_blank" rel="noopener noreferrer" className="text-[var(--theme-color)]/50 hover:text-[var(--theme-color)] transition-colors underline">Discord</a>
             </p>
           </div>
             );
