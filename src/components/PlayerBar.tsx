@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from 'react';
 import { formatTextWithTags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, ERA_THEMES , Img, looksLikeRealLink} from '../utils';
 import { handleShareSilent } from './EraDetail';
 import { LyricsModal } from './LyricsModal';
+import { SeekBar } from './SeekBar';
 import { useSettings } from '../SettingsContext';
 import { usePlaylists } from '../PlaylistContext';
 import { activeConfig } from '../artists/activeConfig';
@@ -47,10 +48,9 @@ export function PlayerBar({
   const [creatingPlaylist, setCreatingPlaylist] = useState(false);
   const [newPlaylistName, setNewPlaylistName] = useState('');
   const [isDraggingVolume, setIsDraggingVolume] = useState(false);
-  const [isDraggingProgress, setIsDraggingProgress] = useState(false);
+  const [scrubTime, setScrubTime] = useState<number | null>(null);
   const [shareToast, setShareToast] = useState<string | null>(null);
   const volumeRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const playlistMenuRef = useRef<HTMLDivElement>(null);
   const newPlaylistInputRef = useRef<HTMLInputElement>(null);
@@ -125,27 +125,6 @@ export function PlayerBar({
   }, [isDraggingVolume, onVolumeChange]);
 
   useEffect(() => {
-    const handleMouseUp = () => setIsDraggingProgress(false);
-    const handleMouseMove = (e: MouseEvent) => {
-      if (isDraggingProgress && progressRef.current && onSeek && duration) {
-        const rect = progressRef.current.getBoundingClientRect();
-        const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-        onSeek(percent * duration);
-      }
-    };
-
-    if (isDraggingProgress) {
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
-    }
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [isDraggingProgress, onSeek, duration]);
-
-  useEffect(() => {
     if (currentSong || era) {
       const isLyricsDisabled = currentSong?.name.includes('???') || currentSong?.name.toLowerCase().includes('remix') || currentSong?.extra?.toLowerCase().includes('remix') || era?.name.toLowerCase().includes('remix');
       if (isLyricsDisabled && showLyrics) {
@@ -155,15 +134,6 @@ export function PlayerBar({
   }, [currentSong, era, showLyrics]);
 
   if (!currentSong) return null;
-
-  const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
-
-  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!onSeek || !duration || !progressRef.current) return;
-    const rect = progressRef.current.getBoundingClientRect();
-    const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-    onSeek(percent * duration);
-  };
 
   const handleVolumeClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!onVolumeChange || !volumeRef.current) return;
@@ -297,20 +267,8 @@ export function PlayerBar({
             </button>
           </div>
           <div className="w-full flex items-center gap-3 px-2 md:px-0 text-[10px] md:text-[10px] font-mono text-white/50">
-            <span className="w-8 md:w-8 text-right">{formatTime(currentTime)}</span>
-            <div
-              ref={progressRef}
-              className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden cursor-pointer relative group"
-              onMouseDown={(e) => {
-                setIsDraggingProgress(true);
-                handleSeek(e);
-              }}
-            >
-              <div
-                className="absolute top-0 left-0 h-full bg-white transition-all duration-100 ease-linear"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+            <span className="w-8 md:w-8 text-right">{formatTime(scrubTime ?? currentTime)}</span>
+            <SeekBar currentTime={currentTime} duration={duration} onSeek={onSeek} onScrub={setScrubTime} />
             <span className="w-8 md:w-8">{duration ? formatTime(duration) : (currentSong.track_length || '0:00')}</span>
           </div>
         </div>
