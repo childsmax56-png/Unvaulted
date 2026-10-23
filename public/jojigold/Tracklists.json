@@ -2,23 +2,128 @@
  "legend": [],
  "albums": [
   {
-   "era": "",
-   "name": "",
-   "date": "Unknown / Unheard / Partially / Available / Alternate Version Available / Confirmed Version Available",
+   "era": "PINK GUY",
+   "name": "PINK GUY (Bandcamp Release)",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
-   "description": "Unknown / Unheard / Partially / Available / Alternate Version Available / Confirmed Version Available",
+   "description": "",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Anal Beads"
+    },
+    {
+     "num": "#2",
+     "name": "Ramen King"
+    },
+    {
+     "num": "#3",
+     "name": "Bad Words"
+    },
+    {
+     "num": "#4",
+     "name": "Balls"
+    },
+    {
+     "num": "#5",
+     "name": "Big Mama"
+    },
+    {
+     "num": "#6",
+     "name": "Bitches Aint Shit"
+    },
+    {
+     "num": "#7",
+     "name": "Do The Salamander"
+    },
+    {
+     "num": "#8",
+     "name": "Douchebag"
+    },
+    {
+     "num": "#9",
+     "name": "Erectile Dysfunction"
+    },
+    {
+     "num": "#10",
+     "name": "FRIED RICE"
+    },
+    {
+     "num": "#11",
+     "name": "Friendzone"
+    },
+    {
+     "num": "#12",
+     "name": "Fuck The Police (NWA Cover)"
+    },
+    {
+     "num": "#13",
+     "name": "Gibe De Pusi b0ss"
+    },
+    {
+     "num": "#14",
+     "name": "It's Okay To Eat Whale"
+    },
+    {
+     "num": "#15",
+     "name": "Jungle Boy Pt. 1"
+    },
+    {
+     "num": "#16",
+     "name": "Kill Yourself"
+    },
+    {
+     "num": "#17",
+     "name": "Loser"
+    },
+    {
+     "num": "#18",
+     "name": "Tribute to Ronald"
+    },
+    {
+     "num": "#19",
+     "name": "Who's The Sucker"
+    },
+    {
+     "num": "#20",
+     "name": "Dick Pays Rent"
+    },
+    {
+     "num": "#21",
+     "name": "Animal Man"
+    }
+   ]
+  },
+  {
+   "era": "PINK GUY",
+   "name": "PINK GUY (Bonus Track Version)",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "",
    "tracks": []
   },
   {
-   "era": "JOJI [V1]",
-   "name": "JOJI",
-   "date": "Joji confirmed with a YouTube comment that \"They Don't Understand*\" would be on the project.\n\n?. They Don't Understand*\n?. Jungle Boy Pt. 2",
+   "era": "PINK GUY",
+   "name": "PINK GUY",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
-   "description": "Joji confirmed with a YouTube comment that \"They Don't Understand*\" would be on the project.",
+   "description": "",
+   "tracks": []
+  },
+  {
+   "era": "JOJI* [V1]",
+   "name": "JOJI* [V1]\n(Chloe Burbank, Chloe Burbank Volume 1)",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "",
    "tracks": [
     {
      "num": "#?",
@@ -31,9 +136,32 @@
    ]
   },
   {
-   "era": "Chloe Burbank Volume 1 [V2]",
-   "name": "Chloe Burbank Volume 1",
-   "date": "?. Thom\n?. you suck charlie\n?. Miles\n?. Rajvi",
+   "era": "Chloe Burbank",
+   "name": "Chloe Burbank [V2]\n(Chloe Burbank Volume 1)",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Chloe Burbank Tracklist as of 2015.",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Amazonian Pet"
+    },
+    {
+     "num": "#?",
+     "name": "Thom"
+    },
+    {
+     "num": "#?",
+     "name": "USuckCharlie4"
+    }
+   ]
+  },
+  {
+   "era": "Chloe Burbank Volume 1",
+   "name": "Chloe Burbank Volume 1 [V3]\n(Chloe Burbank)",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -41,26 +169,239 @@
    "tracks": [
     {
      "num": "#?",
+     "name": "amazonian pet"
+    },
+    {
+     "num": "#?",
+     "name": "miles"
+    },
+    {
+     "num": "#?",
+     "name": "rajvi"
+    },
+    {
+     "num": "#?",
      "name": "Thom"
     },
     {
      "num": "#?",
      "name": "you suck charlie"
+    }
+   ]
+  },
+  {
+   "era": "Pink Season",
+   "name": "Pink Season",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Hot Nickel Ball on a Pussy"
     },
     {
-     "num": "#?",
-     "name": "Miles"
+     "num": "#2",
+     "name": "Are You Serious"
     },
     {
-     "num": "#?",
-     "name": "Rajvi"
+     "num": "#3",
+     "name": "White Is Right"
+    },
+    {
+     "num": "#4",
+     "name": "I Have a Gun"
+    },
+    {
+     "num": "#5",
+     "name": "Nickelodeon Girls"
+    },
+    {
+     "num": "#6",
+     "name": "STFU"
+    },
+    {
+     "num": "#7",
+     "name": "Gays 4 Donald"
+    },
+    {
+     "num": "#8",
+     "name": "I Do It for My Hood"
+    },
+    {
+     "num": "#9",
+     "name": "Please Stop Calling Me Gay"
+    },
+    {
+     "num": "#10",
+     "name": "She's So Nice"
+    },
+    {
+     "num": "#11",
+     "name": "Please Stop Touching My Willy"
+    },
+    {
+     "num": "#12",
+     "name": "Uber Pussy"
+    },
+    {
+     "num": "#13",
+     "name": "セックス大好き"
+    },
+    {
+     "num": "#14",
+     "name": "Dumplings"
+    },
+    {
+     "num": "#15",
+     "name": "Meme Machine"
+    },
+    {
+     "num": "#16",
+     "name": "Hand on My Gat"
+    },
+    {
+     "num": "#17",
+     "name": "D I C C W E T T 1"
+    },
+    {
+     "num": "#18",
+     "name": "Flex Like David Icke"
+    },
+    {
+     "num": "#19",
+     "name": "High School Blink193"
+    },
+    {
+     "num": "#20",
+     "name": "Rice Balls"
+    },
+    {
+     "num": "#21",
+     "name": "Dora the Explora"
+    },
+    {
+     "num": "#22",
+     "name": "SMD"
+    },
+    {
+     "num": "#23",
+     "name": "Dog Festival Directions"
+    },
+    {
+     "num": "#24",
+     "name": "We Fall Again"
+    },
+    {
+     "num": "#25",
+     "name": "Club Banger 3000"
+    },
+    {
+     "num": "#26",
+     "name": "Help"
+    },
+    {
+     "num": "#27",
+     "name": "Hentai"
+    },
+    {
+     "num": "#28",
+     "name": "Small Dick"
+    },
+    {
+     "num": "#29",
+     "name": "Pink Life"
+    },
+    {
+     "num": "#30",
+     "name": "Another Earth"
+    },
+    {
+     "num": "#31",
+     "name": "I Will Get a Vasectomy"
+    },
+    {
+     "num": "#32",
+     "name": "Furr"
+    },
+    {
+     "num": "#33",
+     "name": "Fried Noodles"
+    },
+    {
+     "num": "#34",
+     "name": "Goofy's Trial"
+    },
+    {
+     "num": "#35",
+     "name": "Be Inspired"
+    }
+   ]
+  },
+  {
+   "era": "Pink Season:\nThe Prophecy",
+   "name": "Pink Season: The Prophecy [V1]",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "The last track \"Pink Season: The Prophecy\" is just the same EP in a different order.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Fried Noodles (Getter Remix)"
+    },
+    {
+     "num": "#2",
+     "name": "Are You Serious (Axel Boy Remix)"
+    },
+    {
+     "num": "#3",
+     "name": "STFU (TastyTreat Remix)"
+    },
+    {
+     "num": "#4",
+     "name": "Dumplings (Borgore Remix)"
+    }
+   ]
+  },
+  {
+   "era": "Pink Season:\nThe Prophecy",
+   "name": "Pink Season: The Prophecy [V2]",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Dumplings (Borgore Remix)"
+    },
+    {
+     "num": "#2",
+     "name": "Fried Noodles (Getter Remix)"
+    },
+    {
+     "num": "#3",
+     "name": "STFU (TastyTreat Remix)"
+    },
+    {
+     "num": "#4",
+     "name": "Are You Serious (Axel Boy Remix)"
+    },
+    {
+     "num": "#5",
+     "name": "Pink Season: The Prophecy"
     }
    ]
   },
   {
    "era": "Lost Instruments",
    "name": "Lost Instruments",
-   "date": "1. diamondsonmydick\n2. Amazonian Pet\n3. nightmares of the invertebre",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -82,8 +423,39 @@
   },
   {
    "era": "In Tongues",
-   "name": "In Tongues",
-   "date": "1. Will He\n2. Pills\n3. Demons\n4. Window\n5. Bitter Fuck\n6. worldstar money (interlude)",
+   "name": "In Tongues [V1]",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "\"WORLD$TAR MONEY\" was originally not included on the EP.\n\"Window\" was also still titled \"Antidote\" in-between release.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Will He"
+    },
+    {
+     "num": "#2",
+     "name": "Pills"
+    },
+    {
+     "num": "#3",
+     "name": "Demons"
+    },
+    {
+     "num": "#4",
+     "name": "Antidote"
+    },
+    {
+     "num": "#5",
+     "name": "Bitter Fuck"
+    }
+   ]
+  },
+  {
+   "era": "In Tongues",
+   "name": "In Tongues [V2]",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -118,11 +490,11 @@
   {
    "era": "In Tongues (Deluxe)",
    "name": "In Tongues (Deluxe)",
-   "date": "The remix of \"Window\" on the deluxe version is not actually the remix,\nand is actually an early version of his own song \"Fire and Light\".\n\n1. Will He\n2. Pills\n3. Demons\n4. Window\n5. Bitter Fuck\n​6. worldstar money (interlude)\n7. ​Plastic Taste\n8. I Don't Wanna Waste My Time\n9. Will He (Medasin Remix)\n10. Will He (Ryan Hemsworth Remix)\n11. Demons (Lapalux Remix)\n12. Demons (Lunice Remix)\n13. Window (Actress Remix)\n14. Pills (HWLS Remix)\n15. Bitter Fuck (salute Remix)\n16. I Don't Wanna Waste My Time (SwuM Remix)",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
-   "description": "The remix of \"Window\" on the deluxe version is not actually the remix,\nand is actually an early version of his own song \"Fire and Light\".",
+   "description": "The remix of \"Window\" on the deluxe version is not actually the remix,\nand is actually an early version of Actress' own song \"Fire and Light\".",
    "tracks": [
     {
      "num": "#1",
@@ -187,24 +559,9 @@
    ]
   },
   {
-   "era": "Green Echo",
-   "name": "Green Echo",
-   "date": "?. Once In A While",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "",
-   "tracks": [
-    {
-     "num": "#?",
-     "name": "Once In A While"
-    }
-   ]
-  },
-  {
    "era": "Head In The Clouds",
    "name": "Head In The Clouds",
-   "date": "1. La Cienega\n2. Red Rubies\n3. Swimming Pool\n4. Peach Jam\n5. Midsummer Madness\n6. Plans (feat. Vory)\n7. History\n8. Lover Boy 88\n9. Poolside Manor\n10. Beam (feat. Playboi Carti)\n11. Let It Go\n12. Disrespectin\n13. Warpaint\n14. I Want In\n15. Japan 88\n16. Nothing Wrong (feat. GoldLink)\n17. Head In The Clouds",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -283,7 +640,7 @@
   {
    "era": "BALLADS 1",
    "name": "BALLADS 1",
-   "date": "1. ATTENTION\n2. SLOW DANCING IN THE DARK\n3. TEST DRIVE\n4. WANTED U\n5. CAN'T GET OVER YOU (feat. Clams Casino)\n6. YEAH RIGHT\n7. WHY AM I STILL IN LA (feat. Shlohmo & D33J)\n8. NO FUN\n9. COME THRU\n10. R.I.P. (feat. Trippie Redd)\n11. XNXX\n12. I'LL SEE YOU IN 40",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -345,7 +702,7 @@
   {
    "era": "Head In The Clouds II",
    "name": "Head In The Clouds II",
-   "date": "1. These Nights\n2. Strange Land\n3. Need Is Your Love\n4. Tequila Sunrise (feat. AUGUST 08 & GoldLink)\n5. Walking (feat. Swae Lee & Major Lazer)\n6. Breathe\n7. Shouldn't Couldn't Wouldn't\n8. Just Used Music Again\n9. Indigo\n10. Hopscotch (feat. Barney Bones & Rich Brian)\n11. Calculator\n12. La La Lost You\n13. Hold Me Down\n14. I Love You 3000 II\n15. 2 The Face\n16. Gold Coast",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -419,91 +776,8 @@
   },
   {
    "era": "Nectar",
-   "name": "Nectar [V1]",
-   "date": "Pretty Boy wasn't originally going to be on the album, and was only intended for promotion,\nas the description for the video said \"NOT SONG\". However, after Lil Yachty's reaction to the song\non Twitter, he likely got on the song afterwards. The final version of \"Afterthought\" was also not \ndone until sometime after August 17th, 2020.\n\n1. Ew\n2. MODUS\n3. Tick Tock\n4. Daylight\n5. Upgrade\n6. Gimme Love\n7. Run\n8. Sanctuary\n9. High Hopes (feat. Omar Apollo)\n10. NITROUS\n11. ???\n12. Normal People (feat. rei brown)\n13. ???\n14. Mr. Hollywood\n15. 777\n16. Reanimator (feat. Yves Tumor)\n17. Like You Do\n18. Your Man",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Pretty Boy wasn't originally going to be on the album, and was only intended for promotion,\nas the description for the video said \"NOT SONG\". However, after Lil Yachty's reaction to the song\non Twitter, he likely got on the song afterwards. The final version of \"Afterthought\" was also not \ndone until sometime after August 17th, 2020.",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "Ew"
-    },
-    {
-     "num": "#2",
-     "name": "MODUS"
-    },
-    {
-     "num": "#3",
-     "name": "Tick Tock"
-    },
-    {
-     "num": "#4",
-     "name": "Daylight"
-    },
-    {
-     "num": "#5",
-     "name": "Upgrade"
-    },
-    {
-     "num": "#6",
-     "name": "Gimme Love"
-    },
-    {
-     "num": "#7",
-     "name": "Run"
-    },
-    {
-     "num": "#8",
-     "name": "Sanctuary"
-    },
-    {
-     "num": "#9",
-     "name": "High Hopes (feat. Omar Apollo)"
-    },
-    {
-     "num": "#10",
-     "name": "NITROUS"
-    },
-    {
-     "num": "#11",
-     "name": "???"
-    },
-    {
-     "num": "#12",
-     "name": "Normal People (feat. rei brown)"
-    },
-    {
-     "num": "#13",
-     "name": "???"
-    },
-    {
-     "num": "#14",
-     "name": "Mr. Hollywood"
-    },
-    {
-     "num": "#15",
-     "name": "777"
-    },
-    {
-     "num": "#16",
-     "name": "Reanimator (feat. Yves Tumor)"
-    },
-    {
-     "num": "#17",
-     "name": "Like You Do"
-    },
-    {
-     "num": "#18",
-     "name": "Your Man"
-    }
-   ]
-  },
-  {
-   "era": "Nectar",
-   "name": "Nectar [V2]",
-   "date": "1. Ew\n2. MODUS\n3. Tick Tock\n4. Daylight\n5. Upgrade\n6. Gimme Love\n7. Run\n8. Sanctuary\n9. High Hopes (feat. Omar Apollo)\n10. NITROUS\n11. Pretty Boy (feat. Lil Yachty)\n12. Normal People (feat. rei brown)\n13. Afterthought\n14. Mr. Hollywood\n15. 777\n16. Reanimator (feat. Yves Tumor)\n17. Like You Do\n18. Your Man",
+   "name": "Nectar",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -584,9 +858,24 @@
    ]
   },
   {
+   "era": "Nectar (Deluxe)",
+   "name": "Nectar (Deluxe)",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Tables"
+    }
+   ]
+  },
+  {
    "era": "SMITHEREENS",
    "name": "SMITHEREENS",
-   "date": "DISC 1:\n1. Glimpse of Us\n2. Feeling Like The End\n3. Die For You\n4. Before The Day Is Over\n5. Dissolve\nDISC 2:\n6. NIGHT RIDER\n7. BLAHBLAHBLAH DEMO\n8. YUKON (INTERLUDE)\n9. 1AM FREESTYLE",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -636,7 +925,7 @@
   {
    "era": "Piss In The Wind",
    "name": "Piss In The Wind [V1]",
-   "date": "\"Rose Colored (with Yeat)\" was originally not listed in leaked vinyl tracklists.\n\n1. PIXELATED KISSES\n2. Cigarette\n3. Last of a Dying Breed\n4. LOVE YOU LESS\n5. If It Only Gets Better\n6. Love Me Better\n7. Piece of You (with Giveon)\n8. Hotel California \n9. Tarmac\n10. Forehead Touch the Ground\n11. Past Won’t Leave My Bed\n12. Fade to Black (with 4batz)\n13. CAN’T SEE SH*T IN THE CLUB\n14. Sojourn\n15. DYKILY\n16. ???\n17. Silhouette Man\n18. Fragments (with Don Toliver)\n19. Horses to Water\n20. Strange Home\n21. Dior",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -731,7 +1020,7 @@
   {
    "era": "Piss In The Wind",
    "name": "Piss In The Wind [V2]",
-   "date": "1. PIXELATED KISSES\n2. Cigarette\n3. Last of a Dying Breed\n4. LOVE YOU LESS\n5. If It Only Gets Better\n6. Love Me Better\n7. Piece of You (with Giveon)\n8. Hotel California \n9. Tarmac\n10. Forehead Touch the Ground\n11. Past Won’t Leave My Bed\n12. Fade to Black (with 4batz)\n13. CAN’T SEE SH*T IN THE CLUB\n14. Sojourn\n15. DYKILY\n16. Rose Colored (with Yeat)\n17. Silhouette Man\n18. Fragments (with Don Toliver)\n19. Horses to Water\n20. Strange Home\n21. Dior",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -829,11 +1118,11 @@
   {
    "era": "Piss In The Wind",
    "name": "Piss In The Wind [Vinyl]",
-   "date": "1. PIXELATED KISSES\n2. Cigarette\n3. Last of a Dying Breed\n4. LOVE YOU LESS\n5. If It Only Gets Better\n6. Love Me Better\n7. Piece of You (with Giveon)\n8. Hotel California\n9. Tarmac\n10. Forehead Touch the Ground\n11. Past Won’t Leave My Bed\n12. Fade to Black (with 4batz)\n13. CAN’T SEE SH*T IN THE CLUB\n14. Sojourn\n15. DYKILY\n16. Silhouette Man\n17. Rose Colored (with Yeat)\n18. Horses to Water\n19. Strange Home\n20. Dior",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
-   "description": "",
+   "description": "The vinyl release is missing \"Fragments\" for some reason.",
    "tracks": [
     {
      "num": "#1",
@@ -919,8 +1208,8 @@
   },
   {
    "era": "Piss In The Wind",
-   "name": "Piss In The Wind (Bonus Track Version)",
-   "date": "1. PIXELATED KISSES\n2. Cigarette\n3. Last of a Dying Breed\n4. LOVE YOU LESS\n5. If It Only Gets Better\n6. Love Me Better\n7. Piece of You (with Giveon)\n8. Hotel California \n9. Tarmac\n10. Forehead Touch the Ground\n11. Past Won’t Leave My Bed\n12. Fade to Black (with 4batz)\n13. CAN’T SEE SH*T IN THE CLUB\n14. Sojourn\n15. DYKILY\n16. Rose Colored (with Yeat)\n17. Silhouette Man\n18. Fragments (with Don Toliver)\n19. Horses to Water\n20. Strange Home\n21. Dior\n\nBonus Track: DYKILY (2017 Demo Version)",
+   "name": "Piss In The Wind (Bonus Track Version) [V1]",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -1014,8 +1303,8 @@
   },
   {
    "era": "Piss In The Wind",
-   "name": "Piss In The Wind (Bonus Track Version)\naka. Piss In The Wind (Deluxe)",
-   "date": "DISC 1:\n1. PIXELATED KISSES\n2. Cigarette\n3. Last of a Dying Breed\n4. LOVE YOU LESS\n5. If It Only Gets Better\n6. Love Me Better\n7. Piece of You (with Giveon)\n8. Hotel California \n9. Tarmac\n10. Forehead Touch the Ground\n11. Past Won’t Leave My Bed\n12. Fade to Black (with 4batz)\n13. CAN’T SEE SH*T IN THE CLUB\n14. Sojourn\n15. DYKILY\n16. Rose Colored (with Yeat)\n17. Silhouette Man\n18. Fragments (with Don Toliver)\n19. Horses to Water\n20. Strange Home\n21. Dior\nDISC 2:\n1. DYKILY (2017 Demo Version)",
+   "name": "Piss In The Wind (Bonus Track Version) [V2]",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -1114,7 +1403,7 @@
   {
    "era": "Piss In The Wind (Deluxe)",
    "name": "Piss In The Wind (Deluxe)",
-   "date": "DISC 1:\n1. PIXELATED KISSES\n2. Cigarette\n3. Last of a Dying Breed\n4. LOVE YOU LESS\n5. If It Only Gets Better\n6. Love Me Better\n7. Piece of You (with Giveon)\n8. Hotel California \n9. Tarmac\n10. Forehead Touch the Ground\n11. Past Won’t Leave My Bed\n12. Fade to Black (with 4batz)\n13. CAN’T SEE SH*T IN THE CLUB\n14. Sojourn\n15. DYKILY\n16. Rose Colored (with Yeat)\n17. Silhouette Man\n18. Fragments (with Don Toliver)\n19. Horses to Water\n20. Strange Home\n21. Dior\n\nDISC 2:\n22. DYKILY (2017 Demo Version)\n23. Bluffin' (with. The Kid LAROI)\n24. Blah Blah\n25. Beautiful (with. Joji)\n26. Back Home (with. Joji)\n27. Redeeming Qualities (with. Corbin)\n28. Kill The Geese\n29. skin cells\n30. FTC",
+   "date": "",
    "quality": "",
    "source": "",
    "links": [],
@@ -1239,6 +1528,173 @@
     {
      "num": "#30",
      "name": "FTC"
+    }
+   ]
+  },
+  {
+   "era": "Piss In The Wind (Deluxe)",
+   "name": "Piss In The Wind (Deluxe) [Vinyl]",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "DISC 1:",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "PIXELATED KISSES"
+    },
+    {
+     "num": "#2",
+     "name": "Cigarette"
+    },
+    {
+     "num": "#3",
+     "name": "Last of a Dying Breed"
+    },
+    {
+     "num": "#4",
+     "name": "LOVE YOU LESS"
+    },
+    {
+     "num": "#5",
+     "name": "If It Only Gets Better"
+    },
+    {
+     "num": "#6",
+     "name": "Love Me Better"
+    },
+    {
+     "num": "#7",
+     "name": "Piece of You (with Giveon)"
+    },
+    {
+     "num": "#8",
+     "name": "Hotel California"
+    },
+    {
+     "num": "#9",
+     "name": "Tarmac"
+    },
+    {
+     "num": "#10",
+     "name": "Forehead Touch the Ground"
+    },
+    {
+     "num": "#11",
+     "name": "Past Won’t Leave My Bed"
+    },
+    {
+     "num": "#12",
+     "name": "Fade to Black (with 4batz)"
+    },
+    {
+     "num": "#13",
+     "name": "CAN’T SEE SHIT IN THE CLUB"
+    },
+    {
+     "num": "#14",
+     "name": "Sojourn"
+    },
+    {
+     "num": "#15",
+     "name": "DYKILY"
+    },
+    {
+     "num": "#16",
+     "name": "Rose Colored (with Yeat)"
+    },
+    {
+     "num": "#17",
+     "name": "Silhouette Man"
+    },
+    {
+     "num": "#18",
+     "name": "Horses to Water"
+    },
+    {
+     "num": "#19",
+     "name": "Strange Home"
+    },
+    {
+     "num": "#20",
+     "name": "Dior"
+    },
+    {
+     "num": "#21",
+     "name": "DYKILY (2017 Demo Version)"
+    },
+    {
+     "num": "#22",
+     "name": "Bluffin' (with. The Kid LAROI)"
+    },
+    {
+     "num": "#23",
+     "name": "Blah Blah"
+    },
+    {
+     "num": "#24",
+     "name": "Beautiful (with. Joji)"
+    },
+    {
+     "num": "#25",
+     "name": "Back Home (with. Joji)"
+    },
+    {
+     "num": "#26",
+     "name": "Redeeming Qualities (with. Corbin)"
+    },
+    {
+     "num": "#27",
+     "name": "Kill The Geese"
+    },
+    {
+     "num": "#28",
+     "name": "skin cells"
+    },
+    {
+     "num": "#29",
+     "name": "FTC"
+    },
+    {
+     "num": "#30",
+     "name": "PIXELATED KISSES (Instrumental)"
+    },
+    {
+     "num": "#31",
+     "name": "Cigarette (Instrumental)"
+    },
+    {
+     "num": "#32",
+     "name": "Last of a Dying Breed (Instrumental)"
+    },
+    {
+     "num": "#33",
+     "name": "If It Only Gets Better (Instrumental)"
+    },
+    {
+     "num": "#34",
+     "name": "Love Me Better (Instrumental)"
+    },
+    {
+     "num": "#35",
+     "name": "Forehead Touch the Ground (Instrumental)"
+    },
+    {
+     "num": "#36",
+     "name": "CAN'T SEE SHIT IN THE CLUB (Instrumental)"
+    },
+    {
+     "num": "#37",
+     "name": "DYKILY (Instrumental)"
+    },
+    {
+     "num": "#38",
+     "name": "Rose Colored (Instrumental)"
+    },
+    {
+     "num": "#39",
+     "name": "Horses to Water (Instrumental)"
     }
    ]
   }

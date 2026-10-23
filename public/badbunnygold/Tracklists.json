@@ -33,15 +33,21 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "No Prometo Nada"
+     "name": "No Prometo Nada",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Tu Me Gustas*"
+     "name": "Tu Me Gustas*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -51,68 +57,100 @@
    "date": "Dec 24, 2018",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/7CjJb2mikwAWA1V6kewFBF?si=qsLvtok4SWOhVEkHm6CgeQ"
+   ],
    "description": "Officially released tracklist for X 100PRE.",
    "tracks": [
     {
      "num": "#1",
-     "name": "NI BIEN NI MAL"
+     "name": "NI BIEN NI MAL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "200 Mph (Feat. Diplo)"
+     "name": "200 Mph (Feat. Diplo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "¿Quien Tu Eres?"
+     "name": "¿Quien Tu Eres?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Caro"
+     "name": "Caro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Tenemos Que Hablar"
+     "name": "Tenemos Que Hablar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Otra Noche En Miami"
+     "name": "Otra Noche En Miami",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Ser Bichote"
+     "name": "Ser Bichote",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Si Estuviésemos Juntos"
+     "name": "Si Estuviésemos Juntos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Solo de Mi"
+     "name": "Solo de Mi",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Cuando Perriabas"
+     "name": "Cuando Perriabas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "La Romana (feat. El Alfa)"
+     "name": "La Romana (feat. El Alfa)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Como Antes"
+     "name": "Como Antes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "RLDNT"
+     "name": "RLDNT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Estamos Bien"
+     "name": "Estamos Bien",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "MIA (feat. Drake)"
+     "name": "MIA (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -122,40 +160,58 @@
    "date": "Jun 28, 2019",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/6ylFfzx32ICw4L1A7YWNLN?si=FwIz2ddQQSKeVoFUQhJtow"
+   ],
    "description": "Officially released tracklist for OASIS.",
    "tracks": [
     {
      "num": "#1",
-     "name": "MOJAITA"
+     "name": "MOJAITA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "YO LE LLEGO"
+     "name": "YO LE LLEGO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "CUIDAO POR AHÍ"
+     "name": "CUIDAO POR AHÍ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "QUE PRETENDES"
+     "name": "QUE PRETENDES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LA CANCIÓN"
+     "name": "LA CANCIÓN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "UN PESO (feat. Marciano Cantero)"
+     "name": "UN PESO (feat. Marciano Cantero)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "ODIO"
+     "name": "ODIO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "COMO UN BEBÉ (feat. Mr Eazi)"
+     "name": "COMO UN BEBÉ (feat. Mr Eazi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -165,36 +221,52 @@
    "date": "Aug 30, 2019",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://music.apple.com/ar/album/up-next-live-from-apple-piazza-liberty/1478181719"
+   ],
    "description": "Officially released tracklist for Up Next (Live From Apple Piazza Liberty).",
    "tracks": [
     {
      "num": "#1",
-     "name": "NI BIEN NI MAL (Live)"
+     "name": "NI BIEN NI MAL (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "200 Mph (Live)"
+     "name": "200 Mph (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Caro (Live)"
+     "name": "Caro (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Solo De Mi (Live)"
+     "name": "Solo De Mi (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "La Romana (Live)"
+     "name": "La Romana (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Si Estuviésemos Juntos (Live)"
+     "name": "Si Estuviésemos Juntos (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Estamos Bien (Live)"
+     "name": "Estamos Bien (Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -209,7 +281,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "No Voy A Cambiar"
+     "name": "No Voy A Cambiar",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     }
    ]
   },
@@ -219,88 +293,130 @@
    "date": "Feb 29, 2020",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/intl-es/album/5lJqux7orBlA1QzyiBGti1?si=NmvyKc76THCirxKWWF58oQ"
+   ],
    "description": "Officially released tracklist for YHLQMDLG.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Si Veo A Tu Mamá"
+     "name": "Si Veo A Tu Mamá",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "La Difícil"
+     "name": "La Difícil",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Pero Ya No"
+     "name": "Pero Ya No",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "La Santa (feat. Daddy Yankee)"
+     "name": "La Santa (feat. Daddy Yankee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Yo Perreo Sola"
+     "name": "Yo Perreo Sola",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Bichiyal (feat. Yaviah)"
+     "name": "Bichiyal (feat. Yaviah)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Soliá"
+     "name": "Soliá",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "La Zona"
+     "name": "La Zona",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Que Malo (feat. Ñengo Flow)"
+     "name": "Que Malo (feat. Ñengo Flow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Vete"
+     "name": "Vete",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Ignorantes (feat. Sech)"
+     "name": "Ignorantes (feat. Sech)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "A Tu Merced"
+     "name": "A Tu Merced",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Una Vez (feat. Mora)"
+     "name": "Una Vez (feat. Mora)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Safaera (feat. Jowell & Randy & Ñengo Flow)"
+     "name": "Safaera (feat. Jowell & Randy & Ñengo Flow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "25/8"
+     "name": "25/8",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Está Cabrón Ser Yo (feat. Anuel AA)"
+     "name": "Está Cabrón Ser Yo (feat. Anuel AA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Puesto Pa' Guerrial (feat. Myke Towers)"
+     "name": "Puesto Pa' Guerrial (feat. Myke Towers)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "P FKN R (feat. Kendo Kaponi & Arcángel)"
+     "name": "P FKN R (feat. Kendo Kaponi & Arcángel)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Hablamos Mañana (feat. Duki & Pablo Chill-E)"
+     "name": "Hablamos Mañana (feat. Duki & Pablo Chill-E)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "<3"
+     "name": "<3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -315,99 +431,147 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "SI ELLA SALE"
+     "name": "SI ELLA SALE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "HACIENDO QUE ME AMAS"
+     "name": "HACIENDO QUE ME AMAS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Tu Me Gustas*"
+     "name": "Tu Me Gustas*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#4",
-     "name": "BYE ME FUI"
+     "name": "BYE ME FUI",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "???"
+     "name": "???",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#5",
-     "name": "Árcangel - Gucci En mis Espejuelos (feat. Bad Bunny)"
+     "name": "Árcangel - Gucci En mis Espejuelos (feat. Bad Bunny)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#6",
-     "name": "BENDICIONES"
+     "name": "BENDICIONES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "MÁS DE UNA CITA (feat Zion & Lennox)"
+     "name": "MÁS DE UNA CITA (feat Zion & Lennox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "???"
+     "name": "???",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#9",
-     "name": "MÁS DE UNA CITA (feat Zion & Lennox)"
+     "name": "MÁS DE UNA CITA (feat Zion & Lennox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "???"
+     "name": "???",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#11",
-     "name": "No Prometo Nada"
+     "name": "No Prometo Nada",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "No Voy A Cambiar"
+     "name": "No Voy A Cambiar",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#13",
-     "name": "CYNH2"
+     "name": "CYNH2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "BENDICIONES"
+     "name": "BENDICIONES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Matemos Las Ganas*"
+     "name": "Matemos Las Ganas*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#16",
-     "name": "Anuel AA - Así Soy Yo (feat. Bad Bunny)"
+     "name": "Anuel AA - Así Soy Yo (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Tiempo Perdido*"
+     "name": "Tiempo Perdido*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#18",
-     "name": "PA' ROMPERLA [V1]"
+     "name": "PA' ROMPERLA [V1]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#19",
-     "name": "random whatsapp voice note (🏆)"
+     "name": "random whatsapp voice note (🏆)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#20",
-     "name": "MÁS DE UNA CITA (feat Zion & Lennox)"
+     "name": "MÁS DE UNA CITA (feat Zion & Lennox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "BENDICIONES"
+     "name": "BENDICIONES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Árcangel - Gucci En mis Espejuelos (feat. Bad Bunny)"
+     "name": "Árcangel - Gucci En mis Espejuelos (feat. Bad Bunny)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#23",
-     "name": "Anuel AA - Así Soy Yo (feat. Bad Bunny)"
+     "name": "Anuel AA - Así Soy Yo (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -417,48 +581,70 @@
    "date": "May 10, 2020",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/4gvQO5mEuhbMSrLIuwXkmz?si=d4_0bqUURnC5vZoJkp66qw"
+   ],
    "description": "Officially released tracklist for LAS QUE NO IBAN A SALIR.",
    "tracks": [
     {
      "num": "#1",
-     "name": "SI ELLA SALE"
+     "name": "SI ELLA SALE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MÁS DE UNA CITA (Feat. Zion & Lennox)"
+     "name": "MÁS DE UNA CITA (Feat. Zion & Lennox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "BYE ME FUI"
+     "name": "BYE ME FUI",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Yandel - CANCIÓN CON YANDEL (feat. Bad Bunny)"
+     "name": "Yandel - CANCIÓN CON YANDEL (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "PA' ROMPERLA (feat. Don Omar)"
+     "name": "PA' ROMPERLA (feat. Don Omar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "BAD CON NICKY (feat. Nicky Jam)"
+     "name": "BAD CON NICKY (feat. Nicky Jam)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BENDICIONES"
+     "name": "BENDICIONES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "JHAYCO - COMO SE SIENTE - Remix (feat. Bad Bunny)"
+     "name": "JHAYCO - COMO SE SIENTE - Remix (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "RONCA FREESTYLE"
+     "name": "RONCA FREESTYLE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "EN CASITA (feat. Gabriela)"
+     "name": "EN CASITA (feat. Gabriela)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -468,72 +654,106 @@
    "date": "Nov 27, 2020",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/2d9BCZeAAhiZWPpbX9aPCW?si=pt-litkPR3KJKAPPBxZo2w"
+   ],
    "description": "Officially released tracklist for EL ÚLTIMO TOUR DEL MUNDO.",
    "tracks": [
     {
      "num": "#1",
-     "name": "EL MUNDO ES MÍO"
+     "name": "EL MUNDO ES MÍO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "TE MUDASTE"
+     "name": "TE MUDASTE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "HOY COBRÉ"
+     "name": "HOY COBRÉ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "MALDITA POBREZA"
+     "name": "MALDITA POBREZA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LA NOCHE DE ANOCHE (feat. ROSALÍA)"
+     "name": "LA NOCHE DE ANOCHE (feat. ROSALÍA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "TE DESEO LO MEJOR"
+     "name": "TE DESEO LO MEJOR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "YO VISTO ASÍ"
+     "name": "YO VISTO ASÍ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "HACIENDO QUE ME AMAS"
+     "name": "HACIENDO QUE ME AMAS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "BOOKER T"
+     "name": "BOOKER T",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "LA DROGA"
+     "name": "LA DROGA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "DÁKITI (feat. JHAYCO)"
+     "name": "DÁKITI (feat. JHAYCO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "TRELLAS"
+     "name": "TRELLAS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "SORRY PAPI (feat. ABRA)"
+     "name": "SORRY PAPI (feat. ABRA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "120"
+     "name": "120",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "ANTES QUE SE ACABE"
+     "name": "ANTES QUE SE ACABE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Trio Vegabajeño - CANTARES DE NAVIDAD"
+     "name": "Trio Vegabajeño - CANTARES DE NAVIDAD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -543,109 +763,147 @@
    "date": "May 6, 2022",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/3RQQmkQEvNCY4prGKE6oc5?si=Tbh-6Rs8R2SjqaOVwySdew"
+   ],
    "description": "Officially released tracklist for Un Verano Sin Ti.\n\nSide A",
    "tracks": [
     {
      "num": "#1",
-     "name": "Moscow Mule"
+     "name": "Moscow Mule",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Después de la Playa"
+     "name": "Después de la Playa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Me Porto Bonito (feat. Chencho Corleone)"
+     "name": "Me Porto Bonito (feat. Chencho Corleone)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Tití Me Preguntó"
+     "name": "Tití Me Preguntó",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Un Ratito"
+     "name": "Un Ratito",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Yo No Soy Celoso"
+     "name": "Yo No Soy Celoso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tarot (feat. JHAYCO)"
+     "name": "Tarot (feat. JHAYCO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Neverita"
+     "name": "Neverita",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "La Corriente (feat. Tony Dize)"
+     "name": "La Corriente (feat. Tony Dize)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Efecto"
+     "name": "Efecto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Party (feat. Rauw Alejandro)"
+     "name": "Party (feat. Rauw Alejandro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Aguacero"
+     "name": "Aguacero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Enséñame a Bailar"
+     "name": "Enséñame a Bailar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ojitos Lindos (feat. Bomba Estéreo)"
+     "name": "Ojitos Lindos (feat. Bomba Estéreo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Dos Mil 16"
+     "name": "Dos Mil 16",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "El Apagón"
+     "name": "El Apagón",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Otro Atardecer (feat. The Marías)"
+     "name": "Otro Atardecer (feat. The Marías)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Un Coco"
+     "name": "Un Coco",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Cam'ron - Takeover Freestyle",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Me Fui de Vacaciones",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Un Verano Sin Ti",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "Agosto",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "Callaita (with. Tainy)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -695,63 +953,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#2",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#4",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#5",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#6",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#7",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#8",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#9",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#10",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#11",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#12",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#13",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#14",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#15",
-     "name": "FIRE🔥"
+     "name": "FIRE🔥",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
    ],
    "images": [
@@ -764,96 +1052,142 @@
    "date": "Oct 13, 2023",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/intl-es/album/2d9BCZeAAhiZWPpbX9aPCW?si=9zMVw4UyT76owBazKidNYg"
+   ],
    "description": "Officially released tracklist for nadie sabe lo que va a pasar mañana.",
    "tracks": [
     {
      "num": "#1",
-     "name": "NADIE SABE"
+     "name": "NADIE SABE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MONACO"
+     "name": "MONACO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "FINA (feat. Young Miko)"
+     "name": "FINA (feat. Young Miko)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "HIBIKI (feat. Mora)"
+     "name": "HIBIKI (feat. Mora)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "MR. OCTOBER"
+     "name": "MR. OCTOBER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "CYBERTRUCK"
+     "name": "CYBERTRUCK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "VOU 787"
+     "name": "VOU 787",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "SEDA (feat. Bryant Myers)"
+     "name": "SEDA (feat. Bryant Myers)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "GRACIAS POR NADA"
+     "name": "GRACIAS POR NADA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "TELEFONO NUEVO (feat. Luar La L)"
+     "name": "TELEFONO NUEVO (feat. Luar La L)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "BABY NUEVA"
+     "name": "BABY NUEVA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "MERCEDES CAROTA (feat. YOVNGCHIMI)"
+     "name": "MERCEDES CAROTA (feat. YOVNGCHIMI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "LOS PITS"
+     "name": "LOS PITS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "VUELVE CANDY B"
+     "name": "VUELVE CANDY B",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "BATICANO"
+     "name": "BATICANO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "NO ME QUIERO CASAR"
+     "name": "NO ME QUIERO CASAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "WHERE SHE GOES"
+     "name": "WHERE SHE GOES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "THUNDER Y LIGHTNING (feat. Eladio Carrión)"
+     "name": "THUNDER Y LIGHTNING (feat. Eladio Carrión)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "PERRO NEGRO (feat. Feid)"
+     "name": "PERRO NEGRO (feat. Feid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "EUROPA :("
+     "name": "EUROPA :(",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ACHO PR (feat. Arcángel, De La Ghetto & Ñengo Flow)"
+     "name": "ACHO PR (feat. Arcángel, De La Ghetto & Ñengo Flow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "UN PREVIEW"
+     "name": "UN PREVIEW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -863,76 +1197,112 @@
    "date": "Jan 5, 2025",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/intl-es/album/5K79FLRUCSysQnVESLcTdb?si=p80Jr4y3QF2tjlUHrluwVw"
+   ],
    "description": "Officially released tracklist for DeBÍ TiRAR MáS FOToS.",
    "tracks": [
     {
      "num": "#1",
-     "name": "NUEVAYoL"
+     "name": "NUEVAYoL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "VOY A LLeVARTE PA PR"
+     "name": "VOY A LLeVARTE PA PR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "BAILE INoLVIDABLE"
+     "name": "BAILE INoLVIDABLE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "PERFuMITO NUEVO (feat. RaiNao)"
+     "name": "PERFuMITO NUEVO (feat. RaiNao)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "WELTiTA (feat. Chuwi)"
+     "name": "WELTiTA (feat. Chuwi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "VeLDÁ (feat. Omar Courtz & Dei V)"
+     "name": "VeLDÁ (feat. Omar Courtz & Dei V)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "EL CLúB"
+     "name": "EL CLúB",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "KETU TeCRÉ"
+     "name": "KETU TeCRÉ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "BOKeTE"
+     "name": "BOKeTE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "KLOuFRENS"
+     "name": "KLOuFRENS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "TURiSTA"
+     "name": "TURiSTA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "CAFé CON RON (feat. Los Pleneros de la Cresta)"
+     "name": "CAFé CON RON (feat. Los Pleneros de la Cresta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "PIToRRO DE COCO"
+     "name": "PIToRRO DE COCO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "LO QUE LE PASÓ A HAWAii"
+     "name": "LO QUE LE PASÓ A HAWAii",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "EoO"
+     "name": "EoO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "DtMF"
+     "name": "DtMF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "LA MuDANZA"
+     "name": "LA MuDANZA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -947,75 +1317,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "NUEVAYoL"
+     "name": "NUEVAYoL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "VOY A LLeVARTE PA PR"
+     "name": "VOY A LLeVARTE PA PR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "BAILE INoLVIDABLE"
+     "name": "BAILE INoLVIDABLE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "PERFuMITO NUEVO (feat. RaiNao)"
+     "name": "PERFuMITO NUEVO (feat. RaiNao)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "WELTiTA (feat. Chuwi)"
+     "name": "WELTiTA (feat. Chuwi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "VeLDÁ (feat. Omar Courtz & Dei V)"
+     "name": "VeLDÁ (feat. Omar Courtz & Dei V)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "EL CLúB"
+     "name": "EL CLúB",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "KETU TeCRÉ"
+     "name": "KETU TeCRÉ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "BOKeTE"
+     "name": "BOKeTE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "KLOuFRENS"
+     "name": "KLOuFRENS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "TURiSTA"
+     "name": "TURiSTA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "CAFé CON RON (feat. Los Pleneros de la Cresta)"
+     "name": "CAFé CON RON (feat. Los Pleneros de la Cresta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "PIToRRO DE COCO"
+     "name": "PIToRRO DE COCO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "LO QUE LE PASÓ A HAWAii"
+     "name": "LO QUE LE PASÓ A HAWAii",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "EoO"
+     "name": "EoO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "DtMF"
+     "name": "DtMF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "LA MuDANZA"
+     "name": "LA MuDANZA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "ALAMBRE PúA"
+     "name": "ALAMBRE PúA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1030,27 +1436,39 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "PIToRRO DE COCO"
+     "name": "PIToRRO DE COCO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "VOY A LLeVARTE PA PR"
+     "name": "VOY A LLeVARTE PA PR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "KLOuFRENS"
+     "name": "KLOuFRENS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "LO QUE LE PASÓ A HAWAii"
+     "name": "LO QUE LE PASÓ A HAWAii",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LA MuDANZA"
+     "name": "LA MuDANZA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "DtMF"
+     "name": "DtMF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1060,96 +1478,142 @@
    "date": "April 29, 2025",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/intl-es/album/2d9BCZeAAhiZWPpbX9aPCW?si=9zMVw4UyT76owBazKidNYg"
+   ],
    "description": "Updated tracklist for nadie sabe lo que va a pasar mañana changing 'EUROPA :(' to 'EUROPA :)'.",
    "tracks": [
     {
      "num": "#1",
-     "name": "NADIE SABE"
+     "name": "NADIE SABE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MONACO"
+     "name": "MONACO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "FINA (feat. Young Miko)"
+     "name": "FINA (feat. Young Miko)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "HIBIKI (feat. Mora)"
+     "name": "HIBIKI (feat. Mora)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "MR. OCTOBER"
+     "name": "MR. OCTOBER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "CYBERTRUCK"
+     "name": "CYBERTRUCK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "VOU 787"
+     "name": "VOU 787",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "SEDA (feat. Bryant Myers)"
+     "name": "SEDA (feat. Bryant Myers)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "GRACIAS POR NADA"
+     "name": "GRACIAS POR NADA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "TELEFONO NUEVO (feat. Luar La L)"
+     "name": "TELEFONO NUEVO (feat. Luar La L)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "BABY NUEVA"
+     "name": "BABY NUEVA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "MERCEDES CAROTA (feat. YOVNGCHIMI)"
+     "name": "MERCEDES CAROTA (feat. YOVNGCHIMI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "LOS PITS"
+     "name": "LOS PITS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "VUELVE CANDY B"
+     "name": "VUELVE CANDY B",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "BATICANO"
+     "name": "BATICANO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "NO ME QUIERO CASAR"
+     "name": "NO ME QUIERO CASAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "WHERE SHE GOES"
+     "name": "WHERE SHE GOES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "THUNDER Y LIGHTNING (feat. Eladio Carrión)"
+     "name": "THUNDER Y LIGHTNING (feat. Eladio Carrión)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "PERRO NEGRO (feat. Feid)"
+     "name": "PERRO NEGRO (feat. Feid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "EUROPA :)"
+     "name": "EUROPA :)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ACHO PR (feat. Arcángel, De La Ghetto & Ñengo Flow)"
+     "name": "ACHO PR (feat. Arcángel, De La Ghetto & Ñengo Flow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "UN PREVIEW"
+     "name": "UN PREVIEW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1159,56 +1623,82 @@
    "date": "April 7, 2025",
    "quality": "Clear",
    "source": "Bad",
-   "links": [],
+   "links": [
+    "https://www.youtube.com/watch?v=G6FuWd4wNd8"
+   ],
    "description": "Final setlist for Bad Bunny's Super Bowl LX Halftime Show.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Tití Me Preguntó"
+     "name": "Tití Me Preguntó",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yo Perreo Sola / Safaera"
+     "name": "Yo Perreo Sola / Safaera",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Party / VOY A LLeVARTE PA PR"
+     "name": "Party / VOY A LLeVARTE PA PR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pa Que Retozen / Dale Don Dale / Noche de Travesuras / Gasolina (Intermission)"
+     "name": "Pa Que Retozen / Dale Don Dale / Noche de Travesuras / Gasolina (Intermission)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "EoO"
+     "name": "EoO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "MONACO"
+     "name": "MONACO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lady Gaga - Die With A Salsa (with Los Sobrinos)"
+     "name": "Lady Gaga - Die With A Salsa (with Los Sobrinos)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "BAILE INoLVIDABLE"
+     "name": "BAILE INoLVIDABLE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "NUEVAYoL"
+     "name": "NUEVAYoL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Ricky Martin - LO QUE LE PASÓ A HAWAii"
+     "name": "Ricky Martin - LO QUE LE PASÓ A HAWAii",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "El Apagón / CAFé CON RON"
+     "name": "El Apagón / CAFé CON RON",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "DtMF"
+     "name": "DtMF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

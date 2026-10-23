@@ -29,7 +29,7 @@
   {
    "era": "Power Of The Dollar",
    "name": "Power of The Dollar [LP]",
-   "date": "2000-07-04",
+   "date": "Jul 4, 2000",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -37,75 +37,111 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "The Hit"
+     "name": "The Hit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "The Good Die Young"
+     "name": "The Good Die Young",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Corner Bodega (Coke Spot)"
+     "name": "Corner Bodega (Coke Spot)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Your Life's On The Line"
+     "name": "Your Life's On The Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "That Ain't Gangsta"
+     "name": "That Ain't Gangsta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "As The World Turns"
+     "name": "As The World Turns",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Ghetto Qu'ran (Forgive Me)"
+     "name": "Ghetto Qu'ran (Forgive Me)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Da Repercussions"
+     "name": "Da Repercussions",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Money By Any Means"
+     "name": "Money By Any Means",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Material Girl"
+     "name": "Material Girl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Thug Love"
+     "name": "Thug Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Blow Doe"
+     "name": "Blow Doe",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Gun Runner"
+     "name": "Gun Runner",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "You Ain't No Gangsta"
+     "name": "You Ain't No Gangsta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Power of The Dollar"
+     "name": "Power of The Dollar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "I'm A Hustler"
+     "name": "I'm A Hustler",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "How To Rob"
+     "name": "How To Rob",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -115,7 +151,7 @@
   {
    "era": "Power Of The Dollar",
    "name": "Power of The Dollar [EP]",
-   "date": "2000-09-12",
+   "date": "Sep 12, 2000",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -123,23 +159,33 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Thug Love (feat. Destiny Child)"
+     "name": "Thug Love (feat. Destiny Child)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "I'm A Hustler"
+     "name": "I'm A Hustler",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Da Heatwave (feat. Noreaga)"
+     "name": "Da Heatwave (feat. Noreaga)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Your Life's On The Line"
+     "name": "Your Life's On The Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "How To Rob (feat. The Madd Rapper)"
+     "name": "How To Rob (feat. The Madd Rapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -149,7 +195,7 @@
   {
    "era": "Get Rich Or Die Tryin'",
    "name": "Guess Who's Back",
-   "date": "2002-04-26",
+   "date": "Apr 26, 2002",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -157,77 +203,111 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Killa Tape Intro"
+     "name": "Killa Tape Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "Rotten Apple"
+     "name": "Rotten Apple",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
      "name": "Drop (skit)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "That's What's Up (feat. G-Unit)"
+     "name": "That's What's Up (feat. G-Unit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "U Not Like Me"
+     "name": "U Not Like Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "50 Bars"
+     "name": "50 Bars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Life's On The Line"
+     "name": "Life's On The Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Get Out The Club"
+     "name": "Get Out The Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Be A Gentleman"
+     "name": "Be A Gentleman",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fuck You"
+     "name": "Fuck You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Too Hot (feat. Nas & Nature)"
+     "name": "Too Hot (feat. Nas & Nature)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Who U Rep With (feat. Nas & Bravehearts)"
+     "name": "Who U Rep With (feat. Nas & Bravehearts)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Corner Bodega"
+     "name": "Corner Bodega",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ghetto Qur'an"
+     "name": "Ghetto Qur'an",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "As The World Turns (feat. U.G.K.)"
+     "name": "As The World Turns (feat. U.G.K.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Whoo Kid Freestyle"
+     "name": "Whoo Kid Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Stretch Armstrong Freestyle"
+     "name": "Stretch Armstrong Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Doo Woo Freestyle"
+     "name": "Doo Woo Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -237,7 +317,7 @@
   {
    "era": "Get Rich Or Die Tryin'",
    "name": "50 Cent Is The Future",
-   "date": "2002-06-01",
+   "date": "Jun 1, 2002",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -245,67 +325,99 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "U Should Be Here"
+     "name": "U Should Be Here",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "Bump Dat Street Mix"
+     "name": "Bump Dat Street Mix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "The Banks Workout"
+     "name": "The Banks Workout",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Whoo Kid Kayslay Shit!"
+     "name": "Whoo Kid Kayslay Shit!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "50 Cent Just Fucking Around"
+     "name": "50 Cent Just Fucking Around",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "G-Unit Soldiers"
+     "name": "G-Unit Soldiers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Got Me A Bottle"
+     "name": "Got Me A Bottle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Tony Yayo Explosion"
+     "name": "Tony Yayo Explosion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Clue/50"
+     "name": "Clue/50",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "A Lil Bit of Everything"
+     "name": "A Lil Bit of Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Cut Master Shit"
+     "name": "Cut Master Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Call Me"
+     "name": "Call Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "50 / Banks"
+     "name": "50 / Banks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Surrounded By Hoes"
+     "name": "Surrounded By Hoes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "That's What's Up"
+     "name": "That's What's Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Bad News"
+     "name": "Bad News",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -315,7 +427,7 @@
   {
    "era": "Get Rich Or Die Tryin'",
    "name": "Get Rich Or Die Tryin'",
-   "date": "2003-02-06",
+   "date": "Feb 6, 2003",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -323,79 +435,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "What Up Gangsta"
+     "name": "What Up Gangsta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Patiently Waiting (feat. Eminem)"
+     "name": "Patiently Waiting (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Many Men (Wish Death)"
+     "name": "Many Men (Wish Death)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "In da Club"
+     "name": "In da Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "High All The Time"
+     "name": "High All The Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heat"
+     "name": "Heat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "If I Can't"
+     "name": "If I Can't",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Blood Young (feat. Young Buck)"
+     "name": "Blood Young (feat. Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Back Down"
+     "name": "Back Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "P.I.M.P."
+     "name": "P.I.M.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like My Style"
+     "name": "Like My Style",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Poor Lil Rich"
+     "name": "Poor Lil Rich",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "21 Questions (feat. Nate Dogg)"
+     "name": "21 Questions (feat. Nate Dogg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)"
+     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Gotta Make It To Heaven"
+     "name": "Gotta Make It To Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Wanksta"
+     "name": "Wanksta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "U Not Like Me"
+     "name": "U Not Like Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Life's On The Line"
+     "name": "Life's On The Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -405,7 +555,7 @@
   {
    "era": "Get Rich Or Die Tryin'",
    "name": "Get Rich Or Die Tryin' [Japanese Version]",
-   "date": "2003-02-06",
+   "date": "Feb 6, 2003",
    "quality": "Blurry",
    "source": "50 Cent",
    "links": [],
@@ -413,87 +563,129 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "What Up Gangsta"
+     "name": "What Up Gangsta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Patiently Waiting (feat. Eminem)"
+     "name": "Patiently Waiting (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Many Men (Wish Death)"
+     "name": "Many Men (Wish Death)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "In Da Club"
+     "name": "In Da Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "High All The Time"
+     "name": "High All The Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Heat"
+     "name": "Heat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "If I Can't"
+     "name": "If I Can't",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Blood Hound (feat. Young Buck)"
+     "name": "Blood Hound (feat. Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Back Down"
+     "name": "Back Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "P.I.M.P."
+     "name": "P.I.M.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like My Style (feat. Tony Yayo)"
+     "name": "Like My Style (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Poor Lil Rich"
+     "name": "Poor Lil Rich",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "21 Questions (feat. Nate Dogg)"
+     "name": "21 Questions (feat. Nate Dogg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)"
+     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Gotta Make It To Heaven"
+     "name": "Gotta Make It To Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Wanksta (Bonus Track)"
+     "name": "Wanksta (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "U Not Like Me (Bonus Track)"
+     "name": "U Not Like Me (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Life's On The Line (Bonus Track)"
+     "name": "Life's On The Line (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "In Da Club (Instrumental)"
+     "name": "In Da Club (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Soldier (Freestyle) (feat. G-Unit)"
+     "name": "Soldier (Freestyle) (feat. G-Unit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -503,7 +695,7 @@
   {
    "era": "Get Rich Or Die Tryin'",
    "name": "Get Rich Or Die Tryin' [UK Version]",
-   "date": "2003-02-06",
+   "date": "Feb 6, 2003",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -511,83 +703,123 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "What Up Gangsta"
+     "name": "What Up Gangsta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Patiently Waiting (feat. Eminem)"
+     "name": "Patiently Waiting (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Many Men (Wish Death)"
+     "name": "Many Men (Wish Death)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "In Da Club"
+     "name": "In Da Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "High All The Time"
+     "name": "High All The Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Heat"
+     "name": "Heat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "If I Can't"
+     "name": "If I Can't",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Blood Hound (feat. Young Buck)"
+     "name": "Blood Hound (feat. Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Back Down"
+     "name": "Back Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "P.I.M.P."
+     "name": "P.I.M.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like My Style (feat. Tony Yayo)"
+     "name": "Like My Style (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Poor Lil Rich"
+     "name": "Poor Lil Rich",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "21 Questions (feat. Nate Dogg)"
+     "name": "21 Questions (feat. Nate Dogg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)"
+     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Gotta Make It To Heaven"
+     "name": "Gotta Make It To Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Wanksta (Bonus Track)"
+     "name": "Wanksta (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "U Not Like Me (Bonus Track)"
+     "name": "U Not Like Me (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Life's On The Line (Bonus Track)"
+     "name": "Life's On The Line (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "In Da Club (a capella)"
+     "name": "In Da Club (a capella)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -597,7 +829,7 @@
   {
    "era": "Get Rich Or Die Tryin'",
    "name": "Get Rich Or Die Tryin' [Re-Release]",
-   "date": "2023-02-06",
+   "date": "Feb 6, 2023",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -605,83 +837,123 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "What Up Gangsta"
+     "name": "What Up Gangsta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Patiently Waiting (feat. Eminem)"
+     "name": "Patiently Waiting (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Many Men (Wish Death)"
+     "name": "Many Men (Wish Death)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "In Da Club"
+     "name": "In Da Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "High All The Time"
+     "name": "High All The Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Heat"
+     "name": "Heat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "If I Can't"
+     "name": "If I Can't",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Blood Hound (feat. Young Buck)"
+     "name": "Blood Hound (feat. Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Back Down"
+     "name": "Back Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "P.I.M.P."
+     "name": "P.I.M.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like My Style (feat. Tony Yayo)"
+     "name": "Like My Style (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Poor Lil Rich"
+     "name": "Poor Lil Rich",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "21 Questions (feat. Nate Dogg)"
+     "name": "21 Questions (feat. Nate Dogg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)"
+     "name": "Don't Push Me (feat. Lloyd Banks & Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Gotta Make It To Heaven"
+     "name": "Gotta Make It To Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Wanksta (Bonus Track)"
+     "name": "Wanksta (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "U Not Like Me (Bonus Track)"
+     "name": "U Not Like Me (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Life's On The Line (Bonus Track)"
+     "name": "Life's On The Line (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "P.I.M.P. (Remix) (feat. Snoop Dogg, Lloyd Banks & Young Buck)"
+     "name": "P.I.M.P. (Remix) (feat. Snoop Dogg, Lloyd Banks & Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -691,7 +963,7 @@
   {
    "era": "8 Mile Soundtrack",
    "name": "8 Mile: Music from and Inspired by the Motion Picture (Release)",
-   "date": "2002-10-29",
+   "date": "Oct 29, 2002",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -769,7 +1041,7 @@
   {
    "era": "8 Mile Soundtrack",
    "name": "8 Mile: Music from and Inspired by the Motion Picture (Deluxe)",
-   "date": "2002-10-29",
+   "date": "Oct 29, 2002",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -778,133 +1050,133 @@
     {
      "num": "#1",
      "name": "Lose Yourself (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Love Me (with Obie Trice, Eminem & 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "8 Mile (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Adreneline Rush (with Obie Trice)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Places To Go (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Rap Game (with D12 & 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "8 Miles and Runnin' (with Jay-Z & Freeway)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Spit Shine (with Xzibit)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Time of My Life (with Macy Gray)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "U Wanna Be Me (with Nas)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Wanksta (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Wasting My Time (with Boomkat)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "R.A.K.I.M. (with Rakim)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "That's My Nigga Fo' Real (with Young Zee)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Battle (with Gang Starr)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Rabbit Run (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
      "name": "Rap Name (with Obie Trice)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Stimulate (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Collapse [Remix] (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Gangsta (with Joe Beast)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "The Weekend (with Brooklyn)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "California (with Shaunta)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -915,7 +1187,7 @@
   {
    "era": "8 Mile Soundtrack",
    "name": "8 Mile: Music from and Inspired by the Motion Picture (20th Anniversary Edition)",
-   "date": "2022-10-28",
+   "date": "Oct 28, 2022",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -924,103 +1196,103 @@
     {
      "num": "#1",
      "name": "Lose Yourself (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Love Me (with Obie Trice, Eminem & 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "8 Mile (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Adreneline Rush (with Obie Trice)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Places To Go (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Rap Game (with D12 & 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "8 Miles and Runnin' (with Jay-Z & Freeway)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Spit Shine (with Xzibit)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Time of My Life (with Macy Gray)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "U Wanna Be Me (with Nas)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Wanksta (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Wasting My Time (with Boomkat)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "R.A.K.I.M. (with Rakim)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "That's My Nigga Fo' Real (with Young Zee)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Battle (with Gang Starr)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Rabbit Run (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Lose Yourself (Original Demo Version)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1031,7 +1303,7 @@
   {
    "era": "8 Mile Soundtrack",
    "name": "8 Mile: More Music From 8 Mile [V1]",
-   "date": "2002-10-29",
+   "date": "Oct 29, 2002",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -1040,79 +1312,79 @@
     {
      "num": "#1",
      "name": "Shook Ones Pt. II (with Mobb Deep)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Juicy (with Notorious BIG)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Gotta Get Mine (with  MC Breed & Tupac)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Feel Me Flow (with Naughty By Nature)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Player's Ball (with Outkastt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Get Money (with Jr. Mafia)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "You're All I Need (with Method Man & Mary J. Blige)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Temptations (with 2Pac)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Shimmy Shimmy Ya (with Ol' Dirty Bastard)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Bring Da Pain (with Method Man)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "C.R.E.A.M. (with Wu Tang Clan)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Runnin (with Pharcyde)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Survival of the Fittest (with Mobb Deep)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1120,7 +1392,7 @@
   {
    "era": "8 Mile Soundtrack",
    "name": "8 Mile: More Music From 8 Mile (Release)",
-   "date": "2002-10-29",
+   "date": "Oct 29, 2002",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -1129,73 +1401,73 @@
     {
      "num": "#1",
      "name": "Shook Ones Pt. II (with Mobb Deep)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Juicy (with Notorious BIG)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Gotta Get Mine (with  MC Breed & Tupac)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Feel Me Flow (with Naughty By Nature)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Player's Ball (with Outkastt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Get Money (with Jr. Mafia)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "You're All I Need (with Method Man & Mary J. Blige)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Shimmy Shimmy Ya (with Ol' Dirty Bastard)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Bring Da Pain (with Method Man)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "C.R.E.A.M. (with Wu-Tang Clan)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Runnin (with Pharcyde)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Survival of the Fittest (with Mobb Deep)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1206,7 +1478,7 @@
   {
    "era": "Beg For Mercy",
    "name": "Beg For Mercy",
-   "date": "2003-11-14",
+   "date": "Nov 14, 2003",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -1292,7 +1564,7 @@
   {
    "era": "The Massacre",
    "name": "P.I.M.P. EP [Release]",
-   "date": "2003-08-12",
+   "date": "Aug 12, 2003",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -1300,15 +1572,21 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "P.I.M.P. Remix (feat. Snoop Dogg & Bishop Don 'Magic' Juan)"
+     "name": "P.I.M.P. Remix (feat. Snoop Dogg & Bishop Don 'Magic' Juan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "8 Mile Freestyle (feat. Lloyd Banks & Tony Yayo)"
+     "name": "8 Mile Freestyle (feat. Lloyd Banks & Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "P.I.M.P."
+     "name": "P.I.M.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1317,8 +1595,157 @@
   },
   {
    "era": "The Massacre",
-   "name": "The Massacre",
-   "date": "2005-03-08",
+   "name": "St. Valentine's Day Massacre [V1]",
+   "date": "",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [],
+   "description": "",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Valentine's Day (Intro) (Intro (The Massacre))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "In My Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "This Is 50",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Somebody's Gonna Die 2night (I'm Supposed to Die Tonight)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#5",
+     "name": "Piggie Bank (Piggy Bank)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#6",
+     "name": "Gatman (GATman and Robbin)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#7",
+     "name": "My Toy Soldier",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Ski Mask (Ski Mask Way)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#9",
+     "name": "Bitch Get In My Car (Get In My Car)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Candy Shop",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Set It Off (Outta Control)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#12",
+     "name": "Disco Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Guns Come Out (Gunz Come Out)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#14",
+     "name": "Ridin Music (Ryder Music)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#15",
+     "name": "Position of Power",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Suck My Dick/Git The Fuck Out My Face? (I Don't Need 'Em)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "Build You Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Song wit Chick (So Amazing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "Pimpin (Pimpin', Pt. 2)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#20",
+     "name": "Baltimore Love Thing (A Baltimore Love Thing)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#21",
+     "name": "Little Bit (Club Song) (Just a Lil' Bit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#22",
+     "name": "Slow Motion (Outta Control (Remix))",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
+    },
+    {
+     "num": "#23",
+     "name": "God Gave Me Style (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "The Massacre",
+   "name": "The Massacre (Release)",
+   "date": "Mar 8, 2005",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -1420,7 +1847,7 @@
   {
    "era": "The Massacre",
    "name": "The Massacre (Special Edition)",
-   "date": "2005-09-06",
+   "date": "Sep 6, 2005",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -1428,87 +1855,129 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro (The Massacre)"
+     "name": "Intro (The Massacre)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "In My Hood"
+     "name": "In My Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "This Is 50"
+     "name": "This Is 50",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "I'm Supposed To Die Tonight"
+     "name": "I'm Supposed To Die Tonight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Piggy Bank"
+     "name": "Piggy Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "GATman & Robbin' (feat. Eminem)"
+     "name": "GATman & Robbin' (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Candy Shop (feat. Olivia)"
+     "name": "Candy Shop (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Outta Control (Remix) (feat. Mobb Deep)"
+     "name": "Outta Control (Remix) (feat. Mobb Deep)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Get In My Car"
+     "name": "Get In My Car",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Ski Mask Way"
+     "name": "Ski Mask Way",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "A Baltimore Love Thing"
+     "name": "A Baltimore Love Thing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Ryder Music"
+     "name": "Ryder Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Disco Inferno"
+     "name": "Disco Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Just A Lil Bit"
+     "name": "Just A Lil Bit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Gunz Come Out"
+     "name": "Gunz Come Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "My Toy Soldier (feat. Tony Yayo)"
+     "name": "My Toy Soldier (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Position Of Power"
+     "name": "Position Of Power",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Build You Up (feat. Jamie Foxx)"
+     "name": "Build You Up (feat. Jamie Foxx)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "God Gave Me Style"
+     "name": "God Gave Me Style",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "So Amazing (feat. Olivia)"
+     "name": "So Amazing (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "I Don't Need 'Em"
+     "name": "I Don't Need 'Em",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1526,91 +1995,135 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro (The Massacre)"
+     "name": "Intro (The Massacre)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "In My Hood"
+     "name": "In My Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "This Is 50"
+     "name": "This Is 50",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "I'm Supposed To Die Tonight"
+     "name": "I'm Supposed To Die Tonight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Piggy Bank"
+     "name": "Piggy Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "GATman & Robbin' (feat. Eminem)"
+     "name": "GATman & Robbin' (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Candy Shop (feat. Olivia)"
+     "name": "Candy Shop (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Outta Control"
+     "name": "Outta Control",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Get In My Car"
+     "name": "Get In My Car",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Ski Mask Way"
+     "name": "Ski Mask Way",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "A Baltimore Love Thing"
+     "name": "A Baltimore Love Thing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Ryder Music"
+     "name": "Ryder Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Disco Inferno"
+     "name": "Disco Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Just A Lil Bit"
+     "name": "Just A Lil Bit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Gunz Come Out"
+     "name": "Gunz Come Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "My Toy Soldier (feat. Tony Yayo)"
+     "name": "My Toy Soldier (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Position Of Power"
+     "name": "Position Of Power",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Build You Up (feat. Jamie Foxx)"
+     "name": "Build You Up (feat. Jamie Foxx)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "God Gave Me Style"
+     "name": "God Gave Me Style",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "So Amazing (feat. Olivia)"
+     "name": "So Amazing (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Window Shopper"
+     "name": "Window Shopper",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Best Friend (feat. Olivia)"
+     "name": "Best Friend (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1620,7 +2133,7 @@
   {
    "era": "Get Rich Or Die Tryin' OST",
    "name": "Get Rich or Die Tryin': Music from and Inspired by the Motion Picture",
-   "date": "2005-11-08",
+   "date": "Nov 8, 2005",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -1628,75 +2141,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "50 Cent - Hustler's Ambition"
+     "name": "50 Cent - Hustler's Ambition",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "50 Cent - What If"
+     "name": "50 Cent - What If",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Spider Loc - Things Change (feat. 50 Cent & Lloyd Banks)"
+     "name": "Spider Loc - Things Change (feat. 50 Cent & Lloyd Banks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Lloyd Banks - You Already Know (feat. 50 Cent & Young Buck)"
+     "name": "Lloyd Banks - You Already Know (feat. 50 Cent & Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "M.O.P. - When Death Becomes You (feat. 50 Cent)"
+     "name": "M.O.P. - When Death Becomes You (feat. 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Mobb Deep - Have a Party (feat. 50 Cent & Nate Dogg)"
+     "name": "Mobb Deep - Have a Party (feat. 50 Cent & Nate Dogg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "50 Cent - We Both Think Alike (feat. Olivia)"
+     "name": "50 Cent - We Both Think Alike (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Young Buck - Don't Need No Help"
+     "name": "Young Buck - Don't Need No Help",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Lloyd Banks - Get Low"
+     "name": "Lloyd Banks - Get Low",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tony Yayo - Fake Love"
+     "name": "Tony Yayo - Fake Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "50 Cent - Window Shopper"
+     "name": "50 Cent - Window Shopper",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Lloyd Banks - Born Alone, Die Alone"
+     "name": "Lloyd Banks - Born Alone, Die Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Mobb Deep - You a Shooter (feat. 50 Cent)"
+     "name": "Mobb Deep - You a Shooter (feat. 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "50 Cent - I Don't Know Officer (feat. Lloyd Banks, Prodigy, Spider Loc & Ma$e)"
+     "name": "50 Cent - I Don't Know Officer (feat. Lloyd Banks, Prodigy, Spider Loc & Ma$e)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "50 Cent - Talk About Me"
+     "name": "50 Cent - Talk About Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "50 Cent - When It Rains It Pours"
+     "name": "50 Cent - When It Rains It Pours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "50 Cent - Best Friend"
+     "name": "50 Cent - Best Friend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "50 Cent - I'll Whip Ya Head Boy (feat. Young Buck)"
+     "name": "50 Cent - I'll Whip Ya Head Boy (feat. Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1706,7 +2255,7 @@
   {
    "era": "The Re-Up",
    "name": "Eminem Presents: The Re-Up",
-   "date": "2006-12-05",
+   "date": "Dec, 5 2006",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -1714,91 +2263,135 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Shady Narcotics (perf. Eminem)"
+     "name": "Shady Narcotics (perf. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "We're Back (perf. Eminem, Obie Trice, Stat-Quo, Bobby Creekwater & Ca$his)"
+     "name": "We're Back (perf. Eminem, Obie Trice, Stat-Quo, Bobby Creekwater & Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Pistol Pistol (Remix) (perf. Obie Trice)"
+     "name": "Pistol Pistol (Remix) (perf. Obie Trice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Murder (perf. Bizarre & Kuniva)"
+     "name": "Murder (perf. Bizarre & Kuniva)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Everything Is Shady (perf. Ca$his)"
+     "name": "Everything Is Shady (perf. Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "The Re-Up (perf. Eminem & 50 Cent)"
+     "name": "The Re-Up (perf. Eminem & 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "You Don't Know (perf. Eminem, 50 Cent, Ca$his & Lloyd Banks)"
+     "name": "You Don't Know (perf. Eminem, 50 Cent, Ca$his & Lloyd Banks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Jimmy Crack Corn (perf. Eminem & 50 Cent)"
+     "name": "Jimmy Crack Corn (perf. Eminem & 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Trapped (perf. Proof)"
+     "name": "Trapped (perf. Proof)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Whatever You Want (perf. Swifty McVay & Denaun)"
+     "name": "Whatever You Want (perf. Swifty McVay & Denaun)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Takin' All That (perf. Ca$his)"
+     "name": "Takin' All That (perf. Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "By My Side (perf. Stat-Quo)"
+     "name": "By My Side (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "We Ride For Shady (perf. Obie Trice & Ca$his)"
+     "name": "We Ride For Shady (perf. Obie Trice & Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "There He Is (perf. Bobby Creekwater)"
+     "name": "There He Is (perf. Bobby Creekwater)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Tryin' Ta Win (perf. Stat-Quo)"
+     "name": "Tryin' Ta Win (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Smack That (Remix) (perf. Akon, Stat-Quo & Bobby Creekwater)"
+     "name": "Smack That (Remix) (perf. Akon, Stat-Quo & Bobby Creekwater)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Public Enemy #1 (perf. Eminem)"
+     "name": "Public Enemy #1 (perf. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Get Low (perf. Stat-Quo)"
+     "name": "Get Low (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Ski Mask Way (Eminem Remix) (perf. 50 Cent)"
+     "name": "Ski Mask Way (Eminem Remix) (perf. 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Shake That (Remix) (perf. Nate Dogg, Eminem, Obie Trice & Bobby Creekwater)"
+     "name": "Shake That (Remix) (perf. Nate Dogg, Eminem, Obie Trice & Bobby Creekwater)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Cry Now - Shady Remix (perf. Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat-Quo)"
+     "name": "Cry Now - Shady Remix (perf. Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "No Apologies (perf. Eminem)"
+     "name": "No Apologies (perf. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1808,7 +2401,7 @@
   {
    "era": "The Re-Up",
    "name": "Eminem Presents: The Re-Up [Bonus Track Version]",
-   "date": "2006-12-05",
+   "date": "Dec, 5 2006",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -1816,95 +2409,141 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Shady Narcotics (perf. Eminem)"
+     "name": "Shady Narcotics (perf. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "We're Back (perf. Eminem, Obie Trice, Stat-Quo, Bobby Creekwater & Ca$his)"
+     "name": "We're Back (perf. Eminem, Obie Trice, Stat-Quo, Bobby Creekwater & Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Pistol Pistol (Remix) (perf. Obie Trice)"
+     "name": "Pistol Pistol (Remix) (perf. Obie Trice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Murder (perf. Bizarre & Kuniva)"
+     "name": "Murder (perf. Bizarre & Kuniva)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Everything Is Shady (perf. Ca$his)"
+     "name": "Everything Is Shady (perf. Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "The Re-Up (perf. Eminem & 50 Cent)"
+     "name": "The Re-Up (perf. Eminem & 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "You Don't Know (perf. Eminem, 50 Cent, Ca$his & Lloyd Banks)"
+     "name": "You Don't Know (perf. Eminem, 50 Cent, Ca$his & Lloyd Banks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Jimmy Crack Corn (perf. Eminem & 50 Cent)"
+     "name": "Jimmy Crack Corn (perf. Eminem & 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Trapped (perf. Proof)"
+     "name": "Trapped (perf. Proof)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Whatever You Want (perf. Swifty McVay & Denaun)"
+     "name": "Whatever You Want (perf. Swifty McVay & Denaun)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Takin' All That (perf. Ca$his)"
+     "name": "Takin' All That (perf. Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "By My Side (perf. Stat-Quo)"
+     "name": "By My Side (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "We Ride For Shady (perf. Obie Trice & Ca$his)"
+     "name": "We Ride For Shady (perf. Obie Trice & Ca$his)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "There He Is (perf. Bobby Creekwater)"
+     "name": "There He Is (perf. Bobby Creekwater)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Tryin' Ta Win (perf. Stat-Quo)"
+     "name": "Tryin' Ta Win (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Smack That (Remix) (perf. Akon, Stat-Quo & Bobby Creekwater)"
+     "name": "Smack That (Remix) (perf. Akon, Stat-Quo & Bobby Creekwater)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Public Enemy #1 (perf. Eminem)"
+     "name": "Public Enemy #1 (perf. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Get Low (perf. Stat-Quo)"
+     "name": "Get Low (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Ski Mask Way (Eminem Remix) (perf. 50 Cent)"
+     "name": "Ski Mask Way (Eminem Remix) (perf. 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Shake That (Remix) (perf. Nate Dogg, Eminem, Obie Trice & Bobby Creekwater)"
+     "name": "Shake That (Remix) (perf. Nate Dogg, Eminem, Obie Trice & Bobby Creekwater)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Cry Now - Shady Remix (perf. Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat-Quo)"
+     "name": "Cry Now - Shady Remix (perf. Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "No Apologies (perf. Eminem)"
+     "name": "No Apologies (perf. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Billion Bucks (perf. Stat-Quo)"
+     "name": "Billion Bucks (perf. Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1914,7 +2553,7 @@
   {
    "era": "Curtis",
    "name": "Ayo Techology EP [Release]",
-   "date": "2007-08-31",
+   "date": "Aug 31, 2007",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -1922,15 +2561,21 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Ayo Techonolgy (feat. Justin Timberlake & Timbaland)"
+     "name": "Ayo Techonolgy (feat. Justin Timberlake & Timbaland)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "I Get Money"
+     "name": "Ayo Technology (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Ayo Technology (Instrumental)"
+     "name": "I Get Money (Straight To The Bank Pt. 2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1945,79 +2590,117 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "187 (Curtis 187)"
+     "name": "187 (Curtis 187)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
     },
     {
      "num": "#02",
-     "name": "Come & Go (feat. Justin Timberlake) (typo 😭)"
+     "name": "Come & Go (feat. Justin Timberlake) (typo 😭)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Follow My Lead (feat. Robin Thicke)"
+     "name": "Follow My Lead (feat. Robin Thicke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Movin' On Up"
+     "name": "Movin' On Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Peep Show (feat. Eminem)"
+     "name": "Peep Show (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Still Will Kill"
+     "name": "Still Will Kill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "All of Me (feat. Mary J. Blige)"
+     "name": "All of Me (feat. Mary J. Blige)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Destiny"
+     "name": "Destiny",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#09",
-     "name": "Fully Loaded Clip"
+     "name": "Fully Loaded Clip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "My Gun Go Off"
+     "name": "My Gun Go Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "She Wants It (Ayo Technology)"
+     "name": "She Wants It (Ayo Technology)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
     },
     {
      "num": "#12",
-     "name": "Straight to the Bank"
+     "name": "Straight to the Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Amusement Park"
+     "name": "Amusement Park",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Fire (feat. Young Buck & Nicole Scherzinger)"
+     "name": "Fire (feat. Young Buck & Nicole Scherzinger)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Hands Up High (Touch The Sky)"
+     "name": "Hands Up High (Touch The Sky)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
     },
     {
      "num": "#16",
-     "name": "Officer Down"
+     "name": "Officer Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Smile (Smile, I'm Leaving)"
+     "name": "Smile (Smile, I'm Leaving)",
+     "color": "#1c4587",
+     "colorLabel": "Alternate Name/Info"
     },
     {
      "num": "#18",
-     "name": "The Mechanic (feat. Tony Yayo)"
+     "name": "The Mechanic (feat. Tony Yayo)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#19",
-     "name": "Funeral Music (Video) (Pre-Order Only)"
+     "name": "Funeral Music (Video) (Pre-Order Only)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2114,75 +2797,111 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "My Gun Go Off"
+     "name": "My Gun Go Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Man Down"
+     "name": "Man Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "I'll Still Kill (feat. Akon)"
+     "name": "I'll Still Kill (feat. Akon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "I Get Money"
+     "name": "I Get Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Come & Go (feat. Dr. Dre)"
+     "name": "Come & Go (feat. Dr. Dre)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Ayo Technology (feat. Justin Timberlake & Timbaland)"
+     "name": "Ayo Technology (feat. Justin Timberlake & Timbaland)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Follow My Lead (feat. Robin Thicke)"
+     "name": "Follow My Lead (feat. Robin Thicke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Movin On Up"
+     "name": "Movin On Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Straight To The Bank"
+     "name": "Straight To The Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Amusement Park"
+     "name": "Amusement Park",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Fully Loaded Clip"
+     "name": "Fully Loaded Clip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Peep Show (feat. Eminem)"
+     "name": "Peep Show (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Fire (feat. Young Buck & Nicole Scherzinger)"
+     "name": "Fire (feat. Young Buck & Nicole Scherzinger)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "All Of Me (feat. Mary J. Blige)"
+     "name": "All Of Me (feat. Mary J. Blige)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Curtis 187"
+     "name": "Curtis 187",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Touch The Sky (feat. Tony Yayo)"
+     "name": "Touch The Sky (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Hustler's Ambition"
+     "name": "Hustler's Ambition",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2200,82 +2919,118 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "My Gun Go Off"
+     "name": "My Gun Go Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Man Down"
+     "name": "Man Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "I'll Still Kill (feat. Akon)"
+     "name": "I'll Still Kill (feat. Akon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "I Get Money"
+     "name": "I Get Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Come & Go (feat. Dr. Dre)"
+     "name": "Come & Go (feat. Dr. Dre)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Ayo Technology (feat. Justin Timberlake & Timbaland)"
+     "name": "Ayo Technology (feat. Justin Timberlake & Timbaland)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Follow My Lead (feat. Robin Thicke)"
+     "name": "Follow My Lead (feat. Robin Thicke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Movin On Up"
+     "name": "Movin On Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Straight To The Bank"
+     "name": "Straight To The Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Amusement Park"
+     "name": "Amusement Park",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Fully Loaded Clip"
+     "name": "Fully Loaded Clip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Peep Show (feat. Eminem)"
+     "name": "Peep Show (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Fire (feat. Young Buck & Nicole Scherzinger)"
+     "name": "Fire (feat. Young Buck & Nicole Scherzinger)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "All Of Me (feat. Mary J. Blige)"
+     "name": "All Of Me (feat. Mary J. Blige)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Curtis 187"
+     "name": "Curtis 187",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Touch The Sky (feat. Tony Yayo)"
+     "name": "Touch The Sky (feat. Tony Yayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Smile (I'm Leaving)"
+     "name": "Smile (I'm Leaving)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Terminate On Sight",
    "name": "T.O.S (Terminate on Sight)",
-   "date": "2008-07-01",
+   "date": "July, 1 2008",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2353,7 +3108,7 @@
   {
    "era": "Terminate On Sight",
    "name": "T.O.S (Terminate on Sight) [iTunes]",
-   "date": "2008-07-01",
+   "date": "July, 1 2008",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2422,6 +3177,10 @@
     {
      "num": "#16",
      "name": "Money Make the World Go Round"
+    },
+    {
+     "num": "#17",
+     "name": "Chase Da Cat (Bonus Track)"
     }
    ]
   },
@@ -2429,93 +3188,133 @@
    "era": "Before I Self Destruct",
    "name": "Before I Self-Destruct [Pitchfork Tracklist]",
    "date": "",
-   "quality": "N/A",
+   "quality": "Clear",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://pitchfork.com/news/34305-50-cent-unveils-before-i-self-destruct-tracklist/"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#01",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#02",
-     "name": "Came to Win"
+     "name": "Came To Win",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Get Up"
+     "name": "Get Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Need Your Hate"
+     "name": "Need Your Hate",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#05",
-     "name": "Here for a Reason (feat. Nate Dogg)"
+     "name": "Here for a Reason (feat. Nate Dogg)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#06",
-     "name": "Good to Be a Gangsta"
+     "name": "Good to Be a Gangsta",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#07",
-     "name": "Don't Mess With 50"
+     "name": "Don't Mess With 50",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#08",
-     "name": "Trust in Me"
+     "name": "Trust in Me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#09",
-     "name": "Norman Bates Motel (feat. Eminem)"
+     "name": "Norman Bates Motel (feat. Eminem)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#10",
-     "name": "Bitch I'm Sorry"
+     "name": "Bitch I'm Sorry",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "All for You"
+     "name": "All for You",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "No Time to Lose (feat. Swizz Beatz)"
+     "name": "No Time to Lose (feat. Swizz Beatz)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Lonely at the Top"
+     "name": "Lonely at the Top",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "You Need Us (feat. Lloyd Banks & Tony Yayo)"
+     "name": "You Need Us (feat. Lloyd Banks & Tony Yayo)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "Different Path (feat. Dave Young)"
+     "name": "Different Path (feat. Dave Young)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "I Get It In"
+     "name": "I Get It In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Somebody Forgive Me"
+     "name": "Somebody Forgive Me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#18",
-     "name": "My Reign"
+     "name": "My Reign",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#19",
-     "name": "Ready for War (feat. Dr. Dre)"
+     "name": "Ready for War (feat. Dr. Dre)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "Before I Self Destruct",
    "name": "Before I Self Destruct",
-   "date": "2009-11-17",
+   "date": "Nov 17, 2009",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2523,67 +3322,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Invitation"
+     "name": "The Invitation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Then Days Went By"
+     "name": "Then Days Went By",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Death to My Enemies"
+     "name": "Death to My Enemies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "So Disrespectful"
+     "name": "So Disrespectful",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Psycho (feat. Eminem)"
+     "name": "Psycho (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Hold Me Down"
+     "name": "Hold Me Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Crime Wave"
+     "name": "Crime Wave",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Stretch"
+     "name": "Stretch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Strong Enough"
+     "name": "Strong Enough",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Get It Hot"
+     "name": "Get It Hot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Gangsta's Delight"
+     "name": "Gangsta's Delight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I Got Swag"
+     "name": "I Got Swag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Baby by Me (feat. Ne-Yo)"
+     "name": "Baby By Me (feat. Ne-Yo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Do You Think About Me"
+     "name": "Do You Think About Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "OK, You're Right"
+     "name": "OK, You're Right",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Could've Been You (feat. R. Kelly)"
+     "name": "Could've Been You (feat. R. Kelly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2593,7 +3424,7 @@
   {
    "era": "Before I Self Destruct",
    "name": "Before I Self-Destruct [Clean]",
-   "date": "2009-11-17",
+   "date": "Nov 17, 2009",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2601,74 +3432,106 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "The Invitation"
+     "name": "The Invitation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "The Days Went By"
+     "name": "The Days Went By",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Death To My Enemies"
+     "name": "Death To My Enemies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "So Disrespectful"
+     "name": "So Disrespectful",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Psycho (feat. Eminem)"
+     "name": "Psycho (feat. Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Hold Me Down"
+     "name": "Hold Me Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Crime Wave"
+     "name": "Crime Wave",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Stretch"
+     "name": "Stretch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Strong Enough"
+     "name": "Strong Enough",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Get It Hot"
+     "name": "Get It Hot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Gangsta's Delight"
+     "name": "Gangsta's Delight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I Got Swag"
+     "name": "I Got Swag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Baby By Me (feat. Ne-Yo)"
+     "name": "Baby By Me (feat. Ne-Yo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Do You Think About Me (feat. Governer)"
+     "name": "Do You Think About Me (feat. Governer)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Ok, You're Right"
+     "name": "Ok, You're Right",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Could've Been You (feat. R. Kelly)"
+     "name": "Could've Been You (feat. R. Kelly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Before I Self Destruct",
    "name": "Before I Self Destruct (iTunes Deluxe)",
-   "date": "2009-11-09",
+   "date": "Nov 9, 2009",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2764,7 +3627,7 @@
   {
    "era": "Street King: Immortal [V1]",
    "name": "5 (Murder By Numbers)",
-   "date": "2012-07-06",
+   "date": "Jul 6, 2012",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2772,47 +3635,69 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "My Crown"
+     "name": "My Crown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "NY"
+     "name": "NY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "United Nations"
+     "name": "United Nations",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Business Mind (feat. Hayes)"
+     "name": "Business Mind (feat. Hayes)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Roll That Shit (feat. Kidd Kidd)"
+     "name": "Roll That Shit (feat. Kidd Kidd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Everytime I Come Around (feat. Kidd Kidd)"
+     "name": "Everytime I Come Around (feat. Kidd Kidd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Turn The Lights On"
+     "name": "Turn The Lights On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Money"
+     "name": "Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Definition Of Sexy"
+     "name": "Definition Of Sexy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Be My Bitch (feat. Brevi)"
+     "name": "Be My Bitch (feat. Brevi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Can I Speak To You (feat. ScHoolboy Q)"
+     "name": "Can I Speak To You (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2830,14 +3715,16 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Outlaw"
+     "name": "Outlaw",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Street King: Immortal [V2]",
    "name": "Animal Ambition: An Untamed Desire to Win",
-   "date": "2014-06-03",
+   "date": "Jun 3, 2014",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2895,7 +3782,7 @@
   {
    "era": "Street King: Immortal [V2]",
    "name": "Animal Ambition: An Untamed Desire to Win [Deluxe]",
-   "date": "2014-06-03",
+   "date": "Jun 3, 2014",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2903,66 +3790,94 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Hold On"
+     "name": "Hold On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "Don't Worry 'Bout It (feat. Yo Gotti)"
+     "name": "Don't Worry 'Bout It (feat. Yo Gotti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Animal Ambition"
+     "name": "Animal Ambition",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Pilot"
+     "name": "Pilot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Smoke (feat. Trey Songz)"
+     "name": "Smoke (feat. Trey Songz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Everytime I Come Around (feat. Kidd Kidd)"
+     "name": "Everytime I Come Around (feat. Kidd Kidd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Irregular Heartbeat (feat. Jadakiss & Kidd Kidd)"
+     "name": "Irregular Heartbeat (feat. Jadakiss & Kidd Kidd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Hustler"
+     "name": "Hustler",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Twisted (feat. Mr. Probz)"
+     "name": "Twisted (feat. Mr. Probz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Winners Circle (feat. Guordan Banks)"
+     "name": "Winners Circle (feat. Guordan Banks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Chase The Paper (feat. Kidd Kidd & Styles P)"
+     "name": "Chase The Paper (feat. Kidd Kidd & Styles P)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "The Funeral"
+     "name": "The Funeral",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "You Know"
+     "name": "You Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Flip On You (feat. Schoolboy Q)"
+     "name": "Flip On You (feat. Schoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Street King: Immortal [V2]",
    "name": "ShadyXV [Release]",
-   "date": "2014-11-24",
+   "date": "Nov 24, 2014",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -2970,115 +3885,171 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "ShadyXV (with Eminem)"
+     "name": "ShadyXV (with Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "Psychopath Killer (with Slaughterhouse, Yelawolf & Eminem)"
+     "name": "Psychopath Killer (with Slaughterhouse, Yelawolf & Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Die Alone (with Eminem & Kobe)"
+     "name": "Die Alone (with Eminem & Kobe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Vegas (with Bad Meets Evil)"
+     "name": "Vegas (with Bad Meets Evil)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Y'all Ready Know (with Slaughterhouse)"
+     "name": "Y'all Ready Know (with Slaughterhouse)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Guts Over Fear (with Eminem & Sia)"
+     "name": "Guts Over Fear (with Eminem & Sia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Down (with Yelawolf)"
+     "name": "Down (with Yelawolf)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Bane (with D12)"
+     "name": "Bane (with D12)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Fine Line (with Eminem)"
+     "name": "Fine Line (with Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Twisted (with Skylar Grey, Eminem & Yelawolf)"
+     "name": "Twisted (with Skylar Grey, Eminem & Yelawolf)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Right For Me (with Eminem)"
+     "name": "Right For Me (with Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Detroit Vs. Everybody (with Eminem, Royce Da 5'9\", Big Sean, Danny Brown, Dej Loaf & Trick Trick)"
+     "name": "Detroit Vs. Everybody (with Eminem, Royce Da 5'9\", Big Sean, Danny Brown, Dej Loaf & Trick Trick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Till It's Gone (with Yelawolf)"
+     "name": "Till It's Gone (with Yelawolf)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Get Money (with 50 Cent)"
+     "name": "I Get Money (with 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Purple Pills (with D12)"
+     "name": "Purple Pills (with D12)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Lose Yourself (with Eminem)"
+     "name": "Lose Yourself (with Eminem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Cry Now - Shady Remix (with Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat-Quo)"
+     "name": "Cry Now - Shady Remix (with Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat-Quo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Let's Roll (with Yelawolf & Kid Rock)"
+     "name": "Let's Roll (with Yelawolf & Kid Rock)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Hammer Dance (with Slaughterhouse)"
+     "name": "Hammer Dance (with Slaughterhouse)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "P.I.M.P. (with 50 Cent)"
+     "name": "P.I.M.P. (with 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "You Don't Know (with Eminem, 50 Cent, Ca$his & Lloyd Banks)"
+     "name": "You Don't Know (with Eminem, 50 Cent, Ca$his & Lloyd Banks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "My Band (with D12)"
+     "name": "My Band (with D12)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Wanna Know (with Obie Trice)"
+     "name": "Wanna Know (with Obie Trice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Wanksta (with 50 Cent)"
+     "name": "Wanksta (with 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "The Setup (with Obie Trice)"
+     "name": "The Setup (with Obie Trice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "In Da Club (with 50 Cent)"
+     "name": "In Da Club (with 50 Cent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Fight Music (with D12)"
+     "name": "Fight Music (with D12)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Pop The Trunk (with Yelawolf)"
+     "name": "Pop The Trunk (with Yelawolf)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3088,7 +4059,7 @@
   {
    "era": "Street King: Immortal [V2]",
    "name": "Shady XV (European Release)",
-   "date": "2014-11-24",
+   "date": "Nov 24, 2014",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -3097,175 +4068,175 @@
     {
      "num": "#1",
      "name": "Shady XV (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Psychopath Killer (with Slaughterhouse, Eminem & Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Die Alone (with Eminem & Kobe)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Vegas (with Bad Meets Evil)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Y'all Ready Know (with Slaughterhouse)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Guts Over Fear (with Eminem & Sia)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Down (with Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Bane (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Fine Line (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Twisted (with Eminem, Skylar Grey & Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Right for Me (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Detroit Vs. Everybody (with Eminem, Royca Da 5'9, Big Sean, Danny Brown, Dej Loaf & Trick Trick)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Till It's Gone (with Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
      "name": "I Get Money (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Purple Pills (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Lose Yourself (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Cry Now [Shady Remix] (with Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat Quo)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Let's Roll (with Yelawolf & Kid Rock)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Hammer Dance (with Slaughterhouse)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "P.I.M.P. (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "You Don't Know (with Eminem, 50 Cent, Lloyd Banks & Ca$his)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "My Band (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Wanna Know (with Obie Trice)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Wanksta (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "The Setup (with Obie Trice & Nate Dogg)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "In Da Club (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Fight Music (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Pop The Trunk (with Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Lose Yourself [Demo Version] (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3276,7 +4247,7 @@
   {
    "era": "Street King: Immortal [V2]",
    "name": "Shady XV (Best Buy Exclusive)",
-   "date": "2014-11-24",
+   "date": "Nov 24, 2014",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -3285,175 +4256,175 @@
     {
      "num": "#1",
      "name": "Shady XV (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Psychopath Killer (with Slaughterhouse, Eminem & Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Die Alone (with Eminem & Kobe)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Vegas (with Bad Meets Evil)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Y'all Ready Know (with Slaughterhouse)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Guts Over Fear (with Eminem & Sia)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Down (with Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Bane (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Fine Line (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Twisted (with Eminem, Skylar Grey & Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Right for Me (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Detroit Vs. Everybody (with Eminem, Royca Da 5'9, Big Sean, Danny Brown, Dej Loaf & Trick Trick)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
      "name": "I Get Money (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Purple Pills (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Lose Yourself (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Cry Now [Shady Remix] (with Obie Trice, Kuniva, Bobby Creekwater, Ca$his & Stat Quo)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Let's Roll (with Yelawolf & Kid Rock)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Hammer Dance (with Slaughterhouse)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "P.I.M.P. (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "You Don't Know (with Eminem, 50 Cent, Lloyd Banks & Ca$his)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "My Band (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Wanna Know (with Obie Trice)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Wanksta (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "The Setup (with Obie Trice & Nate Dogg)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "In Da Club (with 50 Cent)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Fight Music (with D12)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Pop The Trunk (with Yelawolf)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Don't Front (with Eminem & Buckshot)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Lose Yourself [Demo Version] (with Eminem)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3464,7 +4435,7 @@
   {
    "era": "Street King: Immortal [V2]",
    "name": "The Kanan Tape [Release]",
-   "date": "2015-12-09",
+   "date": "Dec 9, 2015",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -3472,31 +4443,45 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "Nigga Nigga (feat. Boosie Badazz & Young Buck)"
+     "name": "Nigga Nigga (feat. Boosie Badazz & Young Buck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "Too Rich For The Bitch"
+     "name": "Too Rich For The Bitch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "Body Bags"
+     "name": "Body Bags",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Tryna Fuck Me Over (feat. Post Malone)"
+     "name": "Tryna Fuck Me Over (feat. Post Malone)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "I'm The Man (feat. Sonny Digital)"
+     "name": "I'm The Man (feat. Sonny Digital)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Burner On Me"
+     "name": "Burner On Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "On Everything"
+     "name": "On Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3506,7 +4491,7 @@
   {
    "era": "Street King: Immortal [V2]",
    "name": "Best Of [Release]",
-   "date": "2017-03-31",
+   "date": "Mar 31, 2017",
    "quality": "Clear",
    "source": "50 Cent",
    "links": [],
@@ -3514,75 +4499,111 @@
    "tracks": [
     {
      "num": "#01",
-     "name": "In Da Club"
+     "name": "In Da Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#02",
-     "name": "21 Questions (feat. Nate Dogg)"
+     "name": "21 Questions (feat. Nate Dogg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#03",
-     "name": "P.I.M.P."
+     "name": "P.I.M.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#04",
-     "name": "Disco Inferno"
+     "name": "Disco Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#05",
-     "name": "Candy Shop (feat. Olivia)"
+     "name": "Candy Shop (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#06",
-     "name": "Just A Lil Bit"
+     "name": "Just A Lil Bit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#07",
-     "name": "Outta Control (Remix) (feat. Mobb Deep)"
+     "name": "Outta Control (Remix) (feat. Mobb Deep)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#08",
-     "name": "Hustler's Ambition"
+     "name": "Hustler's Ambition",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#09",
-     "name": "Best Friend (Remix) (feat. Olivia)"
+     "name": "Best Friend (Remix) (feat. Olivia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Window Shopper"
+     "name": "Window Shopper",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Ayo Technology (feat. Justin Timberlake & Timbaland)"
+     "name": "Ayo Technology (feat. Justin Timberlake & Timbaland)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I Get Money"
+     "name": "I Get Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Straight To The Bank"
+     "name": "Straight To The Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I'll Still Kill (feat. Akon)"
+     "name": "I'll Still Kill (feat. Akon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Get Up"
+     "name": "Get Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "I Get It In"
+     "name": "I Get It In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Baby By Me (feat. Ne-Yo)"
+     "name": "Baby By Me (feat. Ne-Yo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "How To Rob (feat. The Madd Rapper)"
+     "name": "How To Rob (feat. The Madd Rapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [

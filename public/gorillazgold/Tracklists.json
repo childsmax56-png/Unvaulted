@@ -28,28 +28,40 @@
    "date": "Nov 27, 2000",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/348771-Gorillaz-Tomorrow-Comes-Today-"
+   ],
    "description": "Officially released tracklist for the Tomorrow Comes Today EP.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Tomorrow Comes Today"
+     "name": "Tomorrow Comes Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rock The House"
+     "name": "Rock The House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Latin Simone"
+     "name": "Latin Simone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "12D3"
+     "name": "12D3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Tomorrow Comes Today (Enhanced Video)"
+     "name": "Tomorrow Comes Today (Enhanced Video)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -59,80 +71,118 @@
    "date": "2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/3010764-Gorillaz-Gorillaz-Un-mastered-Tracks"
+   ],
    "description": "Tracklist for an early unmastered version of Gorillaz. Appears to be unsequenced.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Slow Country"
+     "name": "Slow Country",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Tomorrow Comes Today"
+     "name": "Tomorrow Comes Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Latin Simone"
+     "name": "Latin Simone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Latin Simone (Lower BV's) (Latin Simone)"
+     "name": "Latin Simone (Lower BV's) (Latin Simone)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "New Genious (New Genius (Brother))"
+     "name": "New Genious (New Genius (Brother))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "19.2000 (19-2000)"
+     "name": "19.2000 (19-2000)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "5/4"
+     "name": "5/4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Clint Eastwood"
+     "name": "Clint Eastwood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sound Check (Sound Check (Gravity))"
+     "name": "Sound Check (Sound Check (Gravity))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Man Research (Clapper)"
+     "name": "Man Research (Clapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Re-Hash"
+     "name": "Re-Hash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Exhumation (Left Hand Suzuki Method)"
+     "name": "Exhumation (Left Hand Suzuki Method)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Rock The House"
+     "name": "Rock The House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Mi Ai (M1 A1)"
+     "name": "Mi Ai (M1 A1)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Punk"
+     "name": "Punk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Double Bass"
+     "name": "Double Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Starshine"
+     "name": "Starshine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Faust"
+     "name": "Faust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -145,36 +195,53 @@
    "date": "Late 2000",
    "quality": "Clear",
    "source": "Gorillaz & Parlophone (UK)\n\nEMI (NL)",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/master/1141685-Gorillaz-Gorillaz-Album-Sampler",
+    "https://www.discogs.com/release/3659834-Gorillaz-Album-Sampler"
+   ],
    "description": "First sampler from the album, exclusive to the UK and the Netherlands. Still features the english version of Latin Simone on the tracklisting.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Tomorrow Comes Today"
+     "name": "Tomorrow Comes Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Re-Hash"
+     "name": "Re-Hash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Latin Simone"
+     "name": "Latin Simone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Clint Eastwood"
+     "name": "Clint Eastwood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "5/4"
+     "name": "5/4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Slow Country"
+     "name": "Slow Country",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tomorrow Comes Today (Enhanced Video)"
+     "name": "Tomorrow Comes Today (Enhanced Video)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -187,28 +254,41 @@
    "date": "Early 2001",
    "quality": "Clear",
    "source": "Parlophone",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/16245220-Gorillaz-Gorillaz",
+    "https://drive.google.com/drive/folders/1BMs5p2Dbv64KJjGV18UowMDMEH0p7qed?usp=drive_link"
+   ],
    "description": "Promo album sampler CDr. Contains an exclusive version of 'Slow Country' with a fade-in intro containing an extract of 'Faust'.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Rock The House"
+     "name": "Rock The House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Tomorrow Comes Today"
+     "name": "Tomorrow Comes Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hard Slow Country (Faust intro / Slow Country)"
+     "name": "Hard Slow Country (Faust intro / Slow Country)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Clint Eastwood"
+     "name": "Clint Eastwood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "19/2000-06-29 Double Bass (only actually contains Double Bass)"
+     "name": "19/2000-06-29 Double Bass (only actually contains Double Bass)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -221,72 +301,107 @@
    "date": "2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/2265940-Gorillaz-Gorillaz",
+    "https://drive.google.com/drive/folders/1q_b7PhzYdqOlovb6s8g3afcdFyuvz3cJ?usp=drive_link"
+   ],
    "description": "Tracklist for a later, still unmastered version of Gorillaz, now sequenced with the final track order and the re-recorded version of \"Latin Simone\" with Ibrahim Ferrer.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Re - Hash (Re-Hash)"
+     "name": "Re - Hash (Re-Hash)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "5/4"
+     "name": "5/4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Tomorrow Comes Today"
+     "name": "Tomorrow Comes Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "New Genious (New Genius (Brother))"
+     "name": "New Genious (New Genius (Brother))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Clint Eastwood"
+     "name": "Clint Eastwood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Man Research (Clapper)"
+     "name": "Man Research (Clapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Punk"
+     "name": "Punk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Sound Check (Gravity)"
+     "name": "Sound Check (Gravity)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Double Bass"
+     "name": "Double Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Rock The House"
+     "name": "Rock The House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "19-2000"
+     "name": "19-2000",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Latin Simone (Feat. Ibrahim Ferrer) (Latin Simone)"
+     "name": "Latin Simone (Feat. Ibrahim Ferrer) (Latin Simone)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Starshine"
+     "name": "Starshine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Slow Country"
+     "name": "Slow Country",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "M1 A1"
+     "name": "M1 A1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Clint Eastwood (Ed Case Refix)"
+     "name": "Clint Eastwood (Ed Case Refix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -299,7 +414,10 @@
    "date": "March 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/2267252-Gorillaz-The-Apex-Tapes",
+    "https://drive.google.com/drive/folders/106W3tCGnl9TzFGwLapmWGVYK1wb0sfV9?usp=drive_link"
+   ],
    "description": "Officially released tracklist for The Apex Tapes, a pre-recorded interview CD released for the radio promo of Gorillaz.\n\n1-73. Untitled",
    "tracks": []
   },
@@ -309,80 +427,118 @@
    "date": "March 26, 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/0YvYmLBFFwYxgI4U9KKgUm?si=xcSTmHlQRjGH8KSw9ChAow"
+   ],
    "description": "Officially released tracklist for Gorillaz.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Re-Hash"
+     "name": "Re-Hash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "5/4"
+     "name": "5/4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Tomorrow Comes Today"
+     "name": "Tomorrow Comes Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "New Genius (Brother)"
+     "name": "New Genius (Brother)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Clint Eastwood"
+     "name": "Clint Eastwood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Man Research (Clapper)"
+     "name": "Man Research (Clapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Punk"
+     "name": "Punk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Sound Check (Gravity)"
+     "name": "Sound Check (Gravity)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Double Bass"
+     "name": "Double Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Rock The House"
+     "name": "Rock The House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "19-2000"
+     "name": "19-2000",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Latin Simone (¿Qué Pasa Contigo?)"
+     "name": "Latin Simone (¿Qué Pasa Contigo?)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Starshine"
+     "name": "Starshine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Slow Country"
+     "name": "Slow Country",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "M1A1"
+     "name": "M1A1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix) (Hidden Track on 1st Edition CD; 16th track on all vinyl releases)"
+     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix) (Hidden Track on 1st Edition CD; 16th track on all vinyl releases)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Clint Eastwood  (Ed Case/Sweetie Irie Refix) (Edit)"
+     "name": "Clint Eastwood  (Ed Case/Sweetie Irie Refix) (Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "19-2000 (Soulchild Remix)"
+     "name": "19-2000 (Soulchild Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
@@ -390,27 +546,39 @@
     },
     {
      "num": "#17",
-     "name": "Left Hand Suzuki Method"
+     "name": "Left Hand Suzuki Method",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix) (Hidden Track)"
+     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix) (Hidden Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Dracula"
+     "name": "Dracula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Left Hand Suzuki Method"
+     "name": "Left Hand Suzuki Method",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix)"
+     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "19-2000 (Soulchild Remix)"
+     "name": "19-2000 (Soulchild Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -420,7 +588,11 @@
    "date": "June (?), 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://musicbrainz.org/release/ac119526-e6f8-437d-b024-fc245e7df2f9",
+    "https://www.discogs.com/release/7173187-Gorillaz-Gorillaz",
+    "https://www.discogs.com/release/7013670-Gorillaz-Gorillaz"
+   ],
    "description": "Bonus AVCD from the self-titled album released exclusively on Malaysia, Hong Kong and the Philippines.\n\n2-1. 12D3\n2-2. Dracula\n2-3. Left Hand Suzuki Method\n2-4. Hip Albatross\n\nVersion-Exclusive Bonus Videos (for some reason):\nMalaysia\n2-Video 1. Tomorrow Comes Today (Video)\n2-Video 2. Clint Eastwood (Video)\n2-Video 3. 19-2000 (Video)\nHong Kong/Philippines\n2-Video 1. 19-2000 (Video)",
    "tracks": []
   },
@@ -430,64 +602,94 @@
    "date": "August (?), 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://pillows.su/f/33dc690937dd3cb920c3b2f2ebd48e07"
+   ],
    "description": "Promotional CD (Disc 2 of 2) Mixed by Dan the Automator for The Cornerstone Player 024 industry series. Has character dialogue sourced from the Apex Tapes.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Interview 7 - Gorillaz"
+     "name": "Interview 7 - Gorillaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ugly People Be Quiet - Cash Money And Marvelous"
+     "name": "Ugly People Be Quiet - Cash Money And Marvelous",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Rocking It - Brand Nubian"
+     "name": "Rocking It - Brand Nubian",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Interview 8 - Gorillaz"
+     "name": "Interview 8 - Gorillaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Tomorrow Comes Today - Gorillaz"
+     "name": "Tomorrow Comes Today - Gorillaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "A Message From J&H Productions"
+     "name": "A Message From J&H Productions",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Judgement Day - Sizzla"
+     "name": "Judgement Day - Sizzla",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A Message From J&H Productions Pt. II"
+     "name": "A Message From J&H Productions Pt. II",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Staralfur - Sigur Rós"
+     "name": "Staralfur - Sigur Rós",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Positive Contact (Mano C/Automator Remix) - Deltron 3030"
+     "name": "Positive Contact (Mano C/Automator Remix) - Deltron 3030",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "You Gots To Chill - EPMD"
+     "name": "You Gots To Chill - EPMD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Handsome Boy Modelling School Promo"
+     "name": "Handsome Boy Modelling School Promo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "5/4 - Gorillaz"
+     "name": "5/4 - Gorillaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "It's Only When (Automator Rmx) - Depeche Mode"
+     "name": "It's Only When (Automator Rmx) - Depeche Mode",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -500,7 +702,10 @@
    "date": "October (?), 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/855662-Gorillaz-Gorillaz",
+    "https://musicbrainz.org/release/d6b71621-f939-4abd-b99c-6b57d86e7f95"
+   ],
    "description": "4-track Bonus Disc/Album Sampler from the 'Nouvelle Edition' of the self-titled album exclusive to France. Issued twice; once with the original 16-track tracklist and the other with the reissue containing the Soulchild Remix.\n\n2-1. Left Hand Suzuki Method\n2-2. Dracula\n2-3. Hip Albatross\n2-4. The Sounder",
    "tracks": []
   },
@@ -510,48 +715,70 @@
    "date": "Dec 12, 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/6z8arLj8lWDoxk99ayMYlz?si=gg40v1p6T-SggXlzUdwuRQ"
+   ],
    "description": "Officially released tracklist for the UK/Japanese release of G-Sides. Now the only version on streaming services worldwide.",
    "tracks": [
     {
      "num": "#1",
-     "name": "19-2000 (Soulchild Remix)"
+     "name": "19-2000 (Soulchild Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Dracula"
+     "name": "Dracula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Rock The House (Radio Edit)"
+     "name": "Rock The House (Radio Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Sounder (Edit)"
+     "name": "The Sounder (Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Faust"
+     "name": "Faust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Clint Eastwood (Phi Life Cypher Version)"
+     "name": "Clint Eastwood (Phi Life Cypher Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Ghost Train"
+     "name": "Ghost Train",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Hip Albatross"
+     "name": "Hip Albatross",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Left Hand Suzuki Method"
+     "name": "Left Hand Suzuki Method",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "12D3"
+     "name": "12D3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -561,44 +788,64 @@
    "date": "Dec 12, 2001",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/33064-Gorillaz-G-Sides"
+   ],
    "description": "Officially released tracklist for the US/CA releases of G-Sides.",
    "tracks": [
     {
      "num": "#1",
-     "name": "19-2000 (Soulchild Remix)"
+     "name": "19-2000 (Soulchild Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Latin Simone"
+     "name": "Latin Simone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "19-2000 (The Wiseguys House Of Wisdom Remix)"
+     "name": "19-2000 (The Wiseguys House Of Wisdom Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Sounder (Edit)"
+     "name": "The Sounder (Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Faust"
+     "name": "Faust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Clint Eastwood (Phi Life Cypher Version)"
+     "name": "Clint Eastwood (Phi Life Cypher Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Ghost Train"
+     "name": "Ghost Train",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Hip Albatross"
+     "name": "Hip Albatross",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "12D3"
+     "name": "12D3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -608,72 +855,106 @@
    "date": "May 11, 2002",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://musicbrainz.org/release/1e147728-ba9b-49d0-9357-a0072d55f56f"
+   ],
    "description": "Officially released tracklist for a limited Brazilian release of G-Sides that combines both the US and EU/JP tracklists. Not available on streaming.",
    "tracks": [
     {
      "num": "#1",
-     "name": "19-2000 (Soulchild Remix)"
+     "name": "19-2000 (Soulchild Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Latin Simone (Incorrectly listed as Ibrahim Ferrer's version)"
+     "name": "Latin Simone (Incorrectly listed as Ibrahim Ferrer's version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "19-2000 (The Wiseguys House Of Wisdom Remix)"
+     "name": "19-2000 (The Wiseguys House Of Wisdom Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Sounder (Edit)"
+     "name": "The Sounder (Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Faust"
+     "name": "Faust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Clint Eastwood (Phi Life Cypher Version)"
+     "name": "Clint Eastwood (Phi Life Cypher Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Ghost Train"
+     "name": "Ghost Train",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Hip Albatross"
+     "name": "Hip Albatross",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "12D3"
+     "name": "12D3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dracula"
+     "name": "Dracula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Rock The House (Radio Edit)"
+     "name": "Rock The House (Radio Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Left Hand Suzuki Method"
+     "name": "Left Hand Suzuki Method",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Clint Eastwood (Music Video)"
+     "name": "Clint Eastwood (Music Video)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Rock The House (Music Video)"
+     "name": "Rock The House (Music Video)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "19-2000 (Music Video) (Incorrectly listed as the 'Soulchild Remix' version)"
+     "name": "19-2000 (Music Video) (Incorrectly listed as the 'Soulchild Remix' version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Noodle Fight (Game)"
+     "name": "Noodle Fight (Game)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -683,64 +964,94 @@
    "date": "July 1, 2002",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/0yPLNfI8WPJWFoJugr0KAv?si=MbJojztZRl-7XoZpaArPqg"
+   ],
    "description": "Officially released tracklist for Laika Come Home, a remix of Gorillaz done entirely by the DJ trio Spacemonkeyz.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Jungle Fresh"
+     "name": "Jungle Fresh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Strictly Rubbadub"
+     "name": "Strictly Rubbadub",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bañana Baby"
+     "name": "Bañana Baby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Monkey Racket"
+     "name": "Monkey Racket",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "De-Punked"
+     "name": "De-Punked",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "P45"
+     "name": "P45",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dub Ø9"
+     "name": "Dub Ø9",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Crooked Dub"
+     "name": "Crooked Dub",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Mutant Genius"
+     "name": "Mutant Genius",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Come Again"
+     "name": "Come Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "A Fistful Of Peanuts"
+     "name": "A Fistful Of Peanuts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Lil' Dub Chefin'"
+     "name": "Lil' Dub Chefin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "More Rubbadub (Strictly Rubbadub Extended Version)"
+     "name": "More Rubbadub (Strictly Rubbadub Extended Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "More Peanuts (A Fistful Of Peanuts Extended Version)"
+     "name": "More Peanuts (A Fistful Of Peanuts Extended Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -750,7 +1061,9 @@
    "date": "Dec 10, 2021",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/21337933-Gorillaz-Gorillaz-Super-Deluxe-Edition"
+   ],
    "description": "Tracklist for the 20th Anniversary boxset of Gorillaz. Includes five albums in the boxset, with two being previously unreleased.\n\nGorillaz\nA1. Re-Hash\nA2. 5/4\nA3. Tomorrow Comes Today\nA4. New Genius (Brother)\nB1. Clint Eastwood\nB2. Man Research (Clapper)\nB3. Punk\nB4. Sound Check (Gravity)\nC1. Double Bass\nC2. Rock The House\nC3. 19-2000\nC4. Latin Simone (¿Qué Pasa Contigo?)\nD1. Starshine\nD2. Slow Country\nD3. M1A1\nD4. Clint Eastwood (Ed Case And Sweetie Irie Refix)\n\nG-Sides\nE1. 19-2000 (Soulchild Remix)\nE2. Dracula\nE3. Rock The House (Radio Edit)\nE4. The Sounder (Edit)\nE5. Faust\nF1. Clint Eastwood (Phi Life Cypher Version)\nF2. Ghost Train\nF3. Hip Albatross\nF4. Left Hand Suzuki Method\nF5. 12D3\n\nLaika Come Home\nG1. Jungle Fresh\nG2. Strictly Rubbadub\nG3. Bañana Baby\nG4. Monkey Racket\nH1. De-Punked\nH2. P45\nH3. Dub Ø9\nH4. Crooked Dub\nI1. Mutant Genius\nI2. Come Again\nI3. A Fistful Of Peanuts\nI4. Lil' Dub Chefin'\nJ1. Strictly Rubbadub (More Rubbadub)\nJ2. A Fistful Of Peanuts (More Peanuts)\n\nLive At The Forum, 2001\nK1. M1 A1 (Live)\nK2. Tomorrow Comes Today (Live)\nK3. Slow Country (Live)\nK4. 5/4 (Live)\nL1. Starshine (Live)\nL2. Man Research (Live)\nL3. Sound Check (Live)\nL4. Re-Hash (Live)\nM1. Clint Eastwood (Live)\nM2. Rock The House (Live)\nM3. Dracula (Live)\nM4. 19-2000 (Live)\nN1. Punk (Live)\nN2. 5/4 (Reprise) (Live)\nN3. Clint Eastwood (Reprise) (Live)\n\nDemoz\nO1. 1st Idea\nO2. Shaga Laga\nO3. Genious (New Genius (Brother))\nO4. Hand Clapper\nO5. Acoustic 2 (Latin Simone)",
    "tracks": []
   },
@@ -765,23 +1078,33 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Dirty Harry"
+     "name": "Dirty Harry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Feel Good Inc."
+     "name": "Feel Good Inc.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Kids With Guns"
+     "name": "Kids With Guns",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "One Red Herring"
+     "name": "One Red Herring",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "White LIght"
+     "name": "White LIght",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -791,7 +1114,9 @@
    "date": "April, 2005",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/712462-Gorillaz-We-Are-The-Dury-Interview-CD"
+   ],
    "description": "Officially released tracklist for We Are The Dury, a pre-recorded interview CD released for the radio promo of Demon Days.\n\n1-29. Band #1-29",
    "tracks": []
   },
@@ -806,7 +1131,9 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Roadkill: The Mixtape"
+     "name": "Roadkill: The Mixtape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -816,68 +1143,100 @@
    "date": "2005",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://drive.google.com/drive/folders/1NaZs9G6fMp4IKReJdOxrDrXF2LVm1SLA?usp=drive_link"
+   ],
    "description": "Tracklist for an early advance of Demon Days, some tracks have early titles and have no transitions. Different masters from the commercially-released album.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Last Living Souls"
+     "name": "Last Living Souls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Kids With Guns"
+     "name": "Kids With Guns",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Green World (O Green World)"
+     "name": "Green World (O Green World)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dirty Harry"
+     "name": "Dirty Harry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Feel Good (Feel Good Inc.)"
+     "name": "Feel Good (Feel Good Inc.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Maybe In Time (El Mañana)"
+     "name": "Maybe In Time (El Mañana)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Looking At The Earth From A Spaceship (Every Planet We Reach Is Dead)"
+     "name": "Looking At The Earth From A Spaceship (Every Planet We Reach Is Dead)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "November Has Come"
+     "name": "November Has Come",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "All Alone"
+     "name": "All Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "White Light"
+     "name": "White Light",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "It's There (Dare)"
+     "name": "It's There (Dare)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Western (Fire Coming Out Of The Monkey's Head)"
+     "name": "Western (Fire Coming Out Of The Monkey's Head)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Heaven (Don't Get Lost In Heaven)"
+     "name": "Heaven (Don't Get Lost In Heaven)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Demon Days"
+     "name": "Demon Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -892,63 +1251,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Last Living Souls"
+     "name": "Last Living Souls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Kids With Guns"
+     "name": "Kids With Guns",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "O Green World"
+     "name": "O Green World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dirty Harry"
+     "name": "Dirty Harry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Feel Good Inc."
+     "name": "Feel Good Inc.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "El Mañana"
+     "name": "El Mañana",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Every Planet We Reach Is Dead"
+     "name": "Every Planet We Reach Is Dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "November Has Come"
+     "name": "November Has Come",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "All Alone"
+     "name": "All Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "White Light"
+     "name": "White Light",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dare"
+     "name": "Dare",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Fire Coming Out Of The Monkey's Head"
+     "name": "Fire Coming Out Of The Monkey's Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Don't Get Lost In Heaven"
+     "name": "Don't Get Lost In Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Demon Days"
+     "name": "Demon Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -958,40 +1347,58 @@
    "date": "June 6, 2005\n(rec. May 22-23, 2005)",
    "quality": "Clear",
    "source": "Parlophone",
-   "links": [],
+   "links": [
+    "https://drive.google.com/drive/folders/1N0nD0wq4OM1blWFw-CGTNpXctDyvVCDC?usp=drive_link"
+   ],
    "description": "Promo CD release of the Sarm Studio Session recordings made for the Demon Detour radio tour. Track listing follows an alphabetical order instead of the one broadcasted on the radio.",
    "tracks": [
     {
      "num": "#1",
-     "name": "All Alone"
+     "name": "All Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Clint Eastwood"
+     "name": "Clint Eastwood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Dare"
+     "name": "Dare",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Dirty Harry"
+     "name": "Dirty Harry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "El Manana (El Mañana)"
+     "name": "El Manana (El Mañana)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Feel Good (Feel Good Inc.)"
+     "name": "Feel Good (Feel Good Inc.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Kids With Guns"
+     "name": "Kids With Guns",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Last Living Souls"
+     "name": "Last Living Souls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1004,76 +1411,112 @@
    "date": "Around Jan - Mar, 2007",
    "quality": "Slowed\nDown",
    "source": "Chrysalis Music Group\n(Courtesy of EMI)",
-   "links": [],
+   "links": [
+    "https://twitter.com/GorillazHistory/status/1640364041536442368"
+   ],
    "description": "Tracklist of a promo CD of what would later become 'D-Sides', significantly different to the final product and with heavily slowed down tracks. Outside of this release, the clean version of 'Stop The Dams' would only ever be released on Gorillaz' MySpace account on 18 December 2006.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Feel Good Inc. (Single Edit)"
+     "name": "Feel Good Inc. (Single Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Feel Good Inc. (Noodle's Demo)"
+     "name": "Feel Good Inc. (Noodle's Demo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "68 State"
+     "name": "68 State",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Bill Murray"
+     "name": "Bill Murray",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dare"
+     "name": "Dare",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Highway (Under Construction)"
+     "name": "Highway (Under Construction)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dare (Soulwax Remix)"
+     "name": "Dare (Soulwax Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Clint Eastwood (Live) (Clint Eastwood (Live on Demon Detour))"
+     "name": "Clint Eastwood (Live) (Clint Eastwood (Live on Demon Detour))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "People"
+     "name": "People",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dirty Harry (Single Edit)"
+     "name": "Dirty Harry (Single Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Honkongaton"
+     "name": "Honkongaton",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dirty Harry (Chopper Remix)"
+     "name": "Dirty Harry (Chopper Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "El Mañana"
+     "name": "El Mañana",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Kids With Guns"
+     "name": "Kids With Guns",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Stop The Dams"
+     "name": "Stop The Dams",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Hong Kong (Live at Manchester Opera House)"
+     "name": "Hong Kong (Live at Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Stop The Dams (Clean Version)"
+     "name": "Stop The Dams (Clean Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1083,100 +1526,148 @@
    "date": "",
    "quality": "Blocked",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://www.amazon.ca/D-Sides-Gorillaz/dp/B000VQQIC2"
+   ],
    "description": "Original tracklist for D-Sides, including TTC's remix of 'El Mañana' before the recording was lost. Still listed as such on Amazon Canada, for some reason.\n\nDisc One",
    "tracks": [
     {
      "num": "#1",
-     "name": "68 State"
+     "name": "68 State",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "People"
+     "name": "People",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hongkongaton"
+     "name": "Hongkongaton",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "We Are Happy Landfill (Happy Landfill)"
+     "name": "We Are Happy Landfill (Happy Landfill)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hong Kong"
+     "name": "Hong Kong",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Highway (Under Construction)"
+     "name": "Highway (Under Construction)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Rockit"
+     "name": "Rockit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Bill Murray (feat. The Bees)"
+     "name": "Bill Murray (feat. The Bees)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Swagga"
+     "name": "The Swagga",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Murdoc Is God"
+     "name": "Murdoc Is God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Spitting Out The Demons"
+     "name": "Spitting Out The Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Don't Get Lost In Heaven (Original Demo Version)"
+     "name": "Don't Get Lost In Heaven (Original Demo Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Stop The Dams (feat. Ghostigital)"
+     "name": "Stop The Dams (feat. Ghostigital)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Dare (DFA Remix)"
+     "name": "Dare (DFA Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Feel Good Inc. (Stanton Warriors Remix)"
+     "name": "Feel Good Inc. (Stanton Warriors Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "El Mañana (TTC Remix) (128kbps MP3 released in 2008 on the Geneva Heathen Blog)"
+     "name": "El Mañana (TTC Remix) (128kbps MP3 released in 2008 on the Geneva Heathen Blog)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Kids With Guns (Jamie T's Turns To Monsters Mix)"
+     "name": "Kids With Guns (Jamie T's Turns To Monsters Mix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dare (Soulwax Remix)"
+     "name": "Dare (Soulwax Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Kids With Guns (Hot Chip Remix)"
+     "name": "Kids With Guns (Hot Chip Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "El Mañana (Metronomy Remix)"
+     "name": "El Mañana (Metronomy Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Dare (Junior Sanchez Remix)"
+     "name": "Dare (Junior Sanchez Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Dirty Harry (Schtung Chinese New Year Remix)"
+     "name": "Dirty Harry (Schtung Chinese New Year Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Kids With Guns (Quiet Village Remix)"
+     "name": "Kids With Guns (Quiet Village Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1191,99 +1682,147 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "68 State"
+     "name": "68 State",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "People"
+     "name": "People",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hongkongaton"
+     "name": "Hongkongaton",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "We Are Happy Landfill (Happy Landfill)"
+     "name": "We Are Happy Landfill (Happy Landfill)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hong Kong"
+     "name": "Hong Kong",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Highway (Under Construction)"
+     "name": "Highway (Under Construction)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Rockit"
+     "name": "Rockit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Bill Murray (feat. The Bees)"
+     "name": "Bill Murray (feat. The Bees)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Swagga"
+     "name": "The Swagga",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Murdoc Is God"
+     "name": "Murdoc Is God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Spitting Out The Demons"
+     "name": "Spitting Out The Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Don't Get Lost In Heaven (Original Demo Version)"
+     "name": "Don't Get Lost In Heaven (Original Demo Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Stop The Dams (feat. Ghostigital)"
+     "name": "Stop The Dams (feat. Ghostigital)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Dare (DFA Remix)"
+     "name": "Dare (DFA Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Feel Good Inc. (Stanton Warriors Remix)"
+     "name": "Feel Good Inc. (Stanton Warriors Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Kids with Guns (Jamie T's Turns To Monsters Mix)"
+     "name": "Kids with Guns (Jamie T's Turns To Monsters Mix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Dare (Soulwax Remix)"
+     "name": "Dare (Soulwax Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Kids with Guns (Hot Chip Remix)"
+     "name": "Kids with Guns (Hot Chip Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "El Mañana (Metronomy Remix)"
+     "name": "El Mañana (Metronomy Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dare (Junior Sanchez Remix)"
+     "name": "Dare (Junior Sanchez Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Dirty Harry (Schtung Chinese New Year Remix)"
+     "name": "Dirty Harry (Schtung Chinese New Year Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Kids with Guns (Quiet Village Remix)"
+     "name": "Kids with Guns (Quiet Village Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Samba At 13 (feat. Paraiso School of Samba)"
+     "name": "Samba At 13 (feat. Paraiso School of Samba)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Film Trailer Music"
+     "name": "Film Trailer Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1298,71 +1837,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (Live At Manchester Opera House)"
+     "name": "Intro (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Last Living Souls (Live At Manchester Opera House)"
+     "name": "Last Living Souls (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Kids with Guns (Live At Manchester Opera House)"
+     "name": "Kids with Guns (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "O Green World (Live At Manchester Opera House)"
+     "name": "O Green World (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dirty Harry (Live At Manchester Opera House)"
+     "name": "Dirty Harry (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Feel Good Inc. (Live At Manchester Opera House)"
+     "name": "Feel Good Inc. (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "El Mañana (Live At Manchester Opera House)"
+     "name": "El Mañana (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Every Planet We Reach Is Dead (Live At Manchester Opera House)"
+     "name": "Every Planet We Reach Is Dead (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "November Has Come (Live At Manchester Opera House)"
+     "name": "November Has Come (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "All Alone (Live At Manchester Opera House)"
+     "name": "All Alone (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "White Light (Live At Manchester Opera House)"
+     "name": "White Light (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "DARE (Live At Manchester Opera House)"
+     "name": "DARE (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Fire Coming out of the Monkey’s Head (Live At Manchester Opera House)"
+     "name": "Fire Coming out of the Monkey’s Head (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Don’t Get Lost in Heaven (Live At Manchester Opera House)"
+     "name": "Don’t Get Lost in Heaven (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Demon Days (Live At Manchester Opera House)"
+     "name": "Demon Days (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Hong Kong (Live At Manchester Opera House)"
+     "name": "Hong Kong (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Latin Simone (Live At Manchester Opera House)"
+     "name": "Latin Simone (Live At Manchester Opera House)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1372,20 +1945,28 @@
    "date": "",
    "quality": "Blocked",
    "source": "Jamie",
-   "links": [],
+   "links": [
+    "https://i.imgur.com/maDprrW.jpg"
+   ],
    "description": "15 song tracklist based on Jamie Hewlett's artbook that describes Carousel as \"fifteen short films paired with music, spanning birth to death, touching on the turning points at each stage in our lives which determine the paths we take.\"\n\n1-15. ???",
    "tracks": [
     {
      "num": "#?",
-     "name": "Carousel (feat. Hypnotic Brass Ensemble)"
+     "name": "Carousel (feat. Hypnotic Brass Ensemble)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Untitled (Soundtrack to \"The Halloweeners\")"
+     "name": "Untitled (Soundtrack to \"The Halloweeners\")",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Untitled (Soundtrack to \"New Amusements\")"
+     "name": "Untitled (Soundtrack to \"New Amusements\")",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1400,31 +1981,33 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Broken (Demo)"
+     "name": "Broken (Demo)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Carousel (feat. Hypnotic Brass Ensemble)"
+     "name": "Carousel (feat. Hypnotic Brass Ensemble)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Electric Shock (Demo)"
+     "name": "Electric Shock (Demo)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Leviathan* (feat. The Horrors)"
+     "name": "Stylo (Demo)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "NTL / Omar Song (feat. Omar Souleyman)"
-    },
-    {
-     "num": "#?",
-     "name": "Stylo (Demo)"
-    },
-    {
-     "num": "#?",
-     "name": "Superfast Jellyfish (feat. Blur)"
+     "name": "Superfast Jellyfish (feat. Blur)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
    ]
   },
@@ -1444,16 +2027,22 @@
    "date": "May 28, 2009",
    "quality": "Blocked",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://kindaiwanto.wordpress.com/2011/01/22/theophilus-london/"
+   ],
    "description": "Tracklist from May 2009 based on an interview from Pos of De La Soul for Entertainment Weekly, where he revealed that De La Soul had two features on Plastic Beach.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Sloped Tropics (feat. De La Soul) (Float Tropics)"
+     "name": "Sloped Tropics (feat. De La Soul) (Float Tropics)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Electric Shock (feat. De La Soul and Hypnotic Brass Ensemble)"
+     "name": "Electric Shock (feat. De La Soul and Hypnotic Brass Ensemble)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1463,28 +2052,40 @@
    "date": "November 29, 2009",
    "quality": "Blocked",
    "source": "Damon",
-   "links": [],
+   "links": [
+    "https://gorillaz-news.livejournal.com/270957.html"
+   ],
    "description": "Tracklist based on the first announcement of Plastic Beach and its features by Damon in an interview with The Guardian.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Some Kind of Nature (feat. Lou Reed)"
+     "name": "Some Kind of Nature (feat. Lou Reed)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Stylo (feat. Mos Def & Bobby Womack)"
+     "name": "Stylo (feat. Mos Def & Bobby Womack)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Welcome to the World of the Plastic Beach (feat. Snoop Dogg and Hypnotic Brass Ensemble)"
+     "name": "Welcome to the World of the Plastic Beach (feat. Snoop Dogg and Hypnotic Brass Ensemble)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Cloud of Unknowing (feat. Bobby Womack and sinfonia ViVA)"
+     "name": "Cloud of Unknowing (feat. Bobby Womack and sinfonia ViVA)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)"
+     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -1499,15 +2100,21 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Stylo (feat. Mos Def and Bobby Womack)"
+     "name": "Stylo (feat. Mos Def and Bobby Womack)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)"
+     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Fresh Arrivals (feat. Mos Def and Omar Souleyman)"
+     "name": "Fresh Arrivals (feat. Mos Def and Omar Souleyman)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1522,7 +2129,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Fresh Arrivals (feat. Mos Def and Omar Souleyman)"
+     "name": "Fresh Arrivals (feat. Mos Def and Omar Souleyman)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1537,7 +2146,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Leviathan (feat. Gruff Rhys and The Horrors)"
+     "name": "Leviathan (feat. Gruff Rhys and The Horrors)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
@@ -1552,7 +2163,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Doncamatic (feat. Theophilus London and Africa Express)"
+     "name": "Doncamatic (feat. Theophilus London and Africa Express)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1567,7 +2180,9 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Pirate's Progress"
+     "name": "Pirate's Progress",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -1577,72 +2192,107 @@
    "date": "Late 2009 (presumably)",
    "quality": "Clear\n(Encoded)",
    "source": "Parlophone",
-   "links": [],
+   "links": [
+    "https://www.ebay.com/itm/334559194527?nma=true&si=Ic6hXf48JH77lJNxQw0wKA7ugpw%253D&orig_cvip=true&nordt=true&rt=nc&_trksid=p2047675.l2557",
+    "https://drive.google.com/drive/folders/1NLXStzf4oGJKqssU3ivxBlkSUDfngxfO?usp=drive_link"
+   ],
    "description": "Tracklist from a promo CD of Plastic Beach titled 'Holiday Snaps 2009' meant to use by radio stations prior to the album's release. Notably contains the full-lenght versions of some songs without their transitions or fade-in and outs.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Orchestral Intro (feat. Sinfonia ViVA)"
+     "name": "Orchestral Intro (feat. Sinfonia ViVA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Welcome To The World Of The Plastic Beach (feat. Snoop Dogg and Hypnotic Brass Ensemble)"
+     "name": "Welcome To The World Of The Plastic Beach (feat. Snoop Dogg and Hypnotic Brass Ensemble)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "White Flag (feat. Bashy, Kano and The Syrian National Orchestra For Arabic Music)"
+     "name": "White Flag (feat. Bashy, Kano and The Syrian National Orchestra For Arabic Music)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Rhinestone Eyes"
+     "name": "Rhinestone Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stylo (feat. Mos Def and Bobby Womack)"
+     "name": "Stylo (feat. Mos Def and Bobby Womack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Superfast Jellyfish (feat. Gruff Rhys and De La Soul) (Also used on the single release)"
+     "name": "Superfast Jellyfish (feat. Gruff Rhys and De La Soul) (Also used on the single release)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Empire Ants (feat. Little Dragon)"
+     "name": "Empire Ants (feat. Little Dragon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Glitter Freeze (feat. Mark E. Smith)"
+     "name": "Glitter Freeze (feat. Mark E. Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Some Kind Of Nature (feat. Lou Reed and The Purple, The People, The Plastic Eating People)"
+     "name": "Some Kind Of Nature (feat. Lou Reed and The Purple, The People, The Plastic Eating People)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "On Melancholy Hill"
+     "name": "On Melancholy Hill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Broken"
+     "name": "Broken",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)"
+     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Plastic Beach (feat. Mick Jones and Paul Simonon)"
+     "name": "Plastic Beach (feat. Mick Jones and Paul Simonon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "To Binge (feat. Little Dragon)"
+     "name": "To Binge (feat. Little Dragon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Cloud Of Unknowing (feat. Bobby Womack and Sinfonia ViVA)"
+     "name": "Cloud Of Unknowing (feat. Bobby Womack and Sinfonia ViVA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Pirate Jet (feat. The Purple, The People, The Plastic Eating People)"
+     "name": "Pirate Jet (feat. The Purple, The People, The Plastic Eating People)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1657,67 +2307,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Orchestral Intro (feat. Sinfonia ViVA)"
+     "name": "Orchestral Intro (feat. Sinfonia ViVA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Welcome To The World Of The Plastic Beach (feat. Snoop Dogg and Hypnotic Brass Ensemble)"
+     "name": "Welcome To The World Of The Plastic Beach (feat. Snoop Dogg and Hypnotic Brass Ensemble)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "White Flag (feat. Bashy, Kano and The Syrian National Orchestra For Arabic Music)"
+     "name": "White Flag (feat. Bashy, Kano and The Syrian National Orchestra For Arabic Music)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Rhinestone Eyes"
+     "name": "Rhinestone Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stylo (feat. Mos Def and Bobby Womack)"
+     "name": "Stylo (feat. Mos Def and Bobby Womack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Superfast Jellyfish (feat. Gruff Rhys and De La Soul)"
+     "name": "Superfast Jellyfish (feat. Gruff Rhys and De La Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Empire Ants (feat. Little Dragon)"
+     "name": "Empire Ants (feat. Little Dragon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Glitter Freeze (feat. Mark E. Smith)"
+     "name": "Glitter Freeze (feat. Mark E. Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Some Kind Of Nature (feat. Lou Reed and The Purple, The People, The Plastic Eating People)"
+     "name": "Some Kind Of Nature (feat. Lou Reed and The Purple, The People, The Plastic Eating People)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "On Melancholy Hill"
+     "name": "On Melancholy Hill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Broken"
+     "name": "Broken",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)"
+     "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Plastic Beach (feat. Mick Jones and Paul Simonon)"
+     "name": "Plastic Beach (feat. Mick Jones and Paul Simonon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "To Binge (feat. Little Dragon)"
+     "name": "To Binge (feat. Little Dragon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Cloud of Unknowing (feat. Bobby Womack and Sinfonia ViVA)"
+     "name": "Cloud of Unknowing (feat. Bobby Womack and Sinfonia ViVA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Pirate Jet (feat. The Purple, The People, The Plastic Eating People)"
+     "name": "Pirate Jet (feat. The Purple, The People, The Plastic Eating People)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1727,44 +2409,65 @@
    "date": "2010",
    "quality": "Clear",
    "source": "Chrysalis Music Group\n(Courtesy of EMI)",
-   "links": [],
+   "links": [
+    "https://www.discogs.com/release/2614078-Various-Chrysalis-Music-2010-Coachella",
+    "https://drive.google.com/drive/folders/1zse4_HsGYFG5yXQ6XaZbKbwXDOkwD9tW?usp=drive_link"
+   ],
    "description": "Nine Plastic Beach-era teasers were included on the second disc of a 2010 Coachella promo CD. All songs except for \"Big Fog\" were included as snippets. As the majority of these songs were used on the old Phase 3 site as background music, it's unlikely they were all for a successor album to Plastic Beach.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Gorillaz - Birdseye (Sick Parrot)"
+     "name": "Gorillaz - Birdseye (Sick Parrot)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gorillaz - Big Fog (No Service Here)"
+     "name": "Gorillaz - Big Fog (No Service Here)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Gorillaz - Fog Lighthouse (Sea Bacon)"
+     "name": "Gorillaz - Fog Lighthouse (Sea Bacon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Gorillaz - Plane Doc (Prawn Porn)"
+     "name": "Gorillaz - Plane Doc (Prawn Porn)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Gorillaz - Night Pier (Terry's Pier)"
+     "name": "Gorillaz - Night Pier (Terry's Pier)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Gorillaz - Underwater"
+     "name": "Gorillaz - Underwater",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Gorillaz - NTL / Omar Song (Omar Song)"
+     "name": "Gorillaz - NTL / Omar Song (Omar Song)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Gorillaz - Animation (Mr. Light)"
+     "name": "Gorillaz - Animation (Mr. Light)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Gorillaz - Pirate Radio (Sunday Monday)"
+     "name": "Gorillaz - Pirate Radio (Sunday Monday)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1774,44 +2477,64 @@
    "date": "Oct 22, 2010",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://music.apple.com/us/album/itunes-session/693778034"
+   ],
    "description": "Officially released tracklist for iTunes Session.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Clint Eastwood (iTunes Session)"
+     "name": "Clint Eastwood (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Dirty Harry (iTunes Session)"
+     "name": "Dirty Harry (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Feel Good Inc (iTunes Session)"
+     "name": "Feel Good Inc (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Kids With Guns (iTunes Session)"
+     "name": "Kids With Guns (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stylo (iTunes Session)"
+     "name": "Stylo (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Glitter Freeze (iTunes Session)"
+     "name": "Glitter Freeze (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "On Melancholy Hill (iTunes Session)"
+     "name": "On Melancholy Hill (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Rhinestone Eyes (iTunes Session)"
+     "name": "Rhinestone Eyes (iTunes Session)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "iTunes Interview - Plastic Beach"
+     "name": "iTunes Interview - Plastic Beach",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1826,63 +2549,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Phoner To Arizona"
+     "name": "Phoner To Arizona",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Revolving Doors"
+     "name": "Revolving Doors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hillbilly Man"
+     "name": "Hillbilly Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Detroit"
+     "name": "Detroit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Shy-Town"
+     "name": "Shy-Town",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Little Pink Plastic Bags"
+     "name": "Little Pink Plastic Bags",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Joplin Spider"
+     "name": "The Joplin Spider",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Parish Of Space Dust"
+     "name": "The Parish Of Space Dust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Snake In Dallas"
+     "name": "The Snake In Dallas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Amarillo"
+     "name": "Amarillo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Speak It Mountains"
+     "name": "The Speak It Mountains",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Aspen Forest"
+     "name": "Aspen Forest",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Bobby In Phoenix (feat. Bobby Womack)"
+     "name": "Bobby In Phoenix (feat. Bobby Womack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "California And The Slipping Of The Sun"
+     "name": "California And The Slipping Of The Sun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Seattle Yodel"
+     "name": "Seattle Yodel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1897,63 +2650,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Phoner To Arizona"
+     "name": "Phoner To Arizona",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Revolving Doors"
+     "name": "Revolving Doors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hillbilly Man"
+     "name": "Hillbilly Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Detroit"
+     "name": "Detroit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Shy-Town"
+     "name": "Shy-Town",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Little Pink Plastic Bags"
+     "name": "Little Pink Plastic Bags",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Joplin Spider"
+     "name": "The Joplin Spider",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Parish Of Space Dust"
+     "name": "The Parish Of Space Dust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Snake In Dallas"
+     "name": "The Snake In Dallas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Amarillo"
+     "name": "Amarillo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Speak It Mountains"
+     "name": "The Speak It Mountains",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Aspen Forest"
+     "name": "Aspen Forest",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Bobby In Phoenix (feat. Bobby Womack)"
+     "name": "Bobby In Phoenix (feat. Bobby Womack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "California And The Slipping Of The Sun"
+     "name": "California And The Slipping Of The Sun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Seattle Yodel"
+     "name": "Seattle Yodel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1968,71 +2751,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Tomorrow Comes Today [feat. Miho Hatori]"
+     "name": "Tomorrow Comes Today [feat. Miho Hatori]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Clint Eastwood (Album Version) [feat. Del The Funky Homosapien]"
+     "name": "Clint Eastwood (Album Version) [feat. Del The Funky Homosapien]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "19-2000 [feat. Miho Hatori and Tina Weymouth]"
+     "name": "19-2000 [feat. Miho Hatori and Tina Weymouth]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Rock The House (Explicit) [feat. Del The Funky Homosapien]"
+     "name": "Rock The House (Explicit) [feat. Del The Funky Homosapien]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Feel Good Inc. (Album Version) [feat. De La Soul]"
+     "name": "Feel Good Inc. (Album Version) [feat. De La Soul]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "DARE (Radio Edit) [feat. Rosie Wilson and Shaun Ryder]"
+     "name": "DARE (Radio Edit) [feat. Rosie Wilson and Shaun Ryder]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dirty Harry (Single Edit) [feat. Bootie Brown and San Fernandez Youth Chorus]"
+     "name": "Dirty Harry (Single Edit) [feat. Bootie Brown and San Fernandez Youth Chorus]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Kids With Guns [feat. Neneh Cherry]"
+     "name": "Kids With Guns [feat. Neneh Cherry]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "El Mañana"
+     "name": "El Mañana",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Stylo (Radio Edit) [feat. Mos Def and Bobby Womack]"
+     "name": "Stylo (Radio Edit) [feat. Mos Def and Bobby Womack]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Superfast Jellyfish (Single Version) [feat. Gruff Rhys and De La Soul]"
+     "name": "Superfast Jellyfish (Single Version) [feat. Gruff Rhys and De La Soul]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "On Melancholy Hill (Radio Edit)"
+     "name": "On Melancholy Hill (Radio Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Doncamatic [feat. Daley]"
+     "name": "Doncamatic [feat. Daley]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix) (Edit)"
+     "name": "Clint Eastwood (Ed Case/Sweetie Irie Refix) (Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "19-2000 (Soulchild Remix) [feat. Miho Hatori and Tina Weymouth]"
+     "name": "19-2000 (Soulchild Remix) [feat. Miho Hatori and Tina Weymouth]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Feel Good Inc. (Noodle’s Demo) (JPN)"
+     "name": "Feel Good Inc. (Noodle’s Demo) (JPN)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Stylo (Labrinth SNES Remix) [feat. Mos Def, Bobby Womack and Tinie Tempah] (JPN)"
+     "name": "Stylo (Labrinth SNES Remix) [feat. Mos Def, Bobby Womack and Tinie Tempah] (JPN)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2042,7 +2859,9 @@
    "date": "Nov 28, 2011",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://musicbrainz.org/release/21453e90-6b9d-4614-a9ec-18b3d9ce0fb4"
+   ],
    "description": "Officially released tracklist for the Limited Edition boxset of The Singles Collection 2001-2011.\n\nDisc One\n1A. Clint Eastwood (Album Version) [feat. Del The Funky Homosapien]\n1B. Clint Eastwood (Ed Case/Sweetie Irie Refix) (Edit)\n\nDisc Two\n2A. 19-2000 [feat. Miho Hatori and Tina Weymouth]\n2B. 19-2000 (Soulchild Remix) [feat. Miho Hatori and Tina Weymouth]\n\nDisc Three\n3A. Tomorrow Comes Today [feat. Miho Hatori]\n3B. Rock The House (Explicit) [feat. Del The Funky Homosapien]\n\nDisc Four\n4A. Feel Good Inc. (Single Version) [feat. De La Soul]\n4B. DARE (Radio Edit) [feat. Rosie Wilson and Shaun Ryder]\n\nDisc Five\n5A. Dirty Harry (Single Edit) [feat. Bootie Brown and San Fernandez Youth Chorus]\n5B. Kids With Guns [feat. Neneh Cherry]\n\nDisc Six\n6A. El Mañana\n6B. Stylo (Radio Edit) [feat. Mos Def and Bobby Womack]\n\nDisc Seven\n7A. Superfast Jellyfish (Single Version) [feat. Gruff Rhys and De La Soul]\n7B. On Melancholy Hill (Radio Edit)\n\nDisc Eight\n8A. Rhinestone Eyes\n8B. Doncamatic [feat. Daley]",
    "tracks": []
   },
@@ -2057,11 +2876,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "DoYaThing (Radio Edit) [feat. James Murphy and André 3000]"
+     "name": "DoYaThing (Radio Edit) [feat. James Murphy and André 3000]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "DoYaThing (Full-length) [feat. James Murphy and André 3000]"
+     "name": "DoYaThing (Full-length) [feat. James Murphy and André 3000]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2076,7 +2899,146 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Gorillaz featuring Andre 3000 and James Murphy - DoYaThing"
+     "name": "Gorillaz featuring Andre 3000 and James Murphy - DoYaThing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "HUMANZ",
+   "name": "Transformerz",
+   "date": "",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [],
+   "description": "Early tracklist leaked on 09/09/2026",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Tranzformer (feat. Jean Michel Jarre & Raury [background vocals])",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "We Got The Power To Do That (potentially feat. Phil Oakey, feat. Jorja Smith) (We Got The Power)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Charger (feat. Pauline Black) - ska accent",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Ascension (feat. Byron Stingley, Jocelyn Brown & Jamie Principal)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Magical",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "Collar (feat. Jamie Principal & Sade) (She's My Collar (?))",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Out of Body (feat. Zebra Katz, Nicki Minaj, Pusha T[?] & 'house choir')",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Let Me Out [Conversation Between Elder And Younger Trying To Escape Out Right Now] (feat. Vic Mensa, Jean Michel Jarre, Jamie Principal, Bibi [Bibi Bourelly?] & Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Pink Neon",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#10",
+     "name": "Busted and Blue (feat. Azekiel, Jorja Smith & Mabel^)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "I Can't Go For Billy Jean (feat. Sade & Hypnotic Brass Ensemble) (Andromeda)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Carnival (feat. Calli Ucci, Azekiel)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Hackney Angel",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#14",
+     "name": "Salve (feat. Alabama Shakes & Kali Uchis)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#15",
+     "name": "Halleluyah (feat. Benjamin Clementine) (Hallelujah Money)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Ticker (feat. Julia Holter) (Ticker Tape)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "Push The Button / Saturns Bars (feat. Sia) (Saturnz Barz)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Hymn and Her (feat. Raury [and choir], Pusha T[?], Cody[?], Brittany Howard, SLICK RICK DA RULER 👑)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#19",
+     "name": "Garage Ballad (feat. Phil Oakey & Jamie Principal)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#20",
+     "name": "Go Ill (potentially feat. Tony Hadley)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#21",
+     "name": "Garage Palace (feat. Tears for Fears)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -2091,19 +3053,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "01 Stage Demo Panels & Puppets 13.02.17 (Andromeda)"
+     "name": "01 Stage Demo Panels & Puppets 13.02.17 (Andromeda)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "02 Noodle CU 13.02.17 (Busted and Blue)"
+     "name": "02 Noodle CU 13.02.17 (Busted and Blue)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "03 Stage Demo Submission 13.02.17 (Submission)"
+     "name": "03 Stage Demo Submission 13.02.17 (Submission)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "04 Saturnz Barz Demo 04.03 (Saturnz Barz)"
+     "name": "04 Saturnz Barz Demo 04.03 (Saturnz Barz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2118,19 +3088,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#2",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
-     "name": "Robotz - TBC 3 (Charger)"
+     "name": "Robotz - TBC 3 (Charger)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "TBC (Ascension)"
+     "name": "TBC (Ascension)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -2145,83 +3123,123 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro: I Switched My Robot Off"
+     "name": "Intro: I Switched My Robot Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ascension (feat. Vince Staples)"
+     "name": "Ascension (feat. Vince Staples)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Strobelite (feat. Peven Everett)"
+     "name": "Strobelite (feat. Peven Everett)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Saturnz Barz (feat. Popcaan)"
+     "name": "Saturnz Barz (feat. Popcaan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Momentz (feat. De La Soul)"
+     "name": "Momentz (feat. De La Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Interlude: The Non-Conformist Oath"
+     "name": "Interlude: The Non-Conformist Oath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Submission (feat. Danny Brown and Kelela)"
+     "name": "Submission (feat. Danny Brown and Kelela)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Charger (feat. Grace Jones)"
+     "name": "Charger (feat. Grace Jones)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Interlude: Elevator Going Up"
+     "name": "Interlude: Elevator Going Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Andromeda (feat. D.R.A.M.)"
+     "name": "Andromeda (feat. D.R.A.M.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Busted And Blue"
+     "name": "Busted And Blue",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Interlude: Talk Radio"
+     "name": "Interlude: Talk Radio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Carnival (feat. Anthony Hamilton)"
+     "name": "Carnival (feat. Anthony Hamilton)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Let Me Out (feat. Mavis Staples and Pusha T)"
+     "name": "Let Me Out (feat. Mavis Staples and Pusha T)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Interlude: Penthouse"
+     "name": "Interlude: Penthouse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Sex Murder Party (feat. Jamie Principle and Zebra Katz)"
+     "name": "Sex Murder Party (feat. Jamie Principle and Zebra Katz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "She's My Collar (feat. Kali Uchis)"
+     "name": "She's My Collar (feat. Kali Uchis)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Interlude: The Elephant"
+     "name": "Interlude: The Elephant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Hallelujah Money (feat. Benjamin Clementine)"
+     "name": "Hallelujah Money (feat. Benjamin Clementine)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "We Got The Power (feat. Jehnny Beth) (We Got The Power (Version 2:18:482))"
+     "name": "We Got The Power (feat. Jehnny Beth) (We Got The Power (Version 2:18:482))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2236,115 +3254,171 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro: I Switched My Robot Off"
+     "name": "Intro: I Switched My Robot Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ascension (feat. Vince Staples)"
+     "name": "Ascension (feat. Vince Staples)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Strobelite (feat. Peven Everett)"
+     "name": "Strobelite (feat. Peven Everett)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Saturnz Barz (feat. Popcaan)"
+     "name": "Saturnz Barz (feat. Popcaan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Momentz (feat. De La Soul)"
+     "name": "Momentz (feat. De La Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Interlude: The Non-Conformist Oath"
+     "name": "Interlude: The Non-Conformist Oath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Submission (feat. Danny Brown and Kelela)"
+     "name": "Submission (feat. Danny Brown and Kelela)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Charger (feat. Grace Jones)"
+     "name": "Charger (feat. Grace Jones)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Interlude: Elevator Going Up"
+     "name": "Interlude: Elevator Going Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Andromeda (feat. D.R.A.M.)"
+     "name": "Andromeda (feat. D.R.A.M.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Busted And Blue"
+     "name": "Busted And Blue",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Interlude: Talk Radio"
+     "name": "Interlude: Talk Radio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Carnival (feat. Anthony Hamilton)"
+     "name": "Carnival (feat. Anthony Hamilton)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Let Me Out (feat. Mavis Staples and Pusha T)"
+     "name": "Let Me Out (feat. Mavis Staples and Pusha T)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Interlude: Penthouse"
+     "name": "Interlude: Penthouse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Sex Murder Party (feat. Jamie Principle and Zebra Katz)"
+     "name": "Sex Murder Party (feat. Jamie Principle and Zebra Katz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "She's My Collar (feat. Kali Uchis)"
+     "name": "She's My Collar (feat. Kali Uchis)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Interlude: The Elephant"
+     "name": "Interlude: The Elephant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Hallelujah Money (feat. Benjamin Clementine)"
+     "name": "Hallelujah Money (feat. Benjamin Clementine)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "We Got The Power (feat. Jehnny Beth) (We Got The Power (Version 2:18:482))"
+     "name": "We Got The Power (feat. Jehnny Beth) (We Got The Power (Version 2:18:482))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Interlude: New World"
+     "name": "Interlude: New World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "The Apprentice (feat. Rag'n'Bone Man, Zebra Katz and RAY BLK)"
+     "name": "The Apprentice (feat. Rag'n'Bone Man, Zebra Katz and RAY BLK)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Halfway To The Halfway House (feat. Peven Everett)"
+     "name": "Halfway To The Halfway House (feat. Peven Everett)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Out Of Body (feat. Kilo Kish and Zebra Katz)"
+     "name": "Out Of Body (feat. Kilo Kish and Zebra Katz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Ticker Tape (feat. Carly Simon and Kali Uchis)"
+     "name": "Ticker Tape (feat. Carly Simon and Kali Uchis)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Circle Of Friendz (feat. Brandon Markell Holmes)"
+     "name": "Circle Of Friendz (feat. Brandon Markell Holmes)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Andromeda (D.R.A.M. Special) [feat. D.R.A.M.] (JPN)"
+     "name": "Andromeda (D.R.A.M. Special) [feat. D.R.A.M.] (JPN)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Busted And Blue (Faia Younan Special) [feat. Faia Younan] (JPN)"
+     "name": "Busted And Blue (Faia Younan Special) [feat. Faia Younan] (JPN)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2359,47 +3433,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Saturnz Barz (Cadenza Remix) [feat. Popcaan, Assassin, Mad Cobra, Teddy Bruckshot & Killa P]"
+     "name": "Saturnz Barz (Cadenza Remix) [feat. Popcaan, Assassin, Mad Cobra, Teddy Bruckshot & Killa P]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Strobelite (Kaytranada Remix) [feat. Peven Everett]"
+     "name": "Strobelite (Kaytranada Remix) [feat. Peven Everett]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Andromeda (Bonobo Remix) [feat. D.R.A.M.]"
+     "name": "Andromeda (Bonobo Remix) [feat. D.R.A.M.]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "We Got The Power (Claptone Remix) [feat. Jehnny Beth]"
+     "name": "We Got The Power (Claptone Remix) [feat. Jehnny Beth]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Ascension (Nic Fanciulli Remix) [feat. Vince Staples]"
+     "name": "Ascension (Nic Fanciulli Remix) [feat. Vince Staples]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Saturnz Barz (Banx & Ranx Remix) [feat. Popcaan]"
+     "name": "Saturnz Barz (Banx & Ranx Remix) [feat. Popcaan]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Andromeda (Purple Disco Machine Remix) [feat. D.R.A.M.]"
+     "name": "Andromeda (Purple Disco Machine Remix) [feat. D.R.A.M.]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Saturnz Barz (Baauer Remix) [feat. Popcaan]"
+     "name": "Saturnz Barz (Baauer Remix) [feat. Popcaan]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Andromeda (ZHU Remix) [feat. D.R.A.M.]"
+     "name": "Andromeda (ZHU Remix) [feat. D.R.A.M.]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Let Me Out (Banx & Ranx Remix) [feat. Mavis Staples & Pusha T]"
+     "name": "Let Me Out (Banx & Ranx Remix) [feat. Mavis Staples & Pusha T]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Busted and Blue (Yotto Remix)"
+     "name": "Busted and Blue (Yotto Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2424,47 +3520,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Humility"
+     "name": "Humility",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Trans (Tranz)"
+     "name": "Trans (Tranz)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#3",
-     "name": "Magic City"
+     "name": "Magic City",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Hollywood"
+     "name": "Hollywood",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#5",
-     "name": "Souk Eye"
+     "name": "Souk Eye",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#6",
-     "name": "Idaho"
+     "name": "Idaho",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Kansas"
+     "name": "Kansas",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#8",
-     "name": "Zurich (Lake Zurich)"
+     "name": "Zurich (Lake Zurich)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#9",
-     "name": "One Percent"
+     "name": "One Percent",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#10",
-     "name": "London (Fire Flies)"
+     "name": "London (Fire Flies)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Sorcererz"
+     "name": "Sorcererz",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ],
    "images": [
@@ -2483,11 +3601,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Humility"
+     "name": "Humility",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Tranz (Trans)"
+     "name": "Tranz (Trans)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#3",
@@ -2631,23 +3753,33 @@
     },
     {
      "num": "#8",
-     "name": "Magic City"
+     "name": "Magic City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Fire Flies"
+     "name": "Fire Flies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "One Percent"
+     "name": "One Percent",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Souk Eye"
+     "name": "Souk Eye",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Founding Fathers"
+     "name": "Founding Fathers",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -2665,47 +3797,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Humility (feat. George Benson)"
+     "name": "Humility (feat. George Benson)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Tranz"
+     "name": "Tranz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hollywood (feat. Snoop Dogg and Jamie Principle)"
+     "name": "Hollywood (feat. Snoop Dogg and Jamie Principle)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Kansas"
+     "name": "Kansas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sorcererz"
+     "name": "Sorcererz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Idaho"
+     "name": "Idaho",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lake Zurich"
+     "name": "Lake Zurich",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Magic City"
+     "name": "Magic City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Fire Flies"
+     "name": "Fire Flies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "One Percent"
+     "name": "One Percent",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Souk Eye"
+     "name": "Souk Eye",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2715,152 +3869,226 @@
    "date": "Jan 28 - Oct 23, 2020",
    "quality": "Clear",
    "source": "Gorillaz",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/playlist/0gcwyY9y7l2uXkXwBVuXtw"
+   ],
    "description": "Official tracklist for the full first season of Song Machine, adapted from the official playlist. Full Season One tracklists consits of tracks 1-28, with the following tracks being the rest of the songs on the album in order of appearance. All songs are in chrono. release order, but are inverse on the Spotify playlist. \"How Far\" is also listed twice as both track 12 and 36.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Song Machine Theme Tune"
+     "name": "Song Machine Theme Tune",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Machine Bitez #1"
+     "name": "Machine Bitez #1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Machine Bitez #2"
+     "name": "Machine Bitez #2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Machine Bitez #3"
+     "name": "Machine Bitez #3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Momentary Bliss (feat. slowthai and Soft Play)"
+     "name": "Momentary Bliss (feat. slowthai and Soft Play)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Machine Bitez #4"
+     "name": "Machine Bitez #4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Machine Bitez #5"
+     "name": "Machine Bitez #5",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Désolé (feat. Fatoumata Diawara)"
+     "name": "Désolé (feat. Fatoumata Diawara)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Machine Bitez #6"
+     "name": "Machine Bitez #6",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Machine Bitez #7"
+     "name": "Machine Bitez #7",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Aries (feat. Georgia and Peter Hook)"
+     "name": "Aries (feat. Georgia and Peter Hook)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "How Far? (feat. Tony Allen and Skepta)"
+     "name": "How Far? (feat. Tony Allen and Skepta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Machine Bitez #8"
+     "name": "Machine Bitez #8",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Friday 13th (feat. Octavian)"
+     "name": "Friday 13th (feat. Octavian)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Machine Bitez #9"
+     "name": "Machine Bitez #9",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Pac-Man (feat. ScHoolboy Q)"
+     "name": "Pac-Man (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Machine Bitez #10"
+     "name": "Machine Bitez #10",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Machine Bitez #11"
+     "name": "Machine Bitez #11",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Machine Bitez #12"
+     "name": "Machine Bitez #12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Strange Timez (feat. Robert Smith)"
+     "name": "Strange Timez (feat. Robert Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Machine Bitez #13"
+     "name": "Machine Bitez #13",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Strange Timez (Robert Smith AURORA Remix) [feat. Robert Smith]"
+     "name": "Strange Timez (Robert Smith AURORA Remix) [feat. Robert Smith]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Machine Bitez #14"
+     "name": "Machine Bitez #14",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "The Pink Phantom (feat. Elton John and 6lack)"
+     "name": "The Pink Phantom (feat. Elton John and 6lack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Machine Bitez #15"
+     "name": "Machine Bitez #15",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Machine Bitez #16"
+     "name": "Machine Bitez #16",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "The Valley Of The Pagans (feat. Beck)"
+     "name": "The Valley Of The Pagans (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "The Lost Chord (feat. Leee John)"
+     "name": "The Lost Chord (feat. Leee John)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
-     "name": "Chalk Tablet Towers (feat. St. Vincent)"
+     "name": "Chalk Tablet Towers (feat. St. Vincent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
-     "name": "Dead Butterflies (feat. Kano and Roxani Arias)"
+     "name": "Dead Butterflies (feat. Kano and Roxani Arias)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
-     "name": "Opium (feat. EARTHGANG)"
+     "name": "Opium (feat. EARTHGANG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#32",
-     "name": "Simplicity (feat. Joan As Police Woman)"
+     "name": "Simplicity (feat. Joan As Police Woman)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#33",
-     "name": "Severed Head (feat. Goldlink and Unknown Mortal Orchestra)"
+     "name": "Severed Head (feat. Goldlink and Unknown Mortal Orchestra)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#34",
-     "name": "With Love To An Ex (feat. Moonchild Sanelly)"
+     "name": "With Love To An Ex (feat. Moonchild Sanelly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#35",
-     "name": "MLS (feat. JPEGMAFIA and CHAI)"
+     "name": "MLS (feat. JPEGMAFIA and CHAI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#36",
-     "name": "How Far? (feat. Tony Allen and Skepta)"
+     "name": "How Far? (feat. Tony Allen and Skepta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2875,43 +4103,63 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "TBC 1 (Song Machine Theme Tune)"
+     "name": "TBC 1 (Song Machine Theme Tune)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "TBC 2 (Momentary Bliss)"
+     "name": "TBC 2 (Momentary Bliss)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "TBC 3 (Desolé)"
+     "name": "TBC 3 (Desolé)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "TBC 4 (Aries)"
+     "name": "TBC 4 (Aries)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "TBC 5 (How Far?)"
+     "name": "TBC 5 (How Far?)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "TBC 6 (Friday 13th)"
+     "name": "TBC 6 (Friday 13th)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "TBC 7 (Pac-Man)"
+     "name": "TBC 7 (Pac-Man)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "TBC 8 (Strange Timez)"
+     "name": "TBC 8 (Strange Timez)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "TBC 9 (The Valley Of The Pagans)"
+     "name": "TBC 9 (The Valley Of The Pagans)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "TBC 10 (The Lost Chord)"
+     "name": "TBC 10 (The Lost Chord)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -2921,48 +4169,70 @@
    "date": "May, 2020",
    "quality": "Clear",
    "source": "Leaked",
-   "links": [],
+   "links": [
+    "https://web.archive.org/web/20210120131330/https://store.gorillaz.com/uk/almanac-cd.html"
+   ],
    "description": "Tracklist for an OG physical release of the SM:ST singles from May 2020 before the album was an idea. Was to be released with the 2020 Gorillaz Almanac as a bonus before the increasing COVID lockdowns led to Season One to being finished as an album in May.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Momentary Bliss (feat. slowthai and Soft Play)"
+     "name": "Momentary Bliss (feat. slowthai and Soft Play)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Désolé (feat. Fatoumata Diawara)"
+     "name": "Désolé (feat. Fatoumata Diawara)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Aries (feat. Georgia and Peter Hook)"
+     "name": "Aries (feat. Georgia and Peter Hook)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Friday 13th (feat. Octavian)"
+     "name": "Friday 13th (feat. Octavian)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pac-Man (feat. ScHoolboy Q)"
+     "name": "Pac-Man (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Strange Timez (feat. Robert Smith)"
+     "name": "Strange Timez (feat. Robert Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Pink Phantom (feat. Elton John and 6lack)"
+     "name": "The Pink Phantom (feat. Elton John and 6lack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Valley Of The Pagans (feat. Beck)"
+     "name": "The Valley Of The Pagans (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Lost Chord (feat. Leee John)"
+     "name": "The Lost Chord (feat. Leee John)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "How Far? (feat. Tony Allen and Skepta)"
+     "name": "How Far? (feat. Tony Allen and Skepta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2977,47 +4247,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Strange Timez (feat. Robert Smith)"
+     "name": "Strange Timez (feat. Robert Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Valley Of The Pagans (feat. Beck)"
+     "name": "The Valley Of The Pagans (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Lost Chord (feat. Leee John)"
+     "name": "The Lost Chord (feat. Leee John)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pac-Man (feat. ScHoolboy Q)"
+     "name": "Pac-Man (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Chalk Tablet Towers (feat. St. Vincent)"
+     "name": "Chalk Tablet Towers (feat. St. Vincent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Pink Phantom (feat. Elton John and 6lack)"
+     "name": "The Pink Phantom (feat. Elton John and 6lack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Aries (feat. Georgia and Peter Hook)"
+     "name": "Aries (feat. Georgia and Peter Hook)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Friday 13th (feat. Octavian)"
+     "name": "Friday 13th (feat. Octavian)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Dead Butterflies (feat. Kano and Roxani Arias)"
+     "name": "Dead Butterflies (feat. Kano and Roxani Arias)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Désolé (feat. Fatoumata Diawara)"
+     "name": "Désolé (feat. Fatoumata Diawara)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Momentary Bliss (feat. slowthai and Soft Play)"
+     "name": "Momentary Bliss (feat. slowthai and Soft Play)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3032,75 +4324,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Strange Timez (feat. Robert Smith)"
+     "name": "Strange Timez (feat. Robert Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Valley Of The Pagans (feat. Beck)"
+     "name": "The Valley Of The Pagans (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Lost Chord (feat. Leee John)"
+     "name": "The Lost Chord (feat. Leee John)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pac-Man (feat. ScHoolboy Q)"
+     "name": "Pac-Man (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Chalk Tablet Towers (feat. St. Vincent)"
+     "name": "Chalk Tablet Towers (feat. St. Vincent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Pink Phantom (feat. Elton John and 6lack)"
+     "name": "The Pink Phantom (feat. Elton John and 6lack)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Aries (feat. Georgia and Peter Hook)"
+     "name": "Aries (feat. Georgia and Peter Hook)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Friday 13th (feat. Octavian)"
+     "name": "Friday 13th (feat. Octavian)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Dead Butterflies (feat. Kano and Roxani Arias)"
+     "name": "Dead Butterflies (feat. Kano and Roxani Arias)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Désolé (feat. Fatoumata Diawara)"
+     "name": "Désolé (feat. Fatoumata Diawara)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Momentary Bliss (feat. slowthai and Soft Play)"
+     "name": "Momentary Bliss (feat. slowthai and Soft Play)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Opium (feat. EARTHGANG)"
+     "name": "Opium (feat. EARTHGANG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Simplicity (feat. Joan As Police Woman)"
+     "name": "Simplicity (feat. Joan As Police Woman)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Severed Head (feat. Goldlink and Unknown Mortal Orchestra)"
+     "name": "Severed Head (feat. Goldlink and Unknown Mortal Orchestra)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "With Love To An Ex (feat. Moonchild Sanelly)"
+     "name": "With Love To An Ex (feat. Moonchild Sanelly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "MLS (feat. JPEGMAFIA and CHAI)"
+     "name": "MLS (feat. JPEGMAFIA and CHAI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "How Far? (feat. Tony Allen and Skepta)"
+     "name": "How Far? (feat. Tony Allen and Skepta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Taxi Back To 80s Reykjavík (JPN)"
+     "name": "Taxi Back To 80s Reykjavík (JPN)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3115,15 +4443,21 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Crocadillaz (feat. Dawn Penn & De La Soul)"
+     "name": "Crocadillaz (feat. Dawn Penn & De La Soul)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "New Gold (feat. Tame Impala)"
+     "name": "New Gold (feat. Tame Impala)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Tormenta (feat. Bad Bunny)"
+     "name": "Tormenta (feat. Bad Bunny)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -3138,15 +4472,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Meanwhile (feat. Jelani Blackman and Barrington Levy)"
+     "name": "Meanwhile (feat. Jelani Blackman and Barrington Levy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jimmy Jimmy (feat. AJ Tracey)"
+     "name": "Jimmy Jimmy (feat. AJ Tracey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Déjà Vu (feat. Alicai Harley) [Live From NW10]"
+     "name": "Déjà Vu (feat. Alicai Harley) [Live From NW10]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3161,11 +4501,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Cracker Island (feat. Thundercat)"
+     "name": "Cracker Island (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Possession Island (feat. Beck)"
+     "name": "Possession Island (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3180,43 +4524,63 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Cracker Island (feat. Thundercat)"
+     "name": "Cracker Island (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Oil (feat. Stevie Nicks)"
+     "name": "Oil (feat. Stevie Nicks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Tired Influencer"
+     "name": "The Tired Influencer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Tarantula"
+     "name": "Tarantula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Silent Running (feat. Adeleye Omotayo)"
+     "name": "Silent Running (feat. Adeleye Omotayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "New Gold (feat. Tame Impala and Bootie Brown)"
+     "name": "New Gold (feat. Tame Impala and Bootie Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Baby Queen"
+     "name": "Baby Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tormenta (feat. Bad Bunny)"
+     "name": "Tormenta (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Skinny Ape"
+     "name": "Skinny Ape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Possession Island (feat. Beck)"
+     "name": "Possession Island (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3234,55 +4598,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Cracker Island (feat. Thundercat)"
+     "name": "Cracker Island (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Oil (feat. Stevie Nicks)"
+     "name": "Oil (feat. Stevie Nicks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Tired Influencer"
+     "name": "The Tired Influencer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Silent Running (feat. Adeleye Omotayo)"
+     "name": "Silent Running (feat. Adeleye Omotayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "New Gold (feat. Tame Impala and Bootie Brown)"
+     "name": "New Gold (feat. Tame Impala and Bootie Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baby Queen"
+     "name": "Baby Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tarantula"
+     "name": "Tarantula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tormenta (feat. Bad Bunny)"
+     "name": "Tormenta (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Skinny Ape"
+     "name": "Skinny Ape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Possession Island (feat. Beck)"
+     "name": "Possession Island (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Captain Chicken (feat. Del The Funky Homosapien)"
+     "name": "Captain Chicken (feat. Del The Funky Homosapien)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Controllah (feat. MC Bin Laden)"
+     "name": "Controllah (feat. MC Bin Laden)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Crocadillaz (feat. De La Soul and Dawn Penn)"
+     "name": "Crocadillaz (feat. De La Soul and Dawn Penn)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3297,51 +4687,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Cracker Island (feat. Thundercat)"
+     "name": "Cracker Island (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Oil (feat. Stevie Nicks)"
+     "name": "Oil (feat. Stevie Nicks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Tired Influencer"
+     "name": "The Tired Influencer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Silent Running (feat. Adeleye Omotayo)"
+     "name": "Silent Running (feat. Adeleye Omotayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "New Gold (feat. Tame Impala and Bootie Brown)"
+     "name": "New Gold (feat. Tame Impala and Bootie Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baby Queen"
+     "name": "Baby Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tarantula"
+     "name": "Tarantula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tormenta (feat. Bad Bunny)"
+     "name": "Tormenta (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Skinny Ape"
+     "name": "Skinny Ape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Possession Island (feat. Beck)"
+     "name": "Possession Island (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Crocadillaz (feat. De La Soul and Dawn Penn) (JPN CD)"
+     "name": "Crocadillaz (feat. De La Soul and Dawn Penn) (JPN CD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Silent Running (2D Piano Version) [feat. Adeleye Omotayo] (Digital)"
+     "name": "Silent Running (2D Piano Version) [feat. Adeleye Omotayo] (Digital)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3359,63 +4773,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Cracker Island (feat. Thundercat)"
+     "name": "Cracker Island (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Oil (feat. Stevie Nicks)"
+     "name": "Oil (feat. Stevie Nicks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Tired Influencer"
+     "name": "The Tired Influencer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Silent Running (feat. Adeleye Omotayo)"
+     "name": "Silent Running (feat. Adeleye Omotayo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "New Gold (feat. Tame Impala and Bootie Brown)"
+     "name": "New Gold (feat. Tame Impala and Bootie Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baby Queen"
+     "name": "Baby Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tarantula"
+     "name": "Tarantula",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tormenta (feat. Bad Bunny)"
+     "name": "Tormenta (feat. Bad Bunny)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Skinny Ape"
+     "name": "Skinny Ape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Possession Island (feat. Beck)"
+     "name": "Possession Island (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Captain Chicken (feat. Del The Funky Homosapien)"
+     "name": "Captain Chicken (feat. Del The Funky Homosapien)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Controllah (feat. MC Bin Laden)"
+     "name": "Controllah (feat. MC Bin Laden)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Crocadillaz (feat. De La Soul and Dawn Penn)"
+     "name": "Crocadillaz (feat. De La Soul and Dawn Penn)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Silent Running (2D Piano Version) [feat. Adeleye Omotayo]"
+     "name": "Silent Running (2D Piano Version) [feat. Adeleye Omotayo]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "New Gold (Dom Dolla Remix) [feat. Tame Impala and Bootie Brown]"
+     "name": "New Gold (Dom Dolla Remix) [feat. Tame Impala and Bootie Brown]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3443,63 +4887,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Mountain (feat. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan Ali Bangash, Ayaan Ali Bangash)"
+     "name": "The Mountain (feat. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan Ali Bangash, Ayaan Ali Bangash)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Moon Cave (feat. Asha Puthli, Bobby Womack, Trugoy, Jalen Ngonda, Black Thought)"
+     "name": "The Moon Cave (feat. Asha Puthli, Bobby Womack, Trugoy, Jalen Ngonda, Black Thought)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Happy Dictator (feat. Sparks)"
+     "name": "The Happy Dictator (feat. Sparks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Hardest Thing (feat. Tony Allen)"
+     "name": "The Hardest Thing (feat. Tony Allen)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Orange County (feat. Bizarrap, Kara Jackson, Anoushka Shankar)"
+     "name": "Orange County (feat. Bizarrap, Kara Jackson, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The God of Lying (feat. IDLES)"
+     "name": "The God of Lying (feat. IDLES)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Empty Dream Machine (feat. Black Thought, Johnny Marr, Anoushka Shankar)"
+     "name": "The Empty Dream Machine (feat. Black Thought, Johnny Marr, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Manifesto (feat. Trueno, Proof)"
+     "name": "The Manifesto (feat. Trueno, Proof)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Plastic Guru (feat. Johnny Marr, Anoushka Shankar)"
+     "name": "The Plastic Guru (feat. Johnny Marr, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Delirium (feat. Mark E. Smith)"
+     "name": "Delirium (feat. Mark E. Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Damascus (feat. Omar Souleyman, Yasiin Bey) (Fresh Arrivals, Sunday Monday)"
+     "name": "Damascus (feat. Omar Souleyman, Yasiin Bey) (Fresh Arrivals, Sunday Monday)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "The Shadowy Light (feat. Asha Bhosle, Gruff Rhys, Ajay Prasanna, Amaan Ali Bangash, Ayaan Ali Bangash)"
+     "name": "The Shadowy Light (feat. Asha Bhosle, Gruff Rhys, Ajay Prasanna, Amaan Ali Bangash, Ayaan Ali Bangash)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Casablanca (feat. Paul Simonon, Johnny Marr)"
+     "name": "Casablanca (feat. Paul Simonon, Johnny Marr)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "The Sweet Prince (feat. Ajay Prasanna, Johnny Marr, Anoushka Shankar)"
+     "name": "The Sweet Prince (feat. Ajay Prasanna, Johnny Marr, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Sad God (feat. Black Thought, Ajay Prasanna, Anoushka Shankar)"
+     "name": "The Sad God (feat. Black Thought, Ajay Prasanna, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3514,63 +4988,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Mountain (feat. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan Ali Bangash, Ayaan Ali Bangash)"
+     "name": "The Mountain (feat. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan Ali Bangash, Ayaan Ali Bangash)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Moon Cave (feat. Asha Puthli, Bobby Womack, Trugoy, Jalen Ngonda, Black Thought)"
+     "name": "The Moon Cave (feat. Asha Puthli, Bobby Womack, Trugoy, Jalen Ngonda, Black Thought)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Happy Dictator (feat. Sparks)"
+     "name": "The Happy Dictator (feat. Sparks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Hardest Thing (feat. Tony Allen)"
+     "name": "The Hardest Thing (feat. Tony Allen)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Orange County (feat. Bizarrap, Kara Jackson, Anoushka Shankar)"
+     "name": "Orange County (feat. Bizarrap, Kara Jackson, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The God of Lying (feat. IDLES)"
+     "name": "The God of Lying (feat. IDLES)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Empty Dream Machine (feat. Black Thought, Johnny Marr, Anoushka Shankar)"
+     "name": "The Empty Dream Machine (feat. Black Thought, Johnny Marr, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Manifesto (feat. Trueno, Proof)"
+     "name": "The Manifesto (feat. Trueno, Proof)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Plastic Guru (feat. Johnny Marr, Anoushka Shankar)"
+     "name": "The Plastic Guru (feat. Johnny Marr, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Delirium (feat. Mark E. Smith)"
+     "name": "Delirium (feat. Mark E. Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Damascus (feat. Omar Souleyman, Yasiin Bey) (Fresh Arrivals, Sunday Monday)"
+     "name": "Damascus (feat. Omar Souleyman, Yasiin Bey) (Fresh Arrivals, Sunday Monday)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "The Shadowy Light (feat. Asha Bhosle, Gruff Rhys, Ajay Prasanna, Amaan Ali Bangash, Ayaan Ali Bangash)"
+     "name": "The Shadowy Light (feat. Asha Bhosle, Gruff Rhys, Ajay Prasanna, Amaan Ali Bangash, Ayaan Ali Bangash)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Casablanca (feat. Paul Simonon, Johnny Marr)"
+     "name": "Casablanca (feat. Paul Simonon, Johnny Marr)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "The Sweet Prince (feat. Ajay Prasanna, Johnny Marr, Anoushka Shankar)"
+     "name": "The Sweet Prince (feat. Ajay Prasanna, Johnny Marr, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Sad God (feat. Black Thought, Ajay Prasanna, Anoushka Shankar)"
+     "name": "The Sad God (feat. Black Thought, Ajay Prasanna, Anoushka Shankar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

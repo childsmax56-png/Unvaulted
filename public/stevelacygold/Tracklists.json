@@ -25,373 +25,610 @@
   {
    "era": "Ego Death",
    "name": "Ego Death",
-   "date": "Jun 26, 2015",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Ego Death, released on June 26, 2015.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Get Away"
+     "name": "Get Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gabby"
+     "name": "Gabby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Under Control"
+     "name": "Under Control",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Go With It"
+     "name": "Go With It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Just Sayin'"
+     "name": "Just Sayin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I Tried"
+     "name": "I Tried",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "For The World"
+     "name": "For The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Girl"
+     "name": "Girl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Special Affair"
+     "name": "Special Affair",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Somthing's Missing"
+     "name": "Somthing's Missing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Partners In Crime Part Three"
+     "name": "Partners In Crime Part Three",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Penthouse Cloud"
+     "name": "Penthouse Cloud",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Palace"
+     "name": "Palace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Curse"
+     "name": "Curse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Famous"
+     "name": "Famous",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Missing You"
+     "name": "Missing You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Steve Lacy's Demo",
    "name": "Steve Lacy's Demo",
-   "date": "Feb 24, 2017",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Steve Lacy's Demo, released on February 24th, 2017.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Looks"
+     "name": "Looks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ryd"
+     "name": "Ryd",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Dark Red"
+     "name": "Dark Red",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Thangs"
+     "name": "Thangs",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Haterlovin"
+     "name": "Haterlovin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Some"
+     "name": "Some",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "Hive Mind",
+   "name": "Hive Mind",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for Hive Mind, released on July 20th, 2018.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Come Together",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Roll (Burbank Funk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Come Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "La Di Da",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Stay the Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Bravo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Mood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Next Time / Humble Pie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "It Gets Better (With Time)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Look What U Started",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Wanna Be",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Beat Goes On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Hold On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Apollo XXI",
    "name": "Apollo XXI",
-   "date": "May 24, 2019",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Apollo XXI, released on May 24th, 2019.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Only If"
+     "name": "Only If",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Like Me (feat. DAISY WORLD)"
+     "name": "Like Me (feat. DAISY WORLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Playground"
+     "name": "Playground",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Basement Jack"
+     "name": "Basement Jack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Guide"
+     "name": "Guide",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Lay Me Down"
+     "name": "Lay Me Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Hate CD"
+     "name": "Hate CD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "In Lust We Trust"
+     "name": "In Lust We Trust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Love 2 Fast"
+     "name": "Love 2 Fast",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Amandla's Interlude"
+     "name": "Amandla's Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "N Side"
+     "name": "N Side",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Outro Freestyle/4ever"
+     "name": "Outro Freestyle/4ever",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Apollo XXI",
    "name": "Apollo XXI (Japanese Version)",
-   "date": "May 24, 2019",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the Japanese release of Apollo XXI, released on May 24th, 2019. Has a bonus track titled \"The Night Howl\" with a feature from Asiatica, Steve's sister.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Only If"
+     "name": "Only If",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Like Me (feat. DAISY WORLD)"
+     "name": "Like Me (feat. DAISY WORLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Playground"
+     "name": "Playground",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Basement Jack"
+     "name": "Basement Jack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Guide"
+     "name": "Guide",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Lay Me Down"
+     "name": "Lay Me Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Hate CD"
+     "name": "Hate CD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "In Lust We Trust"
+     "name": "In Lust We Trust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Love 2 Fast"
+     "name": "Love 2 Fast",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Amandla's Interlude"
+     "name": "Amandla's Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "N Side"
+     "name": "N Side",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Outro Freestyle/4ever"
+     "name": "Outro Freestyle/4ever",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "The Night Howl (feat. Asiatica)"
+     "name": "The Night Howl (feat. Asiatica)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The Lo-Fis",
    "name": "The Lo-Fis",
-   "date": "Dec 4, 2020",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for The Lo-Fis, released on December 4th, 2020.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Atomic Vomit"
+     "name": "Atomic Vomit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "When I"
+     "name": "When I",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Thats No Fun"
+     "name": "Thats No Fun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Cocky Girl"
+     "name": "Cocky Girl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Uuuu"
+     "name": "Uuuu",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Jars Of It"
+     "name": "Jars Of It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Bars. 16"
+     "name": "Bars. 16",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Infrunami"
+     "name": "Infrunami",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Hummer"
+     "name": "Hummer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "4real"
+     "name": "4real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "I Think I Should"
+     "name": "I Think I Should",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Daze"
+     "name": "Daze",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Out Of Me Head"
+     "name": "Out Of Me Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Donchano"
+     "name": "Donchano",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Song"
+     "name": "The Song",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Gemini Rights",
    "name": "Gemini Rights",
-   "date": "Jul 15, 2022",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Gemini Rights, released on July 15th, 2022.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Static"
+     "name": "Static",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Helmet"
+     "name": "Helmet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Mercury"
+     "name": "Mercury",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Buttons"
+     "name": "Buttons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Bad Habit"
+     "name": "Bad Habit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "2Gether (Enterlude)"
+     "name": "2Gether (Enterlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Cody Freestyle"
+     "name": "Cody Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Amber"
+     "name": "Amber",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sunshine"
+     "name": "Sunshine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Give You The World"
+     "name": "Give You The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Oh yeah?",
    "name": "Oh yeah?",
-   "date": "Jun 5, 2026",
-   "quality": "Partial",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
-   "description": "Version of the Oh yeah? tracklist that was seen in a picture of Steve in the studio. Only track 9 and 10 are visible. Unknown if there are any other differences to the release tracklist.\n#1-8. ???",
+   "description": "Version of the Oh yeah? tracklist that was seen in a picture of Steve in the studio. Only tracks 9 and 10 are visible. Unknown if there are any differences to the release tracklist.\n#1-8. ???",
    "tracks": [
     {
      "num": "#9",
-     "name": "nice (shoes)"
+     "name": "nice (shoes)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "bebe"
+     "name": "bebe",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -401,114 +638,160 @@
   {
    "era": "Oh yeah?",
    "name": "Oh yeah?",
-   "date": "Jul 17, 2026",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Oh yeah?, released on July 17th, 2026.",
    "tracks": [
     {
      "num": "#1",
-     "name": "oh yeah?"
+     "name": "oh yeah?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "is it cool? (feat. SZA)"
+     "name": "is it cool? (feat. SZA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "the feeling"
+     "name": "the feeling",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "pure colour (feat. Erykah Badu)"
+     "name": "pure colour (feat. Erykah Badu)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "show you me"
+     "name": "show you me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "doom"
+     "name": "doom",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "nothing (nuthin)"
+     "name": "nothing (nuthin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "lovesexdrugbomb (feat. Cecile Believe)"
+     "name": "lovesexdrugbomb (feat. Cecile Believe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "nice shoes / in your world"
+     "name": "nice shoes / in your world",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "bebe"
+     "name": "bebe",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Unknown",
    "name": "Gemini Rights 3",
-   "date": "???",
-   "quality": "Full",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist that was posted by Steve himself and called \"Gemini Rights 3.\" Likely meant as a joke and has no connection to any of his future projects.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Santa"
+     "name": "Santa",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Bobby 100"
+     "name": "Bobby 100",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Hit Me"
+     "name": "Hit Me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Love Is..."
+     "name": "Love Is...",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "TT (feat. Fousheé)"
+     "name": "TT (feat. Fousheé)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "!?!"
+     "name": "!?!",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Ring Tony"
+     "name": "Ring Tony",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Bad Hobby"
+     "name": "Bad Hobby",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Guitar and Bass"
+     "name": "Guitar and Bass",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Thank Us"
+     "name": "Thank Us",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Lapdog"
+     "name": "Lapdog",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Virginia II"
+     "name": "Virginia II",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Tickle Me Twice"
+     "name": "Tickle Me Twice",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [

@@ -33,7 +33,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Missing You"
+     "name": "Missing You",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     }
    ]
   },
@@ -43,40 +45,58 @@
    "date": "Feb 28, 2020",
    "quality": "Clear",
    "source": "Ant",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/1CGxJ2HpqjEqmU56coDJyW?si=293MrOEuSj6tmWhKZOPQVg"
+   ],
    "description": "Tracklist for release.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Mama I Made It"
+     "name": "Mama I Made It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "4 Letter Word"
+     "name": "4 Letter Word",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Excited"
+     "name": "Excited",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Aladdin"
+     "name": "Aladdin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Beep"
+     "name": "Beep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Good 4 U"
+     "name": "Good 4 U",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Best Friend"
+     "name": "Best Friend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pinky Promise"
+     "name": "Pinky Promise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -91,23 +111,33 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#2",
-     "name": "After All"
+     "name": "After All",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Head To Toe"
+     "name": "Head To Toe",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#10",
-     "name": "Amazing"
+     "name": "Amazing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -122,7 +152,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Better Days"
+     "name": "Better Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -137,39 +169,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "June 1st"
+     "name": "June 1st",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Mama I Made It"
+     "name": "Mama I Made It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "4 Letter Word"
+     "name": "4 Letter Word",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Excited"
+     "name": "Excited",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Aladdin"
+     "name": "Aladdin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Beep"
+     "name": "Beep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Good 4 U"
+     "name": "Good 4 U",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Best Friend"
+     "name": "Best Friend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Pinky Promise"
+     "name": "Pinky Promise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -184,19 +234,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Sticks & Stones"
+     "name": "Sticks & Stones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Head Over Heels"
+     "name": "Head Over Heels",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "In Between"
+     "name": "In Between",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Come With Me"
+     "name": "Come With Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -211,19 +269,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Make U Retire"
+     "name": "Make U Retire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "What We Fina Do"
+     "name": "What We Fina Do",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Father's Day"
+     "name": "Father's Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Could've Been Fucking Years Ago"
+     "name": "Could've Been Fucking Years Ago",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -233,7 +299,9 @@
    "date": "May 2023",
    "quality": "Blocked",
    "source": "Ant",
-   "links": [],
+   "links": [
+    "https://ibb.co/Y4RXvKtp"
+   ],
    "description": "Ant posted on Twitter how his album had no features. Unknown what songs were considered.\n\n#?-?. ???",
    "tracks": []
   },
@@ -248,39 +316,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "COULDN'T BE ME"
+     "name": "COULDN'T BE ME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MEMORIES"
+     "name": "MEMORIES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "MORE THAN A FRIEND"
+     "name": "MORE THAN A FRIEND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "OBSESSED"
+     "name": "OBSESSED",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "ON MY MIND"
+     "name": "ON MY MIND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "PETIT (PETITE)"
+     "name": "PETIT (PETITE)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "SINGING IN THE RAIN"
+     "name": "SINGING IN THE RAIN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "SOFA"
+     "name": "SOFA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "YOU AND YOUR BODY"
+     "name": "YOU AND YOUR BODY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -295,39 +381,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "ON MY MIND"
+     "name": "ON MY MIND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "PETITE"
+     "name": "PETITE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "YOU AND YOUR BODY"
+     "name": "YOU AND YOUR BODY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "OBSESSED"
+     "name": "OBSESSED",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "SOFA"
+     "name": "SOFA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SINGING IN THE RAIN"
+     "name": "SINGING IN THE RAIN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "COULDN'T BE ME"
+     "name": "COULDN'T BE ME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "MORE THAN A FRIEND"
+     "name": "MORE THAN A FRIEND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MEMORIES"
+     "name": "MEMORIES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -345,39 +449,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "ON MY MIND"
+     "name": "ON MY MIND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "PETITE"
+     "name": "PETITE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "YOU AND YOUR BODY"
+     "name": "YOU AND YOUR BODY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "OBSESSED"
+     "name": "OBSESSED",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "SOFA"
+     "name": "SOFA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SINGING IN THE RAIN"
+     "name": "SINGING IN THE RAIN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "COULDN'T BE ME"
+     "name": "COULDN'T BE ME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "MORE THAN A FRIEND"
+     "name": "MORE THAN A FRIEND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MEMORIES"
+     "name": "MEMORIES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -392,19 +514,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Uh Uh Uh"
+     "name": "Uh Uh Uh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Coming Soon"
+     "name": "Coming Soon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Come Over"
+     "name": "Come Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Head To Toe"
+     "name": "Head To Toe",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

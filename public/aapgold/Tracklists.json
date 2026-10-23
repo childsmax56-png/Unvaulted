@@ -21,7 +21,7 @@
   {
    "era": "Purple Swagg",
    "name": "???",
-   "date": "2011.0",
+   "date": "2011",
    "quality": "N/A",
    "source": "N/A",
    "links": [],
@@ -29,30 +29,40 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Purple Swag"
+     "name": "Purple Swag",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Roll One Up"
+     "name": "Roll One Up",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Get High"
+     "name": "Get High",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Toast To The Gods"
+     "name": "Toast To The Gods",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
   {
    "era": "Mouth Fulla Gold",
    "name": "Mouth Fulla Gold",
-   "date": "2011-05-16",
+   "date": "May 16, 2011",
    "quality": "N/A",
    "source": "N/A",
    "links": [],
@@ -60,54 +70,76 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Purple Swag"
+     "name": "Purple Swag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Peso"
+     "name": "Peso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Been Around The World"
+     "name": "Been Around The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Roll One Up"
+     "name": "Roll One Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Out Of This World"
+     "name": "Out Of This World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Toast To The Gods"
+     "name": "Toast To The Gods",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Back To The Future"
+     "name": "Back To The Future",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Houston Old Head"
+     "name": "Houston Old Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Celebration"
+     "name": "Celebration",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Been Around The World (Slow Lane Remix)"
+     "name": "Been Around The World (Slow Lane Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Mouth Fulla Gold",
    "name": "Mouth Fulla Gold",
-   "date": "2011-06-17",
+   "date": "June 17, 2011",
    "quality": "",
    "source": "",
    "links": [],
@@ -115,51 +147,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Peso"
+     "name": "Peso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Been Around The World"
+     "name": "Been Around The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Roll One Up"
+     "name": "Roll One Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Out Of This World"
+     "name": "Out Of This World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Toast To The Gods"
+     "name": "Toast To The Gods",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Back To The Future"
+     "name": "Back To The Future",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Houston Old Head"
+     "name": "Houston Old Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Celebration"
+     "name": "Celebration",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Been Around The World (Slow Lane Remix)"
+     "name": "Been Around The World (Slow Lane Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Purple Swag"
+     "name": "Purple Swag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Wassup"
+     "name": "Wassup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -174,34 +230,46 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Palace"
+     "name": "Palace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Bass"
+     "name": "Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Wassup"
+     "name": "Wassup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Leaf"
+     "name": "Leaf",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Freeze"
+     "name": "Freeze",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "LIVE.LOVE.A$AP",
    "name": "LIVE.LOVE.A$AP",
-   "date": "2011-10-11",
+   "date": "Oct 11, 2011",
    "quality": "N/A",
    "source": "Leaked",
    "links": [],
@@ -209,90 +277,130 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Palace"
+     "name": "Palace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Peso"
+     "name": "Peso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bass"
+     "name": "Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wassup"
+     "name": "Wassup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Brand New Guy (feat. ScHoolboy Q)"
+     "name": "Brand New Guy (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Purple Swag: Chapter 2 (feat. A$AP Nast & SpaceGhostPurrp)"
+     "name": "Purple Swag: Chapter 2 (feat. A$AP Nast & SpaceGhostPurrp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Get Lit (feat. Fat Tony)"
+     "name": "Get Lit (feat. Fat Tony)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Trilla (feat. A$AP Twelvyy & A$AP Nast)"
+     "name": "Trilla (feat. A$AP Twelvyy & A$AP Nast)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Keep It G (feat. SpaceGhostPurrp & Chace Infinite)"
+     "name": "Keep It G (feat. SpaceGhostPurrp & Chace Infinite)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Kissin' Pink (feat. A$AP Ferg)"
+     "name": "Kissin' Pink (feat. A$AP Ferg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Houston Old Head"
+     "name": "Houston Old Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Acid Drip"
+     "name": "Acid Drip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Leaf (feat. Main Attractionz)"
+     "name": "Leaf (feat. Main Attractionz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Roll One Up"
+     "name": "Roll One Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Out Of This World"
+     "name": "Out Of This World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Been Around The World"
+     "name": "Been Around The World",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Ghost X"
+     "name": "Ghost X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Sometimes"
+     "name": "Sometimes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Madeline"
+     "name": "Madeline",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
   {
    "era": "LIVE.LOVE.A$AP",
    "name": "LIVE.LOVE.A$AP",
-   "date": "2011-10-31",
+   "date": "Oct 31, 2011",
    "quality": "Clear",
    "source": "Rocky",
    "links": [],
@@ -300,138 +408,203 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Palace"
+     "name": "Palace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Peso"
+     "name": "Peso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bass"
+     "name": "Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wassup"
+     "name": "Wassup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Brand New Guy (feat. ScHoolboy Q)"
+     "name": "Brand New Guy (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Purple Swag: Chapter 2 (feat. A$AP Nast & SpaceGhostPurrp)"
+     "name": "Purple Swag: Chapter 2 (feat. A$AP Nast & SpaceGhostPurrp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Get Lit (feat. Fat Tony)"
+     "name": "Get Lit (feat. Fat Tony)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Trilla (feat. A$AP Twelvyy & A$AP Nast)"
+     "name": "Trilla (feat. A$AP Twelvyy & A$AP Nast)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Keep It G (feat. SpaceGhostPurrp & Chace Infinite)"
+     "name": "Keep It G (feat. SpaceGhostPurrp & Chace Infinite)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Kissin' Pink (feat. A$AP Ferg)"
+     "name": "Kissin' Pink (feat. A$AP Ferg)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Houston Old Head"
+     "name": "Houston Old Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Acid Drip"
+     "name": "Acid Drip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Leaf (feat. Main Attractionz)"
+     "name": "Leaf (feat. Main Attractionz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Roll One Up"
+     "name": "Roll One Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Out Of This World"
+     "name": "Out Of This World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "LIVE.LOVE.A$AP",
    "name": "LIVE.LOVE.A$AP\n[10th Anniversary]",
-   "date": "2021-10-29",
+   "date": "Oct 29, 2021",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/4l6EPpP9hjQrLb8qNB9eC5?si=tZzlCIantBSyuu4NgV-Iuw",
+    "https://open.spotify.com/album/4l6EPpP9hjQrLb8qNB9eC5?si=tZzlCIAnTBSyuu4NgV-Iuw"
+   ],
    "description": "Official tracklist for the streaming re-release of \"LIVE.LOVE.A$AP\". The songs \"Kissin' Pink\" and \"Out Of This World\" are absent, \"Purple Swag: Chapter 2\" has been replaced with the original \"Purple Swag\" and the song \"Sandman\" has been added as the final track.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Palace"
+     "name": "Palace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Peso"
+     "name": "Peso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bass"
+     "name": "Bass",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wassup"
+     "name": "Wassup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Brand New Guy (feat. ScHoolboy Q)"
+     "name": "Brand New Guy (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Purple Swag"
+     "name": "Purple Swag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Get Lit (feat. Fat Tony)"
+     "name": "Get Lit (feat. Fat Tony)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Trilla (feat. A$AP Nast & A$AP Twelvyy)"
+     "name": "Trilla (feat. A$AP Nast & A$AP Twelvyy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Keep It G (feat. Chace Infinite & SpaceGhostPurrp)"
+     "name": "Keep It G (feat. Chace Infinite & SpaceGhostPurrp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Houston Old Head"
+     "name": "Houston Old Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Acid Drip"
+     "name": "Acid Drip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Leaf (feat. Main Attractionz)"
+     "name": "Leaf (feat. Main Attractionz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Roll One Up"
+     "name": "Roll One Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Demons"
+     "name": "Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Sandman"
+     "name": "Sandman",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -449,22 +622,28 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Ghost X"
+     "name": "Ghost X",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Madeline"
+     "name": "Madeline",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "??? (R.I.P. Yams)"
+     "name": "??? (R.I.P. Yams)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
   {
    "era": "LONG.LIVE.A$AP",
    "name": "LONG.LIVE.A$AP (Deluxe)\n[V1]",
-   "date": "2012-12-08",
+   "date": "Dec 8, 2012",
    "quality": "Clear",
    "source": "Rocky",
    "links": [],
@@ -472,67 +651,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Long Live A$AP"
+     "name": "Long Live A$AP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Goldie"
+     "name": "Goldie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PMW (All I Really Need) (feat. ScHoolboy Q) (Pussy Money Weed)"
+     "name": "PMW (All I Really Need) (feat. ScHoolboy Q) (Pussy Money Weed)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "LVL"
+     "name": "LVL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hell (feat. Santigold)"
+     "name": "Hell (feat. Santigold)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pain (feat. OverDoz.)"
+     "name": "Pain (feat. OverDoz.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Fuckin' Problems (feat. Drake, Kendrick Lamar & 2 Chainz)"
+     "name": "Fuckin' Problems (feat. Drake, Kendrick Lamar & 2 Chainz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)"
+     "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)"
+     "name": "1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fashion Killa"
+     "name": "Fashion Killa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Phoenix"
+     "name": "Phoenix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Suddenly"
+     "name": "Suddenly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Pretty Flacko (Remix) (feat. Waka Flocka Flame, Gucci Mane & Pharrell Williams)"
+     "name": "Pretty Flacko (Remix) (feat. Waka Flocka Flame, Gucci Mane & Pharrell Williams)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ghetto Symphony (feat. A$AP Ferg & Gunplay)"
+     "name": "Ghetto Symphony (feat. A$AP Ferg & Gunplay)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Ticket (Angels)"
+     "name": "Ticket (Angels)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Like I'm Apart (feat. Florence Welch) (I Come Apart)"
+     "name": "Like I'm Apart (feat. Florence Welch) (I Come Apart)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -542,59 +753,85 @@
   {
    "era": "LONG.LIVE.A$AP",
    "name": "LONG.LIVE.A$AP",
-   "date": "2013-01-15",
+   "date": "Jan 15, 2013",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
+   "links": [
+    "https://on.soundcloud.com/LYbDBR7R22FNFNBL9"
+   ],
    "description": "The official tracklist for the non-deluxe version of A$AP Rocky's first studio album titled \"LONG.LIVE.A$AP\" which released on January 15th, 2013.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Long Live A$AP"
+     "name": "Long Live A$AP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Goldie"
+     "name": "Goldie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PMW (All I Really Need) (feat. ScHoolboy Q) (Pussy Money Weed)"
+     "name": "PMW (All I Really Need) (feat. ScHoolboy Q) (Pussy Money Weed)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "LVL"
+     "name": "LVL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hell (feat. Santigold)"
+     "name": "Hell (feat. Santigold)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pain (feat. OverDoz.)"
+     "name": "Pain (feat. OverDoz.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Fuckin' Problems (feat. Drake, Kendrick Lamar & 2 Chainz)"
+     "name": "Fuckin' Problems (feat. Drake, Kendrick Lamar & 2 Chainz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)"
+     "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)"
+     "name": "1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fashion Killa"
+     "name": "Fashion Killa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Phoenix"
+     "name": "Phoenix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Suddenly"
+     "name": "Suddenly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -604,79 +841,115 @@
   {
    "era": "LONG.LIVE.A$AP",
    "name": "LONG.LIVE.A$AP (Deluxe) [Streaming Tracklist]",
-   "date": "2013-01-15",
+   "date": "Jan 15, 2013",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/6rzMufuu8sLkIizM4q9c7J?si=5X9eOEdcQgm8jtpo-aOXTA"
+   ],
    "description": "Official tracklist for \"LONG.LIVE.A$AP (Deluxe)\" which released on January \n15th, 2013. Adds five more songs to the tracklisting. The physical versions of the deluxe exclude the \"Purple Swag\" remix.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Long Live A$AP"
+     "name": "Long Live A$AP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Goldie"
+     "name": "Goldie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PMW (All I Really Need) (feat. ScHoolboy Q)"
+     "name": "PMW (All I Really Need) (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "LVL"
+     "name": "LVL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hell (feat. Santigold)"
+     "name": "Hell (feat. Santigold)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pain (feat. OverDoz.)"
+     "name": "Pain (feat. OverDoz.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Fuckin' Problems (feat. Drake, Kendrick Lamar & 2 Chainz)"
+     "name": "Fuckin' Problems (feat. Drake, Kendrick Lamar & 2 Chainz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)"
+     "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)"
+     "name": "1Train (feat. Kendrick Lamar, Joey Bada$$, Yelawolf, Danny Brown, Action Bronson & Big K.R.I.T.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fashion Killa"
+     "name": "Fashion Killa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Phoenix"
+     "name": "Phoenix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Suddenly"
+     "name": "Suddenly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Jodye"
+     "name": "Jodye",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ghetto Symphony (feat. A$AP Ferg & Gunplay)"
+     "name": "Ghetto Symphony (feat. A$AP Ferg & Gunplay)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Angels (Ticket)"
+     "name": "Angels (Ticket)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "I Come Apart (feat. Florence Welch) (Like I'm Apart)"
+     "name": "I Come Apart (feat. Florence Welch) (Like I'm Apart)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Purple Swag REMIX (feat. Killa Kyleon, Paul Wall & Bun B)"
+     "name": "Purple Swag REMIX (feat. Killa Kyleon, Paul Wall & Bun B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -694,43 +967,63 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Belly"
+     "name": "Belly",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Chevy"
+     "name": "Chevy",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Lady"
+     "name": "Lady",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Riot Rave"
+     "name": "Riot Rave",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Slow Lover"
+     "name": "Slow Lover",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Unicorn"
+     "name": "Unicorn",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Untitled"
+     "name": "Untitled",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "??? (prod. A$AP Rocky & Héctor Delgado)"
+     "name": "??? (prod. A$AP Rocky & Héctor Delgado)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "??? (prod. A$AP Rocky)"
+     "name": "??? (prod. A$AP Rocky)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "??? (prod. A$AP Rocky)"
+     "name": "??? (prod. A$AP Rocky)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
@@ -745,102 +1038,148 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Trillmatic"
+     "name": "Trillmatic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "See Me"
+     "name": "See Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Xscape"
+     "name": "Xscape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Hella Hoes"
+     "name": "Hella Hoes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "AT.LONG.    LAST.A$AP",
    "name": "AT.LONG.LAST.A$AP",
-   "date": "2015-05-26",
+   "date": "May 26, 2015",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/3arNdjotCvtiiLFfjKngMc?si=TU_wMZNgSxeF8QicGePBWA"
+   ],
    "description": "The official tracklist for A$AP Rocky's second studio album titled \"AT.LONG.LAST.A$AP\" which released on May 26th, 2015.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Holy Ghost (feat. Joe Fox)"
+     "name": "Holy Ghost (feat. Joe Fox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Canel St. (feat. BONES)"
+     "name": "Canel St. (feat. BONES)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fine Whine (feat. Joe Fox, Future & M.I.A)"
+     "name": "Fine Whine (feat. Joe Fox, Future & M.I.A)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "L$D"
+     "name": "L$D",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Excuse Me"
+     "name": "Excuse Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "JD"
+     "name": "JD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lord Pretty Flacko Jodye 2 (LPFJ2)"
+     "name": "Lord Pretty Flacko Jodye 2 (LPFJ2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Electric Body (feat. ScHoolboy Q)"
+     "name": "Electric Body (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Jukebox Joints (feat. Joe Fox & Kanye West)"
+     "name": "Jukebox Joints (feat. Joe Fox & Kanye West)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Max B (feat. Joe Fox)"
+     "name": "Max B (feat. Joe Fox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pharsyde (feat. Joe Fox)"
+     "name": "Pharsyde (feat. Joe Fox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Wavybone (feat. Juicy J & UKG)"
+     "name": "Wavybone (feat. Juicy J & UKG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "West Side Highway (feat. James Fauntleroy)"
+     "name": "West Side Highway (feat. James Fauntleroy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Better Things"
+     "name": "Better Things",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "M'$ (feat. Lil Wayne)"
+     "name": "M'$ (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Dreams (Interlude)"
+     "name": "Dreams (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Everyday (feat. Miguel, Rod Stewart & Mark Ronson)"
+     "name": "Everyday (feat. Miguel, Rod Stewart & Mark Ronson)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Back Home (feat. Mos Def, A$AP Yams & Acyde)"
+     "name": "Back Home (feat. Mos Def, A$AP Yams & Acyde)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -850,59 +1189,85 @@
   {
    "era": "Cozy Tapes Vol. 1: Friends",
    "name": "Cozy Tapes: Vol. 1 Friends -",
-   "date": "2016-10-31",
+   "date": "Oct 31, 2016",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/3RaACfwYTY9uiDy3VSWLLc?si=eDjkgXTHSz6LnV03RkKMuQ"
+   ],
    "description": "Official tracklist for \"Cozy Tapes: Vol. 1 Friends -\" which released on \nOctober 31st, 2016.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Yamborghini High"
+     "name": "Yamborghini High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Crazy Brazy"
+     "name": "Crazy Brazy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Way Hii"
+     "name": "Way Hii",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Young N***a Living"
+     "name": "Young N***a Living",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Nasty's World"
+     "name": "Nasty's World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Money Man"
+     "name": "Money Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Put That On My Set"
+     "name": "Put That On My Set",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Motivation Foreign (Skit)"
+     "name": "Motivation Foreign (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "London Town"
+     "name": "London Town",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Runner"
+     "name": "Runner",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Bachelor"
+     "name": "Bachelor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Telephone Calls"
+     "name": "Telephone Calls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -917,63 +1282,93 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Big Bag"
+     "name": "Big Bag",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Bitches"
+     "name": "Bitches",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Conway"
+     "name": "Conway",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Corner"
+     "name": "Corner",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Get Curved 1"
+     "name": "Get Curved 1",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Hawaii (You Know It, Movie)"
+     "name": "Hawaii (You Know It, Movie)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Kind Of Girl"
+     "name": "Kind Of Girl",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Mind Your Own Business"
+     "name": "Mind Your Own Business",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Movie (You Know It, Hawaii)"
+     "name": "Movie (You Know It, Hawaii)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Off That"
+     "name": "Off That",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Straight For The Bag"
+     "name": "Straight For The Bag",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "The Reason 1 (This The Reason, The Reason)"
+     "name": "The Reason 1 (This The Reason, The Reason)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "What U Gonna Do"
+     "name": "What U Gonna Do",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Where They At"
+     "name": "Where They At",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Smoking That Lalala (La La La)"
+     "name": "Smoking That Lalala (La La La)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -991,31 +1386,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "1.where they at tho rough (Where They At Tho, Where They At)"
+     "name": "1.where they at tho rough (Where They At Tho, Where They At)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "2.French_Ben_Conway (Conway, What U Gonna Do)"
+     "name": "2.French_Ben_Conway (Conway, What U Gonna Do)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "3.French_Asap_GetCurved (Get Curved, Get Curved 1)"
+     "name": "3.French_Asap_GetCurved (Get Curved, Get Curved 1)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "4.French_Asap_CB_LaLALa_New (La La La, Smoking That Lalala)"
+     "name": "4.French_Asap_CB_LaLALa_New (La La La, Smoking That Lalala)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "5.OFF THAT_01 (Off That)"
+     "name": "5.OFF THAT_01 (Off That)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "6.French_Asap_This The Reason (The Reason, The Reason 1)"
+     "name": "6.French_Asap_This The Reason (The Reason, The Reason 1)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "7.French_Zack_Asap_Corner (Corner)"
+     "name": "7.French_Zack_Asap_Corner (Corner)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -1025,7 +1434,7 @@
   {
    "era": "Cozy Tapes Vol. 2: Too Cozy",
    "name": "Cozy Tapes Vol. 2: Too Cozy",
-   "date": "2017-08-25",
+   "date": "Aug 25, 2017",
    "quality": "Clear",
    "source": "Rocky",
    "links": [],
@@ -1033,78 +1442,112 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Skool Bus (Skit)"
+     "name": "Skool Bus (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Perry Aye"
+     "name": "Perry Aye",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Please Shut Up"
+     "name": "Please Shut Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Blowin' Minds (Skateboard)"
+     "name": "Blowin' Minds (Skateboard)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Black Card"
+     "name": "Black Card",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Walk On Water"
+     "name": "Walk On Water",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BYF"
+     "name": "BYF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Get The Bag"
+     "name": "Get The Bag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Bahamas"
+     "name": "Bahamas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Principal Daryl Choad (Skit)"
+     "name": "Principal Daryl Choad (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Frat Rules"
+     "name": "Frat Rules",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "FYBR (First Year Being Rich)"
+     "name": "FYBR (First Year Being Rich)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Feels So Good"
+     "name": "Feels So Good",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Coziest"
+     "name": "Coziest",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "What Happens"
+     "name": "What Happens",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "RAF"
+     "name": "RAF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Last Day Of Skool (Skit)"
+     "name": "Last Day Of Skool (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "DUMMIE",
    "name": "DUMMY\n(DUMMIE)",
-   "date": "2017-09-01",
+   "date": "Sep 2017",
    "quality": "Clear",
    "source": "Leaked",
    "links": [],
@@ -1112,31 +1555,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "A$AP ROCKY _ HEAVEN (Heaven, Ladi Radi)"
+     "name": "A$AP ROCKY _ HEAVEN (Heaven, Ladi Radi)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "A$AP ROCKY _ SMOKIN DOPE PROD TRIP DIXON (Smokin Dope)"
+     "name": "A$AP ROCKY _ SMOKIN DOPE PROD TRIP DIXON (Smokin Dope)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "A$AP ROCKY _ PRETTY GUY PROD TAME IMPALA (Pretty Guy)"
+     "name": "A$AP ROCKY _ PRETTY GUY PROD TAME IMPALA (Pretty Guy)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#4",
-     "name": "A$AP ROCKY TREZ LOWKEY KEY Nast _ TROPICAL (Tropical)"
+     "name": "A$AP ROCKY TREZ LOWKEY KEY Nast _ TROPICAL (Tropical)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "A$AP ROCKY _ DARKSIDE PROD FRANS AND LYNUS (Darkside)"
+     "name": "A$AP ROCKY _ DARKSIDE PROD FRANS AND LYNUS (Darkside)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#6",
-     "name": "A$AP ROCKY _ABOVE PROD BY FRANS (Above)"
+     "name": "A$AP ROCKY _ABOVE PROD BY FRANS (Above)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "A$AP ROCKY _ KEEP IT TRILL PROD HARRY FRAUD (Keep It Trill)"
+     "name": "A$AP ROCKY _ KEEP IT TRILL PROD HARRY FRAUD (Keep It Trill)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -1146,7 +1603,7 @@
   {
    "era": "DUMMIE",
    "name": "DUMMIE\n(DUMMY)",
-   "date": "2024-09-24",
+   "date": "Sep 24, 2024",
    "quality": "Clear",
    "source": "Leaked",
    "links": [],
@@ -1154,47 +1611,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "LSD INTRO"
+     "name": "LSD INTRO",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "PRETTY GUY"
+     "name": "PRETTY GUY",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#3",
-     "name": "CATCH"
+     "name": "CATCH",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "MONEYBAGS (Money Bags Freestyle (Dean Blunt Meditation))"
+     "name": "MONEYBAGS (Money Bags Freestyle (Dean Blunt Meditation))",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "DARKSIDE / ABOVE"
+     "name": "DARKSIDE / ABOVE",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#6",
-     "name": "KEEP IT TRILL"
+     "name": "KEEP IT TRILL",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "INTERNET FREESTYLE"
+     "name": "INTERNET FREESTYLE",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "WOK (☆☆☆☆☆ 5IVE $TAR$, 5IVE STARS, Wokkk)"
+     "name": "WOK (☆☆☆☆☆ 5IVE $TAR$, 5IVE STARS, Wokkk)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "RUN IT UP"
+     "name": "RUN IT UP",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "10 REASONS"
+     "name": "10 REASONS",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "DAN$E"
+     "name": "DAN$E",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -1204,7 +1683,7 @@
   {
    "era": "DUMMIE",
    "name": "DUMMIE\n(DUMMY)",
-   "date": "2024-09-24",
+   "date": "Sep 24, 2024",
    "quality": "Clear",
    "source": "Leaked",
    "links": [],
@@ -1212,35 +1691,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "A$AP FOREVER"
+     "name": "A$AP FOREVER",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "FRAND ABOVE (Above)"
+     "name": "FRAND ABOVE (Above)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "LADI RADI (Heaven)"
+     "name": "LADI RADI (Heaven)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "PRETTY GUY"
+     "name": "PRETTY GUY",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#5",
-     "name": "SMOKIN (Smokin' Dope)"
+     "name": "SMOKIN (Smokin' Dope)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "TROPICAL"
+     "name": "TROPICAL",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "DARKSIDE"
+     "name": "DARKSIDE",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#8",
-     "name": "KEEP IT TRILL"
+     "name": "KEEP IT TRILL",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -1268,67 +1763,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "LANA CHARLZ RECORD (Lana Charlz)"
+     "name": "LANA CHARLZ RECORD (Lana Charlz)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "GO DIR A RIDE - DANGERMOUSE (Go Dir A Ride)"
+     "name": "GO DIR A RIDE - DANGERMOUSE (Go Dir A Ride)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#3",
-     "name": "BABY MAMA-YE (Baby Mama)"
+     "name": "BABY MAMA-YE (Baby Mama)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#4",
-     "name": "HEAVEN (Ladi Radi)"
+     "name": "HEAVEN (Ladi Radi)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "SUNDRESS"
+     "name": "SUNDRESS",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "WZARDY STREETDANVER ALCHEMIST (Wizardry Street Danver)"
+     "name": "WZARDY STREETDANVER ALCHEMIST (Wizardry Street Danver)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#7",
-     "name": "CHAINZ"
+     "name": "CHAINZ",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "ROCKY POST METRO (Closer)"
+     "name": "ROCKY POST METRO (Closer)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "MOB RECORD (A$AP Mob - ???)"
+     "name": "MOB RECORD (A$AP Mob - ???)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "MUSIC IS ABOVE YOU"
+     "name": "MUSIC IS ABOVE YOU",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#11",
-     "name": "COOL N DRE S0 HIGH (So High)"
+     "name": "COOL N DRE S0 HIGH (So High)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "PIERRE KANYE RECORD"
+     "name": "PIERRE KANYE RECORD",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "FREEZE"
+     "name": "FREEZE",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "YEEZY MY"
+     "name": "YEEZY MY",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "TW DREDRPY 30 MISSED CALLS (30 Missed Calls)"
+     "name": "TW DREDRPY 30 MISSED CALLS (30 Missed Calls)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#16",
-     "name": "MISSED LIDE ( PAC TRK ) (Missed Lide)"
+     "name": "MISSED LIDE ( PAC TRK ) (Missed Lide)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -1338,71 +1865,103 @@
   {
    "era": "TESTING",
    "name": "TESTING",
-   "date": "2018-05-25",
+   "date": "May 25, 2018",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/3MATDdrpHmQCmuOcozZjDa?si=yQPdq24_TPWVtsoWIA0PVA"
+   ],
    "description": "Offical tracklist for \"TESTING\" released on May 25th, 2018.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Distorted Records"
+     "name": "Distorted Records",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "A$AP Forever REMIX (feat. Kid Cudi, T.I. & Moby)"
+     "name": "A$AP Forever REMIX (feat. Kid Cudi, T.I. & Moby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Tony Tone"
+     "name": "Tony Tone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Fukk Sleep (feat. FKA twigs)"
+     "name": "Fukk Sleep (feat. FKA twigs)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Praise The Lord (Da Shine) (feat. Skepta)"
+     "name": "Praise The Lord (Da Shine) (feat. Skepta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "CALLDROPS (feat. Kodak Black)"
+     "name": "CALLDROPS (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Buck Shots"
+     "name": "Buck Shots",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Gunz N Butter (feat. Juicy J)"
+     "name": "Gunz N Butter (feat. Juicy J)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Brotha Man (feat. French Montana)"
+     "name": "Brotha Man (feat. French Montana)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "OG Beeper"
+     "name": "OG Beeper",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Kids Turned Out Fine"
+     "name": "Kids Turned Out Fine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Hun43rd"
+     "name": "Hun43rd",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Changes"
+     "name": "Changes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Black Tux, White Collar"
+     "name": "Black Tux, White Collar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Purity (feat. Frank Ocean)"
+     "name": "Purity (feat. Frank Ocean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1417,15 +1976,21 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Sandman"
+     "name": "Sandman",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Sunshine Goodmorning"
+     "name": "Sunshine Goodmorning",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Blur (feat. Blood Orange)"
+     "name": "Blur (feat. Blood Orange)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -1440,7 +2005,26 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Loved"
+     "name": "Loved",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    }
+   ]
+  },
+  {
+   "era": "GRIM",
+   "name": "GRIM",
+   "date": "Late 2021",
+   "quality": "Blocked",
+   "source": "Primary",
+   "links": [],
+   "description": "Album copy played to Aisultan Seitov sometime in late 2021, in which he was asked by Rocky to pick his favourite song to shoot a music video for.\n\n1-#?. ???",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Mushroom (feat. reggie & Jeremih) (Shroom Clouds, Mushroom Clouds)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -1448,8 +2032,8 @@
    "era": "A$AP Jean",
    "name": "???",
    "date": "",
-   "quality": "",
-   "source": "",
+   "quality": "N/A",
+   "source": "N/A",
    "links": [],
    "description": "Jean Dawson said in one of his messages to Zach Fogerty that the collab album with Rocky was gonna be 8 songs long with “unique features” on some of the tracks. Anything else is unknown. \n\n1-8. ???",
    "tracks": []
@@ -1457,31 +2041,43 @@
   {
    "era": "DON'T BE DUMB [V1]",
    "name": "DON'T BE DUMB [2023]",
-   "date": "2023.0",
+   "date": "2023",
    "quality": "Clear",
    "source": "Rocky",
-   "links": [],
-   "description": "In a 2023 interview Rocky confirmed 4 songs that would appear on his upcoming project, \"DON'T BE DUMB\". He also stated some producers on the album that may or may not still be on the current project. And collaborations with Rihanna and Peso Pluma.\n\n1-#?. ???",
+   "links": [
+    "https://www.complex.com/music/a/j-rose/asap-rocky-interview-album-beats-by-dre"
+   ],
+   "description": "In a 2023 interview Rocky confirmed 4 songs that would appear on his upcoming project, \"DON'T BE DUMB\". He also stated some producers on the album, as well as collaborations with Rihanna and Peso Pluma.\n\n1-#?. ???",
    "tracks": [
     {
      "num": "#?",
-     "name": "D.M.B."
+     "name": "D.M.B.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Shittin' Me"
+     "name": "Shittin' Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "RIOT (Rowdy Pipe'n)"
+     "name": "RIOT (Rowdy Pipe'n)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Same Problems?"
+     "name": "Same Problems?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "??? (feat. Peso Pluma)"
+     "name": "??? (feat. Peso Pluma)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1496,7 +2092,169 @@
    "tracks": [
     {
      "num": "#9",
-     "name": "Ruby Rosary"
+     "name": "Ruby Rosary",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "DON'T BE DUMB [V2]",
+   "name": "ALL IN\n(as YUNG FELON)",
+   "date": "Sep 18, 2024",
+   "quality": "Blocked",
+   "source": "Official",
+   "links": [],
+   "description": "1-10. ???",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "TRUNKS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Tantrum",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Sacred Suspicion",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "concepts",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ]
+  },
+  {
+   "era": "DON'T BE DUMB [V3]",
+   "name": "DON'T BE DUMB",
+   "date": "",
+   "quality": "Clear",
+   "source": "Rocky",
+   "links": [],
+   "description": "All of the collected tracks that were set to appear on Rocky's album \"DON'T BE DUMB\" in the 2025 version on the album. While not every song is confirmed, this is the best guess for the tracklist of the album. To promote the release of \"Ruby Rosary\", Rocky took to the r/asaprocky Reddit page to post a screenshot of the song playing in a Dropbox. In this photo the filename can be seen partially which reveals it would seemingly have been track nine on the album.\n\n1-#?. ???",
+   "tracks": [
+    {
+     "num": "#9",
+     "name": "Ruby Rosary (feat. J. Cole)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "AMERICAN SABOTAGE (feat. Tommy Revenge)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Don't Be Dumb/Trip Baby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "GRIM FREESTYLE",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Hood Happy (feat. Busta Rhymes, Flavor Flav, Slick Rick, Fatman Scoop & Morrissey)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Loved",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "Revolver",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "RIOT (Rowdy Pipe'n)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Shroom Cloud",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "All Black (Stole Ya Flow)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Stop Snitchin (feat. BossMan Dlow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Whiskey (feat. Westside Gunn & Gorrilaz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Your Honor",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "C - Lo 4,5,6",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Fish N Steak (What It Is) (feat. Tyler, The Creator & Jozzy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Flackito Jodye (feat. Tokischa) (Flackito)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "??? (Poltergeist)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "World Ends (feat. will.i.am & Jessica Pratt) (The End)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "??? (prod. The Alchemist & Danny Elfman)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1511,96 +2269,9 @@
    "tracks": []
   },
   {
-   "era": "DON'T BE DUMB [V3]",
-   "name": "DON'T BE DUMB",
-   "date": "",
-   "quality": "Clear",
-   "source": "Rocky",
-   "links": [],
-   "description": "All of the collected tracks to appear on Rocky's upcoming album \"DON'T BE DUMB\", while not every song is confirmed this is the best guess for the current tracklist of the album. To promote the release of \"Ruby Rosary\", Rocky took to the r/asaprocky Reddit page to post a screenshot of the song playing in a Dropbox. In this photo the filename can be seen partially which reveals it will seemingly be track nine on the album.\n\n1-#?. ???",
-   "tracks": [
-    {
-     "num": "#9",
-     "name": "Ruby Rosary (feat. J. Cole)"
-    },
-    {
-     "num": "#?",
-     "name": "AMERICAN SABOTAGE (feat. Tommy Revenge)"
-    },
-    {
-     "num": "#?",
-     "name": "Don't Be Dumb"
-    },
-    {
-     "num": "#?",
-     "name": "GRIM FREESTYLE"
-    },
-    {
-     "num": "#?",
-     "name": "Hood Happy (feat. Busta Rhymes, Flavor Flav, Slick Rick, Fatman Scoop & Morrissey)"
-    },
-    {
-     "num": "#?",
-     "name": "Loved"
-    },
-    {
-     "num": "#?",
-     "name": "Revolver"
-    },
-    {
-     "num": "#?",
-     "name": "RIOT (Rowdy Pipe'n)"
-    },
-    {
-     "num": "#?",
-     "name": "Shroom Cloud"
-    },
-    {
-     "num": "#?",
-     "name": "All Black (Stole Ya Flow)"
-    },
-    {
-     "num": "#?",
-     "name": "Stop Snitchin (feat. BossMan Dlow)"
-    },
-    {
-     "num": "#?",
-     "name": "Whiskey (feat. Westside Gunn & Gorrilaz)"
-    },
-    {
-     "num": "#?",
-     "name": "Your Honor"
-    },
-    {
-     "num": "#?",
-     "name": "C - Lo 4,5,6"
-    },
-    {
-     "num": "#?",
-     "name": "Fish N Steak (What It Is) (feat. Tyler, The Creator & Jozzy)"
-    },
-    {
-     "num": "#?",
-     "name": "Flackito Jodye (feat. Tokischa) (Flackito)"
-    },
-    {
-     "num": "#?",
-     "name": "??? (Poltergeist)"
-    },
-    {
-     "num": "#?",
-     "name": "World Ends (feat. will.i.am & Jessica Pratt) (The End)"
-    },
-    {
-     "num": "#?",
-     "name": "??? (prod. The Alchemist & Danny Elfman)"
-    }
-   ]
-  },
-  {
    "era": "DON'T BE DUMB [V4]",
-   "name": "DON'T BE DUMB\n[2026]",
-   "date": "2026-01-16",
+   "name": "DON'T BE DUMB [2026]",
+   "date": "01/16/2026",
    "quality": "Clear",
    "source": "Rocky",
    "links": [],
@@ -1608,63 +2279,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "ORDER OF PROTECTION"
+     "name": "ORDER OF PROTECTION",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "HELICOPTER"
+     "name": "HELICOPTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "INTERROGATION (SKIT)"
+     "name": "INTERROGATION (SKIT)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "STOLE YA FLOW"
+     "name": "STOLE YA FLOW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "STAY HERE 4 LIFE (feat. Brent Faiyaz)"
+     "name": "STAY HERE 4 LIFE (feat. Brent Faiyaz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "PLAYA"
+     "name": "PLAYA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "NO TRESPASSING"
+     "name": "NO TRESPASSING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "STOP SNITCHING (feat. Bossman DLow & Sauce Walka)"
+     "name": "STOP SNITCHING (feat. Bossman DLow & Sauce Walka)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "STFU (feat. Slay Squad)"
+     "name": "STFU (feat. Slay Squad)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "PUNK ROCKY"
+     "name": "PUNK ROCKY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "AIR FORCE (BLACK DEMARCO)"
+     "name": "AIR FORCE (BLACK DEMARCO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "WHISKEY (RELEASE ME)"
+     "name": "WHISKEY (RELEASE ME)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "ROBBERY (feat. Doechii)"
+     "name": "ROBBERY (feat. Doechii)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "DON'T BE DUMB / TRIP BABY"
+     "name": "DON'T BE DUMB / TRIP BABY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "THE END (feat. will.i.am & Jessica Pratt)"
+     "name": "THE END (feat. will.i.am & Jessica Pratt)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1672,9 +2373,44 @@
    ]
   },
   {
-   "era": "DON'T BE DUMB (DISC 2)",
-   "name": "DON'T BE DUMB\n(Disc 2)",
-   "date": "2026.0",
+   "era": "DON'T BE DUMB [V4]",
+   "name": "DON'T BE DUMB: Disc 2 [V1]",
+   "date": "Jan 21, 2026",
+   "quality": "Clear",
+   "source": "Rocky",
+   "links": [],
+   "description": "",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "SWAT TEAM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "FISH N STEAK (WHAT IT IS) (feat. Tyler, The Creator & Jozzy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "FLACKITO JODYE (feat. Tokischa)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "I Smoked Away My Brain (I'm God x Demons Mashup) (feat. Imogen Heap & Clams Casino)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "DUMB & DUMBER - DISC 2",
+   "name": "DUMB & DUMBER - DISC 2 [V2]",
+   "date": "2026",
    "quality": "N/A",
    "source": "Rocky\n+\nSpeculation",
    "links": [],
@@ -1682,67 +2418,129 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "SWAT TEAM"
+     "name": "SWAT TEAM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "FISH N STEAK (WHAT IT IS) (feat. Tyler, The Creator & Jozzy)"
+     "name": "FISH N STEAK (WHAT IT IS) (feat. Tyler, The Creator & Jozzy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "FLACKITO JODYE (feat. Tokischa)"
+     "name": "FLACKITO JODYE (feat. Tokischa)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Smoked Away My Brain (I'm God x Demons Mashup) (feat. Imogen Heap & Clams Casino)"
+     "name": "I Smoked Away My Brain (I'm God x Demons Mashup) (feat. Imogen Heap & Clams Casino)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "YOUR HONOUR"
+     "name": "Shroom Clouds (feat. reggie) (Mushroom, Mushroom Clouds)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "AMERICAN SABOTAGE (feat. Tommy Revenge)"
+     "name": "Sundress",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "GEMSTONES ITS THE GRIM (feat. Kaycyy, Tommy Revenge & Thoto)"
+     "name": "Babushka Boi",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "ROCKSTAR (Middle Fingers)"
+     "name": "Shittin' Me?",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "YES SIR"
+     "name": "Highjack",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "DISTURBING THE P (feat. Pharrell Williams)"
+     "name": "Trunks",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "NO PLACE LIKE HOME"
+     "name": "American Sabotage (feat. Tommy Revenge)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "RE-UP"
+     "name": "Fuck 12",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "AWGE BOYZ (feat. Tommy Revenge, Thoto, KayCyy & A$AP Twelvyy)"
+     "name": "Grim Freestyle",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "MUSHROOM CLOUDS (feat. reggie) (Mushroom, Shroom Clouds)"
+     "name": "??? (Who I Gotta Shoot?)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "??? (feat. Tommy Revenge) (Gold Chain)"
+     "name": "Yes Sir",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "??? (feat. Rihanna)"
+     "name": "Disturbing The P (feat. Pharrell Williams)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Gemstones (feat. Kaycyy, Tommy Revenge & Thoto)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "No Place Like Home",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "Re Up",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Plan",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "??? (feat. Rihanna)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   }

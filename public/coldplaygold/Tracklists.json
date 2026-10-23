@@ -1,11 +1,15 @@
 {
  "legend": [
   {
-   "label": "Unheard",
+   "label": "Unknown",
+   "color": "#999999"
+  },
+  {
+   "label": "Completely Unheard",
    "color": "#E06666"
   },
   {
-   "label": "Snippet / Partial / Recording",
+   "label": "Snippet / Partial / Beat / Recording Available",
    "color": "#F6B26B"
   },
   {
@@ -13,8 +17,12 @@
    "color": "#93C47D"
   },
   {
-   "label": "Full Version Available",
+   "label": "Confirmed Version Available",
    "color": "#8E7CC3"
+  },
+  {
+   "label": "Alternate Name/Info",
+   "color": "#3D85C6"
   }
  ],
  "albums": [
@@ -48,31 +56,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "High Speed"
+     "name": "High Speed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Such a Rush"
+     "name": "Such a Rush",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Ode to Deodorant"
+     "name": "Ode to Deodorant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "If All Else Fails"
+     "name": "If All Else Fails",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Bigger Stronger"
+     "name": "Bigger Stronger",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Panic (Don't Panic)"
+     "name": "Panic (Don't Panic)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "No More Keeping My Feet on the Ground"
+     "name": "No More Keeping My Feet on the Ground",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -120,23 +142,33 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Shiver"
+     "name": "Shiver",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Wooden House (We Never Change)"
+     "name": "Wooden House (We Never Change)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Bigger Stronger"
+     "name": "Bigger Stronger",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Brothers + Sisters"
+     "name": "Brothers + Sisters",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Ode (to Deodorant)"
+     "name": "Ode (to Deodorant)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -151,19 +183,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Don't Panic"
+     "name": "Don't Panic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Spies"
+     "name": "Spies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "High Speed"
+     "name": "High Speed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "See You Soon"
+     "name": "See You Soon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -209,47 +249,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Shiver"
+     "name": "Shiver",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Trouble"
+     "name": "Trouble",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Parachutes"
+     "name": "Parachutes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Yellow"
+     "name": "Yellow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Spies"
+     "name": "Spies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sparks"
+     "name": "Sparks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Everything's Not Lost"
+     "name": "Everything's Not Lost",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Don't Panic"
+     "name": "Don't Panic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "High Speed"
+     "name": "High Speed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "We Never Change"
+     "name": "We Never Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Life Is For Living"
+     "name": "Life Is For Living",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -345,31 +407,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "I Ran Away"
+     "name": "I Ran Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Eyes For Eyes"
+     "name": "Eyes For Eyes",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Warning Sign"
+     "name": "Warning Sign",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Amsterdam"
+     "name": "Amsterdam",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Harmless"
+     "name": "Harmless",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#6",
-     "name": "Deserter"
+     "name": "Deserter",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Green Eyes"
+     "name": "Green Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -379,7 +455,7 @@
   {
    "era": "A Rush of Blood to the Head",
    "name": "A Rush of Blood to the Head",
-   "date": "2002.0",
+   "date": "2002",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -434,55 +510,77 @@
   {
    "era": "X&Y",
    "name": "Zero Theory",
-   "date": "2003.0",
+   "date": "2003",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
-   "description": "Rumoured early tracklist of Coldplay's third album, at the time called Zero Theory. Theorized to be from 2003 leaking in 2004 partially",
+   "description": "Rumoured early tracklist of Coldplay's third album, at the time called Zero Theory. Theorized to be from the 2003 chicago sessions leaking in 2004 partially",
    "tracks": [
     {
      "num": "#1",
-     "name": "Square/1 (Square One)"
+     "name": "Square/1 (Square One)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Talk"
+     "name": "Talk",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#3",
-     "name": "Something Ain't Right"
+     "name": "Something Ain't Right",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Fury"
+     "name": "Fury",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Till Kingdom Come (Til Kingdom Come)"
+     "name": "Till Kingdom Come (Til Kingdom Come)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Blasphemy"
+     "name": "Blasphemy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "What If"
+     "name": "What If",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#8",
-     "name": "Echo My Name (I Can't Believe You're Gone)"
+     "name": "Echo My Name (I Can't Believe You're Gone)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "X&Y"
+     "name": "X&Y",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "The Hardest Part"
+     "name": "The Hardest Part",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Deja Vu"
+     "name": "Deja Vu",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -493,94 +591,140 @@
    "quality": "N/A",
    "source": "Coldplay",
    "links": [],
-   "description": "Theorized late-Zero Theory tracklist. Not in any order. Due to the tracklist missing certain songs and nothing new being found",
+   "description": "Theorized late-Zero Theory tracklist. Not in any order. Due to the tracklist missing certain songs and nothing new being found. Being confirmed that all the songs are from the chicago sessions compile onto a tape",
    "tracks": [
     {
      "num": "#1",
-     "name": "Square/1 (Square One)"
+     "name": "Square/1 (Square One)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Fury"
+     "name": "Fury",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Talk"
+     "name": "Talk",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#4",
-     "name": "Echo my name (I Can't Believe You're Gone)"
+     "name": "Blasphemy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Deja vu"
+     "name": "Echo my name / (I Can't Believe You're Gone)",
+     "color": "#3d85c6",
+     "colorLabel": "Alternate Name/Info"
     },
     {
      "num": "#6",
-     "name": "What if"
+     "name": "Deja vu",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "White Shadow's"
+     "name": "What if",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#8",
-     "name": "Something aint right"
+     "name": "White Shadow's",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Pour Me"
+     "name": "Something aint right",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Til kingdom come"
+     "name": "Pour Me",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#11",
-     "name": "The Hardest part"
+     "name": "Til kingdom come",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#12",
-     "name": "Until The Water Flows Over/Solid ground"
+     "name": "The Hardest part / Hardest part",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "X&Y"
+     "name": "Until The Water Flows Over / Solid ground",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#14",
-     "name": "Zurich"
+     "name": "X&Y",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "In isolation"
+     "name": "Zurich",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Leonardo"
+     "name": "In isolation",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
-     "name": "Ladder to the sun"
+     "name": "Leonardo",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#18",
-     "name": "Proof"
+     "name": "Ladder to the sun",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#19",
-     "name": "The World Turns Upside Down/Turn Your World Around"
+     "name": "Proof",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#20",
-     "name": "Fix you/Lights will guide you home"
+     "name": "The World Turns Upside Down / Turn Your World Around",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#21",
+     "name": "Fix you / Lights will guide you home",
+     "color": "#3d85c6",
+     "colorLabel": "Alternate Name/Info"
     }
    ]
   },
   {
    "era": "X&Y",
    "name": "X&Y",
-   "date": "2004.0",
+   "date": "2004",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -588,55 +732,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "X&Y"
+     "name": "X&Y",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Talk"
+     "name": "Talk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Things i dont understand"
+     "name": "Things i dont understand",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Speed of Sound"
+     "name": "The Speed of Sound",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Til Kingdom Come"
+     "name": "Til Kingdom Come",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Square one"
+     "name": "Square one",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Fix you"
+     "name": "Fix you",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Hardest Part"
+     "name": "The Hardest Part",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Swallowed in the sea"
+     "name": "Swallowed in the sea",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "How we see the world"
+     "name": "How we see the world",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Low"
+     "name": "Low",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "In isolation"
+     "name": "In isolation",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Leonardo"
+     "name": "Leonardo",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -646,7 +816,7 @@
   {
    "era": "X&Y",
    "name": "X&Y",
-   "date": "2005.0",
+   "date": "2005",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -654,51 +824,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Talk"
+     "name": "Talk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Low"
+     "name": "Low",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Hardest Part"
+     "name": "The Hardest Part",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Speed Of Sound"
+     "name": "Speed Of Sound",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "What If"
+     "name": "What If",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "X&Y"
+     "name": "X&Y",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Square One"
+     "name": "Square One",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "White Shadows"
+     "name": "White Shadows",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fix You"
+     "name": "Fix You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "A Message"
+     "name": "A Message",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Twisted Logic"
+     "name": "Twisted Logic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Swallowed In The Sea"
+     "name": "Swallowed In The Sea",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -708,7 +902,7 @@
   {
    "era": "X&Y",
    "name": "X&Y",
-   "date": "2005.0",
+   "date": "2005",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -779,35 +973,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Lost!"
+     "name": "Lost!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cemeteries of London"
+     "name": "Cemeteries of London",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Violet Hill"
+     "name": "Violet Hill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Poppyfields"
+     "name": "Poppyfields",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "42"
+     "name": "42",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Yes!"
+     "name": "Yes!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Leftrightleftrightleft"
+     "name": "Leftrightleftrightleft",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Rainy Day"
+     "name": "Rainy Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -822,39 +1032,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Life in Technicolor"
+     "name": "Life in Technicolor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cemeteries of London"
+     "name": "Cemeteries of London",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lost!"
+     "name": "Lost!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Prospekt's March"
+     "name": "Prospekt's March",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lovers in Japan"
+     "name": "Lovers in Japan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Yes"
+     "name": "Yes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Chinese Sleep Chant"
+     "name": "Chinese Sleep Chant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Reign of Love"
+     "name": "Reign of Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Death and All His Friends"
+     "name": "Death and All His Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -872,63 +1100,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Life in Technicolor (instrumental) (Life in Technicolor)"
+     "name": "Life in Technicolor (instrumental) (Life in Technicolor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cemeteries of London"
+     "name": "Cemeteries of London",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lost!"
+     "name": "Lost!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "42"
+     "name": "42",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lovers in Japan"
+     "name": "Lovers in Japan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "School / Death and All His Friends"
+     "name": "School / Death and All His Friends",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Reign of Love"
+     "name": "Reign of Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Yes"
+     "name": "Yes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Chinese Sleep Chant"
+     "name": "Chinese Sleep Chant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Viva la Vida"
+     "name": "Viva la Vida",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Strawberry Swing"
+     "name": "Strawberry Swing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Life in Technicolor (Life in Technicolor ii)"
+     "name": "Life in Technicolor (Life in Technicolor ii)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "The Escapist"
+     "name": "The Escapist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Violet Hill"
+     "name": "Violet Hill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Postcards from Far Away / Glass of Water"
+     "name": "Postcards from Far Away / Glass of Water",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -946,47 +1204,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "42"
+     "name": "42",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Glass Of Water"
+     "name": "Glass Of Water",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lost!"
+     "name": "Lost!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Postcards From Far Away / Chinese Sleep Chant"
+     "name": "Postcards From Far Away / Chinese Sleep Chant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Prospekt's March / Poppy Fields"
+     "name": "Prospekt's March / Poppy Fields",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Yes"
+     "name": "Yes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Death And All His Friends"
+     "name": "Death And All His Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Cemeteries Of London"
+     "name": "Cemeteries Of London",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Rainy Day"
+     "name": "Rainy Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "¡Viva la Vida!"
+     "name": "¡Viva la Vida!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Escapist"
+     "name": "The Escapist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1004,31 +1284,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Life in Technicolour"
+     "name": "Life in Technicolour",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Prospekt's March"
+     "name": "Prospekt's March",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lukas"
+     "name": "Lukas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Chinese U.F.O. / Chinese Dreams"
+     "name": "Chinese U.F.O. / Chinese Dreams",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Lhuna"
+     "name": "Lhuna",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Goldrush"
+     "name": "The Goldrush",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Rainy Day"
+     "name": "Rainy Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1038,7 +1332,7 @@
   {
    "era": "Viva la Vida",
    "name": "Viva la Vida or Death And All His Friends",
-   "date": "2008.0",
+   "date": "2008",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1089,7 +1383,7 @@
   {
    "era": "Viva la Vida",
    "name": "Prospekt's March E.P.",
-   "date": "2008.0",
+   "date": "2008",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1132,7 +1426,7 @@
   {
    "era": "The Wedding Album",
    "name": "The Wedding Album",
-   "date": "2009.0",
+   "date": "2009",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1140,43 +1434,63 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wedding Bells"
+     "name": "Wedding Bells",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Love In A Lethal Dose"
+     "name": "Love In A Lethal Dose",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Drunks & Guns"
+     "name": "Drunks & Guns",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Cartoon Heart (Charlie Brown)"
+     "name": "Cartoon Heart (Charlie Brown)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "1000-1 (Ballad Of St. John) (Bani Adam)"
+     "name": "1000-1 (Ballad Of St. John) (Bani Adam)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Gardeners On The Frontline"
+     "name": "Gardeners On The Frontline",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Famous Old Painters"
+     "name": "Famous Old Painters",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Cartoon Head"
+     "name": "Cartoon Head",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Spanish Rain"
+     "name": "Spanish Rain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Christmas Lights"
+     "name": "Christmas Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1190,13 +1504,13 @@
    "quality": "N/A",
    "source": "Secondary",
    "links": [],
-   "description": "(Allegedly) finished tracklist for The Wedding Album. Not in order.\n\nSmall World\nWedding Bells\nCartoon Heart (Charlie Brown)\nWeirdo\nDon Quixote/ Spanish Rain\nArabesque\nCartoon Head\nRescue Street\nChristmas Lights",
+   "description": "(Allegedly) finished tracklist for The Wedding Album. Not in order. FOP was reportedly scrapped during the process despite being the laying seed for TWA\n\nSmall World\nWedding Bells\nCartoon Heart (Charlie Brown)\nWeirdo\nFamous Old Painters\nDon Quixote/Spanish Rain\nArabesque\nCartoon Head\nRescue Street\nChristmas Lights",
    "tracks": []
   },
   {
    "era": "Mylo Xyloto",
    "name": "Mylo Xyloto",
-   "date": "2010-06-16",
+   "date": "Jun 16, 2010",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1204,47 +1518,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Great Expectations (U.F.O., Mylo Xyloto)"
+     "name": "Great Expectations (U.F.O., Mylo Xyloto)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Charlie Brown"
+     "name": "Charlie Brown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "W (Weirdo)"
+     "name": "W (Weirdo)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Hurts Like Heaven"
+     "name": "Hurts Like Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "M.M.I.X."
+     "name": "M.M.I.X.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Major Minus"
+     "name": "Major Minus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Moving To Mars"
+     "name": "Moving To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Car Kids"
+     "name": "Car Kids",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "A Hopeful Transmission"
+     "name": "A Hopeful Transmission",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Every Teardrop Is A Waterfall"
+     "name": "Every Teardrop Is A Waterfall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1254,7 +1590,7 @@
   {
    "era": "Mylo Xyloto",
    "name": "Mylo Xyloto",
-   "date": "2010.0",
+   "date": "2010",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1262,49 +1598,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Mylo Xyloto/Great Expectations"
+     "name": "Mylo Xyloto/Great Expectations",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
      "name": "Hurts Like Heaven",
-     "color": "#8E7CC3",
-     "colorLabel": "Full Version Available"
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Charlie Brown"
+     "name": "Charlie Brown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Up With The Birds"
+     "name": "Up With The Birds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Us Against The World"
+     "name": "Us Against The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Princess Of China"
+     "name": "Princess Of China",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A Hopeful Transmission"
+     "name": "A Hopeful Transmission",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Car Kids"
+     "name": "Car Kids",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Moving To Mars"
+     "name": "Moving To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Every Teardrop Is A Waterfall"
+     "name": "Every Teardrop Is A Waterfall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1314,7 +1670,7 @@
   {
    "era": "Mylo Xyloto",
    "name": "Mylo Xyloto",
-   "date": "2010.0",
+   "date": "2010",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1322,50 +1678,70 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Mylo Xyloto"
+     "name": "Mylo Xyloto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hurts Like Heaven"
+     "name": "Hurts Like Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Princess of China"
+     "name": "Princess of China",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Charlie Brown"
+     "name": "Charlie Brown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Us Against The World"
+     "name": "Us Against The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Major Minus"
+     "name": "Major Minus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Up With The Birds"
+     "name": "Up With The Birds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "UFO"
+     "name": "UFO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Every Teardrop Is A Waterfall"
+     "name": "Every Teardrop Is A Waterfall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Mylo Xyloto",
    "name": "Mylo Xyloto",
-   "date": "2010.0",
+   "date": "2010",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1373,59 +1749,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Mylo Xyloto"
+     "name": "Mylo Xyloto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hurts Like Heaven"
+     "name": "Hurts Like Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Charlie Brown"
+     "name": "Charlie Brown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Car Kids"
+     "name": "Car Kids",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Moving To Mars"
+     "name": "Moving To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Every Teardrop Is A Waterfall"
+     "name": "Every Teardrop Is A Waterfall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Major Minus"
+     "name": "Major Minus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Rescue St."
+     "name": "Rescue St.",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "UFO"
+     "name": "UFO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "A Hopeful Transmission"
+     "name": "A Hopeful Transmission",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Us Against The World"
+     "name": "Us Against The World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Up With The Birds"
+     "name": "Up With The Birds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Princess Of China"
+     "name": "Princess Of China",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1440,59 +1844,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Mylo Xyloto"
+     "name": "Mylo Xyloto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hurts Like Heaven"
+     "name": "Hurts Like Heaven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Car Kids"
+     "name": "Car Kids",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Us Against the World"
+     "name": "Us Against the World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "M.M.I.X."
+     "name": "M.M.I.X.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Every Teardrop is a Waterfall"
+     "name": "Every Teardrop is a Waterfall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Major Minus"
+     "name": "Major Minus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "U.F.O."
+     "name": "U.F.O.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Princess of China"
+     "name": "Princess of China",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Up in Flames"
+     "name": "Up in Flames",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "A Hopeful Transmission"
+     "name": "A Hopeful Transmission",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Don’t Let It Break Your Heart"
+     "name": "Don’t Let It Break Your Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Up with the Birds"
+     "name": "Up with the Birds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1502,7 +1934,7 @@
   {
    "era": "Mylo Xyloto",
    "name": "Mylo Xyloto",
-   "date": "2011.0",
+   "date": "2011",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1569,7 +2001,7 @@
   {
    "era": "Ghost Stories",
    "name": "Ghost Stories",
-   "date": "2013.0",
+   "date": "2013",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1577,35 +2009,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "O"
+     "name": "O",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Race"
+     "name": "The Race",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Another's Arms"
+     "name": "Another's Arms",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Atlas"
+     "name": "Atlas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Ghost Stories (Ghost Story)"
+     "name": "Ghost Stories (Ghost Story)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Oceans"
+     "name": "Oceans",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tomorrow World Without You"
+     "name": "Tomorrow World Without You",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Fly On"
+     "name": "Fly On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1615,7 +2063,7 @@
   {
    "era": "Ghost Stories",
    "name": "Ghost Stories",
-   "date": "2014.0",
+   "date": "2014",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1662,7 +2110,7 @@
   {
    "era": "A Head Full of Dreams",
    "name": "A Head Full of Dreams",
-   "date": "2015.0",
+   "date": "2015",
    "quality": "N/A",
    "source": "Leaked",
    "links": [],
@@ -1672,7 +2120,7 @@
   {
    "era": "A Head Full of Dreams",
    "name": "A Head Full of Dreams",
-   "date": "2015.0",
+   "date": "2015",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1727,7 +2175,7 @@
   {
    "era": "A Head Full of Dreams",
    "name": "Kaleidoscope E.P.",
-   "date": "2017.0",
+   "date": "2017",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1758,7 +2206,7 @@
   {
    "era": "Everyday Life",
    "name": "The Lovers",
-   "date": "2019.0",
+   "date": "2019",
    "quality": "N/A",
    "source": "Leaked",
    "links": [],
@@ -1768,7 +2216,7 @@
   {
    "era": "Everyday Life",
    "name": "Everyday Life",
-   "date": "2019.0",
+   "date": "2019",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1835,7 +2283,7 @@
   {
    "era": "Music of the Spheres",
    "name": "Music of the Spheres",
-   "date": "2020-12-16",
+   "date": "Dec 16, 2020",
    "quality": "Clear",
    "source": "Leaked",
    "links": [],
@@ -1851,7 +2299,9 @@
     },
     {
      "num": "#3",
-     "name": "Blessed"
+     "name": "Blessed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
@@ -1871,7 +2321,9 @@
     },
     {
      "num": "#8",
-     "name": "Biutyful"
+     "name": "Biutyful",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
@@ -1879,7 +2331,9 @@
     },
     {
      "num": "#10",
-     "name": "Infinity Sign"
+     "name": "Infinity Sign",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
@@ -1894,7 +2348,7 @@
   {
    "era": "Music of the Spheres",
    "name": "Music of the Spheres",
-   "date": "2021.0",
+   "date": "2021",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1953,7 +2407,7 @@
   {
    "era": "Moon Music",
    "name": "Moon Music",
-   "date": "2023.0",
+   "date": "2023",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],
@@ -1961,46 +2415,64 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "MOON MUSiC"
+     "name": "MOON MUSiC",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "JUPiTER🌈"
+     "name": "JUPiTER🌈",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "feelslikeimfallinginlove"
+     "name": "feelslikeimfallinginlove",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "GOOD FEELiNGS"
+     "name": "GOOD FEELiNGS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "ALL MY LOVE"
+     "name": "ALL MY LOVE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "MOON MUSiiC (ALiEN HiTS / ALiEN RADiO)"
+     "name": "MOON MUSiiC (ALiEN HiTS / ALiEN RADiO)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "FRNDZ (Man In The Moon)"
+     "name": "FRNDZ (Man In The Moon)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "MOON MUSiiiC (Earthling)"
+     "name": "MOON MUSiiiC (Earthling)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "One World"
+     "name": "One World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Moon Music",
    "name": "Moon Music",
-   "date": "2023-12-01",
+   "date": "Dec 2023",
    "quality": "Clear",
    "source": "Secondary",
    "links": [],
@@ -2008,39 +2480,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "MOON MUSiC"
+     "name": "MOON MUSiC",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Man in The Moon"
+     "name": "Man in The Moon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "JUPiTER"
+     "name": "JUPiTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "GOOD FEELiNGS"
+     "name": "GOOD FEELiNGS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "ALL MY LOVE"
+     "name": "ALL MY LOVE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "🌈 (NEON FOREST)"
+     "name": "🌈 (NEON FOREST)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "WE PRAY"
+     "name": "WE PRAY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "feelslikeimfallinginlove"
+     "name": "feelslikeimfallinginlove",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "ONE WORLD"
+     "name": "ONE WORLD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2050,7 +2540,7 @@
   {
    "era": "Moon Music",
    "name": "Moon Music",
-   "date": "2024-02-01",
+   "date": "Feb 2024",
    "quality": "Blurry",
    "source": "Coldplay",
    "links": [],
@@ -2058,47 +2548,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "MOON MUSiC"
+     "name": "MOON MUSiC",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "feelslikeimfallinginlove"
+     "name": "feelslikeimfallinginlove",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "JUPiTER"
+     "name": "JUPiTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "GOOD FEELiNGS"
+     "name": "GOOD FEELiNGS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "m.u.s.i.c. (🌈 | ALiEN HiTS / ALiEN RADiO)"
+     "name": "m.u.s.i.c. (🌈 | ALiEN HiTS / ALiEN RADiO)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#6",
-     "name": "🌈 (ALiEN HiTS / ALiEN RADiO)"
+     "name": "🌈 (ALiEN HiTS / ALiEN RADiO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "WE PRAY"
+     "name": "WE PRAY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "AETERNA / m.u.s.i.c."
+     "name": "AETERNA / m.u.s.i.c.",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#9",
-     "name": "feelslikeimfallinginlove pt. 2 LUNA"
+     "name": "feelslikeimfallinginlove pt. 2 LUNA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "ALL MY LOVE"
+     "name": "ALL MY LOVE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "ONE WORLD (1🌍)"
+     "name": "ONE WORLD (1🌍)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2108,7 +2620,7 @@
   {
    "era": "Moon Music",
    "name": "Moon Music",
-   "date": "2024.0",
+   "date": "2024",
    "quality": "Clear",
    "source": "Coldplay",
    "links": [],

@@ -25,7 +25,7 @@
   {
    "era": "Hard Body",
    "name": "Hard Body",
-   "date": "2013-07-16",
+   "date": "Jul 16, 2013",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -33,59 +33,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Hardbody"
+     "name": "Hardbody",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "We Live This"
+     "name": "We Live This",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Rarri"
+     "name": "Rarri",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Faded"
+     "name": "Faded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Caught Up (feat. Cmore Stacks)"
+     "name": "Caught Up (feat. Cmore Stacks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Can't Feel My Raps"
+     "name": "Can't Feel My Raps",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Rich Nigga (feat. Dez)"
+     "name": "Rich Nigga (feat. Dez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Harder I Go"
+     "name": "Harder I Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Never Gone Change"
+     "name": "Never Gone Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I'm Not a Criminal"
+     "name": "I'm Not a Criminal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Wats Goin' On (feat. Nechie)"
+     "name": "Wats Goin' On (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "No More"
+     "name": "No More",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Get Money"
+     "name": "Get Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Style Like Me"
+     "name": "Style Like Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -102,7 +130,7 @@
   {
    "era": "Drip Season",
    "name": "Drip Season",
-   "date": "2016-10-14",
+   "date": "Oct 14, 2016",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -110,50 +138,70 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Outta Sight Outta Mind"
+     "name": "Outta Sight Outta Mind",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Against Me"
+     "name": "Against Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Young Nigga"
+     "name": "Young Nigga",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Rockstar Status"
+     "name": "Rockstar Status",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Cop Me a Foreign (feat. Young Thug)"
+     "name": "Cop Me a Foreign (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Can't Relate"
+     "name": "Can't Relate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Stay Focused (feat. Nechie)"
+     "name": "Stay Focused (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Solid (feat. Lil Duke)"
+     "name": "Solid (feat. Lil Duke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "How Can I Switch (feat. Young Trez)"
+     "name": "How Can I Switch (feat. Young Trez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Goin In"
+     "name": "Goin In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Drip Season 2",
    "name": "Drip Season 2",
-   "date": "2017-05-11",
+   "date": "May 11, 2017",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -161,106 +209,154 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Phase"
+     "name": "Phase",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Belly of the Beast"
+     "name": "Belly of the Beast",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Top"
+     "name": "Top",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Shopping"
+     "name": "Shopping",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Japan"
+     "name": "Japan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Another Wave (feat. Lil Duke & Shad da God)"
+     "name": "Another Wave (feat. Lil Duke & Shad da God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Highschool"
+     "name": "Highschool",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Make No Sense (feat. Lil Duke)"
+     "name": "Make No Sense (feat. Lil Duke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Money Talking (feat. Nechie)"
+     "name": "Money Talking (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Secure the Vibe (feat. Young Thug)"
+     "name": "Secure the Vibe (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "A$$"
+     "name": "A$$",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "YSL (feat. Playboi Carti)"
+     "name": "YSL (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Park the Car"
+     "name": "Park the Car",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Get It If You Want It"
+     "name": "Get It If You Want It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Beat the Case (feat. Offset)"
+     "name": "Beat the Case (feat. Offset)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Mayors (feat. Hoodrich Pablo Juan)"
+     "name": "Mayors (feat. Hoodrich Pablo Juan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Drip or Drown",
    "name": "Drip or Drown",
-   "date": "2017-11-30",
+   "date": "Nov 30, 2017",
    "quality": "Clear",
    "source": "Gunna",
-   "links": [],
+   "links": [
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgenius.com%2Falbums%2FGunna%2FDrip-or-drown&psig=AOvVaw3aEUUPKqLQ6UL6x_tRaWt1&ust=1705250543707000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNjSyrnn2oMDFQAAAAAdAAAAABAD"
+   ],
    "description": "Official tracklist for Drip or Drown.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Paid"
+     "name": "Paid",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Drip or Drown"
+     "name": "Drip or Drown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Invest"
+     "name": "Invest",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Don't Give Up"
+     "name": "Don't Give Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Award"
+     "name": "Award",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Don't Play With It (feat. Young Thug)"
+     "name": "Don't Play With It (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dodge the Hate"
+     "name": "Dodge the Hate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -270,7 +366,7 @@
   {
    "era": "Drip Season 3",
    "name": "Drip Season 3",
-   "date": "2018-02-02",
+   "date": "Feb 2, 2018",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -278,66 +374,94 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Helluva Price"
+     "name": "Helluva Price",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Drippin'"
+     "name": "Drippin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Almighty (feat. HoodRich Pablo Juan)"
+     "name": "Almighty (feat. HoodRich Pablo Juan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Top Off"
+     "name": "Top Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pedestrian"
+     "name": "Pedestrian",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Lies About You (feat. Lil Durk)"
+     "name": "Lies About You (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mistress"
+     "name": "Mistress",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Car Sick (feat. Metro Boomin & NAV)"
+     "name": "Car Sick (feat. Metro Boomin & NAV)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "My Soul"
+     "name": "My Soul",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "No Joke"
+     "name": "No Joke",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Spending Addiction"
+     "name": "Spending Addiction",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Money Don’t Change You"
+     "name": "Money Don’t Change You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Toast Up"
+     "name": "Toast Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Drip or Drown (Remix) [feat. Lil Yachty]"
+     "name": "Drip or Drown (Remix) [feat. Lil Yachty]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Drip Season 3",
    "name": "Drip Season 3 (Deluxe)",
-   "date": "2018-02-08",
+   "date": "Feb 8, 2018",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -345,71 +469,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Helluva Price"
+     "name": "Helluva Price",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Drippin'"
+     "name": "Drippin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Almighty (feat. Hoodrich Pablo Juan)"
+     "name": "Almighty (feat. Hoodrich Pablo Juan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "At the Hotel (feat. Lil Uzi Vert & Young Jordan)"
+     "name": "At the Hotel (feat. Lil Uzi Vert & Young Jordan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Top Off"
+     "name": "Top Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "King Kong (feat. Young Thug)"
+     "name": "King Kong (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Pedestrian"
+     "name": "Pedestrian",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Lies About You (feat. Lil Durk)"
+     "name": "Lies About You (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Mistress"
+     "name": "Mistress",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Car Sick (feat. Metro Boomin & NAV)"
+     "name": "Car Sick (feat. Metro Boomin & NAV)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "My Soul"
+     "name": "My Soul",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "No Joke"
+     "name": "No Joke",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Oh Okay (feat. Lil Baby & Young Thug)"
+     "name": "Oh Okay (feat. Lil Baby & Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Spending Addiction"
+     "name": "Spending Addiction",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Money Don’t Change You"
+     "name": "Money Don’t Change You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Toast Up"
+     "name": "Toast Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Drip or Drown (Remix) [feat. Lil Yachty]"
+     "name": "Drip or Drown (Remix) [feat. Lil Yachty]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -419,7 +577,7 @@
   {
    "era": "Drip Harder",
    "name": "Drip Harder\n(with Lil Baby)",
-   "date": "2018-10-05",
+   "date": "Oct 5, 2018",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -427,55 +585,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Off White VLONE (feat. Lil Durk & NAV)"
+     "name": "Off White VLONE (feat. Lil Durk & NAV)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Business Is Business"
+     "name": "Business Is Business",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Belly"
+     "name": "Belly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Deep End (by Lil Baby)"
+     "name": "Deep End (by Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "World Is Yours (by Gunna)"
+     "name": "World Is Yours (by Gunna)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Underdog"
+     "name": "Underdog",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I Am"
+     "name": "I Am",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Seals Pills"
+     "name": "Seals Pills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "My Jeans (feat. Young Thug)"
+     "name": "My Jeans (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Style Stealer (by Gunna)"
+     "name": "Style Stealer (by Gunna)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Close Friends (by Lil Baby)"
+     "name": "Close Friends (by Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Drip Too Hard"
+     "name": "Drip Too Hard",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Never Recover (with Drake)"
+     "name": "Never Recover (with Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -485,7 +669,7 @@
   {
    "era": "Drip or Drown 2",
    "name": "Drip or Drown 2",
-   "date": "2019-02-22",
+   "date": "Feb 22, 2019",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -493,67 +677,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wit It"
+     "name": "Wit It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Outstanding"
+     "name": "Outstanding",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "One Call"
+     "name": "One Call",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Cash War"
+     "name": "Cash War",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Richard Millie Plain"
+     "name": "Richard Millie Plain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Yao Ming"
+     "name": "Yao Ming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Idk Why"
+     "name": "Idk Why",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Derek Fisher (feat. Lil Baby)"
+     "name": "Derek Fisher (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Baby Birkin"
+     "name": "Baby Birkin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Speed It Up"
+     "name": "Speed It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "3 Headed Snake (feat. Young Thug)"
+     "name": "3 Headed Snake (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Big Shot"
+     "name": "Big Shot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "On a Mountain"
+     "name": "On a Mountain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Out the Hood"
+     "name": "Out the Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Same Yung Nigga (feat. Playboi Carti)"
+     "name": "Same Yung Nigga (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Who You Foolin"
+     "name": "Who You Foolin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -584,55 +800,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "WUNNA"
+     "name": "WUNNA",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "MET GALA"
+     "name": "MET GALA",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "FAR"
+     "name": "FAR",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "ROCKSTAR"
+     "name": "ROCKSTAR",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "NASTY GIRL / ON CAMERA"
+     "name": "NASTY GIRL / ON CAMERA",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "WORTH IT"
+     "name": "WORTH IT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "DOLLARS ON MY MIND (DOLLAZ ON MY HEAD?)"
+     "name": "DOLLARS ON MY MIND (DOLLAZ ON MY HEAD?)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#8",
-     "name": "DO BETTER"
+     "name": "DO BETTER",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "DON'T PLAY AROUND"
+     "name": "DON'T PLAY AROUND",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "CHOPPA SING"
+     "name": "CHOPPA SING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "SUNDAY"
+     "name": "SUNDAY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#13",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
    ],
    "images": [
@@ -650,75 +892,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#2",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
-     "name": "MOTW"
+     "name": "MOTW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FEIGNING"
+     "name": "FEIGNING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "SKY BOX"
+     "name": "SKY BOX",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "WUNNA"
+     "name": "WUNNA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "DOLLAZ ON MY HEAD"
+     "name": "DOLLAZ ON MY HEAD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "BLIND FOLD"
+     "name": "BLIND FOLD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "STACKIN IT"
+     "name": "STACKIN IT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "ROCKSTAR"
+     "name": "ROCKSTAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "MET GALA BALL"
+     "name": "MET GALA BALL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "NASTY GIRL"
+     "name": "NASTY GIRL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "ON CAMERA"
+     "name": "ON CAMERA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "COOLER THAN A BITCH"
+     "name": "COOLER THAN A BITCH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I'M ON SOME"
+     "name": "I'M ON SOME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "DON'T PLAY AROUND"
+     "name": "DON'T PLAY AROUND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "DO BETTER"
+     "name": "DO BETTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "FAR"
+     "name": "FAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -728,83 +1006,121 @@
   {
    "era": "WUNNA",
    "name": "WUNNA",
-   "date": "2020-05-22",
+   "date": "May 22, 2020",
    "quality": "Clear",
    "source": "Gunna",
-   "links": [],
+   "links": [
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgenius.com%2Falbums%2FGunna%2FWunna-deluxe&psig=AOvVaw27g0TDTasWKZ0QEKWDMyDO&ust=1705249226468000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMCOmcXi2oMDFQAAAAAdAAAAABAH"
+   ],
    "description": "Official tracklist for WUNNA.",
    "tracks": [
     {
      "num": "#1",
-     "name": "ARGENTINA"
+     "name": "ARGENTINA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "GIMMICK"
+     "name": "GIMMICK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "MOTW"
+     "name": "MOTW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FEIGNING"
+     "name": "FEIGNING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "DOLLAZ ON MY HEAD (feat. Young Thug)"
+     "name": "DOLLAZ ON MY HEAD (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "ADDYS (feat. Nechie)"
+     "name": "ADDYS (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "SKYBOX"
+     "name": "SKYBOX",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "WUNNA"
+     "name": "WUNNA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "BLINDFOLD (feat. Lil Baby)"
+     "name": "BLINDFOLD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "ROCKSTAR BIKERS & CHAINS"
+     "name": "ROCKSTAR BIKERS & CHAINS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "MET GALA"
+     "name": "MET GALA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "NASTY GIRL / ON CAMERA"
+     "name": "NASTY GIRL / ON CAMERA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "COOLER THAN A BITCH (feat. Roddy Ricch)"
+     "name": "COOLER THAN A BITCH (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I'M ON SOME"
+     "name": "I'M ON SOME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "TOP FLOOR (feat. Travis Scott)"
+     "name": "TOP FLOOR (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "DON'T PLAY AROUND"
+     "name": "DON'T PLAY AROUND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "DO BETTER"
+     "name": "DO BETTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "FAR (feat. Young Thug)"
+     "name": "FAR (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -814,115 +1130,169 @@
   {
    "era": "WUNNA (Deluxe)",
    "name": "WUNNA (Deluxe)",
-   "date": "2020-07-24",
+   "date": "Jul 24, 2020",
    "quality": "Clear",
    "source": "Gunna",
-   "links": [],
+   "links": [
+    "https://images.genius.com/b5f69f043a416a93af543e9ef230bb99.1000x1000x1.jpg"
+   ],
    "description": "Official tracklist for WUNNA (Deluxe).",
    "tracks": [
     {
      "num": "#1",
-     "name": "200 FOR LUNCH"
+     "name": "200 FOR LUNCH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "DOLLAZ ON MY HEAD (feat. Young Thug)"
+     "name": "DOLLAZ ON MY HEAD (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "WUNNA FLO (feat. Yak Gotti)"
+     "name": "WUNNA FLO (feat. Yak Gotti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "GIMMICK"
+     "name": "GIMMICK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "FEIGNING"
+     "name": "FEIGNING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "STREET SWEEPER (feat. Future)"
+     "name": "STREET SWEEPER (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "MOTW"
+     "name": "MOTW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "ONE WATCH (feat. Young Thug)"
+     "name": "ONE WATCH (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "ARGENTINA"
+     "name": "ARGENTINA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "SUN CAME OUT"
+     "name": "SUN CAME OUT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "COOLER THAN A BITCH (feat. Roddy Ricch)"
+     "name": "COOLER THAN A BITCH (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "ADDYS (feat. Nechie)"
+     "name": "ADDYS (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "DIRTY DIANA"
+     "name": "DIRTY DIANA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "NOTHING 4 FREE (feat. NAV)"
+     "name": "NOTHING 4 FREE (feat. NAV)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "TOP FLOOR (feat. Travis Scott)"
+     "name": "TOP FLOOR (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "SKYBOX"
+     "name": "SKYBOX",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "WUNNA"
+     "name": "WUNNA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "BLINDFOLD (feat. Lil Baby)"
+     "name": "BLINDFOLD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "ROCKSTAR BIKERS & CHAINS"
+     "name": "ROCKSTAR BIKERS & CHAINS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "MET GALA"
+     "name": "MET GALA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "NASTY GIRL / ON CAMERA"
+     "name": "NASTY GIRL / ON CAMERA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "I'M ON SOME"
+     "name": "I'M ON SOME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "RELENTLESS (feat. Lil Uzi Vert)"
+     "name": "RELENTLESS (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "DON'T PLAY AROUND"
+     "name": "DON'T PLAY AROUND",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "DO BETTER"
+     "name": "DO BETTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "FAR (feat. Young Thug)"
+     "name": "FAR (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -932,7 +1302,7 @@
   {
    "era": "DS4EVER",
    "name": "DS4EVER [6.19.2021]",
-   "date": "2021-06-19",
+   "date": "Jun 19, 2021",
    "quality": "Blurry",
    "source": "Gunna",
    "links": [],
@@ -940,59 +1310,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Private Island"
+     "name": "Private Island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Easy"
+     "name": "Too Easy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Alotta Cake"
+     "name": "Alotta Cake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#5",
-     "name": "Occupation"
+     "name": "Occupation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Thought I Was Playing"
+     "name": "Thought I Was Playing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "9 X 10"
+     "name": "9 X 10",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#9",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#10",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#11",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#12",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#12",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#13",
-     "name": "Mess"
+     "name": "Mess",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1002,7 +1400,7 @@
   {
    "era": "DS4EVER",
    "name": "DS4EVER [8.27.2021]",
-   "date": "2021-08-27",
+   "date": "Aug 27, 2021",
    "quality": "Blocked",
    "source": "Secondary",
    "links": [],
@@ -1015,7 +1413,7 @@
   {
    "era": "DS4EVER",
    "name": "DS4EVER [10.8.2021]",
-   "date": "2021-10-08",
+   "date": "Oct 8, 2021",
    "quality": "Clear",
    "source": "Leaked",
    "links": [],
@@ -1023,71 +1421,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "private island"
+     "name": "private island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "all the money"
+     "name": "all the money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "life of sin"
+     "name": "life of sin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "though i was playing (feat. 21 Savage)"
+     "name": "though i was playing (feat. 21 Savage)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "pussy power"
+     "name": "pussy power",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "mop (feat. Young Thug)"
+     "name": "mop (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "shit too easy"
+     "name": "shit too easy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "switchen lanes"
+     "name": "switchen lanes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "mess / south to the west"
+     "name": "mess / south to the west",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "flooded"
+     "name": "flooded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "alotta cake"
+     "name": "alotta cake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "tax free (feat. Strick)"
+     "name": "tax free (feat. Strick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "why me baby"
+     "name": "why me baby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "accomodated"
+     "name": "accomodated",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "die alone"
+     "name": "die alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "miss me"
+     "name": "miss me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "so far ahead"
+     "name": "so far ahead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1097,7 +1529,7 @@
   {
    "era": "DS4EVER",
    "name": "DS4EVER [1.5.2022]",
-   "date": "2022-01-05",
+   "date": "Jan 5, 2022",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -1105,83 +1537,123 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "‎private island"
+     "name": "‎private island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "‎pushin P (feat. Future & Young Thug)"
+     "name": "‎pushin P (feat. Future & Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "‎poochie gown"
+     "name": "‎poochie gown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "‎mop (feat. Young Thug)"
+     "name": "‎mop (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "​thought i was playing (feat. 21 Savage)"
+     "name": "​thought i was playing (feat. 21 Savage)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "pussy power (feat. Drake) (P power)"
+     "name": "pussy power (feat. Drake) (P power)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "‎how you did that (feat. Kodak Black)"
+     "name": "‎how you did that (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "‎alotta cake"
+     "name": "‎alotta cake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "‎livin wild"
+     "name": "‎livin wild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "‎you & me (feat. Chlöe Bailey)"
+     "name": "‎you & me (feat. Chlöe Bailey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "‎south to west"
+     "name": "‎south to west",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "25k jacket (feat. Lil Baby)"
+     "name": "25k jacket (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "​too easy (feat, Future)"
+     "name": "​too easy (feat, Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "​idk that bitch (feat. G Herbo)"
+     "name": "​idk that bitch (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "​flooded"
+     "name": "​flooded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "​life of sin (feat. Nechie)"
+     "name": "​life of sin (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "​die alone by Gunna (feat. Yung Bleu & Chris Brown)"
+     "name": "​die alone by Gunna (feat. Yung Bleu & Chris Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "​missing me"
+     "name": "​missing me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "​so far ahead ᐳ empire"
+     "name": "​so far ahead ᐳ empire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "​​too easy (Remix) [feat. Future & Roddy Ricch]"
+     "name": "​​too easy (Remix) [feat. Future & Roddy Ricch]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1191,7 +1663,7 @@
   {
    "era": "DS4EVER",
    "name": "DS4EVER",
-   "date": "2022-01-07",
+   "date": "Jan 7, 2022",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -1199,86 +1671,124 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "‎private island"
+     "name": "‎private island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "‎pushin P (with Future) (feat. Young Thug)"
+     "name": "‎pushin P (with Future) (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "‎poochie gown"
+     "name": "‎poochie gown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "‎mop (feat. Young Thug)"
+     "name": "‎mop (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "​thought i was playing (with 21 Savage)"
+     "name": "​thought i was playing (with 21 Savage)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "‎how you did that (feat. Kodak Black)"
+     "name": "‎how you did that (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "‎alotta cake"
+     "name": "‎alotta cake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "‎livin wild"
+     "name": "‎livin wild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "‎you & me (with Chlöe)"
+     "name": "‎you & me (with Chlöe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "‎south to west"
+     "name": "‎south to west",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "25k jacket (feat. Lil Baby)"
+     "name": "25k jacket (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "​too easy (with Future)"
+     "name": "​too easy (with Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "​idk that bitch (feat. G Herbo)"
+     "name": "​idk that bitch (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "​flooded"
+     "name": "​flooded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "​life of sin (feat. Nechie)"
+     "name": "​life of sin (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "​die alone by Gunna (with Chris Brown) (feat. Yung Bleu)"
+     "name": "​die alone by Gunna (with Chris Brown) (feat. Yung Bleu)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "​missing me"
+     "name": "​missing me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "​so far ahead ᐳ empire"
+     "name": "​so far ahead ᐳ empire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "​​too easy (Remix) [feat. Future & Roddy Ricch]"
+     "name": "​​too easy (Remix) [feat. Future & Roddy Ricch]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "DS4EVER",
    "name": "DRIP SEASON 4EVER",
-   "date": "2022-01-13",
+   "date": "Jan 13, 2022",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -1286,90 +1796,130 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "‎private island"
+     "name": "‎private island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "‎pushin P (with Future) (feat. Young Thug)"
+     "name": "‎pushin P (with Future) (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "‎poochie gown"
+     "name": "‎poochie gown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "‎mop (feat. Young Thug)"
+     "name": "‎mop (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "​thought i was playing (with 21 Savage)"
+     "name": "​thought i was playing (with 21 Savage)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "P power (feat. Drake)"
+     "name": "P power (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "‎how you did that (feat. Kodak Black)"
+     "name": "‎how you did that (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "‎alotta cake"
+     "name": "‎alotta cake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "‎livin wild"
+     "name": "‎livin wild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "‎you & me (with Chlöe)"
+     "name": "‎you & me (with Chlöe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "‎south to west"
+     "name": "‎south to west",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "25k jacket (feat. Lil Baby)"
+     "name": "25k jacket (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "​too easy (with Future)"
+     "name": "​too easy (with Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "​idk that bitch (feat. G Herbo)"
+     "name": "​idk that bitch (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "​flooded"
+     "name": "​flooded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "​life of sin (feat. Nechie)"
+     "name": "​life of sin (feat. Nechie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "​die alone by Gunna (with Chris Brown) (feat. Yung Bleu)"
+     "name": "​die alone by Gunna (with Chris Brown) (feat. Yung Bleu)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "​missing me"
+     "name": "​missing me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "​so far ahead ᐳ empire"
+     "name": "​so far ahead ᐳ empire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "​​too easy (Remix) [feat. Future & Roddy Ricch]"
+     "name": "​​too easy (Remix) [feat. Future & Roddy Ricch]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "a Gift & a Curse",
    "name": "a Gift & a Curse",
-   "date": "2023-06-16",
+   "date": "Jun 16, 2023",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -1377,70 +1927,100 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "​back at it"
+     "name": "​back at it",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "​back to the moon"
+     "name": "​back to the moon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "​idk nomore"
+     "name": "​idk nomore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "​paybach"
+     "name": "​paybach",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "​ca$h $hit"
+     "name": "​ca$h $hit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "​fukumean"
+     "name": "​fukumean",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "​rodeo dr"
+     "name": "​rodeo dr",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "​bottom"
+     "name": "​bottom",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "​p angels"
+     "name": "​p angels",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "​born rich"
+     "name": "​born rich",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "​go crazy"
+     "name": "​go crazy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "​bread & butter"
+     "name": "​bread & butter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "​turned your back"
+     "name": "​turned your back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "​i was just thinking"
+     "name": "​i was just thinking",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "​alright"
+     "name": "​alright",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "One of Wun",
    "name": "fukumean - EP",
-   "date": "2023-07-21",
+   "date": "Jul 21, 2023",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -1448,30 +2028,40 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "​fukumean"
+     "name": "​fukumean",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "​fukumean (sped up version)"
+     "name": "​fukumean (sped up version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "​fukumean (chopped ’n screwed)"
+     "name": "​fukumean (chopped ’n screwed)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "​fukumean (reversed)"
+     "name": "​fukumean (reversed)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "​fukumean (instrumental)"
+     "name": "​fukumean (instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "One of Wun",
    "name": "One of Wun",
-   "date": "2024-05-10",
+   "date": "May 10, 2024",
    "quality": "Clear",
    "source": "Gunna",
    "links": [],
@@ -1479,90 +2069,130 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "​​collage"
+     "name": "​​collage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "​​one of wun"
+     "name": "​​one of wun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "​​neck on a yacht"
+     "name": "​​neck on a yacht",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "​​whatsapp (​​wassam)"
+     "name": "​​whatsapp (​​wassam)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "​​hakuna matata"
+     "name": "​​hakuna matata",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "​​prada ​​dem (feat. Offset)"
+     "name": "​​prada ​​dem (feat. Offset)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "​​treesh"
+     "name": "​​treesh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "​​on ​​one ​​tonight"
+     "name": "​​on ​​one ​​tonight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "​​back in the a"
+     "name": "​​back in the a",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "​​trio"
+     "name": "​​trio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "​​still prevail"
+     "name": "​​still prevail",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "​​blackjack"
+     "name": "​​blackjack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "$$$ (feat. Normani)"
+     "name": "$$$ (feat. Normani)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "​​clear my rain (feat. Leon Bridges)"
+     "name": "​​clear my rain (feat. Leon Bridges)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "​​conscience"
+     "name": "​​conscience",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "​​the time"
+     "name": "​​the time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "​let it breathe (feat. Roddy Ricch)"
+     "name": "​let it breathe (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "​​life's changing"
+     "name": "​​life's changing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "​​today i did good"
+     "name": "​​today i did good",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "​​time reveals, be careful what you wish for"
+     "name": "​​time reveals, be careful what you wish for",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The Last Wun",
    "name": "The Last Wun [6.1.2025]",
-   "date": "2025-06-01",
+   "date": "Jun 1, 2025",
    "quality": "Blurry",
    "source": "Secondary",
    "links": [],
@@ -1570,79 +2200,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Many Nights"
+     "name": "Many Nights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Won't Stop"
+     "name": "Won't Stop",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Let That Sink In"
+     "name": "Let That Sink In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#5",
-     "name": "Sak Pase"
+     "name": "Sak Pase",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "GP"
+     "name": "GP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "At My Purest (feat. Offset)"
+     "name": "At My Purest (feat. Offset)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Prototype"
+     "name": "Prototype",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Biting My Game"
+     "name": "Biting My Game",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#10",
-     "name": "Forever Be Mine"
+     "name": "Forever Be Mine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Again"
+     "name": "Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Endless"
+     "name": "Endless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Can't Feel My Face (feat. Roddy Ricch)"
+     "name": "Can't Feel My Face (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#15",
-     "name": "Fuck w/ You Boy"
+     "name": "Fuck w/ You Boy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "On Me"
+     "name": "On Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "What They Thinking"
+     "name": "What They Thinking",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#19",
-     "name": "Showed 'Em"
+     "name": "Showed 'Em",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [

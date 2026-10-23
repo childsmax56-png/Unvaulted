@@ -28,36 +28,52 @@
    "date": "Tracklist dates to:\nca. Spring 1991\nLeaked on:\nJuly 25, 2023",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://www.sothebys.com/en/buy/auction/2023/hip-hop/prince-rakeem-wu-tang-clan"
+   ],
    "description": "Found on a casette RZA made back when he was still referred to as Prince Rakeem. The Wu-Tang Clan hasn't formed yet, I'm still putting it on the tracker because it features some tracks that appear on the original tracklist.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Oh I Love You Rakeem"
+     "name": "Oh I Love You Rakeem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Oh I Love You Rakeem (Jeep Dub)"
+     "name": "Oh I Love You Rakeem (Jeep Dub)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Which Way Is Up"
+     "name": "Which Way Is Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "That's One To Grow On"
+     "name": "That's One To Grow On",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Problems I Got To Solve Them"
+     "name": "Problems I Got To Solve Them",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "It's Murder"
+     "name": "It's Murder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I'm Taking Heads Off"
+     "name": "I'm Taking Heads Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -72,11 +88,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Sexcapades"
+     "name": "Sexcapades",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Deadly Venom"
+     "name": "Deadly Venom",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -91,7 +111,9 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Station ID's"
+     "name": "Station ID's",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -101,28 +123,40 @@
    "date": "Tracklist dates to:\nca. August 1991\nLeaked on:\nJuly 25, 2023",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://www.sothebys.com/en/buy/auction/2023/hip-hop/prince-rakeem-wu-tang-clan"
+   ],
    "description": "Found on a casette RZA made back when he was still referred to as Prince Rakeem. The Wu-Tang Clan hasn't formed yet.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Enter The Wu-Tang"
+     "name": "Enter The Wu-Tang",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Perversion"
+     "name": "Perversion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Mab Flavor"
+     "name": "Mab Flavor",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Problems"
+     "name": "Problems",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "You Have Been Boned - Instrumental"
+     "name": "You Have Been Boned - Instrumental",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -137,15 +171,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Gotta Have Game"
+     "name": "Gotta Have Game",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Illusion Of Love"
+     "name": "Illusion Of Love",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Life Is A Struggle"
+     "name": "Life Is A Struggle",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -160,11 +200,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "I Get Down For My Crown"
+     "name": "I Get Down For My Crown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I Get Down For My Crown (Edit)"
+     "name": "I Get Down For My Crown (Edit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -174,24 +218,34 @@
    "date": "Tracklist dates to:\nMarch 3, 1992\nLeaked on:\nJuly 25, 2023",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://www.sothebys.com/en/buy/auction/2023/hip-hop/prince-rakeem-wu-tang-clan"
+   ],
    "description": "First ever casette that uses the name \"Wu-Tang\". Although it is already called Wu-Tang, only GZA (The Genius) makes an appearance on the casette.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Illusion Of Love Remix - Remix By RNS (Tee Tee)"
+     "name": "Illusion Of Love Remix - Remix By RNS (Tee Tee)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Illusion Of Love - Original Mix"
+     "name": "Illusion Of Love - Original Mix",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#3",
-     "name": "Enter The Wutang (Inst Only)"
+     "name": "Enter The Wutang (Inst Only)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pass The Bone (feat. The Genius)"
+     "name": "Pass The Bone (feat. The Genius)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
@@ -201,36 +255,53 @@
    "date": "Tracklist dates to:\nMarch 24, 1992\nLeaked on:\nJuly 25, 2023",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://www.sothebys.com/en/buy/auction/2023/hip-hop/prince-rakeem-wu-tang-clan",
+    "https://www.youtube.com/watch?v=2fWKT2_0Nao"
+   ],
    "description": "Earlier tracklist that includes track durations. These track durations could be guesses, because the tape might've been found and the durations dont match, which is why some songs are marked as Unknown.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Wu-Tang Master 4:10"
+     "name": "Wu-Tang Master 4:10",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#2",
-     "name": "Problems 4:20"
+     "name": "Problems 4:20",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
-     "name": "After The Laughter 3:10"
+     "name": "After The Laughter 3:10",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#4",
-     "name": "The Wu's Coming Through 3:10"
+     "name": "The Wu's Coming Through 3:10",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#5",
-     "name": "Cutting Heads 2:00"
+     "name": "Cutting Heads 2:00",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#6",
-     "name": "Enter The Wu-Tang 3:18"
+     "name": "Enter The Wu-Tang 3:18",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#7",
-     "name": "Enter The Wu-Tang (Instrumental)"
+     "name": "Enter The Wu-Tang (Instrumental)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -240,12 +311,16 @@
    "date": "Tracklist dates to:\nApril 13, 1992\nLeaked on:\nJuly 25, 2023",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://www.sothebys.com/en/buy/auction/2023/hip-hop/prince-rakeem-wu-tang-clan"
+   ],
    "description": "Single, released on a cassette and was later put on the Demo Tape alongside Bring Da Ruckus.",
    "tracks": [
     {
      "num": "#1",
-     "name": "It's All About Me"
+     "name": "It's All About Me",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -255,40 +330,58 @@
    "date": "Tracklist dates to:\nca. 1992\nLeaked on:\nMay 5, 2019",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://archive.org/details/WuTangClanDemoTape1992CompleteRipped"
+   ],
    "description": "The original tracklist for the demo tape, containing a more condensed selection of the tracks, aswell as some name and placement changes.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Enter the Wu-Tang"
+     "name": "Enter the Wu-Tang",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Wu-Tang Master"
+     "name": "Wu-Tang Master",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Cuttin' Headz"
+     "name": "Cuttin' Headz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Problems"
+     "name": "Problems",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "It's All About Me"
+     "name": "It's All About Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "After the Laughter"
+     "name": "After the Laughter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Bring Da Ruckus"
+     "name": "Bring Da Ruckus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Wu Is Comin' Thru"
+     "name": "The Wu Is Comin' Thru",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -298,7 +391,10 @@
    "date": "Tracklist dates to:\nDecember 14, 1992",
    "quality": "Firsthand",
    "source": "Firsthand",
-   "links": [],
+   "links": [
+    "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers",
+    "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers)"
+   ],
    "description": "Released on a 12-inch.\n\nWu-Tang Side\nA1. Protect Ya Neck (Radio Edit)\nA2. Protect Ya Neck (Bloody Version)\nA3. Protect Ya Neck (Instrumental)\n\nShaolin Side\nB1. After The Laughter Comes Tears (Vocal)\nB2. After The Laughter Comes Tears (Instrumental)",
    "tracks": []
   },
@@ -313,27 +409,39 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Bring Da Ruckus"
+     "name": "Bring Da Ruckus",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Wu-Tang Clan Ain't Nuthing Ta F' Wit"
+     "name": "Wu-Tang Clan Ain't Nuthing Ta F' Wit",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Run Ya Garments"
+     "name": "Run Ya Garments",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "After The Laughter"
+     "name": "After The Laughter",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Life Is Hectic"
+     "name": "Life Is Hectic",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Method Man"
+     "name": "Method Man",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -343,52 +451,76 @@
    "date": "Tracklist dates to:\nca. July 1993\nLeaked on:\nca. September 2023",
    "quality": "Leaked",
    "source": "Leaked",
-   "links": [],
+   "links": [
+    "https://www.sothebys.com/en/buy/auction/2023/hip-hop/rza-wu-tang-clan"
+   ],
    "description": "An earlier tracklist was found featuring the song: \"Run Ya Garments\", which was later released as a bonus track on 8 Diagrams and excludes both of the \"7th Chamber\" parts. And there are now different \"Sides\" instead of \"Swords\".\n\nShaolin Side:",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bring Da Ruckus"
+     "name": "Bring Da Ruckus",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Shame On A N****r"
+     "name": "Shame On A N****r",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Clan In Da Front"
+     "name": "Clan In Da Front",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Can It Be All So Simple"
+     "name": "Can It Be All So Simple",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Run Ya Garments (16th Chamber)"
+     "name": "Run Ya Garments (16th Chamber)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#1",
-     "name": "Da Mystery of Chessboxing"
+     "name": "Da Mystery of Chessboxing",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Wu-Tang Clan Aint Nuthing ta Fuck Wit"
+     "name": "Wu-Tang Clan Aint Nuthing ta Fuck Wit",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "C.R.E.A.M."
+     "name": "C.R.E.A.M.",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Method Man"
+     "name": "Method Man",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Protect Ya Neck"
+     "name": "Protect Ya Neck",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "After The Laughter Come Tears"
+     "name": "After The Laughter Come Tears",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -398,56 +530,83 @@
    "date": "Tracklist dates to:\nNovember 9, 1993",
    "quality": "Firsthand",
    "source": "Firsthand",
-   "links": [],
+   "links": [
+    "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers",
+    "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers)"
+   ],
    "description": "Official tracklist for CD and streaming releases.\n\nShaolin Sword:",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bring Da Ruckus"
+     "name": "Bring Da Ruckus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Shame On A N***a"
+     "name": "Shame On A N***a",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Clan In Da Front"
+     "name": "Clan In Da Front",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wu-Tang: 7th Chamber"
+     "name": "Wu-Tang: 7th Chamber",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Can It Be All So Simple / Intermission"
+     "name": "Can It Be All So Simple / Intermission",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Da Mystery Of Chessboxin'"
+     "name": "Da Mystery Of Chessboxin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Wu-Tang Clan Ain't Nuthing Ta F' Wit"
+     "name": "Wu-Tang Clan Ain't Nuthing Ta F' Wit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "C.R.E.A.M."
+     "name": "C.R.E.A.M.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Method Man"
+     "name": "Method Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Protect Ya Neck"
+     "name": "Protect Ya Neck",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Tearz"
+     "name": "Tearz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Wu-Tang: 7th Chamber (Part II) / Conclusion"
+     "name": "Wu-Tang: 7th Chamber (Part II) / Conclusion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -457,56 +616,83 @@
    "date": "Tracklist dates to:\nNovember 9, 1993",
    "quality": "Firsthand",
    "source": "Firsthand",
-   "links": [],
+   "links": [
+    "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers",
+    "https://en.wikipedia.org/wiki/Enter_the_Wu-Tang_(36_Chambers)"
+   ],
    "description": "Official tracklist for vinyl and casette releases, that contains some noticeable differences.\n\nShaolin Sword:",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bring da Ruckus"
+     "name": "Bring da Ruckus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Shame on a N***a"
+     "name": "Shame on a N***a",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Clan in da Front"
+     "name": "Clan in da Front",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wu-Tang: 7th Chamber"
+     "name": "Wu-Tang: 7th Chamber",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Can It Be All So Simple"
+     "name": "Can It Be All So Simple",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Protect Ya Neck / Intermission"
+     "name": "Protect Ya Neck / Intermission",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Da Mystery of Chessboxin'"
+     "name": "Da Mystery of Chessboxin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Wu-Tang Clan Ain't Nuthing ta F' Wit"
+     "name": "Wu-Tang Clan Ain't Nuthing ta F' Wit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "C.R.E.A.M."
+     "name": "C.R.E.A.M.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Method Man"
+     "name": "Method Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Tearz"
+     "name": "Tearz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Wu-Tang: 7th Chamber (Part II) / Conclusion"
+     "name": "Wu-Tang: 7th Chamber (Part II) / Conclusion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -521,111 +707,165 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wu-Revolution"
+     "name": "Wu-Revolution",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Reunited"
+     "name": "Reunited",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "For Heavens Sake"
+     "name": "For Heavens Sake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Cash Still Rules / Scary Hours (Still Don't Nothing Move But The Money)"
+     "name": "Cash Still Rules / Scary Hours (Still Don't Nothing Move But The Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Visionz"
+     "name": "Visionz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "As High As Wu-Tang Get"
+     "name": "As High As Wu-Tang Get",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Severe Punishment"
+     "name": "Severe Punishment",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Older Gods"
+     "name": "Older Gods",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Maria"
+     "name": "Maria",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "A Better Tomorrow"
+     "name": "A Better Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "It's Yourz"
+     "name": "It's Yourz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Triumph"
+     "name": "Triumph",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Impossible"
+     "name": "Impossible",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Little Ghetto Boys"
+     "name": "Little Ghetto Boys",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Deadly Melody"
+     "name": "Deadly Melody",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "The City"
+     "name": "The City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "The Projects"
+     "name": "The Projects",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Bells Of War"
+     "name": "Bells Of War",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "The M.G.M."
+     "name": "The M.G.M.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Dog Shit"
+     "name": "Dog Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Duck Seazon"
+     "name": "Duck Seazon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Hellz Wind Staff"
+     "name": "Hellz Wind Staff",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Heaterz"
+     "name": "Heaterz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Black Shampoo"
+     "name": "Black Shampoo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Second Coming"
+     "name": "Second Coming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "The Closing"
+     "name": "The Closing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -640,119 +880,177 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wu-Revolution"
+     "name": "Wu-Revolution",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Reunited"
+     "name": "Reunited",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "For Heavens Sake"
+     "name": "For Heavens Sake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Cash Still Rules / Scary Hours (Still Don't Nothing Move But The Money)"
+     "name": "Cash Still Rules / Scary Hours (Still Don't Nothing Move But The Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Visionz"
+     "name": "Visionz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "As High As Wu-Tang Get"
+     "name": "As High As Wu-Tang Get",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Severe Punishment"
+     "name": "Severe Punishment",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Older Gods"
+     "name": "Older Gods",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Maria"
+     "name": "Maria",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "A Better Tomorrow"
+     "name": "A Better Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "It's Yourz"
+     "name": "It's Yourz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Triumph"
+     "name": "Triumph",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Impossible"
+     "name": "Impossible",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Little Ghetto Boys"
+     "name": "Little Ghetto Boys",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Deadly Melody"
+     "name": "Deadly Melody",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "The City"
+     "name": "The City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "The Projects"
+     "name": "The Projects",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Bells Of War"
+     "name": "Bells Of War",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "The M.G.M."
+     "name": "The M.G.M.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Dog Shit"
+     "name": "Dog Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Duck Seazon"
+     "name": "Duck Seazon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Hellz Wind Staff"
+     "name": "Hellz Wind Staff",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Heaterz"
+     "name": "Heaterz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Black Shampoo"
+     "name": "Black Shampoo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Second Coming"
+     "name": "Second Coming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "The Closing"
+     "name": "The Closing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Sunshower"
+     "name": "Sunshower",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
-     "name": "Projects International Remix"
+     "name": "Projects International Remix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -767,59 +1065,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wu-Revolution"
+     "name": "Wu-Revolution",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Reunited"
+     "name": "Reunited",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "For Heaven’s Sake"
+     "name": "For Heaven’s Sake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Cash Still Rules / Scary Hours (Still Don't Nothing Move But The Money)"
+     "name": "Cash Still Rules / Scary Hours (Still Don't Nothing Move But The Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "As High As Wu-Tang Get"
+     "name": "As High As Wu-Tang Get",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Older Gods"
+     "name": "Older Gods",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "M.G.M."
+     "name": "M.G.M.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A Better Tomorrow"
+     "name": "A Better Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "It’s Yourz"
+     "name": "It’s Yourz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Triumph"
+     "name": "Triumph",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Impossible"
+     "name": "Impossible",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Little Ghetto Boys"
+     "name": "Little Ghetto Boys",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "The City"
+     "name": "The City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Dog Sh*t"
+     "name": "Dog Sh*t",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -834,55 +1160,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (Shaolin Finger Jab)/Chamber Music"
+     "name": "Intro (Shaolin Finger Jab)/Chamber Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Careful (Click, Click)"
+     "name": "Careful (Click, Click)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hollow Bones"
+     "name": "Hollow Bones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Redbull"
+     "name": "Redbull",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "One Blood Under W"
+     "name": "One Blood Under W",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Conditioner"
+     "name": "Conditioner",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Protect Ya Neck (The Jump Off)"
+     "name": "Protect Ya Neck (The Jump Off)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Let My Ni***s Live"
+     "name": "Let My Ni***s Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I Can't Go To Sleep"
+     "name": "I Can't Go To Sleep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Do You Really (Thang, Thang)"
+     "name": "Do You Really (Thang, Thang)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Monument"
+     "name": "The Monument",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Gravel Pit"
+     "name": "Gravel Pit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Jah World"
+     "name": "Jah World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -897,59 +1249,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (Shaolin Finger Jab)/Chamber Music"
+     "name": "Intro (Shaolin Finger Jab)/Chamber Music",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Careful (Click, Click)"
+     "name": "Careful (Click, Click)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Hollow Bones"
+     "name": "Hollow Bones",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Redbull"
+     "name": "Redbull",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "One Blood Under W"
+     "name": "One Blood Under W",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Conditioner"
+     "name": "Conditioner",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Protect Ya Neck (The Jump Off)"
+     "name": "Protect Ya Neck (The Jump Off)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Let My Ni***s Live"
+     "name": "Let My Ni***s Live",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "I Can't Go To Sleep"
+     "name": "I Can't Go To Sleep",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Do You Really (Thang, Thang)"
+     "name": "Do You Really (Thang, Thang)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "The Monument"
+     "name": "The Monument",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Gravel Pit"
+     "name": "Gravel Pit",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Jah World"
+     "name": "Jah World",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Clap"
+     "name": "Clap",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -964,75 +1344,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (Shaolin Finger Jab) / Chamber Music"
+     "name": "Intro (Shaolin Finger Jab) / Chamber Music",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Careful (Click, Click)"
+     "name": "Careful (Click, Click)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Hollow Bones"
+     "name": "Hollow Bones",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Redbull"
+     "name": "Redbull",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "One Blood Under W"
+     "name": "One Blood Under W",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Conditioner"
+     "name": "Conditioner",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Protect Ya Neck (The Jump Off)"
+     "name": "Protect Ya Neck (The Jump Off)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Let My Ni***s Live"
+     "name": "Let My Ni***s Live",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "I Can't Go To Sleep"
+     "name": "I Can't Go To Sleep",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Do You Really (Thang, Thang)"
+     "name": "Do You Really (Thang, Thang)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "The Monument"
+     "name": "The Monument",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Gravel Pit"
+     "name": "Gravel Pit",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Jah World"
+     "name": "Jah World",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Handclap"
+     "name": "Handclap",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Careful (Click, Click) (Kardinal Remix)"
+     "name": "Careful (Click, Click) (Kardinal Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "It's Militant"
+     "name": "It's Militant",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Win"
+     "name": "Win",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Killa Cal Lifestyle"
+     "name": "Killa Cal Lifestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1047,51 +1463,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "In The Hood"
+     "name": "In The Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rules"
+     "name": "Rules",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Chrome Wheels"
+     "name": "Chrome Wheels",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Soul Power (Black Jungle)"
+     "name": "Soul Power (Black Jungle)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Uzi (Pinky Ring)"
+     "name": "Uzi (Pinky Ring)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "One Of These Days"
+     "name": "One Of These Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Ya'll Been Warned"
+     "name": "Ya'll Been Warned",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Babies"
+     "name": "Babies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Radioactive (Four Assasins)"
+     "name": "Radioactive (Four Assasins)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Back In The Game"
+     "name": "Back In The Game",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Iron Flag"
+     "name": "Iron Flag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dashing (Reasons)"
+     "name": "Dashing (Reasons)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1106,35 +1546,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "In The Hood"
+     "name": "In The Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ya'll Been Warned"
+     "name": "Ya'll Been Warned",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Take It Back To Brooklyn"
+     "name": "Take It Back To Brooklyn",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Babies"
+     "name": "Babies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Back In The Game"
+     "name": "Back In The Game",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Rules"
+     "name": "Rules",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Exclusive Ol' Dirty Bastard Freestyle"
+     "name": "Exclusive Ol' Dirty Bastard Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "UZI (Pinky Ring)"
+     "name": "UZI (Pinky Ring)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1149,59 +1605,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Campfire"
+     "name": "Campfire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Take It Back"
+     "name": "Take It Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Get Them Out Ya Way Pa"
+     "name": "Get Them Out Ya Way Pa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Rushing Elephants"
+     "name": "Rushing Elephants",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Unpredictable"
+     "name": "Unpredictable",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Heart Gently Weeps"
+     "name": "The Heart Gently Weeps",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Wolves"
+     "name": "Wolves",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Gun Will Go"
+     "name": "Gun Will Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sunlight"
+     "name": "Sunlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Stick Me For My Riches"
+     "name": "Stick Me For My Riches",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starter"
+     "name": "Starter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Windmill"
+     "name": "Windmill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Weak Spot"
+     "name": "Weak Spot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Life Changes"
+     "name": "Life Changes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1226,63 +1710,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Campfire"
+     "name": "Campfire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Take It Back"
+     "name": "Take It Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Get Them Out Ya Way Pa"
+     "name": "Get Them Out Ya Way Pa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Elephants"
+     "name": "Elephants",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Unpredictable"
+     "name": "Unpredictable",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Heart Gently Weeps"
+     "name": "The Heart Gently Weeps",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Wolves"
+     "name": "Wolves",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Gun Will Go"
+     "name": "Gun Will Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sunlight"
+     "name": "Sunlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Stick Me For My Riches"
+     "name": "Stick Me For My Riches",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starter"
+     "name": "Starter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Windmill"
+     "name": "Windmill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Weak Spot"
+     "name": "Weak Spot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Life Changes"
+     "name": "Life Changes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Tar Pit"
+     "name": "Tar Pit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1297,67 +1811,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Campfire"
+     "name": "Campfire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Take It Back"
+     "name": "Take It Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Get Them Out Ya Way Pa"
+     "name": "Get Them Out Ya Way Pa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Elephants"
+     "name": "Elephants",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Unpredictable"
+     "name": "Unpredictable",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Heart Gently Weeps"
+     "name": "The Heart Gently Weeps",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Wolves"
+     "name": "Wolves",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Gun Will Go"
+     "name": "Gun Will Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sunlight"
+     "name": "Sunlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Stick Me For My Riches"
+     "name": "Stick Me For My Riches",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starter"
+     "name": "Starter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Windmill"
+     "name": "Windmill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Weak Spot"
+     "name": "Weak Spot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Life Changes"
+     "name": "Life Changes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Tar Pit"
+     "name": "Tar Pit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "16th Chamber / O.D.B. Special"
+     "name": "16th Chamber / O.D.B. Special",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1372,63 +1918,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Ruckus In B Minor"
+     "name": "Ruckus In B Minor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Felt"
+     "name": "Felt",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "40th Street Black / We Will Fight"
+     "name": "40th Street Black / We Will Fight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Mistaken Identity"
+     "name": "Mistaken Identity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hold The Heater"
+     "name": "Hold The Heater",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Crushed Egos"
+     "name": "Crushed Egos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Keep Watch"
+     "name": "Keep Watch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Miracle"
+     "name": "Miracle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Preacher's Daughter"
+     "name": "Preacher's Daughter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Pioneer The Frontier"
+     "name": "Pioneer The Frontier",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Necklace"
+     "name": "Necklace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Ron O'Neal"
+     "name": "Ron O'Neal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "A Better Tomorrow"
+     "name": "A Better Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Never Let Go"
+     "name": "Never Let Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Wu-Tang Reunion"
+     "name": "Wu-Tang Reunion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1453,35 +2029,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Ruckus In B Minor"
+     "name": "Ruckus In B Minor",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Ron O Neal"
+     "name": "Ron O Neal",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Mistaken Identity"
+     "name": "Mistaken Identity",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Keep Watch"
+     "name": "Keep Watch",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Never Let Go"
+     "name": "Never Let Go",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Mistaken Identity Instrumental"
+     "name": "Mistaken Identity Instrumental",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Never Let Go Instrumental"
+     "name": "Never Let Go Instrumental",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Big Horn"
+     "name": "Big Horn",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
@@ -1511,7 +2103,9 @@
    "date": "Tracklist dates to:\nUnknown",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://pixeldrain.com/u/A8SYWyQZ"
+   ],
    "description": "Up until at least the 4th of April, 2012, the album was meant to have 25 tracks (confirmed in the now lost \"It's Coming...\" thread, started by Cilvaringz on wutangcorp.com).\n1-25. ???",
    "tracks": []
   },
@@ -1526,127 +2120,189 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "??? (Enter)"
+     "name": "??? (Enter)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "??? (The Magnificent Butchers)"
+     "name": "??? (The Magnificent Butchers)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "??? (Stone Him!)"
+     "name": "??? (Stone Him!)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Skit - Part I (Staple Town - Part I)"
+     "name": "Skit - Part I (Staple Town - Part I)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "??? (99 Cycling Swords [99 Supreme])"
+     "name": "??? (99 Cycling Swords [99 Supreme])",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "??? (Kareem)"
+     "name": "??? (Kareem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "??? (Stone Finger)"
+     "name": "??? (Stone Finger)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Weeping Tiger"
+     "name": "The Weeping Tiger",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "??? (Brother Jozef)"
+     "name": "??? (Brother Jozef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "??? (The Ninja)"
+     "name": "??? (The Ninja)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#12",
-     "name": "??? (Dirt Bomb Ni***z Know My Uzi Weigh A Ton)"
+     "name": "??? (Dirt Bomb Ni***z Know My Uzi Weigh A Ton)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Skit - Part II (Staple Town - Part III)"
+     "name": "Skit - Part II (Staple Town - Part III)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Interlude - Movie"
+     "name": "Interlude - Movie",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "In The Name Of Allah"
+     "name": "In The Name Of Allah",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Rainy Dayz Part II (Hail, Snow & Earthquakes [Rainy Dayz II])"
+     "name": "Rainy Dayz Part II (Hail, Snow & Earthquakes [Rainy Dayz II])",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Intro (Nourishment)"
+     "name": "Intro (Nourishment)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "??? (Winter Windz [Lions] / The Manual [Interlude])"
+     "name": "??? (Winter Windz [Lions] / The Manual [Interlude])",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "??? (The Eighty Eight Soul Babies)"
+     "name": "??? (The Eighty Eight Soul Babies)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "??? (March of the Wooden Soldiers [Guards] – The 19th Chamber)"
+     "name": "??? (March of the Wooden Soldiers [Guards] – The 19th Chamber)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "??? (Park Hillians)"
+     "name": "??? (Park Hillians)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "??? (Bamboo)"
+     "name": "??? (Bamboo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "??? (Flowers Blossoming)"
+     "name": "??? (Flowers Blossoming)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "??? (The Iron Butterfly [Revenge of the Ferocious Camay])"
+     "name": "??? (The Iron Butterfly [Revenge of the Ferocious Camay])",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "??? (Once Upon A Time In Shaolin...)"
+     "name": "??? (Once Upon A Time In Shaolin...)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "??? (Swords Stained With Royal Blood [The Fatal Flying Guillotines])"
+     "name": "??? (Swords Stained With Royal Blood [The Fatal Flying Guillotines])",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "??? (Piranha)"
+     "name": "??? (Piranha)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Diary Of A Mad Woman"
+     "name": "Diary Of A Mad Woman",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "??? (Slain By Swords...)"
+     "name": "??? (Slain By Swords...)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Outro - Movie"
+     "name": "Outro - Movie",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "Instrumental Outro"
+     "name": "Instrumental Outro",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1661,127 +2317,189 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Entrance (Intro) 1:57"
+     "name": "Entrance (Intro) 1:57",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Rivals 4:12"
+     "name": "Rivals 4:12",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Staple Town Pt. 1 (Interlude) 0:44"
+     "name": "Staple Town Pt. 1 (Interlude) 0:44",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Ethiopia 7:55"
+     "name": "Ethiopia 7:55",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Handkerchief 0:49"
+     "name": "Handkerchief 0:49",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Staple Town Pt. 2 (Interlude) 1:10"
+     "name": "Staple Town Pt. 2 (Interlude) 1:10",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "The Pillage of '88 6:52"
+     "name": "The Pillage of '88 6:52",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Centipedes 7:14"
+     "name": "Centipedes 7:14",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "The Widow's Tear 3:55"
+     "name": "The Widow's Tear 3:55",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Sorrow 5:45"
+     "name": "Sorrow 5:45",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "The Shogun 4:40"
+     "name": "The Shogun 4:40",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Blue (Interlude) 0:55"
+     "name": "Blue (Interlude) 0:55",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Semi Automatic Full Rap Fanatics 1:56"
+     "name": "Semi Automatic Full Rap Fanatics 1:56",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "Staple Town Pt. 3 (Interlude) 3:30"
+     "name": "Staple Town Pt. 3 (Interlude) 3:30",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "The Rain 7:16"
+     "name": "The Rain 7:16",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#1",
-     "name": "Sustenance (Intro) 0:43"
+     "name": "Sustenance (Intro) 0:43",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Lions 6:08"
+     "name": "Lions 6:08",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Since Time Immemorial 2:32"
+     "name": "Since Time Immemorial 2:32",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "The Slaughter Mill 6:31"
+     "name": "The Slaughter Mill 6:31",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "The Brute 3:24"
+     "name": "The Brute 3:24",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Iqra 7:23"
+     "name": "Iqra 7:23",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Flowers 5:49"
+     "name": "Flowers 5:49",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Poisoned Earth 4:34"
+     "name": "Poisoned Earth 4:34",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Shaolin 6:14"
+     "name": "Shaolin 6:14",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#10",
-     "name": "Freedom (Interlude) 2:25"
+     "name": "Freedom (Interlude) 2:25",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "The Sword Chamber 4:05"
+     "name": "The Sword Chamber 4:05",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Unique 2:32"
+     "name": "Unique 2:32",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "The Bloody Page 5:09"
+     "name": "The Bloody Page 5:09",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "The Saga Continues 6:58"
+     "name": "The Saga Continues 6:58",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "Salaam (Outro) 1:31"
+     "name": "Salaam (Outro) 1:31",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Shaolin Soul (Exit) 3:41"
+     "name": "Shaolin Soul (Exit) 3:41",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1791,132 +2509,196 @@
    "date": "Leaked on:\nApril 19, 2024",
    "quality": "Secondary",
    "source": "Secondary",
-   "links": [],
+   "links": [
+    "https://pixeldrain.com/u/MPcvXdjA"
+   ],
    "description": "The tracklist for the official release.\n\nShaolin School:",
    "tracks": [
     {
      "num": "#1",
-     "name": "Enter"
+     "name": "Enter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Magnificent Butchers"
+     "name": "The Magnificent Butchers",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#3",
-     "name": "Staple Town – Part I [Interlude]"
+     "name": "Staple Town – Part I [Interlude]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Stone Him!"
+     "name": "Stone Him!",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#5",
-     "name": "Kareem"
+     "name": "Kareem",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Staple Town – Part II [Interlude]"
+     "name": "Staple Town – Part II [Interlude]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "99 Cycling Swords [99 Supreme]"
+     "name": "99 Cycling Swords [99 Supreme]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#8",
-     "name": "Stone Finger"
+     "name": "Stone Finger",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#9",
-     "name": "The Weeping Tiger"
+     "name": "The Weeping Tiger",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Brother Jozef"
+     "name": "Brother Jozef",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#11",
-     "name": "The Ninja"
+     "name": "The Ninja",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#12",
-     "name": "Swine [Interlude]"
+     "name": "Swine [Interlude]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#13",
-     "name": "Dirt Bomb Ni***z Know My Uzi Weigh a Ton"
+     "name": "Dirt Bomb Ni***z Know My Uzi Weigh a Ton",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#14",
-     "name": "Staple Town – Part III [Interlude]"
+     "name": "Staple Town – Part III [Interlude]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#15",
-     "name": "Hail, Snow & Earthquakes [Rainy Dayz II]"
+     "name": "Hail, Snow & Earthquakes [Rainy Dayz II]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#1",
-     "name": "Nourishment [Intro]"
+     "name": "Nourishment [Intro]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Winter Windz [Lions] / The Manual [Interlude]"
+     "name": "Winter Windz [Lions] / The Manual [Interlude]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "The Eighty Eight Soul Babies"
+     "name": "The Eighty Eight Soul Babies",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#4",
-     "name": "March of the Wooden Soldiers [Guards] – The 19th Chamber"
+     "name": "March of the Wooden Soldiers [Guards] – The 19th Chamber",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#5",
-     "name": "Park Hillians"
+     "name": "Park Hillians",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Bamboo"
+     "name": "Bamboo",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Flowers Blossoming"
+     "name": "Flowers Blossoming",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#8",
-     "name": "The Iron Butterfly [Revenge of the Ferocious Camay]"
+     "name": "The Iron Butterfly [Revenge of the Ferocious Camay]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Once Upon a Time in Shaolin…"
+     "name": "Once Upon a Time in Shaolin…",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#10",
-     "name": "God Degree [Interlude]"
+     "name": "God Degree [Interlude]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Swords Stained With Royal Blood [The Fatal Flying Guillotines]"
+     "name": "Swords Stained With Royal Blood [The Fatal Flying Guillotines]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#12",
-     "name": "Piranha"
+     "name": "Piranha",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Diary of a Mad Woman"
+     "name": "Diary of a Mad Woman",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "Slain by Swords…"
+     "name": "Slain by Swords…",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#15",
-     "name": "Godspeed [Exit]"
+     "name": "Godspeed [Exit]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Shaolin Soul…"
+     "name": "Shaolin Soul…",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1931,75 +2713,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wu-Tang The Saga Continues Intro"
+     "name": "Wu-Tang The Saga Continues Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lesson Learn'd"
+     "name": "Lesson Learn'd",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fast And Furious"
+     "name": "Fast And Furious",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Famous Fighters (Skit)"
+     "name": "Famous Fighters (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "If Time Is Money (Fly Navigation)"
+     "name": "If Time Is Money (Fly Navigation)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Frozen"
+     "name": "Frozen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Berto And The Fiend"
+     "name": "Berto And The Fiend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pearl Harbor"
+     "name": "Pearl Harbor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "People Say"
+     "name": "People Say",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Family (Skit)"
+     "name": "Family (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Why Why Why"
+     "name": "Why Why Why",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "G'd Up"
+     "name": "G'd Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "If What You Say Is True"
+     "name": "If What You Say Is True",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Saga (Skit)"
+     "name": "Saga (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Hood Go Bang!"
+     "name": "Hood Go Bang!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "My Only One"
+     "name": "My Only One",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Message"
+     "name": "Message",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "The Saga Continues"
+     "name": "The Saga Continues",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2024,31 +2842,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "On That Shit Again"
+     "name": "On That Shit Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Seen A Lot Of Things"
+     "name": "Seen A Lot Of Things",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Project Kids (Skit)"
+     "name": "Project Kids (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Do The Same As My Brother Do"
+     "name": "Do The Same As My Brother Do",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Yo, Is You Cheo? (Skit)"
+     "name": "Yo, Is You Cheo? (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Of Mics And Men"
+     "name": "Of Mics And Men",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "One Rhyme (Skit)"
+     "name": "One Rhyme (Skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2073,51 +2905,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Sucker Free City"
+     "name": "Sucker Free City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Mandingo"
+     "name": "Mandingo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Roar of the Lion (The Lion's Pit)"
+     "name": "Roar of the Lion (The Lion's Pit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Claudine"
+     "name": "Claudine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Shaolin vs. Lama"
+     "name": "Shaolin vs. Lama",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Executioners From Shaolin"
+     "name": "Executioners From Shaolin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Cleopatra Jones"
+     "name": "Cleopatra Jones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Warriors Two, Cooley High"
+     "name": "Warriors Two, Cooley High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Let's Do It Again"
+     "name": "Let's Do It Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dolomite"
+     "name": "Dolomite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Trouble Man (Outro)"
+     "name": "Trouble Man (Outro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Charleston Blue, Legend Of A Fighter"
+     "name": "Charleston Blue, Legend Of A Fighter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2132,107 +2988,159 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Sucker Free City"
+     "name": "Sucker Free City",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Mandingo"
+     "name": "Mandingo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Roar of the Lion (The Lion's Pit)"
+     "name": "Roar of the Lion (The Lion's Pit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Claudine"
+     "name": "Claudine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Shaolin vs. Lama"
+     "name": "Shaolin vs. Lama",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Executioners From Shaolin"
+     "name": "Executioners From Shaolin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Cleopatra Jones"
+     "name": "Cleopatra Jones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Warriors Two, Cooley High"
+     "name": "Warriors Two, Cooley High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Let's Do It Again"
+     "name": "Let's Do It Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dolomite"
+     "name": "Dolomite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Trouble Man (Outro)"
+     "name": "Trouble Man (Outro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Charleston Blue, Legend Of A Fighter"
+     "name": "Charleston Blue, Legend Of A Fighter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Sinners (Mo' Better Blues)"
+     "name": "Sinners (Mo' Better Blues)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Sucker Free City (Instrumental)"
+     "name": "Sucker Free City (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Mandingo (Instrumental)"
+     "name": "Mandingo (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Roar of the Lion (The Lion's Pit) [Instrumental]"
+     "name": "Roar of the Lion (The Lion's Pit) [Instrumental]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Claudine (Instrumental)"
+     "name": "Claudine (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Shaolin vs. Lama (Instrumental)"
+     "name": "Shaolin vs. Lama (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Executioners From Shaolin (Instrumental)"
+     "name": "Executioners From Shaolin (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Cleopatra Jones (Instrumental)"
+     "name": "Cleopatra Jones (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Warriors Two, Cooley-High (Instrumental)"
+     "name": "Warriors Two, Cooley-High (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Let's Do It Again (Instrumental)"
+     "name": "Let's Do It Again (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Dolomite (Instrumental)"
+     "name": "Dolomite (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Trouble Man (Outro) [Instrumental]"
+     "name": "Trouble Man (Outro) [Instrumental]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Charleston Blue, Legend Of A Fighter (Instrumental)"
+     "name": "Charleston Blue, Legend Of A Fighter (Instrumental)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Sinners (Mo' Better Blues) [Instrumental]"
+     "name": "Sinners (Mo' Better Blues) [Instrumental]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },

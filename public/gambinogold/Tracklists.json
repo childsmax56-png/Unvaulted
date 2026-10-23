@@ -29,63 +29,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Da Man"
+     "name": "Da Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Tengo (feat. DC Pierson)"
+     "name": "Tengo (feat. DC Pierson)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "My Baby"
+     "name": "My Baby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Kcuf"
+     "name": "Kcuf",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Justification"
+     "name": "Justification",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Waiting"
+     "name": "Waiting",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Bounce (feat. Tundra)"
+     "name": "Bounce (feat. Tundra)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "2 Brains"
+     "name": "2 Brains",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Summer Is Here"
+     "name": "Summer Is Here",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Black Kid"
+     "name": "Black Kid",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "A Runaway"
+     "name": "A Runaway",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Retarded"
+     "name": "Retarded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Me and Austen"
+     "name": "Me and Austen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Home"
+     "name": "Home",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Hidden Track"
+     "name": "Hidden Track",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -100,51 +130,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Easy (Intro)"
+     "name": "Easy (Intro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Fire"
+     "name": "Fire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I'm A Winner (feat. Amber Petty)"
+     "name": "I'm A Winner (feat. Amber Petty)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Tru Dudes (feat. MC Chris)"
+     "name": "Tru Dudes (feat. MC Chris)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Red Alert"
+     "name": "Red Alert",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Love Is Crazy (feat. Eugene Cordero)"
+     "name": "Love Is Crazy (feat. Eugene Cordero)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "My Hoodie (feat. Chaz Kangas)"
+     "name": "My Hoodie (feat. Chaz Kangas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Fresh"
+     "name": "Fresh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Til' I Die"
+     "name": "Til' I Die",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "So Sick Wit' It"
+     "name": "So Sick Wit' It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Assassins (feat. DC Pierson & Nick Packard)"
+     "name": "Assassins (feat. DC Pierson & Nick Packard)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Baby Doll"
+     "name": "Baby Doll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -159,59 +213,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Extraordinary"
+     "name": "Extraordinary",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "So Much Better"
+     "name": "So Much Better",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Phat People (feat. Billy Scafuri)"
+     "name": "Phat People (feat. Billy Scafuri)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Awesome (feat. MC Chris)"
+     "name": "The Awesome (feat. MC Chris)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Yes"
+     "name": "Yes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Hawk Jones (feat. Dree Dei)"
+     "name": "Hawk Jones (feat. Dree Dei)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Almost There"
+     "name": "Almost There",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Hollerin (feat. Dean)"
+     "name": "Hollerin (feat. Dean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I'm My Name Bam-B (feat. G.E.T.H.)"
+     "name": "I'm My Name Bam-B (feat. G.E.T.H.)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Grind"
+     "name": "Grind",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Rocker"
+     "name": "The Rocker",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I'm So Focused (feat. Truff Syrum)"
+     "name": "I'm So Focused (feat. Truff Syrum)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Starlight (feat. DC Pierson & Amber Petty)"
+     "name": "Starlight (feat. DC Pierson & Amber Petty)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Sunshine (feat. Dean)"
+     "name": "Sunshine (feat. Dean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -226,31 +308,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "New Prince (Crown On the Ground)"
+     "name": "New Prince (Crown On the Ground)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Bitch Look At Me Now (Two Weeks)"
+     "name": "Bitch Look At Me Now (Two Weeks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "49ers (Orange Shirt) [feat. DC Pierson]"
+     "name": "49ers (Orange Shirt) [feat. DC Pierson]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "My Girls"
+     "name": "My Girls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "I Can Hear Your Feet (Sunrise)"
+     "name": "I Can Hear Your Feet (Sunrise)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Truth (Goth Star) [feat. DC Pierson]"
+     "name": "The Truth (Goth Star) [feat. DC Pierson]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I Love Clothes"
+     "name": "I Love Clothes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -265,35 +361,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Real"
+     "name": "The Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Get It (Tightrope)"
+     "name": "Get It (Tightrope)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Different (Feel It All Around) [feat. DC Pierson]"
+     "name": "Different (Feel It All Around) [feat. DC Pierson]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "What The Fuck Are You? (Colouring of Pigeons)"
+     "name": "What The Fuck Are You? (Colouring of Pigeons)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Both Hands"
+     "name": "Both Hands",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For The Fans (Warm Heart of Africa)"
+     "name": "For The Fans (Warm Heart of Africa)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Nowhere to Go"
+     "name": "Nowhere to Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "(?)"
+     "name": "(?)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -308,67 +420,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Difference"
+     "name": "Difference",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hero"
+     "name": "Hero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Be On That"
+     "name": "I Be On That",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Got This Money"
+     "name": "Got This Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "So Fly"
+     "name": "So Fly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "You Know Me"
+     "name": "You Know Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Let Me Dope You"
+     "name": "Let Me Dope You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Do Ya Like"
+     "name": "Do Ya Like",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I'm Alright"
+     "name": "I'm Alright",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Glory"
+     "name": "Glory",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Fuck It All"
+     "name": "Fuck It All",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I'm On It"
+     "name": "I'm On It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Put It In My Video"
+     "name": "Put It In My Video",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "These Girls (feat. Garfunkel and Oats)"
+     "name": "These Girls (feat. Garfunkel and Oats)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Last"
+     "name": "The Last",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Got This Money (Acoustic @ Ace Hotel)"
+     "name": "Got This Money (Acoustic @ Ace Hotel)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -383,23 +527,33 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Be Alone"
+     "name": "Be Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Freaks and Geeks"
+     "name": "Freaks and Geeks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "My Shine"
+     "name": "My Shine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Lights Turned On"
+     "name": "Lights Turned On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Not Going Back"
+     "name": "Not Going Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -414,55 +568,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Outside"
+     "name": "Outside",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Fire Fly"
+     "name": "Fire Fly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bonfire"
+     "name": "Bonfire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "All the Shine"
+     "name": "All the Shine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Letter Home"
+     "name": "Letter Home",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Heartbeat"
+     "name": "Heartbeat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Backpackers"
+     "name": "Backpackers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Les"
+     "name": "Les",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Hold You Down"
+     "name": "Hold You Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Kids"
+     "name": "Kids",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "You See Me"
+     "name": "You See Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sunrise"
+     "name": "Sunrise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "That Power"
+     "name": "That Power",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -477,75 +657,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "R O Y A L T Y"
+     "name": "R O Y A L T Y",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "We Ain't Them"
+     "name": "We Ain't Them",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "One Up (feat. Steve G. Lover)"
+     "name": "One Up (feat. Steve G. Lover)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Black Faces (feat. Nipsey Hussle)"
+     "name": "Black Faces (feat. Nipsey Hussle)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Unnecessary (feat. ScHoolboy Q & Ab-Soul)"
+     "name": "Unnecessary (feat. ScHoolboy Q & Ab-Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Shoulda Known"
+     "name": "Shoulda Known",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "R.I.P. (feat. Bun B)"
+     "name": "R.I.P. (feat. Bun B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "American Royalty (feat. RZA & Hypnotic Bass Orchestra)"
+     "name": "American Royalty (feat. RZA & Hypnotic Bass Orchestra)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "It May Be Glamour Life (feat. Ghostface Killah)"
+     "name": "It May Be Glamour Life (feat. Ghostface Killah)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Toxic (feat. Danny Brown)"
+     "name": "Toxic (feat. Danny Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Silk Pillow (feat. Beck)"
+     "name": "Silk Pillow (feat. Beck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "They Don't Like Me (feat. Chance the Rapper)"
+     "name": "They Don't Like Me (feat. Chance the Rapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Arrangement (feat. Gonage)"
+     "name": "Arrangement (feat. Gonage)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Won't Stop (feat. Danielle Haim)"
+     "name": "Won't Stop (feat. Danielle Haim)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Bronchitis"
+     "name": "Bronchitis",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Wonderful (feat. Josh Osho)"
+     "name": "Wonderful (feat. Josh Osho)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Make It Go Right (feat. Kilo Kish)"
+     "name": "Make It Go Right (feat. Kilo Kish)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Real Estate (feat. Alley Boy, Swank & Tina Fey)"
+     "name": "Real Estate (feat. Alley Boy, Swank & Tina Fey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -560,79 +776,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Library (Intro)"
+     "name": "The Library (Intro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I. Crawl"
+     "name": "I. Crawl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "II. Worldstar"
+     "name": "II. Worldstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Dial Up"
+     "name": "Dial Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "I. The Worst Guys (feat. Chance the Rapper)"
+     "name": "I. The Worst Guys (feat. Chance the Rapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "II. Shadows"
+     "name": "II. Shadows",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "III. Telegraph Ave. (\"Oakland\" by Lloyd)"
+     "name": "III. Telegraph Ave. (\"Oakland\" by Lloyd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "IV. Sweatpants"
+     "name": "IV. Sweatpants",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "3005"
+     "name": "3005",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Playing Around Before the Party Starts"
+     "name": "Playing Around Before the Party Starts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "I. The Party"
+     "name": "I. The Party",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "II. No Exit"
+     "name": "II. No Exit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Death By Numbers"
+     "name": "Death By Numbers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I. Flight of The Navigator"
+     "name": "I. Flight of The Navigator",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "II. Zealots of Stockholm [Free Information]"
+     "name": "II. Zealots of Stockholm [Free Information]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "III. Urn"
+     "name": "III. Urn",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "I. Pink Toes (feat. Jhenê Aiko)"
+     "name": "I. Pink Toes (feat. Jhenê Aiko)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "II. Earth: The Oldest Computer (The Last Night) [feat. Azealia Banks]"
+     "name": "II. Earth: The Oldest Computer (The Last Night) [feat. Azealia Banks]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "III. Life: The Biggest Troll [Andrew Auenheimer]"
+     "name": "III. Life: The Biggest Troll [Andrew Auenheimer]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -647,47 +901,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dream / Southern Hospitality / Partna Dem"
+     "name": "Dream / Southern Hospitality / Partna Dem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Fucks Given"
+     "name": "Fucks Given",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "No Small Talk (feat. Kari Faux)"
+     "name": "No Small Talk (feat. Kari Faux)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Money Baby"
+     "name": "Money Baby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Move That Dope / Nextel Chirp / Let Your Hair Blow (feat. Young Scooter)"
+     "name": "Move That Dope / Nextel Chirp / Let Your Hair Blow (feat. Young Scooter)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "AssShots (Remix) [feat. ROYALTY]"
+     "name": "AssShots (Remix) [feat. ROYALTY]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Childish Gambino @ The Atrium"
+     "name": "Childish Gambino @ The Atrium",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "U Don't Have To Call"
+     "name": "U Don't Have To Call",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Candler Road"
+     "name": "Candler Road",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "All Yall"
+     "name": "All Yall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Go DJ"
+     "name": "Go DJ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -702,31 +978,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Sober"
+     "name": "Sober",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Pop Thieves (Make It Feel Good) [feat. Jaden Smith]"
+     "name": "Pop Thieves (Make It Feel Good) [feat. Jaden Smith]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Retro (Rough)"
+     "name": "Retro (Rough)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Palisades (feat. Christian Rich)"
+     "name": "The Palisades (feat. Christian Rich)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Poke (feat. Steve G. Lover)"
+     "name": "Poke (feat. Steve G. Lover)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Late Night in Kauai (feat. Jaden Smith)"
+     "name": "Late Night in Kauai (feat. Jaden Smith)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "V. 3005 (Beach Picnic Version"
+     "name": "V. 3005 (Beach Picnic Version",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -741,47 +1031,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Me and Your Mama"
+     "name": "Me and Your Mama",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Have Some Love"
+     "name": "Have Some Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Boogieman"
+     "name": "Boogieman",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Zombies"
+     "name": "Zombies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Riot"
+     "name": "Riot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Redbone"
+     "name": "Redbone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "California"
+     "name": "California",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Terrified"
+     "name": "Terrified",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Baby Boy"
+     "name": "Baby Boy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "The Night Me and Your Mama Met"
+     "name": "The Night Me and Your Mama Met",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Stand Tall"
+     "name": "Stand Tall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -796,19 +1108,27 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Human Sacrifice 082118_3 (Human Sacrifice) (Human Dilemma)"
+     "name": "Human Sacrifice 082118_3 (Human Sacrifice) (Human Dilemma)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "01 Warlord 082318 (Warlords)"
+     "name": "01 Warlord 082318 (Warlords)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "01 All Night 082618 (All Night)"
+     "name": "01 All Night 082618 (All Night)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Algorythm 083118 (No Verse No preacher) (Algorythm)"
+     "name": "Algorythm 083118 (No Verse No preacher) (Algorythm)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -823,27 +1143,39 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Atavista"
+     "name": "Atavista",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Algorythm (Algorhythm)"
+     "name": "Algorythm (Algorhythm)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Do Whatever You Want"
+     "name": "Do Whatever You Want",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Human Dilemma (Human Sacrifice)"
+     "name": "Human Dilemma (Human Sacrifice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Time"
+     "name": "Time",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Warlords"
+     "name": "Warlords",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -858,23 +1190,33 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Algorythm"
+     "name": "Algorythm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Atavista"
+     "name": "Atavista",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Die With You"
+     "name": "Die With You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Shock"
+     "name": "Shock",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Song 8"
+     "name": "Song 8",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -889,19 +1231,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Summertime Magic (Valentine)"
+     "name": "Summertime Magic (Valentine)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Die With You"
+     "name": "Die With You",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Algorythm (Algorhythm)"
+     "name": "Algorythm (Algorhythm)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Human Sacrifice (Human Dilemma)"
+     "name": "Human Sacrifice (Human Dilemma)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -916,51 +1266,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro Meditation (0.00)"
+     "name": "Intro Meditation (0.00)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Algorythm (Algorhythm)"
+     "name": "Algorythm (Algorhythm)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Time"
+     "name": "Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Millenial Love (12.38)"
+     "name": "Millenial Love (12.38)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "To Be Hunted (19.10)"
+     "name": "To Be Hunted (19.10)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sweet Thang (24.19)"
+     "name": "Sweet Thang (24.19)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Shock (32.22)"
+     "name": "Shock (32.22)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Move This Way (35.31)"
+     "name": "Move This Way (35.31)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Party (39.28)"
+     "name": "Party (39.28)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Feels Like Summer (42.26)"
+     "name": "Feels Like Summer (42.26)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Violence (47.48)"
+     "name": "Violence (47.48)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Final Church (53.49)"
+     "name": "Final Church (53.49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -978,51 +1352,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "0.00 (Intro Meditation)"
+     "name": "0.00 (Intro Meditation)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Algorhythm (Algorythm)"
+     "name": "Algorhythm (Algorythm)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Time (feat. Ariana Grande)"
+     "name": "Time (feat. Ariana Grande)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "12.38 (feat. 21 Savage, Ink & Khadija Bonet) (Millenial Love)"
+     "name": "12.38 (feat. 21 Savage, Ink & Khadija Bonet) (Millenial Love)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "19.10 (To Be Hunted)"
+     "name": "19.10 (To Be Hunted)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "24.19 (Sweet Thang)"
+     "name": "24.19 (Sweet Thang)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "32.22 (Shock)"
+     "name": "32.22 (Shock)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "35.31 (Move This Way)"
+     "name": "35.31 (Move This Way)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "39.28 (Party)"
+     "name": "39.28 (Party)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "42.26 (Feels Like Summer)"
+     "name": "42.26 (Feels Like Summer)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "47.48 (Violence)"
+     "name": "47.48 (Violence)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "53.49 (Final Church)"
+     "name": "53.49 (Final Church)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1037,47 +1435,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Atavista"
+     "name": "Atavista",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Algorhythm"
+     "name": "Algorhythm",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Time"
+     "name": "Time",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Psilocybae (Millenial Love) (12.38)"
+     "name": "Psilocybae (Millenial Love) (12.38)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "To Be Hunted (19.10)"
+     "name": "To Be Hunted (19.10)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Sweet Thang (24.19)"
+     "name": "Sweet Thang (24.19)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Little Foot Big Foot (35.31) (Move This Way)"
+     "name": "Little Foot Big Foot (35.31) (Move This Way)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Why Go To The Party (39.28) (Party)"
+     "name": "Why Go To The Party (39.28) (Party)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Human Sacrifice"
+     "name": "Human Sacrifice",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Violence (47.48)"
+     "name": "Violence (47.48)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Final Church (53.49)"
+     "name": "Final Church (53.49)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -1095,47 +1515,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Atavista"
+     "name": "Atavista",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Algorhythm"
+     "name": "Algorhythm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Time (feat. Ariana Grande)"
+     "name": "Time (feat. Ariana Grande)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Psilocybae (Millenial Love) [feat. 21 Savage, Ink, & Kadhja Bonet]"
+     "name": "Psilocybae (Millenial Love) [feat. 21 Savage, Ink, & Kadhja Bonet]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "To Be Hunted"
+     "name": "To Be Hunted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sweet Thang (feat. Summer Walker)"
+     "name": "Sweet Thang (feat. Summer Walker)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Little Foot Big Foot (feat. Young Nudy)"
+     "name": "Little Foot Big Foot (feat. Young Nudy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Why Go To The Party"
+     "name": "Why Go To The Party",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Human Sacrifice"
+     "name": "Human Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "The Violence"
+     "name": "The Violence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Final Church"
+     "name": "Final Church",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1150,71 +1592,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "H3@RT$ W3RE M3@NT T0 F7¥"
+     "name": "H3@RT$ W3RE M3@NT T0 F7¥",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lithonia"
+     "name": "Lithonia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Survive (feat. Chlöe)"
+     "name": "Survive (feat. Chlöe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Steps Beach"
+     "name": "Steps Beach",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Talk My Shit (feat. Amaarae & Flo Milli)"
+     "name": "Talk My Shit (feat. Amaarae & Flo Milli)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Got To Be"
+     "name": "Got To Be",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Real Love"
+     "name": "Real Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "In The Night (feat. Jorja Smith & Amaarae)"
+     "name": "In The Night (feat. Jorja Smith & Amaarae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Yoshinoya"
+     "name": "Yoshinoya",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Can You Feel Me (feat. Legend)"
+     "name": "Can You Feel Me (feat. Legend)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "No Excuses (feat. Ludwig Göransson & Kamasi Washington)"
+     "name": "No Excuses (feat. Ludwig Göransson & Kamasi Washington)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Cruisin' (feat. Yeat)"
+     "name": "Cruisin' (feat. Yeat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "We Are God"
+     "name": "We Are God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Running Around (feat. Fousheé)"
+     "name": "Running Around (feat. Fousheé)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Dadvocate"
+     "name": "Dadvocate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Happy Survival (feat. Khruangbin)"
+     "name": "Happy Survival (feat. Khruangbin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "A Place Where Love Goes"
+     "name": "A Place Where Love Goes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

@@ -38,7 +38,9 @@
    "date": "",
    "quality": "Leaked",
    "source": "Leaked",
-   "links": [],
+   "links": [
+    "https://api.pillows.su/api/get/f6da2cef934211943d0b4f69b5d9ee3c"
+   ],
    "description": "• Dead On (feat. Rich Homie Quan)\n• All Over\n• Chickens (I Need Chickens)\n• I'll Tell You What\n• Udiggwhatimsayin (feat. Offset) (They Digg What I'm Sayin)\n• Knocked Off\n• Supposed To (Quarterback)\n• That\n• Don't Know (feat. Shad Da God)",
    "tracks": [],
    "availability": "Full",
@@ -117,95 +119,97 @@
     {
      "num": "#1",
      "name": "Take Kare (feat. Lil Wayne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Stunna",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Best Friend",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Power",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Calling Your Name",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "No Way",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Mine",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Freaky",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Be Me See Me",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Overdosin",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Again (feat. Gucci Mane)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "That’s All",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "What I'm Sayin",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Draw Down",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Wood",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
    "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-5-0.jpg"
    ]
@@ -222,113 +226,115 @@
     {
      "num": "#1",
      "name": "Take Kare (feat. Lil Wayne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Quarterback (feat. Quavo, Offset & PeeWee Longway)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Rarri (feat. Young Ralph)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Stunna",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Best Friend",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Power",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Calling Your Name",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "No Way",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Mine",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Freaky",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Be Me See Me",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Overdosin",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Again (feat. Gucci Mane)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "That’s All",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Udiggwhatimsayin",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Draw Down",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Wood Would",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Wanna Be Me",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
    "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-6-0.jpg"
    ]
@@ -345,79 +351,79 @@
     {
      "num": "#1",
      "name": "Constantly Hating (feat. Birdman)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "With That (feat. Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Can’t Tell (feat. T.I. & Boosie Badazz)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Check",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Never Had It (feat. Young Dolph)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Dream (feat. Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Dome (feat. Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Halftime",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Amazing (feat. Jacquees)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Knocked Off (feat. Birdman)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "OD",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Numbers",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Just Might Be",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -438,133 +444,133 @@
     {
      "num": "#1",
      "name": "Big Racks (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Thief in the Night (feat. Trouble)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Don’t Know (feat. Shad da God)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Hey, I",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "She Notice",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "All Over",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Twerk It",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Phoenix",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "I’ll Tell You What",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Mind Right",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Go Crazy",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Pull Up on a Kid (feat. Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Up",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Bout (Damn) Time",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Flaws",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Oh Lord",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Beast",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Never Made Love (feat. Rich Homie Quan)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Raw (Might Just)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "No No No (feat. Birdman)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "My Baby",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "Love Me Forever (Chopped n Screwed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -585,55 +591,55 @@
     {
      "num": "#1",
      "name": "F Cancer (Boosie) (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "My Boys (feat. Trouble, Ralo & Lil Durk)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "For My People (feat. Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "King TROUP",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Ridin (feat. Lil Durk)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Hercules",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Special (feat. Offset & Solo Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Bread Winners (feat. Young Butta)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Family (feat. Dora & Dolly)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -651,53 +657,55 @@
     {
      "num": "#1",
      "name": "With Them",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Memo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Drippin’",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Slime Shit (feat. Yak Gotti, Duke & Peewee Roscoe)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Digits",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Worth It",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Tattoos",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Problem",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
    "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-10-0.jpg"
    ]
@@ -714,53 +722,55 @@
     {
      "num": "#1",
      "name": "Floyd Mayweather",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
      "name": "?-???",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
      "name": "Future Swag",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
      "name": "Pop-Man (Kanye West)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Swizz Beatz",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
      "name": "Bird Man",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#7",
      "name": "Elton John",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#8",
      "name": "Young Jeffrey",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#666666",
+     "colorLabel": "Unknown"
     }
    ],
    "availability": "Partial",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-11-0.jpg"
    ]
@@ -774,7 +784,9 @@
    "links": [],
    "description": "• Baby Mama (Future Swag)\n• Back It Up (Harambe)\n• Drip (feat. Gunna & Gucci Mane) (Floyd Mayweather)\n• Feel Like That\n• Nascar (Wyclef Jean)\n• Love (Swizz Beatz)\n• Kerosene\n• Patek Philippe (feat. Duke) (Webbie)\n• Udigg (feat. Quavo & Offset) (Guwop)\n• Work (RiRi)",
    "tracks": [],
-   "availability": "Full"
+   "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available"
   },
   {
    "era": "JEFFERY",
@@ -788,65 +800,67 @@
     {
      "num": "#1",
      "name": "Wyclef Jean",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Floyd Mayweather (feat. Gucci Mane & Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Swizz Beatz",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Future Swag",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "RiRi",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Guwop (feat. Quavo, Offset & Young Scooter)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Harambe",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Webbie (feat. Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Pop Man (feat. Wyclef Jean)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Pick Up The Phone (with Travis Scott) (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
    "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-13-0.jpg"
    ]
@@ -863,65 +877,67 @@
     {
      "num": "#1",
      "name": "Wyclef Jean",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Floyd Mayweather (feat. Travis Scott, Gucci Mane & Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Swizz Beatz",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Future Swag",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "RiRi",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Guwop (feat. Quavo, Offset & Young Scooter)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Harambe",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Webbie (feat. Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Kanye West (feat. Wyclef Jean)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Pick Up The Phone (with Travis Scott) (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
    "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-14-0.jpg"
    ]
@@ -938,85 +954,85 @@
     {
      "num": "#1",
      "name": "Family Don’t Matter (feat. Millie Go Lightly)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Tomorrow Til Infinity (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "She Wanna Party (feat. Millie Go Lightly)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Daddy’s Birthday",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Do U Love Me",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Relationship (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "You Said (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "On Fire",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Get High (feat. Snoop Dogg & Lil Durk)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Feel It",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Me Or Us",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Oh Yeah",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "For Y’all (feat. Jacquees)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Take Care",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1048,79 +1064,79 @@
     {
      "num": "#1",
      "name": "No Cap",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Three",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "All da Smoke",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "200",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Cruise Ship",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Patek Water (feat. Offset)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Feed Me Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Drip on Me",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Real Love",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "4 da Gang",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Killed Before",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Mink Flow",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Group Home",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1141,19 +1157,19 @@
     {
      "num": "#1",
      "name": "Anybody (feat. Nicki Minaj)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Up (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Now (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1174,91 +1190,91 @@
     {
      "num": "#1",
      "name": "Tsunami",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "U Ain't Slime Enough (feat. Karlae & Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Gain Clout",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Oh Yeah (feat. HiDoraah)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Audemar (feat. Tracy T)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Chanel (Go Get It) (feat. Gunna & Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Dirty Shoes (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "It's a Slime (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Scoliosis (feat. Gunna & Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Goin Up (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "January 1st (feat. Jacquees & Trapboy Freddy)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Chains Choking Me (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "STS (feat. Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Expensive (feat. Dolly White & HiDoraah)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Slimed In (feat. Nechie)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1279,37 +1295,37 @@
     {
      "num": "#1",
      "name": "On The Run (feat. Offset)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Icey",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Climax (feat. 6LACK)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Sin (feat. Jaden Smith)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Real In My Veins (feat. T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "High (feat. Elton John)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1366,115 +1382,115 @@
     {
      "num": "#1",
      "name": "Just How It Is",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Sup Mate (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Ecstasy",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Hot (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Light It Up",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Surf (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Bad Bad Bad (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Lil Baby",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "What’s the Move (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "I Bought Her (feat. Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Jumped Out The Window",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "I'm Scared (feat. 21 Savage & Doe Boy)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Big Tipper (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Cartier Gucci Scarf (feat. Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Pussy",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Circle of Bosses (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Mannequin Challenge (feat. Juice WRLD)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Boy Back (feat. NAV)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "The London (feat. J. Cole & Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1495,115 +1511,115 @@
     {
      "num": "#1",
      "name": "Just How It Is",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Sup Mate (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Ecstasy (feat. ​Machine Gun Kelly)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Hot (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Light It Up",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Surf (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Bad Bad Bad (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Lil Baby",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "What’s the Move (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "I Bought Her (feat. Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Jumped Out The Window",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "I'm Scared (feat. 21 Savage & Doe Boy)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Big Tipper (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Cartier Gucci Scarf (feat. Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Pussy",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Circle of Bosses (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Mannequin Challenge (feat. Juice WRLD)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Boy Back (feat. NAV)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "The London (feat. J. Cole & Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1624,145 +1640,145 @@
     {
      "num": "#1",
      "name": "Diamonds (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Hop Off a Jet (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Die Today",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Millions",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Hot (Remix) (feat. Gunna & Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Just How It Is",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Sup Mate (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Ecstasy (feat. ​mgk)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Hot (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Light It Up",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Surf (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Bad Bad Bad (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Lil Baby",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "What’s the Move (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "I Bought Her (feat. Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Jumped Out The Window",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "I'm Scared (feat. 21 Savage & Doe Boy)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Big Tipper (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Cartier Gucci Scarf (feat. Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Pussy",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Circle of Bosses (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "Mannequin Challenge (feat. Juice WRLD)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#23",
      "name": "Boy Back (feat. NAV)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#24",
      "name": "The London (feat. J. Cole & Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -1780,83 +1796,85 @@
     {
      "num": "#1",
      "name": "Say You Love Me",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Go Crazy",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Trap Back (feat. Major Nine)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "I Got Time (feat. Shad da God)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "She Bumped Her Head (feat. Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Big Slimes (feat. Gunna & Lil Duke)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "I Ain’t Tryin'",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Animal",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "City Girls",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Stolen",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Undrunk (feat. E-40 & Too $hort) by Chris Brown",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "No Such Thing (feat. HoodyBaby) by Chris Brown",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Help Me Breathe (feat. Future) by Young Thug",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
    "availability": "Full",
+   "availColor": "#FFFFFF",
+   "availLabel": "Available",
    "images": [
     "/slimegold/art/tl-27-0.jpg"
    ]
@@ -1873,139 +1891,139 @@
     {
      "num": "#1",
      "name": "Slatty (feat. Lil Duke & Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Ski",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Diamonds Dancing (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Solid (feat. Drake)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Came and Saw (feat. Rowdy Rebel)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Paid the Fine (feat. Lil Baby & YTB Trench)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Proud of You (feat. Lil Uzi Vert & Yung Kayo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Real (feat. Unfoonk)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "I Like (feat. Coi Leray & Karlae)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Warrior (feat. Big Sean, Lil Keed & T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Pots N Pans (feat. Lil Duke & NAV)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "WokStar (feat. Skepta & Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Superstar (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Came Out (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Really Be Slime (feat. Bslime, FN DaDealer & YNW Melly)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Take It to Trial (feat. Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Trance (feat. Karlae & Yung Bleu)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "GFU (feat. Yak Gotti, Sheck Wes & Yung Kayo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Moon Man (feat. Kid Cudi & Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Como Te Llama (feat. HiDoraah)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Reckless (feat. Dolly White)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "That Go! (feat. Meek Mill & T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#23",
      "name": "My City (Remix) (feat. YTB Trench)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -2023,187 +2041,187 @@
     {
      "num": "#1",
      "name": "Slam the Door",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Litty (feat. DaBaby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "No Surprise (feat. Bslime & Don Toliver)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Mil in Vegas (feat. NAV)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Explosion (feat. FN DaDealer & Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Yessirskii (feat. MEGO)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Mack Truck (feat. Jim Jones)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Mob Ties (Remix) (feat. 24Heavy, Future, Unfoonk & YTB Trench)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Slatty (feat. Lil Duke & Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Ski",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Diamonds Dancing (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Solid (feat. Drake)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Came and Saw (feat. Rowdy Rebel)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Paid the Fine (feat. Lil Baby & YTB Trench)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Proud of You (feat. Lil Uzi Vert & Yung Kayo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Real (feat. Unfoonk)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "I Like (feat. Coi Leray & Karlae)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Warrior (feat. Big Sean, Lil Keed & T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Pots N Pans (feat. Lil Duke & NAV)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "WokStar (feat. Skepta & Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Superstar (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "Came Out (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#23",
      "name": "Really Be Slime (feat. Bslime, FN DaDealer & YNW Melly)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#24",
      "name": "Take It to Trial (feat. Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#25",
      "name": "Trance (feat. Karlae & Yung Bleu)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#26",
      "name": "GFU (feat. Yak Gotti, Sheck Wes & Yung Kayo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#27",
      "name": "Moon Man (feat. Kid Cudi & Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#28",
      "name": "Como Te Llama (feat. HiDoraah)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#29",
      "name": "Reckless (feat. Dolly White)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#30",
      "name": "That Go! (feat. Meek Mill & T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#31",
      "name": "My City (Remix) (feat. YTB Trench)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -2403,7 +2421,9 @@
    "date": "",
    "quality": "Young Thug",
    "source": "Young Thug",
-   "links": [],
+   "links": [
+    "https://www.reddit.com/r/YoungThug/comments/q750nl/love_you_more_on_punk/"
+   ],
    "description": "• Fighting Depression\n• Love You More\n• Droppin' Jewels\n• Stressed\n• Sex\n• Die Slow",
    "tracks": [],
    "availability": "Full",
@@ -2417,127 +2437,129 @@
    "date": "",
    "quality": "Young Thug",
    "source": "Young Thug",
-   "links": [],
+   "links": [
+    "https://pbs.twimg.com/media/FBynbt7XoAE23dL?format=jpg&name=large"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
      "name": "Die Slow (with Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Stressed (with J. Cole & T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Stupid/Asking",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Recognize Real (with Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Contagious",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Peepin Out The Window (with Future & Bslime)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Rockstar (with YoungBoy Never Broke Again)",
-     "color": "#FFFFFF",
-     "colorLabel": "Available"
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
      "name": "Livin It Up (with A$AP Rocky & Post Malone)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Yea Yea Yea",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Insure My Wrist (with Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Scoliosis (with Lil Double 0)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Bubbly (with Drake & Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Road Rage",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Faces",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Droppin Jewels",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Fifth Day Dead",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Icy Hot (with Doja Cat)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Love You More (with Gunna, Jeff Bhasker & Nate Ruess)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Hate The Game",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Day Before (with Mac Miller)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -2558,121 +2580,121 @@
     {
      "num": "#1",
      "name": "Die Slow (with Strick)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Stressed (with J. Cole & T-Shyne)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Stupid/Asking",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Recognize Real (with Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Contagious",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Peepin Out The Window (with Future & Bslime)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Rich Nigga Shit (with Juice WRLD)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Livin It Up (with A$AP Rocky & Post Malone)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Yea Yea Yea",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Insure My Wrist (with Gunna)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Scoliosis (with Lil Double 0)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Bubbly (with Drake & Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Road Rage",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Faces",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Droppin Jewels",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Fifth Day Dead",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Icy Hot (with Doja Cat)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Love You More (with Gunna, Jeff Bhasker & Nate Ruess)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Hate The Game",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Day Before (with Mac Miller)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -2703,91 +2725,91 @@
     {
      "num": "#1",
      "name": "Parade on Cleveland (feat. Drake)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Money On The Dresser",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Gucci Grocery Bag",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Cars Bring Me Out (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Wit Da Racks (feat. 21 Savage, Travis Scott & Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Uncle M",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Abracadabra (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Went Thru It",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Oh U Went (feat. Drake)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Want Me Dead (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Hellcat Kenny (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Mad Dog",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Jonesboro",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Hoodie (feat. Bslime & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Global Access (feat. Nate Ruess)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -2808,103 +2830,103 @@
     {
      "num": "#1",
      "name": "Jonesboro",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Mad Dog",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Uncle M",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Want Me Dead (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Cars Bring Me Out (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Oh U Went (feat. Drake)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Money (feat. Juice WRLD & Nicki Minaj)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Hoodie (feat. Bslime & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Wit Da Racks (feat. 21 Savage, Travis Scott & Yak Gotti)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Parade on Cleveland (feat. Drake)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Abracadabra (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Went Thru It",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Money On The Dresser",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Hellcat Kenny (feat. Lil Uzi Vert)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Gucci Grocery Bag",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Global Access (feat. Nate Ruess)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Sake Of My Kids",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -2947,109 +2969,109 @@
     {
      "num": "#1",
      "name": "Ninja",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "On The News (feat. Cardi B)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Catch Me I’m Falling",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Whoopty Doo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Blaming Jesus",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Sad Slime",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "RIP Big & Mac (feat. T.I.)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "I’m So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Whaddup Jesus (feat. YFN Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Revenge (feat. 1300SAINT & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Dreams Rarely Do Come True (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Miss My Dogs",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3070,121 +3092,121 @@
     {
      "num": "#1",
      "name": "Ninja",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "On The News (feat. Cardi B)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Catch Me I’m Falling",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Whoopty Doo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Blaming Jesus",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Sad Spider",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "RIP Big & Mac (feat. T.I.)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Invest Into You (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "I’m So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Pardon My Back (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Whaddup Jesus (feat. YFN Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Revenge (feat. 1300SAINT & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Dreams Rarely Do Come True (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Miss My Dogs",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3205,127 +3227,127 @@
     {
      "num": "#1",
      "name": "Ninja",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "On The News (feat. Cardi B)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Catch Me I’m Falling",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Whoopty Doo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Blaming Jesus",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Sad Spider",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "RIP Big & Mac (feat. T.I.)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Invest Into You (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "I’m So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Pardon My Back (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Whaddup Jesus (feat. YFN Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Spider or Jeffrey (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Revenge (feat. 1300SAINT & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Dreams Rarely Do Come True (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Miss My Dogs",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3346,73 +3368,73 @@
     {
      "num": "#1",
      "name": "Sad Slime",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Fucking Told U",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Spit In My Mouth",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Birthday Boy (feat. Mariah the Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Pussy Smell Like This",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "I'm So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "On The News",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3433,49 +3455,49 @@
     {
      "num": "#1",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "Sad Slime",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "I'm So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3496,133 +3518,133 @@
     {
      "num": "#1",
      "name": "Ninja",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "On The News (feat. Cardi B)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Catch Me I’m Falling",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Whoopty Doo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Blaming Jesus",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Sad Spider",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "RIP Big & Mac (feat. T.I.)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Invest Into You (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "I’m So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Pardon My Back (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Whaddup Jesus (feat. YFN Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Spider or Jeffrey (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Revenge (feat. 1300SAINT & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Dreams Rarely Do Come True (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Miss My Dogs",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "Fighting Depression",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3643,133 +3665,133 @@
     {
      "num": "#1",
      "name": "Ninja",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "On The News (feat. Cardi B)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Catch Me I’m Falling",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Whoopty Doo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Blaming Jesus",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Sad Spider",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "RIP Big & Mac (feat. T.I.)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "Invest Into You (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "I’m So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Pardon My Back (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Whaddup Jesus (feat. YFN Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Spider or Jeffrey (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "Revenge (feat. 1300SAINT & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Dreams Rarely Do Come True (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Miss My Dogs",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "It's Ok To Cry",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3790,169 +3812,169 @@
     {
      "num": "#1",
      "name": "By The Police",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#2",
      "name": "Pussy Smell Like This",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#3",
      "name": "All Your Time",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#4",
      "name": "Safe",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#5",
      "name": "I Put A (feat. Lil Keed)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#6",
      "name": "Rosetta Stone",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#7",
      "name": "Yes You Can",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#8",
      "name": "Ninja",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#9",
      "name": "Yuck (feat. Ken Carson)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#10",
      "name": "On The News (feat. Cardi B)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#11",
      "name": "Catch Me I’m Falling",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#12",
      "name": "Fucking Told You",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#13",
      "name": "Whoopty Doo",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#14",
      "name": "Blaming Jesus",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#15",
      "name": "Sad Spider",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#16",
      "name": "RIP Big & Mac (feat. T.I.)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#17",
      "name": "Invest Into You (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#18",
      "name": "I’m So Dope",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#19",
      "name": "Pardon My Back (feat. Lil Baby)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#20",
      "name": "Mami (feat. Sexyy Red)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#21",
      "name": "Whaddup Jesus (feat. YFN Lucci)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#22",
      "name": "Walk Down (feat. 21 Savage)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#23",
      "name": "Pipe Down (feat. Travis Scott)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#24",
      "name": "Spider or Jeffrey (feat. Quavo)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#25",
      "name": "Revenge (feat. 1300SAINT & Lil Gotit)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#26",
      "name": "Money On Money (feat. Future)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#27",
      "name": "Dreams Rarely Do Come True (feat. Mariah The Scientist)",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     },
     {
      "num": "#28",
      "name": "Miss My Dogs",
-     "color": "#FFFFFF",
+     "color": "#ffffff",
      "colorLabel": "Available"
     }
    ],
@@ -3960,6 +3982,16 @@
    "images": [
     "/slimegold/art/tl-47-0.jpg"
    ]
+  },
+  {
+   "era": "Slime Season 3",
+   "name": "Slime Season 3",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Section 1\n• Unknown (with Tezzus, diamond, iyrus & 1300SAINT)\n• High as C (with 1300SAINT & Tezzus)\n• Let's F (with 1300SAINT, Tezzus & Yung Kayo)\n• \n• \n• Hotel (with 1300SAINT & Yung Kayo)\n• Freaky Girl (with iyrus & diamond*)\n• Unknown (with YSL)\n• Rich Nigga Shit (with Bslime & Biggs money)\n• Kount Up (with diamond* & iyrus)\n• \n• Mob Guys (with Lil Unky & Biggs money) (feat. Quavo)\n• Bottle Out (with Lil Unky & Biggs money)\n• \n• Silver Surfer (with diamond* & Tezzus)\n• \n\nSection 2\n• \n• When U Fly (with Young Thug & iyrus)\n• \n• Cold Shoulders (with Lito The Plug & PJ)\n• Check (with Lito The Plug & Bslime)",
+   "tracks": []
   }
  ]
 }

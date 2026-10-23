@@ -21,166 +21,238 @@
   {
    "era": "Dreams In 3-D",
    "name": "Dreams In 3-D",
-   "date": "2006-03-21",
-   "quality": "Full",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Dreams In 3-D, dated March 21st, 2006.",
    "tracks": [
     {
      "num": "#1",
-     "name": "We Dream In 3-D"
+     "name": "We Dream In 3-D",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Slurpee"
+     "name": "Slurpee",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Puppy Love"
+     "name": "Puppy Love",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Air Balloon"
+     "name": "Air Balloon",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pink + Blue (Purple X Toys)"
+     "name": "Pink + Blue (Purple X Toys)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Toys & Blox!"
+     "name": "Toys & Blox!",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "La La Land..."
+     "name": "La La Land...",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "I Dream"
+     "name": "I Dream",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Lounges And Blox (Lounges X Blox)"
+     "name": "Lounges And Blox (Lounges X Blox)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "XoXo"
+     "name": "XoXo",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Music X Shows"
+     "name": "Music X Shows",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Retail Price"
+     "name": "Retail Price",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Happy Holidays"
+     "name": "Happy Holidays",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "MusiC LoVe"
+     "name": "MusiC LoVe",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Wind It Up"
+     "name": "Wind It Up",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "I Keep Toys"
+     "name": "I Keep Toys",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Imagination"
+     "name": "Imagination",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "3-D"
+     "name": "3-D",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "At Your Own Risk",
    "name": "At Your Own Risk [V1]",
-   "date": "2007-03-07",
-   "quality": "Full",
-   "source": "Secondary",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "First tracklist for At Your Own Risk, dated March 7th, 2007. This tracklist comes from Tyler's Photobucket. The ones crossed out indicate that they're only considered for the project.",
    "tracks": [
     {
      "num": "#1",
-     "name": "At Your Own Risk (Intro)"
+     "name": "At Your Own Risk (Intro)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Air Balloon (feat. Pharrell)"
+     "name": "Air Balloon (feat. Pharrell)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "L.O.L."
+     "name": "L.O.L.",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Dream (Chad Hugo Version)"
+     "name": "I Dream (Chad Hugo Version)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lounges X Blox (Lounges And Blox)"
+     "name": "Lounges X Blox (Lounges And Blox)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Get Fresh (feat. Mr. Burtono)"
+     "name": "Get Fresh (feat. Mr. Burtono)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Soon (feat. MF DOOM)"
+     "name": "Soon (feat. MF DOOM)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Hello (feat. Prince)"
+     "name": "Hello (feat. Prince)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Waffles (feat. Kelis)"
+     "name": "Waffles (feat. Kelis)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Return of Saturn (feat. Nasir Jones)"
+     "name": "Return of Saturn (feat. Nasir Jones)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Retail Price"
+     "name": "Retail Price",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Run Away"
+     "name": "Run Away",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Sorry (feat. Andre 3000) (Sorry....)"
+     "name": "Sorry (feat. Andre 3000) (Sorry....)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "Purple X Toys"
+     "name": "Purple X Toys",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "7-Up Girl (feat. John Legend)"
+     "name": "7-Up Girl (feat. John Legend)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Speakerboxx (feat. Wale)"
+     "name": "Speakerboxx (feat. Wale)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Extacy"
+     "name": "Extacy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Imagination (Outro) (Live Version with Jamiroquai)"
+     "name": "Imagination (Outro) (Live Version with Jamiroquai)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -190,87 +262,125 @@
   {
    "era": "At Your Own Risk",
    "name": "At Your Own Risk [V1]",
-   "date": "2007-03-18",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Second tracklist for At Your Own Risk, dated March 18th, 2007.",
    "tracks": [
     {
      "num": "#1",
-     "name": "At Your Own Risk"
+     "name": "At Your Own Risk",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Air Balloon (feat. Pharrell)"
+     "name": "Air Balloon (feat. Pharrell)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "L.O.L."
+     "name": "L.O.L.",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Dream"
+     "name": "I Dream",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lounges And Blox (Lounges X Blox)"
+     "name": "Lounges And Blox (Lounges X Blox)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Get Fresh (feat. Burtono)"
+     "name": "Get Fresh (feat. Burtono)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "12:01 (feat. MP)"
+     "name": "12:01 (feat. MP)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Soon (feat. MF DOOM)"
+     "name": "Soon (feat. MF DOOM)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Waffles (feat. Prince)"
+     "name": "Waffles (feat. Prince)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Return of Saturn (feat. Nas)"
+     "name": "Return of Saturn (feat. Nas)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Retail Price"
+     "name": "Retail Price",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Run Away"
+     "name": "Run Away",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Sorry.... (Sorry)"
+     "name": "Sorry.... (Sorry)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Purple X Toys (feat. Andre 3000)"
+     "name": "Purple X Toys (feat. Andre 3000)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "7-Up Girl (feat. John Legend)"
+     "name": "7-Up Girl (feat. John Legend)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Speakerboxx (feat. Wale & JAY-Z)"
+     "name": "Speakerboxx (feat. Wale & JAY-Z)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
-     "name": "Extacy"
+     "name": "Extacy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Imagination (Outro)"
+     "name": "Imagination (Outro)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "*3-D (feat. Chad Hugo & Jamiroquai)"
+     "name": "*3-D (feat. Chad Hugo & Jamiroquai)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -281,14 +391,16 @@
    "era": "At Your Own Risk",
    "name": "At Your Own Risk [V2]",
    "date": "",
-   "quality": "Full",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Third tracklist for At Your Own Risk, looks to be the same as the one above.\n\n1-9. ???",
    "tracks": [
     {
      "num": "#10",
-     "name": "Return of Saturn"
+     "name": "Return of Saturn",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
@@ -296,82 +408,116 @@
     },
     {
      "num": "#12",
-     "name": "Run Away"
+     "name": "Run Away",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "3-D"
+     "name": "3-D",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Stereo-Type",
    "name": "Stereo-Type (Tracklist 1)",
-   "date": "2007-10-12",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Technically not a Stereo-Type tracklist, and only a list of songs that were planned to be on the project. The way Tyler words the next sentence, however, would make you believe it's a tracklist. Dated October 12th, 2007.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Gloomy Radio"
+     "name": "Gloomy Radio",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Supreme"
+     "name": "Supreme",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "I Dream"
+     "name": "I Dream",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Lounges X Blox (Lounges And Blox)"
+     "name": "Lounges X Blox (Lounges And Blox)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Odd Toddlers"
+     "name": "Odd Toddlers",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Handsome Sounds"
+     "name": "Handsome Sounds",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Secret Garden"
+     "name": "Secret Garden",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Fat Girls X Robots"
+     "name": "Fat Girls X Robots",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Odd Future Pt. 2"
+     "name": "Odd Future Pt. 2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Retail Price"
+     "name": "Retail Price",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Speakerboxx"
+     "name": "Speakerboxx",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Promo (Pancakes)"
+     "name": "Promo (Pancakes)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "7-Up"
+     "name": "7-Up",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "12:01"
+     "name": "12:01",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Rockys Revenge"
+     "name": "Rockys Revenge",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -382,18 +528,22 @@
    "era": "Stereo-Type",
    "name": "Stereo-Type (Tracklist 2)",
    "date": "",
-   "quality": "Partial",
-   "source": "Tyler + Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Stero-Type.\n\n1-8. ???",
    "tracks": [
     {
      "num": "#9",
-     "name": "Waffles"
+     "name": "Waffles",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Rockys Revenge"
+     "name": "Rockys Revenge",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -401,14 +551,16 @@
    "era": "Eargasm",
    "name": "Eargasm (Tracklist 1)",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "First tracklist for Eargasm, it's likely that Team Blox is on this.\n\n1-7. ???",
    "tracks": [
     {
      "num": "#8",
-     "name": "Cloud High"
+     "name": "Cloud High",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
@@ -416,7 +568,9 @@
     },
     {
      "num": "#10",
-     "name": "Late... Again"
+     "name": "Late... Again",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -424,106 +578,154 @@
    "era": "Eargasm",
    "name": "Eargasm (Tracklist 2)",
    "date": "",
-   "quality": "Full",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Second tracklist for Eargasm.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Eargasm"
+     "name": "Eargasm",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Nosecandy"
+     "name": "Nosecandy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Slurpee"
+     "name": "Slurpee",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Deam"
+     "name": "Deam",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Annie"
+     "name": "Annie",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Non"
+     "name": "Non",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Sound On Acid"
+     "name": "Sound On Acid",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Beauty"
+     "name": "Beauty",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Eureka"
+     "name": "Eureka",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "April Fools"
+     "name": "April Fools",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Bounce"
+     "name": "Bounce",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Herpes and Cupcakes"
+     "name": "Herpes and Cupcakes",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Crikle"
+     "name": "Crikle",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Sea"
+     "name": "Sea",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "June"
+     "name": "June",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Clouds"
+     "name": "Clouds",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Kiss"
+     "name": "Kiss",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Hang Up"
+     "name": "Hang Up",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "808s & Cupcakes"
+     "name": "808s & Cupcakes",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "7-Up"
+     "name": "7-Up",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Rocky Revenge"
+     "name": "Rocky Revenge",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Prototype"
+     "name": "Prototype",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Herpes On My Lip"
+     "name": "Herpes On My Lip",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#24",
-     "name": "Sorry.... (Sorry)"
+     "name": "Sorry.... (Sorry)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -531,14 +733,16 @@
    "era": "Radio Arcade",
    "name": "Radio Arcade",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Radio Arcade.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -546,89 +750,123 @@
    "era": "Soundz On Acid",
    "name": "Soundz On Acid",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Soundz On Acid.",
    "tracks": [
     {
      "num": "#1",
-     "name": "For The Club"
+     "name": "For The Club",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Bodega",
    "name": "Bodega",
-   "date": "2008-05-13",
-   "quality": "Full",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Bodega, dated May 13th, 2008.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bodega"
+     "name": "Bodega",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "CV"
+     "name": "CV",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Taffy"
+     "name": "Taffy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Spring"
+     "name": "Spring",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Blow"
+     "name": "Blow",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Stars"
+     "name": "Stars",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Yum!"
+     "name": "Yum!",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tulips"
+     "name": "Tulips",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Hearts"
+     "name": "Hearts",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Confetti"
+     "name": "Confetti",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "DNC"
+     "name": "DNC",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sci-Fi"
+     "name": "Sci-Fi",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "1234"
+     "name": "1234",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Crab"
+     "name": "Crab",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Coral"
+     "name": "Coral",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Outro"
+     "name": "Outro",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -636,8 +874,8 @@
    "era": "The Blair Bitch Project",
    "name": "The Blair Bitch Project",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "This tracklist does not contain \"Tyler Is Black\"\n1 - 3. ???",
    "tracks": [
@@ -651,14 +889,16 @@
    "era": "PinkGold SquarePixals",
    "name": "PinkGoldSquarePixals",
    "date": "",
-   "quality": "Partial",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for PinkGoldSquarePixals, only one track is confirmed at this point.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Pink Gold"
+     "name": "Pink Gold",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -666,56 +906,76 @@
    "era": "SuperDuper SteezMonster",
    "name": "SuperDuperSteezMonster",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for SuperDuperSteezMonster.",
    "tracks": [
     {
      "num": "#1",
-     "name": "SuperDuperSteezMonster"
+     "name": "SuperDuperSteezMonster",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Gabba"
+     "name": "Gabba",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Fast and Furious"
+     "name": "Fast and Furious",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hero vs. Villians"
+     "name": "Hero vs. Villians",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Caprisun"
+     "name": "Caprisun",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Trimm"
+     "name": "Trimm",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "LGK"
+     "name": "LGK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The OF Tape Vol. 1",
    "name": "The FUCKING Tape",
-   "date": "2008-09-17",
-   "quality": "Full",
-   "source": "Secondary",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://100sounds.blogspot.com/2008/09/say-ur-present-will-be-pleasant-if.html"
+   ],
    "description": "Supposed tracklist for The Odd Future Tape, dated September 17th, 2008.",
    "tracks": [
     {
@@ -795,87 +1055,125 @@
   {
    "era": "The OF Tape Vol. 1",
    "name": "The Odd Future Tape",
-   "date": "2008-11-19",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for The Odd Future Tape.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Ace - The Tape Intro"
+     "name": "Ace - The Tape Intro",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ace Creator - Odd Toddlers (feat. Casey Veggies)"
+     "name": "Ace Creator - Odd Toddlers (feat. Casey Veggies)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Super 3 - Laxin (feat. Hodgy Beats)"
+     "name": "Super 3 - Laxin (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Casey Veggies - Back For Another One (feat. Tyler, The Creator)"
+     "name": "Casey Veggies - Back For Another One (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hodgy Beats - Bubble Gum (feat. Casey Veggies & Tyler, The Creator)"
+     "name": "Hodgy Beats - Bubble Gum (feat. Casey Veggies & Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Ace - Fucking Lame"
+     "name": "Ace - Fucking Lame",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Left Brain - Pimp Slap (feat. Ace & Hodgy Beats)"
+     "name": "Left Brain - Pimp Slap (feat. Ace & Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Ace Creator - Bitches Brewin'"
+     "name": "Ace Creator - Bitches Brewin'",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Super 3 - Money Talk (feat. Casey Veggies & Hodgy Beats)"
+     "name": "Super 3 - Money Talk (feat. Casey Veggies & Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Hodgy Beats - Our Story"
+     "name": "Hodgy Beats - Our Story",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Casey Veggies - The Life Like"
+     "name": "Casey Veggies - The Life Like",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Left Brain - Mc.Donalds (feat. Hodgy Beats)"
+     "name": "Left Brain - Mc.Donalds (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Tyler, The Creator - Slow It Down (feat. Hodgy Beats)"
+     "name": "Tyler, The Creator - Slow It Down (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Casey Veggies - Remember Me (feat. Ace Creator)"
+     "name": "Casey Veggies - Remember Me (feat. Ace Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Hodgy Beats - Malaya"
+     "name": "Hodgy Beats - Malaya",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "I Smell Panties - Lisa"
+     "name": "I Smell Panties - Lisa",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Ace - Fin"
+     "name": "Ace - Fin",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Ace Creator - Commercial (feat. Casey Veggies)"
+     "name": "Ace Creator - Commercial (feat. Casey Veggies)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Ace - Dracula."
+     "name": "Ace - Dracula.",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -883,14 +1181,16 @@
    "era": "Dinosaur",
    "name": "Dinosaur",
    "date": "",
-   "quality": "Partial",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Dinosaur, only one track is confirmed at this point.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Midnight Funkathon"
+     "name": "Midnight Funkathon",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -898,74 +1198,106 @@
    "era": "Bastard",
    "name": "Bastard",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early tracklist for Bastard, posted onto Instagram on December 25th, 2019 for the project's 10 year anniversary. Track 9 is unreadable, it's likely to just be AssMilk but it has been speculated to be Nightmare or another unheard song. Everything is listed with their comments.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (\"What would you tell him?\") (Bastard)"
+     "name": "Intro (\"What would you tell him?\") (Bastard)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Seven (Cut the 4-Bar loop) Turn treble down"
+     "name": "Seven (Cut the 4-Bar loop) Turn treble down",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Odd Toddlers"
+     "name": "Odd Toddlers",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "French (\"So Are You Dating?\", Add the other 8 Bar)"
+     "name": "French (\"So Are You Dating?\", Add the other 8 Bar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Blow (Hook)"
+     "name": "Blow (Hook)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pigs Fly (Begin with \"You talk about your motor alot\")"
+     "name": "Pigs Fly (Begin with \"You talk about your motor alot\")",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Parade (End with \"I'm hyper, but I can slow it down\")"
+     "name": "Parade (End with \"I'm hyper, but I can slow it down\")",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "S.I.D Turn It Up (Slow It Down)"
+     "name": "S.I.D Turn It Up (Slow It Down)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "VCR / Wheels (End with \"So you do drugs\")"
+     "name": "VCR / Wheels (End with \"So you do drugs\")",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Session (Get Brandon on it)"
+     "name": "Session (Get Brandon on it)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Sarah (Begin with Prom? \"You love her\")"
+     "name": "Sarah (Begin with Prom? \"You love her\")",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Jack N The Beanstalk / Hunter"
+     "name": "Jack N The Beanstalk / Hunter",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Tina (Begin with \"Me & my niggas do ignorant shit, diva\")"
+     "name": "Tina (Begin with \"Me & my niggas do ignorant shit, diva\")",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Inglorious (Begin with \"Is there anything u want to tell-\")"
+     "name": "Inglorious (Begin with \"Is there anything u want to tell-\")",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Llama (Flowers)"
+     "name": "Llama (Flowers)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -975,142 +1307,202 @@
   {
    "era": "Bastard",
    "name": "Bastard",
-   "date": "2009-12-25",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Bastard.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bastard"
+     "name": "Bastard",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Seven"
+     "name": "Seven",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Odd Toddlers"
+     "name": "Odd Toddlers",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "French! (feat. Hodgy Beats)"
+     "name": "French! (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Blow"
+     "name": "Blow",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pigs Fly (feat. Domo Genesis)"
+     "name": "Pigs Fly (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Parade"
+     "name": "Parade",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Slow It Down (feat. Hodgy Beats)"
+     "name": "Slow It Down (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "AssMilk (feat. Earl Sweatshirt)"
+     "name": "AssMilk (feat. Earl Sweatshirt)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "VCR/Wheels"
+     "name": "VCR/Wheels",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Session (feat. Hodgy Beats & brandUn DeShay)"
+     "name": "Session (feat. Hodgy Beats & brandUn DeShay)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sarah"
+     "name": "Sarah",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Jack & The Beanstalk"
+     "name": "Jack & The Beanstalk",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Tina (feat. Jasper Dolphin & Taco)"
+     "name": "Tina (feat. Jasper Dolphin & Taco)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Inglorious"
+     "name": "Inglorious",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Bastard",
    "name": "Bastard",
-   "date": "2010-12-25",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the 2010 reissue of Bastard, VCR / Wheels no longer has a slash between the two tracks & Mike G replaces brandUn DeShay on this version.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bastard"
+     "name": "Bastard",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Seven"
+     "name": "Seven",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Odd Toddlers"
+     "name": "Odd Toddlers",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "French! (feat. Hodgy Beats)"
+     "name": "French! (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Blow"
+     "name": "Blow",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pigs Fly (feat. Domo Genesis)"
+     "name": "Pigs Fly (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Parade"
+     "name": "Parade",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Slow It Down (feat. Hodgy Beats)"
+     "name": "Slow It Down (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "AssMilk (feat. Earl Sweatshirt)"
+     "name": "AssMilk (feat. Earl Sweatshirt)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "VCR Wheels"
+     "name": "VCR Wheels",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Session (feat. Hodgy Beats & Mike G)"
+     "name": "Session (feat. Hodgy Beats & Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sarah"
+     "name": "Sarah",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Jack & The Beanstalk"
+     "name": "Jack & The Beanstalk",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Tina (feat. Jasper Dolphin & Taco)"
+     "name": "Tina (feat. Jasper Dolphin & Taco)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Inglorious"
+     "name": "Inglorious",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1118,78 +1510,112 @@
    "era": "Radical",
    "name": "Radical",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Radical.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (feat. Tyler, The Creator)"
+     "name": "Intro (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Splatter (feat. Tyler, The Creator)"
+     "name": "Splatter (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Turnt Down (feat. Hodgy Beats)"
+     "name": "Turnt Down (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Drop (feat. Earl Sweatshirt)"
+     "name": "Drop (feat. Earl Sweatshirt)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Salute (feat. Domo Genesis)"
+     "name": "Salute (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Everything That's Yours (feat. Mike G)"
+     "name": "Everything That's Yours (feat. Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Blade (feat. Earl Sweatshirt)"
+     "name": "Blade (feat. Earl Sweatshirt)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Double Cheeseburger (feat. Domo Genesis, Jasper Dolphin & Tyler, The Creator)"
+     "name": "Double Cheeseburger (feat. Domo Genesis, Jasper Dolphin & Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Round and Round (feat. Hodgy Beats, Jasper Dolphin & Mike G)"
+     "name": "Round and Round (feat. Hodgy Beats, Jasper Dolphin & Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Ugly Girls (feat. Tyler, The Creator)"
+     "name": "Ugly Girls (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Orange Juice (feat. EarlWolf)"
+     "name": "Orange Juice (feat. EarlWolf)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Cool (feat. Earl Sweatshirt & Mike G)"
+     "name": "Cool (feat. Earl Sweatshirt & Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Oblivion (feat. Tyler, The Creator)"
+     "name": "Oblivion (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Alright (feat. Hodgy Beats)"
+     "name": "Alright (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Leather Head (feat. Tyler, The Creator)"
+     "name": "Leather Head (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Up (feat. Domo Genesis, Hodgy Beats & Tyler, The Creator)"
+     "name": "Up (feat. Domo Genesis, Hodgy Beats & Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Swag Me Out (feat. Earl Sweatshirt, Hodgy, Jasper Dolphin, Left Brain, Mike G, Syd, Travis Bennett & Tyler, The Creator)"
+     "name": "Swag Me Out (feat. Earl Sweatshirt, Hodgy, Jasper Dolphin, Left Brain, Mike G, Syd, Travis Bennett & Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1197,30 +1623,40 @@
    "era": "WOLF [V1]",
    "name": "WOLF",
    "date": "",
-   "quality": "Partial",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for WOLF, taken from info on the Formspring archive. Supposedly Adams Family was to be used as an intro, but this idea was scrapped. Tron Cat is a confirmed WOLF song. This album was said to have roughly 20-23 tracks.\n\n1-5. ???",
    "tracks": [
     {
      "num": "#6",
-     "name": "Half/Half (Half N Half)"
+     "name": "Half/Half (Half N Half)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Berlin"
+     "name": "Berlin",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Secret Garden [V2]"
+     "name": "Secret Garden [V2]",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Tron Cat"
+     "name": "Tron Cat",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Supersonic"
+     "name": "Supersonic",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1228,8 +1664,8 @@
    "era": "WOLF [V1]",
    "name": "WOLF",
    "date": "",
-   "quality": "Lost",
-   "source": "N/A",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Supposedly, multiple tracklists exist for this project. This is only here as a filler.",
    "tracks": []
@@ -1237,272 +1673,338 @@
   {
    "era": "Goblin",
    "name": "Goblin",
-   "date": "2011-05-10",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Goblin.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Goblin"
+     "name": "Goblin",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yonkers"
+     "name": "Yonkers",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Radicals"
+     "name": "Radicals",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "She (feat. Frank Ocean)"
+     "name": "She (feat. Frank Ocean)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Transylvania"
+     "name": "Transylvania",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Nightmare"
+     "name": "Nightmare",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tron Cat"
+     "name": "Tron Cat",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Her"
+     "name": "Her",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sandwitches (feat. Hodgy Beats)"
+     "name": "Sandwitches (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fish (Boppin' Bitch)"
+     "name": "Fish (Boppin' Bitch)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Analog (feat. Hodgy Beats)"
+     "name": "Analog (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "B.S.D. (feat. Jasper Dolphin & Taco) (Bitch Suck Dick)"
+     "name": "B.S.D. (feat. Jasper Dolphin & Taco) (Bitch Suck Dick)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Window (feat. Domo Genesis, Frank Ocean, Hodgy Beats & Mike G)"
+     "name": "Window (feat. Domo Genesis, Frank Ocean, Hodgy Beats & Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "AU79"
+     "name": "AU79",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Golden"
+     "name": "Golden",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Goblin",
    "name": "Goblin (Deluxe Edition)",
-   "date": "2011-05-10",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the deluxe edition of Goblin.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Goblin"
+     "name": "Goblin",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yonkers"
+     "name": "Yonkers",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Radicals"
+     "name": "Radicals",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "She (feat. Frank Ocean)"
+     "name": "She (feat. Frank Ocean)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Transylvania"
+     "name": "Transylvania",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Nightmare"
+     "name": "Nightmare",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Tron Cat"
+     "name": "Tron Cat",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Her"
+     "name": "Her",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sandwitches (feat. Hodgy Beats)"
+     "name": "Sandwitches (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fish (Boppin' Bitch)"
+     "name": "Fish (Boppin' Bitch)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Analog (feat. Hodgy Beats)"
+     "name": "Analog (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "B.S.D. (feat. Jasper Dolphin & Taco) (Bitch Suck Dick)"
+     "name": "B.S.D. (feat. Jasper Dolphin & Taco) (Bitch Suck Dick)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Window (feat. Domo Genesis, Frank Ocean, Hodgy Beats & Mike G)"
+     "name": "Window (feat. Domo Genesis, Frank Ocean, Hodgy Beats & Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "AU79"
+     "name": "AU79",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Golden"
+     "name": "Golden",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Burger (feat. Hodgy Beats)"
+     "name": "Burger (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Untitled 63 (Jazz 63)"
+     "name": "Untitled 63 (Jazz 63)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Steak Sauce"
+     "name": "Steak Sauce",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The OF Tape Vol. 2",
    "name": "The OF Tape Vol. 2",
-   "date": "2012-03-20",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
      "name": "L-Boy - Hi.",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Domo Genesis & Hodgy Beats - Bitches",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Hodgy Beats & Tyler, The Creator - NY (Ned Flander)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "The Internet - Ya Know",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Mike G - Forest Green",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Hodgy Beats & Domo Genesis - Lean",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Tyler, The Creator, Frank Ocean & Syd - Analog 2 (Wheels 2)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "MellowHype - 50",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Hodgy Beats & Frank Ocean - Snow White",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Hodgy Beats, Domo Genesis & Tyler, The Creator - Rella",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "MellowHype & Taco - Real Bitch",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Hodgy Beats & Tyler, The Creator - P",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Frank Ocean - White",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Domo Genesis, Hodgy Beats & Tyler, The Creator - Hcapd",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Domo Genesis & Tyler, The Creator - Sam (Is Dead)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Domo Genesis - Doms",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Tyler, The Creator, Taco & Jasper Dolphin - We Got Bitches",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Odd Future - Oldie",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1511,8 +2013,8 @@
    "era": "Nilbog",
    "name": "Nilbog",
    "date": "",
-   "quality": "Partial",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "First tracklist for Nilbog, shown to have 37 tracks but only the timestamps are visible. If we do go by timestamps, only a few tracks that have leaked from Nilbog are actually on the project.",
    "tracks": [],
@@ -1524,8 +2026,8 @@
    "era": "Nilbog",
    "name": "Nilbog",
    "date": "",
-   "quality": "Lost",
-   "source": "N/A",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Second tracklist for Nilbog, has yet to be found & leaked.",
    "tracks": []
@@ -1534,73 +2036,99 @@
    "era": "The Dead Sams",
    "name": "The Dead Sams",
    "date": "",
-   "quality": "Partial",
-   "source": "Tyler + Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for The Dead Sams, only three songs are known at this point.\n\n1-3. ???",
    "tracks": [
     {
      "num": "#4",
-     "name": "Ferris Wheel"
+     "name": "Ferris Wheel",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Salem"
+     "name": "Salem",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Head On My Arm"
+     "name": "Head On My Arm",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "WOLF [V2]",
    "name": "WOLF",
-   "date": "2012-08-14",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the WOLF tracklists that were posted to the freeperm account, dated August 14th, 2012.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Shitface"
+     "name": "Shitface",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Bedfur"
+     "name": "Bedfur",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PartyIsntOver"
+     "name": "PartyIsntOver",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "48"
+     "name": "48",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Awkward"
+     "name": "Awkward",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Slater"
+     "name": "Slater",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Good Morning"
+     "name": "Good Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Cowboy"
+     "name": "Cowboy",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Jamba"
+     "name": "Jamba",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Half N Half (Half/Half)"
+     "name": "Half N Half (Half/Half)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
@@ -1608,8 +2136,8 @@
    "era": "WOLF [V3]",
    "name": "WOLF",
    "date": "",
-   "quality": "Lost",
-   "source": "N/A",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tyler stated on the freeperm archive that atleast 40 tracklists were made for WOLF.",
    "tracks": []
@@ -1617,225 +2145,321 @@
   {
    "era": "WOLF [V3]",
    "name": "WOLF",
-   "date": "2012-09-11",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the WOLF tracklists that were posted to the freeperm account, dated September 11th, 2012. Tyler caused 9/11.",
    "tracks": [
     {
      "num": "#1",
-     "name": "PartyIsntOver"
+     "name": "PartyIsntOver",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Slater"
+     "name": "Slater",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "You (IFHY)"
+     "name": "You (IFHY)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Awkward"
+     "name": "Awkward",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "48"
+     "name": "48",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Jamba"
+     "name": "Jamba",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Treehome (Treehome95)"
+     "name": "Treehome (Treehome95)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Meatloaf"
+     "name": "Meatloaf",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Campfire"
+     "name": "Campfire",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Sweetheart"
+     "name": "Sweetheart",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Good Morning"
+     "name": "Good Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
   {
    "era": "WOLF [V3]",
    "name": "WOLF",
-   "date": "2012-11-06",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the WOLF tracklists that were posted to the freeperm account, dated November 6th, 2012.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Jamba"
+     "name": "Jamba",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "I Fucking Hate You (IFHY)"
+     "name": "I Fucking Hate You (IFHY)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Lone"
+     "name": "Lone",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Answer"
+     "name": "Answer",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "48"
+     "name": "48",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Awkward"
+     "name": "Awkward",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Slater"
+     "name": "Slater",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "PartyIsntOver"
+     "name": "PartyIsntOver",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Colossus"
+     "name": "Colossus",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Meatloaf"
+     "name": "Meatloaf",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Pigs"
+     "name": "Pigs",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Smores (Campfire)"
+     "name": "Smores (Campfire)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Wolf"
+     "name": "Wolf",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Cowboy"
+     "name": "Cowboy",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Treehome (Treehome95)"
+     "name": "Treehome (Treehome95)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Parking Lot"
+     "name": "Parking Lot",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#17",
-     "name": "Half N Half (Half/Half)"
+     "name": "Half N Half (Half/Half)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#18",
-     "name": "Good Morning"
+     "name": "Good Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#19",
-     "name": "Trashwang"
+     "name": "Trashwang",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
   {
    "era": "WOLF [V3]",
    "name": "WOLF",
-   "date": "2012-12-17",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the WOLF tracklists that were posted to the freeperm account, dated December 17th, 2012.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Jamba"
+     "name": "Jamba",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "IFHY"
+     "name": "IFHY",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Answer"
+     "name": "Answer",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Awkward"
+     "name": "Awkward",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Slater"
+     "name": "Slater",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "PartyIsntOver"
+     "name": "PartyIsntOver",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "48"
+     "name": "48",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Rusty"
+     "name": "Rusty",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Trashwang"
+     "name": "Trashwang",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Pigs"
+     "name": "Pigs",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Cowboy"
+     "name": "Cowboy",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Bimmer"
+     "name": "Bimmer",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Smores (Campfire)"
+     "name": "Smores (Campfire)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Treehome (Treehome95)"
+     "name": "Treehome (Treehome95)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Jornada (Lone)"
+     "name": "Jornada (Lone)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Lost Weekend (Colossus)"
+     "name": "Lost Weekend (Colossus)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Domo23"
+     "name": "Domo23",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#18",
-     "name": "Parking Lot"
+     "name": "Parking Lot",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -1843,334 +2467,231 @@
    "era": "WOLF [V3]",
    "name": "WOLF",
    "date": "",
-   "quality": "Full",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Almost final tracklist for WOLF, seen at the very end of the Wolf documentary. Basically the final version without Tamale & with the alternate name for Colossus.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Wolf"
+     "name": "Wolf",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jamba"
+     "name": "Jamba",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Cowboy"
+     "name": "Cowboy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Awkward"
+     "name": "Awkward",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Domo23"
+     "name": "Domo23",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Answer"
+     "name": "Answer",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slater"
+     "name": "Slater",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "48"
+     "name": "48",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Lost Weekend (Colossus)"
+     "name": "Lost Weekend (Colossus)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "PartyIsntOver / Campfire / Bimmer"
+     "name": "PartyIsntOver / Campfire / Bimmer",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "IFHY"
+     "name": "IFHY",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Pigs"
+     "name": "Pigs",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Parking Lot"
+     "name": "Parking Lot",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Rusty"
+     "name": "Rusty",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Trashwang"
+     "name": "Trashwang",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Treehome95"
+     "name": "Treehome95",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Lone"
+     "name": "Lone",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "WOLF [V3]",
    "name": "WOLF",
-   "date": "2013-04-01",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for WOLF.",
    "tracks": [
     {
      "num": "#1",
-     "name": "WOLF"
+     "name": "WOLF",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jamba (feat. Hodgy Beats)"
+     "name": "Jamba (feat. Hodgy Beats)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Cowboy"
+     "name": "Cowboy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Awkward"
+     "name": "Awkward",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Domo23"
+     "name": "Domo23",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Answer"
+     "name": "Answer",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slater (feat. Frank Ocean)"
+     "name": "Slater (feat. Frank Ocean)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "48"
+     "name": "48",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Colossus"
+     "name": "Colossus",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "PartyIsntOver / Campfire / Bimmer (feat. Frank Ocean & Laetitia Sadier)"
+     "name": "PartyIsntOver / Campfire / Bimmer (feat. Frank Ocean & Laetitia Sadier)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "IFHY (feat. Pharrell)"
+     "name": "IFHY (feat. Pharrell)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Pigs"
+     "name": "Pigs",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Parking Lot (feat. Casey Veggies & Mike G)"
+     "name": "Parking Lot (feat. Casey Veggies & Mike G)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Rusty (feat. Domo Genesis & Earl Sweatshirt)"
+     "name": "Rusty (feat. Domo Genesis & Earl Sweatshirt)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Trashwang (feat. Na-Kel Smith, Jasper Dolphin, Lucas, L-Boy, Taco, Left Brain & Lee Spielman)"
+     "name": "Trashwang (feat. Na-Kel Smith, Jasper Dolphin, Lucas, L-Boy, Taco, Left Brain & Lee Spielman)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Treehome95 (feat. Coco O. & Erykah Badu)"
+     "name": "Treehome95 (feat. Coco O. & Erykah Badu)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Tamale"
+     "name": "Tamale",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Lone"
-    }
-   ]
-  },
-  {
-   "era": "Cherry Bomb",
-   "name": "Cherry Bomb",
-   "date": "2014-04-16",
-   "quality": "Full",
-   "source": "Tyler",
-   "links": [],
-   "description": "One of the Cherry Bomb tracklists that were posted to the freeperm account, dated April 16, 2014.",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "48Whore2"
-    },
-    {
-     "num": "#2",
-     "name": "Fucking Young (FUCKING YOUNG / PERFECT)"
-    },
-    {
-     "num": "#3",
-     "name": "482 (BUFFALO)"
-    },
-    {
-     "num": "#4",
-     "name": "Cockboy"
-    },
-    {
-     "num": "#5",
-     "name": "Tony"
-    },
-    {
-     "num": "#6",
-     "name": "Run"
-    },
-    {
-     "num": "#7",
-     "name": "Pizza"
-    },
-    {
-     "num": "#8",
-     "name": "Debarge"
-    },
-    {
-     "num": "#9",
-     "name": "YEAHNIGGA"
-    },
-    {
-     "num": "#10",
-     "name": "Keep Da O's"
-    },
-    {
-     "num": "#11",
-     "name": "Smuckers"
-    }
-   ]
-  },
-  {
-   "era": "Cherry Bomb",
-   "name": "Cherry Bomb",
-   "date": "2014-05-20",
-   "quality": "Full",
-   "source": "Tyler",
-   "links": [],
-   "description": "One of the Cherry Bomb tracklists that were posted to the freeperm account, dated May 20, 2014.",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "Pizza"
-    },
-    {
-     "num": "#2",
-     "name": "Fucking Young (FUCKING YOUNG / PERFECT)"
-    },
-    {
-     "num": "#3",
-     "name": "Ayers (FIND YOUR WINGS)"
-    },
-    {
-     "num": "#4",
-     "name": "48Whore2"
-    },
-    {
-     "num": "#5",
-     "name": "482 (BUFFALO)"
-    },
-    {
-     "num": "#6",
-     "name": "Cockboy"
-    },
-    {
-     "num": "#7",
-     "name": "Smuckers"
-    },
-    {
-     "num": "#8",
-     "name": "Run"
-    },
-    {
-     "num": "#9",
-     "name": "Debarge"
-    },
-    {
-     "num": "#10",
-     "name": "Wilder"
-    },
-    {
-     "num": "#11",
-     "name": "Keep Da O's"
-    }
-   ]
-  },
-  {
-   "era": "Cherry Bomb",
-   "name": "Cherry Bomb",
-   "date": "2014-08-29",
-   "quality": "Full",
-   "source": "Tyler",
-   "links": [],
-   "description": "",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "482 (BUFFALO)"
-    },
-    {
-     "num": "#2",
-     "name": "Blow My Load"
-    },
-    {
-     "num": "#3",
-     "name": "Wilder"
-    },
-    {
-     "num": "#4",
-     "name": "Ayers (FIND YOUR WINGS)"
-    },
-    {
-     "num": "#5",
-     "name": "Keep Da O's"
-    },
-    {
-     "num": "#6",
-     "name": "Pizza"
-    },
-    {
-     "num": "#7",
-     "name": "Smuckers"
-    },
-    {
-     "num": "#8",
-     "name": "48Whore2"
-    },
-    {
-     "num": "#9",
-     "name": "Run"
-    },
-    {
-     "num": "#10",
-     "name": "Cockboy"
-    },
-    {
-     "num": "#11",
-     "name": "Pilot"
-    },
-    {
-     "num": "#12",
-     "name": "Fucking Young"
-    },
-    {
-     "num": "#13",
-     "name": "2Seater"
+     "name": "Lone",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2178,74 +2699,349 @@
    "era": "Cherry Bomb",
    "name": "Cherry Bomb",
    "date": "",
-   "quality": "Full",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "One of the Cherry Bomb tracklists that were posted to the freeperm account, dated April 16, 2014.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "48Whore2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "Fucking Young (FUCKING YOUNG / PERFECT)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "482 (BUFFALO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Cockboy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#5",
+     "name": "Tony",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "Run",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Pizza",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#8",
+     "name": "Debarge",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#9",
+     "name": "YEAHNIGGA",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#10",
+     "name": "Keep Da O's",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Smuckers",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    }
+   ]
+  },
+  {
+   "era": "Cherry Bomb",
+   "name": "Cherry Bomb",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "One of the Cherry Bomb tracklists that were posted to the freeperm account, dated May 20, 2014.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Pizza",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "Fucking Young (FUCKING YOUNG / PERFECT)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Ayers (FIND YOUR WINGS)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "48Whore2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#5",
+     "name": "482 (BUFFALO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Cockboy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#7",
+     "name": "Smuckers",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Run",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Debarge",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#10",
+     "name": "Wilder",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#11",
+     "name": "Keep Da O's",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    }
+   ]
+  },
+  {
+   "era": "Cherry Bomb",
+   "name": "Cherry Bomb",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "482 (BUFFALO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Blow My Load",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Wilder",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "Ayers (FIND YOUR WINGS)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Keep Da O's",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Pizza",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#7",
+     "name": "Smuckers",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "48Whore2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#9",
+     "name": "Run",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Cockboy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#11",
+     "name": "Pilot",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Fucking Young",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "2Seater",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
+    }
+   ]
+  },
+  {
+   "era": "Cherry Bomb",
+   "name": "Cherry Bomb",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist seen on the Cherry Bomb documentary, pretty similar to the release version. Found at 36:45 in the video.",
    "tracks": [
     {
      "num": "#1",
-     "name": "INTRO"
+     "name": "INTRO",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "482 (BUFFALO)"
+     "name": "482 (BUFFALO)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "PILOT"
+     "name": "PILOT",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "RUN"
+     "name": "RUN",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "ROY512 (FIND YOUR WINGS)"
+     "name": "ROY512 (FIND YOUR WINGS)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "CHERRY (CHERRY BOMB)"
+     "name": "CHERRY (CHERRY BOMB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "BLOW MY LOAD"
+     "name": "BLOW MY LOAD",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "CHUR"
+     "name": "CHUR",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "2SEATER"
+     "name": "2SEATER",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "ON (THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX)?)"
+     "name": "ON (THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX)?)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "FY (FUCKING YOUNG)"
+     "name": "FY (FUCKING YOUNG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "PERFECT"
+     "name": "PERFECT",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "SMUCKERS"
+     "name": "SMUCKERS",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "KEEP DA O'S"
+     "name": "KEEP DA O'S",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "OKAGA (OKAGA, CA)"
+     "name": "OKAGA (OKAGA, CA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "DEATHCAMP"
+     "name": "DEATHCAMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -2255,15 +3051,17 @@
   {
    "era": "Cherry Bomb",
    "name": "Cherry Bomb",
-   "date": "2015-04-11",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist shown on GOLF MEDIA, dated April 11, 2015.",
    "tracks": [
     {
      "num": "#1",
-     "name": "DEATHCAMP"
+     "name": "DEATHCAMP",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
@@ -2271,47 +3069,69 @@
     },
     {
      "num": "#3",
-     "name": "PILOT"
+     "name": "PILOT",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "RUN"
+     "name": "RUN",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "FIND YOUR WINGS"
+     "name": "FIND YOUR WINGS",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "CHERRY BOMB"
+     "name": "CHERRY BOMB",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BLOW MY LOAD"
+     "name": "BLOW MY LOAD",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "2SEATER"
+     "name": "2SEATER",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "THE BROWN STAINS (THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX))"
+     "name": "THE BROWN STAINS (THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX))",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "FUCKING YOUNG (FUCKING YOUNG / PERFECT)"
+     "name": "FUCKING YOUNG (FUCKING YOUNG / PERFECT)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "SMUCKERS"
+     "name": "SMUCKERS",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KEEP DA O'S"
+     "name": "KEEP DA O'S",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "OKAGA, CA"
+     "name": "OKAGA, CA",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2321,905 +3141,1275 @@
   {
    "era": "Cherry Bomb",
    "name": "Cherry Bomb",
-   "date": "2015-04-13",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Cherry Bomb.",
    "tracks": [
     {
      "num": "#1",
-     "name": "DEATHCAMP (feat. Cole Alexander)"
+     "name": "DEATHCAMP (feat. Cole Alexander)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "BUFFALO (feat. Shane Powers)"
+     "name": "BUFFALO (feat. Shane Powers)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PILOT (feat. Sydney Bennett)"
+     "name": "PILOT (feat. Sydney Bennett)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "RUN (feat. Chaz Bundick & ScHoolboy Q)"
+     "name": "RUN (feat. Chaz Bundick & ScHoolboy Q)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "FIND YOUR WINGS (feat. Roy Ayers, Sydney Bennett & Kali Uchis)"
+     "name": "FIND YOUR WINGS (feat. Roy Ayers, Sydney Bennett & Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "CHERRY BOMB"
+     "name": "CHERRY BOMB",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BLOW MY LOAD (feat. Wanya Morris, DāM-FunK, Austin Feinstein & Sydney Bennett)"
+     "name": "BLOW MY LOAD (feat. Wanya Morris, DāM-FunK, Austin Feinstein & Sydney Bennett)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "2SEATER (feat. Aaron Shaw, Samantha Nelson & Austin Feinstein)"
+     "name": "2SEATER (feat. Aaron Shaw, Samantha Nelson & Austin Feinstein)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX) (feat. ScHoolboy Q)"
+     "name": "THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX) (feat. ScHoolboy Q)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "FUCKING YOUNG / PERFECT (feat. Charlie Wilson, Chaz Bundick, Sydney Bennett & Kali Uchis)"
+     "name": "FUCKING YOUNG / PERFECT (feat. Charlie Wilson, Chaz Bundick, Sydney Bennett & Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "SMUCKERS (feat. Lil Wayne & Kanye West)"
+     "name": "SMUCKERS (feat. Lil Wayne & Kanye West)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KEEP DA O'S (feat. Pharell Williams & Coco O.)"
+     "name": "KEEP DA O'S (feat. Pharell Williams & Coco O.)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "OKAGA, CA (feat. Alice Smith, Leon Ware & Clem Creevy)"
+     "name": "OKAGA, CA (feat. Alice Smith, Leon Ware & Clem Creevy)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Cherry Bomb",
    "name": "Cherry Bomb [Physical Copies]",
-   "date": "2015-04-13",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the physical copies of Cherry Bomb, contains two bonus tracks SPECIAL and YELLOW.",
    "tracks": [
     {
      "num": "#1",
-     "name": "DEATHCAMP (feat. Cole Alexander)"
+     "name": "DEATHCAMP (feat. Cole Alexander)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "BUFFALO (feat. Shane Powers)"
+     "name": "BUFFALO (feat. Shane Powers)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PILOT (feat. Sydney Bennett)"
+     "name": "PILOT (feat. Sydney Bennett)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "RUN (feat. Chaz Bundick & ScHoolboy Q)"
+     "name": "RUN (feat. Chaz Bundick & ScHoolboy Q)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "FIND YOUR WINGS (feat. Roy Ayers, Sydney Bennett & Kali Uchis)"
+     "name": "FIND YOUR WINGS (feat. Roy Ayers, Sydney Bennett & Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "CHERRY BOMB"
+     "name": "CHERRY BOMB",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BLOW MY LOAD (feat. Wanya Morris, DāM-FunK, Austin Feinstein & Sydney Bennett)"
+     "name": "BLOW MY LOAD (feat. Wanya Morris, DāM-FunK, Austin Feinstein & Sydney Bennett)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "2SEATER (feat. Aaron Shaw, Samantha Nelson & Austin Feinstein)"
+     "name": "2SEATER (feat. Aaron Shaw, Samantha Nelson & Austin Feinstein)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX) / SPECIAL (feat. ScHoolboy Q)"
+     "name": "THE BROWN STAINS OF DARKEESE LATIFAH PART 6-12 (REMIX) / SPECIAL (feat. ScHoolboy Q)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "FUCKING YOUNG / PERFECT (feat. Charlie Wilson, Chaz Bundick, Sydney Bennett & Kali Uchis)"
+     "name": "FUCKING YOUNG / PERFECT (feat. Charlie Wilson, Chaz Bundick, Sydney Bennett & Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "SMUCKERS (feat. Lil Wayne & Kanye West)"
+     "name": "SMUCKERS (feat. Lil Wayne & Kanye West)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KEEP DA O'S (feat. Pharell Williams & Coco O.)"
+     "name": "KEEP DA O'S (feat. Pharell Williams & Coco O.)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "OKAGA, CA (feat. Alice Smith, Leon Ware & Clem Creevy)"
+     "name": "OKAGA, CA (feat. Alice Smith, Leon Ware & Clem Creevy)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "YELLOW (feat. Kali Uchis)"
+     "name": "YELLOW (feat. Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-01-09",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated Jan 9, 2016. Some titles may be placeholders or inspirations, evidenced by his reference to Portishead's \"Deep Water\" two posts later.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Love Without Sound"
+     "name": "Love Without Sound",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Deep Water"
+     "name": "Deep Water",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Spoon (Foreward)"
+     "name": "Spoon (Foreward)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Tell em"
+     "name": "Tell em",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Sneakysnake"
+     "name": "Sneakysnake",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Garden"
+     "name": "Garden",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Band"
+     "name": "Band",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "WOW (Enjoy Right Now, Today)"
+     "name": "WOW (Enjoy Right Now, Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Cruise (Droppin' Seeds)"
+     "name": "Cruise (Droppin' Seeds)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Bean (Beanbag)"
+     "name": "Bean (Beanbag)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-02-16",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated Februrary 16th, 2016.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Snake"
+     "name": "Snake",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "3000"
+     "name": "3000",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Tellem"
+     "name": "Tellem",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Power"
+     "name": "Power",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Fallin'"
+     "name": "Fallin'",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Spoon (Foreward)"
+     "name": "Spoon (Foreward)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Garden"
+     "name": "Garden",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "WOW (Enjoy Right Now, Today)"
+     "name": "WOW (Enjoy Right Now, Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)"
+     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-03-05",
-   "quality": "Partial",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated March 5th, 2016 where Tyler stated these were 'forsures'.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Snake"
+     "name": "Snake",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "3000"
+     "name": "3000",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Tellem"
+     "name": "Tellem",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Power"
+     "name": "Power",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "WOW (Enjoy Right Now, Today)"
+     "name": "WOW (Enjoy Right Now, Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-03-18",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated March 18th 2016.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Snake"
+     "name": "Snake",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "3000"
+     "name": "3000",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Tellem"
+     "name": "Tellem",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Power"
+     "name": "Power",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Fallin'"
+     "name": "Fallin'",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Spoon (Foreward)"
+     "name": "Spoon (Foreward)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Garden"
+     "name": "Garden",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "WOW (Enjoy Right Now, Today)"
+     "name": "WOW (Enjoy Right Now, Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)"
+     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-05-11",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists posted to the freeperm account, dated May 11, 2016. List of songs Tyler needed to finish ASAP.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Spoon (Foreword)"
+     "name": "Spoon (Foreword)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Bloom (Whoville)"
+     "name": "Bloom (Whoville)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Firework (Glitter)"
+     "name": "Firework (Glitter)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Who Dat Boy"
+     "name": "Who Dat Boy",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "3000"
+     "name": "3000",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Mr. Lonely"
+     "name": "Mr. Lonely",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "WOW (Enjoy Right Now, Today)"
+     "name": "WOW (Enjoy Right Now, Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "DeathValley"
+     "name": "DeathValley",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "IWasWondering"
+     "name": "IWasWondering",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Lips"
+     "name": "Lips",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#13",
-     "name": "Ckboy (Cockboy)"
+     "name": "Ckboy (Cockboy)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "Garden (Garden Shed)"
+     "name": "Garden (Garden Shed)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)"
+     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-04-13",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated April 13th, 2016.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Spoon (Foreward)"
+     "name": "Spoon (Foreward)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "3000"
+     "name": "3000",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "June"
+     "name": "June",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Who That Boy (Who Dat Boy)"
+     "name": "Who That Boy (Who Dat Boy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Suga (Sugar)"
+     "name": "Suga (Sugar)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#7",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "I Ain't Got Time"
+     "name": "I Ain't Got Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "IWasWondering"
+     "name": "IWasWondering",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Mr. Lonely"
+     "name": "Mr. Lonely",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Sneakysnake"
+     "name": "Sneakysnake",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Ckboy (Cockboy)"
+     "name": "Ckboy (Cockboy)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Stripeshirt"
+     "name": "Stripeshirt",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "WOW (Enjoy Right Now Today)"
+     "name": "WOW (Enjoy Right Now Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "T2"
+     "name": "T2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Clouds"
+     "name": "Clouds",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-08-08",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated August 8th, 2016.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Glitter"
+     "name": "Glitter",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Who That Boy (Who Dat Boy)"
+     "name": "Who That Boy (Who Dat Boy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)"
+     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pumpbreaks"
+     "name": "Pumpbreaks",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Suga"
+     "name": "Suga",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#7",
-     "name": "Spoon (Foreword)"
+     "name": "Spoon (Foreword)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Garcon"
+     "name": "Garcon",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "IWasWondering"
+     "name": "IWasWondering",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Mr. Lonely"
+     "name": "Mr. Lonely",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Sneakysnake"
+     "name": "Sneakysnake",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Ckboy (Cockboy)"
+     "name": "Ckboy (Cockboy)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Stripeshirt"
+     "name": "Stripeshirt",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "WOW (Enjoy Right Now Today)"
+     "name": "WOW (Enjoy Right Now Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "T2"
+     "name": "T2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Clouds"
+     "name": "Clouds",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "Scum Fuck Flower Boy",
    "name": "Scum Fuck Flower Boy",
-   "date": "2016-08-22",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "One of the Flower Boy tracklists that were posted to the freeperm account, dated August 22nd, 2016.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Glitter"
+     "name": "Glitter",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#2",
-     "name": "Beanbag"
+     "name": "Beanbag",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "WhoThatBoy (Who Dat Boy)"
+     "name": "WhoThatBoy (Who Dat Boy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)"
+     "name": "Cruising (feat. Lil Wayne) (Droppin' Seeds)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pumpbreaks"
+     "name": "Pumpbreaks",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Suga"
+     "name": "Suga",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#7",
-     "name": "Spoon (Foreword)"
+     "name": "Spoon (Foreword)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Garcon"
+     "name": "Garcon",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Pothole"
+     "name": "Pothole",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Boredom"
+     "name": "Boredom",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "IWasWondering"
+     "name": "IWasWondering",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "GotTime (I Ain't Got Time)"
+     "name": "GotTime (I Ain't Got Time)",
+     "color": "#8e7cc3",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "WOW (Enjoy Right Now Today)"
+     "name": "WOW (Enjoy Right Now Today)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Flower Boy",
    "name": "Flower Boy [Leaked Copy]",
-   "date": "2017-07-14",
-   "quality": "Full",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the leaked copy of Flower Boy. Same as release.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Foreword (feat. Rex Orange County)"
+     "name": "Foreword (feat. Rex Orange County)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Where This Flower Blooms (feat. Frank Ocean)"
+     "name": "Where This Flower Blooms (feat. Frank Ocean)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sometimes..."
+     "name": "Sometimes...",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "See You Again (feat. Kali Uchis)"
+     "name": "See You Again (feat. Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Who Dat Boy (feat. A$AP Rocky)"
+     "name": "Who Dat Boy (feat. A$AP Rocky)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pothole (feat. Jaden Smith)"
+     "name": "Pothole (feat. Jaden Smith)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Garden Shed (feat. Estelle)"
+     "name": "Garden Shed (feat. Estelle)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Boredom (feat. Rex Orange County & Anna of the North)"
+     "name": "Boredom (feat. Rex Orange County & Anna of the North)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I Ain't Got Time!"
+     "name": "I Ain't Got Time!",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)"
+     "name": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Droppin' Seeds (feat. Lil' Wayne)"
+     "name": "Droppin' Seeds (feat. Lil' Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "November"
+     "name": "November",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Glitter"
+     "name": "Glitter",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Enjoy Right Now, Today"
+     "name": "Enjoy Right Now, Today",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Flower Boy",
    "name": "Flower Boy",
-   "date": "2017-07-21",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the release copy of Flower Boy.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Foreword (feat. Rex Orange County)"
+     "name": "Foreword (feat. Rex Orange County)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Where This Flower Blooms (feat. Frank Ocean)"
+     "name": "Where This Flower Blooms (feat. Frank Ocean)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sometimes..."
+     "name": "Sometimes...",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "See You Again (feat. Kali Uchis)"
+     "name": "See You Again (feat. Kali Uchis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Who Dat Boy (feat. A$AP Rocky)"
+     "name": "Who Dat Boy (feat. A$AP Rocky)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pothole (feat. Jaden Smith)"
+     "name": "Pothole (feat. Jaden Smith)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Garden Shed (feat. Estelle)"
+     "name": "Garden Shed (feat. Estelle)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Boredom (feat. Rex Orange County & Anna of the North)"
+     "name": "Boredom (feat. Rex Orange County & Anna of the North)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I Ain't Got Time!"
+     "name": "I Ain't Got Time!",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)"
+     "name": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Droppin' Seeds (feat. Lil' Wayne)"
+     "name": "Droppin' Seeds (feat. Lil' Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "November"
+     "name": "November",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Glitter"
+     "name": "Glitter",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Enjoy Right Now, Today"
+     "name": "Enjoy Right Now, Today",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Grinch EP",
    "name": "Music Inspired by Illumination & Dr. Seuss' The Grinch",
-   "date": "2018-11-16",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Grinch EP",
    "tracks": [
     {
      "num": "#1",
-     "name": "Whoville"
+     "name": "Whoville",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lights On (Feat. Ryan Beatty & Santigold)"
+     "name": "Lights On (Feat. Ryan Beatty & Santigold)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hot Chocolate (Feat. Jerry Paper)"
+     "name": "Hot Chocolate (Feat. Jerry Paper)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Big Bag"
+     "name": "Big Bag",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "When Gloves Come Off (Feat. Ryan Beatty)"
+     "name": "When Gloves Come Off (Feat. Ryan Beatty)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Cindy Lou's Wish"
+     "name": "Cindy Lou's Wish",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "IGOR",
    "name": "IGOR",
-   "date": "2019-05-17",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for IGOR.",
    "tracks": [
     {
      "num": "#1",
-     "name": "IGOR'S THEME"
+     "name": "IGOR'S THEME",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "EARFQUAKE"
+     "name": "EARFQUAKE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I THINK"
+     "name": "I THINK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "EXACTLY WHAT YOU RUN FROM YOU END UP CHASING"
+     "name": "EXACTLY WHAT YOU RUN FROM YOU END UP CHASING",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "RUNNING OUT OF TIME"
+     "name": "RUNNING OUT OF TIME",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "NEW MAGIC WANG"
+     "name": "NEW MAGIC WANG",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "A BOY IS A GUN*"
+     "name": "A BOY IS A GUN*",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "PUPPET"
+     "name": "PUPPET",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "WHAT'S GOOD"
+     "name": "WHAT'S GOOD",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "GONE, GONE / THANK YOU"
+     "name": "GONE, GONE / THANK YOU",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "I DON'T LOVE YOU ANYMORE"
+     "name": "I DON'T LOVE YOU ANYMORE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "ARE WE STILL FRIENDS?"
+     "name": "ARE WE STILL FRIENDS?",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "IGOR",
    "name": "IGOR [Physical Copies]",
-   "date": "2019-05-17",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the physical copies of IGOR. EXACTLY WHAT YOU RUN FROM YOU END UP CHASING is replaced by BOYFRIEND.",
    "tracks": [
     {
      "num": "#1",
-     "name": "IGOR'S THEME"
+     "name": "IGOR'S THEME",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "EARFQUAKE"
+     "name": "EARFQUAKE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I THINK"
+     "name": "I THINK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "BOYFRIEND"
+     "name": "BOYFRIEND",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "RUNNING OUT OF TIME"
+     "name": "RUNNING OUT OF TIME",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "NEW MAGIC WANG"
+     "name": "NEW MAGIC WANG",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "A BOY IS A GUN*"
+     "name": "A BOY IS A GUN*",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "PUPPET"
+     "name": "PUPPET",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "WHAT'S GOOD"
+     "name": "WHAT'S GOOD",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "GONE, GONE / THANK YOU"
+     "name": "GONE, GONE / THANK YOU",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "I DON'T LOVE YOU ANYMORE"
+     "name": "I DON'T LOVE YOU ANYMORE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "ARE WE STILL FRIENDS?"
+     "name": "ARE WE STILL FRIENDS?",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3227,74 +4417,106 @@
    "era": "CALL ME IF YOU GET LOST",
    "name": "CALL ME IF YOU GET LOST",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CALL ME IF YOU GET LOST.",
    "tracks": [
     {
      "num": "#1",
-     "name": "SIR BAUDELAIRE (feat. DJ Drama)"
+     "name": "SIR BAUDELAIRE (feat. DJ Drama)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "CORSO"
+     "name": "CORSO",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "LEMONHEAD (feat. 42 Dugg)"
+     "name": "LEMONHEAD (feat. 42 Dugg)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "WUSYANAME (feat. NBA Youngboy & Ty"
+     "name": "WUSYANAME (feat. NBA Youngboy & Ty",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LUMBERJACK"
+     "name": "LUMBERJACK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "HOT WIND BLOWS (feat. Lil Wayne)"
+     "name": "HOT WIND BLOWS (feat. Lil Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "MASSA"
+     "name": "MASSA",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "RUNITUP (feat. Teezo Touchdown)"
+     "name": "RUNITUP (feat. Teezo Touchdown)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MANIFESTO (feat. Domo Genesis)"
+     "name": "MANIFESTO (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "SWEET / I THOUGHT YOU WANTED"
+     "name": "SWEET / I THOUGHT YOU WANTED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "MOMMA TALK"
+     "name": "MOMMA TALK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "RISE! (feat. Daisy World)"
+     "name": "RISE! (feat. Daisy World)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "BLESSED"
+     "name": "BLESSED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "JUGGERNAUT (feat. Lil Uzi Vert &"
+     "name": "JUGGERNAUT (feat. Lil Uzi Vert &",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WILSHIRE"
+     "name": "WILSHIRE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "SAFARI"
+     "name": "SAFARI",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3302,74 +4524,106 @@
    "era": "CALL ME IF YOU GET LOST",
    "name": "CALL ME IF YOU GET LOST [Physical Copies]",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CALL ME IF YOU GET LOST physical copies. SAFARI is replaced by FISHTAIL",
    "tracks": [
     {
      "num": "#1",
-     "name": "SIR BAUDELAIRE (feat. DJ Drama)"
+     "name": "SIR BAUDELAIRE (feat. DJ Drama)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "CORSO"
+     "name": "CORSO",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "LEMONHEAD (feat. 42 Dugg)"
+     "name": "LEMONHEAD (feat. 42 Dugg)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "WUSYANAME (feat. NBA Youngboy & Ty"
+     "name": "WUSYANAME (feat. NBA Youngboy & Ty",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LUMBERJACK"
+     "name": "LUMBERJACK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "HOT WIND BLOWS (feat. Lil Wayne)"
+     "name": "HOT WIND BLOWS (feat. Lil Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "MASSA"
+     "name": "MASSA",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "RUNITUP (feat. Teezo Touchdown)"
+     "name": "RUNITUP (feat. Teezo Touchdown)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MANIFESTO (feat. Domo Genesis)"
+     "name": "MANIFESTO (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "SWEET / I THOUGHT YOU WANTED"
+     "name": "SWEET / I THOUGHT YOU WANTED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "MOMMA TALK"
+     "name": "MOMMA TALK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "RISE! (feat. Daisy World)"
+     "name": "RISE! (feat. Daisy World)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "BLESSED"
+     "name": "BLESSED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "JUGGERNAUT (feat. Lil Uzi Vert &"
+     "name": "JUGGERNAUT (feat. Lil Uzi Vert &",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WILSHIRE"
+     "name": "WILSHIRE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "FISHTAIL"
+     "name": "FISHTAIL",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3377,106 +4631,154 @@
    "era": "CALL ME IF YOU GET LOST",
    "name": "CALL ME IF YOU GET LOST : The Estate Sale",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CALL ME IF YOU GET LOST : The Estate Sale\n\nDISC 1 :",
    "tracks": [
     {
      "num": "#1",
-     "name": "SIR BAUDELAIRE (feat. DJ Drama)"
+     "name": "SIR BAUDELAIRE (feat. DJ Drama)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "CORSO"
+     "name": "CORSO",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "LEMONHEAD (feat. 42 Dugg)"
+     "name": "LEMONHEAD (feat. 42 Dugg)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "WUSYANAME (feat. NBA Youngboy & Ty"
+     "name": "WUSYANAME (feat. NBA Youngboy & Ty",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LUMBERJACK"
+     "name": "LUMBERJACK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "HOT WIND BLOWS (feat. Lil Wayne)"
+     "name": "HOT WIND BLOWS (feat. Lil Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "MASSA"
+     "name": "MASSA",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "RUNITUP (feat. Teezo Touchdown)"
+     "name": "RUNITUP (feat. Teezo Touchdown)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MANIFESTO (feat. Domo Genesis)"
+     "name": "MANIFESTO (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "SWEET / I THOUGHT YOU WANTED"
+     "name": "SWEET / I THOUGHT YOU WANTED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "MOMMA TALK"
+     "name": "MOMMA TALK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "RISE! (feat. Daisy World)"
+     "name": "RISE! (feat. Daisy World)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "BLESSED"
+     "name": "BLESSED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "JUGGERNAUT (feat. Lil Uzi Vert &"
+     "name": "JUGGERNAUT (feat. Lil Uzi Vert &",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WILSHIRE"
+     "name": "WILSHIRE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "SAFARI"
+     "name": "SAFARI",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "EVERYTHING MUST GO"
+     "name": "EVERYTHING MUST GO",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "STUNTMAN"
+     "name": "STUNTMAN",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "WHAT A DAY"
+     "name": "WHAT A DAY",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "WHARF TALK"
+     "name": "WHARF TALK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "DOGTOOTH"
+     "name": "DOGTOOTH",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "HEAVEN TO ME"
+     "name": "HEAVEN TO ME",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BOYFRIEND, GIRLFRIEND"
+     "name": "BOYFRIEND, GIRLFRIEND",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "SORRY NOT SORRY"
+     "name": "SORRY NOT SORRY",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3484,106 +4786,154 @@
    "era": "CALL ME IF YOU GET LOST",
    "name": "CALL ME IF YOU GET LOST : The Estate Sale\n[Physical Copies]",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CALL ME IF YOU GET LOST : The Estate Sale physical copies, SAFARI is replaced by FISHTAIL\n\nDISC 1 :",
    "tracks": [
     {
      "num": "#1",
-     "name": "SIR BAUDELAIRE (feat. DJ Drama)"
+     "name": "SIR BAUDELAIRE (feat. DJ Drama)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "CORSO"
+     "name": "CORSO",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "LEMONHEAD (feat. 42 Dugg)"
+     "name": "LEMONHEAD (feat. 42 Dugg)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "WUSYANAME (feat. NBA Youngboy & Ty"
+     "name": "WUSYANAME (feat. NBA Youngboy & Ty",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "LUMBERJACK"
+     "name": "LUMBERJACK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "HOT WIND BLOWS (feat. Lil Wayne)"
+     "name": "HOT WIND BLOWS (feat. Lil Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "MASSA"
+     "name": "MASSA",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "RUNITUP (feat. Teezo Touchdown)"
+     "name": "RUNITUP (feat. Teezo Touchdown)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MANIFESTO (feat. Domo Genesis)"
+     "name": "MANIFESTO (feat. Domo Genesis)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "SWEET / I THOUGHT YOU WANTED"
+     "name": "SWEET / I THOUGHT YOU WANTED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "MOMMA TALK"
+     "name": "MOMMA TALK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "RISE! (feat. Daisy World)"
+     "name": "RISE! (feat. Daisy World)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "BLESSED"
+     "name": "BLESSED",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "JUGGERNAUT (feat. Lil Uzi Vert &"
+     "name": "JUGGERNAUT (feat. Lil Uzi Vert &",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WILSHIRE"
+     "name": "WILSHIRE",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "FISHTAIL"
+     "name": "FISHTAIL",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "EVERYTHING MUST GO"
+     "name": "EVERYTHING MUST GO",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "STUNTMAN"
+     "name": "STUNTMAN",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "WHAT A DAY"
+     "name": "WHAT A DAY",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "WHARF TALK"
+     "name": "WHARF TALK",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "DOGTOOTH"
+     "name": "DOGTOOTH",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "HEAVEN TO ME"
+     "name": "HEAVEN TO ME",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BOYFRIEND, GIRLFRIEND"
+     "name": "BOYFRIEND, GIRLFRIEND",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "SORRY NOT SORRY"
+     "name": "SORRY NOT SORRY",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3591,8 +4941,8 @@
    "era": "CHROMAKOPIA",
    "name": "CHROMAKOPIA",
    "date": "",
-   "quality": "Full",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CHROMAKOPIA that details if a song is fully mixed or not, dated hours before release.",
    "tracks": [
@@ -3665,66 +5015,94 @@
    "era": "CHROMAKOPIA",
    "name": "CHROMAKOPIA",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the test pressing mix of CHROMAKOPIA.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (St. Chroma)"
+     "name": "Intro (St. Chroma)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rahtahtah"
+     "name": "Rahtahtah",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Noid"
+     "name": "Noid",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Darling (Darling, I)"
+     "name": "Darling (Darling, I)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hey Jane"
+     "name": "Hey Jane",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Killed You (I Killed You)"
+     "name": "Killed You (I Killed You)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Judge Judy"
+     "name": "Judge Judy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Sticky"
+     "name": "Sticky",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Mask (Take Your Mask Off)"
+     "name": "Mask (Take Your Mask Off)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tomorrow"
+     "name": "Tomorrow",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Mother"
+     "name": "Mother",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dead (Thought I Was Dead)"
+     "name": "Dead (Thought I Was Dead)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Like Him"
+     "name": "Like Him",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Home (I Hope You Find Your Way Home)"
+     "name": "Home (I Hope You Find Your Way Home)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3732,66 +5110,94 @@
    "era": "CHROMAKOPIA",
    "name": "CHROMAKOPIA",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CHROMAKOPIA, features were originally hidden until maybe a week after this project's release.",
    "tracks": [
     {
      "num": "#1",
-     "name": "St. Chroma (feat. Daniel Caesar)"
+     "name": "St. Chroma (feat. Daniel Caesar)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rah Tah Tah"
+     "name": "Rah Tah Tah",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Noid"
+     "name": "Noid",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Darling, I (feat. Teezo Touchdown)"
+     "name": "Darling, I (feat. Teezo Touchdown)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hey Jane"
+     "name": "Hey Jane",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I Killed You"
+     "name": "I Killed You",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Judge Judy"
+     "name": "Judge Judy",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)"
+     "name": "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Take Your Mask Off (feat. Daniel Caesar & LaToiya Williams)"
+     "name": "Take Your Mask Off (feat. Daniel Caesar & LaToiya Williams)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tomorrow"
+     "name": "Tomorrow",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Thought I Was Dead (feat. ScHoolboy Q & Santigold)"
+     "name": "Thought I Was Dead (feat. ScHoolboy Q & Santigold)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like Him"
+     "name": "Like Him",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Balloon (feat. Doechii)"
+     "name": "Balloon (feat. Doechii)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Hope You Find Your Way Home"
+     "name": "I Hope You Find Your Way Home",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3799,8 +5205,8 @@
    "era": "CHROMAKOPIA",
    "name": "CHROMAKOPIA +",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for CHROMAKOPIA +.",
    "tracks": [
@@ -3870,54 +5276,76 @@
    "era": "DON'T TAP THE GLASS",
    "name": "DON'T TAP THE GLASS",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the test pressing mix of DON'T TAP THE GLASS. Contains a new song.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Big Poe (feat. Sk8brd)"
+     "name": "Big Poe (feat. Sk8brd)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Sugar On My Tongue"
+     "name": "Sugar On My Tongue",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sucka Free"
+     "name": "Sucka Free",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Mommanem"
+     "name": "Mommanem",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stop Playing With Me"
+     "name": "Stop Playing With Me",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Ring Ring Ring"
+     "name": "Ring Ring Ring",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Don't Tap That Glass / Tweakin'"
+     "name": "Don't Tap That Glass / Tweakin'",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Don't You Worry Baby (feat. Maddison McFerrin)"
+     "name": "Don't You Worry Baby (feat. Maddison McFerrin)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I'll Take Care Of You (feat.Yebba)"
+     "name": "I'll Take Care Of You (feat.Yebba)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "???"
+     "name": "???",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Tell Me What It Is"
+     "name": "Tell Me What It Is",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3925,59 +5353,79 @@
    "era": "DON'T TAP THE GLASS",
    "name": "DON'T TAP THE GLASS",
    "date": "",
-   "quality": "Full",
-   "source": "Tyler",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for DON'T TAP THE GLASS.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Big Poe (feat. Sk8brd)"
+     "name": "Big Poe (feat. Sk8brd)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Sugar On My Tongue"
+     "name": "Sugar On My Tongue",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sucka Free"
+     "name": "Sucka Free",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Mommanem"
+     "name": "Mommanem",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stop Playing With Me"
+     "name": "Stop Playing With Me",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Ring Ring Ring"
+     "name": "Ring Ring Ring",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Don't Tap That Glass / Tweakin'"
+     "name": "Don't Tap That Glass / Tweakin'",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Don't You Worry Baby (feat. Maddison McFerrin)"
+     "name": "Don't You Worry Baby (feat. Maddison McFerrin)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I'll Take Care Of You (feat. Yebba)"
+     "name": "I'll Take Care Of You (feat. Yebba)",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tell Me What It Is"
+     "name": "Tell Me What It Is",
+     "color": "#93c47d",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "DON'T TAP THE GLASS",
    "name": "Camp Flog Gnaw 2025",
-   "date": "2025-11-22",
-   "quality": "Full",
-   "source": "Tyler",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Setlist for Tyler's show for Camp Flog Gnaw (with changes)",
    "tracks": [

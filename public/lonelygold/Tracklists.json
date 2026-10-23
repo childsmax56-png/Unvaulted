@@ -37,18 +37,20 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "TOKYO DRIFT [VRY FYE VRY MUMBLE]"
+     "name": "TOKYO DRIFT [VRY FYE VRY MUMBLE]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ],
@@ -66,37 +68,37 @@
     {
      "num": "#1",
      "name": "Lifestyle (2017)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "ForNothin'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "FoF (Freestyle)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Destroy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "HiTech",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Lies",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -114,43 +116,43 @@
     {
      "num": "#1",
      "name": "Intro",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Global",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "SmashBros (feat. Lil Candy Paint)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "No Hook",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Addy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Add It Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Wild",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -168,25 +170,25 @@
     {
      "num": "#?",
      "name": "Fenderbender",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "NDR (feat. Nezzus & Roman Reloaded)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "GS! (feat. Nezzus & Slimesito)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "Revenge (feat. Nezzus)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -204,49 +206,49 @@
     {
      "num": "#1",
      "name": "eazy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "place",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "different drugz",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "4 seasons",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "guap, glock, nd sticks",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "trapped on marz (feat. Nezzus)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "vvs valentine",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "frank lucas",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -264,25 +266,25 @@
     {
      "num": "#1",
      "name": "ya dig freestyle",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "molly mileage (interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "M.I.S",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "alone",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -300,37 +302,37 @@
     {
      "num": "#1",
      "name": "Texaco Intro",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Crushin",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Mud",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "London Tipton",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Hi Water",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "yao ming",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -351,31 +353,31 @@
     {
      "num": "#1",
      "name": "mollywrld",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "traphousemansion (Interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "mud",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "usual",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "bane",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -396,37 +398,37 @@
     {
      "num": "#1",
      "name": "usual",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "mollywrld",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "luna",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "traphousemansion (Interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "mud",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "cutie",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -444,55 +446,55 @@
     {
      "num": "#1",
      "name": "online",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "margiela man",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "loot",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "expiration date",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "ma",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "nobody",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "kool",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "mochiato",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "snot nose (feat. BigSmokeChapo)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -510,49 +512,49 @@
     {
      "num": "#1",
      "name": "online",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "margiela man",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "loot",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "expiration date",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "mochiato",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "nobody",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "kool",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "snot nose (feat. BigSmokeChapo)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -573,43 +575,43 @@
     {
      "num": "#1",
      "name": "online",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "margiela man",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "loot",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "expiration date",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "ma",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "nobody",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "kool",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -627,13 +629,13 @@
     {
      "num": "#1",
      "name": "INTO IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "HIGH AF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -651,25 +653,25 @@
     {
      "num": "#1",
      "name": "seasons",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "which 1 / klueless",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "layover",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "devil wears prada",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -687,31 +689,31 @@
     {
      "num": "#1",
      "name": "4am",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "motion",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "code",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "koma",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "going up (atm)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -743,61 +745,61 @@
     {
      "num": "#1",
      "name": "Pop Shit / Xtra",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Miley Cyrus",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "F.U.N",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Ya Ight",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Tokyo Mission Impossible",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Okay Bae",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Take A Pic (Interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Movie",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Comin' Back",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Diamonds & Foreigns",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -815,97 +817,97 @@
     {
      "num": "#1",
      "name": "Top Floor Boss",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Oh Yeah",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Pop Shit / Xtra",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Miley Cyrus",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "F.U.N",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Ya Ight",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Dover Street Market",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Tokyo Mission Impossible",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Ok Bae",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Take A Pic (Interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Movie",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Groupie Bitch",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Do Or Die",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Komin' Back",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "CDG",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Diamonds & Foreigns",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -923,13 +925,13 @@
     {
      "num": "#1",
      "name": "geek no sleep",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "high dosage (feat. Nezzus)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -947,43 +949,43 @@
     {
      "num": "#1",
      "name": "1017 alyx",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "messy freestyle",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "siamese",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "everyday",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "lit btchs",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "rch ngga / bD btch",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "cdg 2",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1001,31 +1003,31 @@
     {
      "num": "#1",
      "name": "tokyoto",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "i got em",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "okay ya!",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "do the most ...",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "ok / what i do",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1043,31 +1045,31 @@
     {
      "num": "#?",
      "name": "Krash Out",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "FUCK IT UP [PACK A PUNCH]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "Euros",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "Vivid",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
      "name": "ZOMBIE (LNLY)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     }
    ],
@@ -1080,52 +1082,54 @@
    "quality": "Clear",
    "source": "Leaked",
    "links": [],
-   "description": "Older tracklist, very likely to be for a late 2021 version of NO STYLIST but could be for something different. Found in Propker's personal iTunes",
+   "description": "Older tracklist, not really known what it's for. Could be for a late 2021 version of NO STYLIST or something different. Found in Propker's personal iTunes",
    "tracks": [
     {
      "num": "#1",
      "name": "LONELY (LNLY)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "PRESSURE (PRSSURE)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "DOWN",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#4",
      "name": "GONE",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#5",
      "name": "MISSING ME",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SAVING ME"
+     "name": "SAVING ME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "SUICIDE MISSION",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#8",
      "name": "GIVENCHY HOE",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     }
    ],
@@ -1143,19 +1147,19 @@
     {
      "num": "#?",
      "name": "Suicide Mission",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
      "name": "Teen Knight Poem",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
      "name": "A Minute",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1173,115 +1177,115 @@
     {
      "num": "#1",
      "name": "JETLGGD",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "BERGDORF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "<3MYGNG",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "VTMNTSCOAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "NOSTYLIST",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "FAKENGGAS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "SOARIN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "TURNINUP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "LNLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "PRSSURE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "ONTHETABLE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "SWGSKOOL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CRYSTLCSTLES",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "DANGEROUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "MKEITSTOP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "ONTHEFLOOR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "PASSAROUND",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "OTW",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "VETERAN (feat. Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1299,145 +1303,145 @@
     {
      "num": "#1",
      "name": "JETLGGD",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "BERGDORF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "<3MYGNG",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "VTMNTSCOAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "NOSTYLIST",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "FAKENGGAS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "BLITZ",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "SOARIN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "TURNINUP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "LNLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "PRSSURE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "ONTHETABLE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "HAVINMYWAY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "ALLURE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "SWGSKOOL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "CRYSTLCSTLES",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "DANGEROUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "MKEITSTOP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "ONTHEFLOOR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "LOUVRE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "PASSAROUND",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OTW",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "VETERAN (feat. Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "NEVEREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1450,19 +1454,13 @@
    "quality": "N/A",
    "source": "Leaked",
    "links": [],
-   "description": "Gone & Main Thing both were re-bounced after their original recording dates (Gone in Sep 2022 & Main Thing in Nov 2022), likely because they were being considered for NS+ (ULTRA).",
+   "description": "Main Thing was re-bounced after it's original recording date (recorded sometime in 2022, rebounced in Nov 2022), likely because some songs were being considered for NS+ (ULTRA).",
    "tracks": [
     {
      "num": "#?",
      "name": "Main Thing",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
-    },
-    {
-     "num": "#?",
-     "name": "Gone",
-     "color": "#93C47D",
-     "colorLabel": "Alt / Unconfirmed Version Available"
     }
    ],
    "availability": "Few Songs Confirmed"
@@ -1479,193 +1477,193 @@
     {
      "num": "#1",
      "name": "how u feel?",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "if looks could kill",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "fly sht",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "which one",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "raver",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "came in wit",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "by the pound",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "all the time",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "biggest problem",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "chris paul",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "catch a kill",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "thats my",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "superstar",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "new new",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "right now",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "which way",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "wagwan",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "moment of silence",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "brazy girls",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "goin up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "passenger",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "promo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "worth it",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "redlight",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "make sum work",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "safety (interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "your eyes",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "money & sex (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "too damn rich",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "spillin",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
      "name": "check the fleet",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#32",
      "name": "back sippin",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1683,7 +1681,7 @@
     {
      "num": "#?",
      "name": "Dress It Up",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
@@ -1781,46 +1779,56 @@
     },
     {
      "num": "#2",
-     "name": "LUV4YA"
+     "name": "LUV4YA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PIMP TALK"
+     "name": "PIMP TALK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "TAKE A TRIP"
+     "name": "TAKE A TRIP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "HONESTLY"
+     "name": "HONESTLY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "6042",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "CRYSTAL CLEAR"
+     "name": "CRYSTAL CLEAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "MOLLY",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#9",
      "name": "MOTIVATIONAL (MOTIVATION(?))",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#10",
      "name": "TOGETHER (feat. Don Toliver)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
@@ -1832,7 +1840,7 @@
     {
      "num": "#12",
      "name": "PUCCI (feat. Don Toliver)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
@@ -1844,7 +1852,7 @@
     {
      "num": "#14",
      "name": "PASS ME THE KEYS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
@@ -1868,7 +1876,7 @@
     {
      "num": "#18",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1894,40 +1902,50 @@
     },
     {
      "num": "#2",
-     "name": "LUV4YA"
+     "name": "LUV4YA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PIMP TALK"
+     "name": "PIMP TALK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "TAKE A TRIP"
+     "name": "TAKE A TRIP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "HONESTLY"
+     "name": "HONESTLY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "6042",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "CRYSTAL CLEAR"
+     "name": "CRYSTAL CLEAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "MOLLY",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#9",
      "name": "MOTIVATIONAL (MOTIVATION)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
@@ -1945,7 +1963,7 @@
     {
      "num": "#12",
      "name": "PUCCI (feat. Don Toliver)",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
@@ -1957,7 +1975,7 @@
     {
      "num": "#14",
      "name": "PASS ME THE KEYS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
@@ -1981,7 +1999,7 @@
     {
      "num": "#18",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -1999,127 +2017,127 @@
     {
      "num": "#1",
      "name": "FOREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "LOVE HURTS (with Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "LUV 4 YA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "CRYSTAL CLEAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "BABY MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "SAY THAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "PIMP TALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "CADILLAC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "SYRUP SIPPIN'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "LOCK IN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "DOUBT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "WISH YOU WELL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "SHIP HER OFF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "HONESTLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "TAKE A TRIP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "EXTRA HIGH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "AMERIKA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "THRILL (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "ABOUT MONEY (BONUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "PASS ME THE KEYS (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -2137,127 +2155,127 @@
     {
      "num": "#1",
      "name": "FOREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "LOVE HURTS (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "LUV 4 YA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "CRYSTAL CLEAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "BANGAZ (with Don Toliver)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "BABY MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "SAY THAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "PIMP TALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "CADILLAC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "SYRUP SIPPIN'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TIGHTEN UP (feat. Quavo & Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "DOUBT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "WISH YOU WELL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "SHIP HER OFF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "HONESTLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "TAKE A TRIP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "EXTRA HIGH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "AMERIKA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "ABOUT MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "NO WORRIES",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "PASS ME THE KEYS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -2278,61 +2296,61 @@
     {
      "num": "#1",
      "name": "MAKE A SOUND",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "SEE YOU TOMORROW",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "BLING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "YOU DONT EVEN KNOW (POSTED)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "HEALING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "LSD",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "FORGOT MY NAME",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "SMOKING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "THE BOUNCE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "MONEY ANTHEM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -2353,157 +2371,157 @@
     {
      "num": "#1",
      "name": "FOREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "LOVE HURTS (with Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "LUV 4 YA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "CRYSTAL CLEAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "BABY MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "SAY THAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "PIMP TALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "CADILLAC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "SYRUP SIPPIN'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "LOCK IN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "DOUBT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "WISH YOU WELL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "SHIP HER OFF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "HONESTLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "TAKE A TRIP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "EXTRA HIGH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "AMERIKA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "THRILL (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "ABOUT MONEY (BONUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "PASS ME THE KEYS (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "THE BOUNCE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "MAKE A SOUND",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "SEE YOU TOMORROW",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "MEET THE BOSS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "BLING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -2521,163 +2539,163 @@
     {
      "num": "#1",
      "name": "FOREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "LOVE HURTS (with Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "LUV 4 YA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "CRYSTAL CLEAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "BABY MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "SAY THAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "PIMP TALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "CADILLAC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "SYRUP SIPPIN'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "LOCK IN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "DOUBT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "WISH YOU WELL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "SHIP HER OFF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "HONESTLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "TAKE A TRIP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "EXTRA HIGH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "AMERIKA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "THRILL (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "ABOUT MONEY (BONUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "PASS ME THE KEYS (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "SMOKING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "HEALING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "FORGOT MY NAME",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LSD",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "MONEY ANTHEM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "HOLDING IT DOWN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -2695,157 +2713,157 @@
     {
      "num": "#1",
      "name": "FOREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "LOVE HURTS (with Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "LUV 4 YA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "CRYSTAL CLEAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "BABY MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "SAY THAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "PIMP TALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "CADILLAC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "SYRUP SIPPIN'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "LOCK IN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "DOUBT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "WISH YOU WELL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "SHIP HER OFF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "HONESTLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "TAKE A TRIP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "EXTRA HIGH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "AMERIKA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "THRILL (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "ABOUT MONEY (BONUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "PASS ME THE KEYS (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "SMOKING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "HEALING",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "FORGOT MY NAME",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LSD",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "MONEY ANTHEM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -2863,139 +2881,139 @@
     {
      "num": "#1",
      "name": "FOREVER",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "LOVE HURTS (with Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "LUV 4 YA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "GET RIGHT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "CRYSTAL CLEAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "BABY MONEY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "SAY THAT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "PIMP TALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "CADILLAC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "SYRUP SIPPIN'",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "LOCK IN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "DOUBT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "WISH YOU WELL",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "SHIP HER OFF",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "HONESTLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "TAKE A TRIP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "EXTRA HIGH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "AMERIKA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "THRILL (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "ABOUT MONEY (BONUS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "NO WORRIES (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "PASS ME THE KEYS (BONUS)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "PRETTIEST ONE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3013,31 +3031,31 @@
     {
      "num": "#1",
      "name": "NYLON",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "SDP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "SEE UR FACE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "SUPER SERUM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "SRTBBL (with Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3220,109 +3238,109 @@
     {
      "num": "#5",
      "name": "rose gold ice",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "kansas",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "ain't hard",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "blowin smoke",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "switched up",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
      "name": "kool on ya",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "leave u out 2 dry",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "not the mayor",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "no pressure",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "risk",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "screwed up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "see no evil",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "show u how",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "soooo high",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "stfu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "top flo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "party n get high",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "whats it gon take?",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3340,109 +3358,109 @@
     {
      "num": "#1",
      "name": "ain't hard",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "blowin smoke",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "kansas",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "kool on ya",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "whats it gon take? (Let Me Know)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "jumanji",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "leave u out 2 dry",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "not the mayor",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "no pressure",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "risk",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "screwed up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "see no evil",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "show u how",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "soooo high",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "stfu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "top flo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "party n get high",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "open it up (feat. Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3463,109 +3481,109 @@
     {
      "num": "#1",
      "name": "aint hard",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "risk",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "see no evil",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "no pressure",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "stfu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "show u how",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "top flo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "kansas",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "screwed up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "party n get high (interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "leash",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "jumanji",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "not the mayor",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "blowin smoke",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "kool on ya",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "soooo high",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "open it up (feat. Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "leave u out 2 dry",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3583,115 +3601,115 @@
     {
      "num": "#1",
      "name": "aint hard",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "risk",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "see no evil",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "no pressure",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "stfu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "show u how",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "top flo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "what's it gon take?",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "kansas",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "screwed up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "party n get high (interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "leash",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "jumanji",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "not the mayor",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "blowin smoke",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "kool on ya",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "soooo high",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "open it up (feat. Ken Carson)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "leave u out 2 dry",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
@@ -3699,7 +3717,7 @@
   },
   {
    "era": "Drop Dead Gorgeous",
-   "name": "??? [EP]",
+   "name": "??? [EP]\n(2 much music, too much music)",
    "date": "",
    "quality": "Clear",
    "source": "Destroy Lonely",
@@ -3709,35 +3727,48 @@
     {
      "num": "#1",
      "name": "with my bitch",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "sipped too much",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "hide it",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "exorcist",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "rose gold ice",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
    "availability": "Full"
+  },
+  {
+   "era": "Drop Dead Gorgeous",
+   "name": "Drop Dead Gorgeous",
+   "date": "",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://x.com/vadyabackwoods/status/2082593055782179272"
+   ],
+   "description": "On July 29, 2026, producer vadyabackwoods took to Twitter to announce that these 4 songs, with his own words: \"...if u waiting these on ddg...\", implying that the previewed songs he's produced are on the album.  \nMONSTER -> (Released as a single one week later)\n\n?.drive*\n?.diva*\n?.contraband*",
+   "tracks": [],
+   "availability": "Few Songs Confirmed"
   },
   {
    "era": "00Twinz [V2]",
@@ -3751,13 +3782,13 @@
     {
      "num": "#?",
      "name": "Game Over (extremely likely to appear)",
-     "color": "#F6B26B",
-     "colorLabel": "Snippet / Partial / Recording / LQ Available"
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "Take Your Life",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet / Partial / Recording / LQ Available"
     }
    ],

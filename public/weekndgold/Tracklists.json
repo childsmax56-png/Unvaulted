@@ -29,27 +29,39 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Rescue You"
+     "name": "Rescue You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Do It"
+     "name": "Do It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Appointment"
+     "name": "Appointment",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Release Me"
+     "name": "Release Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "X-Ray"
+     "name": "X-Ray",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Birthday Suit"
+     "name": "Birthday Suit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -67,39 +79,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "High For This"
+     "name": "High For This",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "What You Need"
+     "name": "What You Need",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "House of Balloons / Glass Table Girls"
+     "name": "House of Balloons / Glass Table Girls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Morning"
+     "name": "The Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Wicked Games"
+     "name": "Wicked Games",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Party & the After Party"
+     "name": "The Party & the After Party",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Coming Down"
+     "name": "Coming Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Loft Music"
+     "name": "Loft Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Knowing"
+     "name": "The Knowing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -114,39 +144,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Lonely Star"
+     "name": "Lonely Star",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Life of The Party"
+     "name": "Life of The Party",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Thursday"
+     "name": "Thursday",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Zone (feat. Drake)"
+     "name": "The Zone (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Birds Pt. 1"
+     "name": "The Birds Pt. 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Birds Pt. 2"
+     "name": "The Birds Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Gone"
+     "name": "Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Rolling Stone"
+     "name": "Rolling Stone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Heaven or Las Vegas"
+     "name": "Heaven or Las Vegas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -161,39 +209,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "D.D."
+     "name": "D.D.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Montreal"
+     "name": "Montreal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Outside"
+     "name": "Outside",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "XO / The Host"
+     "name": "XO / The Host",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Initiation"
+     "name": "Initiation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Same Old Song (feat. Juicy J)"
+     "name": "Same Old Song (feat. Juicy J)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Fall"
+     "name": "The Fall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Next"
+     "name": "Next",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Echoes Of Silence"
+     "name": "Echoes Of Silence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -208,123 +274,183 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "High For This"
+     "name": "High For This",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "What You Need"
+     "name": "What You Need",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "House of Balloons / Glass Table Girls"
+     "name": "House of Balloons / Glass Table Girls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Morning"
+     "name": "The Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Wicked Games"
+     "name": "Wicked Games",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Party & the After Party"
+     "name": "The Party & the After Party",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Coming Down"
+     "name": "Coming Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Loft Music"
+     "name": "Loft Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "The Knowing"
+     "name": "The Knowing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Twenty Eight"
+     "name": "Twenty Eight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Lonely Star"
+     "name": "Lonely Star",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Life of The Party"
+     "name": "Life of The Party",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Thursday"
+     "name": "Thursday",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Zone (feat. Drake)"
+     "name": "The Zone (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Birds Pt. 1"
+     "name": "The Birds Pt. 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Birds Pt. 2"
+     "name": "The Birds Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Gone"
+     "name": "Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Rolling Stone"
+     "name": "Rolling Stone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Heaven or Las Vegas"
+     "name": "Heaven or Las Vegas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Valerie"
+     "name": "Valerie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "D.D."
+     "name": "D.D.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Montreal"
+     "name": "Montreal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Outside"
+     "name": "Outside",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "XO / The Host"
+     "name": "XO / The Host",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Initiation"
+     "name": "Initiation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Same Old Song (feat. Juicy J)"
+     "name": "Same Old Song (feat. Juicy J)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Fall"
+     "name": "The Fall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Next"
+     "name": "Next",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Echoes Of Silence"
+     "name": "Echoes Of Silence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Till Dawn (Here Comes The Sun)"
+     "name": "Till Dawn (Here Comes The Sun)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -339,11 +465,15 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Pretty"
+     "name": "Pretty",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "The Town (Not Used To)"
+     "name": "The Town (Not Used To)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -358,43 +488,63 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Professional"
+     "name": "Professional",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Town"
+     "name": "The Town",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Adaptation"
+     "name": "Adaptation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Love In The Sky"
+     "name": "Love In The Sky",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Belong To the World"
+     "name": "Belong To the World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Live For (feat. Drake)"
+     "name": "Live For (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Wanderlust"
+     "name": "Wanderlust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Kiss Land"
+     "name": "Kiss Land",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Pretty"
+     "name": "Pretty",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tears In The Rain"
+     "name": "Tears In The Rain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -409,59 +559,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Professional"
+     "name": "Professional",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "The Town"
+     "name": "The Town",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Adaptation"
+     "name": "Adaptation",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Love In The Sky"
+     "name": "Love In The Sky",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Belong To the World"
+     "name": "Belong To the World",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Live For (feat. Drake)"
+     "name": "Live For (feat. Drake)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Wanderlust"
+     "name": "Wanderlust",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Kiss Land"
+     "name": "Kiss Land",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Pretty"
+     "name": "Pretty",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Tears In The Rain"
+     "name": "Tears In The Rain",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Wanderlust (Pharrell Remix)"
+     "name": "Wanderlust (Pharrell Remix)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Odd Look (feat. The Weeknd)"
+     "name": "Odd Look (feat. The Weeknd)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Heavenly Creatures"
+     "name": "Heavenly Creatures",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Pure Life"
+     "name": "Pure Life",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -476,51 +654,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Professional"
+     "name": "Professional",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Town"
+     "name": "The Town",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Adaptation"
+     "name": "Adaptation",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Love In The Sky"
+     "name": "Love In The Sky",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Belong To the World"
+     "name": "Belong To the World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Live For (feat. Drake)"
+     "name": "Live For (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Wanderlust"
+     "name": "Wanderlust",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Kiss Land"
+     "name": "Kiss Land",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Pretty"
+     "name": "Pretty",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tears In The Rain"
+     "name": "Tears In The Rain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Wanderlust (Pharrell Remix)"
+     "name": "Wanderlust (Pharrell Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Kavinsky - Odd Look (feat. The Weeknd)"
+     "name": "Kavinsky - Odd Look (feat. The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -535,51 +737,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Real Life"
+     "name": "Real Life",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Tell Your Friends About It (ft. Kanye West) (Tell Your Friends)"
+     "name": "Tell Your Friends About It (ft. Kanye West) (Tell Your Friends)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Often"
+     "name": "Often",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Can't Feel My Face"
+     "name": "Can't Feel My Face",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Shameless"
+     "name": "Shameless",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Earned It (Album Version)"
+     "name": "Earned It (Album Version)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "In The Night"
+     "name": "In The Night",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Angel"
+     "name": "Angel",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "As We Are (As You Are)"
+     "name": "As We Are (As You Are)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Prisoners"
+     "name": "Prisoners",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -597,59 +823,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Real Life"
+     "name": "Real Life",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Losers (featuring Labrinth)"
+     "name": "Losers (featuring Labrinth)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Tell Your Friends (featuring Kanye West) (Tell Your Friends About It)"
+     "name": "Tell Your Friends (featuring Kanye West) (Tell Your Friends About It)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Often"
+     "name": "Often",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Can't Feel My Face"
+     "name": "Can't Feel My Face",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Shameless"
+     "name": "Shameless",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Earned It (Album Version)"
+     "name": "Earned It (Album Version)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "In The Night"
+     "name": "In The Night",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "As You Are (As We Are)"
+     "name": "As You Are (As We Are)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Prisoner"
+     "name": "Prisoner",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Dark Times (featuring Ed Sheeran)"
+     "name": "Dark Times (featuring Ed Sheeran)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Angel"
+     "name": "Angel",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -667,59 +921,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Real Life"
+     "name": "Real Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Losers (feat. Labrinth)"
+     "name": "Losers (feat. Labrinth)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Tell Your Friends"
+     "name": "Tell Your Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Often"
+     "name": "Often",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Can't Feel My Face"
+     "name": "Can't Feel My Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Shameless"
+     "name": "Shameless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Earned It (Fifty Shades of Grey)"
+     "name": "Earned It (Fifty Shades of Grey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In The Night"
+     "name": "In The Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "As You Are"
+     "name": "As You Are",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dark Times (feat. Ed Sheeran)"
+     "name": "Dark Times (feat. Ed Sheeran)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Prisoner (feat. Lana Del Rey)"
+     "name": "Prisoner (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Angel"
+     "name": "Angel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -734,71 +1016,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Real Life"
+     "name": "Real Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Losers (feat. Labrinth)"
+     "name": "Losers (feat. Labrinth)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Tell Your Friends"
+     "name": "Tell Your Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Often"
+     "name": "Often",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Can't Feel My Face"
+     "name": "Can't Feel My Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Shameless"
+     "name": "Shameless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Earned It (Fifty Shades of Grey)"
+     "name": "Earned It (Fifty Shades of Grey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In The Night"
+     "name": "In The Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "As You Are"
+     "name": "As You Are",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dark Times (feat. Ed Sheeran)"
+     "name": "Dark Times (feat. Ed Sheeran)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Prisoner (feat. Lana Del Rey)"
+     "name": "Prisoner (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Angel"
+     "name": "Angel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Can't Feel My Face (Martin Garrix Remix)"
+     "name": "Can't Feel My Face (Martin Garrix Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "The Hills (Remix) [feat. Eminem]"
+     "name": "The Hills (Remix) [feat. Eminem]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "The Hills (Remix) [feat. Nicki Minaj]"
+     "name": "The Hills (Remix) [feat. Nicki Minaj]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -813,75 +1129,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Starboy (feat. Daft Punk)"
+     "name": "Starboy (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Party Monster"
+     "name": "Party Monster",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "False Alarm"
+     "name": "False Alarm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Reminder"
+     "name": "Reminder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Rockin'"
+     "name": "Rockin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Secrets"
+     "name": "Secrets",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "True Colors"
+     "name": "True Colors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Stargirl Interlude (feat. Lana Del Rey)"
+     "name": "Stargirl Interlude (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sidewalks (feat. Kendrick Lamar)"
+     "name": "Sidewalks (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Six Feet Under"
+     "name": "Six Feet Under",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Love To Lay"
+     "name": "Love To Lay",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "A Lonely Night"
+     "name": "A Lonely Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Attention"
+     "name": "Attention",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ordinary Life"
+     "name": "Ordinary Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nothing Without You"
+     "name": "Nothing Without You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "All I Know (feat. Future)"
+     "name": "All I Know (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Die For You"
+     "name": "Die For You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "I Feel It Coming (feat. Daft Punk)"
+     "name": "I Feel It Coming (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -896,79 +1248,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Starboy (feat. Daft Punk)"
+     "name": "Starboy (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Party Monster"
+     "name": "Party Monster",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "False Alarm"
+     "name": "False Alarm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Reminder"
+     "name": "Reminder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Rockin'"
+     "name": "Rockin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Secrets"
+     "name": "Secrets",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "True Colors"
+     "name": "True Colors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Stargirl Interlude (feat. Lana Del Rey)"
+     "name": "Stargirl Interlude (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Sidewalks (feat. Kendrick Lamar)"
+     "name": "Sidewalks (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Six Feet Under"
+     "name": "Six Feet Under",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Love To Lay"
+     "name": "Love To Lay",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "A Lonely Night"
+     "name": "A Lonely Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Attention"
+     "name": "Attention",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ordinary Life"
+     "name": "Ordinary Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nothing Without You"
+     "name": "Nothing Without You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "All I Know (feat. Future)"
+     "name": "All I Know (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Die For You"
+     "name": "Die For You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "I Feel It Coming (feat. Daft Punk)"
+     "name": "I Feel It Coming (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Starboy (Kygo Remix) [feat. Daft Punk]"
+     "name": "Starboy (Kygo Remix) [feat. Daft Punk]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -983,27 +1373,39 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Call Out My Name"
+     "name": "Call Out My Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Try Me"
+     "name": "Try Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wasted Times"
+     "name": "Wasted Times",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Was Never There (with Gessaffelstein)"
+     "name": "I Was Never There (with Gessaffelstein)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hurt You (with Gessaffelstein)"
+     "name": "Hurt You (with Gessaffelstein)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Privilege"
+     "name": "Privilege",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1018,31 +1420,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Call Out My Name"
+     "name": "Call Out My Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Try Me"
+     "name": "Try Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wasted Times"
+     "name": "Wasted Times",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Was Never There (with Gessaffelstein)"
+     "name": "I Was Never There (with Gessaffelstein)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hurt You (with Gessaffelstein)"
+     "name": "Hurt You (with Gessaffelstein)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Privilege"
+     "name": "Privilege",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Call Out My Name (A Capella)"
+     "name": "Call Out My Name (A Capella)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1057,59 +1473,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wicked Games"
+     "name": "Wicked Games",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Wanderlust (Pharrell Remix)"
+     "name": "Wanderlust (Pharrell Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Can't Feel My Face"
+     "name": "Can't Feel My Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "In The Night"
+     "name": "In The Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Often"
+     "name": "Often",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Belly - Might Not (feat. The Weeknd)"
+     "name": "Belly - Might Not (feat. The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Starboy (feat. Daft Punk)"
+     "name": "Starboy (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I Feel It Coming (feat. Daft Punk)"
+     "name": "I Feel It Coming (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Party Monster"
+     "name": "Party Monster",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Secrets"
+     "name": "Secrets",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Call Out My Name"
+     "name": "Call Out My Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Wasted Times"
+     "name": "Wasted Times",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1124,59 +1568,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Alone Again"
+     "name": "Alone Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Late"
+     "name": "Too Late",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hardest To Love"
+     "name": "Hardest To Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Scared To Live"
+     "name": "Scared To Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snowchild"
+     "name": "Snowchild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Escape From LA"
+     "name": "Escape From LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Faith"
+     "name": "Faith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Repeat After Me (Interlude)"
+     "name": "Repeat After Me (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Until I Bleed Out"
+     "name": "Until I Bleed Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1191,79 +1663,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Alone Again"
+     "name": "Alone Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Late"
+     "name": "Too Late",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hardest To Love"
+     "name": "Hardest To Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Scared To Live"
+     "name": "Scared To Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snowchild"
+     "name": "Snowchild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Escape From LA"
+     "name": "Escape From LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Faith"
+     "name": "Faith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Repeat After Me (Interlude)"
+     "name": "Repeat After Me (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Until I Bleed Out"
+     "name": "Until I Bleed Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Blinding Lights (Chromatics Remix)"
+     "name": "Blinding Lights (Chromatics Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Save Your Tears (OPN Remix)"
+     "name": "Save Your Tears (OPN Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Heartless (Vapor Wave Remix) [feat. Lil Uzi Vert]"
+     "name": "Heartless (Vapor Wave Remix) [feat. Lil Uzi Vert]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "After Hours (The Blaze Remix)"
+     "name": "After Hours (The Blaze Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Scared To Live (SNL Live)"
+     "name": "Scared To Live (SNL Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1278,67 +1788,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Alone Again"
+     "name": "Alone Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Late"
+     "name": "Too Late",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hardest To Love"
+     "name": "Hardest To Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Scared To Live"
+     "name": "Scared To Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snowchild"
+     "name": "Snowchild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Escape From LA"
+     "name": "Escape From LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Faith"
+     "name": "Faith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Repeat After Me (Interlude)"
+     "name": "Repeat After Me (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Until I Bleed Out"
+     "name": "Until I Bleed Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Hold Your Heart (Hold Me Close)"
+     "name": "Hold Your Heart (Hold Me Close)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "Take Me Back To LA (Myself)"
+     "name": "Take Me Back To LA (Myself)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
@@ -1353,71 +1895,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Alone Again"
+     "name": "Alone Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Late"
+     "name": "Too Late",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hardest To Love"
+     "name": "Hardest To Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Scared To Live"
+     "name": "Scared To Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snowchild"
+     "name": "Snowchild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Escape From LA"
+     "name": "Escape From LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Faith"
+     "name": "Faith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Repeat After Me (Interlude)"
+     "name": "Repeat After Me (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Until I Bleed Out"
+     "name": "Until I Bleed Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nothing Compares"
+     "name": "Nothing Compares",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Missed You"
+     "name": "Missed You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Final Lullaby"
+     "name": "Final Lullaby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1432,27 +2008,39 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Heartless (Remix) [feat. Lil Uzi Vert]"
+     "name": "Heartless (Remix) [feat. Lil Uzi Vert]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Blinding Lights (Chromatics Remix)"
+     "name": "Blinding Lights (Chromatics Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Save Your Tears (OPN Remix)"
+     "name": "Save Your Tears (OPN Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Heartless (Vapor Wave Remix) [feat. Lil Uzi Vert]"
+     "name": "Heartless (Vapor Wave Remix) [feat. Lil Uzi Vert]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "After Hours (The Blaze Remix)"
+     "name": "After Hours (The Blaze Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Scared To Live (SNL Live)"
+     "name": "Scared To Live (SNL Live)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1467,79 +2055,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Alone Again"
+     "name": "Alone Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Late"
+     "name": "Too Late",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Hardest To Love"
+     "name": "Hardest To Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Scared To Live"
+     "name": "Scared To Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snowchild"
+     "name": "Snowchild",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Escape From LA"
+     "name": "Escape From LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Faith"
+     "name": "Faith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Repeat After Me (Interlude)"
+     "name": "Repeat After Me (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Until I Bleed Out"
+     "name": "Until I Bleed Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nothing Compares"
+     "name": "Nothing Compares",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Missed You"
+     "name": "Missed You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Final Lullaby"
+     "name": "Final Lullaby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "In Your Eyes (Remix) [feat. Doja Cat]"
+     "name": "In Your Eyes (Remix) [feat. Doja Cat]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Blinding Lights (Chromatics Remix)"
+     "name": "Blinding Lights (Chromatics Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1554,75 +2180,111 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Can't Feel My Eyes"
+     "name": "Can't Feel My Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "I Feel It Coming (feat. Daft Punk)"
+     "name": "I Feel It Coming (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Starboy (feat. Daft Punk)"
+     "name": "Starboy (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Pray For Me (with Kendrick Lamar)"
+     "name": "Pray For Me (with Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Often"
+     "name": "Often",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Call Out My Name"
+     "name": "Call Out My Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Die For You"
+     "name": "Die For You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Earned It (Fifty Shades Of Grey)"
+     "name": "Earned It (Fifty Shades Of Grey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ariana Grande - Love Me Harder (feat. The Weeknd)"
+     "name": "Ariana Grande - Love Me Harder (feat. The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Wicked Games"
+     "name": "Wicked Games",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "The Morning"
+     "name": "The Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1637,67 +2299,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dawn FM (feat. Jim Carrey)"
+     "name": "Dawn FM (feat. Jim Carrey)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Gasoline"
+     "name": "Gasoline",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "How Can I Make You Love Me? (How Do I Make You Love Me)"
+     "name": "How Can I Make You Love Me? (How Do I Make You Love Me)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Take My Breath (Extended)"
+     "name": "Take My Breath (Extended)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "A Tale By Quincy (feat. Quincy Jones)"
+     "name": "A Tale By Quincy (feat. Quincy Jones)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Out Of Time"
+     "name": "Out Of Time",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Here We Go Again (feat. Tyler, The Creator)"
+     "name": "Here We Go Again (feat. Tyler, The Creator)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Best Friends Interlude (Best Friends)"
+     "name": "Best Friends Interlude (Best Friends)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Starry Eyes"
+     "name": "Starry Eyes",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Every Angel Is Terrifying"
+     "name": "Every Angel Is Terrifying",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Don't Break My Heart"
+     "name": "Don't Break My Heart",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "I Heard You're Married (feat. Lil Wayne)"
+     "name": "I Heard You're Married (feat. Lil Wayne)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "May Peace Be With You (feat. Jim Carrey) (Phantom Regret By Jim)"
+     "name": "May Peace Be With You (feat. Jim Carrey) (Phantom Regret By Jim)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -1712,67 +2406,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dawn FM"
+     "name": "Dawn FM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gasoline"
+     "name": "Gasoline",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "How Do I Make You Love Me?"
+     "name": "How Do I Make You Love Me?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take My Breath"
+     "name": "Take My Breath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "A Tale By Quincy"
+     "name": "A Tale By Quincy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Out of Time"
+     "name": "Out of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Here We Go...Again (feat. Tyler, The Creator)"
+     "name": "Here We Go...Again (feat. Tyler, The Creator)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Best Friends"
+     "name": "Best Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starry Eyes"
+     "name": "Starry Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Every Angel Is Terrifying"
+     "name": "Every Angel Is Terrifying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Don't Break My Heart"
+     "name": "Don't Break My Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Heard You're Married (feat. Lil Wayne)"
+     "name": "I Heard You're Married (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Phantom Regret By Jim"
+     "name": "Phantom Regret By Jim",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1787,79 +2513,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dawn FM"
+     "name": "Dawn FM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gasoline"
+     "name": "Gasoline",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "How Do I Make You Love Me?"
+     "name": "How Do I Make You Love Me?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take My Breath"
+     "name": "Take My Breath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "A Tale By Quincy"
+     "name": "A Tale By Quincy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Out of Time"
+     "name": "Out of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Here We Go...Again (feat. Tyler, The Creator)"
+     "name": "Here We Go...Again (feat. Tyler, The Creator)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Best Friends"
+     "name": "Best Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starry Eyes"
+     "name": "Starry Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Every Angel Is Terrifying"
+     "name": "Every Angel Is Terrifying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Don't Break My Heart"
+     "name": "Don't Break My Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Heard You're Married (feat. Lil Wayne)"
+     "name": "I Heard You're Married (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Phantom Regret By Jim"
+     "name": "Phantom Regret By Jim",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Take My Breath (Agents of Time Remix)"
+     "name": "Take My Breath (Agents of Time Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Sacrifice (Swedish House Mafia Remix)"
+     "name": "Sacrifice (Swedish House Mafia Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)"
+     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1874,79 +2638,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dawn FM"
+     "name": "Dawn FM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gasoline"
+     "name": "Gasoline",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "How Do I Make You Love Me?"
+     "name": "How Do I Make You Love Me?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take My Breath"
+     "name": "Take My Breath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "A Tale By Quincy"
+     "name": "A Tale By Quincy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Out of Time"
+     "name": "Out of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Here We Go...Again (feat. Tyler, The Creator)"
+     "name": "Here We Go...Again (feat. Tyler, The Creator)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Best Friends"
+     "name": "Best Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starry Eyes"
+     "name": "Starry Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Every Angel Is Terrifying"
+     "name": "Every Angel Is Terrifying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Don't Break My Heart"
+     "name": "Don't Break My Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Heard You're Married (feat. Lil Wayne)"
+     "name": "I Heard You're Married (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Phantom Regret By Jim"
+     "name": "Phantom Regret By Jim",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Take My Breath (Single Version)"
+     "name": "Take My Breath (Single Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Sacrifice (Swedish House Mafia Remix)"
+     "name": "Sacrifice (Swedish House Mafia Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)"
+     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1961,83 +2763,123 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dawn FM"
+     "name": "Dawn FM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gasoline"
+     "name": "Gasoline",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "How Do I Make You Love Me?"
+     "name": "How Do I Make You Love Me?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take My Breath"
+     "name": "Take My Breath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "A Tale By Quincy"
+     "name": "A Tale By Quincy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Out of Time"
+     "name": "Out of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Here We Go...Again (feat. Tyler, The Creator)"
+     "name": "Here We Go...Again (feat. Tyler, The Creator)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Best Friends"
+     "name": "Best Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starry Eyes"
+     "name": "Starry Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Every Angel Is Terrifying"
+     "name": "Every Angel Is Terrifying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Don't Break My Heart"
+     "name": "Don't Break My Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Heard You're Married (feat. Lil Wayne)"
+     "name": "I Heard You're Married (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Phantom Regret By Jim"
+     "name": "Phantom Regret By Jim",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)"
+     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Sacrifice (Swedish House Mafia Remix)"
+     "name": "Sacrifice (Swedish House Mafia Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Out Of Time (KAYTRANADA Remix)"
+     "name": "Out Of Time (KAYTRANADA Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Take My Breath (Single Version)"
+     "name": "Take My Breath (Single Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2052,99 +2894,147 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dawn FM"
+     "name": "Dawn FM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gasoline"
+     "name": "Gasoline",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "How Do I Make You Love Me?"
+     "name": "How Do I Make You Love Me?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take My Breath"
+     "name": "Take My Breath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "A Tale By Quincy"
+     "name": "A Tale By Quincy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Out of Time"
+     "name": "Out of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Here We Go...Again (feat. Tyler, The Creator)"
+     "name": "Here We Go...Again (feat. Tyler, The Creator)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Best Friends"
+     "name": "Best Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Starry Eyes"
+     "name": "Starry Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Every Angel Is Terrifying"
+     "name": "Every Angel Is Terrifying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Don't Break My Heart"
+     "name": "Don't Break My Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Heard You're Married (feat. Lil Wayne)"
+     "name": "I Heard You're Married (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Phantom Regret By Jim"
+     "name": "Phantom Regret By Jim",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)"
+     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Dawn FM (OPN Remix)"
+     "name": "Dawn FM (OPN Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "How Do I Make You Love Me? (Sebastian Ingrosso & Salvatore Ganacci Remix)"
+     "name": "How Do I Make You Love Me? (Sebastian Ingrosso & Salvatore Ganacci Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Sacrifice (Swedish House Mafia Remix)"
+     "name": "Sacrifice (Swedish House Mafia Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Out Of Time (KAYTRANADA Remix)"
+     "name": "Out Of Time (KAYTRANADA Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Best Friends (Remix) [feat. Summer Walker]"
+     "name": "Best Friends (Remix) [feat. Summer Walker]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Starry Eyes (MIKE DEAN Remix)"
+     "name": "Starry Eyes (MIKE DEAN Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Take My Breath (Single Version)"
+     "name": "Take My Breath (Single Version)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2159,35 +3049,51 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Idol Score Day 4 (Lure) (The Lure)"
+     "name": "Idol Score Day 4 (Lure) (The Lure)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Like A God"
+     "name": "Like A God",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "One of My Girls (Tough Love)"
+     "name": "One of My Girls (Tough Love)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "I'm A Lesser Man"
+     "name": "I'm A Lesser Man",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Jealous Guy"
+     "name": "Jealous Guy",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Double Fantasy * ft. vox"
+     "name": "Double Fantasy * ft. vox",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Fill The Void"
+     "name": "Fill The Void",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Take All Of Me (Take Me Back)"
+     "name": "Take All Of Me (Take Me Back)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2205,31 +3111,45 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "??? [Explicit]"
+     "name": "??? [Explicit]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "??? [Explicit]"
+     "name": "??? [Explicit]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Double Fantasy (feat. Future)"
+     "name": "Double Fantasy (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Popular (with Madonna) (feat. Playboi Carti)"
+     "name": "Popular (with Madonna) (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Like A God"
+     "name": "Like A God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "False Idols (feat. Lil Baby & Suzanna Son)"
+     "name": "False Idols (feat. Lil Baby & Suzanna Son)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2244,11 +3164,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Lure (Main Theme) [with MIKE DEAN]"
+     "name": "The Lure (Main Theme) [with MIKE DEAN]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lily-Rose Depp - World Class Sinner / I'm A Freak"
+     "name": "Lily-Rose Depp - World Class Sinner / I'm A Freak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2263,15 +3187,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Family (with Suzanna Son)"
+     "name": "Family (with Suzanna Son)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MIKE DEAN - Devil's Paradise"
+     "name": "MIKE DEAN - Devil's Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Double Fantasy (with Future)"
+     "name": "Double Fantasy (with Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2286,15 +3216,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "A Lesser Man"
+     "name": "A Lesser Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Take Me Back"
+     "name": "Take Me Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Moses Sumney - Get It B4"
+     "name": "Moses Sumney - Get It B4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2309,15 +3245,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "One Of The Girls (with JENNIE & Lily-Rose Depp)"
+     "name": "One Of The Girls (with JENNIE & Lily-Rose Depp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jealous Guy"
+     "name": "Jealous Guy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fill The Void (with Lily-Rose Depp & Ramsey)"
+     "name": "Fill The Void (with Lily-Rose Depp & Ramsey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2332,11 +3274,15 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Like A God"
+     "name": "Like A God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "False Idols (with Lil Baby & Suzanna Son)"
+     "name": "False Idols (with Lil Baby & Suzanna Son)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2351,15 +3297,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Dollhouse (with Lily-Rose Depp)"
+     "name": "Dollhouse (with Lily-Rose Depp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Troye Sivan - My Sweet Lord"
+     "name": "Troye Sivan - My Sweet Lord",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Suzanna Son - Crocodile Tears"
+     "name": "Suzanna Son - Crocodile Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2374,147 +3326,219 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Die For You"
+     "name": "Die For You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Starboy (feat. Daft Punk)"
+     "name": "Starboy (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Save Your Tears"
+     "name": "Save Your Tears",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Blinding Lights"
+     "name": "Blinding Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "In Your Eyes"
+     "name": "In Your Eyes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Wicked Games"
+     "name": "Wicked Games",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Can't Feel My Face"
+     "name": "Can't Feel My Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "I Feel It Coming (feat. Daft Punk)"
+     "name": "I Feel It Coming (feat. Daft Punk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Pray For Me (with Kendrick Lamar)"
+     "name": "Pray For Me (with Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Heartless"
+     "name": "Heartless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Hills"
+     "name": "The Hills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "The Morning"
+     "name": "The Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Call Out My Name"
+     "name": "Call Out My Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Often"
+     "name": "Often",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Ariana Grande - Love Me Harder (feat. The Weeknd)"
+     "name": "Ariana Grande - Love Me Harder (feat. The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Earned It (Fifty Shades Of Grey)"
+     "name": "Earned It (Fifty Shades Of Grey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Acquainted"
+     "name": "Acquainted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "After Hours"
+     "name": "After Hours",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "One Of The Girls (with JENNIE & Lily-Rose Depp)"
+     "name": "One Of The Girls (with JENNIE & Lily-Rose Depp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Popular (with Madonna) (feat. Playboi Carti)"
+     "name": "Popular (with Madonna) (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "I Was Never There (with Gesaffelstein)"
+     "name": "I Was Never There (with Gesaffelstein)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "House of Balloons / Glass Table Girls"
+     "name": "House of Balloons / Glass Table Girls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Less Than Zero"
+     "name": "Less Than Zero",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Is There Someone Else?"
+     "name": "Is There Someone Else?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Party Monster"
+     "name": "Party Monster",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Stargirl Interlude (feat. Lana Del Rey)"
+     "name": "Stargirl Interlude (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Tell Your Friends"
+     "name": "Tell Your Friends",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Sacrifice"
+     "name": "Sacrifice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
-     "name": "Reminder"
+     "name": "Reminder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
-     "name": "In The Night"
+     "name": "In The Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
-     "name": "Wasted Times"
+     "name": "Wasted Times",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#32",
-     "name": "Take My Breath"
+     "name": "Take My Breath",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#33",
-     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)"
+     "name": "Swedish House Mafia - Moth To A Flame (with The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#34",
-     "name": "Out Of Time"
+     "name": "Out Of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#35",
-     "name": "King Of The Fall"
+     "name": "King Of The Fall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#36",
-     "name": "High For This"
+     "name": "High For This",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2529,47 +3553,69 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Crowd (Without a Warning)"
+     "name": "The Crowd (Without a Warning)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "São Paulo"
+     "name": "São Paulo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "How It Feels (Society)"
+     "name": "How It Feels (Society)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Take Me Back To LA"
+     "name": "Take Me Back To LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "The Abyss"
+     "name": "The Abyss",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Open Hearts"
+     "name": "Open Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Timeless"
+     "name": "Timeless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Africa (Give Me Mercy)"
+     "name": "Africa (Give Me Mercy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Runaway"
+     "name": "Runaway",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Red Terror"
+     "name": "Red Terror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2584,7 +3630,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Dancing In The Flames"
+     "name": "Dancing In The Flames",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -2599,93 +3647,135 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wake Me Up (feat. Justice)"
+     "name": "Wake Me Up (feat. Justice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Can't Fucking Sing (I Can't F*****g Sing)"
+     "name": "I Can't Fucking Sing (I Can't F*****g Sing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "São Paulo (feat. Anitta)"
+     "name": "São Paulo (feat. Anitta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Until We're Skin & Bones"
+     "name": "Until We're Skin & Bones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baptized In Fear"
+     "name": "Baptized In Fear",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Open Hearts"
+     "name": "Open Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Opening Nights"
+     "name": "Opening Nights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Reflections Laughing (feat. Travis Scott & Florence + The Machine)"
+     "name": "Reflections Laughing (feat. Travis Scott & Florence + The Machine)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Enjoy The Show (feat. Future)"
+     "name": "Enjoy The Show (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Given Up On Me"
+     "name": "Given Up On Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I Can't Wait To Get There"
+     "name": "I Can't Wait To Get There",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Timeless (feat. Playboi Carti)"
+     "name": "Timeless (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Niagara Falls",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Take Me Back To LA"
+     "name": "Take Me Back To LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Big Sleep (feat. Giorgio Moroder)"
+     "name": "Big Sleep (feat. Giorgio Moroder)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Give Me Mercy"
+     "name": "Give Me Mercy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Drive"
+     "name": "Drive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "The Abyss (feat. Lana Del Rey)"
+     "name": "The Abyss (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Red Terror"
+     "name": "Red Terror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Without A Warning"
+     "name": "Without A Warning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Hurry Up Tomorrow"
+     "name": "Hurry Up Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2700,39 +3790,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "São Paulo (with Anitta)"
+     "name": "São Paulo (with Anitta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Open Hearts"
+     "name": "Open Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Timeless (with Playboi Carti)"
+     "name": "Timeless (with Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Take Me Back To LA"
+     "name": "Take Me Back To LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Give Me Mercy"
+     "name": "Give Me Mercy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "The Abyss (with Lana Del Rey)"
+     "name": "The Abyss (with Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Red Terror"
+     "name": "Red Terror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Without a Warning"
+     "name": "Without a Warning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2747,99 +3855,147 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wake Me Up"
+     "name": "Wake Me Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Can't Fucking Sing (I Can't F*****g Sing)"
+     "name": "I Can't Fucking Sing (I Can't F*****g Sing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "São Paulo"
+     "name": "São Paulo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Until We're Skin & Bones"
+     "name": "Until We're Skin & Bones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baptized In Fear"
+     "name": "Baptized In Fear",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Open Hearts"
+     "name": "Open Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Opening Nights"
+     "name": "Opening Nights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Reflections Laughing"
+     "name": "Reflections Laughing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Enjoy The Show"
+     "name": "Enjoy The Show",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Given Up On Me"
+     "name": "Given Up On Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I Can't Wait To Get There"
+     "name": "I Can't Wait To Get There",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Timeless"
+     "name": "Timeless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Niagara Falls"
+     "name": "Niagara Falls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Take Me Back To LA"
+     "name": "Take Me Back To LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Big Sleep"
+     "name": "Big Sleep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Give Me Mercy"
+     "name": "Give Me Mercy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Drive"
+     "name": "Drive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "The Abyss"
+     "name": "The Abyss",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Red Terror"
+     "name": "Red Terror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Without A Warning"
+     "name": "Without A Warning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Hurry Up Tomorrow"
+     "name": "Hurry Up Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Runaway"
+     "name": "Runaway",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Society"
+     "name": "Society",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2854,95 +4010,141 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Wake Me Up"
+     "name": "Wake Me Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Can't Fucking Sing (I Can't F*****g Sing)"
+     "name": "I Can't Fucking Sing (I Can't F*****g Sing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "São Paulo"
+     "name": "São Paulo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Until We're Skin & Bones"
+     "name": "Until We're Skin & Bones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baptized In Fear"
+     "name": "Baptized In Fear",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Open Hearts"
+     "name": "Open Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Opening Nights"
+     "name": "Opening Nights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Reflections Laughing"
+     "name": "Reflections Laughing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Enjoy The Show"
+     "name": "Enjoy The Show",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Given Up On Me"
+     "name": "Given Up On Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I Can't Wait To Get There"
+     "name": "I Can't Wait To Get There",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Timeless"
+     "name": "Timeless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Niagara Falls"
+     "name": "Niagara Falls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Take Me Back To LA"
+     "name": "Take Me Back To LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Big Sleep"
+     "name": "Big Sleep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Give Me Mercy"
+     "name": "Give Me Mercy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Drive"
+     "name": "Drive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "The Abyss"
+     "name": "The Abyss",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Red Terror"
+     "name": "Red Terror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Without A Warning"
+     "name": "Without A Warning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Hurry Up Tomorrow"
+     "name": "Hurry Up Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Closing Night"
+     "name": "Closing Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2958,135 +4160,139 @@
     {
      "num": "#1",
      "name": "Wake Me Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Can't Fucking Sing (I Can't F*****g Sing)"
+     "name": "I Can't Fucking Sing (I Can't F*****g Sing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "São Paulo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Until We're Skin & Bones",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Baptized In Fear",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Open Hearts",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Opening Nights",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Reflections Laughing",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Enjoy The Show",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Given Up On Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "I Can't Wait To Get There",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Timeless",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Niagara Falls",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Take Me Back To LA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Big Sleep",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Give Me Mercy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Drive",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "The Abyss",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Red Terror",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Without A Warning",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "Hurry Up Tomorrow",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "Closing Night",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -3102,107 +4308,159 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Please Leave A Message"
+     "name": "Please Leave A Message",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Anima Pt. 1"
+     "name": "Anima Pt. 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Gas Station"
+     "name": "Gas Station",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Dance Until We’re Skin And Bones"
+     "name": "Dance Until We’re Skin And Bones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "It’s Mostly Psychological"
+     "name": "It’s Mostly Psychological",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sky Is Falling"
+     "name": "Sky Is Falling",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Heartbeat Slower"
+     "name": "Heartbeat Slower",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "We’ll Take It Backstage"
+     "name": "We’ll Take It Backstage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Muted"
+     "name": "Muted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Close Encounter"
+     "name": "Close Encounter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "I Feel Like I Know You"
+     "name": "I Feel Like I Know You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Champagne Solves Everything"
+     "name": "Champagne Solves Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "In Too Deep"
+     "name": "In Too Deep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Can You Hear Me Knocking?"
+     "name": "Can You Hear Me Knocking?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Anima Pt. 2"
+     "name": "Anima Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Tomorrow’s Coming"
+     "name": "Tomorrow’s Coming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Cry For Me"
+     "name": "Cry For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "São Paulo (feat. Anitta)"
+     "name": "São Paulo (feat. Anitta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Open Hearts"
+     "name": "Open Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Timeless (feat. Playboi Carti)"
+     "name": "Timeless (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Take Me Back To LA"
+     "name": "Take Me Back To LA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Give Me Mercy"
+     "name": "Give Me Mercy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "The Abyss (feat. Lana Del Rey)"
+     "name": "The Abyss (feat. Lana Del Rey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Red Terror"
+     "name": "Red Terror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Without a Warning"
+     "name": "Without a Warning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Hurry Up Tomorrow"
+     "name": "Hurry Up Tomorrow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

@@ -25,382 +25,538 @@
   {
    "era": "Awakening My InnerBeast",
    "name": "Awakening My InnerBeast",
-   "date": "Aug 26, 2016",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Awakening-my-innerbeast"
+   ],
    "description": "Tracklist for the offical release of Awakening My Innerbeast.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Green Thumbs"
+     "name": "Green Thumbs",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "+NO WAY+ (feat. Kodie Shane & Longwe)"
+     "name": "+NO WAY+ (feat. Kodie Shane & Longwe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "bitch go"
+     "name": "bitch go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "+Wrist Work+ (feat. A1Billionaire)"
+     "name": "+Wrist Work+ (feat. A1Billionaire)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Welp! [Watch how I Move]+++"
+     "name": "Welp! [Watch how I Move]+++",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Beast Mode ++++",
    "name": "Beast Mode ++++",
-   "date": "2016-10-17",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Beast-mode"
+   ],
    "description": "Tracklist for the offical release of Beast Mode ++++.",
    "tracks": [
     {
      "num": "#1",
-     "name": "1400 Gang/Qs & Ps"
+     "name": "1400 Gang/Qs & Ps",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Young Wild Boys"
+     "name": "Young Wild Boys",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Solar Flare"
+     "name": "Solar Flare",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Too late"
+     "name": "Too late",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "HEARTBREAK-14"
+     "name": "HEARTBREAK-14",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Rock The World Trippie (xxxxx)",
    "name": "Rock The World Trippie (xxxxx)",
-   "date": "2016-11-13",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Rock-the-world-trippie-xxxxx"
+   ],
    "description": "Tracklist for the offical release of Rock The World Trippie (xxxxx).",
    "tracks": [
     {
      "num": "#1",
-     "name": "Gave her soul away (feat. Lil Wop & Jerome Milly)"
+     "name": "Gave her soul away (feat. Lil Wop & Jerome Milly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Dead or Alive"
+     "name": "Dead or Alive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "The New Jay z (Im just chilling baby)"
+     "name": "The New Jay z (Im just chilling baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Its OK (okok xxxxx) (feat. T-Wayne)"
+     "name": "Its OK (okok xxxxx) (feat. T-Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "+NO WAY+ +++ High Steez (feat. Elliott Trent)"
+     "name": "+NO WAY+ +++ High Steez (feat. Elliott Trent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Low life/Rockstar pt 2"
+     "name": "Low life/Rockstar pt 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lone WareWolf (Enemies) (feat. Lil Wop)"
+     "name": "Lone WareWolf (Enemies) (feat. Lil Wop)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "White Room Project",
    "name": "White Room Project",
-   "date": "2017-01-18",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/White-room-project"
+   ],
    "description": "Tracklist for the offical release of White Room Project.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Way on"
+     "name": "Way on",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Long Way Home From Mars!"
+     "name": "Long Way Home From Mars!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Triple Double"
+     "name": "Triple Double",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Purple Vibes (feat. TTO K.T)"
+     "name": "Purple Vibes (feat. TTO K.T)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Hurt to the Bone"
+     "name": "Hurt to the Bone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Love Scars/You hurt me"
+     "name": "Love Scars/You hurt me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Trap Star [Big-14] freestyle 1400 1400 1400"
+     "name": "Trap Star [Big-14] freestyle 1400 1400 1400",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "A Love Letter To You",
    "name": "A Love Letter To You",
-   "date": "2017-05-12",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Love Scars"
+     "name": "Love Scars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rack City/Love Scars 2 (feat. Antonia & Chris King)"
+     "name": "Rack City/Love Scars 2 (feat. Antonia & Chris King)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Romeo & Juliet"
+     "name": "Romeo & Juliet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Deeply Scared (feat. UnoTheActivist)"
+     "name": "Deeply Scared (feat. UnoTheActivist)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Blade of Woe (feat. Famous Dex)"
+     "name": "Blade of Woe (feat. Famous Dex)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "It Takes Time"
+     "name": "It Takes Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Poles 1469 (feat. 6ix9ine)"
+     "name": "Poles 1469 (feat. 6ix9ine)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "No Smoke No Smoke 1400 B.C. / Sauce (feat. Pachino)"
+     "name": "No Smoke No Smoke 1400 B.C. / Sauce (feat. Pachino)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Stoves on 14th (feat. Black Jezuss)"
+     "name": "Stoves on 14th (feat. Black Jezuss)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Limitless (feat. Lil Tracy & Rocket Da Goon)"
+     "name": "Limitless (feat. Lil Tracy & Rocket Da Goon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Can You Rap Like Me?"
+     "name": "Can You Rap Like Me?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Never Ever Land"
+     "name": "Never Ever Land",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "A Love Letter You'll Never Get...",
    "name": "A Love Letter You'll Never Get...",
-   "date": "2017-08-29",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-youll-never-get"
+   ],
    "description": "Tracklist for the offical release of A Love Letter You'll Never Get....",
    "tracks": [
     {
      "num": "#1",
-     "name": "Woah Woah Woah/Crashbandicoot And Chill (feat. Bali Baby)"
+     "name": "Woah Woah Woah/Crashbandicoot And Chill (feat. Bali Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I Know How to Self Destruct"
+     "name": "I Know How to Self Destruct",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "A Love Letter To You 2",
    "name": "A Love Letter To You 2",
-   "date": "2017-05-12",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you-2"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You 2.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Bust Down"
+     "name": "Bust Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Feel Good (feat. Cydnee with a C & Khalil)"
+     "name": "Feel Good (feat. Cydnee with a C & Khalil)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "In Too Deep"
+     "name": "In Too Deep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Deadman's Wonderland (feat. Antionia)"
+     "name": "Deadman's Wonderland (feat. Antionia)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Woah Woah Woah/Crashbandicoot And Chill (feat. Bali Baby)"
+     "name": "Woah Woah Woah/Crashbandicoot And Chill (feat. Bali Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Back of My Mind (feat. Chris King & Cydnee with a C)"
+     "name": "Back of My Mind (feat. Chris King & Cydnee with a C)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Today (feat. UnoTheActivist)"
+     "name": "Today (feat. UnoTheActivist)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Hellboy"
+     "name": "Hellboy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Back Back Back"
+     "name": "Back Back Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dangerous (feat. Chris King & Rocket Da Goon)"
+     "name": "Dangerous (feat. Chris King & Rocket Da Goon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Overweight (feat. Chris King)"
+     "name": "Overweight (feat. Chris King)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Overdose on L1FE"
+     "name": "Overdose on L1FE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "I Know How to Self Destruct"
+     "name": "I Know How to Self Destruct",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Let Me Down"
+     "name": "Let Me Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Angels & Demons",
    "name": "Angels & Demons",
-   "date": "2017-10-31",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd-and-lil-wop/Angels-demons"
+   ],
    "description": "Tracklist for the offical release of the collab tape with Lil Wop, Angels & Demons.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Gave Her Soul Away"
+     "name": "Gave Her Soul Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Gleam"
+     "name": "Gleam",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "N A DAZE"
+     "name": "N A DAZE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Like A Savage"
+     "name": "Like A Savage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Too Long"
+     "name": "Too Long",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "TR666+!$ 1400/800",
    "name": "TR666+!$ 1400/800",
-   "date": "2018-07-25",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Tr666-1400-800"
+   ],
    "description": "Tracklist for the offical release of TR666+!$ 1400/800.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Black Magic"
+     "name": "Black Magic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "BILAP (feat. Chief Keef)"
+     "name": "BILAP (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "LIFE'S A TRIP",
    "name": "LIFE'S A TRIP",
-   "date": "2018.0",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://www.reddit.com/r/trippieredd/comments/gmbwi1/would_u_have_wanted_to_hear_the_original_26_song/"
+   ],
    "description": "An early version of LIFE'S A TRIP tracklist, confirmed to be 26 tracks long, teased via Trippie Redd's Instagram in June 2018.",
    "tracks": [
     {
      "num": "#1",
-     "name": "AWAY AWAY"
+     "name": "AWAY AWAY",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Taking A Walk"
+     "name": "Taking A Walk",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "WISH"
+     "name": "WISH",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "BIGGER THAN SATAN"
+     "name": "BIGGER THAN SATAN",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Missing My Idols"
+     "name": "Missing My Idols",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Me Likey"
+     "name": "Me Likey",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Red Butterflies"
+     "name": "Red Butterflies",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Bird Shit"
+     "name": "Bird Shit",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "BANG!"
+     "name": "BANG!",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -410,67 +566,97 @@
   {
    "era": "LIFE'S A TRIP",
    "name": "LIFE'S A TRIP",
-   "date": "2018-08-10",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Life-s-a-trip"
+   ],
    "description": "Tracklist for the offical release of LIFE'S A TRIP.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Together"
+     "name": "Together",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Taking A Walk"
+     "name": "Taking A Walk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wish (Trippie Mix) (with Diplo)"
+     "name": "Wish (Trippie Mix) (with Diplo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Missing My Idols"
+     "name": "Missing My Idols",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Forever Ever (feat. Young Thug & Reese LAFLARE)"
+     "name": "Forever Ever (feat. Young Thug & Reese LAFLARE)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Bird Shit"
+     "name": "Bird Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "BANG!"
+     "name": "BANG!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "How You Feel"
+     "name": "How You Feel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Dark Knight Dummo (feat. Travis Scott)"
+     "name": "Dark Knight Dummo (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "UKA UKA"
+     "name": "UKA UKA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Shake It Up"
+     "name": "Shake It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Oomps Revenge"
+     "name": "Oomps Revenge",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Gore"
+     "name": "Gore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Underwater FlyZone"
+     "name": "Underwater FlyZone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -480,114 +666,162 @@
   {
    "era": "TrippieBoat",
    "name": "Trippie x Boat",
-   "date": "N/A",
-   "quality": "N/A",
-   "source": "N/A",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Unofficial tracklist for the joint Trippie Redd and Lil Yachty collab project.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Chanel Drip"
+     "name": "Chanel Drip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "I'm Ready"
+     "name": "I'm Ready",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "RED"
+     "name": "RED",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Only In My Dreams"
+     "name": "Only In My Dreams",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Ungrateful"
+     "name": "Ungrateful",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Guap Boys 2"
+     "name": "Guap Boys 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Who Run It Remix"
+     "name": "Who Run It Remix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "A Love Letter To You 3",
    "name": "A Love Letter To You 3",
-   "date": "2018-11-09",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you-3"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You 3.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Topanga"
+     "name": "Topanga",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Fire Starter (feat. Emani22)"
+     "name": "Fire Starter (feat. Emani22)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Toxic Waste"
+     "name": "Toxic Waste",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Negative Energy (feat. Kodie Shane)"
+     "name": "Negative Energy (feat. Kodie Shane)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Can't Love"
+     "name": "Can't Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Love Scars 3"
+     "name": "Love Scars 3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "A.L.L.T.Y. 3 (feat. Baby Goth)"
+     "name": "A.L.L.T.Y. 3 (feat. Baby Goth)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Emani Interlude (feat. Emani22)"
+     "name": "Emani Interlude (feat. Emani22)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Elevate & Motivate (feat. YoungBoy Never Broke Again & Nel-Denarro)"
+     "name": "Elevate & Motivate (feat. YoungBoy Never Broke Again & Nel-Denarro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I Tried Loving"
+     "name": "I Tried Loving",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Wicked"
+     "name": "Wicked",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Loyalty Before Royalty"
+     "name": "Loyalty Before Royalty",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "1400 / 999 Freestyle (feat. Juice WRLD)"
+     "name": "1400 / 999 Freestyle (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "So Alive"
+     "name": "So Alive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Diamond Minds (feat. Tory Lanez & Elliott Trent)"
+     "name": "Diamond Minds (feat. Tory Lanez & Elliott Trent)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Camp Fire Tale"
+     "name": "Camp Fire Tale",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -597,296 +831,428 @@
   {
    "era": "Old Self",
    "name": "Old Self",
-   "date": "2019-02-28",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Old-self"
+   ],
    "description": "Tracklist for the offical release of Old Self.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Super Sayin 14"
+     "name": "Super Sayin 14",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Careless Vibes (feat. Hendoo)"
+     "name": "Careless Vibes (feat. Hendoo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Real (feat. Skynny Blu3)"
+     "name": "Real (feat. Skynny Blu3)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Lithium (Hope It Ain't Too Late)"
+     "name": "Lithium (Hope It Ain't Too Late)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "FUCK NIGGA (feat. Kodie Shane)"
+     "name": "FUCK NIGGA (feat. Kodie Shane)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "DRUGGY (feat. TTO K.T)"
+     "name": "DRUGGY (feat. TTO K.T)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Trench Dweller"
+     "name": "Trench Dweller",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Love Is Dead"
+     "name": "Love Is Dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "2014 Freestyle"
+     "name": "2014 Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I'm Rich !"
+     "name": "I'm Rich !",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "APPLY THE PRESSURE (feat. TTO K.T)"
+     "name": "APPLY THE PRESSURE (feat. TTO K.T)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Pull Up On You (feat. Rasta Papii)"
+     "name": "Pull Up On You (feat. Rasta Papii)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "HOT BOYS (feat. Lil Twist & Fooly Faime)"
+     "name": "HOT BOYS (feat. Lil Twist & Fooly Faime)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Beat It"
+     "name": "Beat It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Superman (feat. Major Zoe)"
+     "name": "Superman (feat. Major Zoe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "All The Way Home (feat. Bobby Biz & Major Zoe)"
+     "name": "All The Way Home (feat. Bobby Biz & Major Zoe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "1400/Zoe Gang (Turn Me Up) (feat. Major Zoe)"
+     "name": "1400/Zoe Gang (Turn Me Up) (feat. Major Zoe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "!",
    "name": "!",
-   "date": "2019-08-09",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Exclamation-mark"
+   ],
    "description": "Tracklist for the offical release of !.",
    "tracks": [
     {
      "num": "#1",
-     "name": "!"
+     "name": "!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Snake Skin"
+     "name": "Snake Skin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Be Yourself"
+     "name": "Be Yourself",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Try"
+     "name": "I Try",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "They Afraid of You (feat. Playboi Carti)"
+     "name": "They Afraid of You (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Immortal (feat. The Game)"
+     "name": "Immortal (feat. The Game)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Throw It Away"
+     "name": "Throw It Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Keep Your Head Up"
+     "name": "Keep Your Head Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "RIOT"
+     "name": "RIOT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Mac 10 (feat. Lil Baby & Lil Duke)"
+     "name": "Mac 10 (feat. Lil Baby & Lil Duke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Everything BoZ (feat. Coi Leray)"
+     "name": "Everything BoZ (feat. Coi Leray)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Under Enemy Arms"
+     "name": "Under Enemy Arms",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Lil Wayne"
+     "name": "Lil Wayne",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Signing Off"
+     "name": "Signing Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "!",
    "name": "! (Revision)",
-   "date": "2024-04-10",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/2trqp8gTJ1MMmY9HoKqO2y?si=ggSiMaNDRGeqY4ZXUSCZkg"
+   ],
    "description": "A version of ! where the song \"They Afraid of You\" has been taken off, aswell as I Try. The song was taken off on April 10, 2024.",
    "tracks": [
     {
      "num": "#1",
-     "name": "!"
+     "name": "!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Snake Skin"
+     "name": "Snake Skin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Be Yourself"
+     "name": "Be Yourself",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Immortal (feat. The Game)"
+     "name": "Immortal (feat. The Game)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Throw It Away"
+     "name": "Throw It Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Keep Your Head Up"
+     "name": "Keep Your Head Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "RIOT"
+     "name": "RIOT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Mac 10 (feat. Lil Baby & Lil Duke)"
+     "name": "Mac 10 (feat. Lil Baby & Lil Duke)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Everything BoZ (feat. Coi Leray)"
+     "name": "Everything BoZ (feat. Coi Leray)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Under Enemy Arms"
+     "name": "Under Enemy Arms",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Lil Wayne"
+     "name": "Lil Wayne",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Signing Off"
+     "name": "Signing Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "A Love Letter To You 4",
    "name": "A Love Letter To You 4",
-   "date": "2019.0",
-   "quality": "Clear",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early version of the ALLTY4 tracklist, being 20 tracks.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Who Needs Love"
+     "name": "Who Needs Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Love Sick"
+     "name": "Love Sick",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Love Me More"
+     "name": "Love Me More",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Real Feel"
+     "name": "Real Feel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "This Ain't That (feat. Lil Mosey)"
+     "name": "This Ain't That (feat. Lil Mosey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "6 Kiss (feat. Juice WRLD & YNW Melly)"
+     "name": "6 Kiss (feat. Juice WRLD & YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Till The End Of Time"
+     "name": "Till The End Of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Heart Break Again (feat. Pi'erre Bourne)"
+     "name": "Heart Break Again (feat. Pi'erre Bourne)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "U Deserve It (feat. Chris King & Quan'ta)"
+     "name": "U Deserve It (feat. Chris King & Quan'ta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Hate Me (feat. Youngboy Never Broke Again)"
+     "name": "Hate Me (feat. Youngboy Never Broke Again)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "All For Me (feat. Smokepurpp)"
+     "name": "All For Me (feat. Smokepurpp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "How I Was Raised (feat. Lil Tecca)"
+     "name": "How I Was Raised (feat. Lil Tecca)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Abandoned Interlude"
+     "name": "Abandoned Interlude",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "The Grinch"
+     "name": "The Grinch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Death (feat. DaBaby)"
+     "name": "Death (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "RMP"
+     "name": "RMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "M's (feat. Lil Yachty & Pi'erre Bourne)"
+     "name": "M's (feat. Lil Yachty & Pi'erre Bourne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Bust Down 2 (feat. Youv Dee)"
+     "name": "Bust Down 2 (feat. Youv Dee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "The Jungle Book (feat. Lil Wop)"
+     "name": "The Jungle Book (feat. Lil Wop)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Chosen"
+     "name": "Chosen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -896,95 +1262,139 @@
   {
    "era": "A Love Letter To You 4",
    "name": "A Love Letter To You 4",
-   "date": "2019-11-22",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you-4"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You 4.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Leray"
+     "name": "Leray",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Who Needs Love"
+     "name": "Who Needs Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Love Sick"
+     "name": "Love Sick",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Love Me More"
+     "name": "Love Me More",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Real Feel"
+     "name": "Real Feel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "This Ain't That (feat. Lil Mosey)"
+     "name": "This Ain't That (feat. Lil Mosey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "6 Kiss (feat. Juice WRLD & YNW Melly)"
+     "name": "6 Kiss (feat. Juice WRLD & YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Till The End Of Time"
+     "name": "Till The End Of Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "U Deserve It (feat. Chris King & Quan'ta)"
+     "name": "U Deserve It (feat. Chris King & Quan'ta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Hate Me (feat. Youngboy Never Broke Again)"
+     "name": "Hate Me (feat. Youngboy Never Broke Again)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "All For Me (feat. Smokepurpp)"
+     "name": "All For Me (feat. Smokepurpp)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Sickening (feat. Tory Lanez)"
+     "name": "Sickening (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "The Grinch"
+     "name": "The Grinch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Death (feat. DaBaby)"
+     "name": "Death (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "RMP"
+     "name": "RMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "M's (feat. Lil Yachty & Pi'erre Bourne)"
+     "name": "M's (feat. Lil Yachty & Pi'erre Bourne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Bust Down Deux (feat. Youv Dee)"
+     "name": "Bust Down Deux (feat. Youv Dee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "The Jungle Book (feat. Lil Wop)"
+     "name": "The Jungle Book (feat. Lil Wop)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Chosen"
+     "name": "Chosen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Abandoned (feat. Mariah The Scientist)"
+     "name": "Abandoned (feat. Mariah The Scientist)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Can You Rap Like Me, Pt. 2 (feat. Chris King)"
+     "name": "Can You Rap Like Me, Pt. 2 (feat. Chris King)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -994,43 +1404,61 @@
   {
    "era": "A Love Letter To You 4 (Deluxe)",
    "name": "A Love Letter To You 4 (Deluxe)",
-   "date": "2020-02-21",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you-4-deluxe"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You 4 (Deluxe).",
    "tracks": [
     {
      "num": "#1",
-     "name": "I Love You (feat. Chance The Rapper)"
+     "name": "I Love You (feat. Chance The Rapper)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Way (feat. Russ)"
+     "name": "The Way (feat. Russ)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "YELL OH (feat. Young Thug)"
+     "name": "YELL OH (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "How I Was Raised (feat. Lil Tecca)"
+     "name": "How I Was Raised (feat. Lil Tecca)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "OTF KNIGHTMARE (feat. Lil Durk & G Herbo)"
+     "name": "OTF KNIGHTMARE (feat. Lil Durk & G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Even Steven"
+     "name": "Even Steven",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Amazinggg (feat. Sahbabii)"
+     "name": "Amazinggg (feat. Sahbabii)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Koi"
+     "name": "Koi",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1040,35 +1468,49 @@
   {
    "era": "Pegasus",
    "name": "Voodoo Child",
-   "date": "2020.0",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://leaked.cx/threads/trippie-redd-obito-voodo-child-ep-tracklist.145767/"
+   ],
    "description": "The complete tracklist that was submitted to Trippie's label but never released. This EP was meant to release shortly before Pegasus, however was scrapped.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Voodoo Child"
+     "name": "Voodoo Child",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Moonlight"
+     "name": "Moonlight",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "So Stressed"
+     "name": "So Stressed",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Never Change"
+     "name": "Never Change",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "No Honorable Mention"
+     "name": "No Honorable Mention",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Obito"
+     "name": "Obito",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -1078,111 +1520,163 @@
   {
    "era": "Pegasus",
    "name": "Pegasus",
-   "date": "2020-05-20",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://pillows.su/f/2b0855f9af56ab876493afd2387debaf"
+   ],
    "description": "The earlier version of the Pegasus album from May 20, 2020.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Let It Out (feat. Myiah Lynnae)"
+     "name": "Let It Out (feat. Myiah Lynnae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Moonlight"
+     "name": "Moonlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Do You Love Me"
+     "name": "Do You Love Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Rainfall (feat. Lil Wayne & HoodyBaby)"
+     "name": "Rainfall (feat. Lil Wayne & HoodyBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "So Stressed (feat. Yung LB)"
+     "name": "So Stressed (feat. Yung LB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Excitement (feat. PARTYNEXTDOOR)"
+     "name": "Excitement (feat. PARTYNEXTDOOR)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mood (feat. Chris Brown)"
+     "name": "Mood (feat. Chris Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pegasus"
+     "name": "Pegasus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "V-12"
+     "name": "V-12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Personal Favorite (feat. Rich the Kid)"
+     "name": "Personal Favorite (feat. Rich the Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "N/A"
+     "name": "N/A",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Trapped In My Head (Spaceships) (feat. Young Thug)"
+     "name": "Trapped In My Head (Spaceships) (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Never Change (feat. Future)"
+     "name": "Never Change (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Good Morning"
+     "name": "Good Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "No Honorable Mention (feat. Quavo & Lil Mosey)"
+     "name": "No Honorable Mention (feat. Quavo & Lil Mosey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Too Fly"
+     "name": "Too Fly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Red Beam (feat. Sean Kingston)"
+     "name": "Red Beam (feat. Sean Kingston)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Sun God (feat. Myiah Lynnae)"
+     "name": "Sun God (feat. Myiah Lynnae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Take One"
+     "name": "Take One",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Wine Glass (feat. FBG GOAT)"
+     "name": "Wine Glass (feat. FBG GOAT)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Sleepy Hollow"
+     "name": "Sleepy Hollow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Kidd that Didd (feat. Future & Doe Boy)"
+     "name": "Kidd that Didd (feat. Future & Doe Boy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Really High (Obito)"
+     "name": "Really High (Obito)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "TR666 (feat. Swae Lee)"
+     "name": "TR666 (feat. Swae Lee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Voodoo Child"
+     "name": "Voodoo Child",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1192,238 +1686,350 @@
   {
    "era": "Pegasus",
    "name": "Pegasus",
-   "date": "2020-10-30",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Pegasus"
+   ],
    "description": "Tracklist for the offical release of Pegasus.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Let It Out (feat. Myiah Lynnae)"
+     "name": "Let It Out (feat. Myiah Lynnae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Moonlight"
+     "name": "Moonlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Love Scars 4"
+     "name": "Love Scars 4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Nether"
+     "name": "The Nether",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "So Stressed (feat. Yung LB)"
+     "name": "So Stressed (feat. Yung LB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Excitement (feat. PARTYNEXTDOOR)"
+     "name": "Excitement (feat. PARTYNEXTDOOR)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mood (feat. Chris Brown)"
+     "name": "Mood (feat. Chris Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pegasus"
+     "name": "Pegasus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Weeeeee"
+     "name": "Weeeeee",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Personal Favorite (feat. Rich the Kid)"
+     "name": "Personal Favorite (feat. Rich the Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "V-12"
+     "name": "V-12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Spaceships (feat. Young Thug)"
+     "name": "Spaceships (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Never Change (feat. Future)"
+     "name": "Never Change (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Good Morning"
+     "name": "Good Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "No Honorable Mention (feat. Quavo & Lil Mosey)"
+     "name": "No Honorable Mention (feat. Quavo & Lil Mosey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "I Got You (feat. Busta Rhymes)"
+     "name": "I Got You (feat. Busta Rhymes)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Too Fly"
+     "name": "Too Fly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Red Beam (feat. Sean Kingston)"
+     "name": "Red Beam (feat. Sean Kingston)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Oomps Revenge, Pt. 2"
+     "name": "Oomps Revenge, Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Take One"
+     "name": "Take One",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Sleepy Hollow"
+     "name": "Sleepy Hollow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Kidd that Didd (feat. Future & Doe Boy)"
+     "name": "Kidd that Didd (feat. Future & Doe Boy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Don"
+     "name": "Don",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Hell Rain (feat. Lil Wayne & HoodyBaby)"
+     "name": "Hell Rain (feat. Lil Wayne & HoodyBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "TR666 (feat. Swae Lee)"
+     "name": "TR666 (feat. Swae Lee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Sun God (feat. Myiah Lynnae)"
+     "name": "Sun God (feat. Myiah Lynnae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Pegasus",
    "name": "Pegasus (Target Exclusive)",
-   "date": "2020-10-30",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Pegasus-target-exclusive"
+   ],
    "description": "The tracklist for the Target exclusive version for Pegasus.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Let It Out (feat. Myiah Lynnae)"
+     "name": "Let It Out (feat. Myiah Lynnae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Moonlight"
+     "name": "Moonlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Love Scars 4"
+     "name": "Love Scars 4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Nether"
+     "name": "The Nether",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "So Stressed (feat. Yung LB)"
+     "name": "So Stressed (feat. Yung LB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Excitement (feat. PARTYNEXTDOOR)"
+     "name": "Excitement (feat. PARTYNEXTDOOR)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mood (feat. Chris Brown)"
+     "name": "Mood (feat. Chris Brown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pegasus"
+     "name": "Pegasus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Weeeeee"
+     "name": "Weeeeee",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Personal Favorite (feat. Rich the Kid)"
+     "name": "Personal Favorite (feat. Rich the Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "V-12"
+     "name": "V-12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Spaceships (feat. Young Thug)"
+     "name": "Spaceships (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Never Change (feat. Future)"
+     "name": "Never Change (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Good Morning"
+     "name": "Good Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "No Honorable Mention (feat. Quavo & Lil Mosey)"
+     "name": "No Honorable Mention (feat. Quavo & Lil Mosey)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "I Got You (feat. Busta Rhymes)"
+     "name": "I Got You (feat. Busta Rhymes)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Too Fly"
+     "name": "Too Fly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Red Beam (feat. Sean Kingston)"
+     "name": "Red Beam (feat. Sean Kingston)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Oomps Revenge, Pt. 2"
+     "name": "Oomps Revenge, Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Take One"
+     "name": "Take One",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Sleepy Hollow"
+     "name": "Sleepy Hollow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Kidd that Didd (feat. Future & Doe Boy)"
+     "name": "Kidd that Didd (feat. Future & Doe Boy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Don"
+     "name": "Don",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Hell Rain (feat. Lil Wayne & HoodyBaby)"
+     "name": "Hell Rain (feat. Lil Wayne & HoodyBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "TR666 (feat. Swae Lee)"
+     "name": "TR666 (feat. Swae Lee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Sun God (feat. Myiah Lynnae)"
+     "name": "Sun God (feat. Myiah Lynnae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Where You Goin"
+     "name": "Where You Goin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Lightning"
+     "name": "Lightning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1433,134 +2039,192 @@
   {
    "era": "Pegasus: Neon Shark vs Pegasus",
    "name": "Pegasus: Neon Shark vs Pegasus",
-   "date": "N/A",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Earlier tracklist for the collab project with Travis Barker, Pegasus: Neon Shark vs Pegasus, with a different order of songs, discovered with the filenames.",
    "tracks": [
     {
      "num": "#1",
-     "name": "WITHOUT YOU"
+     "name": "WITHOUT YOU",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "SWIMMING"
+     "name": "SWIMMING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "FEMALE SHARK"
+     "name": "FEMALE SHARK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "GERONIMO (feat. Chino Moreno)"
+     "name": "GERONIMO (feat. Chino Moreno)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "PILL BREAKER (feat. mgk & blackbear)"
+     "name": "PILL BREAKER (feat. mgk & blackbear)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SEA WORLD"
+     "name": "SEA WORLD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "IT'S COMING"
+     "name": "IT'S COMING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "LEADERS"
+     "name": "LEADERS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "SAVE YOURSELF"
+     "name": "SAVE YOURSELF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "DREAMER"
+     "name": "DREAMER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "RED SKY ((feat. mgk)"
+     "name": "RED SKY ((feat. mgk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "MEGLADON"
+     "name": "MEGLADON",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "FROZEN OCEAN"
+     "name": "FROZEN OCEAN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "DEAD DESERT (feat. Scarlxrd & ZillaKami)"
+     "name": "DEAD DESERT (feat. Scarlxrd & ZillaKami)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Pegasus: Neon Shark vs Pegasus",
    "name": "Pegasus: Neon Shark vs Pegasus",
-   "date": "2021-02-19",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Pegasus-neon-shark-vs-pegasus-presented-by-travis-barker-deluxe"
+   ],
    "description": "Tracklist for the offical release of the collab project with Travis Barker, Pegasus: Neon Shark vs Pegasus.",
    "tracks": [
     {
      "num": "#1",
-     "name": "PILL BREAKER (feat. mgk & blackbear)"
+     "name": "PILL BREAKER (feat. mgk & blackbear)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "WITHOUT YOU"
+     "name": "WITHOUT YOU",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "SWIMMING"
+     "name": "SWIMMING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FEMALE SHARK"
+     "name": "FEMALE SHARK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "GERONIMO (feat. Chino Moreno)"
+     "name": "GERONIMO (feat. Chino Moreno)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SEA WORLD"
+     "name": "SEA WORLD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "RED SKY (feat. mgk)"
+     "name": "RED SKY (feat. mgk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "MEGLADON"
+     "name": "MEGLADON",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "SAVE YOURSELF"
+     "name": "SAVE YOURSELF",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "DREAMER"
+     "name": "DREAMER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "IT'S COMING"
+     "name": "IT'S COMING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "LEADERS"
+     "name": "LEADERS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "FROZEN OCEAN"
+     "name": "FROZEN OCEAN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "DEAD DESERT (feat. Scarlxrd & ZillaKami)"
+     "name": "DEAD DESERT (feat. Scarlxrd & ZillaKami)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1570,224 +2234,318 @@
   {
    "era": "Trip At Knight [V1]",
    "name": "Trip At Knight",
-   "date": "2020.0",
-   "quality": "N/A",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early version of Trip At Knight with the filenames' numbers pieced together.",
    "tracks": [
     {
      "num": "#1",
-     "name": "TRIP McKNIGHT"
+     "name": "TRIP McKNIGHT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Way Back Home (with Skrillex & PinkPanthress)"
+     "name": "Way Back Home (with Skrillex & PinkPanthress)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "LMK"
+     "name": "LMK",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Let It Go"
+     "name": "Let It Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Black Ops"
+     "name": "Black Ops",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Super Glue"
+     "name": "Super Glue",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "MAMA BOYYY"
+     "name": "MAMA BOYYY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Throwback Flow (feat. Ron Avant)"
+     "name": "Throwback Flow (feat. Ron Avant)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Third Eye View"
+     "name": "Third Eye View",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Trip At Knight [V2]",
    "name": "Trip At Knight",
-   "date": "2021.0",
-   "quality": "N/A",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early version of Trip At Knight, with No Ice replacing Space Time.",
    "tracks": [
     {
      "num": "#13",
-     "name": "No Ice"
+     "name": "No Ice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Trip At Knight [V2]",
    "name": "Trip At Knight",
-   "date": "2021-08-19",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Trip-at-knight-complete-edition"
+   ],
    "description": "Tracklist for the offical release of Trip At Knight.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Molly Hearts"
+     "name": "Molly Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MP5 (feat. SoFaygo)"
+     "name": "MP5 (feat. SoFaygo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Finish Line"
+     "name": "Finish Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Holy Smokes (feat. Lil Uzi Vert)"
+     "name": "Holy Smokes (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Super Cell"
+     "name": "Super Cell",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Miss The Rage (feat. Playboi Carti)"
+     "name": "Miss The Rage (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Supernatural"
+     "name": "Supernatural",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Demon Time (feat. Ski Mask The Slump God)"
+     "name": "Demon Time (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Matt Hardy 999 (feat. Juice WRLD)"
+     "name": "Matt Hardy 999 (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Vibes"
+     "name": "Vibes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "New Money"
+     "name": "New Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Danny Phantom (feat. XXXTENTACION)"
+     "name": "Danny Phantom (feat. XXXTENTACION)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Space Time"
+     "name": "Space Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Baki"
+     "name": "Baki",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "iPhone"
+     "name": "iPhone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Rich MF (feat. Polo G & Lil Durk)"
+     "name": "Rich MF (feat. Polo G & Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Captain Crunch (feat. Sada Baby, Icewear Vezzo, & Babyface Ray)"
+     "name": "Captain Crunch (feat. Sada Baby, Icewear Vezzo, & Babyface Ray)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Trip At Knight [V2]",
    "name": "Trip At Knight",
-   "date": "2021-08-21",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Trip-at-knight-complete-edition"
+   ],
    "description": "Tracklist for the offical release of Trip At Knight (Complete Edition).",
    "tracks": [
     {
      "num": "#1",
-     "name": "Molly Hearts"
+     "name": "Molly Hearts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "MP5 (feat. SoFaygo)"
+     "name": "MP5 (feat. SoFaygo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Betrayal (feat. Drake)"
+     "name": "Betrayal (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Finish Line"
+     "name": "Finish Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Holy Smokes (feat. Lil Uzi Vert)"
+     "name": "Holy Smokes (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Super Cell"
+     "name": "Super Cell",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Miss The Rage (feat. Playboi Carti)"
+     "name": "Miss The Rage (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Supernatural"
+     "name": "Supernatural",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Demon Time (feat. Ski Mask The Slump God)"
+     "name": "Demon Time (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Matt Hardy 999 (feat. Juice WRLD)"
+     "name": "Matt Hardy 999 (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Vibes"
+     "name": "Vibes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "New Money"
+     "name": "New Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Danny Phantom (feat. XXXTENTACION)"
+     "name": "Danny Phantom (feat. XXXTENTACION)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Space Time"
+     "name": "Space Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Baki"
+     "name": "Baki",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "iPhone"
+     "name": "iPhone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Rich MF (feat. Polo G & Lil Durk)"
+     "name": "Rich MF (feat. Polo G & Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Captain Crunch (feat. Sada Baby, Icewear Vezzo, & Babyface Ray)"
+     "name": "Captain Crunch (feat. Sada Baby, Icewear Vezzo, & Babyface Ray)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1797,66 +2555,92 @@
   {
    "era": "hα†ε ïš dεαd",
    "name": "hα†ε ïš dεαd",
-   "date": "2021-02-19",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Hate-is-dead"
+   ],
    "description": "Tracklist for the offical release of hα†ε ïš dεαd.",
    "tracks": [
     {
      "num": "#1",
-     "name": "𝔉𝔦𝔯𝔢 ℑ𝔫 𝔐𝔶 ℌ𝔢𝔞𝔯𝔱 <3"
+     "name": "𝔉𝔦𝔯𝔢 ℑ𝔫 𝔐𝔶 ℌ𝔢𝔞𝔯𝔱 <3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "𝕽𝖊𝖆𝖉𝖞 𝕱𝖔𝖗 𝕷𝖔𝖛𝖊"
+     "name": "𝕽𝖊𝖆𝖉𝖞 𝕱𝖔𝖗 𝕷𝖔𝖛𝖊",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "𝔰𝔬 𝔗ℌ𝔄𝔑𝔎𝔉𝔘𝔏"
+     "name": "𝔰𝔬 𝔗ℌ𝔄𝔑𝔎𝔉𝔘𝔏",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "ℜՅ𝔇 𝔏𝔦𝔑Յ"
+     "name": "ℜՅ𝔇 𝔏𝔦𝔑Յ",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "𝔗𝔥𝔯𝔬𝔴 ℑ𝔱 𝔘𝔭"
+     "name": "𝔗𝔥𝔯𝔬𝔴 ℑ𝔱 𝔘𝔭",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "ℑ 𝔊𝔬𝔱 𝔊𝔞𝔪𝔢"
+     "name": "ℑ 𝔊𝔬𝔱 𝔊𝔞𝔪𝔢",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "𝔐𝔲𝔡"
+     "name": "𝔐𝔲𝔡",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "𝕱𝖔𝖗𝖊𝖛𝖊𝖗 𝖄𝖔𝖚𝖓𝖌"
+     "name": "𝕱𝖔𝖗𝖊𝖛𝖊𝖗 𝖄𝖔𝖚𝖓𝖌",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "𝔥𝔞𝔱𝔢 (feat. K Suave & Zelly Ocho)"
+     "name": "𝔥𝔞𝔱𝔢 (feat. K Suave & Zelly Ocho)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "First Draft",
    "name": "First Draft",
-   "date": "2022-09-30",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/First-draft"
+   ],
    "description": "Tracklist for the offical release of First Draft.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Save Me, Please"
+     "name": "Save Me, Please",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "1st Degree Murder"
+     "name": "1st Degree Murder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1866,185 +2650,261 @@
   {
    "era": "MANSION MUSIK [V1]",
    "name": "A Love Letter To You 5",
-   "date": "2022-10-31",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early tracklist of A Love Letter To You 5, sourced from the album mix filenames of October 30, 2022.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Heads Up"
+     "name": "Heads Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Closed Doors (feat. Roddy Rich)"
+     "name": "Closed Doors (feat. Roddy Rich)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Take Me Away (feat. Corbin)"
+     "name": "Take Me Away (feat. Corbin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Blinds (feat. Polo G)"
+     "name": "Blinds (feat. Polo G)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "4Lifer"
+     "name": "4Lifer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Stunnin"
+     "name": "Stunnin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Wind (feat. The Kid LAROI)"
+     "name": "Wind (feat. The Kid LAROI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "A Feeling (feat. Skye Morales)"
+     "name": "A Feeling (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Ain't Safe (feat. Don Toliver)"
+     "name": "Ain't Safe (feat. Don Toliver)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Elite (feat. DaBaby)"
+     "name": "Elite (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "MANSION MUSIK [V1]",
    "name": "MANSION MUSIK",
-   "date": "2022-12-08",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "These songs are sourced from the album mix filenames of December 8, 2022.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Mansion Musik (feat. Playboi Carti)"
+     "name": "Mansion Musik (feat. Playboi Carti)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Africa"
+     "name": "Africa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Rock Out (feat. Chief Keef & Gucci Mane)"
+     "name": "Rock Out (feat. Chief Keef & Gucci Mane)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
   {
    "era": "MANSION MUSIK [V2]",
    "name": "MANSION MUSIK",
-   "date": "2023.0",
-   "quality": "Clear",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early tracklist of MANSION MUSIK with the song PEAKY BLINDERS as track 14. It was seen on a 1400 Club tank top containing a mock tracklist of MANSION MUSIK.",
    "tracks": [
     {
      "num": "#1",
-     "name": "MANSION MUSIK"
+     "name": "MANSION MUSIK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "ATLANTIS (feat. Chief Keef)"
+     "name": "ATLANTIS (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PSYCHO (feat. Future)"
+     "name": "PSYCHO (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FULLY LOADED (feat. Future & Lil Baby)"
+     "name": "FULLY LOADED (feat. Future & Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "KNIGHT CRAWLER (feat. Juice WRLD)"
+     "name": "KNIGHT CRAWLER (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "VAN HELSING"
+     "name": "VAN HELSING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "DARK BROTHERHOOD (feat. Lil Baby)"
+     "name": "DARK BROTHERHOOD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "FREE RIO"
+     "name": "FREE RIO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "KRZY TRAIN (feat. Travis Scott)"
+     "name": "KRZY TRAIN (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "MUSCLE (feat. Lil Durk)"
+     "name": "MUSCLE (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "GOODFELLAS (feat. Nardo Wick)"
+     "name": "GOODFELLAS (feat. Nardo Wick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KILLIONAIRE (feat. Kodak Black)"
+     "name": "KILLIONAIRE (feat. Kodak Black)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "HIGH HOPES (feat. BIG30)"
+     "name": "HIGH HOPES (feat. BIG30)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "PEAKY BLINDERS"
+     "name": "PEAKY BLINDERS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WHO ELSE? (feat. Rich The Kid)"
+     "name": "WHO ELSE? (feat. Rich The Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "BIGGEST BIRD (feat. Summrs)"
+     "name": "BIGGEST BIRD (feat. Summrs)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "HIDEOUT (feat. Fijimacintosh)"
+     "name": "HIDEOUT (feat. Fijimacintosh)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)"
+     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "TOILET WATER (feat. Ski Mask The Slump God)"
+     "name": "TOILET WATER (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "PURE (feat. G Herbo)"
+     "name": "PURE (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ROCK OUT (feat. Chief Keef)"
+     "name": "ROCK OUT (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "ARMAGEDDON (feat. Rob49)"
+     "name": "ARMAGEDDON (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "NUN (feat. DaBaby)"
+     "name": "NUN (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)"
+     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "COLORS (feat. Kodak Black)"
+     "name": "COLORS (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2054,111 +2914,161 @@
   {
    "era": "MANSION MUSIK [V2]",
    "name": "MANSION MUSIK",
-   "date": "2023-01-16",
-   "quality": "Clear",
-   "source": "Trippie",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early tracklist of MANSION MUSIK posted by Trippie on January 16, 2023.",
    "tracks": [
     {
      "num": "#1",
-     "name": "MANSION MUSIK"
+     "name": "MANSION MUSIK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "ATLANTIS (feat. Chief Keef)"
+     "name": "ATLANTIS (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PSYCHO (feat. Future)"
+     "name": "PSYCHO (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FULLY LOADED (feat. Future & Lil Baby)"
+     "name": "FULLY LOADED (feat. Future & Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "KNIGHT CRAWLER (feat. Juice WRLD)"
+     "name": "KNIGHT CRAWLER (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "VAN HELSING"
+     "name": "VAN HELSING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "DARK BROTHERHOOD (feat. Lil Baby)"
+     "name": "DARK BROTHERHOOD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "FREE RIO"
+     "name": "FREE RIO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "KRZY TRAIN (feat. Travis Scott)"
+     "name": "KRZY TRAIN (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "MUSCLE (feat. Lil Durk)"
+     "name": "MUSCLE (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "GOODFELLAS (feat. Nardo Wick)"
+     "name": "GOODFELLAS (feat. Nardo Wick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KILLIONAIRE (feat. Kodak Black)"
+     "name": "KILLIONAIRE (feat. Kodak Black)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "HIGH HOPES (feat. BIG30)"
+     "name": "HIGH HOPES (feat. BIG30)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "DIE DIE (feat. LUCKI)"
+     "name": "DIE DIE (feat. LUCKI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WHO ELSE? (feat. Rich The Kid)"
+     "name": "WHO ELSE? (feat. Rich The Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "BIGGEST BIRD (feat. Summrs)"
+     "name": "BIGGEST BIRD (feat. Summrs)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "HIDEOUT (feat. Fijimacintosh)"
+     "name": "HIDEOUT (feat. Fijimacintosh)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)"
+     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "TOILET WATER (feat. Ski Mask The Slump God)"
+     "name": "TOILET WATER (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "PURE (feat. G Herbo)"
+     "name": "PURE (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ROCK OUT (feat. Chief Keef)"
+     "name": "ROCK OUT (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "ARMAGEDDON (feat. Rob49)"
+     "name": "ARMAGEDDON (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "NUN (feat. DaBaby)"
+     "name": "NUN (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)"
+     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "COLORS (feat. Kodak Black)"
+     "name": "COLORS (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2168,333 +3078,487 @@
   {
    "era": "MANSION MUSIK [V2]",
    "name": "MANSION MUSIK",
-   "date": "2023-01-17",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "The third version of the tracklist with final mixes, moving around a couple tracks.",
    "tracks": [
     {
      "num": "#1",
-     "name": "MANSION MUSIK"
+     "name": "MANSION MUSIK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "ATLANTIS (feat. Chief Keef)"
+     "name": "ATLANTIS (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PSYCHO (feat. Future)"
+     "name": "PSYCHO (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FULLY LOADED (feat. Future & Lil Baby)"
+     "name": "FULLY LOADED (feat. Future & Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "VAN HELSING"
+     "name": "VAN HELSING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "DARK BROTHERHOOD (feat. Lil Baby)"
+     "name": "DARK BROTHERHOOD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "FREE RIO"
+     "name": "FREE RIO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "KRZY TRAIN (feat. Travis Scott)"
+     "name": "KRZY TRAIN (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MUSCLE (feat. Lil Durk)"
+     "name": "MUSCLE (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "GOODFELLAS (feat. Nardo Wick)"
+     "name": "GOODFELLAS (feat. Nardo Wick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "KILLIONAIRE"
+     "name": "KILLIONAIRE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "HIGH HOPES (feat. BIG30)"
+     "name": "HIGH HOPES (feat. BIG30)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "DIE DIE (feat. LUCKI)"
+     "name": "DIE DIE (feat. LUCKI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "HIGH HOPES (feat. Rich The Kid)"
+     "name": "HIGH HOPES (feat. Rich The Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "KNIGHT CRAWLER (feat. Juice WRLD)"
+     "name": "KNIGHT CRAWLER (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "BIGGEST BIRD (feat. Summrs)"
+     "name": "BIGGEST BIRD (feat. Summrs)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "HIDEOUT (feat. Fijimacintosh)"
+     "name": "HIDEOUT (feat. Fijimacintosh)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)"
+     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "TOILET WATER (feat. Ski Mask The Slump God)"
+     "name": "TOILET WATER (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "PURE (feat. G Herbo)"
+     "name": "PURE (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ROCK OUT (feat. Chief Keef)"
+     "name": "ROCK OUT (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "ARMAGEDDON (feat. Rob49)"
+     "name": "ARMAGEDDON (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "NUN (feat. DaBaby)"
+     "name": "NUN (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)"
+     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "COLORS (feat. Kodak Black)"
+     "name": "COLORS (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "MANSION MUSIK [V2]",
    "name": "MANSION MUSIK",
-   "date": "2023-01-20",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Mansion-musik"
+   ],
    "description": "Tracklist for the offical release of MANSION MUSIK.",
    "tracks": [
     {
      "num": "#1",
-     "name": "MANSION MUSIK"
+     "name": "MANSION MUSIK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "ATLANTIS (feat. Chief Keef)"
+     "name": "ATLANTIS (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PSYCHO (feat. Future)"
+     "name": "PSYCHO (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FULLY LOADED (feat. Future & Lil Baby)"
+     "name": "FULLY LOADED (feat. Future & Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "KNIGHT CRAWLER (feat. Juice WRLD)"
+     "name": "KNIGHT CRAWLER (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "VAN HELSING"
+     "name": "VAN HELSING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "DARK BROTHERHOOD (feat. Lil Baby)"
+     "name": "DARK BROTHERHOOD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "FREE RIO"
+     "name": "FREE RIO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "KRZY TRAIN (feat. Travis Scott)"
+     "name": "KRZY TRAIN (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "MUSCLE (feat. Lil Durk)"
+     "name": "MUSCLE (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "GOODFELLAS (feat. Nardo Wick)"
+     "name": "GOODFELLAS (feat. Nardo Wick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KILLIONAIRE"
+     "name": "KILLIONAIRE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "HIGH HOPES (feat. BIG30)"
+     "name": "HIGH HOPES (feat. BIG30)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "DIE DIE (feat. LUCKI)"
+     "name": "DIE DIE (feat. LUCKI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WHO ELSE? (feat. Rich The Kid)"
+     "name": "WHO ELSE? (feat. Rich The Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "BIGGEST BIRD (feat. Summrs)"
+     "name": "BIGGEST BIRD (feat. Summrs)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "HIDEOUT (feat. Fijimacintosh)"
+     "name": "HIDEOUT (feat. Fijimacintosh)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)"
+     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "TOILET WATER (feat. Ski Mask The Slump God)"
+     "name": "TOILET WATER (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "PURE (feat. G Herbo)"
+     "name": "PURE (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ROCK OUT (feat. Chief Keef)"
+     "name": "ROCK OUT (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "ARMAGEDDON (feat. Rob49)"
+     "name": "ARMAGEDDON (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "NUN (feat. DaBaby)"
+     "name": "NUN (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)"
+     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "COLORS (feat. Kodak Black)"
+     "name": "COLORS (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "MANSION MUSIK [V2]",
    "name": "MANSION MUSIK (Re-release)",
-   "date": "2023-12-22",
-   "quality": "Clear",
-   "source": "Secondary Source",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Mansion-musik-re-release"
+   ],
    "description": "The re-release of MANSION MUSIK that removes Chief Keef off of ATLANTIS and ROCK OUT. The reason why Chief Keef was taken off is because of issues Chief Keef's label at the moment.",
    "tracks": [
     {
      "num": "#1",
-     "name": "MANSION MUSIK"
+     "name": "MANSION MUSIK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "ATLANTIS"
+     "name": "ATLANTIS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "PSYCHO (feat. Future)"
+     "name": "PSYCHO (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FULLY LOADED (feat. Future & Lil Baby)"
+     "name": "FULLY LOADED (feat. Future & Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "KNIGHT CRAWLER (feat. Juice WRLD)"
+     "name": "KNIGHT CRAWLER (feat. Juice WRLD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "VAN HELSING"
+     "name": "VAN HELSING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "DARK BROTHERHOOD (feat. Lil Baby)"
+     "name": "DARK BROTHERHOOD (feat. Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "FREE RIO"
+     "name": "FREE RIO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "KRZY TRAIN (feat. Travis Scott)"
+     "name": "KRZY TRAIN (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "MUSCLE (feat. Lil Durk)"
+     "name": "MUSCLE (feat. Lil Durk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "GOODFELLAS (feat. Nardo Wick)"
+     "name": "GOODFELLAS (feat. Nardo Wick)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "KILLIONAIRE"
+     "name": "KILLIONAIRE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "HIGH HOPES (feat. BIG30)"
+     "name": "HIGH HOPES (feat. BIG30)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "DIE DIE (feat. LUCKI)"
+     "name": "DIE DIE (feat. LUCKI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "WHO ELSE? (feat. Rich The Kid)"
+     "name": "WHO ELSE? (feat. Rich The Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "BIGGEST BIRD (feat. Summrs)"
+     "name": "BIGGEST BIRD (feat. Summrs)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "HIDEOUT (feat. Fijimacintosh)"
+     "name": "HIDEOUT (feat. Fijimacintosh)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)"
+     "name": "WITCHCRAFT (feat. Rylo Rodgriguez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "TOILET WATER (feat. Ski Mask The Slump God)"
+     "name": "TOILET WATER (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "PURE (feat. G Herbo)"
+     "name": "PURE (feat. G Herbo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ROCK OUT"
+     "name": "ROCK OUT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "ARMAGEDDON (feat. Rob49)"
+     "name": "ARMAGEDDON (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "NUN (feat. DaBaby)"
+     "name": "NUN (feat. DaBaby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)"
+     "name": "SWAG LIKE OHIO PT. 2 (feat. Lil B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "COLORS (feat. Kodak Black)"
+     "name": "COLORS (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2504,79 +3568,113 @@
   {
    "era": "A Love Letter To You 5 [V2]",
    "name": "A Love Letter To You 5",
-   "date": "N/A",
-   "quality": "Clear",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "An early tracklist for A Love Letter To You 5, shown in some scapped merch design. Order might not be the same as shown below.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Take Me Away (feat. Corbin)"
+     "name": "Take Me Away (feat. Corbin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Last Days"
+     "name": "Last Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Let It Go"
+     "name": "Let It Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "All I Need"
+     "name": "All I Need",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Thinking Bout You"
+     "name": "Thinking Bout You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Praying 4 Love"
+     "name": "Praying 4 Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Reality"
+     "name": "Reality",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A Feeling (feat. Skye Morales)"
+     "name": "A Feeling (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Romantic Fantasy"
+     "name": "Romantic Fantasy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I'm Mad At Me (feat. Lil Wayne)"
+     "name": "I'm Mad At Me (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Closed Doors (feat. Roddy Ricch)"
+     "name": "Closed Doors (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Action"
+     "name": "Action",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Left 4 Dead"
+     "name": "Left 4 Dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "My Heart"
+     "name": "My Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Took My Breath Away (feat. Skye Morales)"
+     "name": "Took My Breath Away (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "The Hate"
+     "name": "The Hate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Trip McKnight"
+     "name": "Trip McKnight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2586,87 +3684,127 @@
   {
    "era": "A Love Letter To You 5 [V2]",
    "name": "A Love Letter To You 5",
-   "date": "2023-07-24",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you-5"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You 5.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Take Me Away (feat. Corbin)"
+     "name": "Take Me Away (feat. Corbin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Last Days"
+     "name": "Last Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Thy Motion"
+     "name": "Thy Motion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "How You Alive"
+     "name": "How You Alive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Thinking Bout You"
+     "name": "Thinking Bout You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Praying 4 Love"
+     "name": "Praying 4 Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Reality"
+     "name": "Reality",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A Feeling (feat. Skye Morales)"
+     "name": "A Feeling (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Romantic Fantasy"
+     "name": "Romantic Fantasy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I'm Mad At Me (feat. Lil Wayne)"
+     "name": "I'm Mad At Me (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Closed Doors (feat. Roddy Ricch)"
+     "name": "Closed Doors (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Action"
+     "name": "Action",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Left 4 Dead"
+     "name": "Left 4 Dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Wind (feat. The Kid LAROI)"
+     "name": "Wind (feat. The Kid LAROI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Helicopter (feat. Tommy Lee Sparta)"
+     "name": "Helicopter (feat. Tommy Lee Sparta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Took My Breath Away (feat. Skye Morales)"
+     "name": "Took My Breath Away (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Flowers (feat. Bryson Tiller)"
+     "name": "Flowers (feat. Bryson Tiller)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "The Hate"
+     "name": "The Hate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Trip McKnight"
+     "name": "Trip McKnight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2676,217 +3814,313 @@
   {
    "era": "A Love Letter To You 5 [V2]",
    "name": "A Love Letter To You 5 (Physical Version)",
-   "date": "2023-08-11",
-   "quality": "Clear",
-   "source": "Trippie",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the offical release on vinyl of A Love Letter To You 5.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Left 4 Dead"
+     "name": "Left 4 Dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Action"
+     "name": "Action",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Thy Motion"
+     "name": "Thy Motion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I'm Mad At Me (feat. Lil Wayne)"
+     "name": "I'm Mad At Me (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Closed Doors (feat. Roddy Rich)"
+     "name": "Closed Doors (feat. Roddy Rich)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Took My Breath Away (feat. Skye Morales)"
+     "name": "Took My Breath Away (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Reality"
+     "name": "Reality",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Take Me Away (feat. Corbin)"
+     "name": "Take Me Away (feat. Corbin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Thinking Boutt You"
+     "name": "Thinking Boutt You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Helicopter (feat. Tommy Lee Sparta)"
+     "name": "Helicopter (feat. Tommy Lee Sparta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Last Days"
+     "name": "Last Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Wind (feat. The Kid LAROI)"
+     "name": "Wind (feat. The Kid LAROI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "A Feeling (feat. Skye Morales)"
+     "name": "A Feeling (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Romantic Fantasy"
+     "name": "Romantic Fantasy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Hate"
+     "name": "The Hate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Flowers (feat. Bryson Tiller)"
+     "name": "Flowers (feat. Bryson Tiller)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Praying 4 Love"
+     "name": "Praying 4 Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "How You Alive"
+     "name": "How You Alive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Trip McKnight"
+     "name": "Trip McKnight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "A Love Letter To You 5 [V2]",
    "name": "A Love Letter To You 5 (Bonus)",
-   "date": "2023-08-11",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/A-love-letter-to-you-5"
+   ],
    "description": "Tracklist for the offical release of A Love Letter To You 5 (Bonus).",
    "tracks": [
     {
      "num": "#1",
-     "name": "Take Me Away (feat. Corbin)"
+     "name": "Take Me Away (feat. Corbin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Last Days"
+     "name": "Last Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Thy Motion"
+     "name": "Thy Motion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "How You Alive"
+     "name": "How You Alive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Thinking Bout You"
+     "name": "Thinking Bout You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Praying 4 Love"
+     "name": "Praying 4 Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Reality"
+     "name": "Reality",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A Feeling (feat. Skye Morales)"
+     "name": "A Feeling (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Romantic Fantasy"
+     "name": "Romantic Fantasy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I'm Mad At Me (feat. Lil Wayne)"
+     "name": "I'm Mad At Me (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Closed Doors (feat. Roddy Ricch)"
+     "name": "Closed Doors (feat. Roddy Ricch)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Action"
+     "name": "Action",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Left 4 Dead"
+     "name": "Left 4 Dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Wind (feat. The Kid LAROI)"
+     "name": "Wind (feat. The Kid LAROI)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Helicopter (feat. Tommy Lee Sparta)"
+     "name": "Helicopter (feat. Tommy Lee Sparta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Took My Breath Away (feat. Skye Morales)"
+     "name": "Took My Breath Away (feat. Skye Morales)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Flowers (feat. Bryson Tiller)"
+     "name": "Flowers (feat. Bryson Tiller)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "The Hate"
+     "name": "The Hate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Trip McKnight"
+     "name": "Trip McKnight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Tory Lanez - Hurts Me (with Trippie Redd & Yoko Gold)"
+     "name": "Tory Lanez - Hurts Me (with Trippie Redd & Yoko Gold)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Saint Michael",
    "name": "Saint Michael",
-   "date": "2023-11-10",
-   "quality": "Clear",
-   "source": "Secondary Source",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Saint-michael"
+   ],
    "description": "Tracklist for the offical release of Saint Michael.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Pray 4 Us"
+     "name": "Pray 4 Us",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Van Cleef Island"
+     "name": "Van Cleef Island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "1716 Osage"
+     "name": "1716 Osage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Ok, Cool"
+     "name": "Ok, Cool",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "7am in Ohio"
+     "name": "7am in Ohio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Yo Pi’erre Slime"
+     "name": "Yo Pi’erre Slime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Saint Michael Myers (feat. BANKS)"
+     "name": "Saint Michael Myers (feat. BANKS)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2896,79 +4130,113 @@
   {
    "era": "Saint Michael V2",
    "name": "Saint Michael V2",
-   "date": "2023-11-15",
-   "quality": "Clear",
-   "source": "Trippie",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "The initial tracklist revealed by Trippie on Twitter/X.",
    "tracks": [
     {
      "num": "#1",
-     "name": "#RBDG"
+     "name": "#RBDG",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Popular (feat. 9lives)"
+     "name": "Popular (feat. 9lives)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Love It"
+     "name": "I Love It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pepe Lit"
+     "name": "Pepe Lit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snail Shells (feat. YTB Fatt)"
+     "name": "Snail Shells (feat. YTB Fatt)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "TrippieBoat (feat. Lil Yachty)"
+     "name": "TrippieBoat (feat. Lil Yachty)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "SIN"
+     "name": "SIN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pray 4 Us"
+     "name": "Pray 4 Us",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Van Cleef Island"
+     "name": "Van Cleef Island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "1716 Osage"
+     "name": "1716 Osage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Ok, Cool"
+     "name": "Ok, Cool",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "7am in Ohio"
+     "name": "7am in Ohio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Yo Pi'erre Slime"
+     "name": "Yo Pi'erre Slime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Saint Michael Myers (feat. BANKS)"
+     "name": "Saint Michael Myers (feat. BANKS)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Psychotic Lunatic"
+     "name": "Psychotic Lunatic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Mrs. Tonya"
+     "name": "Mrs. Tonya",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Skeletons"
+     "name": "Skeletons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2978,130 +4246,188 @@
   {
    "era": "Saint Michael V2",
    "name": "Saint Michael V2",
-   "date": "2023-11-22",
-   "quality": "N/A",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Trippie-redd/Saint-michael-v2"
+   ],
    "description": "Tracklist for the offical release of Saint Michael 2.",
    "tracks": [
     {
      "num": "#1",
-     "name": "#RBDG"
+     "name": "#RBDG",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Popular (feat. 9lives)"
+     "name": "Popular (feat. 9lives)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wizard 101"
+     "name": "Wizard 101",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pepe Lit"
+     "name": "Pepe Lit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Snail Shells (feat. YTB Fatt)"
+     "name": "Snail Shells (feat. YTB Fatt)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "TrippieSuave (feat. K Suave)"
+     "name": "TrippieSuave (feat. K Suave)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Moncler Coat"
+     "name": "Moncler Coat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pray 4 Us"
+     "name": "Pray 4 Us",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Van Cleef Island"
+     "name": "Van Cleef Island",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "1716 Osage"
+     "name": "1716 Osage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Ok, Cool"
+     "name": "Ok, Cool",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "7am in Ohio"
+     "name": "7am in Ohio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Yo Pi'erre Slime"
+     "name": "Yo Pi'erre Slime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Saint Michael Myers (feat. BANKS)"
+     "name": "Saint Michael Myers (feat. BANKS)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Psychotic Lunatic"
+     "name": "Psychotic Lunatic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "#SDWL ;)"
+     "name": "#SDWL ;)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Skeletons"
+     "name": "Skeletons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "genre : sadboy",
    "name": "genre : sadboy",
-   "date": "2024-03-25",
-   "quality": "Clear",
-   "source": "Trippie",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://genius.com/albums/Mgk-and-trippie-redd/Genre-sadboy"
+   ],
    "description": "Tracklist for the offical release of the collab project with mgk, genre : sadboy.",
    "tracks": [
     {
      "num": "#1",
-     "name": "lost boys"
+     "name": "lost boys",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "beauty"
+     "name": "beauty",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "time travel (feat. Zzz)"
+     "name": "time travel (feat. Zzz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "struggles"
+     "name": "struggles",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "suddenly"
+     "name": "suddenly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "half dead"
+     "name": "half dead",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "​hiding in the hills"
+     "name": "​hiding in the hills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "no more"
+     "name": "no more",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "who do i call (feat. JID)"
+     "name": "who do i call (feat. JID)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "summer's gone"
+     "name": "summer's gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3111,9 +4437,9 @@
   {
    "era": "LIVE LOVE LAUGH DIE",
    "name": "LLLD",
-   "date": "N/A",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A potential early tracklist of LLLD, from insiders sources.\n\n#? Fuk ^ Fuk ^\n#? Silent Hill 2",
    "tracks": []
@@ -3122,8 +4448,8 @@
    "era": "NDA",
    "name": "JMN/NDA",
    "date": "",
-   "quality": "N/A",
-   "source": "N/A",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Around late April 2025, Trippie had finished a first version of the album, then went to Turks and scrapped it. Trippie's engineers worked on adding a lot of outros/intros for the songs, so we can think that the tracklist looked like this:\n\n#? Hold No Hands\n#? Don't Change\n#? Spycam\n#? Take Me\n#? Break It In",
    "tracks": []
@@ -3131,99 +4457,208 @@
   {
    "era": "NDA",
    "name": "NDA",
-   "date": "2025-09-25",
-   "quality": "Blurry",
-   "source": "Trippie",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Old tracklist from summer 2025, probably the version hosted by DJ Drama. Most likely not in that order.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Woke Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "World Boss",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Pink Toes (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "The Face (with DJ Drama)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Fuck Is We Doing (feat. Ty Dolla Sign)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Sketchy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Different Category",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Break It In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Take Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "NDA",
+   "name": "NDA",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "On September 25, 2025, Trippie shared on Instagram story a first draft of the tracklist for NDA.",
    "tracks": [
     {
      "num": "#1",
-     "name": "100x"
+     "name": "100x",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "You the one (Impala? / Withdrawls?)"
+     "name": "You the one (Impala? / Withdrawls?)",
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
-     "name": "Catalog (feat. Swae Lee)"
+     "name": "Catalog (feat. Swae Lee)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#4",
-     "name": "Lullaby"
+     "name": "Lullaby",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Checklist"
+     "name": "Checklist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Arguments (feat. Young Thug)"
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Switches and Fentanyl (feat. NoCap)"
+     "name": "Switches and Fentanyl (feat. NoCap)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#8",
-     "name": "Seize the phantom"
+     "name": "Seize the phantom",
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#9",
-     "name": "Would you (feat. Chris Brown)"
+     "name": "Would you (feat. Chris Brown)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#10",
-     "name": "Doing it again"
+     "name": "Doing it again",
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#11",
-     "name": "Feb 5th"
+     "name": "Feb 5th",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Say what (feat. PartyNextDoor)"
+     "name": "Say what (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Not An option (feat. Jacques)"
+     "name": "Not An option (feat. Jacques)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#14",
-     "name": "I'm high"
+     "name": "I'm high",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Hard Day"
+     "name": "Hard Day",
+     "color": "#666666",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#16",
-     "name": "Stay The Same"
+     "name": "Stay The Same",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Lined (feat. Swae Lee)"
+     "name": "Lined (feat. Swae Lee)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#18",
-     "name": "Life's Great (feat. Glorilla)"
+     "name": "Life's Great (feat. Glorilla)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Just Fine (feat. Lil Wayne)"
+     "name": "Just Fine (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "I'm Sorry Baby (feat. Kodak Black)"
+     "name": "I'm Sorry Baby (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "In Love with someone else"
+     "name": "In Love with someone else",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Sketchy"
+     "name": "Sketchy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3233,31 +4668,41 @@
   {
    "era": "NDA",
    "name": "NDA",
-   "date": "Oct 1st, 2025",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "On October 1st, 2025, the following songs were copyrighted as \"track X\". We also know that at least 2 tracks were added, confirmed by insiders. Full new infos are shared in a thread on the Trippie Tracker Discord Server !",
    "tracks": [
     {
      "num": "#1",
-     "name": "Emotions (only 1st half)"
+     "name": "Emotions (only 1st half)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "How Much (feat. Tory Lanez)"
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Arguments (feat. Young Thug)"
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take Me"
+     "name": "Take Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Switches and Fentanyl (feat. NoCap)"
+     "name": "Switches and Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
@@ -3269,7 +4714,9 @@
     },
     {
      "num": "#8",
-     "name": "Don't Change (Seize The Phantom???)"
+     "name": "Don't Change (Seize The Phantom???)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
@@ -3277,7 +4724,9 @@
     },
     {
      "num": "#10",
-     "name": "Would you (feat. Chris Brown)"
+     "name": "Would you (feat. Chris Brown)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#11",
@@ -3285,19 +4734,27 @@
     },
     {
      "num": "#12",
-     "name": "Say What (feat. PartyNextDoor)"
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Not An Option (feat. Jacques)"
+     "name": "Not An Option (feat. Jacques)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#14",
-     "name": "I'm High"
+     "name": "I'm High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Untitled (prod. Oddwin) (Hard Day???)"
+     "name": "Untitled (prod. Oddwin) (Hard Day???)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#16",
@@ -3305,23 +4762,33 @@
     },
     {
      "num": "#17",
-     "name": "Stay The Same"
+     "name": "Stay The Same",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Catalog (feat. Swae Lee)"
+     "name": "Catalog (feat. Swae Lee)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#19",
-     "name": "Sketchy"
+     "name": "Sketchy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Checklist"
+     "name": "Checklist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "I'm Sorry Baby (feat. Kodak Black)"
+     "name": "I'm Sorry Baby (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
@@ -3329,54 +4796,74 @@
     },
     {
      "num": "#23",
-     "name": "In Love With Someone Else"
+     "name": "In Love With Someone Else",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "NDA",
    "name": "NDA",
-   "date": "2026-01-13",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "On January 13, 2026, the songs switching places were copyrighted again as \"track X\". The other are not confirmed on the album but have a strong possibility to still be on it.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Merch It"
+     "name": "Merch It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yopstar"
+     "name": "Yopstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Arguments (feat. Young Thug)"
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take Me"
+     "name": "Take Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Switches & Fentanyl (feat. NoCap)"
+     "name": "Switches & Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For Her (feat. Rema)"
+     "name": "For Her (feat. Rema)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lullaby"
+     "name": "Lullaby",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Don't Change"
+     "name": "Don't Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Free Melly (feat. YNW Melly)"
+     "name": "Free Melly (feat. YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
@@ -3384,11 +4871,15 @@
     },
     {
      "num": "#11",
-     "name": "How Much (feat. Tory Lanez)"
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "TUTS (feat. Quavo)"
+     "name": "TUTS (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
@@ -3396,7 +4887,9 @@
     },
     {
      "num": "#14",
-     "name": "Kano"
+     "name": "Kano",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
@@ -3404,54 +4897,74 @@
     },
     {
      "num": "#16",
-     "name": "Good Chance (feat. BigXthaPlug)"
+     "name": "Good Chance (feat. BigXthaPlug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Life's Great (feat. Glorilla)"
+     "name": "Life's Great (feat. Glorilla)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Catalog (feat. Swae Lee)"
+     "name": "Catalog (feat. Swae Lee)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#19",
-     "name": "MTV (feat. Rob49)"
+     "name": "MTV (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Break It In (feat. Ski Mask The Slump God)"
+     "name": "Break It In (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Midnight Vibez"
+     "name": "5AM",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#22",
-     "name": "Say What (feat. PartyNextDoor)"
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "In Love With Someone Else"
+     "name": "In Love With Someone Else",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "NDA",
    "name": "NDA",
-   "date": "2026-01-14",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "On January 14, 2026, the songs switching places were copyrighted again as \"track X\". The other are not confirmed on the album but have a strong possibility to still be on it.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Merch It"
+     "name": "Merch It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yopstar"
+     "name": "Yopstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
@@ -3459,27 +4972,39 @@
     },
     {
      "num": "#4",
-     "name": "Take Me"
+     "name": "Take Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Switches & Fentanyl (feat. NoCap)"
+     "name": "Switches & Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For Her (feat. Rema)"
+     "name": "For Her (feat. Rema)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lullaby"
+     "name": "Lullaby",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Don't Change"
+     "name": "Don't Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Free Melly (feat. YNW Melly)"
+     "name": "Free Melly (feat. YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
@@ -3487,19 +5012,27 @@
     },
     {
      "num": "#11",
-     "name": "How Much (feat. Tory Lanez)"
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "TUTS (feat. Quavo)"
+     "name": "TUTS (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Arguments (feat. Young Thug)"
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Kano"
+     "name": "Kano",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
@@ -3507,11 +5040,15 @@
     },
     {
      "num": "#16",
-     "name": "Good Chance(feat. BigXthaPlug)"
+     "name": "Good Chance(feat. BigXthaPlug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Life's Great (feat. Glorilla)"
+     "name": "Life's Great (feat. Glorilla)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
@@ -3519,50 +5056,68 @@
     },
     {
      "num": "#19",
-     "name": "MTV (feat. Rob49)"
+     "name": "MTV (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Break It In (feat. Ski Mask The Slump God)"
+     "name": "Break It In (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Midnight Vibez"
+     "name": "5AM",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#22",
-     "name": "Say What (feat. PartyNextDoor)"
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Catalog (feat. Swae Lee)"
+     "name": "Catalog (feat. Swae Lee)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
   {
    "era": "NDA",
    "name": "NDA",
-   "date": "2026-01-22",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "On January 22, 2026, the songs switching places were copyrighted again as \"track X\". The other are not confirmed on the album but have a strong possibility to still be on it.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Merch It"
+     "name": "Merch It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yopstar"
+     "name": "Yopstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "0014 (feat. Playboi Carti)"
+     "name": "0014 (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take Me"
+     "name": "Take Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
@@ -3570,7 +5125,9 @@
     },
     {
      "num": "#6",
-     "name": "For Her (feat. Rema)"
+     "name": "For Her (feat. Rema)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
@@ -3578,27 +5135,39 @@
     },
     {
      "num": "#8",
-     "name": "Free Melly (feat. YNW Melly)"
+     "name": "Free Melly (feat. YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Say What (feat. PartyNextDoor)"
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Can't Believe It"
+     "name": "Can't Believe It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "How Much (feat. Tory Lanez)"
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Fake Xan (feat. Sexyy Redd)"
+     "name": "Fake Xan (feat. Sexyy Redd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Arguments (feat. Young Thug)"
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
@@ -3606,7 +5175,9 @@
     },
     {
      "num": "#15",
-     "name": "Good Chance (feat. BigXthaPlug)"
+     "name": "Good Chance (feat. BigXthaPlug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
@@ -3614,74 +5185,104 @@
     },
     {
      "num": "#17",
-     "name": "Life's Great (feat. Glorilla)"
+     "name": "Life's Great (feat. Glorilla)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "MTV (feat. Rob49)"
+     "name": "MTV (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Break It In (feat. Ski Mask The Slump God)"
+     "name": "Break It In (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Lullaby"
+     "name": "Lullaby",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#21",
-     "name": "TUTS (feat. Quavo)"
+     "name": "TUTS (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Switches & Fentanyl (feat. NoCap)"
+     "name": "Switches & Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Midnight Vibez"
+     "name": "Midnight Vibez",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#24",
-     "name": "I'm Sorry Baby (feat. Kodak Black)"
+     "name": "I'm Sorry Baby (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "NDA",
    "name": "NDA",
-   "date": "2026-04-01",
-   "quality": "N/A",
-   "source": "Secondary Source",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "On April 1st, 2026, the songs switching places were copyrighted again as \"track X\". The other are not confirmed on the album but have a strong possibility to still be on it.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Merch It"
+     "name": "Merch It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yopstar"
+     "name": "Yopstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "0014 (feat. Playboi Carti)"
+     "name": "0014 (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Take Me"
+     "name": "Paperbag Boy (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "???"
+     "name": "SWAGGER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "???"
+     "name": "Pourrin 4's (feat. Loe Shimmy)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#7",
-     "name": "???"
+     "name": "NDA Jam",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#8",
@@ -3689,31 +5290,45 @@
     },
     {
      "num": "#9",
-     "name": "For Her (feat. Rema)"
+     "name": "For Her (feat. Rema)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Free Melly (feat. YNW Melly)"
+     "name": "Free Melly (feat. YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Say What (feat. PartyNextDoor)"
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Good Chance (feat. BigXthaPlug)"
+     "name": "Good Chance (feat. BigXthaPlug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Can't Believe It"
+     "name": "Can't Believe It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "How Much (feat. Tory Lanez)"
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Fake Xan (feat. Sexyy Redd)"
+     "name": "Fake Xan (feat. Sexyy Redd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
@@ -3721,7 +5336,9 @@
     },
     {
      "num": "#17",
-     "name": "I Got Everything"
+     "name": "I Got Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
@@ -3733,11 +5350,15 @@
     },
     {
      "num": "#20",
-     "name": "MTV (feat. Rob49)"
+     "name": "MTV (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Break It In (feat. Ski Mask The Slump God)"
+     "name": "Break It In (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
@@ -3745,15 +5366,577 @@
     },
     {
      "num": "#23",
-     "name": "TUTS (feat. Quavo)"
+     "name": "TUTS (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Switches & Fentanyl (feat. NoCap)"
+     "name": "Switches & Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "I'm Sorry Baby (feat. Kodak Black)"
+     "name": "I'm Sorry Baby (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "NDA",
+   "name": "NDA",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for NDA, shared via a blurred pic on Discord. There could be some mistakes about the songs titles and features. Most of this tracklist was confirmed by the copyrights.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Merch It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Yopstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Paperbag Boy (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "V-12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Chanely",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "SWAGGER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Pourin 4s",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "For Her (feat. Rema)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Cross Stares (feat. YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Good Chance (feat. BigXthaPlug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Can't Believe It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Meet The Redds (feat. Sexyy Redd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Kidding Me (feat. Nine Vicious)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "I Got Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Just Fine (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "No Way",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "MTV (feat. Rob49) - Villainous Duties",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#21",
+     "name": "Break It In (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#22",
+     "name": "???"
+    },
+    {
+     "num": "#23",
+     "name": "Pink Toes (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#24",
+     "name": "Switches & Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#25",
+     "name": "I'm Sorry Baby (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "NDA",
+   "name": "NDA",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Official NDA tracklist.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Merch It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Yopstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Paperbag Boy (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "V-12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Chanely",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "SWAGGER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Pourin 4s",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Arguments (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "For Her (feat. Rema)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Cross Stares (feat. YNW Melly)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Say What (feat. PartyNextDoor)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Good Chance (feat. BigXthaPlug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Can't Believe It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "How Much (feat. Tory Lanez)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Meet The Redds (feat. Sexyy Redd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Kidding Me (feat. Nine Vicious)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "I Got Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Just Fine (feat. Lil Wayne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "No Way",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "MTV (feat. Rob49)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#21",
+     "name": "Break It In (feat. Ski Mask The Slump God)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#22",
+     "name": "???"
+    },
+    {
+     "num": "#23",
+     "name": "Pink Toes (feat. Quavo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#24",
+     "name": "Switches & Fentanyl (feat. NoCap)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#25",
+     "name": "I'm Sorry Baby (feat. Kodak Black)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "#NDA",
+   "name": "#NDA",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "First #NDA tracklist",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Trillionaire Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Emo Pop",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Tuck Your Chain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Wanna Be A Trillionaire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Plead The 5th",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Different Colors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Kiss The Ring",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Wanna Fly Away (KIDS)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Keep Flying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Love Show (feat. Young Thug)",
+     "color": "#666666",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#11",
+     "name": "Being Myself (feat. Teezus)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Med Kit (feat. K Suave)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Slit Wrist",
+     "color": "#666666",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#14",
+     "name": "No Rewards",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "SVM3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Rock The Bed (feat. Gigi Holland)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "Trippin (feat. Quavo)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
+    },
+    {
+     "num": "#18",
+     "name": "Miss My Dogs",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "#NDA",
+   "name": "#NDA",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "First #NDA tracklist",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Don'tWaitForMe",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Wanna Fly Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Trillionaire Club",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "KingOfTheWorld",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Kiss The Ring",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Tuck Your Chain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Wanna Be a Trillionaire",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "SVM3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "No Rewards",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Keep Flying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Being Myself (feat. Teezus)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Plead The 5th",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Med Kit (feat. K Suave)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Different Colors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Rock The Bed (feat. Gigi Holland)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Emo Pop",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "YouDontReallyLove",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Miss My Dogs",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

@@ -25,133 +25,187 @@
   {
    "era": "Oct",
    "name": "Oct [V1]",
-   "date": "Tracklist for the version of Oct released to SoundCloud.\n\n1. Options\n2. Stack It Up\n3. Band\n4. Ball Again\n5. Fast\n6. Switchin Lanes\n7. Gone\n8. Radio\n9. Won't Fall in Love\n10. Rookie of the Year",
-   "quality": "Clear",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the version of Oct released to SoundCloud.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Options"
+     "name": "Options",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Stack It Up"
+     "name": "Stack It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Band"
+     "name": "Band",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Ball Again"
+     "name": "Ball Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Fast"
+     "name": "Fast",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Switchin Lanes"
+     "name": "Switchin Lanes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Gone"
+     "name": "Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Radio"
+     "name": "Radio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Won't Fall in Love"
+     "name": "Won't Fall in Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Rookie of the Year"
+     "name": "Rookie of the Year",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Oct",
    "name": "Oct [V2]",
-   "date": "Tracklist for the version of Oct released to Spotify. Removes Band from the tracklist.\n\n1. Options\n2. Stack It Up\n3. Ball Again\n4. Fast\n5. Switchin Lanes\n6. Gone\n7. Radio\n8. Won't Fall in Love\n9. Rookie of the Year",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/6DMJN9O4YvsCde2poNc3uv"
+   ],
    "description": "Tracklist for the version of Oct released to Spotify. Removes Band from the tracklist.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Options"
+     "name": "Options",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Stack It Up"
+     "name": "Stack It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Ball Again"
+     "name": "Ball Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Fast"
+     "name": "Fast",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Switchin Lanes"
+     "name": "Switchin Lanes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Gone"
+     "name": "Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Radio"
+     "name": "Radio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Won't Fall in Love"
+     "name": "Won't Fall in Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Rookie of the Year"
+     "name": "Rookie of the Year",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Black Nights",
    "name": "Black Nights",
-   "date": "?. Over That\n1. Way Back\n2. Ride Or Die\n3. Take A Flick\n4. Chill\n5. Sorry",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://cdn.discordapp.com/attachments/1087104484418797609/1093713924421079051/chrome_4dyQuK2fmR.png"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#?",
-     "name": "Over That"
+     "name": "Over That",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#1",
-     "name": "Way Back"
+     "name": "Way Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ride Or Die"
+     "name": "Ride Or Die",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Take A Flick"
+     "name": "Take A Flick",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Chill"
+     "name": "Chill",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Sorry"
+     "name": "Sorry",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -159,8 +213,8 @@
    "era": "PTNTL",
    "name": "PTNTL",
    "date": "",
-   "quality": "Blocked",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": []
@@ -168,431 +222,615 @@
   {
    "era": "Midnight",
    "name": "Midnight",
-   "date": "1. Black.\n2. Midnight Swerve.\n3. Birds.\n4. Ben 10.\n5. Ride for Me.\n6. Afraid.\n7. Anti Love.\n8. Next.\n9. Girlfriend.",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/0mZN6jrhCSm40RJ2Gxyi6o"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Black."
+     "name": "Black.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Midnight Swerve."
+     "name": "Midnight Swerve.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Birds."
+     "name": "Birds.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Ben 10."
+     "name": "Ben 10.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Ride for Me."
+     "name": "Ride for Me.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Afraid."
+     "name": "Afraid.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Anti Love."
+     "name": "Anti Love.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Next."
+     "name": "Next.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Girlfriend."
+     "name": "Girlfriend.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "No Name",
    "name": "No Name",
-   "date": "1. drunk.\n2. leverage.\n3. truce.\n4. 50 habits.\n5. no smoke.",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://soundcloud.com/hykeemcarter/sets/noname"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "drunk."
+     "name": "drunk.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "leverage."
+     "name": "leverage.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "truce."
+     "name": "truce.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "50 habits."
+     "name": "50 habits.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "no smoke."
+     "name": "no smoke.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Hearts & Darts",
    "name": "Hearts and Darts [V1]",
-   "date": "The first officially released tracklist for Hearts and Darts, released to Soundcloud.\n\n1. baby keem\n2. locked in\n3. fortnite\n4. vicious\n5. business\n6. half",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://soundcloud.com/hykeemcarter/sets/hearts-darts"
+   ],
    "description": "The first officially released tracklist for Hearts and Darts, released to Soundcloud.",
    "tracks": [
     {
      "num": "#1",
-     "name": "baby keem"
+     "name": "baby keem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "locked in"
+     "name": "locked in",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "fortnite"
+     "name": "fortnite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "vicious"
+     "name": "vicious",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "business"
+     "name": "business",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "half"
+     "name": "half",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Hearts & Darts",
    "name": "Hearts and Darts [V2]",
-   "date": "Second released tracklist for Hearts and Darts, capitalizes the track names and replaces business with Leverage from no name. Appears on major streaming services.\n\n1. Baby Keem\n2. Locked In\n3. Fortnite\n4. Vicious\n5. Leverage\n6. Half",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/1OdTtDWjrDa62P2I1ansiP"
+   ],
    "description": "Second released tracklist for Hearts and Darts, capitalizes the track names and replaces business with Leverage from no name. Appears on major streaming services.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Baby Keem"
+     "name": "Baby Keem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Locked In"
+     "name": "Locked In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fortnite"
+     "name": "Fortnite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Vicious"
+     "name": "Vicious",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Leverage"
+     "name": "Leverage",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Half"
+     "name": "Half",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The Sound of Bad Habit",
    "name": "The Sound of Bad Habit",
-   "date": "1. Wolves\n2. Xmen\n3. Check Please\n4. Miss Charlotte\n5. Gang Activites\n6. So What\n7. Opinions\n8. A New Day\n9. Monsters Dot Com\n10. Extra\n11. Register\n12. Baby Keem",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/5lxdY4GQkCJMcvScmwRgCx?si=bZ_hy4dnTc-jjqj80pl56A"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Wolves"
+     "name": "Wolves",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Xmen"
+     "name": "Xmen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Check Please"
+     "name": "Check Please",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Miss Charlotte"
+     "name": "Miss Charlotte",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Gang Activites"
+     "name": "Gang Activites",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "So What"
+     "name": "So What",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Opinions"
+     "name": "Opinions",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "A New Day"
+     "name": "A New Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Monsters Dot Com"
+     "name": "Monsters Dot Com",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Extra"
+     "name": "Extra",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Register"
+     "name": "Register",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Baby Keem"
+     "name": "Baby Keem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "DIE FOR MY BITCH",
    "name": "DIE FOR MY BITCH [V1]",
-   "date": "First officially released tracklist for DIE FOR MY BITCH, released exclusively on Napster in early July.\n\n1. Stats\n2. Honest\n3. Invented It\n4. France Freestyle\n5. Soul Food\n6. Moshpit\n7. Slice Interlude\n8. Rockstar P\n9. Top Ramen\n10. My Ex\n11. Big Homie\n12. Zendaya (ORANGE SODA)\n13. Not My Bro\n14. Proud",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://us.napster.com/artist/baby-keem/album/dfmb"
+   ],
    "description": "First officially released tracklist for DIE FOR MY BITCH, released exclusively on Napster in early July.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Stats"
+     "name": "Stats",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Honest"
+     "name": "Honest",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Invented It"
+     "name": "Invented It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "France Freestyle"
+     "name": "France Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Soul Food"
+     "name": "Soul Food",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Moshpit"
+     "name": "Moshpit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slice Interlude"
+     "name": "Slice Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Rockstar P"
+     "name": "Rockstar P",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Top Ramen"
+     "name": "Top Ramen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "My Ex"
+     "name": "My Ex",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Big Homie"
+     "name": "Big Homie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Zendaya (ORANGE SODA)"
+     "name": "Zendaya (ORANGE SODA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Not My Bro"
+     "name": "Not My Bro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Proud"
+     "name": "Proud",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "DIE FOR MY BITCH",
    "name": "DIE FOR MY BITCH [V2]",
-   "date": "Officially released tracklist for the DIE FOR MY BITCH released on major streaming platforms. Capitalizes all titles and removes Big Homie, Soul Food, Proud, and renames Zendaya to ORANGE SODA. In addition, it adds BULLIES, BUSS HER UP, and APOLOGIZE.\n\n1. STATS\n2. HONEST\n3. INVENTED IT\n4. FRANCE FREESTYLE\n5. BULLIES\n6. MOSHPIT\n7. SLICE INTERLUDE\n8. ROCKSTAR P\n9. TOP RAMEN\n10. MY EX\n11. BUSS HER UP\n12. ORANGE SODA\n13. NOT MY BRO\n14. APOLOGIZE",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/7Cw4LObzgnVqSlkuIyywtI?si=I8sgGoJSReqtgggX11ZiBg"
+   ],
    "description": "Officially released tracklist for the DIE FOR MY BITCH released on major streaming platforms. Capitalizes all titles and removes Big Homie, Soul Food, Proud, and renames Zendaya to ORANGE SODA. In addition, it adds BULLIES, BUSS HER UP, and APOLOGIZE.",
    "tracks": [
     {
      "num": "#1",
-     "name": "STATS"
+     "name": "STATS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "HONEST"
+     "name": "HONEST",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "INVENTED IT"
+     "name": "INVENTED IT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "FRANCE FREESTYLE"
+     "name": "FRANCE FREESTYLE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "BULLIES"
+     "name": "BULLIES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "MOSHPIT"
+     "name": "MOSHPIT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "SLICE INTERLUDE"
+     "name": "SLICE INTERLUDE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "ROCKSTAR P"
+     "name": "ROCKSTAR P",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "TOP RAMEN"
+     "name": "TOP RAMEN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "MY EX"
+     "name": "MY EX",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "BUSS HER UP"
+     "name": "BUSS HER UP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "ORANGE SODA"
+     "name": "ORANGE SODA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "NOT MY BRO"
+     "name": "NOT MY BRO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "APOLOGIZE"
+     "name": "APOLOGIZE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The Melodic Blue",
    "name": "LLC THE DEAD [XX.XX.2019]",
-   "date": "Early version of the album \n?. CULT",
-   "quality": "Blocked",
-   "source": "Secondary",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early version of the album",
    "tracks": [
     {
      "num": "#?",
-     "name": "CULT"
+     "name": "CULT",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     }
    ]
   },
   {
    "era": "The Melodic Blue",
    "name": "The Melodic Blue [02.XX.2020]\n(The Idea Hoodie)",
-   "date": "Tracklist for the February 2020 version of \"The Melodic Blue\", believed to be one of the first tracklists for the album. The hoodie itself says the tracks were created in February of 2020.\n\n\n1. llc the dead (trademark usa)\n 2. durag activity\n3. diego\n 4. patience interlude\n5. south africa\n6. gwfm (damn dawg?)\n 7. hooligan\n8. first order of business\n 9. monogamy\n10. no sense\n11. rick rubin (booman)\n12. honey im blue\n13. good morning (range brothers)\n14. 16\n15. issues\n16. white t",
-   "quality": "Clear",
-   "source": "Secondary",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://preview.redd.it/j5rl7ovrva361.jpg?auto=webp&s=fdc47c8ba5b2b71043e9309e9da2b9dc89cde86c",
+    "https://cdn.discordapp.com/attachments/1034949854901829723/1053838274793312307/image.png",
+    "https://cdn.discordapp.com/attachments/1034949854901829723/1053826845126168596/d3sjqjledu361.png"
+   ],
    "description": "Tracklist for the February 2020 version of \"The Melodic Blue\", believed to be one of the first tracklists for the album. The hoodie itself says the tracks were created in February of 2020.",
    "tracks": [
     {
      "num": "#1",
-     "name": "llc the dead (trademark usa)"
+     "name": "llc the dead (trademark usa)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "durag activity"
+     "name": "durag activity",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "diego"
+     "name": "diego",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "patience interlude"
+     "name": "patience interlude",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "south africa"
+     "name": "south africa",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "gwfm (damn dawg?)"
+     "name": "gwfm (damn dawg?)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "hooligan"
+     "name": "hooligan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "first order of business"
+     "name": "first order of business",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "monogamy"
+     "name": "monogamy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "no sense"
+     "name": "no sense",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "rick rubin (booman)"
+     "name": "rick rubin (booman)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "honey im blue"
+     "name": "honey im blue",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "good morning (range brothers)"
+     "name": "good morning (range brothers)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#14",
-     "name": "16"
+     "name": "16",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "issues"
+     "name": "issues",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "white t"
+     "name": "white t",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -602,82 +840,114 @@
   {
    "era": "The Melodic Blue",
    "name": "The Melodic Blue [02.XX.2020]\n(The Idea Hoodie)",
-   "date": "Partial 3 song tracklist that appeared on some versions of the Idea Hoodie. Printed separately from the other full tracklist.\n\n?. wolves (issues?)\n?. issues\n?. interlude (patience interlude?)",
-   "quality": "Clear",
-   "source": "Secondary",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Partial 3 song tracklist that appeared on some versions of the Idea Hoodie. Printed separately from the other full tracklist.",
    "tracks": [
     {
      "num": "#?",
-     "name": "wolves (issues?)"
+     "name": "wolves (issues?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "issues"
+     "name": "issues",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "interlude (patience interlude?)"
+     "name": "interlude (patience interlude?)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
   {
    "era": "The Melodic Blue",
    "name": "The Melodic Blue [06.17.2021]",
-   "date": "Whiteboard tracklist for The Melodic Blue with at least 12 titles was posted by Keem on June 17, 2021, although, almost nothing is readable.\n\n?. ???\n?. ???\n?. ???\n?. ???\n?. ???\n?. (sca)rs\n?. durag activity\n?. first order of business\n?. ???ff mon??? (monogamy?)\n?. ??? (hooligan?)\n?. ???\n?. no sense",
-   "quality": "Blurry",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://i.redd.it/90ukfv9jtb671.jpg"
+   ],
    "description": "Whiteboard tracklist for The Melodic Blue with at least 12 titles was posted by Keem on June 17, 2021, although, almost nothing is readable.",
    "tracks": [
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "(sca)rs"
+     "name": "(sca)rs",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "durag activity"
+     "name": "durag activity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "first order of business"
+     "name": "first order of business",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
-     "name": "???ff mon??? (monogamy?)"
+     "name": "???ff mon??? (monogamy?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "??? (hooligan?)"
+     "name": "??? (hooligan?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "no sense"
+     "name": "no sense",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -687,75 +957,109 @@
   {
    "era": "The Melodic Blue",
    "name": "The Melodic Blue [V1]",
-   "date": "First official tracklisting for The Melodic Blue, released on streaming services September 10, 2021.\n\n1. trademark usa\n2. pink panties\n3. scapegoats\n4. range brothers (feat. Kendrick Lamar)\n5. issues\n6. gorgeous\n7. south africa\n8. lost souls\n9. cocoa (feat. Don Toliver)\n10. family ties (feat. Kendrick Lamar)\n11. scars\n12. durag activity (feat. Travis Scott)\n13. booman\n14. first order of business\n15. vent\n16. 16",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/3r46DPIQeBQbjvjjV5mXGg?si=uwYsRc0nQU6i_3_FflU6bw"
+   ],
    "description": "First official tracklisting for The Melodic Blue, released on streaming services September 10, 2021.",
    "tracks": [
     {
      "num": "#1",
-     "name": "trademark usa"
+     "name": "trademark usa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "pink panties"
+     "name": "pink panties",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "scapegoats"
+     "name": "scapegoats",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "range brothers (feat. Kendrick Lamar)"
+     "name": "range brothers (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "issues"
+     "name": "issues",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "gorgeous"
+     "name": "gorgeous",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "south africa"
+     "name": "south africa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "lost souls"
+     "name": "lost souls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "cocoa (feat. Don Toliver)"
+     "name": "cocoa (feat. Don Toliver)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "family ties (feat. Kendrick Lamar)"
+     "name": "family ties (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "scars"
+     "name": "scars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "durag activity (feat. Travis Scott)"
+     "name": "durag activity (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "booman"
+     "name": "booman",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "first order of business"
+     "name": "first order of business",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "vent"
+     "name": "vent",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "16"
+     "name": "16",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -765,87 +1069,127 @@
   {
    "era": "The Melodic Blue",
    "name": "The Melodic Blue [V2]",
-   "date": "Second official tracklisting for The Melodic Blue, released on streaming services September 22, 2021. Adds a second disc containing lost souls with Brent Faiyaz, along with two singles from The Melodic Blue era, hooligan and no sense.\n\n𓇳 Disc 1\n1. trademark usa\n2. pink panties\n3. scapegoats\n4. range brothers (feat. Kendrick Lamar)\n5. issues\n6. gorgeous\n7. south africa\n8. lost souls\n9. cocoa (feat. Don Toliver)\n10. family ties (feat. Kendrick Lamar)\n11. scars\n12. durag activity (feat. Travis Scott)\n13. booman\n14. first order of business\n15. vent\n16. 16\n𓇳 Disc 2\n1. lost souls (feat. Brent Faiyaz)\n2. hooligan\n3. no sense",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/7n23fjZTviIUnHyvZGQjni?si=HcfWxN4SQ0aQoacKrlfWOA"
+   ],
    "description": "Second official tracklisting for The Melodic Blue, released on streaming services September 22, 2021. Adds a second disc containing lost souls with Brent Faiyaz, along with two singles from The Melodic Blue era, hooligan and no sense.\n\n𓇳 Disc 1",
    "tracks": [
     {
      "num": "#1",
-     "name": "trademark usa"
+     "name": "trademark usa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "pink panties"
+     "name": "pink panties",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "scapegoats"
+     "name": "scapegoats",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "range brothers (feat. Kendrick Lamar)"
+     "name": "range brothers (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "issues"
+     "name": "issues",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "gorgeous"
+     "name": "gorgeous",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "south africa"
+     "name": "south africa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "lost souls"
+     "name": "lost souls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "cocoa (feat. Don Toliver)"
+     "name": "cocoa (feat. Don Toliver)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "family ties (feat. Kendrick Lamar)"
+     "name": "family ties (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "scars"
+     "name": "scars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "durag activity (feat. Travis Scott)"
+     "name": "durag activity (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "booman"
+     "name": "booman",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "first order of business"
+     "name": "first order of business",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "vent"
+     "name": "vent",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "16"
+     "name": "16",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "lost souls (feat. Brent Faiyaz)"
+     "name": "lost souls (feat. Brent Faiyaz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "hooligan"
+     "name": "hooligan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "no sense"
+     "name": "no sense",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -855,125 +1199,181 @@
   {
    "era": "The Melodic Blue",
    "name": "The Melodic Blue (Deluxe)",
-   "date": "𓇳 Disc 1\n1. trademark usa\n2. pink panties\n3. scapegoats\n4. range brothers (feat. Kendrick Lamar)\n5. issues\n6. gorgeous\n7. south africa\n8. lost souls\n9. cocoa (feat. Don Toliver)\n10. family ties (feat. Kendrick Lamar)\n11. scars\n12. durag activity (feat. Travis Scott)\n13. booman\n14. first order of business\n15. vent\n16. 16\n𓇳 Disc 2\n1. lost souls (feat. Brent Faiyaz)\n2. hooligan\n3. no sense\n4. a life of pain\n5. killstreaks (feat. Don Toliver  & PinkPantheress)\n6. patience interlude\n7. naked freestyle\n8. fine china\n9. highway 95\n10. bank account (feat. Lil Uzi Vert)",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/5Co3CGD9lBQVNnn7q0px1g?si=G9q0dm0QQKOdnf3AhrspJw"
+   ],
    "description": "𓇳 Disc 1",
    "tracks": [
     {
      "num": "#1",
-     "name": "trademark usa"
+     "name": "trademark usa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "pink panties"
+     "name": "pink panties",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "scapegoats"
+     "name": "scapegoats",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "range brothers (feat. Kendrick Lamar)"
+     "name": "range brothers (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "issues"
+     "name": "issues",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "gorgeous"
+     "name": "gorgeous",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "south africa"
+     "name": "south africa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "lost souls"
+     "name": "lost souls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "cocoa (feat. Don Toliver)"
+     "name": "cocoa (feat. Don Toliver)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "family ties (feat. Kendrick Lamar)"
+     "name": "family ties (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "scars"
+     "name": "scars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "durag activity (feat. Travis Scott)"
+     "name": "durag activity (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "booman"
+     "name": "booman",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "first order of business"
+     "name": "first order of business",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "vent"
+     "name": "vent",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "16"
+     "name": "16",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "lost souls (feat. Brent Faiyaz)"
+     "name": "lost souls (feat. Brent Faiyaz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "hooligan"
+     "name": "hooligan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "no sense"
+     "name": "no sense",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "a life of pain"
+     "name": "a life of pain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "killstreaks (feat. Don Toliver  & PinkPantheress)"
+     "name": "killstreaks (feat. Don Toliver  & PinkPantheress)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "patience interlude"
+     "name": "patience interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "naked freestyle"
+     "name": "naked freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "fine china"
+     "name": "fine china",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "highway 95"
+     "name": "highway 95",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "bank account (feat. Lil Uzi Vert)"
+     "name": "bank account (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Child With Wolves",
    "name": "???",
-   "date": "Empty whiteboard \"tracklist\" shared by Keem via Instagram on May 25, 2022. Keem also tagged frequent producer Scott Bridgeway, who's worked with him before on tracks like range brothers, lost souls, & trademark usa. Unknown if this \"tracklist\" was intended for Keem's second studio album or for The Melodic Blue Deluxe. \nThere are no tracks on this tracklist.",
-   "quality": "Clear",
-   "source": "Official",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://imgur.com/a/pNcXyzm"
+   ],
    "description": "Empty whiteboard \"tracklist\" shared by Keem via Instagram on May 25, 2022. Keem also tagged frequent producer Scott Bridgeway, who's worked with him before on tracks like range brothers, lost souls, & trademark usa. Unknown if this \"tracklist\" was intended for Keem's second studio album or for The Melodic Blue Deluxe. \nThere are no tracks on this tracklist.",
    "tracks": [],
    "images": [
@@ -983,114 +1383,160 @@
   {
    "era": "Ca$ino",
    "name": "Ca$ino",
-   "date": "1. No Security\n2. Ca$ino\n3. Birds & the Bees\n4. Good Flirts (feat. Kendrick Lamar & Momo Boyd)\n5. House Money\n6. I am not a Lyricist\n7. $ex Appeal (feat. Too $hort)\n8. Highway 95 pt.2\n9. Circus Circus Free$tyle\n10. Dramatic Girl (feat. Che Ecru)\n11. No Blame",
-   "quality": "Clear",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "No Security"
+     "name": "No Security",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ca$ino"
+     "name": "Ca$ino",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Birds & the Bees"
+     "name": "Birds & the Bees",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Good Flirts (feat. Kendrick Lamar & Momo Boyd)"
+     "name": "Good Flirts (feat. Kendrick Lamar & Momo Boyd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "House Money"
+     "name": "House Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I am not a Lyricist"
+     "name": "I am not a Lyricist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "$ex Appeal (feat. Too $hort)"
+     "name": "$ex Appeal (feat. Too $hort)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Highway 95 pt.2"
+     "name": "Highway 95 pt.2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Circus Circus Free$tyle"
+     "name": "Circus Circus Free$tyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dramatic Girl (feat. Che Ecru)"
+     "name": "Dramatic Girl (feat. Che Ecru)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "No Blame"
+     "name": "No Blame",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Ca$ino",
    "name": "Ca$ino [Physical Copy]",
-   "date": "1. No Security\n2. Ca$ino\n3. Birds & the Bees\n4. Good Flirts (feat. Kendrick Lamar & Momo Boyd)\n5. House Money\n6. I am not a Lyricist\n7. $ex Appeal (feat. Too $hort)\n8. Tubi (feat. Che Ecru)\n9. Highway 95 pt.2\n10. Circus Circus Free$tyle\n11. Dramatic Girl (feat. Che Ecru)\n12. No Blame",
-   "quality": "Clear",
-   "source": "Official",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "No Security"
+     "name": "No Security",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Ca$ino"
+     "name": "Ca$ino",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Birds & the Bees"
+     "name": "Birds & the Bees",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Good Flirts (feat. Kendrick Lamar & Momo Boyd)"
+     "name": "Good Flirts (feat. Kendrick Lamar & Momo Boyd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "House Money"
+     "name": "House Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I am not a Lyricist"
+     "name": "I am not a Lyricist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "$ex Appeal (feat. Too $hort)"
+     "name": "$ex Appeal (feat. Too $hort)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tubi (feat. Che Ecru)"
+     "name": "Tubi (feat. Che Ecru)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Highway 95 pt.2"
+     "name": "Highway 95 pt.2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Circus Circus Free$tyle"
+     "name": "Circus Circus Free$tyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Dramatic Girl (feat. Che Ecru)"
+     "name": "Dramatic Girl (feat. Che Ecru)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "No Blame"
+     "name": "No Blame",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

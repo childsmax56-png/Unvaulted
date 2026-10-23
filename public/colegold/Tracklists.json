@@ -25,95 +25,137 @@
   {
    "era": "The Come Up",
    "name": "The Come Up\n(Physical and Digital Version)",
-   "date": "May 4th, 2007",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Simba"
+     "name": "Simba",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I'm The Man"
+     "name": "I'm The Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "School Daze"
+     "name": "School Daze",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dollar And A Dream"
+     "name": "Dollar And A Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Throw It Up"
+     "name": "Throw It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Quote Me"
+     "name": "Quote Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "College Boy"
+     "name": "College Boy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Split You Up"
+     "name": "Split You Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Plain (skit)"
+     "name": "Plain (skit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Come Up"
+     "name": "The Come Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Mighty Crazy"
+     "name": "Mighty Crazy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Dead Presidents"
+     "name": "Dead Presidents",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Lil' Ghetto Nigga"
+     "name": "Lil' Ghetto Nigga",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Homecoming"
+     "name": "Homecoming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Carolina On My Mind (feat. Deacon)"
+     "name": "Carolina On My Mind (feat. Deacon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Can't Cry"
+     "name": "Can't Cry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Goin' Off"
+     "name": "Goin' Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Rags To Riches (At The Beep)"
+     "name": "Rags To Riches (At The Beep)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Get It (bonus track)"
+     "name": "Get It (bonus track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "I Do My Thing - Nervous Reck (bonus track)"
+     "name": "I Do My Thing - Nervous Reck (bonus track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -123,79 +165,113 @@
   {
    "era": "The Come Up",
    "name": "The Come Up\n(Streaming version)",
-   "date": "Nov 18th, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Simba"
+     "name": "Simba",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I'm The Man"
+     "name": "I'm The Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "School Daze"
+     "name": "School Daze",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dollar And A Dream"
+     "name": "Dollar And A Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Quote me"
+     "name": "Quote me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "College Boy"
+     "name": "College Boy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Split You Up"
+     "name": "Split You Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Plain"
+     "name": "Plain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "The Come Up"
+     "name": "The Come Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Dead Presidents"
+     "name": "Dead Presidents",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Lil' Ghetto Nigga"
+     "name": "Lil' Ghetto Nigga",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Homecoming"
+     "name": "Homecoming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Carolina On My Mind (feat. Deacon)"
+     "name": "Carolina On My Mind (feat. Deacon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Can't Cry"
+     "name": "Can't Cry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Goin' Off"
+     "name": "Goin' Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Rags To Riches (At The Beep)"
+     "name": "Rags To Riches (At The Beep)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -206,22 +282,28 @@
    "era": "The Come Up",
    "name": "Untitled Project\n(Rumoured tracklist)",
    "date": "",
-   "quality": "Blocked",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Mentioned by Bas in an revolt Article “We had a project before The Warm Up where ‘Lights Please’ was supposed to go into ‘Lost Ones,’ which was supposed to go into ‘Confessions,’ which went into another record. It was supposed to be a four-part thing and they all tied into each other’s story,” Mike revealed. “The girl from ‘Lights Please’ that wants to fuck and doesn’t care about any political issues then becomes pregnant in ‘Lost Ones.’ Then, ‘Confessions’ was J. Cole fucking around thinking how she’s fucking around and her being pregnant, and that kid not being his. We were going to shoot a mini-film and tie everything together.”",
    "tracks": [
     {
      "num": "#1",
-     "name": "Lights Please"
+     "name": "Lights Please",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Lost Ones"
+     "name": "Lost Ones",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Confessions"
+     "name": "Confessions",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
@@ -233,58 +315,82 @@
    "era": "The Warm Up",
    "name": "The Warm Up To The Warm Up\n(Physical Version)",
    "date": "",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Grown Simba"
+     "name": "Grown Simba",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Serenade"
+     "name": "Serenade",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Til' Infinity"
+     "name": "Til' Infinity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Dollar and a Dream II"
+     "name": "Dollar and a Dream II",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Just to Get By"
+     "name": "Just to Get By",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I Get Up"
+     "name": "I Get Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Royal Flush"
+     "name": "Royal Flush",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Song for the Ville"
+     "name": "Song for the Ville",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "I Really Mean It (Freestyle)"
+     "name": "I Really Mean It (Freestyle)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In The Mornin'"
+     "name": "In The Mornin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Show Me Something"
+     "name": "Show Me Something",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I'm Comin'"
+     "name": "I'm Comin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -294,99 +400,143 @@
   {
    "era": "The Warm Up",
    "name": "The Warm Up\n(Physical and Digital version)",
-   "date": "June 15th, 2009",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (The Warm Up)"
+     "name": "Intro (The Warm Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Welcome"
+     "name": "Welcome",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Can I Live"
+     "name": "Can I Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Grown Simba"
+     "name": "Grown Simba",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Just To Get By"
+     "name": "Just To Get By",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Lights Please"
+     "name": "Lights Please",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dead Presidents II"
+     "name": "Dead Presidents II",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "I Get Up"
+     "name": "I Get Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "World Is Empty"
+     "name": "World Is Empty",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dreams (feat. Brandon Hines)"
+     "name": "Dreams (feat. Brandon Hines)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Royal Flush"
+     "name": "Royal Flush",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dollar and a Dream II"
+     "name": "Dollar and a Dream II",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Water Break (Interlude)"
+     "name": "Water Break (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Heartache"
+     "name": "Heartache",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Get Away"
+     "name": "Get Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Knock Knock"
+     "name": "Knock Knock",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Ladies (feat. Lee Fields & The Expressions)"
+     "name": "Ladies (feat. Lee Fields & The Expressions)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Til' Infinity"
+     "name": "Til' Infinity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "The Badness (feat. Omen)"
+     "name": "The Badness (feat. Omen)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Hold It Down"
+     "name": "Hold It Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Last Call"
+     "name": "Last Call",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Losing My Balance (Bonus Track)"
+     "name": "Losing My Balance (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -396,99 +546,143 @@
   {
    "era": "The Warm Up",
    "name": "The Warm Up\n(Streaming version)",
-   "date": "Nov 22nd, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro (The Warm Up)"
+     "name": "Intro (The Warm Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Welcome"
+     "name": "Welcome",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Can I Live"
+     "name": "Can I Live",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Grown Simba"
+     "name": "Grown Simba",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Just To Get By"
+     "name": "Just To Get By",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Lights Please"
+     "name": "Lights Please",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Dead Presidents II"
+     "name": "Dead Presidents II",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "I Get Up"
+     "name": "I Get Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "World Is Empty"
+     "name": "World Is Empty",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dreams (feat. Brandon Hines)"
+     "name": "Dreams (feat. Brandon Hines)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "The Warm Up - \"Royal Flush\""
+     "name": "The Warm Up - \"Royal Flush\"",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Dollar and a Dream II"
+     "name": "Dollar and a Dream II",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Water Break (Interlude)"
+     "name": "Water Break (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Heartache"
+     "name": "Heartache",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Get Away"
+     "name": "Get Away",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "The Warm Up - \"Knock Knock\""
+     "name": "The Warm Up - \"Knock Knock\"",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "The Warm Up - \"Ladies\" (feat. Lee Fields & The Expressions)"
+     "name": "The Warm Up - \"Ladies\" (feat. Lee Fields & The Expressions)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Til' Infinity"
+     "name": "Til' Infinity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "The Badness (feat. Omen)"
+     "name": "The Badness (feat. Omen)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Hold It Down"
+     "name": "Hold It Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Last Call"
+     "name": "Last Call",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Losing My Balance (Bonus Track)"
+     "name": "Losing My Balance (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -498,91 +692,131 @@
   {
    "era": "Friday Night Lights",
    "name": "Friday Night Lights\n(Physical and Digital version)",
-   "date": "Nov 12th, 2010",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Friday NIght Lights"
+     "name": "Friday NIght Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Deep For The Intro"
+     "name": "Too Deep For The Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Before I'm Gone"
+     "name": "Before I'm Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Back To The Topic"
+     "name": "Back To The Topic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "You Got It (feat. Wale)"
+     "name": "You Got It (feat. Wale)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Villematic"
+     "name": "Villematic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Enchanted* (feat. Omen)"
+     "name": "Enchanted* (feat. Omen)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Blow Up"
+     "name": "Blow Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Higher"
+     "name": "Higher",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In The Morning** (feat. Drake)"
+     "name": "In The Morning** (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "2Face***"
+     "name": "2Face***",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "The Autograph"
+     "name": "The Autograph",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Best Friend"
+     "name": "Best Friend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Cost Me A Lot"
+     "name": "Cost Me A Lot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Premeditated Murder"
+     "name": "Premeditated Murder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Home For The Holidays"
+     "name": "Home For The Holidays",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Love Me Not"
+     "name": "Love Me Not",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "See World****"
+     "name": "See World****",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Farewell"
+     "name": "Farewell",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "(Bonus) Looking For Trouble (Kanye West feat. J. Cole, Pusha T, Big Sean, Cyhi Da Prince)"
+     "name": "(Bonus) Looking For Trouble (Kanye West feat. J. Cole, Pusha T, Big Sean, Cyhi Da Prince)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -592,87 +826,125 @@
   {
    "era": "Friday Night Lights",
    "name": "Friday Night Lights\n(Streaming version)",
-   "date": "Nov 27th, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Friday NIght Lights"
+     "name": "Friday NIght Lights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Too Deep For The Intro"
+     "name": "Too Deep For The Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Before I'm Gone"
+     "name": "Before I'm Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Back To The Topic"
+     "name": "Back To The Topic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "You Got It (feat. Wale)"
+     "name": "You Got It (feat. Wale)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Villematic"
+     "name": "Villematic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Enchanted (feat. Omen)"
+     "name": "Enchanted (feat. Omen)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Blow Up"
+     "name": "Blow Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Higher"
+     "name": "Higher",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "In The Morning (feat. Drake)"
+     "name": "In The Morning (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "2Face"
+     "name": "2Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "The Autograph"
+     "name": "The Autograph",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Best Friend"
+     "name": "Best Friend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Cost Me A Lot"
+     "name": "Cost Me A Lot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Premeditated Murder"
+     "name": "Premeditated Murder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Home For The Holidays"
+     "name": "Home For The Holidays",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Love Me Not"
+     "name": "Love Me Not",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "See World"
+     "name": "See World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Farewell"
+     "name": "Farewell",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -683,8 +955,8 @@
    "era": "Cole World",
    "name": "Cole World: The Sideline Story\n(OG Tracklist)",
    "date": "",
-   "quality": "Blocked",
-   "source": "J. Cole",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Cole talked about the \"Cole World: The Sideline Story\" on the inevitable podcast and was originally planned to be more \"concept\" and it was supposed to have a collection of songs from different perspectives from fayetteville, hence \"The Sideline Story\"\n\n#. Lost Ones\n#. Never Told\n#. Cheer Up\n#. The Good Son\n#. Killers",
    "tracks": []
@@ -702,75 +974,107 @@
   {
    "era": "Cole World",
    "name": "Cole World: The Sideline Story\n(Spotify and Physical version)",
-   "date": "Sept 27, 2011",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Dollar and a Dream III"
+     "name": "Dollar and a Dream III",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Can't Get Enough (feat. Trey Songz)"
+     "name": "Can't Get Enough (feat. Trey Songz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Lights Please"
+     "name": "Lights Please",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Interlude (Cole World)"
+     "name": "Interlude (Cole World)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sideline Story"
+     "name": "Sideline Story",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mr. Nice Watch (feat. JAY-Z)"
+     "name": "Mr. Nice Watch (feat. JAY-Z)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Cole World"
+     "name": "Cole World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "In The Morning (feat. Drake)"
+     "name": "In The Morning (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Lost ones"
+     "name": "Lost ones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Nobody's Perfect (feat. Missy Elliott)"
+     "name": "Nobody's Perfect (feat. Missy Elliott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Never Told"
+     "name": "Never Told",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Rise and Shine"
+     "name": "Rise and Shine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "God's Gift"
+     "name": "God's Gift",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Breakdown"
+     "name": "Breakdown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Work Out"
+     "name": "Work Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -780,83 +1084,119 @@
   {
    "era": "Cole World",
    "name": "Cole World: The Sideline Story\n(Apple Music version)",
-   "date": "Sept 27, 2011",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Dollar and a Dream III"
+     "name": "Dollar and a Dream III",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Can't Get Enough (feat. Trey Songz)"
+     "name": "Can't Get Enough (feat. Trey Songz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Lights Please"
+     "name": "Lights Please",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Interlude (Cole World)"
+     "name": "Interlude (Cole World)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sideline Story"
+     "name": "Sideline Story",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mr. Nice Watch (feat. JAY-Z)"
+     "name": "Mr. Nice Watch (feat. JAY-Z)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Cole World"
+     "name": "Cole World",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "In The Morning (feat. Drake)"
+     "name": "In The Morning (feat. Drake)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Lost ones"
+     "name": "Lost ones",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Nobody's Perfect (feat. Missy Elliott)"
+     "name": "Nobody's Perfect (feat. Missy Elliott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Never Told"
+     "name": "Never Told",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Rise and Shine"
+     "name": "Rise and Shine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "God's Gift"
+     "name": "God's Gift",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Breakdown"
+     "name": "Breakdown",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Work Out"
+     "name": "Work Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Who Dat"
+     "name": "Who Dat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Daddy's Little Girl"
+     "name": "Daddy's Little Girl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -866,9 +1206,9 @@
   {
    "era": "J. Cole x Kendrick Project",
    "name": "Out The Sky*\n(Theorized 2011 Tracklist)",
-   "date": "XX XX, 2011",
-   "quality": "Blocked",
-   "source": "Theorized",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Theorized 2011 tracklist with all the known information given\n\nMain Theorized Tracklist:\n#. Shock The World (feat. BJ The Chicago Kid)\n#. Temptation (feat. JaVonté)\n#. Unknown multiple tracks from 2010-2011",
    "tracks": []
@@ -876,9 +1216,9 @@
   {
    "era": "J. Cole x Kendrick Project",
    "name": "Out The Sky*\n(Theorized 2013 Tracklist)",
-   "date": "XX XX, 2013",
-   "quality": "Blocked",
-   "source": "Theorized",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Theorized 2013 tracklist with all the known information given\n\nMain Theorized Tracklist:\n#. Wait For Tomorrow (Although an alternate version leaked, its persume and theorized a more finished and polished version exists and would've most definitely been on the complete tracklist)\n#. Money Maker*\n#. Who Hot, Who Not?*\n#. Unknown multiple tracks from 2012-2013\n\n\n\n(Althought \"Shock The World\" and \"Temptation\", are not on this 2013 theorized tracklist, they most likely would've been considered and had potential placements on it)\n#. Shock The World (feat. BJ The Chicago Kid)\n#. Temptation (feat. JaVonté)\n#. Unknown mutiple tracks from 2010-2011 that might've been reused",
    "tracks": []
@@ -886,9 +1226,9 @@
   {
    "era": "Truly Yours",
    "name": "Truly Yours\n(OG Tracklist)",
-   "date": "???",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist doesn't seem to be in a particular order, just rough track placements.\n\n#. Now & Forever\n#. Man On Fire\n#. Broke Nigga With Money\n#. Kenny Lofton\n#. I'm A Fool\n#. Chris Tucker\n#. Stars & Signs\n#. LOUIE\n#. Can I Holla At Ya",
    "tracks": [],
@@ -899,141 +1239,195 @@
   {
    "era": "Truly Yours",
    "name": "Truly Yours\n(Digital Version)",
-   "date": "Feb 12th, 2013",
-   "quality": "Blocked",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Can I Holla At Ya"
+     "name": "Can I Holla At Ya",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Crunch Time"
+     "name": "Crunch Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Rise Above"
+     "name": "Rise Above",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Tears for OBD"
+     "name": "Tears for OBD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stay"
+     "name": "Stay",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Truly Yours 2",
    "name": "Truly Yours 2\n(Digital version)",
-   "date": "Apr 30th, 2013",
-   "quality": "Blocked",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Cole Summer"
+     "name": "Cole Summer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Kenny Lofton (feat. Jeezy)"
+     "name": "Kenny Lofton (feat. Jeezy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Chris Tucker (feat. 2 Chainz)"
+     "name": "Chris Tucker (feat. 2 Chainz)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Head Bussa"
+     "name": "Head Bussa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Cousins (feat. Bas)"
+     "name": "Cousins (feat. Bas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "3 Wishes"
+     "name": "3 Wishes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Born Sinner",
    "name": "Born Sinner\n(Streaming and Physical version)",
-   "date": "June 18th, 2013",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Villuminati"
+     "name": "Villuminati",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Kerney Sermon - Skit"
+     "name": "Kerney Sermon - Skit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Land Of The Snakes"
+     "name": "Land Of The Snakes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Power Trip (feat. Miguel)"
+     "name": "Power Trip (feat. Miguel)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Mo Money - Interlude"
+     "name": "Mo Money - Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Trouble"
+     "name": "Trouble",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Runaway"
+     "name": "Runaway",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "She Knows (feat. Amber Coffman & Cults)"
+     "name": "She Knows (feat. Amber Coffman & Cults)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Rich Niggaz"
+     "name": "Rich Niggaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Where's Jermaine? - Skit"
+     "name": "Where's Jermaine? - Skit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Forbidden Fruit (feat. Kendrick Lamar)"
+     "name": "Forbidden Fruit (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Chaining Day"
+     "name": "Chaining Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Ain't That Some Shit - Interlude"
+     "name": "Ain't That Some Shit - Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Crooked Smile (feat. TLC)"
+     "name": "Crooked Smile (feat. TLC)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Let Nas Down"
+     "name": "Let Nas Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Born Sinner (feat. James Fauntleroy)"
+     "name": "Born Sinner (feat. James Fauntleroy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1043,95 +1437,137 @@
   {
    "era": "Born Sinner Deluxe",
    "name": "Born Sinner (Deluxe Edition)\n(Streaming and Physical version)",
-   "date": "June 18th, 2013",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Villuminati"
+     "name": "Villuminati",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Kerney Sermon - Skit"
+     "name": "Kerney Sermon - Skit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Land Of The Snakes"
+     "name": "Land Of The Snakes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Power Trip (feat. Miguel)"
+     "name": "Power Trip (feat. Miguel)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Mo Money - Interlude"
+     "name": "Mo Money - Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Trouble"
+     "name": "Trouble",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Runaway"
+     "name": "Runaway",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "She Knows (feat. Amber Coffman & Cults)"
+     "name": "She Knows (feat. Amber Coffman & Cults)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Rich Niggaz"
+     "name": "Rich Niggaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Where's Jermaine? - Skit"
+     "name": "Where's Jermaine? - Skit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Forbidden Fruit (feat. Kendrick Lamar)"
+     "name": "Forbidden Fruit (feat. Kendrick Lamar)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Chaining Day"
+     "name": "Chaining Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Ain't That Some Shit - Interlude"
+     "name": "Ain't That Some Shit - Interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Crooked Smile (feat. TLC)"
+     "name": "Crooked Smile (feat. TLC)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Let Nas Down"
+     "name": "Let Nas Down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Born Sinner (feat. James Fauntleroy)"
+     "name": "Born Sinner (feat. James Fauntleroy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Miss America"
+     "name": "Miss America",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "New York Times (feat. 50 Cent & Bas)"
+     "name": "New York Times (feat. 50 Cent & Bas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Is She Gon Pop"
+     "name": "Is She Gon Pop",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Niggaz Know"
+     "name": "Niggaz Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Sparks Will Fly (feat. Jhené Aiko)"
+     "name": "Sparks Will Fly (feat. Jhené Aiko)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1141,39 +1577,55 @@
   {
    "era": "J. Cole x Chance Project",
    "name": "A Cole Chance...",
-   "date": "Nov 26th, 2014",
-   "quality": "Clear",
-   "source": "J. Cole",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://thesource.com/2014/11/26/j-coles-truly-yours-4-revenge-of-the-dreamers-2-on-the-way/"
+   ],
    "description": "A tracklist of a Cole and Chance The Rapper collab EP made in 2014 shared by Cole on his instagram at the time.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Tell Me Truth"
+     "name": "Tell Me Truth",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Shine"
+     "name": "Shine",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Incredible"
+     "name": "Incredible",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Smoke Filled Room"
+     "name": "Smoke Filled Room",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Miles"
+     "name": "Miles",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Bounce The Ball"
+     "name": "Bounce The Ball",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Still Won't"
+     "name": "Still Won't",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -1183,10 +1635,12 @@
   {
    "era": "Truly Yours 4",
    "name": "Truly Yours 4",
-   "date": "Nov 26th, 2014",
-   "quality": "Blocked",
-   "source": "J. Cole",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://thesource.com/2014/11/26/j-coles-truly-yours-4-revenge-of-the-dreamers-2-on-the-way/"
+   ],
    "description": "Unknown what tracks are in \"Truly Yours 4\" or how long it is\n\n\n#. Unknown mulitple tracks",
    "tracks": [],
    "images": [
@@ -1196,75 +1650,109 @@
   {
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Alternate tracklist)",
-   "date": "Nov 26th, 2014",
-   "quality": "Blocked",
-   "source": "J. Cole",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://thesource.com/2014/11/26/j-coles-truly-yours-4-revenge-of-the-dreamers-2-on-the-way/"
+   ],
    "description": "Unknown what tracks are in these 16 placements\n\n(Could be the \"Double Album\" idea)",
    "tracks": [
     {
      "num": "#1",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -1274,10 +1762,12 @@
   {
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Alternate tracklist)",
-   "date": "Nov 26th, 2014",
-   "quality": "Blocked",
-   "source": "J. Cole",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://thesource.com/2014/11/26/j-coles-truly-yours-4-revenge-of-the-dreamers-2-on-the-way/"
+   ],
    "description": "Not much information is known beside it's an \"album list\" presumably an album tracklist of songs\n\n\n\n#. Unknown multiple tracks",
    "tracks": [],
    "images": [
@@ -1287,87 +1777,127 @@
   {
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Alternate tracklist)",
-   "date": "Dec 9th, 2020 was when it was posted but the tracklist its self is from Oct 3rd, 2014",
-   "quality": "Clear",
-   "source": "Secondary",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://imgur.com/a/9PBzqxl"
+   ],
    "description": "posted by \"@mk_ohyeah\" on instragram, a close friend of Ib",
    "tracks": [
     {
      "num": "#1",
-     "name": "03' Adolescence"
+     "name": "03' Adolescence",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Apparently"
+     "name": "Apparently",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Black Man In Holly (Black Man In Hollywood)"
+     "name": "Black Man In Holly (Black Man In Hollywood)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Die Together"
+     "name": "Die Together",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "GFOMD (G.O.M.D)"
+     "name": "GFOMD (G.O.M.D)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Heaven Dancing (Keep Heaven Dancing)"
+     "name": "Heaven Dancing (Keep Heaven Dancing)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Intro/Jan 28"
+     "name": "Intro/Jan 28",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Things Change"
+     "name": "Things Change",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Wet Dreams (Wet Dreamz)"
+     "name": "Wet Dreams (Wet Dreamz)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Winter Wonderland"
+     "name": "Winter Wonderland",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "No Role Models (No Role Modelz)"
+     "name": "No Role Models (No Role Modelz)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "St. Tropez"
+     "name": "St. Tropez",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "Love Yourz"
+     "name": "Love Yourz",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Hello"
+     "name": "Hello",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "A Tale of Two Citiez (A Tale of 2 Citiez)"
+     "name": "A Tale of Two Citiez (A Tale of 2 Citiez)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#17",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#18",
-     "name": "Note To Self"
+     "name": "Note To Self",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#19",
-     "name": "Be Free"
+     "name": "Be Free",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -1378,42 +1908,58 @@
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Alternate tracklist)",
    "date": "",
-   "quality": "Blocked",
-   "source": "J. Cole",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Cole said that 8 of the bonus tracks that were released for 2014 Forest Hills Drive anniversary were once on the double album tracklist idea",
    "tracks": [
     {
      "num": "#1",
-     "name": "Home Soon"
+     "name": "Home Soon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Die Together"
+     "name": "Die Together",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Judgement Day"
+     "name": "Judgement Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Winter Wonderland"
+     "name": "Winter Wonderland",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Keep Heaven Dancing"
+     "name": "Keep Heaven Dancing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Miles"
+     "name": "Miles",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Black Man In Hollywood"
+     "name": "Black Man In Hollywood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Obviously"
+     "name": "Obviously",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1423,63 +1969,89 @@
   {
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Streaming and Physical version)",
-   "date": "Dec 9th, 2014",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "January 28th"
+     "name": "January 28th",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wet Dreamz"
+     "name": "Wet Dreamz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "03' Adolescence"
+     "name": "03' Adolescence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "A Tale Of 2 Citiez"
+     "name": "A Tale Of 2 Citiez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Fire Squad"
+     "name": "Fire Squad",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "St. Tropez"
+     "name": "St. Tropez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "G.O.M.D"
+     "name": "G.O.M.D",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "No Role Modelz"
+     "name": "No Role Modelz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Hello"
+     "name": "Hello",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Apparently"
+     "name": "Apparently",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Love Yourz"
+     "name": "Love Yourz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Note To Self"
+     "name": "Note To Self",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1489,79 +2061,113 @@
   {
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Blue Version)",
-   "date": "Nov 29th, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "January 28th"
+     "name": "January 28th",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wet Dreamz"
+     "name": "Wet Dreamz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "03' Adolescence"
+     "name": "03' Adolescence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "A Tale Of 2 Citiez"
+     "name": "A Tale Of 2 Citiez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Fire Squad"
+     "name": "Fire Squad",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "St. Tropez"
+     "name": "St. Tropez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "G.O.M.D"
+     "name": "G.O.M.D",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "No Role Modelz"
+     "name": "No Role Modelz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Hello"
+     "name": "Hello",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Apparently"
+     "name": "Apparently",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Love Yourz"
+     "name": "Love Yourz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Note To Self"
+     "name": "Note To Self",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Home Soon"
+     "name": "Home Soon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Die Together"
+     "name": "Die Together",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Judgement Day"
+     "name": "Judgement Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Winter Wonderland"
+     "name": "Winter Wonderland",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1571,79 +2177,113 @@
   {
    "era": "2014 Forest Hills Drive",
    "name": "2014 Forest Hills Drive\n(Clear version)",
-   "date": "Nov 29th, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "January 28th"
+     "name": "January 28th",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Wet Dreamz"
+     "name": "Wet Dreamz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "03' Adolescence"
+     "name": "03' Adolescence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "A Tale Of 2 Citiez"
+     "name": "A Tale Of 2 Citiez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Fire Squad"
+     "name": "Fire Squad",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "St. Tropez"
+     "name": "St. Tropez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "G.O.M.D"
+     "name": "G.O.M.D",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "No Role Modelz"
+     "name": "No Role Modelz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Hello"
+     "name": "Hello",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Apparently"
+     "name": "Apparently",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Love Yourz"
+     "name": "Love Yourz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Note To Self"
+     "name": "Note To Self",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Keep Heaven Dancing"
+     "name": "Keep Heaven Dancing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Miles"
+     "name": "Miles",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Black Man In Hollywood"
+     "name": "Black Man In Hollywood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Obviously"
+     "name": "Obviously",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1653,51 +2293,71 @@
   {
    "era": "4 Your Eyez Only",
    "name": "4 Your Eyez Only\n(Streaming and Physical version)",
-   "date": "Dec 9th, 2016",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "For Whom The Bell Tolls"
+     "name": "For Whom The Bell Tolls",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Immortal"
+     "name": "Immortal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Deja Vu"
+     "name": "Deja Vu",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Ville Mentality"
+     "name": "Ville Mentality",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "She's Mine Pt. 1"
+     "name": "She's Mine Pt. 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Change"
+     "name": "Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Neighbors"
+     "name": "Neighbors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Foldin Clothes"
+     "name": "Foldin Clothes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "She's Mine Pt. 2"
+     "name": "She's Mine Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "4 Your Eyez Only"
+     "name": "4 Your Eyez Only",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1707,59 +2367,83 @@
   {
    "era": "KOD",
    "name": "KOD\n(Streaming and Physical version)",
-   "date": "Apr 20th, 2018",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "KOD"
+     "name": "KOD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Photograph"
+     "name": "Photograph",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "The Cut Off (feat. kiLL edward)"
+     "name": "The Cut Off (feat. kiLL edward)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "ATM"
+     "name": "ATM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Motiv8"
+     "name": "Motiv8",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Kevin's Heart"
+     "name": "Kevin's Heart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "BRACKETS"
+     "name": "BRACKETS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Once an Addict (Interlude)"
+     "name": "Once an Addict (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "FRIENDS (feat. kiLL edward)"
+     "name": "FRIENDS (feat. kiLL edward)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Window Pain (Outro)"
+     "name": "Window Pain (Outro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "1985 - Intro to \"The Fall Off\""
+     "name": "1985 - Intro to \"The Fall Off\"",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1770,8 +2454,8 @@
    "era": "KOD",
    "name": "KOD \n(Deluxe tracklist)",
    "date": "",
-   "quality": "Blocked",
-   "source": "J. Cole",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A Deluxe for KOD was mentioned and in the works by cole but after some time, it began fading away into obsecurity and eventually forgotten\n\n\n\n\n\n#. Unknown multiple tracks for this deluxe",
    "tracks": [],
@@ -1782,59 +2466,83 @@
   {
    "era": "The Off-Season",
    "name": "The Off-Season\n(Streaming and Physical version)",
-   "date": "May 14th, 2021",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "9 5 . s o u t h"
+     "name": "9 5 . s o u t h",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "a m a r i"
+     "name": "a m a r i",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "m y . l i f e (with 21 Savage & Morray)"
+     "name": "m y . l i f e (with 21 Savage & Morray)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "a p p l y i n g . p r e s s u r e"
+     "name": "a p p l y i n g . p r e s s u r e",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "p u n c h i n' . t h e . c l o c k"
+     "name": "p u n c h i n' . t h e . c l o c k",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "1 0 0 . m i l' (with Bas)"
+     "name": "1 0 0 . m i l' (with Bas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "p r i d e . i s . t h e . d e v i l (with Lil Baby)"
+     "name": "p r i d e . i s . t h e . d e v i l (with Lil Baby)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "l e t . g o . m y . h a n d (with Bas & 6LACK)"
+     "name": "l e t . g o . m y . h a n d (with Bas & 6LACK)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "i n t e r l u d e"
+     "name": "i n t e r l u d e",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "t h e . c l i m b . b a c k"
+     "name": "t h e . c l i m b . b a c k",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "c l o s e"
+     "name": "c l o s e",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "h u n g e r . o n . h i l l s i d e (with Bas)"
+     "name": "h u n g e r . o n . h i l l s i d e (with Bas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1844,59 +2552,83 @@
   {
    "era": "Might Delete Later",
    "name": "Might Delete Later\n(Before the removal of \"7 Minute Drill)",
-   "date": "Apr 5th, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Pricey (feat. Ari Lennox, Young Dro & Gucci Mane)"
+     "name": "Pricey (feat. Ari Lennox, Young Dro & Gucci Mane)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Crocodile Tearz"
+     "name": "Crocodile Tearz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Ready '24 (feat. Cam'ron)"
+     "name": "Ready '24 (feat. Cam'ron)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Huntin' Wabbitz"
+     "name": "Huntin' Wabbitz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "H.Y.B (feat. Bas & Central Cee)"
+     "name": "H.Y.B (feat. Bas & Central Cee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Fever"
+     "name": "Fever",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Stickz N Stonez"
+     "name": "Stickz N Stonez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pi (feat. Daylyt & Ab-Soul)"
+     "name": "Pi (feat. Daylyt & Ab-Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Slealth Mode (feat. Bas)"
+     "name": "Slealth Mode (feat. Bas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "3001"
+     "name": "3001",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Trae The Truth in Ibiza"
+     "name": "Trae The Truth in Ibiza",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "7 Minute Drill"
+     "name": "7 Minute Drill",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -1906,55 +2638,77 @@
   {
    "era": "Might Delete Later",
    "name": "Might Delete Later\n(Streaming version)",
-   "date": "Apr 12th, 2024",
-   "quality": "Clear",
-   "source": "J. Cole",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Pricey (feat. Ari Lennox, Young Dro & Gucci Mane)"
+     "name": "Pricey (feat. Ari Lennox, Young Dro & Gucci Mane)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Crocodile Tearz"
+     "name": "Crocodile Tearz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Ready '24 (feat. Cam'ron)"
+     "name": "Ready '24 (feat. Cam'ron)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Huntin' Wabbitz"
+     "name": "Huntin' Wabbitz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "H.Y.B (feat. Bas & Central Cee)"
+     "name": "H.Y.B (feat. Bas & Central Cee)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Fever"
+     "name": "Fever",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Stickz N Stonez"
+     "name": "Stickz N Stonez",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Pi (feat. Daylyt & Ab-Soul)"
+     "name": "Pi (feat. Daylyt & Ab-Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Slealth Mode (feat. Bas)"
+     "name": "Slealth Mode (feat. Bas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "3001"
+     "name": "3001",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Trae The Truth in Ibiza"
+     "name": "Trae The Truth in Ibiza",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [

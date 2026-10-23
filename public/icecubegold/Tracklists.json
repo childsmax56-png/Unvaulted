@@ -1103,55 +1103,81 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Robbin' Hood (Cause It Ain't All Good)"
+     "name": "Robbin' Hood (Cause It Ain't All Good)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "What Can I Do? (Remix)"
+     "name": "What Can I Do? (Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "24 Wit an L"
+     "name": "24 Wit an L",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "You Know How We Do It (Remix)"
+     "name": "You Know How We Do It (Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "2 N the Morning"
+     "name": "2 N the Morning",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Check Yo Self (Remix)"
+     "name": "Check Yo Self (Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "You Don't Wanna Fuck With These (Unreleased '93 Shit)"
+     "name": "You Don't Wanna Fuck With These (Unreleased '93 Shit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Lil Ass Gee (Eerie Gumbo Remix)"
+     "name": "Lil Ass Gee (Eerie Gumbo Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "My Skin Is My Sin"
+     "name": "My Skin Is My Sin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "It Was a Good Day (Remix)"
+     "name": "It Was a Good Day (Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "U Ain't Gonna Take My Life"
+     "name": "U Ain't Gonna Take My Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "When I Get To Heaven (Remix)"
+     "name": "When I Get To Heaven (Remix)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "D'voidofpopniggafiedmegamix"
+     "name": "D'voidofpopniggafiedmegamix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
