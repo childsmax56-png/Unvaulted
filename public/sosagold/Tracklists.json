@@ -30,95 +30,132 @@
    "source": "",
    "links": [],
    "description": "",
-   "tracks": [],
-   "images": [
-    "/sosagold/art/tl-3-0.jpg"
-   ]
+   "tracks": []
   },
   {
    "era": "Wiiic City",
    "name": "Chicago Mania Vol. 1",
-   "date": "2009-05-05",
+   "date": "5-5-09",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://web.archive.org/web/20090726235221/http://www.greenpieceservice.com/CHICAGO-MANIA-VOL1.html"
+   ],
    "description": "Posted as the description on DJ Kenn's website where you could purchase the mixtape",
    "tracks": [
     {
      "num": "#1",
-     "name": "A.O.N Intro"
+     "name": "A.O.N Intro",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#2",
-     "name": "Kriminal - Gangsta Shit"
+     "name": "Kriminal - Gangsta Shit",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#3",
-     "name": "Kriminal - Show Off (feat. J Rock)"
+     "name": "Kriminal - Show Off (feat. J Rock)",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#4",
-     "name": "Kriminal - Animal"
+     "name": "Kriminal - Animal",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#5",
-     "name": "Kriminal - Beef (feat. C-Lo & J Rock)"
+     "name": "Kriminal - Beef (feat. C-Lo & J Rock)",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#6",
-     "name": "Chief Keef - Cash Flowin (feat. Kierra)"
+     "name": "Chief Keef - Cash Flowin (feat. Kierra)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Chief Keef - Autobiography"
+     "name": "Chief Keef - Autobiography",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Johnny - I'ma Get Money"
+     "name": "Johnny - I'ma Get Money",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#9",
-     "name": "Chief Keef - 2 Rambos On My Neck"
+     "name": "Chief Keef - 2 Rambos On My Neck",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Johnny - Hate On Me"
+     "name": "Johnny - Hate On Me",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#11",
-     "name": "Kriminal - I Wanna Be"
+     "name": "Kriminal - I Wanna Be",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#12",
-     "name": "Kriminal - I Need Money"
+     "name": "Kriminal - I Need Money",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#13",
-     "name": "Johnny - I Ain't Go Nowhere (feat. Bump & Polo)"
+     "name": "Johnny - I Ain't Go Nowhere (feat. Bump & Polo)",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#14",
-     "name": "Kriminal - Boss"
+     "name": "Kriminal - Boss",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#15",
-     "name": "Chief Keef - Niggas Greedy"
+     "name": "Chief Keef - Niggas Greedy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Johnny - Cock Back (feat. Nuk & Moda)"
+     "name": "Johnny - Cock Back (feat. Nuk & Moda)",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#17",
-     "name": "Johnny - That's All I Know (feat. Bump & Ace)"
+     "name": "Johnny - That's All I Know (feat. Bump & Ace)",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#18",
-     "name": "Kriminal - Get This Money"
+     "name": "Kriminal - Get This Money",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#19",
-     "name": "Kriminal - Whatever (Bonus)"
+     "name": "Kriminal - Whatever (Bonus)",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     }
    ],
    "images": [
@@ -128,87 +165,127 @@
   {
    "era": "Wiiic City",
    "name": "U.F. Overload",
-   "date": "2009-10-10",
+   "date": "10-10-09",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://web.archive.org/web/20100426082601/http://www.greenpieceinternational.com/chiefkeef&ufoverload.html"
+   ],
    "description": "Posted by DJ Kenn upon release",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Biggest Movie Ever"
+     "name": "Biggest Movie Ever",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Dick Pleaser (Freestyle)"
+     "name": "Dick Pleaser (Freestyle)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Where I'm From"
+     "name": "Where I'm From",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "All The Same"
+     "name": "All The Same",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Workin (feat. S.dot)"
+     "name": "Workin (feat. S.dot)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "I Go Hard"
+     "name": "I Go Hard",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Let's Do It"
+     "name": "Let's Do It",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Chief Keef Smoke Skit"
+     "name": "Chief Keef Smoke Skit",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Wasted (Freestyle)"
+     "name": "Wasted (Freestyle)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Ya Know"
+     "name": "Ya Know",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Goddamn"
+     "name": "Goddamn",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "All I Do (feat. A Jay)"
+     "name": "All I Do (feat. A Jay)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "Shame"
+     "name": "Shame",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "Lower Than Ya Lip"
+     "name": "Lower Than Ya Lip",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Colors (feat. Star)"
+     "name": "Colors (feat. Star)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
-     "name": "What If"
+     "name": "What If",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#18",
-     "name": "Shawty Say (feat. Star) (Bonus)"
+     "name": "Shawty Say (feat. Star) (Bonus)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#19",
-     "name": "Outro"
+     "name": "Outro",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -218,103 +295,151 @@
   {
    "era": "Wiiic City",
    "name": "Unknown Mixtape",
-   "date": "2010-09-16",
+   "date": "9-16-10",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.facebook.com/DJKENNAON/photos/pb.100063477185624.-2207520000/221523564531419/?type=3"
+   ],
    "description": "Visible in a photo DJ Kenn posted upon meeting Waka Flocka in Chicago on 9/16/10. Given to Waka Flocka by DJ Kenn amongst other mixtapes.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#2",
-     "name": "Star - Remember This"
+     "name": "Star - Remember This",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#3",
-     "name": "Kriminal - Fo Real (feat. Chief Keef & Johnny)"
+     "name": "Kriminal - Fo Real (feat. Chief Keef & Johnny)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Chief Keef - Freestyle"
+     "name": "Chief Keef - Freestyle",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Chief Keef - Bullet Smell"
+     "name": "Chief Keef - Bullet Smell",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Kriminal - To The Top"
+     "name": "Kriminal - To The Top",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#7",
-     "name": "Chief Keef - All or Nothin, Gettin Gone"
+     "name": "Chief Keef - All or Nothin, Gettin Gone",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Chief Keef - White Boy Wasted"
+     "name": "Chief Keef - White Boy Wasted",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "Chief Keef - For About a Day !"
+     "name": "Chief Keef - For About a Day !",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Chief Keef - War Time"
+     "name": "Chief Keef - War Time",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "Kriminal - Beat Up The Block"
+     "name": "Kriminal - Beat Up The Block",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#12",
-     "name": "Kriminal - I Gotta Get It"
+     "name": "Kriminal - I Gotta Get It",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#13",
-     "name": "Kriminal - Imma Man"
+     "name": "Kriminal - Imma Man",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#14",
-     "name": "Kriminal - Opportunity"
+     "name": "Kriminal - Opportunity",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#15",
-     "name": "Chief Keef - I Need This Money"
+     "name": "Chief Keef - I Need This Money",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
-     "name": "Chief Keef - Outerspace"
+     "name": "Chief Keef - Outerspace",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
-     "name": "Chief Keef - Bandz"
+     "name": "Chief Keef - Bandz",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#18",
-     "name": "Chief Keef - What If Pt. 2"
+     "name": "Chief Keef - What If Pt. 2",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#19",
-     "name": "Kriminal - Beware"
+     "name": "Kriminal - Beware",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#20",
-     "name": "Chief Keef - Regular"
+     "name": "Chief Keef - Regular",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#21",
-     "name": "Chief Keef - Movie Man"
+     "name": "Chief Keef - Movie Man",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#22",
-     "name": "Kriminal - Everyday I'm Hustlin"
+     "name": "Kriminal - Everyday I'm Hustlin",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     },
     {
      "num": "#23",
-     "name": "Outro"
+     "name": "Outro",
+     "color": "#434343",
+     "colorLabel": "Non-Sosa"
     }
    ],
    "images": [
@@ -329,87 +454,120 @@
    "source": "",
    "links": [],
    "description": "",
-   "tracks": [],
-   "images": [
-    "/sosagold/art/tl-7-0.jpg"
-   ]
+   "tracks": []
   },
   {
    "era": "Xanax",
    "name": "Bang 3",
-   "date": "2014-07-28",
+   "date": "7-28-14",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://twitter.com/XXL/status/493922963939676160"
+   ],
    "description": "Original Bang 3 tracklist previewed to Sosa's Instagram on 7/28/14. CD rip leaked on 11/4/23.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Hate Me Now"
+     "name": "Hate Me Now",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Three Zero Zero"
+     "name": "Three Zero Zero",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Tony Hawk"
+     "name": "Tony Hawk",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "No Choice"
+     "name": "No Choice",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "SuperHeroes N Villains (Superheroes)"
+     "name": "SuperHeroes N Villains (Superheroes)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Mando"
+     "name": "Mando",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Granny's"
+     "name": "Granny's",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Psych Ward"
+     "name": "Psych Ward",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Irri"
+     "name": "Irri",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Fuck Rehab"
+     "name": "Fuck Rehab",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Coolin"
+     "name": "Coolin",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Fuck Nigga"
+     "name": "Fuck Nigga",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Police"
+     "name": "Police",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Ignorant"
+     "name": "Ignorant",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Cussing"
+     "name": "Cussing",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#16",
-     "name": "Zero To Two Fifty (Zero to 250)"
+     "name": "Zero To Two Fifty (Zero to 250)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#17",
-     "name": "She Like"
+     "name": "She Like",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -419,91 +577,133 @@
   {
    "era": "Xanax",
    "name": "Back From The Dead 2",
-   "date": "2014-10-12",
+   "date": "10-12-14",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://twitter.com/Anthony_p89_/status/521407626228142080"
+   ],
    "description": "BFTD2 tracklist previewed to Sosa's Instagram on 10/12/14.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Feds"
+     "name": "Feds",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Paper"
+     "name": "Paper",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Whole Crowd"
+     "name": "Whole Crowd",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "Faneto"
+     "name": "Faneto",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Blurry (feat. Tadoe)"
+     "name": "Blurry (feat. Tadoe)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Cops"
+     "name": "Cops",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Where's Waldo"
+     "name": "Where's Waldo",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Farm"
+     "name": "Farm",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Homie"
+     "name": "Homie",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Sets"
+     "name": "Sets",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Dear"
+     "name": "Dear",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Stupid"
+     "name": "Stupid",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Cuz"
+     "name": "Cuz",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Who Is That"
+     "name": "Who Is That",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Smack DVD"
+     "name": "Smack DVD",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#16",
-     "name": "Cashin"
+     "name": "Cashin",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#17",
-     "name": "The Moral"
+     "name": "The Moral",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#18",
-     "name": "Swag"
+     "name": "Swag",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#19",
-     "name": "Wayne"
+     "name": "Wayne",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#20",
-     "name": "B'S"
+     "name": "B'S",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -513,95 +713,139 @@
   {
    "era": "Xanax",
    "name": "Mansion Musick",
-   "date": "2014-11-26",
+   "date": "11-26-14",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.fakeshoredrive.com/2014/11/chief-keef-mansion-musick-cover-art-track-list.html/"
+   ],
    "description": "Mansion Musick tracklist previewed to Sosa's Instagram on 10/12/14. The identity of \"That\" prod. Young Chop is still under debate.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Belieber"
+     "name": "Belieber",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Colors"
+     "name": "Colors",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Couldn't Take It (Letter)"
+     "name": "Couldn't Take It (Letter)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "Blunted"
+     "name": "Blunted",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Get Ya (Hot Tub)"
+     "name": "Get Ya (Hot Tub)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "WWYD"
+     "name": "WWYD",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "No Dolla$ (Doctor)"
+     "name": "No Dolla$ (Doctor)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Money Can't"
+     "name": "Money Can't",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Lil Dummy"
+     "name": "Lil Dummy",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Hot"
+     "name": "Hot",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "On It On It"
+     "name": "On It On It",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Some"
+     "name": "Some",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Choppers On You"
+     "name": "Choppers On You",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Roadrunner"
+     "name": "Roadrunner",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Helped My Semi"
+     "name": "Helped My Semi",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#16",
-     "name": "Dope Game"
+     "name": "Dope Game",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#17",
-     "name": "Randy Moss"
+     "name": "Randy Moss",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#18",
-     "name": "That (How I Look Now)"
+     "name": "That (How I Look Now)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#19",
-     "name": "All Type Of Shit"
+     "name": "All Type Of Shit",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#20",
-     "name": "Ight"
+     "name": "Ight",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#21",
-     "name": "Face"
+     "name": "Face",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -611,63 +855,91 @@
   {
    "era": "Xanax",
    "name": "Nobody",
-   "date": "2014-12-10",
+   "date": "12-10-14",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.fakeshoredrive.com/2014/12/chief-keef-nobody-album-cover-art-track-list.html/"
+   ],
    "description": "Nobody tracklist announced days before release on 12/10/14.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Ain't Just Me"
+     "name": "Ain't Just Me",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Already"
+     "name": "Already",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Fast N Furious"
+     "name": "Fast N Furious",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "Fishing"
+     "name": "Fishing",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Funny"
+     "name": "Funny",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Gooey"
+     "name": "Gooey",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Hard"
+     "name": "Hard",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Nobody"
+     "name": "Nobody",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Twelve Bars"
+     "name": "Twelve Bars",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Pit Stop"
+     "name": "Pit Stop",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Yeah Now"
+     "name": "Yeah Now",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Strupid"
+     "name": "Strupid",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Oh Lawd (feat. Tadoe)"
+     "name": "Oh Lawd (feat. Tadoe)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -682,79 +954,108 @@
    "source": "",
    "links": [],
    "description": "",
-   "tracks": [],
-   "images": [
-    "/sosagold/art/tl-12-0.jpg"
-   ]
+   "tracks": []
   },
   {
    "era": "Cappin",
    "name": "Sorry For The Weight",
-   "date": "2015-02-08",
+   "date": "2-8-15",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://twitter.com/dominique_watie/status/564637700985475072"
+   ],
    "description": "Original Sorry 4 The Weight tracklist previewed to Sosa's Instagram on 2/7/15 and then deleted shortly after.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Heinz Ketchup"
+     "name": "Heinz Ketchup",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "F 'em"
+     "name": "F 'em",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Ride On Me"
+     "name": "Ride On Me",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "He Don't Know"
+     "name": "He Don't Know",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Cheap"
+     "name": "Cheap",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Glo Gang Arena"
+     "name": "Glo Gang Arena",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "That's What"
+     "name": "That's What",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "A$AP (A$AP Rocky)"
+     "name": "A$AP (A$AP Rocky)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Bullets"
+     "name": "Bullets",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Get Money"
+     "name": "Get Money",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Send It Up"
+     "name": "Send It Up",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Tomorrow"
+     "name": "Tomorrow",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Hiding"
+     "name": "Hiding",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Right Now"
+     "name": "Right Now",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Dipset"
+     "name": "Dipset",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -764,91 +1065,133 @@
   {
    "era": "Cappin",
    "name": "Sorry For The Weight",
-   "date": "2015-02-12",
+   "date": "2-12-15",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://twitter.com/dominique_watie/status/564637700985475072"
+   ],
    "description": "Second Sorry 4 The Weight tracklist previewed to Sosa's\nInstagram on 2/12/15 and then deleted shortly after.",
    "tracks": [
     {
      "num": "#1",
-     "name": "W.W.Y.D"
+     "name": "W.W.Y.D",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Himalayas"
+     "name": "Himalayas",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Sosa Chamberlain"
+     "name": "Sosa Chamberlain",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "Get Money"
+     "name": "Get Money",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Hot Shit (feat. Andy Milonakis)"
+     "name": "Hot Shit (feat. Andy Milonakis)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "F 'em"
+     "name": "F 'em",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Tomorrow"
+     "name": "Tomorrow",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Ten Toes Down"
+     "name": "Ten Toes Down",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "That's What"
+     "name": "That's What",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "I Want Some Money"
+     "name": "I Want Some Money",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Guess What Boy"
+     "name": "Guess What Boy",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Sleepy"
+     "name": "Sleepy",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "What Up"
+     "name": "What Up",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "5AM"
+     "name": "5AM",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Send It"
+     "name": "Send It",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#16",
-     "name": "He Don't Know"
+     "name": "He Don't Know",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#17",
-     "name": "Hiding"
+     "name": "Hiding",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#18",
-     "name": "Crawling (Callin)"
+     "name": "Crawling (Callin)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#19",
-     "name": "Don't Want More (Don't Want None)"
+     "name": "Don't Want More (Don't Want None)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#20",
-     "name": "Yours (feat. Benji Glo)"
+     "name": "Yours (feat. Benji Glo)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -858,7 +1201,7 @@
   {
    "era": "Cappin",
    "name": "Blood Thicker Than Water",
-   "date": "2015-02-12",
+   "date": "2-12-15",
    "quality": "",
    "source": "",
    "links": [],
@@ -866,51 +1209,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Money Talkin"
+     "name": "Money Talkin",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Gangsta Shit"
+     "name": "Gangsta Shit",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Trap Dayz"
+     "name": "Trap Dayz",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Hungry"
+     "name": "Hungry",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Plotting"
+     "name": "Plotting",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Who Would"
+     "name": "Who Would",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
-     "name": "Bodies On The Ground"
+     "name": "Bodies On The Ground",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Dope Game"
+     "name": "Dope Game",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Beetlejuice"
+     "name": "Beetlejuice",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Don't Tell (Tell Nobody)"
+     "name": "Don't Tell (Tell Nobody)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Pull Up"
+     "name": "Pull Up",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Colors"
+     "name": "Colors",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -920,67 +1287,97 @@
   {
    "era": "Cappin",
    "name": "Bang 3",
-   "date": "2015-07-04",
+   "date": "7-4-15",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.reddit.com/r/hiphopheads/comments/3c38dd/new_tracklist_for_bang_3_released/"
+   ],
    "description": "Another Bang 3 tracklist previewed to Alki David's Instagram on 7/4/15.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Crazy"
+     "name": "Crazy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Boss"
+     "name": "Boss",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Pick One"
+     "name": "Pick One",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "SuperHeroes (feat. A$AP Rocky)"
+     "name": "SuperHeroes (feat. A$AP Rocky)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Tree Tree"
+     "name": "Tree Tree",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Bouncin"
+     "name": "Bouncin",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Go Harder"
+     "name": "Go Harder",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Facts"
+     "name": "Facts",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Missing You (Ain't Missin You)"
+     "name": "Missing You (Ain't Missin You)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "GLOin"
+     "name": "GLOin",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "TD"
+     "name": "TD",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Green Light"
+     "name": "Green Light",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Told Ya"
+     "name": "Told Ya",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Yes"
+     "name": "Yes",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -990,87 +1387,127 @@
   {
    "era": "Cappin",
    "name": "Scrapped CBMIX Tracklist",
-   "date": "2016-08-20",
+   "date": "8-20-16",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.reddit.com/r/ChiefKeef/comments/4yt00s/new_chief_keef_album_tracklist/"
+   ],
    "description": "Scrapped CBMIX album announced to his Snapchat on 8/20/16.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Driver"
+     "name": "Driver",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Die With Me"
+     "name": "Die With Me",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Light Heist"
+     "name": "Light Heist",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "Complaints"
+     "name": "Complaints",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#5",
-     "name": "Check Smell"
+     "name": "Check Smell",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Grab A Star"
+     "name": "Grab A Star",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Moonboots"
+     "name": "Moonboots",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#8",
-     "name": "Had To Let Go"
+     "name": "Had To Let Go",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "So What"
+     "name": "So What",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Chief Pac"
+     "name": "Chief Pac",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "Pursuit Of Liberty"
+     "name": "Pursuit Of Liberty",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "Tragedies"
+     "name": "Tragedies",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Whoa"
+     "name": "Whoa",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Yeah"
+     "name": "Yeah",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Binoculars"
+     "name": "Binoculars",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#16",
-     "name": "Still Fly (Fookah)"
+     "name": "Still Fly (Fookah)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#17",
-     "name": "Air On High"
+     "name": "Air On High",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#18",
-     "name": "Morning"
+     "name": "Morning",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#19",
-     "name": "Pretty Boy"
+     "name": "Pretty Boy",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [
@@ -1085,83 +1522,114 @@
    "source": "",
    "links": [],
    "description": "",
-   "tracks": [],
-   "images": [
-    "/sosagold/art/tl-18-0.jpg"
-   ]
+   "tracks": []
   },
   {
    "era": "Almighty So 2 [V2]",
    "name": "Almighty So 2",
-   "date": "2024-03-07",
+   "date": "3-7-24",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://www.reddit.com/r/ChiefKeef/comments/1b8lv8s/almighty_so_2_tracklist/"
+   ],
    "description": "Almighty So 2 tracklist leaked by Chris on 3/7/24.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Harry Potter"
+     "name": "Harry Potter",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#2",
-     "name": "Treat Myself (feat. Alexa)"
+     "name": "Treat Myself (feat. Alexa)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#3",
-     "name": "Never Fly Here (feat. Quavo)"
+     "name": "Never Fly Here (feat. Quavo)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#4",
-     "name": "Jesus (feat. Lil Gnar)"
+     "name": "Jesus (feat. Lil Gnar)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#5",
-     "name": "Un Hun Yup"
+     "name": "Un Hun Yup",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#6",
-     "name": "Believe"
+     "name": "Believe",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#7",
-     "name": "Letter To Sosa"
+     "name": "Letter To Sosa",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#8",
-     "name": "The Last Time (Prince Charming)"
+     "name": "The Last Time (Prince Charming)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#9",
-     "name": "Breaking Down"
+     "name": "Breaking Down",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#10",
-     "name": "Settled In (Grape Trees)"
+     "name": "Settled In (Grape Trees)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#11",
-     "name": "I'm Tryna Sleep"
+     "name": "I'm Tryna Sleep",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#12",
-     "name": "For All My Niggas Who Can't"
+     "name": "For All My Niggas Who Can't",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#13",
-     "name": "Neph Nem On The Rise (feat. Ballout & G Herbo) (Neph Nem)"
+     "name": "Neph Nem On The Rise (feat. Ballout & G Herbo) (Neph Nem)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#14",
-     "name": "Banded Up (feat. Tierra Whack)"
+     "name": "Banded Up (feat. Tierra Whack)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#15",
-     "name": "Almighty"
+     "name": "Almighty",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     },
     {
      "num": "#16",
-     "name": "Street Runner (Runner)"
+     "name": "Street Runner (Runner)",
+     "color": "#93c47d",
+     "colorLabel": "Full Available"
     }
    ],
    "images": [

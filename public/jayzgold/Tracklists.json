@@ -33,39 +33,57 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Greatest MC"
+     "name": "Greatest MC",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "What’s in a Name?"
+     "name": "What’s in a Name?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Get Off My Dick (feat. Sauce Money)"
+     "name": "Get Off My Dick (feat. Sauce Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Understand Me"
+     "name": "Understand Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pass the Roc"
+     "name": "Pass the Roc",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Broken English & Drug Sellin'"
+     "name": "Broken English & Drug Sellin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Rippin' It Up, Right? (feat. Sauce Money)"
+     "name": "Rippin' It Up, Right? (feat. Sauce Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Nuthin' But Love (feat. Sauce Money)"
+     "name": "Nuthin' But Love (feat. Sauce Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Under Pressure (feat. Sauce Money)"
+     "name": "Under Pressure (feat. Sauce Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "availColor": "#999999",
@@ -124,48 +142,70 @@
    "date": "",
    "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://pillows.su/f/a4ed7836767f16d276e9386384acce61"
+   ],
    "description": "Officially released tracklist for the album 4:44.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Kill Jay Z"
+     "name": "Kill Jay Z",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Story Of O.J."
+     "name": "The Story Of O.J.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Smile (feat. Gloria Carter)"
+     "name": "Smile (feat. Gloria Carter)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Caught Their Eyes (feat. Frank Ocean)"
+     "name": "Caught Their Eyes (feat. Frank Ocean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "4:44"
+     "name": "4:44",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Family Feud (feat. Beyonce)"
+     "name": "Family Feud (feat. Beyonce)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Bam (feat. Damian Marley)"
+     "name": "Bam (feat. Damian Marley)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Moonlight"
+     "name": "Moonlight",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Marcy Me"
+     "name": "Marcy Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Legacy"
+     "name": "Legacy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }

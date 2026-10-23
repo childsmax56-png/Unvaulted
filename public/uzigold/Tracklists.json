@@ -2,23 +2,23 @@
  "legend": [
   {
    "label": "Unknown",
-   "color": ""
+   "color": "#999999"
   },
   {
    "label": "Completely Unheard",
-   "color": ""
+   "color": "#E06666"
   },
   {
    "label": "Snippet Available",
-   "color": ""
+   "color": "#F6B26B"
   },
   {
    "label": "Version Available",
-   "color": ""
+   "color": "#93C47D"
   },
   {
    "label": "Confirmed Version Available",
-   "color": ""
+   "color": "#8E7CC3"
   }
  ],
  "albums": [
@@ -27,1008 +27,1394 @@
    "name": "Purple Thoughtz",
    "date": "Jan 19, 2014",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the released version of Purple Thoughtz.",
    "tracks": [
     {
      "num": "#1",
-     "name": "GG (Intro)"
+     "name": "GG (Intro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "White Shirt"
+     "name": "White Shirt",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Don't Stop"
+     "name": "Don't Stop",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Puff"
+     "name": "Puff",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "We Workin"
+     "name": "We Workin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I Got Bandz"
+     "name": "I Got Bandz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Cartel"
+     "name": "Cartel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Did It On My Own"
+     "name": "Did It On My Own",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Home Economic$",
    "name": "Home Economic$ (feat. Reese LaFlare)",
    "date": "",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the scrapped collab with Reese LaFlare.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Servin (feat. KEY!)"
+     "name": "Servin (feat. KEY!)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "400 Degrees"
+     "name": "400 Degrees",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#3",
-     "name": "Woe"
+     "name": "Woe",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#4",
-     "name": "Uzi"
+     "name": "Uzi",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#5",
-     "name": "Faded"
+     "name": "Faded",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#6",
-     "name": "Pretty Boy Anthem (feat. Lil B)"
+     "name": "Pretty Boy Anthem (feat. Lil B)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "The Real Uzi",
    "name": "The Real Uzi",
    "date": "",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the released version of The Real Uzi.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Uzi Intro"
+     "name": "Uzi Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Uzi"
+     "name": "Uzi",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "We On It"
+     "name": "We On It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Understand"
+     "name": "Understand",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Trunk Got Birdies"
+     "name": "Trunk Got Birdies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Whippin"
+     "name": "Whippin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Decapacitator"
+     "name": "Decapacitator",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Senor Guapo"
+     "name": "Senor Guapo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "What You Off"
+     "name": "What You Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Tropics"
+     "name": "Tropics",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Dumber"
+     "name": "Dumber",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "I'm Sorry"
+     "name": "I'm Sorry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "As!an Chicks"
+     "name": "As!an Chicks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Don't Know Nuffin"
+     "name": "I Don't Know Nuffin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Plugged In"
+     "name": "Plugged In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Like 50"
+     "name": "Like 50",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Trappin Work"
+     "name": "Trappin Work",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage",
    "name": "Luv Is Rage",
    "date": "",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Intro was allegedly the original intro track to an early copy of Luv Is Rage. It's unknown what else was on this version of the album.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Luv Is Rage",
    "name": "Luv Is Rage (Soundcloud Release)",
    "date": "",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the soundcloud release of Luv Is Rage.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Safe House"
+     "name": "Safe House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Banned from TV"
+     "name": "Banned from TV",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Super Saiyan"
+     "name": "Super Saiyan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "7AM"
+     "name": "7AM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Yamborghini Dream"
+     "name": "Yamborghini Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Right Now"
+     "name": "Right Now",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Moist"
+     "name": "Moist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Top"
+     "name": "Top",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Queso"
+     "name": "Queso",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "All My Chains"
+     "name": "All My Chains",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Belly"
+     "name": "Belly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Wit My Crew X 1987"
+     "name": "Wit My Crew X 1987",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Nuyork Nights at 21"
+     "name": "Nuyork Nights at 21",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Enemies"
+     "name": "Enemies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Ballin"
+     "name": "Ballin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage",
    "name": "Luv Is Rage (Streaming Release)",
    "date": "",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the streaming release of Luv Is Rage.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Safe House"
+     "name": "Safe House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Banned from TV"
+     "name": "Banned from TV",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Super Saiyan"
+     "name": "Super Saiyan",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "7AM"
+     "name": "7AM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Yamborghini Dream"
+     "name": "Yamborghini Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Right Now"
+     "name": "Right Now",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Top"
+     "name": "Top",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "All My Chains"
+     "name": "All My Chains",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Belly"
+     "name": "Belly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Enemies"
+     "name": "Enemies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Ballin"
+     "name": "Ballin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Paradise"
+     "name": "Paradise",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Lil Uzi Vert vs. The World",
    "name": "Lil Uzi Vert vs. The World",
    "date": "",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of Lil Uzi Vert vs. The World.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Canadian Goose"
+     "name": "Canadian Goose",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hi Roller"
+     "name": "Hi Roller",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Money Longer"
+     "name": "Money Longer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Grab the Wheel"
+     "name": "Grab the Wheel",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "You Was Right"
+     "name": "You Was Right",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Baby Are You Home"
+     "name": "Baby Are You Home",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Ps & Qs"
+     "name": "Ps & Qs",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Team Rocket"
+     "name": "Team Rocket",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Scott and Ramona"
+     "name": "Scott and Ramona",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "The Perfect LUV Tape",
    "name": "The Perfect LUV Tape",
    "date": "July 2016",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of The Perfect LUV Tape.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Do What I Want"
+     "name": "Do What I Want",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Of Course We Ghetto Flowers"
+     "name": "Of Course We Ghetto Flowers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Original Uzi (4 of Us)"
+     "name": "Original Uzi (4 of Us)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Money Mitch"
+     "name": "Money Mitch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "SideLine Watching (Hold Up)"
+     "name": "SideLine Watching (Hold Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I Can Drive"
+     "name": "I Can Drive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "You're Lost"
+     "name": "You're Lost",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Erase Your Social"
+     "name": "Erase Your Social",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Ronda (Winners)"
+     "name": "Ronda (Winners)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Seven Million"
+     "name": "Seven Million",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "1017 Vs. The World",
    "name": "1017 vs. the World (w/ Gucci Mane)",
    "date": "November 2016",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of 1017 vs. the World.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Changed My Phone"
+     "name": "Changed My Phone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Today"
+     "name": "Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Blonde Brigitte"
+     "name": "Blonde Brigitte",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Threesome"
+     "name": "Threesome",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Fresh"
+     "name": "Fresh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "In O4"
+     "name": "In O4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Secure The Bag"
+     "name": "Secure The Bag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage 1.5",
    "name": "Luv Is Rage 1.5",
    "date": "February 2017",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of Luv Is Rage 1.5.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Boring Shit"
+     "name": "Boring Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Luv Scars K.o 1600"
+     "name": "Luv Scars K.o 1600",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "XO TOUR Llif3"
+     "name": "XO TOUR Llif3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "YSL"
+     "name": "YSL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage [V2]",
    "name": "Luv Is Rage 2",
    "date": "Early 2017",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "An early tracklist for Luv Is Rage 2 from early 2017.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Stay This Way (Flex Up)"
+     "name": "Stay This Way (Flex Up)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Ain't Enough"
+     "name": "Ain't Enough",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Come This Way"
+     "name": "Come This Way",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "2 Luv Is 2 Rage",
    "name": "2 Luv Is 2 Rage",
    "date": "July 2017",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of 2 Luv Is 2 Rage",
    "tracks": [
     {
      "num": "#1",
-     "name": "Like This (Alone Time)"
+     "name": "Like This (Alone Time)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Bag"
+     "name": "Bag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Let You Know (Pretty Mami)"
+     "name": "Let You Know (Pretty Mami)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Loaded"
+     "name": "Loaded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Pet"
+     "name": "Pet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Walking Around With A Bank"
+     "name": "Walking Around With A Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Repercussions"
+     "name": "Repercussions",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage [V2]",
    "name": "Luv Is Rage 2",
    "date": "Mid 2017",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Tracklist for an earlier version of Luv Is Rage 2",
    "tracks": [
     {
      "num": "#1",
-     "name": "20 Minutes"
+     "name": "20 Minutes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Flex By Mistake"
+     "name": "Flex By Mistake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Let U Know"
+     "name": "Let U Know (Pretty Mami)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "This That"
+     "name": "This That",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Wolf Moon (Moon Relate)"
+     "name": "Wolf Moon (Moon Relate)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#6",
-     "name": "Sauce It Up"
+     "name": "Sauce It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "For Real"
+     "name": "For Real",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#8",
-     "name": "Half Baked (Early 20 Rager)"
+     "name": "Half Baked (Early 20 Rager)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Leonardo"
+     "name": "Leonardo (X)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Break The Bank"
+     "name": "Break The Bank",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#11",
-     "name": "Die Today"
+     "name": "Die Today",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Loaded"
+     "name": "Loaded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Wondergurl (Automatic)"
+     "name": "Wondergurl (Automatic)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Xo Tour Llif3 Remix feat. The Weeknd"
+     "name": "Xo Tour Llif3 Remix feat. The Weeknd",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage [V2]",
    "name": "Luv Is Rage 2",
    "date": "August 2017",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of Luv Is Rage 2",
    "tracks": [
     {
      "num": "#1",
-     "name": "Two®"
+     "name": "Two®",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "444+222"
+     "name": "444+222",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sauce It Up"
+     "name": "Sauce It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "No Sleep Leak"
+     "name": "No Sleep Leak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Way Life Goes"
+     "name": "The Way Life Goes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For Real"
+     "name": "For Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Feelings Mutual"
+     "name": "Feelings Mutual",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Neon Guts"
+     "name": "Neon Guts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Early 20 Rager"
+     "name": "Early 20 Rager",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "UnFazed"
+     "name": "UnFazed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pretty Mami"
+     "name": "Pretty Mami",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "How To Talk"
+     "name": "How To Talk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "X"
+     "name": "X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Malfunction"
+     "name": "Malfunction",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Dark Queen"
+     "name": "Dark Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "XO Tour Llif3"
+     "name": "XO Tour Llif3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage [V2]",
    "name": "Luv Is Rage 2 (Deluxe)",
    "date": "November 2017",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of Luv Is Rage 2 (Deluxe)",
    "tracks": [
     {
      "num": "#1",
-     "name": "Two®"
+     "name": "Two®",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "444+222"
+     "name": "444+222",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sauce It Up"
+     "name": "Sauce It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "No Sleep Leak"
+     "name": "No Sleep Leak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Way Life Goes"
+     "name": "The Way Life Goes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For Real"
+     "name": "For Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Feelings Mutual"
+     "name": "Feelings Mutual",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Neon Guts"
+     "name": "Neon Guts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Early 20 Rager"
+     "name": "Early 20 Rager",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "UnFazed"
+     "name": "UnFazed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pretty Mami"
+     "name": "Pretty Mami",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "How To Talk"
+     "name": "How To Talk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "X"
+     "name": "X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Malfunction"
+     "name": "Malfunction",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Dark Queen"
+     "name": "Dark Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "XO Tour Llif3"
+     "name": "XO Tour Llif3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Skir Skirr"
+     "name": "Skir Skirr",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Loaded"
+     "name": "Loaded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Diamonds All on My Wrist"
+     "name": "Diamonds All on My Wrist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "20 Min"
+     "name": "20 Min",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage [V2]",
-   "name": "''Album Ideas'' Folder - Luv Is Rage 2 (Deluxe)",
-   "date": "November 2017",
+   "name": "\"Album Ideas\" Folder - Luv Is Rage 2",
+   "date": "July ?? 2017\nNovember 20, 2017",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
-   "description": "A folder was found titled ''Album Idea'' and dated to November 20th, 2017. Strangely includes songs that already released on Luv Is Rage 2 and Playboi Carti's Self-Titled.\n\nUzi 808 All My Friends Are Dead 1 26 edit - Bm.m4a\nUzi Kodie Shane Left Me Lone - Bm.m4a\nUzi TM88 Loaded - Gm.m4a\nUzi Nowadays - Ebm.m4a\n01 Uzi Pablo Zabombafoo - Abm.m4a\nUzi Maaly Raw Half Baked rough - Ebm.m4a\nUzi Raf slowed - rough - Cm.m4a\nUzi Just Keep Her - F.m4a \nUzi 20 Till 1 1 16 edi - Abm.m4a\nUzi Cart 2 16 LMM - Am.m4a\nUzi 200 My Dash - Gb.m4a\nUzi Addy (Drugs) - Eb.m4a\nLil Uzi Vert - UZI CARTI SQAUD MM - Dm.m4a",
+   "description": "A folder was found titled ''Album Ideas'' that is rumored to have been put together by Don Cannon and dated to November 20th, 2017. However, this is likely a folder from July 2017 that was converted to .m4a in Nov. 2017. Includes songs from Luv Is Rage 2, 1017 vs. The World & Playboi Carti's Self-Titled. It should be noted that there are additional songs listed here compared to the initial \"leak\", as songs with incredibly similar naming conventions and metadata are assumed to have been in the folder, as it has been alleged that the initial folder that leaked was not the complete folder.\n\nUzi 808 All My Friends Are Dead 1 26 edit - Bm.m4a\nUzi Kodie Shane Left Me Lone - Bm.m4a\nUzi Tm88 Loaded - Gm.m4a\nUzi Nowadays - Ebm.m4a\nUzi Pablo Zabombafoo - Abm.m4a\nUzi Maaly Raw Half Baked rough - Ebm.m4a\nUzi Raf slowed - rough - Cm.m4a\nUzi Just Keep Her - F.m4a \nUzi 20 Till 1 1 16 edi - Abm.m4a\nUzi Cart 2 16 LMM - Am.m4a\nUzi 200 My Dash - Gb.m4a\nUzi Addy (Drugs) - Eb.m4a\nUZI CARTI SQAUD MM - Dm.m4a\nUzi Bobby Kritical Dj Plug For Real idk 2 - E.m4a\nUzi Gucci Change My Phone mix clean MM.m4a\nUzi Metro Woke Up Rich rough - Fm.m4a\nUzi Sonny Digital I Know - Fm.mp3\n\nFiles that were resent through iMessage:\nUzi Harold Harper Flooded The Face - Dbm.m4a",
    "tracks": [],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Luv Is Rage [V2]",
    "name": "Luv Is Rage 2 (Japanese Release)",
    "date": "December 2017",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "Tracklist for the official japanese release of Luv Is Rage 2",
+   "description": "Tracklist for the official Japanese release of Luv Is Rage 2",
    "tracks": [
     {
      "num": "#1",
-     "name": "Two®"
+     "name": "Two®",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "444+222"
+     "name": "444+222",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sauce It Up"
+     "name": "Sauce It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "No Sleep Leak"
+     "name": "No Sleep Leak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Way Life Goes"
+     "name": "The Way Life Goes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For Real"
+     "name": "For Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Feelings Mutual"
+     "name": "Feelings Mutual",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Neon Guts"
+     "name": "Neon Guts",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Early 20 Rager"
+     "name": "Early 20 Rager",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "UnFazed"
+     "name": "UnFazed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pretty Mami"
+     "name": "Pretty Mami",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "How To Talk"
+     "name": "How To Talk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "X"
+     "name": "X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Malfunction"
+     "name": "Malfunction",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Dark Queen"
+     "name": "Dark Queen",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "XO Tour Llif3"
+     "name": "XO Tour Llif3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Skir Skirr"
+     "name": "Skir Skirr",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Loaded"
+     "name": "Loaded",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Diamonds All on My Wrist"
+     "name": "Diamonds All on My Wrist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "20 Min"
+     "name": "20 Min",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Money Longer"
+     "name": "Money Longer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Do What I Want"
+     "name": "Do What I Want",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Lil Uzi Vert vs. The World 2 [V1]",
    "name": "Lil Uzi Vert vs. the World 2",
    "date": "2017",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "\"Zoom\" was said to be on a Lil Uzi Vert vs. The World 2 tracklist. Nothing else is known about this copy of the album.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Zoom"
+     "name": "Zoom",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Lil Uzi Vert vs. The World 2 [V1]",
    "name": "Lil Uzi Vert vs. the World 2",
    "date": "December 2017",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "December 2017 idea folder, in alphabetical order.",
    "tracks": [
     {
      "num": "#?",
-     "name": "1600"
+     "name": "1600",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Diamonds In My Cartis"
+     "name": "Diamonds In My Cartis",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Doin' The Most"
+     "name": "Doin' The Most",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "I Live It"
+     "name": "I Live It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "I'm Livin'"
+     "name": "I'm Livin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Jamaican Flow"
+     "name": "Jamaican Flow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "More Hundreds"
+     "name": "More Hundreds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Philly"
+     "name": "Philly",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Run It Up"
+     "name": "Run It Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Slatt"
+     "name": "Slatt",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Target"
+     "name": "Target",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "This Way"
+     "name": "This Way",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "U A Winner"
+     "name": "U A Winner",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "With Your Girl"
+     "name": "With Your Girl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Won't Let Me In"
+     "name": "Won't Let Me In",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Zoom"
+     "name": "Zoom",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Partial"
   },
   {
    "era": "Tsunami Island",
    "name": "Tsunami Island -  Lil Uzi Paramount StudioA 010218",
    "date": "January 2018",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Tracklist of recorded songs on Jan 2, 2018 for \"Tsunami Island\", based off OG Filenames",
    "tracks": [
     {
      "num": "#1",
-     "name": "Sleep Walk"
+     "name": "Sleep Walk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hurt Too (Don't Get Murked Up)"
+     "name": "Hurt Too (Don't Get Murked Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Keep Me Up"
+     "name": "Keep Me Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Killa (Watch Out)"
+     "name": "Killa (Watch Out)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
@@ -1036,11 +1422,15 @@
     },
     {
      "num": "#6",
-     "name": "Jet Blown (Big Flex)"
+     "name": "Jet Blown (Big Flex)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Location"
+     "name": "Location",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
@@ -1048,47 +1438,63 @@
     },
     {
      "num": "#9",
-     "name": "No Sir"
+     "name": "No Sir",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Partial"
   },
   {
    "era": "Tsunami Island",
    "name": "Tsunami Island",
    "date": "January 2018",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Tracklist for \"Tsunami Island\", leaked by Chris. However, this may be inaccurate",
    "tracks": [
     {
      "num": "#1",
-     "name": "Killa (Watch Out)"
+     "name": "Killa (Watch Out)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Hurt Too (Don't Get Murked Up)"
+     "name": "Hurt Too (Don't Get Murked Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Location"
+     "name": "Location",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "No Sir"
+     "name": "No Sir",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Sleep Walk"
+     "name": "Sleep Walk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Big Flex (Jet Blown)"
+     "name": "Big Flex (Jet Blown)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Get It Back"
+     "name": "Get It Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
@@ -1099,1105 +1505,1490 @@
      "name": "???"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Partial"
   },
   {
    "era": "Eternal Atake [V1]",
    "name": "Eternal Atake",
    "date": "September 2018",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
-   "description": "Partial September 2018 tracklist for \"Eternal Atake\". Full tracklist has yet to be revealed. The original partial tracklist that was listed ended up being fake.\n \n#? Our Year\n#?.Cant Save Her\n#?.Dont Wanna Wait",
-   "tracks": [],
-   "availability": "Blocked"
-  },
-  {
-   "era": "Eternal Atake [V1]",
-   "name": "Eternal Atake",
-   "date": "November 2018",
-   "quality": "Leaked",
-   "source": "",
-   "links": [],
-   "description": "November 2018 tracklist for \"Eternal Atake\", posted by @uzirareupdates at some point. It's unknown if we have the full tracklist, but incredibly unlikely. Uzi confirmed that It's Going Down was on a November 2018 tracklist likely being this one.",
+   "description": "Partial September 2018 tracklist for \"Eternal Atake\". Full tracklist has yet to be revealed. The original partial tracklist that was listed ended up being fake.",
    "tracks": [
     {
-     "num": "#1",
-     "name": "Intro (speculated to be 'Let's go' by tm 88)"
+     "num": "#?",
+     "name": "Our Year",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Hunnid"
+     "name": "Cant Save Her",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "This Way"
-    },
-    {
-     "num": "#?",
-     "name": "Of Course"
-    },
-    {
-     "num": "#?",
-     "name": "Rockstar Living"
-    },
-    {
-     "num": "#?",
-     "name": "Not The Same"
-    },
-    {
-     "num": "#?",
-     "name": "Run It Up"
-    },
-    {
-     "num": "#?",
-     "name": "Kappa"
-    },
-    {
-     "num": "#?",
-     "name": "All My Guap"
-    },
-    {
-     "num": "#?",
-     "name": "Bands"
-    },
-    {
-     "num": "#?",
-     "name": "It's Going Down"
+     "name": "Dont Wanna Wait",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Conflicting Sources"
   },
   {
    "era": "Eternal Atake [V1]",
    "name": "Eternal Atake",
    "date": "2018",
    "quality": "Leaked",
-   "source": "",
-   "links": [],
-   "description": "A copy of EA had 8 placements from producer Bugz Ronin. In a August 2025 QnA, he revealed some of the song that were on said tracklist (it was all that he could remember at the time, didn't seem to intentionally leave out info)",
-   "tracks": [
-    {
-     "num": "#?",
-     "name": "Can't Save Her"
-    },
-    {
-     "num": "#?",
-     "name": "Weds and Thurs"
-    },
-    {
-     "num": "#?",
-     "name": "Risk It All"
-    },
-    {
-     "num": "#?",
-     "name": "Hunnid"
-    },
-    {
-     "num": "#?",
-     "name": "Secure The Bag"
-    },
-    {
-     "num": "#?",
-     "name": "???"
-    },
-    {
-     "num": "#?",
-     "name": "???"
-    },
-    {
-     "num": "#?",
-     "name": "U A Winner (Although Bugz didn't talk about it, we can speculate with the info with have on that song that it was on it and following ''Risk It All'')"
-    }
-   ],
-   "availability": "Blocked"
-  },
-  {
-   "era": "Eternal Atake [V1]",
-   "name": "Eternal Atake",
-   "date": "2018",
-   "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Pop, Prices, Urgency and a few others were said to be on several Eternal Atake tracklists.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Of Course"
+     "name": "Of Course",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "All My Guap"
+     "name": "Pop",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Pop"
+     "name": "Up On My Price (Prices)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Up On My Price (Prices)"
+     "name": "Urgency",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Urgency"
+     "name": "Not The Same (Secure The Bag)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Not The Same (Secure The Bag)"
+     "name": "All My Guap",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake [V1]",
    "name": "Eternal Atake",
    "date": "2018",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "This Way was said to be on 5 different Eternal Atake tracklists. It's unknown what all these tracklists contained.",
    "tracks": [
     {
      "num": "#?",
-     "name": "This Way"
+     "name": "This Way",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake [V1]",
    "name": "Eternal Atake",
    "date": "2018-2019",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
-   "description": "Take My Cake was confirmed to be on some EA tracklists in 2018 and in 2019.",
+   "description": "Take My Cake was said to be on some EA tracklists in 2018 and in 2019.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Take My Cake"
+     "name": "Take My Cake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Conflicting Sources"
   },
   {
    "era": "Eternal Atake [V1]",
    "name": "Eternal Atake",
    "date": "December 2018",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Sanguine Paradise Alt. mix Bounced December 14, 2018. Just 6 days after announcing the album was finished, at a live show - Well Fargo Center, PA.\n\n#?.Sanguine Paradise\n#?.Of Course\n#?.Racks\n#?.New Patek \n#?.Rolli ft. Chief Keef",
    "tracks": [],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake [V1]",
    "name": "Eternal Atake",
    "date": "Janurary 2019",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Partial January 2019 tracklist for \"Eternal Atake\". Full tracklist has yet to be revealed.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Eternal Atake"
+     "name": "Eternal Atake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Better Find Closure"
+     "name": "Better Find Closure",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#3",
-     "name": "Of Course"
+     "name": "Of Course",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake [V2]",
    "name": "WOD Tape / \"Tranquility\" EP",
    "date": "2019",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "A rumored 10 track EP consisting only of songs produced by Working On Dying. It was supposed to drop in March 2019, but Uzi's label wouldn't allow it. Uzi dropped \"Free Uzi\" in response, causing Eternal Atake to be delayed. There's a chance that this EP is fake, as this hasn't been confirmed to exist to this day.",
    "tracks": [
     {
      "num": "#?",
-     "name": "All My Guap"
+     "name": "All My Guap",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Zoom"
+     "name": "Zoom",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Watch This"
+     "name": "Watch This",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Of Course"
+     "name": "Of Course",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Music Cap"
+     "name": "Music Cap",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#6",
      "name": "- 10. ???"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Rumored"
   },
   {
    "era": "Eternal Atake [V2]",
    "name": "Eternal Atake",
    "date": "2019",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
-   "description": "Tracklist for a 2019 version of Eternal Atake owned by Caskets, very similar to May 2019 tracklist.\n\nAtake Intro (WondaGurl)\n It's Going Down\n London\n Zoom\n Rose Gold\n Pack That (The Funny Way)\n Bust Me\n Sanguine Paradise\n Pop Ya\n Up On My Price\n Watch This\n Funny Money (Silly Watch)\n On The Road (Secure The Bag)\n That Way\n Urgency (feat. Syd)\n Cayy Benji",
+   "description": "A copy of EA had 8 placements from producer Bugz Ronin. In a August 2025 QnA, he revealed some of the song that were on said tracklist (it was all that he could remember at the time, didn't seem to intentionally leave out info). Likely a 2019 tracklist, given that \"Weds and Thurs\" is on it.",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Can't Save Her",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Weds and Thurs",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Risk It All",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Hunnid",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Secure The Bag",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "???"
+    },
+    {
+     "num": "#?",
+     "name": "???"
+    },
+    {
+     "num": "#?",
+     "name": "U A Winner *",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "availability": "Minimal"
+  },
+  {
+   "era": "Eternal Atake [V2]",
+   "name": "Eternal Atake",
+   "date": "2019",
+   "quality": "Leaked",
+   "source": "Leaked",
+   "links": [],
+   "description": "Tracklist for a 2019 version of Eternal Atake owned by Caskets.\n\nAtake Intro (WondaGurl)\n It's Going Down\n London\n Zoom\n Rose Gold\n Pack That (The Funny Way)\n Bust Me\n Sanguine Paradise\n Pop Ya\n Up On My Price\n Watch This\n Funny Money (Silly Watch)\n On The Road (Secure The Bag)\n That Way\n Urgency (feat. Syd)\n Cayy Benji",
    "tracks": [],
-   "availability": "Blocked"
+   "availability": "Full"
   },
   {
    "era": "Eternal Atake [V2]",
    "name": "Eternal Atake",
    "date": "July 2019",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "Tracklist for a July 10, 2019 version of Eternal Atake.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Funny Money"
+     "name": "Funny Money (Silly Watch)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "Bust Me"
+     "name": "Bust Me",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#3",
-     "name": "Cayy Benji"
+     "name": "Cayy Benji",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#4",
-     "name": "Main and My Side"
+     "name": "Main and My Side",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#5",
-     "name": "Nothing To Think About"
+     "name": "Nothing To Think About (Bigger Than Life)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#6",
-     "name": "Want It That Way"
+     "name": "Want It That Way (That Way)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#7",
-     "name": "Move"
+     "name": "Move (You Better Move)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#8",
-     "name": "POP"
+     "name": "POP",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#9",
-     "name": "Urgency (feat. SYD)"
+     "name": "Urgency (feat. SYD)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#10",
-     "name": "Immortal (Move The Same)"
+     "name": "Immortal (Move The Same)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#11",
-     "name": "Not The Same (Secure The Bag)"
+     "name": "Not The Same (Secure The Bag)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#12",
-     "name": "Up On My Price"
+     "name": "Up On My Price (Prices)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Eternal Atake [V3]",
    "name": "Eternal Atake",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of Eternal Atake",
    "tracks": [
     {
      "num": "#1",
-     "name": "Baby Pluto"
+     "name": "Baby Pluto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lo Mein"
+     "name": "Lo Mein",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Silly Watch"
+     "name": "Silly Watch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "POP"
+     "name": "POP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "You Better Move"
+     "name": "You Better Move",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Homecoming"
+     "name": "Homecoming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I'm Sorry"
+     "name": "I'm Sorry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Celebration Station"
+     "name": "Celebration Station",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Bigger Than Life"
+     "name": "Bigger Than Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Chrome Heart Tags"
+     "name": "Chrome Heart Tags",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Bust Me"
+     "name": "Bust Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Prices"
+     "name": "Prices",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Urgency"
+     "name": "Urgency",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Venetia"
+     "name": "Venetia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Secure The Bag"
+     "name": "Secure The Bag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "P2"
+     "name": "P2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Futsal Shuffle 2020 - Bonus Track"
+     "name": "Futsal Shuffle 2020 - Bonus Track",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "That Way - Bonus Track"
+     "name": "That Way - Bonus Track",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Eternal Atake [V3]",
    "name": "Eternal Atake (Deluxe)",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "It was stated by Uzi on twitter that A Boogie Wit Da Hoodie & Lil Baby were going to be on the deluxe version of Eternal Atake, however their features were cut last minute. We do not know 100% which of their collaborations were meant to be on the deluxe.",
+   "description": "It was stated by Uzi on twitter that A Boogie Wit da Hoodie & Lil Baby were going to be on the deluxe version of Eternal Atake, however their features were cut last minute. We do not know 100% which of their collaborations were meant to be on the deluxe.",
    "tracks": [
     {
      "num": "#?",
-     "name": "??? (feat. Lil Baby)"
+     "name": "??? (feat. Lil Baby)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "Too Brazy (with A Boogie wit da Hoodie)"
+     "name": "Too Brazy (with A Boogie Wit da Hoodie)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake [V3]",
    "name": "Eternal Atake (Deluxe) - LUV vs. The World 2.",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the official release of Eternal Atake (Deluxe) - LUV vs. the World 2.\n\nLUV vs. The World 2:",
    "tracks": [
     {
      "num": "#1",
-     "name": "Myron"
+     "name": "Myron",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lotus"
+     "name": "Lotus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bean (Kobe)"
+     "name": "Bean (Kobe)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Yessirskii"
+     "name": "Yessirskii",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Wassup"
+     "name": "Wassup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Strawberry Peels"
+     "name": "Strawberry Peels",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I Can Show You"
+     "name": "I Can Show You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Moon Relate"
+     "name": "Moon Relate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Come This Way"
+     "name": "Come This Way",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Trap This Way (This Way)"
+     "name": "Trap This Way (This Way)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "No Auto"
+     "name": "No Auto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Money Spread"
+     "name": "Money Spread",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Got The Guap"
+     "name": "Got The Guap",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Leaders"
+     "name": "Leaders",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Baby Pluto"
+     "name": "Baby Pluto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Lo Mein"
+     "name": "Lo Mein",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Silly Watch"
+     "name": "Silly Watch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "POP"
+     "name": "POP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "You Better Move"
+     "name": "You Better Move",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Homecoming"
+     "name": "Homecoming",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I'm Sorry"
+     "name": "I'm Sorry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Celebration Station"
+     "name": "Celebration Station",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Bigger Than Life"
+     "name": "Bigger Than Life",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Chrome Heart Tags"
+     "name": "Chrome Heart Tags",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Bust Me"
+     "name": "Bust Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Prices"
+     "name": "Prices",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Urgency"
+     "name": "Urgency",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Venetia"
+     "name": "Venetia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Secure The Bag"
+     "name": "Secure The Bag",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "P2"
+     "name": "P2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Futsal Shuffle 2020 - Bonus Track"
+     "name": "Futsal Shuffle 2020 - Bonus Track",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "That Way - Bonus Track"
+     "name": "That Way - Bonus Track",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Pluto x Baby Pluto",
    "name": "Pluto x Baby Pluto",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "Tracklist for the official release of Pluto x Baby Pluto",
+   "description": "Tracklist for an early version of the album, filenames show which spot two of the songs had. Astronauts was possibly still an intro for this version.\n\n1 (?). Astronauts",
    "tracks": [
     {
-     "num": "#1",
-     "name": "Stripes Like Burberry"
-    },
-    {
-     "num": "#2",
-     "name": "Marni on Me"
-    },
-    {
-     "num": "#3",
-     "name": "Sleeping on the Floor"
-    },
-    {
-     "num": "#4",
-     "name": "Real Baby Pluto"
-    },
-    {
-     "num": "#5",
-     "name": "Drankin n Smokin"
-    },
-    {
-     "num": "#6",
-     "name": "Million Dollar Play"
-    },
-    {
-     "num": "#7",
-     "name": "Plastic"
-    },
-    {
      "num": "#8",
-     "name": "That's it"
-    },
-    {
-     "num": "#9",
-     "name": "Bought a Bad Bitch"
-    },
-    {
-     "num": "#10",
-     "name": "Rockstar Chainz"
-    },
-    {
-     "num": "#11",
-     "name": "Lullaby"
-    },
-    {
-     "num": "#12",
-     "name": "She Never Been to Pluto"
-    },
-    {
-     "num": "#13",
-     "name": "Off Dat"
-    },
-    {
-     "num": "#14",
-     "name": "I Don't Wanna Break Up"
-    },
-    {
-     "num": "#15",
-     "name": "Bankroll"
+     "name": "Icy, Icy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Moment of Clarity"
+     "name": "Walked Into Space",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Minimal"
+  },
+  {
+   "era": "Pluto x Baby Pluto",
+   "name": "Pluto x Baby Pluto",
+   "date": "2020",
+   "quality": "Uzi",
+   "source": "Uzi",
+   "links": [],
+   "description": "Tracklist for the official release of Pluto x Baby Pluto.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Stripes Like Burberry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Marni on Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Sleeping on the Floor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Real Baby Pluto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Drankin n Smokin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Million Dollar Play",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Plastic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "That's it",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Bought a Bad Bitch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Rockstar Chainz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Lullaby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "She Never Been to Pluto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Off Dat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "I Don't Wanna Break Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Bankroll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Moment of Clarity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "availability": "Full"
   },
   {
    "era": "Pluto x Baby Pluto",
    "name": "Pluto x Baby Pluto (Deluxe)",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "Tracklist for the official release of Pluto x Baby Pluto (Deluxe)",
+   "description": "Tracklist for the official release of Pluto x Baby Pluto (Deluxe).",
    "tracks": [
     {
      "num": "#1",
-     "name": "Stripes Like Burberry"
+     "name": "Stripes Like Burberry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Marni on Me"
+     "name": "Marni on Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sleeping on the Floor"
+     "name": "Sleeping on the Floor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Real Baby Pluto"
+     "name": "Real Baby Pluto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Drankin n Smokin"
+     "name": "Drankin n Smokin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Million Dollar Play"
+     "name": "Million Dollar Play",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Plastic"
+     "name": "Plastic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "That's it"
+     "name": "That's it",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Bought a Bad Bitch"
+     "name": "Bought a Bad Bitch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Rockstar Chainz"
+     "name": "Rockstar Chainz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Lullaby"
+     "name": "Lullaby",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "She Never Been to Pluto"
+     "name": "She Never Been to Pluto",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Off Dat"
+     "name": "Off Dat",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "I Don't Wanna Break Up"
+     "name": "I Don't Wanna Break Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Bankroll"
+     "name": "Bankroll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Moment of Clarity"
+     "name": "Moment of Clarity",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Tic Tac"
+     "name": "Tic Tac",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "My Legacy"
+     "name": "My Legacy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Heart in Pieces"
+     "name": "Heart in Pieces",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Because of You"
+     "name": "Because of You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Bust a Move"
+     "name": "Bust a Move",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Baby Sauke"
+     "name": "Baby Sauke",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Patek"
+     "name": "Patek",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Over Your Head"
+     "name": "Over Your Head",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Forever Young",
    "name": "Soundcloud Tape",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "It was stated by Lil Uzi Vert that a soundcloud exclusive tape was in the works. Was said to have \"soundcloud vibes\". It's unknown what tracks were on this tape, but a livestream was done showing off tracks made during the session for the tape.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Proud Of You"
+     "name": "Proud Of You",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Have You (Super Saiyan 2)"
+     "name": "Have You (Super Saiyan 2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Hey You (Emeralds, Excuse My French, You Over There)"
+     "name": "Hey You (Emeralds, Excuse My French, You Over There)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Forever Young",
    "name": "December 20th, 2020 Livestream\n(and associated December 2020 Live songs)",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "In a series of livestreams on Instagram Live, primarily on December 20th, 2020 but also in the days preceeding and following the 20th, Uzi previewed numerous songs and grails, some in full and most partially. \n\nDecember 20th:",
    "tracks": [
     {
      "num": "#1",
-     "name": "Heaven (Hold On)"
+     "name": "Heaven (Hold On)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Homies (Show Me)"
+     "name": "Homies (Show Me)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I Can't Lie (Sad Raps)"
+     "name": "I Can't Lie (Sad Raps)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "I Gotta (Ridiculous)"
+     "name": "I Gotta (Ridiculous)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Do Gangsters Go to Heaven (Thank Her)"
+     "name": "Do Gangsters Go to Heaven (Thank Her)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Sinner (Been Up)"
+     "name": "Sinner (Been Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Not My Fault (Gucci Sneaks)"
+     "name": "Not My Fault (Gucci Sneaks)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "The Walk (Naw / I Got Swag)"
+     "name": "The Walk (Naw / I Got Swag)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Prophet (Find Me / Ashanti)"
+     "name": "Prophet (Find Me / Ashanti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "King Von (Sasuke 2)"
+     "name": "King Von (Sasuke 2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Here's A Rose"
+     "name": "Here's A Rose",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Street Music"
+     "name": "Street Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Good In The Hood"
+     "name": "Good In The Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Cold (Go!)"
+     "name": "Cold (Go!)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "On My Line (So many girls on my line)"
+     "name": "On My Line (So many girls on my line)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Have You (Super Saiyan 2)"
+     "name": "Have You (Super Saiyan 2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Pluto To Mars"
+     "name": "Pluto To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Old Days (Old Ways)"
+     "name": "Old Days (Old Ways)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Tell Me What You Want (Regular)"
+     "name": "Tell Me What You Want (Regular)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Ok Cool!"
+     "name": "Ok Cool!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Hey You (Emeralds, Excuse My French, You Over There)"
+     "name": "Hey You (Emeralds, Excuse My French, You Over There)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Look At This"
+     "name": "Look At This",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Guap (What's Up)"
+     "name": "Guap (What's Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Hold On (Don't Wanna Talk About Nothing)"
+     "name": "Hold On (Don't Wanna Talk About Nothing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "I Won't Fall"
+     "name": "I Won't Fall",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Even Steven (Street Shit)"
+     "name": "Even Steven (Street Shit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Carlton (By The Morning, Can't Stop)"
+     "name": "Carlton (By The Morning, Can't Stop)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Cancel (Lean In The Fanta)"
+     "name": "Cancel (Lean In The Fanta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
-     "name": "Keep Coming (Overseas Money)"
+     "name": "Keep Coming (Overseas Money)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
-     "name": "3D My Wrist"
+     "name": "3D My Wrist",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#31",
-     "name": "Sleep With a Bag"
+     "name": "Sleep With a Bag",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#32",
-     "name": "Proud of You"
+     "name": "Proud of You",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#33",
-     "name": "Hold Me Back"
+     "name": "Hold Me Back",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#1",
-     "name": "Ridiculous (I Gotta)"
+     "name": "Ridiculous (I Gotta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I Take No Breaks"
+     "name": "I Take No Breaks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Porsche (Of Course 2)"
+     "name": "Porsche (Of Course 2)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#4",
-     "name": "Swap That"
+     "name": "Swap That",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Homies (Goosebumps) {Show Me}"
+     "name": "Homies (Goosebumps) {Show Me}",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Fell in Love"
+     "name": "Fell in Love",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#2",
-     "name": "Go Crazy (freestyle)"
+     "name": "Go Crazy (freestyle)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#3",
-     "name": "Sleep With A Bag"
+     "name": "Sleep With A Bag",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#4",
-     "name": "Finessin Hearts Pt. 2"
+     "name": "Finessin Hearts Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#1",
-     "name": "Better Than Me (Sad Hours)"
+     "name": "Better Than Me (Sad Hours)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Full"
   },
   {
    "era": "Forever Young",
    "name": "Luv Is Rage 3",
    "date": "2020",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "It was stated in an instagram live that \"Luv Is Rage 3\" was on the way, and intended to release in 2021. While 'Finessin Hearts Pt. 2' is confirmed, t's unknown what was on this project, but several snippets were previewed by Uzi on Instagram with the pinned comment saying \"Luv Is Rage 3\". The last 3 songs are assumed to be related due to them either being previewed at the same time, or being \"given\" to DP Beats for \"DP Vs The World 2\" - which very likely could be a lie given DP claims to not have a majority of the songs, updated or old, with vocals (and none released either).\nUzi would also collab with his older producers, from his previous “Luv Is Rage” projects with new recruits.",
+   "description": "It was stated in an instagram live that \"Luv Is Rage 3\" was on the way, and intended to release in 2021. While 'Finessin Hearts Pt. 2' is confirmed, t's unknown what was on this project, but several snippets were previewed by Uzi on Instagram with the pinned comment saying \"Luv Is Rage 3\". The last 3 songs are assumed to be related due to them either being previewed at the same time, or being \"given\" to DP Beats for \"DP Vs The World 2\" - which very likely could be a lie given DP claims to not have a majority of the songs, updated or old, with vocals (and none released either).\nUzi would also collab with his older producers, from his previous “Luv Is Rage” projects with new recruits.\n\nConfirmed:",
    "tracks": [
     {
      "num": "#?",
-     "name": "Finessin Hearts Pt. 2"
+     "name": "Finessin Hearts Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Have You (Super Saiyan 2)"
+     "name": "Have You (Super Saiyan 2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Here's A Rose"
+     "name": "Here's A Rose",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Forever Young",
    "name": "Forever Young",
    "date": "2020-2021",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "It was stated in an instagram live that \"Forever Young\" was intended to release in 2021, and was a seperate project from \"Luv Is Rage 3\".\n(WOD Producers are Speculated to have placements)\n#1-?. ???",
+   "description": "It was stated in an instagram live that \"Forever Young\" was intended to release in 2021, and was a seperate project from \"Luv Is Rage 3\". WOD Producers are Speculated to have placements as well. This tracklist has not been verified to be real however.\n#1-?. ???",
    "tracks": [
     {
      "num": "#?",
-     "name": "Forever Young Intro"
+     "name": "Forever Young Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Old Me / Stoner"
+     "name": "Old Me / Stoner",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Pluto To Mars"
+     "name": "Pluto To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Goose Chase (Sleep With a Bag)"
+     "name": "Goose Chase (Sleep With a Bag)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "3D My Wrist"
+     "name": "3D My Wrist",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Movie"
+     "name": "Movie",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Wetter"
+     "name": "Wetter",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Line"
+     "name": "Line",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Mama I'm Sorry"
+     "name": "Mama I'm Sorry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Old Days"
+     "name": "Old Days",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Fell in Love"
+     "name": "Fell in Love",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Swap (Swap That)"
+     "name": "Swap (Swap That)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "That Body"
+     "name": "That Body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Good In The Hood"
+     "name": "Good In The Hood",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Cold"
+     "name": "Cold",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "I Gotta"
+     "name": "I Gotta",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Glocky"
+     "name": "Glocky",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Party With The Demons"
+     "name": "Party With The Demons",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Finessin Hearts Pt. 2"
+     "name": "Finessin Hearts Pt. 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Rumored"
   },
   {
    "era": "Forever Young",
    "name": "The Real Uzi 2",
    "date": "2021",
-   "quality": "Uzi",
-   "source": "",
+   "quality": "Leaked",
+   "source": "Leaked",
    "links": [],
-   "description": "Incomplete tracklist for an alleged The Real Uzi 2 - Possibly fake, source claims the leaker got this from someone in Uzi's camp, may have just been an idea (that lasted a full year)",
+   "description": "Incomplete tracklist for an alleged The Real Uzi 2 - Possibly fake, source claims the leaker got this from someone in Uzi's camp, may have just been an idea (that lasted a full year). Possibly an earlier tracklist, but given the source is associated with known scammers, it is unknown if this tracklist is real/accurate, or a fake/impartial tracklist.",
    "tracks": [
     {
      "num": "#1",
-     "name": "It's A 40"
+     "name": "It's A 40",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Bank Teller"
+     "name": "Bank Teller",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bankroll (Out of Control)"
+     "name": "Bankroll (Out of Control)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Slide"
+     "name": "Slide",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Skin Crawl"
+     "name": "Skin Crawl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
@@ -2205,801 +2996,1363 @@
     },
     {
      "num": "#?",
-     "name": "Backpack"
+     "name": "Backpack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "It's Up"
+     "name": "It's Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Conflicting Sources"
   },
   {
    "era": "Forever Young",
    "name": "Forever Young",
    "date": "2021-2022",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "A tracklist for Forever Young is said to exist, and in some iteration lasted until March 2022 - despite Pink Tape being announced\n\n.1 -> #?. ???",
    "tracks": [],
-   "availability": "Blocked"
+   "availability": "Rumored"
   },
   {
-   "era": "Pink Tape [V1]",
-   "name": "Delta Pink Tape",
+   "era": "Delta Pink [V1]",
+   "name": "Delta Pink Tape [V1]",
    "date": "November 2021",
-   "quality": "Uzi",
-   "source": "",
+   "quality": "Secondary",
+   "source": "Secondary",
    "links": [],
-   "description": "A early tracklist was seen on a white board on @xvirock IG story in late December 2021. It only contained two track names, but the tracklist itself was 6 songs long, with several other songs listed to the side. Possibly a very early version of Red and White",
+   "description": "An early tracklist was seen on a whiteboard on @xvirock IG story in late December 2021. It only contained two track names, but the tracklist itself was 6 songs long, with several other songs listed to the side. Possibly a very early version of Red and White.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Space Cadet"
+     "name": "Space Cadet",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#3",
-     "name": "Aye (Yea!) (Rage Music)"
+     "name": "Aye (Yea!) (Rage Music)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#5",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#6",
-     "name": "Final Fantasy (not seen in image)"
+     "name": "Final Fantasy (not seen in image)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "- #? ???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "Red Wraith"
+     "name": "Red Wraith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Lean? (Lean)"
+     "name": "Lean? (Lean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Prove A Point"
+     "name": "Prove A Point",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "I Gotta"
+     "name": "I Gotta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Swap"
+     "name": "Swap",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Astro Kat"
+     "name": "Astro Kat (seen on whiteboard but never confirmed)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Hate Me"
+     "name": "Hate Me (seen on whiteboard but never confirmed)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Partial"
   },
   {
-   "era": "Pink Tape [V1]",
+   "era": "Delta Pink [V1]",
+   "name": "Delta Pink Tape [V1]",
+   "date": "November 2021",
+   "quality": "Leaked",
+   "source": "Leaked",
+   "links": [],
+   "description": "Alleged \"more complete\" tracklist from the tracklist that was seen on a whiteboard on @xvirock IG story in late December 2021. Throughout the years, more info would come out, with the most recent dump coming in mid-July 2026, albeit from an unverified source associated with known scammers",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Space Cadet",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#3",
+     "name": "Aye (Yea!) (Rage Music)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#5",
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#6",
+     "name": "Confessions (\"Astrokat Mix\") [Jersey Club song]",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "All Alone (Aim Higher)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Outta Here",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Final Fantasy (not seen in image) [previously said to be track 6]",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Pluto 2 Mars (Pluto To Mars)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Red Wraith",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Lean? (Lean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Prove A Point",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "I Gotta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Swap",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "My Reality",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Old Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Ok Cool",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Astro Kat (seen on whiteboard but never confirmed)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Hate Me (seen on whiteboard but never confirmed)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "availability": "Conflicting Sources"
+  },
+  {
+   "era": "Delta Pink [V1]",
    "name": "The Pink Tape",
    "date": "2022",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
    "description": "It was said at one point that 'Pink Tape' was a punk rock album.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Demon High"
+     "name": "Demon High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Astro Kat"
+     "name": "Astro Kat",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Party With The Demons"
+     "name": "Party With The Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
-   "era": "Red and White",
+   "era": "Delta Pink [V1]",
+   "name": "The Pink Tape",
+   "date": "2022",
+   "quality": "Secondary",
+   "source": "Secondary",
+   "links": [],
+   "description": "A version of 'Pink Tape' during its punk rock iterations allegedly had at least 2 songs from RED+WHITE, however others have said this is untrue.",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Demon High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "??? (from RED & WHITE)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#?",
+     "name": "??? (from RED & WHITE)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    }
+   ],
+   "availability": "Conflicting Sources"
+  },
+  {
+   "era": "Pink Tape [V2]",
+   "name": "The Real Uzi 2",
+   "date": "2022",
+   "quality": "Leaked",
+   "source": "Leaked",
+   "links": [],
+   "description": "More complete tracklist for an alleged The Real Uzi 2. Leaked in mid-July 2026 with some notable changes/additions from the prior tracklist, albeit from an unverified source associated with known scammers. It is unknown if the prior tracklist is real/accurate.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Draco",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Count It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "It's A 40",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Serena Williams",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "It's Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Sloppy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Bank Teller",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Slides",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Skin Crawl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Bitch Too",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Step On",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Lost",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "availability": "Conflicting Sources"
+  },
+  {
+   "era": "RED & WHITE",
    "name": "Red & White (Soundcloud V1)",
    "date": "2022",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
    "description": "A version of Red & White was said to have multiple grails prior to Uzi asking a groupchat of fans what songs he should put on it",
    "tracks": [
     {
      "num": "#?",
-     "name": "Daytona (Denim Tears)"
+     "name": "Daytona (Denim Tears)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Rage"
+     "name": "Rage",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     }
    ],
-   "availability": "N/A"
+   "availability": "Rumored"
   },
   {
-   "era": "Red and White",
+   "era": "RED & WHITE",
    "name": "Red & White (Fan Groupchat Requests)",
    "date": "2022",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
    "description": "A version of Red & White was said to have multiple grails prior to Uzi asking a groupchat of fans what songs he should put on it. Included is the (likely uncomplete) list of songs they asked",
    "tracks": [
     {
      "num": "#?",
-     "name": "Up The Opp"
+     "name": "Up The Opp",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "3D My Wrist"
+     "name": "3D My Wrist",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#?",
-     "name": "Backspace"
+     "name": "Backspace",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Pour Me Numb"
+     "name": "Pour Me Numb",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "On My Bank *"
+     "name": "On My Bank *",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Don't Trap Off No iPhone"
+     "name": "Don't Trap Off No iPhone",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Space Cadet"
+     "name": "Space Cadet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "I Know"
+     "name": "I Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Cigarette"
+     "name": "For Fun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "For Fun"
+     "name": "Cigarette",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "N/A"
+   "availability": "Rumored"
   },
   {
-   "era": "Red and White",
+   "era": "RED & WHITE",
    "name": "Red & White (Soundcloud V2)",
    "date": "2022",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
    "description": "A version of Red & White was said to have \"Pardon Me\" and \"Internet\", reinforced by JT previewing these songs in full days after release. Additionally, Vault claims \"Pour Me Numb\" and \"Flooded The Face\" were sent out to Uzi during the rollout, and were considered to drop.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Internet"
+     "name": "Internet",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Pardon Me"
+     "name": "Pardon Me",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Pour Me Numb"
+     "name": "Pour Me Numb",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#?",
-     "name": "Flooded The Face"
+     "name": "Flooded The Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "N/A"
+   "availability": "Minimal"
   },
   {
-   "era": "Red and White",
+   "era": "RED & WHITE",
    "name": "Red & White (Soundcloud V3)",
    "date": "July 2022",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "The first version of Red & White released on Soundcloud.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Space Cadet"
+     "name": "Space Cadet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I Know"
+     "name": "I Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Flex Up"
+     "name": "Flex Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Hittin My Shoulder"
+     "name": "Hittin My Shoulder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "For Fun"
+     "name": "For Fun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Believe Me"
+     "name": "Believe Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Issa Hit"
+     "name": "Issa Hit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Glock in My Purse"
+     "name": "Glock in My Purse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Final Fantasy"
+     "name": "Final Fantasy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
-   "era": "Red and White",
+   "era": "RED & WHITE",
    "name": "Red & White (Streaming V1)",
    "date": "July 2022",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "The first version of Red & White released on Streaming.",
    "tracks": [
     {
      "num": "#1",
-     "name": "For Fun"
+     "name": "For Fun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Cigarette"
+     "name": "Cigarette",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Issa Hit"
+     "name": "Issa Hit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Glock in My Purse"
+     "name": "Glock in My Purse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "F.F."
+     "name": "F.F.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
-   "era": "Red and White",
+   "era": "RED & WHITE",
    "name": "Red & White (Soundcloud V4)",
    "date": "July 2022",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "The second version of Red & White released on Soundcloud.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Space Cadet"
+     "name": "Space Cadet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I Know"
+     "name": "I Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Flex Up"
+     "name": "Flex Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Hittin My Shoulder"
+     "name": "Hittin My Shoulder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Cigarette"
+     "name": "Cigarette",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "For Fun"
+     "name": "For Fun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Believe Me"
+     "name": "Believe Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Issa Hit"
+     "name": "Issa Hit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Glock in My Purse"
+     "name": "Glock in My Purse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Final Fantasy"
+     "name": "Final Fantasy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
-   "era": "Red and White",
+   "era": "RED & WHITE",
    "name": "Red & White (Streaming V2)",
    "date": "July 2022",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "The second version of Red & White released on Streaming",
    "tracks": [
     {
      "num": "#1",
-     "name": "Space Cadet"
+     "name": "Space Cadet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "I Know"
+     "name": "I Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Flex Up"
+     "name": "Flex Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Hittin My Shoulder"
+     "name": "Hittin My Shoulder",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "For Fun"
+     "name": "For Fun",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Cigarette"
+     "name": "Cigarette",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Issa Hit"
+     "name": "Issa Hit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Glock in My Purse"
+     "name": "Glock in My Purse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "F.F."
+     "name": "F.F.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "August 2022",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
    "description": "It's been said the Kanye West had put together a tracklist for Pink Tape in August 2022. It's unknown what this tracklist contained.\n#?.",
    "tracks": [],
-   "availability": "Blocked"
+   "availability": "Rumored"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "2023",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "In a interview done with TMZ, Uzi confirmed that For Me/City Girl would be on the album",
    "tracks": [
     {
      "num": "#?",
-     "name": "For Me"
+     "name": "For Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "2023",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
-   "description": "A version of the album was played for Uzi fan page owners and Gabriel Flores, with conflicting sources on what was played/on the tape. Allegedly no snippets from listening party, and songs played were confirmed to exist by Chris afterwards. Those invited had to have their phone screens facing up and in a corner to show they weren't recording to prevent leaks",
+   "description": "A version of the album was played for Uzi fan page owners and Gabriel Flores, with conflicting sources on what was played/on the tape. Allegedly no snippets from listening party, and songs played were confirmed to exist by Chris (Caskets) afterwards. Those invited had to have their phone screens facing up and in a corner to show they weren't recording to prevent leaks",
    "tracks": [
     {
      "num": "#?",
-     "name": "Rage Music"
+     "name": "Rage Music",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Just Wanna Rock"
+     "name": "Just Wanna Rock",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Ridiculous"
+     "name": "Ridiculous",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Patience"
+     "name": "Patience",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Can't Feel My Body"
+     "name": "Can't Feel My Body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Pluto To Mars"
+     "name": "Pluto To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "All Alone"
+     "name": "All Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Flooded The Face"
+     "name": "Flooded The Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "She Took The Molly"
+     "name": "She Took The Molly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "May-June 2023",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
    "description": "Tracklist for Pink Tape, posted by lyleleduff",
    "tracks": [
     {
      "num": "#1",
-     "name": "Flood The Face"
+     "name": "Flood The Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Aye"
+     "name": "Aye",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Nakamaru"
+     "name": "Nakamaru",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Heartbeat (gunshots)"
+     "name": "Heartbeat (gunshots)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Suicide Door (crow)"
+     "name": "Suicide Door (crow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Crush'em"
+     "name": "Crush'em",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Life Goes On (if (censored) does it [presumed to have been Baby Keem])/Pluto to Mars"
+     "name": "Life Goes On (if (censored) does it [presumed to have been Baby Keem])/Pluto to Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Days Come and Go"
+     "name": "Days Come and Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Mama Im Sorry"
+     "name": "Mama Im Sorry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Aim Higher"
+     "name": "Aim Higher",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#11",
-     "name": "Seroquel (ft. Don Toliver)"
+     "name": "Seroquel (ft. Don Toliver)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Just Wanna Rock"
+     "name": "Just Wanna Rock",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "I Gotta"
+     "name": "I Gotta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "For Me (porn)"
+     "name": "For Me (porn)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Global (thrax)"
+     "name": "Global (thrax)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#16",
-     "name": "All of the Lights Are Off"
+     "name": "All of the Lights Are Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Bound"
+     "name": "Bound",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#18",
-     "name": "Fire Alarm"
+     "name": "Fire Alarm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Chop Suey"
+     "name": "Chop Suey",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Listen to Me"
+     "name": "Listen to Me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#21",
-     "name": "Switch My Bitch Up"
+     "name": "Switch My Bitch Up",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#22",
-     "name": "Ramona"
+     "name": "Ramona",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#23",
-     "name": "Rehab"
+     "name": "Rehab",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Baby Metal"
+     "name": "Baby Metal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Full"
+  },
+  {
+   "era": "Pink Tape [V3]",
+   "name": "Pink Tape",
+   "date": "June 2023",
+   "quality": "Secondary",
+   "source": "Secondary",
+   "links": [],
+   "description": "One of the final tracklists for Pink Tape. The track order was confimed to have been completed sometime before June 17th, 2023, and is 27 songs long. 25 main songs, and 2 bonus tracks.\n\n1-27. ???",
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Kray (X2)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Just Wanna Rock",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Pluto To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Of Course",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Rage Music (Aye)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Flooded The Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "It's On Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "That Fiya",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Chopper",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
+    }
+   ],
+   "availability": "Minimal"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "June 2023",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
-   "description": "One of the final tracklists for Pink Tape. The track order was confimed to have been completed sometime before June 17th, 2023, and is 27 songs long. 25 main songs, and 2 bonus tracks.\n\n1-27. ???",
+   "description": "\"Pass It\" was said to have been on Pink Tape from June 17th, 2023 until June 24th, 2023, when Carti asked for the song to be taken off Pink Tape. Allegedly he wanted to re-record after SummerSmash but Uzi said it was too late. Released on Youtube as \"Patience\" (instead of the actual song) on 'accident' on June 30th, taken down later - not confirmed but likely track 20 before Carti pulled it",
    "tracks": [
     {
      "num": "#?",
-     "name": "Kray (X2)"
-    },
-    {
-     "num": "#?",
-     "name": "Just Wanna Rock"
-    },
-    {
-     "num": "#?",
-     "name": "Pluto To Mars"
-    },
-    {
-     "num": "#?",
-     "name": "Of Course"
-    },
-    {
-     "num": "#?",
-     "name": "Rage Music (Aye)"
-    },
-    {
-     "num": "#?",
-     "name": "Flooded The Face"
-    },
-    {
-     "num": "#?",
-     "name": "It's On Me"
-    },
-    {
-     "num": "#?",
-     "name": "That Fiya"
-    },
-    {
-     "num": "#?",
-     "name": "Chopper"
+     "name": "Pass It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "June 2023",
    "quality": "Leaked",
-   "source": "",
+   "source": "Leaked",
    "links": [],
-   "description": "\"Pass It\" was said to have been on Pink Tape from June 17th, 2023 until June 24th, 2023, when Carti asked for the song to be taken off Pink Tape. Allegedly he wanted to re-record after SummerSmash but Uzi said it was too late. Released on Youtube as \"Patience\" (instead of the actual song) on 'accident' on June 30th, taken down later - not confirmed but likely track 20 before Carti pulled it",
+   "description": "It is indicated in the filename for \"Vetements Jeans\" that it was present on a tracklist just before the album dropped.",
    "tracks": [
     {
-     "num": "#?",
-     "name": "Pass It"
+     "num": "#9",
+     "name": "Vetements Jeans",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Pink Tape [V3]",
    "name": "Pink Tape",
    "date": "June 2023",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Tracklist for the released version of Pink Tape.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Flooded The Face"
+     "name": "Flooded The Face",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Suicide Doors"
+     "name": "Suicide Doors",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Aye"
+     "name": "Aye",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Crush Em"
+     "name": "Crush Em",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Amped"
+     "name": "Amped",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "x2"
+     "name": "x2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Died and Came Back"
+     "name": "Died and Came Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Spin Again"
+     "name": "Spin Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "That Fiya"
+     "name": "That Fiya",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "I Gotta"
+     "name": "I Gotta",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Endless Fashion"
+     "name": "Endless Fashion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Mama, I'm Sorry"
+     "name": "Mama, I'm Sorry",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "All Alone"
+     "name": "All Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Nakamura"
+     "name": "Nakamura",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Just Wanna Rock"
+     "name": "Just Wanna Rock",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Fire Alarm"
+     "name": "Fire Alarm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "CS"
+     "name": "CS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Werewolf"
+     "name": "Werewolf",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Pluto To Mars"
+     "name": "Pluto To Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Patience"
+     "name": "Patience *",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Days Come and Go"
+     "name": "Days Come and Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Rehab"
+     "name": "Rehab",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "The End"
+     "name": "The End",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Zoom (Bonus Track)"
+     "name": "Zoom (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Of Course (Bonus Track)"
+     "name": "Of Course (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Shardai (Bonus Track)"
+     "name": "Shardai (Bonus Track)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Barter 16",
    "name": "Barter 16 [V1]",
    "date": "August 2023",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
    "description": "Seen on an Ike Beatz Instagram post/stream.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro / Scary Stories"
+     "name": "Intro / Scary Stories",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "Barter"
+     "name": "Barter",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#3",
-     "name": "Racks"
+     "name": "Racks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "RIP Ms. Connie"
+     "name": "RIP Ms. Connie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stick Up"
+     "name": "Stick Up",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#6",
-     "name": "Green Diamonds"
+     "name": "Green Diamonds",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#7",
-     "name": "Thigh Pads"
+     "name": "Thigh Pads",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Shar Pei"
+     "name": "Shar Pei",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#9",
-     "name": "Butter In It"
+     "name": "Butter In It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
@@ -3007,19 +4360,27 @@
     },
     {
      "num": "#11",
-     "name": "Realest From Philly"
+     "name": "Realest From Philly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Thug Voice"
+     "name": "Thug Voice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Workout (feat. Young Thug)"
+     "name": "Workout (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Bob Marley"
+     "name": "Bob Marley",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
@@ -3027,55 +4388,73 @@
     },
     {
      "num": "#16",
-     "name": "K-Pop"
+     "name": "K-Pop",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#17",
      "name": "???"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Partial"
   },
   {
    "era": "Barter 16",
    "name": "Barter 16 [V2]",
    "date": "August 2023",
    "quality": "Secondary",
-   "source": "",
+   "source": "Secondary",
    "links": [],
-   "description": "Shown by @uzirareupdates on ig, Stick Up was removed and Jet was added",
+   "description": "Revised tracklist. Was shown by @uzirareupdates on ig, Stick Up was removed and Jet was added",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro / B16"
+     "name": "Intro / B16",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "Barter"
+     "name": "Barter",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#3",
-     "name": "Racks"
+     "name": "Racks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "RIP Ms. Connie"
+     "name": "RIP Ms. Connie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Free Da Goat (feat. Young Thug)"
+     "name": "Free Da Goat (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Green Diamonds"
+     "name": "Green Diamonds",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#7",
-     "name": "Thigh Pads"
+     "name": "Thigh Pads",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Shar Pei"
+     "name": "Shar Pei",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#9",
@@ -3087,49 +4466,73 @@
     },
     {
      "num": "#11",
-     "name": "Thug Voice"
+     "name": "Thug Voice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Jet (BK)"
+     "name": "Jet (BK)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Guarantee (feat. Young Thug)"
+     "name": "Guarantee (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Realest From Philly"
+     "name": "Realest From Philly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Workout (feat. Young Thug)"
+     "name": "Workout (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Partial"
   },
   {
-   "era": "Eternal Atake 2",
-   "name": "Eternal Atake 2",
-   "date": "2024",
-   "quality": "Secondary",
-   "source": "",
+   "era": "Barter 16",
+   "name": "Barter 16 [V3?]",
+   "date": "August 2023",
+   "quality": "Leaked",
+   "source": "Leaked",
    "links": [],
-   "description": "Admins have claimed that on an earlier Eternal Atake 2 tracklist 'Stay Down' was originally on it before being scrapped.",
+   "description": "Version of B16 that the final mix files were used for. Only three files are available from this version.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Stay Down"
+     "name": "Racks",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Rich Gang",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Bloods",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake 2",
    "name": "Eternal Atake 2",
    "date": "October 2024",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "An earlier Eternal Atake 2 tracklist, partially shown by uzi on an IG post. Has 15 tracks and 4 bonus tracks.",
    "tracks": [
@@ -3143,15 +4546,21 @@
     },
     {
      "num": "#3",
-     "name": "W.. ..y (Wocky)"
+     "name": "W.. ..y (Wocky)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#4",
-     "name": "...$H"
+     "name": "...$H",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#5",
-     "name": "S.. ..IT (Stop It)"
+     "name": "S.. ..IT (Stop It)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#6",
@@ -3175,11 +4584,15 @@
     },
     {
      "num": "#11",
-     "name": "L..."
+     "name": "L...",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#12",
-     "name": "N..."
+     "name": "N...",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#13",
@@ -3187,11 +4600,15 @@
     },
     {
      "num": "#14",
-     "name": "...T"
+     "name": "...T",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#15",
-     "name": "Chill ebro"
+     "name": "Chill ebro",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#16",
@@ -3210,175 +4627,307 @@
      "name": "???"
     }
    ],
-   "availability": "Blocked"
+   "availability": "Minimal"
   },
   {
    "era": "Eternal Atake 2",
    "name": "Eternal Atake 2",
    "date": "October 2024",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "An EA2 tracklist shown by Uzi on an IG post. The IG post was later deleted. Contains 16 tracks and 4 bonus tracks.",
    "tracks": [
     {
      "num": "#1",
-     "name": "I'm Cooked (skit) (feat. bling bling)"
+     "name": "I'm Cooked (skit) (feat. bling bling)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Don't think they ready (pre-game) (Light Year (Practice))"
+     "name": "Don't think they ready (pre-game) (Light Year (Practice))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Aura (intro) (Meteor Man)"
+     "name": "Aura (intro) (Meteor Man)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wocky slush (Paars In The Mars)"
+     "name": "Wocky slush (Paars In The Mars)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Big time rush (The Rush)"
+     "name": "Big time rush (The Rush)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Stop it (Not An Option)"
+     "name": "Stop it (Not An Option)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Stank (She Stank)"
+     "name": "Stank (She Stank)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Leslie (Mr Chow)"
+     "name": "Leslie (Mr Chow)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Lyft (Lyft Em Up)"
+     "name": "Lyft (Lyft Em Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "How ? (Chips and Dip)"
+     "name": "How ? (Chips and Dip)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Eye 2 Eye (song cry) (Black Hole)"
+     "name": "Eye 2 Eye (song cry) (Black Hole)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Don't do it (Chill Bae)"
+     "name": "Don't do it (Chill Bae)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Na uh uh (Goddard Song)"
+     "name": "Na uh uh (Goddard Song)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Potion (PerkySex)"
+     "name": "Potion (PerkySex)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "All That (Conceited)"
+     "name": "All That (Conceited)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Chill ebro"
+     "name": "Chill ebro",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#17",
-     "name": "McWhistle leak (Blow Da Whistle)"
+     "name": "McWhistle leak (Blow Da Whistle)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#18",
-     "name": "floatin (prod. Maaly Raw)"
+     "name": "floatin (prod. Maaly Raw)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#19",
-     "name": "FTB (Fucking The Bank)"
+     "name": "FTB (Fucking The Bank)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#20",
-     "name": "Thank you for listening"
+     "name": "Thank you for listening",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
   },
   {
    "era": "Eternal Atake 2",
    "name": "Eternal Atake 2",
    "date": "November 2024",
    "quality": "Uzi",
-   "source": "",
+   "source": "Uzi",
    "links": [],
    "description": "Official Eternal Atake 2 tracklist first posted by Uzi on IG. The tracklist had earlier been posted in Uzi's \"Alien Language\". Confirmed to be the real tracklist as the songs are seen encrypted on the album preview.",
    "tracks": [
     {
      "num": "#1",
-     "name": "We Good"
+     "name": "We Good",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Light Year (Practice)"
+     "name": "Light Year (Practice)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Meteor Man"
+     "name": "Meteor Man",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Paars In The Mars"
+     "name": "Paars In The Mars",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "The Rush (feat. Big Time Rush)"
+     "name": "The Rush (feat. Big Time Rush)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Not An Option"
+     "name": "Not An Option",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "She Stank"
+     "name": "She Stank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Mr Chow"
+     "name": "Mr Chow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Lyft Em Up"
+     "name": "Lyft Em Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Chips and Dip"
+     "name": "Chips and Dip",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Black Hole"
+     "name": "Black Hole",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Chill Bae"
+     "name": "Chill Bae",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Goddard Song"
+     "name": "Goddard Song",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "PerkySex"
+     "name": "PerkySex",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Conceited"
+     "name": "Conceited",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Space High"
+     "name": "Space High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Clear"
+   "availability": "Full"
+  },
+  {
+   "era": "Maverick \"Almost Forever\" EP",
+   "name": "Maverick \"Almost Forever\" EP",
+   "date": "July 2026",
+   "quality": "Uzi",
+   "source": "Uzi",
+   "links": [],
+   "description": "Official tracklist for the Maverick \"Almost Forever\" EP. An 'alternate' tracklist was posted with the original song titles as well, but it has zero differences from release outside of the names.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Maverick Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Go !",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Poured",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "223",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Yoko",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Gas. Break.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Say It Was",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "London - Bonus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "availability": "Full"
   }
  ]
 }

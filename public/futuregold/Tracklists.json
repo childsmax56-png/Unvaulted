@@ -25,10 +25,12 @@
   {
    "era": "Keep Doin It",
    "name": "Keep Doin It",
-   "date": "2015.0",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://imgur.gg/f/lWpRNFk"
+   ],
    "description": "Alleged leaked 2015 tracklist from vlone.\n[Incomplete section]",
    "tracks": [
     {
@@ -72,9 +74,11 @@
    "era": "Super Future / Fire Marshal Future",
    "name": "Super Future",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://temp.imgur.gg/f/BlqxT8v"
+   ],
    "description": "Alleged leaked tracklist from vlone.\n[Incomplete section]",
    "tracks": [
     {
@@ -154,9 +158,11 @@
    "era": "DS2\n(Dirty Sprite 2)",
    "name": "DS2",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://imgur.gg/f/1xCL3CY"
+   ],
    "description": "Alleged leaked tracklist from vlone. Includes early iterations songs from Monster & What A Time To Be Alive.\n[Incomplete section]",
    "tracks": [
     {
@@ -271,47 +277,67 @@
   {
    "era": "HOMIE from the FUTURE",
    "name": "HOMIE from the FUTURE",
-   "date": "2016.0",
-   "quality": "Clear",
-   "source": "Secondary",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://x.com/djprettyboytank/status/1498809993625284615"
+   ],
    "description": "Outside of folder posted by DJ Pretty Boy Tank on Twitter on March 1, 2022. Full folder contents later posted by Rich Homie Dre on January 7, 2024. Said by him to be dated around 2016. Unordered, as it is in alphabetical order.",
    "tracks": [
     {
      "num": "#?",
-     "name": "champagne shower RHQ_03 (Champagne Shower)"
+     "name": "champagne shower RHQ_03 (Champagne Shower)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#?",
-     "name": "everything RHQ (Everything)"
+     "name": "everything RHQ (Everything)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "jimmy choo_04 (Jimmy Choo)"
+     "name": "jimmy choo_04 (Jimmy Choo)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "love dont cost a thing RHQ FUTE_07 (Love Don't Cost A Thing)"
+     "name": "love dont cost a thing RHQ FUTE_07 (Love Don't Cost A Thing)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "no neighbors RHQ_01 (No Neighbors)"
+     "name": "no neighbors RHQ_01 (No Neighbors)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "stars in the ceiling fute RHQ idea01_01 (Stars In The Ceiling)"
+     "name": "stars in the ceiling fute RHQ idea01_01 (Stars In The Ceiling)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#?",
-     "name": "upgrade (hook)_01 (Upgrade)"
+     "name": "upgrade (hook)_01 (Upgrade)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "we the future RHQ_04-01 (We The Future)"
+     "name": "we the future RHQ_04-01 (We The Future)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "you the one RHQ 01-01 (You The One)"
+     "name": "you the one RHQ 01-01 (You The One)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -322,78 +348,112 @@
    "era": "WRLD On Drugs",
    "name": "WRLD ON DRUGS",
    "date": "",
-   "quality": "Clear",
-   "source": "Juice WRLD",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Posted by Juice WRLD on Instagram. Only song unheard is Turn Into Boss.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Jet Lag"
+     "name": "Jet Lag",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#2",
-     "name": "Astronauts"
+     "name": "Astronauts",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#3",
-     "name": "Fine China"
+     "name": "Fine China",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#4",
-     "name": "Red Bentley"
+     "name": "Red Bentley",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#5",
-     "name": "Make It Back"
+     "name": "Make It Back",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#6",
-     "name": "Oxy"
+     "name": "Oxy",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#7",
-     "name": "7 AM (7 AM Freestyle)"
+     "name": "7 AM (7 AM Freestyle)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#8",
-     "name": "Different"
+     "name": "Different",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#9",
-     "name": "Shorty"
+     "name": "Shorty",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#10",
-     "name": "Realer n Realer"
+     "name": "Realer n Realer",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#11",
-     "name": "No Issue"
+     "name": "No Issue",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#12",
-     "name": "WRLD on Drugs"
+     "name": "WRLD on Drugs",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#13",
-     "name": "Afterlife"
+     "name": "Afterlife",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#14",
-     "name": "Ain't Livin Right"
+     "name": "Ain't Livin Right",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#15",
-     "name": "Transformer"
+     "name": "Transformer",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#16",
-     "name": "Turn Into Bosses"
+     "name": "Turn Into Bosses",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
-     "name": "Hard Work Pays Off"
+     "name": "Hard Work Pays Off",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     }
    ],
    "images": [
@@ -403,51 +463,71 @@
   {
    "era": "WATTBA",
    "name": "N/A",
-   "date": "2015.0",
-   "quality": "Clear",
-   "source": "Drake",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Posted by Drake on his finsta. Do Me Dirty (Interlude) is almost certainly the Diamonds Dancing outro, and Paris Morton Music 3 is likely 30 For 30 Freestyle. Likely ordered.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Digital Dash"
+     "name": "Digital Dash",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#2",
-     "name": "Chain Cost A House"
+     "name": "Chain Cost A House",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#3",
-     "name": "Live From The Gutter"
+     "name": "Live From The Gutter",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#4",
-     "name": "Diamonds Dancing"
+     "name": "Diamonds Dancing",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#5",
-     "name": "Do Me Dirty (Interlude)"
+     "name": "Do Me Dirty (Interlude)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Scholarships"
+     "name": "Scholarships",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#7",
-     "name": "Plastic Bag"
+     "name": "Plastic Bag",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#8",
-     "name": "I'm The Pluggg (I'm The Plug)"
+     "name": "I'm The Pluggg (I'm The Plug)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#9",
-     "name": "Change Locations"
+     "name": "Change Locations",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#?",
-     "name": "Paris Morton Music 3"
+     "name": "Paris Morton Music 3",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -458,8 +538,8 @@
    "era": "WATTBA2",
    "name": "FUT X DRA [ATLJACOB]",
    "date": "",
-   "quality": "Clear",
-   "source": "ATL Jacob",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Posted and quickly deleted by ATL Jacob on his IG. 9 unnamed songs with Future and Drake are visible at the bottom, and there are likely more after. Could be just beats, but it's likely that they're recorded on because Drake is mentioned in the filenames, and ATL Jacob doesn't work with him often (unlike Future).\n\nFUT X DRA 1 [ATLJACOB]\nFUT X DRA 2 [ATLJACOB]\nFUT X DRA 3 [ATLJACOB]\nFUT X DRA 4 [ATLJACOB]\nFUT X DRA 5  [ATLJACOB]\nFUT X DRA 6 [ATLJACOB]\nFUT X DRA 7 [ATLJACOB]\nFUT X DRA 8 [ATLJACOB]\nFUT X DRA 9 [ATLJACOB]",
    "tracks": [],
@@ -470,39 +550,55 @@
   {
    "era": "Donda 2",
    "name": "Donda II: 4 The Kids",
-   "date": "Jan 2022",
-   "quality": "Clear",
-   "source": "Secondary",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://docs.google.com/spreadsheets/d/1vW-nFbnR02F9BEnNPe5NBejHRGPt0QEGOYXLSePsC1k/edit?usp=sharing"
+   ],
    "description": "Posted by DJ Sky High Baby as a throwback to Donda 2. Likely an earlier version of the January 31st tracklist. Likely the closest leaked Donda 2 Tracklist to when it was a Future collab, due to half the songs having Future on them and it being from before January 31 (88-Keys confirmed a Ye x Future collab album in January). All other Donda 2 tracklists can be found on the Ye Tracker. Later tracklists have songs with Future made later on for Donda 2.",
    "tracks": [
     {
      "num": "#1",
-     "name": "LONG TIME (First Time In A Long Time)"
+     "name": "LONG TIME (First Time In A Long Time)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#2",
-     "name": "KEEP IT BURNING"
+     "name": "KEEP IT BURNING",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#3",
-     "name": "MR. MIYAGI"
+     "name": "MR. MIYAGI",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#4",
-     "name": "PABLO"
+     "name": "PABLO",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#5",
-     "name": "5 30 (Dear Summer) (The Cars Missing)"
+     "name": "5 30 (Dear Summer) (The Cars Missing)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#6",
-     "name": "FOR THE CHILDREN"
+     "name": "FOR THE CHILDREN",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#7",
-     "name": "ALL DAY X AT (Suzy?)"
+     "name": "ALL DAY X AT (Suzy?)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     }
    ],
    "images": [
@@ -513,9 +609,11 @@
    "era": "I NEVER LIKED YOU",
    "name": "I NEVER LIKED YOU",
    "date": "",
-   "quality": "Blurry",
-   "source": "Future",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://imgur.gg/f/PFknilw"
+   ],
    "description": "Posted on Future's instagram story\n[Incomplete]",
    "tracks": [
     {
@@ -542,71 +640,103 @@
   {
    "era": "Lil Durk Collab",
    "name": "Collaboration with Lil Durk",
-   "date": "2023.0",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "http://leaked.cx/"
+   ],
    "description": "Tracklist leaked by Pop on leaked.cx on June 8, 2024, and said by him to be mostly produced by ATL Jacob. Later said by him to be in order.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Swing Thru"
+     "name": "Swing Thru",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Sippin' and Tussin'"
+     "name": "Sippin' and Tussin'",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Solitary Choker"
+     "name": "Solitary Choker",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Spoiled"
+     "name": "Spoiled",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Never Imagined"
+     "name": "Never Imagined",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#6",
-     "name": "Daytona"
+     "name": "Daytona",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#7",
-     "name": "Never Took The Stand"
+     "name": "Never Took The Stand",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Hit My Line"
+     "name": "Hit My Line",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#9",
-     "name": "Millionaire"
+     "name": "Millionaire",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#10",
-     "name": "GTA"
+     "name": "GTA",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#11",
-     "name": "Wake Up Go Up"
+     "name": "Wake Up Go Up",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
-     "name": "Go Yard"
+     "name": "Go Yard",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Finding Shit In My Closet / Try It Out"
+     "name": "Finding Shit In My Closet / Try It Out",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
-     "name": "Do For My Image"
+     "name": "Do For My Image",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
-     "name": "Code Of Silence"
+     "name": "Code Of Silence",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     }
    ],
    "images": [
@@ -616,83 +746,119 @@
   {
    "era": "WE (STILL) DON'T TRUST YOU",
    "name": "We Still Don't Trust You",
-   "date": "2024.0",
-   "quality": "Blocked",
-   "source": "Metro",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Likely in order. This Sunday is the only one with a star visible. This could be because it was already finished before they brought it back, so it could be the only one finished at this point and the star could be indicating that. 14th track is unseen in both pictures.",
    "tracks": [
     {
      "num": "#1",
-     "name": "We Still Don't Trust You"
+     "name": "We Still Don't Trust You",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#2",
-     "name": "Nights Like This"
+     "name": "Nights Like This",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#3",
-     "name": "Bounce"
+     "name": "Bounce",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "This Sunday"
+     "name": "This Sunday",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#5",
-     "name": "Beat It"
+     "name": "Beat It",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "Out Of My Hands"
+     "name": "Out Of My Hands",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#7",
-     "name": "Right For You (Right 4 You)"
+     "name": "Right For You (Right 4 You)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#8",
-     "name": "Third World"
+     "name": "Third World",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
-     "name": "One Big Family"
+     "name": "One Big Family",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#10",
-     "name": "Evil World"
+     "name": "Evil World",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#11",
-     "name": "Amazing (Interlude)"
+     "name": "Amazing (Interlude)",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#12",
-     "name": "Before You Go"
+     "name": "Before You Go",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "(Mile High) Memories"
+     "name": "(Mile High) Memories",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#14",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#15",
-     "name": "(Drink N D)ance"
+     "name": "(Drink N D)ance",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#16",
-     "name": "Jealous"
+     "name": "Jealous",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     },
     {
      "num": "#17",
-     "name": "That's My Turn"
+     "name": "That's My Turn",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Red Leather"
+     "name": "Red Leather",
+     "color": "#93c47d",
+     "colorLabel": "Available"
     }
    ],
    "images": [

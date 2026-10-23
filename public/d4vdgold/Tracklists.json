@@ -22,8 +22,8 @@
    "era": "The Hoodstar Diary",
    "name": "The Hoodstar Diary",
    "date": "",
-   "quality": "Clear",
-   "source": "d4vd",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official tracklist for \"The Hoodstar Diary\"",
    "tracks": [
@@ -65,51 +65,51 @@
    "era": "Love Is Blind",
    "name": "Love Is Blind [V1]",
    "date": "",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early tracklist for \"Love Is Blind\"",
    "tracks": [
     {
      "num": "#?",
      "name": "11:00 PM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
      "name": "Company",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
      "name": "Fall Down",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
      "name": "Hard To Find",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Possibilites",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Reason",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Rooftop",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     }
    ]
@@ -117,9 +117,9 @@
   {
    "era": "Love Is Blind",
    "name": "Love Is Blind [V2]",
-   "date": "N/A",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Later tracklist for \"Love Is Blind\" with singles added.\n? Thorns",
    "tracks": [
@@ -146,7 +146,7 @@
     {
      "num": "#?",
      "name": "Hard To Find",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
@@ -160,19 +160,19 @@
     {
      "num": "#?",
      "name": "Possibilities",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
      "name": "Reason",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "Rooftop",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
@@ -180,9 +180,9 @@
   {
    "era": "Untitled Rock EP",
    "name": "Untitled Rock EP",
-   "date": "2022-08-16",
-   "quality": "Clear",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official tracklist for the EP.",
    "tracks": [
@@ -207,9 +207,9 @@
   {
    "era": "Untitled 2023 Album",
    "name": "Untitled 2023 Album",
-   "date": "2023-01-09",
-   "quality": "Clear",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist leaked for a scrapped album, all which have production from Spencer Stewart.",
    "tracks": [
@@ -246,28 +246,28 @@
   {
    "era": "Petals To Thorns",
    "name": "The Root Of It All [V1]",
-   "date": "2023-04-25",
-   "quality": "Clear",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early tracklist with \"From Whence You Came\" as an interlude and \"Accident\" as the outro track.",
    "tracks": [
     {
      "num": "#1",
      "name": "Sleep Well",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
      "name": "Here With Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
      "name": "This Is How It Feels (with Laufey)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
@@ -281,7 +281,7 @@
     {
      "num": "#6",
      "name": "WORTHLESS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
@@ -291,13 +291,13 @@
     {
      "num": "#8",
      "name": "You And I",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
      "name": "Romantic Homicide",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
@@ -313,9 +313,9 @@
   {
    "era": "Petals To Thorns",
    "name": "Petals To Thorns [V2]",
-   "date": "2023-05-26",
-   "quality": "Clear",
-   "source": "d4vd",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official released version of \"Petals To Thorns\" Before the removal of This Is How It Feels.",
    "tracks": [
@@ -330,7 +330,7 @@
     {
      "num": "#3",
      "name": "This Is How It Feels (with Laufey)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
@@ -362,9 +362,9 @@
   {
    "era": "Petals To Thorns",
    "name": "Petals To Thorns (Japanese CD Version)",
-   "date": "2023-05-26",
-   "quality": "Clear",
-   "source": "d4vd",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Japanese CD exclusive tracklist of Petals To Thorns with 2 bonus tracks",
    "tracks": [
@@ -379,7 +379,7 @@
     {
      "num": "#3",
      "name": "This Is How It Feels (with Laufey)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
@@ -419,9 +419,9 @@
   {
    "era": "Garden Of Eden",
    "name": "The Lost Petals",
-   "date": "2023-09-08",
-   "quality": "Clear",
-   "source": "d4vd",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official released version of \"The Lost Petals\" available on all DSPs.",
    "tracks": [
@@ -450,9 +450,9 @@
   {
    "era": "Garden Of Eden",
    "name": "Garden Of Eden [V1]",
-   "date": "N/A",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early tracklist for Garden Of Eden thats said to be 12 tracks long. Unknown which songs are on it.\n\n1-12. ???",
    "tracks": []
@@ -460,9 +460,9 @@
   {
    "era": "Garden Of Eden",
    "name": "Garden Of Eden [V2]",
-   "date": "N/A",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for Garden Of Eden with some known tracks. Unknown which order they're in.",
    "tracks": [
@@ -496,8 +496,8 @@
    "era": "WITHERED",
    "name": "Withering",
    "date": "",
-   "quality": "Clear",
-   "source": "d4vd",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official released version of \"Withering\" available on all DSPs.",
    "tracks": [
@@ -515,8 +515,8 @@
    "era": "WITHERED",
    "name": "Withered [V1]",
    "date": "",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early 2024 tracklist for WITHERED with only a few known songs.",
    "tracks": [
@@ -527,13 +527,13 @@
     {
      "num": "#?",
      "name": "Is This Really Love?",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Somewhere In The Middle",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
@@ -558,8 +558,8 @@
    "era": "Withered [V2]",
    "name": "Withered [V2]",
    "date": "",
-   "quality": "Unavailable",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Unknown 2024 copy of WITHERED with some previously unheard tracks and some released songs.\n\n1-3. ???",
    "tracks": [
@@ -611,10 +611,10 @@
   },
   {
    "era": "WITHERED",
-   "name": "WITHERED",
-   "date": "2024-08-07",
-   "quality": "Unavailable",
-   "source": "Leaked",
+   "name": "???",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Unknown album copy of WITHERED found in a Darkroom dropbox leak. Re-uses some Garden Of \nEden tracks and has some tracks from Petals To Thorns Era",
    "tracks": [
@@ -699,9 +699,9 @@
   {
    "era": "WITHERED",
    "name": "WITHERED",
-   "date": "2025-04-25",
-   "quality": "Clear",
-   "source": "d4vd",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official released version of \"WITHERED\" before the removal of Crashing.",
    "tracks": [
@@ -766,9 +766,9 @@
   {
    "era": "WITHERED",
    "name": "WITHERED (Bonus Tracks)",
-   "date": "2025-05-30",
-   "quality": "Clear",
-   "source": "d4vd",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official version of \"WITHERED\" with bonus tracks \"Where Did You Go?\" and \"Unrequited.\"",
    "tracks": [
@@ -841,9 +841,9 @@
   {
    "era": "Marcescence",
    "name": "Fortnite Jam Tracks",
-   "date": "6/?/2025",
-   "quality": "Unavailable",
-   "source": "Leaked",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A bundle of songs recorded in June 2025 for a collaboration with Fortnite, where these \nsongs would be in the game as jam tracks and be performed at d4vd's own festival event.",
    "tracks": [
@@ -872,9 +872,9 @@
   {
    "era": "Marcescence",
    "name": "Decay",
-   "date": "2025-07-02",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early tracklist of WITHERED Deluxe: Marcescence with \"Issues\" as the intro track \nand scrapped track \"How I See You.\"",
    "tracks": [
@@ -893,19 +893,19 @@
     {
      "num": "#?",
      "name": "Summer Don't End",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "Empty The Clip",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#?",
      "name": "I'm In Love",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     }
    ]
@@ -914,8 +914,8 @@
    "era": "Marcescence",
    "name": "Marcescence",
    "date": "",
-   "quality": "Unavailable",
-   "source": "d4vd",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Partial tracklist for the album posted to d4vd's Twitter/X\n\n1-7. ???",
    "tracks": [
@@ -926,7 +926,7 @@
     {
      "num": "#9",
      "name": "I'm In Love",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Alternate Version Available"
     },
     {
@@ -948,7 +948,7 @@
     {
      "num": "#14",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
@@ -956,9 +956,9 @@
   {
    "era": "Marcescence",
    "name": "WITHERED Deluxe: Marcescence",
-   "date": "2025-09-07",
-   "quality": "Clear",
-   "source": "d4vd",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Official tracklist for WITHERED Deluxe: Marcescence",
    "tracks": [
@@ -1027,9 +1027,9 @@
   {
    "era": "Marcescence",
    "name": "WITHERED Deluxe: Marcescence (Physical Version)",
-   "date": "N/A",
-   "quality": "Clear",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Physical version of WITHERED Deluxe: Marcescence with bonus track \"Floating.\"",
    "tracks": [
@@ -1102,9 +1102,9 @@
   {
    "era": "WITHERED",
    "name": "WITHERED [V3]",
-   "date": "2025-10-01",
-   "quality": "Clear",
-   "source": "Darkroom/Interscope",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Newest available tracklist for WITHERED after the removal of \"Crashing\" from streaming services.",
    "tracks": [
@@ -1173,9 +1173,9 @@
   {
    "era": "Petals To Thorns",
    "name": "Petals To Thorns [V3]",
-   "date": "2025-10-01",
-   "quality": "Clear",
-   "source": "Darkroom/Interscope",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Newest available tracklist for Petals To Thorns after the removal of \"This Is How It Feels\" from \nstreaming services",
    "tracks": [
@@ -1216,88 +1216,88 @@
   {
    "era": "Post-Incident",
    "name": "Jesus, I",
-   "date": "?/?/2026",
-   "quality": "Unavailable",
-   "source": "Insiders",
+   "date": "",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Sources say that d4vd recorded an entire gospel album with 15 tracks \nthat was mostly complete. Tracklist order is currently unknown.\n\n1-15. ???",
    "tracks": [
     {
      "num": "#?",
      "name": "Ever Known",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "The Hymn",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "For It All",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "I Need You Now",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Sins Of The Father (Cover)",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "So Will I",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "I Believe",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Safe",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Trust In You",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Near",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Nobody Greater",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "I Remember",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     },
     {
      "num": "#?",
      "name": "Jesus, I",
-     "color": "#F6B26B",
+     "color": "#f6b26b",
      "colorLabel": "Snippet"
     }
    ]

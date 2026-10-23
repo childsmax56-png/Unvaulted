@@ -21,6 +21,10 @@ header cell).  Output goes to public/<slug>/Tracklists.json as
 Sheets that block the xlsx download (viewer-downloads disabled) fall back to the
 committed public/<slug>/data/tracklists.csv for the text-only fields.
 
+By default the text, colours and links come from the Sheets API (key from
+GOOGLE_SHEETS_API_KEY or .dev.vars) and images are carried over from the existing
+JSON; pass --xlsx to rebuild everything (incl. images) from the xlsx export.
+
 Usage:
   python3 scripts/build-tracklists-enriched.py                 # all artists
   python3 scripts/build-tracklists-enriched.py wolfgold uzigold # subset
@@ -33,6 +37,7 @@ import os
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 import urllib.error
 import zipfile
@@ -89,6 +94,9 @@ SHEETS = {
     "wutanggold":     ["1dA2h1kQffOmUUeCy6YMu8IYdGGqnhnWuabKdK7emyyU", "1817611336"],
     "xgold":          ["1wKq7lSERmXYutRFxipNbFFc-DUdqhVXWWlFnqkzwRFA", "666785613"],
     "yzygold":        ["12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM", "1372270223"],
+    # downloads-disabled sheets: Sheets API only (no xlsx, so no images)
+    "yegold":         ["1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y", ""],
+    "yelolgold":      ["1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA", ""],
 }
 
 # ── xlsx download ─────────────────────────────────────────────────────────────
@@ -335,6 +343,49 @@ def extract_images(z, sheet_path, slug, art_dir):
 
 # ── text parsing ──────────────────────────────────────────────────────────────
 
+def _rgb(hx):
+    hx = hx.lstrip("#")[-6:]
+    return tuple(int(hx[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def match_legend(color, legend_colors, tol=40):
+    """Return the legend key (lowercase #hex) nearest to an ARGB/RGB colour, if close."""
+    if not color or not legend_colors:
+        return None
+    hx = "#" + color[-6:].lower()
+    if hx in legend_colors:
+        return hx
+    try:
+        r, g, b = _rgb(hx)
+    except ValueError:
+        return None
+    best, best_d = None, tol + 1
+    for key in legend_colors:
+        if not key:
+            continue
+        lr, lg, lb = _rgb(key)
+        d = max(abs(r - lr), abs(g - lg), abs(b - lb))
+        if d < best_d:
+            best, best_d = key, d
+    return best
+
+
+def line_legend_color(chars, start, legend_colors):
+    """Most common legend swatch among a line's non-space characters from `start`."""
+    if not chars or not legend_colors:
+        return None
+    votes = {}
+    for ch, color in chars[start:]:
+        if not ch.strip() or not color:
+            continue
+        key = match_legend(color, legend_colors)
+        if key:
+            votes[key] = votes.get(key, 0) + 1
+    if not votes:
+        return None
+    return max(votes, key=votes.get)
+
+
 TRACK_RE = re.compile(r"^\s*#?(\d+|\?)[\.\)]\s+(.*\S)\s*$")
 
 
@@ -347,20 +398,16 @@ def split_tracklist(text, run=None, legend_colors=None):
     inherits the colour — plain white/black body text is ignored."""
     text = (text or "").replace("\r\n", "\n").replace("\r", "\n")
     lines = text.split("\n")
-    # per-line colour from rich runs, if present
-    line_colors = {}
+    # per-line colours from rich runs, if present: line index -> [colour per char]
+    line_chars = {}
     if run:
         idx = 0
-        buf = ""
         for seg, color in run:
             for ch in seg:
                 if ch == "\n":
                     idx += 1
-                    buf = ""
                 else:
-                    if not buf and ch.strip() and color:
-                        line_colors[idx] = color
-                    buf += ch
+                    line_chars.setdefault(idx, []).append((ch, color))
     desc_lines, tracks = [], []
     seen_track = False
     for i, line in enumerate(lines):
@@ -369,12 +416,12 @@ def split_tracklist(text, run=None, legend_colors=None):
             seen_track = True
             num = m.group(1)
             entry = {"num": ("#?" if num == "?" else "#" + num), "name": m.group(2).strip()}
-            c = line_colors.get(i)
-            if c:
-                hx = "#" + c[-6:]
-                if legend_colors and hx.lower() in legend_colors:
-                    entry["color"] = hx
-                    entry["colorLabel"] = legend_colors[hx.lower()]
+            # Sheets colour the song title but usually leave the "1. " prefix in
+            # the default text colour, so vote over the title's characters only.
+            hx = line_legend_color(line_chars.get(i), m.start(2), legend_colors)
+            if hx:
+                entry["color"] = hx
+                entry["colorLabel"] = legend_colors[hx]
             tracks.append(entry)
         elif not seen_track:
             desc_lines.append(line)
@@ -464,6 +511,150 @@ def excel_text(val):
     return str(val).strip()
 
 
+# ── Sheets API path ───────────────────────────────────────────────────────────
+#
+# The xlsx export is 200-460 MB per workbook and blocked on downloads-disabled
+# sheets, but the Sheets API (includeGridData) returns just the one tab with its
+# rich-text colour runs, fills and real hyperlinks. It can't see embedded images,
+# so the API build carries images over from the existing Tracklists.json (run
+# with --xlsx to re-extract them).
+
+API_FIELDS = ("sheets(properties(title,sheetId),data(startRow,rowData(values("
+              "formattedValue,hyperlink,textFormatRuns,"
+              "effectiveFormat(backgroundColor,textFormat(foregroundColor))))))")
+
+
+def api_key():
+    key = os.environ.get("GOOGLE_SHEETS_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if key:
+        return key
+    try:
+        with open(os.path.join(ROOT, ".dev.vars"), encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("GOOGLE_SHEETS_API_KEY="):
+                    return line.split("=", 1)[1].strip().strip('"')
+    except OSError:
+        pass
+    return None
+
+
+def api_get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return json.loads(r.read())
+
+
+def rgb_hex(c):
+    """Sheets API colour dict -> 'RRGGBB' (missing channels are 0)."""
+    if not c:
+        return None
+    if "rgbColor" in c:
+        c = c["rgbColor"]
+    return "".join("%02X" % round(c.get(k, 0) * 255) for k in ("red", "green", "blue"))
+
+
+def api_runs(text, runs, default):
+    """textFormatRuns -> [(text, colour)]; startIndex counts UTF-16 code units."""
+    units = text.encode("utf-16-le")
+    out = []
+    for i, r in enumerate(runs):
+        a = r.get("startIndex", 0)
+        b = runs[i + 1].get("startIndex", 0) if i + 1 < len(runs) else len(units) // 2
+        if i == 0 and a > 0:
+            out.append((units[:a * 2].decode("utf-16-le", "ignore"), default))
+        fmt = r.get("format", {})
+        color = rgb_hex(fmt.get("foregroundColorStyle") or fmt.get("foregroundColor")) or default
+        out.append((units[a * 2:b * 2].decode("utf-16-le", "ignore"), color))
+    return out
+
+
+def api_tab_title(titles):
+    """Pick the live tracklists tab by name, skipping WIP/old duplicates."""
+    def clean(t):
+        return re.sub(r"[^a-z ]", "", t.lower()).strip()
+    named = [t for t in titles if "tracklist" in t.lower()]
+    for t in named:
+        if clean(t) == "tracklists":
+            return t
+    for t in named:
+        if not any(w in clean(t).split() or w in clean(t) for w in DECOY_WORDS):
+            return t
+    return named[0] if named else None
+
+
+def fetch_api_rows(sid, key):
+    """Return (rows, hrefs) for the sheet's Tracklists tab, or None."""
+    base = f"https://sheets.googleapis.com/v4/spreadsheets/{sid}"
+    meta = api_get(f"{base}?key={key}&fields=sheets.properties.title")
+    title = api_tab_title([sh["properties"]["title"] for sh in meta.get("sheets", [])])
+    if not title:
+        print("    no tracklists tab")
+        return None
+    rng = urllib.parse.quote(f"'{title}'")
+    data = api_get(f"{base}?key={key}&includeGridData=true&ranges={rng}"
+                   f"&fields={urllib.parse.quote(API_FIELDS)}")
+    grid = data["sheets"][0].get("data", [{}])[0]
+    start = grid.get("startRow", 0)
+    rows, hrefs = [], {}
+    for ri, row in enumerate(grid.get("rowData", [])):
+        rn = start + ri + 1
+        cells = {}
+        for ci, c in enumerate(row.get("values", [])):
+            val = c.get("formattedValue", "")
+            eff = c.get("effectiveFormat", {})
+            fill = rgb_hex(eff.get("backgroundColor"))
+            default = rgb_hex(eff.get("textFormat", {}).get("foregroundColor"))
+            runs = c.get("textFormatRuns")
+            run = api_runs(val, runs, default) if runs and val else None
+            links = [c["hyperlink"]] if c.get("hyperlink") else []
+            links += [r["format"]["link"]["uri"] for r in runs or []
+                      if r.get("format", {}).get("link", {}).get("uri")]
+            if links:
+                hrefs[(rn, ci + 1)] = links
+            if val or fill:
+                cells[ci + 1] = (val, fill, run)
+        rows.append((rn, cells))
+    return rows, hrefs
+
+
+def _album_sig(a):
+    return ({t["name"].lower() for t in a.get("tracks", [])},
+            (a.get("description") or "").strip().lower()[:200])
+
+
+def carry_images(slug, albums):
+    """Re-attach images from the previous Tracklists.json (the API can't see them).
+
+    An era often has several near-identical copies, so each old album's images go
+    to the most similar new album (same era; track-list overlap + description)."""
+    path = os.path.join(PUBLIC, slug, "Tracklists.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            old = json.load(f)
+    except (OSError, ValueError):
+        return
+    old = old.get("albums", []) if isinstance(old, dict) else old
+    taken = set()
+    for o in old:
+        if not o.get("images"):
+            continue
+        o_tracks, o_desc = _album_sig(o)
+        best, best_score = None, 0.0
+        for i, a in enumerate(albums):
+            if i in taken or a["era"] != o.get("era"):
+                continue
+            tracks, desc = _album_sig(a)
+            union = o_tracks | tracks
+            score = len(o_tracks & tracks) / len(union) if union else 0.0
+            score += 1.0 if desc and desc == o_desc else 0.0
+            score += 0.25 if a["name"] == o.get("name") else 0.0
+            if score > best_score:
+                best, best_score = i, score
+        if best is not None and best_score >= 0.5:
+            taken.add(best)
+            albums[best]["images"] = o["images"]
+
+
 # ── per-artist build ──────────────────────────────────────────────────────────
 
 def build_from_xlsx(slug, path):
@@ -478,6 +669,14 @@ def build_from_xlsx(slug, path):
     rows = read_rows(z, sheet_path, plain, runs, xfs)
     if not rows:
         return None
+    art_dir = os.path.join(PUBLIC, slug, "art")
+    images_by_row = extract_images(z, sheet_path, slug, art_dir)
+    return build_from_rows(rows, images_by_row)
+
+
+def build_from_rows(rows, images_by_row, hrefs=None):
+    """rows = [(sheet_row, {col: (value, fill, runs)})] from either the xlsx or the
+    Sheets API; images_by_row = {sheet_row: [url, ...]}."""
 
     # header = first row that has a 'name'-ish and 'tracklist'-ish column. Real header
     # cells are short labels, so skip prose-heavy data rows that happen to contain the
@@ -522,9 +721,6 @@ def build_from_xlsx(slug, path):
             legend_colors = {l["color"].lower(): l["label"] for l in legend}
             break
 
-    art_dir = os.path.join(PUBLIC, slug, "art")
-    images_by_row = extract_images(z, sheet_path, slug, art_dir)
-
     albums = []
     for rn, cells in rows[header_idx + 1:]:
         raw_name = excel_text(cells.get(c_name, ("", None, None))[0]) if c_name else ""
@@ -551,18 +747,22 @@ def build_from_xlsx(slug, path):
         quality = (cells.get(c_qual, ("", None, None))[0] or "").strip() if c_qual else ""
         source = (cells.get(c_source, ("", None, None))[0] or "").strip() if c_source else ""
         links = parse_links(cells.get(c_link, ("", None, None))[0]) if c_link else []
+        if hrefs:
+            # real hyperlinks (API path): the Link(s) column first, then any cell
+            for (hr, hc), urls in sorted(hrefs.items(), key=lambda kv: kv[0][1] != c_link):
+                if hr == rn and (hc == c_link or not links):
+                    links += [u for u in urls if u.startswith("http") and u not in links]
 
         # per-album availability colour: first cell on the row whose fill
         # matches a legend swatch
         avail_color, avail_label = "", ""
         if legend_colors:
             for col, (_v, color, _r) in cells.items():
-                if color:
-                    hx = "#" + color[-6:]
-                    if hx.lower() in legend_colors:
-                        avail_color = hx
-                        avail_label = legend_colors[hx.lower()]
-                        break
+                key = match_legend(color, legend_colors, tol=12)
+                if key:
+                    avail_color = key.upper()
+                    avail_label = legend_colors[key]
+                    break
 
         entry = {
             "era": era or name,
@@ -650,10 +850,20 @@ def build_from_csv(slug):
     return {"legend": legend, "albums": albums}
 
 
-def build(slug):
+def build(slug, use_xlsx=False):
     sid = SHEETS.get(slug, [None])[0]
     result = None
-    if sid:
+    key = api_key()
+    if sid and key and not use_xlsx:
+        try:
+            fetched = fetch_api_rows(sid, key)
+            if fetched:
+                result = build_from_rows(fetched[0], {}, fetched[1])
+                carry_images(slug, result["albums"])
+        except urllib.error.HTTPError as e:
+            print(f"    sheets API failed ({e.code}); trying xlsx")
+            result = None
+    if sid and not (result and result.get("albums")):
         path = download_xlsx(slug, sid)
         if path:
             try:
@@ -678,16 +888,21 @@ def build(slug):
     n_img = sum(len(a.get("images", [])) for a in result["albums"])
     n_desc = sum(1 for a in result["albums"] if a.get("description"))
     n_color = sum(1 for a in result["albums"] if a.get("availColor"))
+    n_tcol = sum(1 for a in result["albums"] for t in a["tracks"] if t.get("color"))
+    n_tracks = sum(len(a["tracks"]) for a in result["albums"])
     print(f"    {len(result['albums'])} albums · {n_desc} descriptions · "
-          f"{len(result['legend'])} legend · {n_color} coloured · {n_img} images")
+          f"{len(result['legend'])} legend · {n_color} coloured · "
+          f"{n_tcol}/{n_tracks} coloured tracks · {n_img} images")
 
 
 def main():
-    targets = sys.argv[1:] or list(SHEETS.keys())
+    args = sys.argv[1:]
+    use_xlsx = "--xlsx" in args
+    targets = [a for a in args if not a.startswith("--")] or list(SHEETS.keys())
     for slug in targets:
         print(f"[{slug}]")
         try:
-            build(slug)
+            build(slug, use_xlsx)
         except Exception as e:
             print(f"    ERROR: {e}")
 

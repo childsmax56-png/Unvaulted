@@ -30,150 +30,202 @@
    "era": "THC: The High Chronical$",
    "name": "THC",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Songs that were said to be apart of the THC: The High Chronicals Mixtape.\n\n?.Carolina Blue\n?.36 Whip N\n?.Hot Box\n?.Late Night\n?.Living Reckles\n?.The High Chronicals\n?.Too Cold\n?.Outro",
-   "tracks": [],
-   "availability": "Full"
+   "tracks": []
   },
   {
    "era": "Young Mi$fit",
    "name": "Young Mi$fit",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://jcartier.bandcamp.com/album/young-mi-fit"
+   ],
    "description": "1.36 Villanz\n2.ZOMBIE$\n3.$kit 1\n4.Blue Crystal$ (feat. Tom Vodus)\n5.$teeze\n6.Club Pink (feat. Nessley)\n7.Van Go\n8.$kit 2\n9.Paper Cha$in",
    "tracks": [],
-   "availability": "Full"
+   "availColor": "#E06666",
+   "availLabel": "Completely Unheard"
   },
   {
    "era": "death in tune",
    "name": "death in tune",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://soundcloud.com/playboicarti/death-in-tune-count-it-up-prod-plugs?si=d965c64f849f4a88bf94b6bcf08fa4c1&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    "https://soundcloud.com/playboicarti/death-in-tune-count-it-up-prod-plugs?si=c1673b36eb32476ea75bf21a0bd662e9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+   ],
    "description": "1.Money Counter\n2.Count It Up",
-   "tracks": [],
-   "availability": "Full"
+   "tracks": []
   },
   {
    "era": "TMB Collab",
    "name": "TMB Collab",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "The tracklist for the mixtape has been said by leakers to be 9 tracks long, with the only heard songs being Dancer, Sleeping with My 9 and Act A Foolie.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Dancer"
+     "name": "Dancer",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Sleeping with My 9 (feat. UnoTheActivist)"
+     "name": "Sleeping with My 9 (feat. UnoTheActivist)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Act A Foolie"
+     "name": "Act A Foolie",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
-   "availability": "Partial"
+   "availColor": "#999999",
+   "availLabel": "Unknown"
   },
   {
    "era": "Playboi Carti",
    "name": "Playboi Carti",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://i.imgur.com/zfiA8Ir.jpeg"
+   ],
    "description": "OG Tracklist of Selt Titled via Caskets",
    "tracks": [
     {
      "num": "#1",
-     "name": "Location"
+     "name": "Location",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "This Not Pop (Ciroc) (Half & Half?)"
+     "name": "This Not Pop (Ciroc) (Half & Half?)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Margiela Madman (feat. A$AP Rocky)"
+     "name": "Margiela Madman (feat. A$AP Rocky)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#4",
-     "name": "Run It Up"
+     "name": "Run It Up",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Like Me (Woke Up Like This*)"
+     "name": "Like Me (Woke Up Like This*)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "New Choppa"
+     "name": "New Choppa",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Otha Shit (Other Shit)"
+     "name": "Otha Shit (Other Shit)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Looking' (feat. Lil Uzi Vert)"
+     "name": "Looking' (feat. Lil Uzi Vert)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Let It Go"
+     "name": "Let It Go",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Boss Up-?"
+     "name": "Boss Up-?",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Flex"
+     "name": "Flex",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Number 9"
+     "name": "Number 9",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Walk Inside My Mansion (feat. Quavo)"
+     "name": "Walk Inside My Mansion (feat. Quavo)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Money Get Involved (If Money Ain't Involved?)"
+     "name": "Money Get Involved (If Money Ain't Involved?)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-7-0.jpg"
    ]
@@ -182,69 +234,98 @@
    "era": "Playboi Carti",
    "name": "Playboi Carti",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://krakenfiles.com/view/7tkQ89sL5e/file.html"
+   ],
    "description": "Original copy of Self Titled Mixtape from April 3rd, 2017. Has sequencing differences, Yah Mean is under a different name and is missing Lame Niggaz",
    "tracks": [
     {
      "num": "#1",
-     "name": "Magnolia"
+     "name": "Magnolia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Let It Go"
+     "name": "Let It Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "wokeuplikethis (feat. Lil Uzi Vert)"
+     "name": "wokeuplikethis (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Location"
+     "name": "Location",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "China (Yah Mean)"
+     "name": "China (Yah Mean)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "dothatshit"
+     "name": "dothatshit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lookin (feat. Lil Uzi Vert)"
+     "name": "Lookin (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Other Shit"
+     "name": "Other Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "NO. 9"
+     "name": "NO. 9",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "New Choppa"
+     "name": "New Choppa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Kelly K"
+     "name": "Kelly K",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Flex"
+     "name": "Flex",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Half and Half"
+     "name": "Half and Half",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Had To"
+     "name": "Had To",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-8-0.jpg"
    ]
@@ -253,73 +334,104 @@
    "era": "Playboi Carti",
    "name": "Playboi Carti",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://krakenfiles.com/view/aBwF1Tl4KL/file.html"
+   ],
    "description": "OG Files for the released copy of Self TItled. Has some alt titles",
    "tracks": [
     {
      "num": "#1",
-     "name": "Location"
+     "name": "Location",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Magnolia"
+     "name": "Magnolia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lookin (feat. Lil Uzi Vert)"
+     "name": "Lookin (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Wokeuplike This (feat. Lil Uzi Vert)"
+     "name": "Wokeuplike This (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Let It Go"
+     "name": "Let It Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Half and Half"
+     "name": "Half and Half",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "New Choppa (feat. A$AP Rocky)"
+     "name": "New Choppa (feat. A$AP Rocky)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Other Shit"
+     "name": "Other Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "No 9"
+     "name": "No 9",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Do That Shit"
+     "name": "Do That Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Lame Niggas"
+     "name": "Lame Niggas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Yah Mean"
+     "name": "Yah Mean",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Flex (feat. Leven Kali)"
+     "name": "Flex (feat. Leven Kali)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Kelly K"
+     "name": "Kelly K",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Had 2"
+     "name": "Had 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-9-0.jpg"
    ]
@@ -328,225 +440,311 @@
    "era": "Playboi Carti",
    "name": "Playboi Carti",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/4rJgzzfFHAVFhCSt2P4I3j?si=5ruv9LAbQOC-jE2T2lzKrQ"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Location"
+     "name": "Location",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Magnolia"
+     "name": "Magnolia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lookin (feat. Lil Uzi Vert)"
+     "name": "Lookin (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "wokeuplikethis* (feat. Lil Uzi Vert)"
+     "name": "wokeuplikethis* (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Let It Go"
+     "name": "Let It Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Half & Half"
+     "name": "Half & Half",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "New Choppa (feat. A$AP Rocky)"
+     "name": "New Choppa (feat. A$AP Rocky)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Other Shit"
+     "name": "Other Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "NO. 9"
+     "name": "NO. 9",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "dothatshit!"
+     "name": "dothatshit!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Lame Niggaz"
+     "name": "Lame Niggaz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Yah Mean"
+     "name": "Yah Mean",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Flex (feat. Leven Kali)"
+     "name": "Flex (feat. Leven Kali)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Kelly K"
+     "name": "Kelly K",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Had 2"
+     "name": "Had 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Full"
+   ]
   },
   {
    "era": "16*29",
    "name": "Carti x Uzi 1.3.18/Carti x Uzi 1.4.18",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Carti and Uzi had a major recording session at Paramount Studios in January 2018, likely for 16*29 although we do know atleast two songs from this session ended up being considered for Die Lit. The songs to come out this session that we know of are:",
    "tracks": [
     {
      "num": "#?",
-     "name": "2038 (Throw it Up)"
+     "name": "2038 (Throw it Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Big Bank"
+     "name": "Big Bank",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Home (KOD)"
+     "name": "Home (KOD)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "X Candy (Like I'm Swoosh)"
+     "name": "X Candy (Like I'm Swoosh)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Unheard Song (Carti x Uzi nye6 1.4.18)"
+     "name": "Unheard Song (Carti x Uzi nye6 1.4.18)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Super Soaker (unconfirmed if recorded during these sessions. this song potetionally may be the carti x uzi nye6 1.4.18 filename)"
+     "name": "Super Soaker (unconfirmed if recorded during these sessions. this song potetionally may be the carti x uzi nye6 1.4.18 filename)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Die Lit",
    "name": "Die Lit [OG]",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Older \"Die Lit\" tracklists based off songs that were confirmed to have been considered for Die Lit at some point in time. Based off the Uber og filename, we can also deduce that it may have been track 1 on Die Lit at some point",
    "tracks": [
     {
      "num": "#1",
-     "name": "Uber"
+     "name": "Uber",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "2038 (feat. Lil Uzi Vert) (Throw It Up)"
+     "name": "2038 (feat. Lil Uzi Vert) (Throw It Up)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Dog Food Interlude"
+     "name": "Dog Food Interlude",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Dog Food"
+     "name": "Dog Food",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Geek"
+     "name": "Geek",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Big Sticks (feat. Future)"
+     "name": "Big Sticks (feat. Future)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Back On The Act (feat. Young Sizzle)"
+     "name": "Back On The Act (feat. Young Sizzle)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Seeing Colors"
+     "name": "Seeing Colors",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Die Lit",
    "name": "Die Lit [12.15.17]",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist from Dec 15, 2017 (with OG Files). Most of the songs on this tracklist are unheard versions of leaked songs (such as finished Fashion Nova and Poke It Out solo). Leaked via Carti Tracker Hub discord.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Arm and Leg"
+     "name": "Arm and Leg",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Foreign"
+     "name": "Foreign",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "??? (feat. Southside)"
+     "name": "??? (feat. Southside)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Fashion Nova"
+     "name": "Fashion Nova",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Fell In Luv"
+     "name": "Fell In Luv",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Home"
+     "name": "Home",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "In Luv With The Geek"
+     "name": "In Luv With The Geek",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Killa"
+     "name": "Killa",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Last Year"
+     "name": "Last Year",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "LEAN4REAL"
+     "name": "LEAN4REAL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Poke It Out"
+     "name": "Poke It Out",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "R.I.P"
+     "name": "R.I.P",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "R.I.P Peep"
+     "name": "R.I.P Peep",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Right Now"
+     "name": "Right Now",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Rockstar (Love Hurts)"
+     "name": "Rockstar (Love Hurts)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-13-0.jpg"
    ]
@@ -555,97 +753,138 @@
    "era": "Die Lit",
    "name": "Die Lit (DC Mixes?)",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Either a folder of DC mixes, or a Release Ready Die Lit TL. 2 Shoota versions, are probably cuz they couldnt decide to drop a version with 1 carti verse 1 uzi verse, or 2 uzi verses. Leaked in Carti Tracker Hub discord.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Big Bank"
+     "name": "Big Bank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Chopper Won't Miss"
+     "name": "Chopper Won't Miss",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "R.I.P."
+     "name": "R.I.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Dog Food"
+     "name": "Dog Food",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Fell In Luv"
+     "name": "Fell In Luv",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Foreign"
+     "name": "Foreign",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Home"
+     "name": "Home",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Kids"
+     "name": "Kids",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Lean4Real (feat. Skepta)"
+     "name": "Lean4Real (feat. Skepta)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Mileage (feat. Chief Keef)"
+     "name": "Mileage (feat. Chief Keef)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "MOTS (Middle Of The Summer)"
+     "name": "MOTS (Middle Of The Summer)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "No Time (feat. Gunna)"
+     "name": "No Time (feat. Gunna)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Notice (feat. Young Nudy)"
+     "name": "Notice (feat. Young Nudy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Old Money"
+     "name": "Old Money",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Poke It Out"
+     "name": "Poke It Out",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Pull Up"
+     "name": "Pull Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Right Now (feat. Pierre Bourne)"
+     "name": "Right Now (feat. Pierre Bourne)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Shoota (feat. Lil Uzi Vert) (version with 2 uzi verses)"
+     "name": "Shoota (feat. Lil Uzi Vert) (version with 2 uzi verses)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Shoota (feat. Lil Uzi Vert) (version with one uzi verse, one carti verse)"
+     "name": "Shoota (feat. Lil Uzi Vert) (version with one uzi verse, one carti verse)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "Toke (feat. G Herbo)"
+     "name": "Toke (feat. G Herbo)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Top (Bonus)"
+     "name": "Top (Bonus)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-14-0.jpg"
    ]
@@ -654,129 +893,179 @@
    "era": "Die Lit",
    "name": "Die Lit",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/7dAm8ShwJLFm9SaJ6Yc58O?si=t_xXaeM_RwSifoqtSzG_ZQ"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Long Time - Intro"
+     "name": "Long Time - Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "R.I.P."
+     "name": "R.I.P.",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Lean 4 Real (feat. Skepta)"
+     "name": "Lean 4 Real (feat. Skepta)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Old Money"
+     "name": "Old Money",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Love Hurts (feat. Travis Scott)"
+     "name": "Love Hurts (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Shoota (feat. Lil Uzi Vert)"
+     "name": "Shoota (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Right Now (feat. Pi'erre Bourne)"
+     "name": "Right Now (feat. Pi'erre Bourne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Poke It Out (feat. Nicki Minaj)"
+     "name": "Poke It Out (feat. Nicki Minaj)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Home (KOD)"
+     "name": "Home (KOD)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fell In Luv (feat. Bryson Tiller)"
+     "name": "Fell In Luv (feat. Bryson Tiller)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Foreign"
+     "name": "Foreign",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Pull Up"
+     "name": "Pull Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Mileage (feat. Chief Keef)"
+     "name": "Mileage (feat. Chief Keef)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "FlatBed Freestyle"
+     "name": "FlatBed Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "No Time (feat. Gunna)"
+     "name": "No Time (feat. Gunna)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Middle Of The Summer (feat. Red Coldhearted)"
+     "name": "Middle Of The Summer (feat. Red Coldhearted)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Choppa Won't Miss (feat. Young Thug)"
+     "name": "Choppa Won't Miss (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "R.I.P. Fredo - Notice Me (feat. Young Nudy)"
+     "name": "R.I.P. Fredo - Notice Me (feat. Young Nudy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Top (feat. Pi'erre Bourne)"
+     "name": "Top (feat. Pi'erre Bourne)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Full"
+   ]
   },
   {
    "era": "Whole Lotta Red [V1]",
    "name": "WHOLE LOT OF RED [9.19.18]",
    "date": "",
-   "quality": "Blocked",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Partial tracklist leaked on April 4th, 2024. Tracklist is from Carti's old iCloud",
    "tracks": [
     {
      "num": "#1",
-     "name": "Goku"
+     "name": "Goku",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Back Up"
+     "name": "Back Up",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bouldercrest"
+     "name": "Bouldercrest",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "BUFF THE BODY (Buffie The Body)"
+     "name": "BUFF THE BODY (Buffie The Body)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Butterfly Doors"
+     "name": "Butterfly Doors",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Money Over All"
+     "name": "Money Over All",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#7",
      "name": "???"
     }
    ],
-   "availability": "Partial",
    "images": [
     "/vampgold/art/tl-16-0.jpg"
    ]
@@ -785,550 +1074,1032 @@
    "era": "Whole Lotta Red [V1]",
    "name": "Whole Lotta Red [11.06.18]",
    "date": "",
-   "quality": "N/A",
-   "source": "Article",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://magazine.032c.com/magazine/the-playboi-mansion"
+   ],
    "description": "The 032c Magazine interview states \"Ever since Carti played parts of the album onstage in Seattle late last year...\", confirming that 'Not Real' and 'New N3on' were apart of the album in late 2018.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Not Real"
+     "name": "Not Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "New N3on"
+     "name": "New N3on",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V1]",
    "name": "Whole Lotta Red",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "When @countingcaskets had revealed that Vons tracklist was fake, he supposedly was still confident in certain details being real. These included Not Real supposedly being the intro and Hellcat never making a tracklist.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Not Real"
+     "name": "Not Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V1]",
    "name": "Whole Lotta Red",
    "date": "",
-   "quality": "N/A",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "@countingcaskets and Pierre Bourne confirmed that Fuck it Up was the outro to a WLR V1 tracklist.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Fuck It Up"
+     "name": "Fuck It Up",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V1]",
    "name": "Whole Lotta Red [7.XX.19]",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "@countingcaskets at some point said that Designer Shoes was featured on a July 2019 version of Whole Lotta Red.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Designer Shoes"
+     "name": "Designer Shoes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V1]",
    "name": "Whole Lotta Red [Release Ready]",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A release ready WLR V1 tracklist is said to exist. This tracklist has been confirmed to be real by both leakers and Pi'erre Bourne.",
-   "tracks": [],
-   "availability": "Blocked"
+   "tracks": []
   },
   {
    "era": "Whole Lotta Red [V2]",
    "name": "Voice Memo",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A bunch of songs Carti played to Yachty and his friends in 2020, that they recorderd as a voice memo. Possibly a copy of Whole Lotta Red from this time. The memo has yet to leak in full yet. It's unknown if there were more songs played in this memo that are currently not known about.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Superstar (Pushed In A Room Filled Wit Love)"
+     "name": "Superstar (Pushed In A Room Filled Wit Love)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Not For Me (Way Too Much Cash/Cartier Pinkstones)"
+     "name": "Not For Me (Way Too Much Cash/Cartier Pinkstones)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Bitch Boy"
+     "name": "Bitch Boy",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Hermes Link"
+     "name": "Hermes Link",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Party With Her"
+     "name": "Party With Her",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Top Of The List"
+     "name": "Top Of The List",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Kill One Of You"
+     "name": "Kill One Of You",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Iced Out Chromeheart (Outta Line)"
+     "name": "Iced Out Chromeheart (Outta Line)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Hellcat"
+     "name": "Hellcat",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Shopping Spree"
+     "name": "Shopping Spree",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Switching Lanes"
+     "name": "Switching Lanes",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Partial"
+   ]
   },
   {
    "era": "Whole Lotta Red [V2]",
    "name": "Whole Lotta Red\n(exec prod. Pi'erre Bourne)",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A version of Whole Lotta Red was meant to drop in June 2020 executively produced by Pi'erre Bourne according to reliable sources.",
    "tracks": [
     {
      "num": "#?",
-     "name": "X Files"
+     "name": "X Files",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Friends"
+     "name": "Friends",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Place"
+     "name": "Place",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V3]",
    "name": "Whole Lotta Red [9.XX.20]",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "According to Caskets, a tracklist from September 2020 exists.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Diamonds (Locked In)"
+     "name": "Diamonds (Locked In)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Over"
+     "name": "Over",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V3]",
    "name": "Whole Lotta Red [11.XX.20]",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A tracklist from November 2020 exists.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Bring Yo Friends (Rover Sport)"
+     "name": "Bring Yo Friends (Rover Sport)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V3]",
    "name": "Whole Lotta Red [Pre-Ye]",
    "date": "",
-   "quality": "N/A",
-   "source": "Secondary",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://inkedmag.com/original-news/playboicarti"
+   ],
    "description": "A finalized version of Whole Lotta Red pre-Ye exists with 16 tracks. Following Ye's involvement, 16 more tracks were made.",
-   "tracks": [],
-   "availability": "N/A"
+   "tracks": []
   },
   {
    "era": "Whole Lotta Red [V4]",
    "name": "Whole Lotta Red",
    "date": "",
-   "quality": "N/A",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Uzi said on an Instagram live 10 days before Whole Lotta Red dropped, that he was going to feature on it on Track 3 and Track 16",
    "tracks": [
     {
      "num": "#3",
-     "name": "??? (feat. Lil Uzi Vert)"
+     "name": "??? (feat. Lil Uzi Vert)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#16",
-     "name": "??? (feat. Lil Uzi Vert)"
+     "name": "??? (feat. Lil Uzi Vert)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "Whole Lotta Red [V4]",
    "name": "Whole Lotta Red",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
-   "description": "Extended TL, from the same source as Hogan. Not in chronological order. Only missing On That Time when compared to release",
+   "description": "Extended TL, from the same source as Hogan. Not in chronological order. Only missing On That Time when compared to release [Seems to be the tracklist leaked on Sep 14, 2026 dated Dec 18, 2020.]",
    "tracks": [
     {
      "num": "#1",
-     "name": "Vamp (Vamp Anthem)"
+     "name": "Vamp (Vamp Anthem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "N3on (New N3on)"
+     "name": "N3on (New N3on)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Sky (No Sl33p)"
+     "name": "Sky (No Sl33p)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Mop (New Tank)"
+     "name": "Mop (New Tank)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "House (JumpOutTheHouse)"
+     "name": "House (JumpOutTheHouse)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Murder (No Sl33p)"
+     "name": "Murder (No Sl33p)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Rockstar Mad3 (Rockstar Made)"
+     "name": "Rockstar Mad3 (Rockstar Made)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "King Vamp"
+     "name": "King Vamp",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Tak3 My Shirt Off (Stop Breathing)"
+     "name": "Tak3 My Shirt Off (Stop Breathing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Fuck A Opp (Meh)"
+     "name": "Fuck A Opp (Meh)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Reggie (Die4Guy)"
+     "name": "Reggie (Die4Guy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Slay3r"
+     "name": "Slay3r",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "B3no"
+     "name": "B3no",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Not Playing (Not PLaying)"
+     "name": "Not Playing (Not PLaying)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "I Love U I Hate U"
+     "name": "I Love U I Hate U",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Started (Over)"
+     "name": "Started (Over)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Plac3 (Place)"
+     "name": "Plac3 (Place)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Punk Monk! (Punk Monk)"
+     "name": "Punk Monk! (Punk Monk)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Teen X"
+     "name": "Teen X",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Go2Moon"
+     "name": "Go2Moon",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Metamorphosis"
+     "name": "Metamorphosis",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Losing Control"
+     "name": "Losing Control",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Dyin"
+     "name": "Dyin",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Full"
+   ]
   },
   {
    "era": "Whole Lotta Red [V4]",
    "name": "Whole Lotta Red",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist from about 2 days before the drop of the album. Discovered by shazaming Go2DaMoon and then increasing the number in the URL by 1 till all the names of all the songs from the albums are discovered. The tracklist isn't in a chronological order.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Teen X (feat. Future)"
+     "name": "Teen X (feat. Future)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Not PLaying"
+     "name": "Not PLaying",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "JumpOutTheHouse"
+     "name": "JumpOutTheHouse",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "New N3on"
+     "name": "New N3on",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Slay3r"
+     "name": "Slay3r",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Die4Guy"
+     "name": "Die4Guy",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Place"
+     "name": "Place",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Metamorphosis (feat. Kid Cudi)"
+     "name": "Metamorphosis (feat. Kid Cudi)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Control"
+     "name": "Control",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "@ MEH (Was just Meh)"
+     "name": "@ MEH (Was just Meh)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "F33l Lik3 Dyin"
+     "name": "F33l Lik3 Dyin",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Over"
+     "name": "Over",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "King Vamp"
+     "name": "King Vamp",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Money And Drugs (Was a fanmade shazam assumption)"
+     "name": "Money And Drugs (Was a fanmade shazam assumption)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "On That Time"
+     "name": "On That Time",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Beno!"
+     "name": "Beno!",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Vamp Anthem"
+     "name": "Vamp Anthem",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Go2DaMoon (feat. Ye)"
+     "name": "Go2DaMoon (feat. Ye)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "ILoveUIHateU"
+     "name": "ILoveUIHateU",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Rockstar Made"
+     "name": "Rockstar Made",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Punk Monk"
+     "name": "Punk Monk",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Sky"
+     "name": "Sky",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Stop Breathing"
+     "name": "Stop Breathing",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "New Tank"
+     "name": "New Tank",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-29-0.jpg"
    ]
   },
   {
    "era": "Whole Lotta Red [V4]",
+   "name": "Whole Lotta Red [V1]",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist seen on a whiteboard dated Dec 18, 2020.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "vamp",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Losing Control",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Murd3r",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Tak3 my shirt off",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Rockstar Mad3",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "m3tamorphosis",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "JumpOutTheHouse",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "New Tank",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "teen x",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Meh",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "punk monk",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "slay3r",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "sky",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "beno!",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Not playin",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Over",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "King Vamp",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "new n3on",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "place",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "die4guy",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#21",
+     "name": "Go2DaMoon",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#22",
+     "name": "F33l like Dyin",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#23",
+     "name": "iloveuihateu",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "Whole Lotta Red [V4]",
+   "name": "Whole Lotta Red [V2]",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://imgur.gg/f/5mms2NR"
+   ],
+   "description": "Tracklist seen on a whiteboard dated Dec 20, 2020.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Rockstar Made",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "House (JumpOutTheHouse)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Shirt Off (Stop Breathing)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Beno (Beno!)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Slayer (Slay3r)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Mop (New Tank)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Teen X",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Fuck A Opp (Meh)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Vamp (Vamp Anthem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "N3on (New N3on)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Losing Control (Control)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Punk Monk",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Draco (On That Time)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "King Vamp",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Place",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Sky",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "Started (Over)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "ILoveUIHateU",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "Reggie (Die4Guy)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "Dyin (F33l Lik3 Dyin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#21",
+     "name": "Not Playin",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#22",
+     "name": "Go2Moon (Go2DaMoon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#23",
+     "name": "Metamorphosis (M3tamorphosis)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "Whole Lotta Red [V4]",
    "name": "Whole Lotta Red [Original Filenames]",
    "date": "",
-   "quality": "Clear",
-   "source": "Secondary",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://i.redd.it/2gb413taxc3a1.jpg"
+   ],
    "description": "Based off a screenshot showing the original filenames for Whole Lotta Red. Has the exact same track order and songs but has a lot of alternate titles. Might have differences (05. House.wav file that leaked has structure and mixing differences from release version)",
    "tracks": [
     {
      "num": "#1",
-     "name": "Rockstar Made (EDIT).wav (Rockstar Made)"
+     "name": "Rockstar Made (EDIT).wav (Rockstar Made)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Go2Moon (MIX2).wav (Go2DaMoon)"
+     "name": "Go2Moon (MIX2).wav (Go2DaMoon)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Shirt Off (V1).wav (Stop Breathing)"
+     "name": "Shirt Off (V1).wav (Stop Breathing)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "B3no.wav (Beno!)"
+     "name": "B3no.wav (Beno!)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "House.wav (JumpOutTheHouse)"
+     "name": "House.wav (JumpOutTheHouse)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "M3tamorphosis.wav (M3tamorphosis)"
+     "name": "M3tamorphosis.wav (M3tamorphosis)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slay3r.wav (Slay3r)"
+     "name": "Slay3r.wav (Slay3r)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Murd3r.wav (No Sl33p)"
+     "name": "Murd3r.wav (No Sl33p)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "MOP.wav (New Tank)"
+     "name": "MOP.wav (New Tank)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Teen X.wav (Teen X)"
+     "name": "Teen X.wav (Teen X)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "FuckAOpp.wav (Meh)"
+     "name": "FuckAOpp.wav (Meh)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Vamp.wav (Vamp Anthem)"
+     "name": "Vamp.wav (Vamp Anthem)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "N3on.wav (New N3on)"
+     "name": "N3on.wav (New N3on)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Losing Control.wav (Control)"
+     "name": "Losing Control.wav (Control)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Punk Monk.wav (Punk Monk)"
+     "name": "Punk Monk.wav (Punk Monk)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Draco.wav (On That Time)"
+     "name": "Draco.wav (On That Time)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "King Vamp.wav (King Vamp)"
+     "name": "King Vamp.wav (King Vamp)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Place (V2).wav (Place)"
+     "name": "Place (V2).wav (Place)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Sky.wav (Sky)"
+     "name": "Sky.wav (Sky)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Started (V1).wav (Over)"
+     "name": "Started (V1).wav (Over)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ILoveUIHateU.wav (ILoveUIHateU)"
+     "name": "ILoveUIHateU.wav (ILoveUIHateU)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Reggie.wav (Die4Guy)"
+     "name": "Reggie.wav (Die4Guy)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Not Playing.wav (Not PLaying)"
+     "name": "Not Playing.wav (Not PLaying)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Dyin.wav (F33l Lik3 Dyin)"
+     "name": "Dyin.wav (F33l Lik3 Dyin)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-30-0.jpg"
    ]
@@ -1337,257 +2108,373 @@
    "era": "Whole Lotta Red [V4]",
    "name": "Whole Lotta Red",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://open.spotify.com/album/2QRedhP5RmKJiJ1i8VgDGR"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Rockstar Made"
+     "name": "Rockstar Made",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Go2DaMoon (feat. Ye)"
+     "name": "Go2DaMoon (feat. Ye)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Stop Breathing"
+     "name": "Stop Breathing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Beno!"
+     "name": "Beno!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "JumpOutTheHouse"
+     "name": "JumpOutTheHouse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "M3tamorphosis (feat. Kid Cudi)"
+     "name": "M3tamorphosis (feat. Kid Cudi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slay3r"
+     "name": "Slay3r",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "No Sl33p"
+     "name": "No Sl33p",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "New Tank"
+     "name": "New Tank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Teen X (feat. Future)"
+     "name": "Teen X (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Meh"
+     "name": "Meh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Vamp Anthem"
+     "name": "Vamp Anthem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "New N3on"
+     "name": "New N3on",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Control"
+     "name": "Control",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Punk Monk"
+     "name": "Punk Monk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "On That Time"
+     "name": "On That Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "King Vamp"
+     "name": "King Vamp",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Place"
+     "name": "Place",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Sky"
+     "name": "Sky",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Over"
+     "name": "Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ILoveUIHateU"
+     "name": "ILoveUIHateU",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Die4Guy"
+     "name": "Die4Guy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Not PLaying"
+     "name": "Not PLaying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "F33l Lik3 Dyin"
+     "name": "F33l Lik3 Dyin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Full"
+   ]
   },
   {
    "era": "Whole Lotta Red (Deluxe)",
    "name": "Whole Lotta Red (Deluxe)",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for WLR Deluxe revealed by Hogan. Really a collection of songs cleared for release, most likely not the TL.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Rockstar Made"
+     "name": "Rockstar Made",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Go2DaMoon (feat. Ye)"
+     "name": "Go2DaMoon (feat. Ye)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Stop Breathing"
+     "name": "Stop Breathing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Beno!"
+     "name": "Beno!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "JumpOutTheHouse"
+     "name": "JumpOutTheHouse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "M3tamorphosis (feat. Kid Cudi)"
+     "name": "M3tamorphosis (feat. Kid Cudi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slay3r"
+     "name": "Slay3r",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "No Sl33p"
+     "name": "No Sl33p",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "New Tank"
+     "name": "New Tank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Teen X (feat. Future)"
+     "name": "Teen X (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Meh"
+     "name": "Meh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Vamp Anthem"
+     "name": "Vamp Anthem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "New N3on"
+     "name": "New N3on",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Control"
+     "name": "Control",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Punk Monk"
+     "name": "Punk Monk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "On That Time"
+     "name": "On That Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "King Vamp"
+     "name": "King Vamp",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Place"
+     "name": "Place",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Sky"
+     "name": "Sky",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Over"
+     "name": "Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ILoveUIHateU"
+     "name": "ILoveUIHateU",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Die4Guy"
+     "name": "Die4Guy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Not PLaying"
+     "name": "Not PLaying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "F33l Lik3 Dyin"
+     "name": "F33l Lik3 Dyin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": ".Period"
+     "name": ".Period",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#26",
-     "name": "Bring Yo Friends (Rover Sport)"
+     "name": "Bring Yo Friends (Rover Sport)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Cartier Vans (XTC)"
+     "name": "Cartier Vans (XTC)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#28",
-     "name": "I'm In This Bitch (Batgang)"
+     "name": "I'm In This Bitch (Batgang)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#29",
-     "name": "In The Safe"
+     "name": "In The Safe",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#30",
-     "name": "Ion Trust"
+     "name": "Ion Trust",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#31",
-     "name": "M.A.D. (money n drugs/money and drugs)"
+     "name": "M.A.D. (money n drugs/money and drugs)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#32",
-     "name": "Perky Gone Grab On Me"
+     "name": "Perky Gone Grab On Me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#33",
-     "name": "Victory"
+     "name": "Victory",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#34",
-     "name": "What You Talking Bout"
+     "name": "What You Talking Bout",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-32-0.jpg"
    ]
@@ -1596,137 +2483,198 @@
    "era": "Whole Lotta Red (Deluxe)",
    "name": "Whole Lotta Red (Deluxe)",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Confirmed to exist by Veeze in an interview. Carti played him the whole Deluxe, which he said that contained about 6 songs. Soul claims this is the release ready tracklist",
    "tracks": [
     {
      "num": "#1",
-     "name": "Rockstar Made"
+     "name": "Rockstar Made",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Go2DaMoon (feat. Ye)"
+     "name": "Go2DaMoon (feat. Ye)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Stop Breathing"
+     "name": "Stop Breathing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Beno!"
+     "name": "Beno!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "JumpOutTheHouse"
+     "name": "JumpOutTheHouse",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "M3tamorphosis (feat. Kid Cudi)"
+     "name": "M3tamorphosis (feat. Kid Cudi)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Slay3r"
+     "name": "Slay3r",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "No Sl33p"
+     "name": "No Sl33p",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "New Tank"
+     "name": "New Tank",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Teen X (feat. Future)"
+     "name": "Teen X (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Meh"
+     "name": "Meh",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Vamp Anthem"
+     "name": "Vamp Anthem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "New N3on"
+     "name": "New N3on",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Control"
+     "name": "Control",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Punk Monk"
+     "name": "Punk Monk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "On That Time"
+     "name": "On That Time",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "King Vamp"
+     "name": "King Vamp",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Place"
+     "name": "Place",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Sky"
+     "name": "Sky",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Over"
+     "name": "Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "ILoveUIHateU"
+     "name": "ILoveUIHateU",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Die4Guy"
+     "name": "Die4Guy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Not PLaying"
+     "name": "Not PLaying",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "F33l Lik3 Dyin"
+     "name": "F33l Lik3 Dyin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Asthma (Goku)"
+     "name": "Asthma (Goku)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#26",
-     "name": "Buffie The Body"
+     "name": "Buffie The Body",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#27",
-     "name": "Headshot (Heads Off)"
+     "name": "Headshot (Heads Off)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#28",
-     "name": "Red On Red (* i promise you !)"
+     "name": "Red On Red (* i promise you !)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#29",
-     "name": "molly.jpg (Not Real)"
+     "name": "molly.jpg (Not Real)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#30",
-     "name": "2 Many (2MANY)"
+     "name": "2 Many (2MANY)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#31",
-     "name": "Cartier Pinkstones (Not For Me, Way Too Much Cash) <-Cut off in screenshot"
+     "name": "Cartier Pinkstones (Not For Me, Way Too Much Cash) <-Cut off in screenshot",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-33-0.jpg"
    ]
@@ -1735,153 +2683,225 @@
    "era": "Whole Lotta Red (Deluxe)",
    "name": "Whole Lotta Red (Deluxe)",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://i.imgur.gg/7spHFVL-Screenshot_2025-12-11_170220.png",
+    "https://i.imgur.gg/qeUtTf7-IMG_6527.png"
+   ],
    "description": "King Bob mentioned a Deluxe tracklist that has been considered since 2023 [1]. He later made a short tracklist stating that there's about 35 more tracks considered for the Deluxe. F1lthy confirmed the existence and it contains songs recorded the same day that WLR dropped [2]",
    "tracks": [
     {
      "num": "#?",
-     "name": "Trenches"
+     "name": "Trenches",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "(U Kan Get It) Tryna Get Down"
+     "name": "(U Kan Get It) Tryna Get Down",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Homicide"
+     "name": "Homicide",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Perky gone grab me"
+     "name": "Perky gone grab me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Cartier Vans (XTC)"
+     "name": "Cartier Vans (XTC)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Toomanyguns"
+     "name": "Toomanyguns",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "OMG (NOT superstar)"
+     "name": "OMG (NOT superstar)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Vivienne Westwood"
+     "name": "Vivienne Westwood",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "B O Y (bitch boy / 2.6 boy)"
+     "name": "B O Y (bitch boy / 2.6 boy)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "Bat gang"
+     "name": "Bat gang",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "??? <- Cut off in screenshot"
+     "name": "??? <- Cut off in screenshot",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "Hellcat"
+     "name": "Hellcat",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Molly (Not Real) (maybe)"
+     "name": "Molly (Not Real) (maybe)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Diamond/Locked In"
+     "name": "Diamond/Locked In",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "U Kan Do It Too"
+     "name": "U Kan Do It Too",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Pushed In A Room Filled Wit Love (Superstar)"
+     "name": "Pushed In A Room Filled Wit Love (Superstar)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
    ],
-   "availability": "Few Songs Confirmed",
    "images": [
     "/vampgold/art/tl-34-0.jpg"
    ]
@@ -1890,130 +2910,168 @@
    "era": "Narcissist",
    "name": "Narcissist",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Partial Narcissist tracklist, likely from the copy meant to be released in September 2021. A tracklist was said to exist during the 'Narcissist' era with \"Two Out\" on it, but this is likely untrue.",
    "tracks": [
     {
      "num": "#?",
-     "name": "OFF DRUGS (feat. Lil Uzi Vert)"
+     "name": "OFF DRUGS (feat. Lil Uzi Vert)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "TOXIC (feat. Skepta)"
+     "name": "TOXIC (feat. Skepta)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Two Out* (feat. Lil Uzi Vert)"
+     "name": "Two Out* (feat. Lil Uzi Vert)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V1]",
    "name": "MUSIC",
    "date": "",
-   "quality": "N/A",
-   "source": "Carti",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://www.xxlmag.com/playboi-carti-interview/"
+   ],
    "description": "In his April 2022 XXL Article, Carti played 'Wicked' and a few other songs from a copy to the journalist. It is unknown if the copy played is related to the partial tracklist Raahim revealed.",
    "tracks": [
     {
      "num": "#?",
-     "name": "WICKED"
+     "name": "WICKED",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V1]",
    "name": "2022/2023 Tracklist",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Partial tracklist from Raahim. At one point, Raahim confirmed that what he described as \"the best carti song of all time\" was a tracklist song at some point, and falsely said that it was a Pi'erre Bourne prod. song.",
    "tracks": [
     {
      "num": "#?",
-     "name": "NUMB"
+     "name": "NUMB",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "WICKED"
+     "name": "WICKED",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "WEAPON"
+     "name": "WEAPON",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "HEARD Y'ALL GETTIN' MONEY"
+     "name": "HEARD Y'ALL GETTIN' MONEY",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "GOYARD"
+     "name": "GOYARD",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V2]",
    "name": "MUSIC 2023",
    "date": "",
-   "quality": "Partial",
+   "quality": "",
    "source": "",
-   "links": [],
+   "links": [
+    "https://x.com/kingbob1629/status/2014083460558696718?s=20"
+   ],
    "description": "A tracklist from 2023 mentioned by King Bob on Twitter/X, confirming a few songs from it.",
    "tracks": [
     {
      "num": "#?",
-     "name": "HOMICIDE55555"
+     "name": "HOMICIDE55555",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "ROCKSTARZ"
+     "name": "ROCKSTARZ",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "PRADA*"
+     "name": "PRADA*",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "CELL"
+     "name": "CELL",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V2]",
    "name": "MUSIC PLAN",
    "date": "",
-   "quality": "Partial",
-   "source": "Leaked",
-   "links": [],
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://i.e-z.host/igumvuwl.png"
+   ],
    "description": "Partial MUSIC tracklist from July 2023 (Cave Era). Top title says MUSIC PLAN. A photo of the tracklist with 3 more titles is in circulation.",
    "tracks": [
     {
      "num": "#?",
-     "name": "TAT PICS"
+     "name": "TAT PICS",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "FRIDAY (feat. H.E.R)"
+     "name": "FRIDAY (feat. H.E.R)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "SHE DON'T LOVE"
+     "name": "SHE DON'T LOVE",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "WE NOT ≠ / FUTURE (We Not Equal ft. Future)"
+     "name": "WE NOT ≠ / FUTURE (We Not Equal ft. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
@@ -2028,486 +3086,585 @@
      "name": "???"
     }
    ],
-   "availability": "Few Songs Confirmed",
    "images": [
     "/vampgold/art/tl-39-0.jpg"
+   ]
+  },
+  {
+   "era": "MUSIC [V2]",
+   "name": "August 2023 Tracklist",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "On October 20th, 2025, in now deleted tweets, King Bob talked about an August 2023 copy of MUSIC featuring both heard and unheard songs and gave us a partial tracklist, this copy of the album only had two features and 'ROCKSTARZ' was on it with 'READY OR NOT', the Carti solo version of 'K-9' being the intro.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "READY OR NOT",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "FOUND",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "JUMPIN (feat. Lil Uzi Vert)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "PHANTOM",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "ROCKSTAR DRUGS (ROCKSTARZ)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "TOMFORD",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "TOXIC (feat. Skepta)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "UR THE MOON",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "??? (feat. YoungBoy Never Broke Again)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    }
    ]
   },
   {
    "era": "CARTI YE",
    "name": "CARTI YE",
    "date": "",
-   "quality": "N/A",
-   "source": "Secondary",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "F1LTHY would come out months later (Dec 11, 2025) and claim that it was actually a track meant for their scrapped collaborative album \"CARTI YE\". So Ye uploading it without Carti was part of the episode he was having at the time, starting a beef with Carti. YoungBoy for his part, decided to stick to Carti's side. This would bring back the 004KT to the public's eye after their earlier collaboration failed to release, generating more anticipation for their future tracks together. He actually had the song for himself in the start, before the other two added their own contributions.\nThe version with Ye and Carti has not leaked.",
    "tracks": [
     {
      "num": "#?",
-     "name": "ALIVE (with YoungBoy Never Broke Again)"
+     "name": "ALIVE (with YoungBoy Never Broke Again)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
-  },
-  {
-   "era": "MUSIC [V3]",
-   "name": "August 2023 Tracklist",
-   "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
-   "links": [],
-   "description": "On October 20th, 2025, in now deleted tweets, King Bob talked about an August 2023 copy of MUSIC featuring both heard and unheard songs and gave us a partial tracklist, this copy of the album only had two features and 'ROCKSTARZ' was on it with 'READY OR NOT', the Carti solo version of 'K-9' being the intro.",
-   "tracks": [
-    {
-     "num": "#1",
-     "name": "READY OR NOT"
-    },
-    {
-     "num": "#?",
-     "name": "FOUND"
-    },
-    {
-     "num": "#?",
-     "name": "JUMPIN (feat. Lil Uzi Vert)"
-    },
-    {
-     "num": "#?",
-     "name": "PHANTOM"
-    },
-    {
-     "num": "#?",
-     "name": "ROCKSTAR DRUGS (ROCKSTARZ)"
-    },
-    {
-     "num": "#?",
-     "name": "TOMFORD"
-    },
-    {
-     "num": "#?",
-     "name": "TOXIC (feat. Skepta)"
-    },
-    {
-     "num": "#?",
-     "name": "UR THE MOON"
-    },
-    {
-     "num": "#?",
-     "name": "??? (feat. YoungBoy Never Broke Again)"
-    }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V3]",
    "name": "MUSIC",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A version played for Ye. Was likely the current version (or really close to it) as of 12.14.23. Said to feature a song with Ye.",
    "tracks": [
     {
      "num": "#?",
-     "name": "??? (feat. Ye)"
+     "name": "??? (feat. Ye)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V3]",
    "name": "I AM MUSIC [PRIVATE LISTENING PARTY]",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
-   "links": [],
-   "description": "A footage of an alleged listening party has been uploaded to IG by Homixide Beno. In the footage Carti is seen performing Problem Child.",
+   "quality": "",
+   "source": "",
+   "links": [
+    "https://www.instagram.com/p/C2qmWxSgRsA/?img_index=2"
+   ],
+   "description": "Footage of an alleged listening party was uploaded to IG by Homixide Beno. In the footage Carti is seen performing Problem Child.",
    "tracks": [
     {
      "num": "#?",
-     "name": "PROBLEM CHILD (with Travis Scott)"
+     "name": "PROBLEM CHILD (with Travis Scott)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V3]",
    "name": "MUSIC",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "A tracklist is said to exist during the '\"I AM MUSIC\" era with Vetements Jeans on it, everything else is unknown. While it has leaked, the version with Swamp Izzo is not currently available. Could possibly be a Pink Tape tracklist, but unlikely if it is the version with Swamp Izzo.",
    "tracks": [
     {
      "num": "#?",
-     "name": "VETEMENTS JEANS (with Lil Uzi Vert & DJ Swamp Izzo)"
+     "name": "VETEMENTS JEANS (with Lil Uzi Vert & DJ Swamp Izzo)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V3]",
-   "name": "I AM MUSIC",
+   "name": "MUSIC [7.XX.24]",
    "date": "",
-   "quality": "N/A",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Early July 2024 TL is said to have 20+ songs, a Ye feature, YoungBoy feature, Lil Wayne feature, and 2 DJ Khaled features",
    "tracks": [
     {
      "num": "#?",
-     "name": "??? (feat. DJ Khaled)"
+     "name": "??? (feat. DJ Khaled)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "??? (feat. DJ Khaled)"
+     "name": "??? (feat. DJ Khaled)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "??? (feat. Ye)"
+     "name": "??? (feat. Ye)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "??? (feat. YoungBoy Never Broke Again)"
+     "name": "??? (feat. YoungBoy Never Broke Again)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "??? (feat. Lil Wayne)"
+     "name": "??? (feat. Lil Wayne)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#?",
-     "name": "???"
+     "name": "???",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   },
   {
    "era": "MUSIC [V3]",
    "name": "Rolling Loud Miami [I AM MUSIC partial LP]",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "The Rolling Loud set for RL Miami 2024. Five new songs were performed, all of which besides \"OMERTÀ*\" made it to MUSIC.",
    "tracks": [
     {
      "num": "#1",
-     "name": "CRUSH (with Travis Scott)"
+     "name": "CRUSH (with Travis Scott)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "COCAINE NOSE"
+     "name": "COCAINE NOSE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Future & Metro Boomn - Type Shit (feat. Playboi Carti)"
+     "name": "Future & Metro Boomn - Type Shit (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "H00DBYAIR"
+     "name": "H00DBYAIR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "KETAMINE"
+     "name": "KETAMINE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "EVILJ0RDAN"
+     "name": "EVILJ0RDAN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "RADAR"
+     "name": "RADAR",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Rockstar Made"
+     "name": "Rockstar Made",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "DIFFERENT DAY"
+     "name": "DIFFERENT DAY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "2024"
+     "name": "2024",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Travis Scott - FE!N (feat. Playboi Carti)"
+     "name": "Travis Scott - FE!N (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Stop Breathing"
+     "name": "Stop Breathing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "¥$, Ye, Ty Dolla $ign & Rich The Kid - CARNIVAL (feat. Playboi Carti)"
+     "name": "¥$, Ye, Ty Dolla $ign & Rich The Kid - CARNIVAL (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Shoota (feat. Lil Uzi Vert)"
+     "name": "Shoota (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Weeknd & Playboi Carti - Timeless"
+     "name": "The Weeknd & Playboi Carti - Timeless",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "OMERTÀ*"
+     "name": "OMERTÀ*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#17",
-     "name": "Sky"
+     "name": "Sky",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "2024"
+     "name": "2024",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "RATHER LIE (with The Weeknd)"
+     "name": "RATHER LIE (with The Weeknd)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
-   ],
-   "availability": "Setlist"
+   ]
   },
   {
    "era": "MUSIC [V3]",
    "name": "MUSIC",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist on SoundCloud, re-arranged with \"MOJO JOJO\" and \"HBA\" (unknown if this would've been the single version or the album version) missing. Possibly the tracklist mentioned by Playboi Carti when asked by Kai Cenat how many songs were on the album.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "CRUSH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "PHILLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "RATHER LIE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "BACKD00R",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "TOXIC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CHARGE DEM HOES A FEE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "GOOD CREDIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "WAKE UP F1LTHY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "JUMPIN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "TRIM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "WE ALL NEED DA VIBES",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "TWIN TRIM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-47-0.jpg"
    ]
@@ -2516,193 +3673,192 @@
    "era": "MUSIC [V3]",
    "name": "MUSIC",
    "date": "",
-   "quality": "Clear",
-   "source": "Leaked",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for MUSIC hours before drop. Same songs with different order. Posted by purplematter4 on Twitter.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "BACKDOOR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "TOXIC",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "CHARGE DEM HOES A FEE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "GOOD CREDIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "WAKE UP F1LTHY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "JUMPIN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TRIM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "MOJO MOJO",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "PHILLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "CRUSH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "RATHER LIE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "WE ALL NEED DA VIBES",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "TWIN TRIM",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "HBA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-48-0.jpg"
    ]
@@ -2711,193 +3867,192 @@
    "era": "MUSIC [V3]",
    "name": "MUSIC",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Release tracklist for MUSIC posted on Carti's opium_00pium Instagram burner account on March 14, 2025.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "CRUSH (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "MOJO JOJO",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "PHILLY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "RATHER LIE (feat. The Weeknd)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "BACKD00R",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TOXIC (feat. Skepta)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "CHARGE DEM HOES A FEE (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "GOOD CREDIT (feat. Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "WAKE UP F1LTHY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "JUMPIN (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "TRIM (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "WE ALL NEED DA VIBES (feat. Ty Dolla $ign & Young Thug)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "TWIN TWIM (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "HBA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-49-0.jpg"
    ]
@@ -2906,199 +4061,198 @@
    "era": "MUSIC [V3]",
    "name": "MUSIC - V1",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the first digital deluxe for 'MUSIC'. Adds DIFFERENT DAY as track 31.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "CRUSH (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "MOJO JOJO",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "PHILLY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "RATHER LIE (feat. The Weeknd)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "BACKD00R",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TOXIC (feat. Skepta)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "CHARGE DEM HOES A FEE (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "GOOD CREDIT (feat. Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "WAKE UP F1LTHY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "JUMPIN (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "TRIM (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "WE ALL NEED DA VIBES (feat. Ty Dolla $ign & Young Thug)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "TWIN TWIM (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "HBA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
      "name": "DIFFERENT DAY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-50-0.jpg"
    ]
@@ -3107,205 +4261,204 @@
    "era": "MUSIC [V3]",
    "name": "MUSIC - V2",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the second digital deluxe for 'MUSIC'. Adds 2024 and BACKR00MS as bonus tracks.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "CRUSH (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "MOJO JOJO",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "PHILLY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "RATHER LIE (feat. The Weeknd)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "BACKD00R",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TOXIC (feat. Skepta)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "CHARGE DEM HOES A FEE (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "GOOD CREDIT (feat. Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "WAKE UP F1LTHY (feat Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "JUMPIN (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "TRIM (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "WE ALL NEED DA VIBES (feat. Ty Dolla $ign & Young Thug)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "TWIN TWIM (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "HBA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
      "name": "2024",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#32",
      "name": "BACKR00MS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-51-0.jpg"
    ]
@@ -3314,199 +4467,198 @@
    "era": "MUSIC [V3]",
    "name": "MUSIC - V3",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the third digital deluxe for 'MUSIC'. Adds FOMDJ as a bonus track, less than 72 hours after it leaked.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "CRUSH (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "MOJO JOJO",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "PHILLY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "RATHER LIE (feat. The Weeknd)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "BACKD00R",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TOXIC (feat. Skepta)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "CHARGE DEM HOES A FEE (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "GOOD CREDIT (feat. Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "WAKE UP F1LTHY (feat Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "JUMPIN (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "TRIM (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "WE ALL NEED DA VIBES (feat. Ty Dolla $ign & Young Thug)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "TWIN TWIM (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "HBA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
      "name": "FOMDJ",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full",
    "images": [
     "/vampgold/art/tl-52-0.jpg"
    ]
@@ -3515,316 +4667,371 @@
    "era": "MUSIC (DELUXE)",
    "name": "MUSIC - SORRY 4 DA WAIT",
    "date": "",
-   "quality": "Clear",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Tracklist for the official deluxe for \"MUSIC\", released on all DSPs on March 25th, 2025. Adds DIFFERENT DAY, 2024, BACKR00MS and FOMDJ as bonus tracks.",
    "tracks": [
     {
      "num": "#1",
      "name": "POP OUT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "CRUSH (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "K POP",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "EVIL J0RDAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "MOJO JOJO",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "PHILLY (feat. Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "RADAR",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "RATHER LIE (feat. The Weeknd)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "FINE SHIT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "BACKD00R",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "TOXIC (feat. Skepta)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "MUNYUN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "CRANK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "CHARGE DEM HOES A FEE (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "GOOD CREDIT (feat. Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "I SEEEEEE YOU BABY BOI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "WAKE UP F1LTHY (feat Travis Scott)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "JUMPIN (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "TRIM (feat. Future)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "COCAINE NOSE",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "WE ALL NEED DA VIBES (feat. Ty Dolla $ign & Young Thug)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "OLYMPIAN",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "OPM BABI",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "TWIN TWIM (feat. Lil Uzi Vert)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "LIKE WEEZY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "DIS 1 GOT IT",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "WALK",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "HBA",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "OVERLY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "SOUTH ATLANTA BABY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
      "name": "DIFFERENT DAY",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#32",
      "name": "2024",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#33",
      "name": "BACKR00MS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#34",
      "name": "FOMDJ",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ],
-   "availability": "Full"
+   "availColor": "#999999",
+   "availLabel": "Unknown"
   },
   {
    "era": "BABY BOI",
    "name": "BABYBOI",
    "date": "",
-   "quality": "N/A",
-   "source": "Other",
+   "quality": "",
+   "source": "",
    "links": [],
    "description": "Songs that could have been on Babyboi based on Carti playing them at clubs multiple times after his shows post-MUSIC release",
    "tracks": [
     {
      "num": "#?",
-     "name": "VETEMENT JEANS (with Lil Uzi Vert)"
+     "name": "VETEMENTS JEANS (with Lil Uzi Vert)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "ALIVE (with YoungBoy Never Broke Again)"
+     "name": "ALIVE (with YoungBoy Never Broke Again)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "BANG*"
+     "name": "BANG*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "SOME MORE"
+     "name": "SOME MORE",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "K-9 (with Drake)"
+     "name": "K-9 (with Drake)",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "FREE 31GK BLO*"
+     "name": "FREE 31GK BLO*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "PUT SOME ON THE FLOOR*"
+     "name": "PUT SOME ON THE FLOOR*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "LET'S GO*"
+     "name": "LET'S GO*",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording / LQ Available"
     },
     {
      "num": "#?",
-     "name": "ROCKSTARZ"
+     "name": "ROCKSTARZ",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Rumored"
+   ]
   },
   {
    "era": "BABY BOI",
-   "name": "BABYBOI",
+   "name": "BABYBOI 4.0",
    "date": "",
-   "quality": "Blurry",
-   "source": "Carti",
+   "quality": "",
+   "source": "",
    "links": [],
-   "description": "BABYBOI whiteboard tracklist. Surfaced on Jul 25, 2025.",
+   "description": "BABYBOI 4.0 whiteboard tracklist. Initially surfaced on Jul 25, 2025, with higher quality pics surfacing later on August.",
    "tracks": [
     {
      "num": "#?",
-     "name": "Terror (pop)"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "for love"
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "sorry"
+     "name": "Swagy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "??? (Dopeboy says?)"
+     "name": "Everyday Crime(?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Fix you"
+     "name": "Now4Ever",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "HOW U DOIN?",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "$D",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "???",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Ya Dig",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Noname(?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
-   ],
-   "availability": "Full",
-   "images": [
-    "/vampgold/art/tl-55-0.jpg"
    ]
   },
   {
    "era": "BABY BOI",
    "name": "BABYBOI",
    "date": "",
-   "quality": "Clear",
+   "quality": "",
    "source": "",
    "links": [],
    "description": "Revealed by @popalr_ on Twitter that ROCKSTARZ was going to be the intro to BABY BOI, but due to it's leaking it might have gotten scrapped.",
    "tracks": [
     {
      "num": "#1",
-     "name": "ROCKSTARZ"
+     "name": "ROCKSTARZ",
+     "color": "#93c47d",
+     "colorLabel": "Alt / Unconfirmed Version Available"
     }
-   ],
-   "availability": "Few Songs Confirmed"
+   ]
   }
  ]
 }

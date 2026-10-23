@@ -2,93 +2,131 @@
  "legend": [
   {
    "label": "Unknown",
-   "color": ""
+   "color": "#999999"
   },
   {
    "label": "Completely Unheard",
-   "color": ""
+   "color": "#E06666"
   },
   {
    "label": "Snippet Available",
-   "color": ""
+   "color": "#F6B26B"
   },
   {
    "label": "Version Available",
-   "color": ""
+   "color": "#93C47D"
   },
   {
    "label": "Confirmed Version Available",
-   "color": ""
+   "color": "#8E7CC3"
   }
  ],
  "albums": [
   {
    "era": "Before Boy Barbie",
-   "name": "Boy Barbie [V1]",
+   "name": "Before Boy Barbie",
    "date": "",
-   "quality": "Clear",
-   "source": "Ken",
+   "quality": "",
+   "source": "",
    "links": [],
+   "description": "(Apr 11, 2000) (Kenyatta Lee Bettis Frazier Jr. is born in Atlanta)\n(Apr - Dec 2015) (Ken Car$on signs to 808 Mafia at 15 years of age)\n(Late 2019) (Ken Carson meets Playboi Carti and joins Opium®)",
+   "tracks": []
+  },
+  {
+   "era": "Before Boy Barbie",
+   "name": "Boy Barbie [V1]",
+   "date": "2019",
+   "quality": "Ken",
+   "source": "Ken",
+   "links": [
+    "https://t2.genius.com/unsafe/830x0/https%3A%2F%2Fimages.genius.com%2F507b841200b62c44b9028eb0100f1e69.899x899x1.jpg"
+   ],
    "description": "Unused tracklist cover art for Boy Barbie, when it was at one point just two tracks, with Lancey Foux being the sole feature on both songs.",
    "tracks": [
     {
      "num": "#1",
-     "name": "What You Know (feat. Lancey Foux)"
+     "name": "What You Know (feat. Lancey Foux)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Pink Panther (feat. Lancey Foux)"
+     "name": "Pink Panther (feat. Lancey Foux)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Before Boy Barbie",
    "name": "Boy Barbie [V2]",
-   "date": "",
-   "quality": "Clear",
+   "date": "2019",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://t2.genius.com/unsafe/830x0/https%3A%2F%2Fimages.genius.com%2F4db345894c3b0cfdaf9fe68d4a487b18.899x899x1.jpg"
+   ],
    "description": "The original tracklist for Boy Barbie. It consisted of ten tracks, with Young Jordan being the sole featue. It was also originally intended for release under 808 Mafia, however in 2019, Ken Carson signed to Opium.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Splash"
+     "name": "Splash",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "Hoky Oky"
+     "name": "Hoky Oky",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "Fan Behavior (feat. Young Jordan)"
+     "name": "Fan Behavior (feat. Young Jordan)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Dream"
+     "name": "Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Going Krazy"
+     "name": "Going Krazy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "No Mo"
+     "name": "No Mo",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Geeked Up"
+     "name": "Geeked Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Back Then"
+     "name": "Back Then",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "Die About It"
+     "name": "Die About It",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -106,34 +144,48 @@
    "era": "Boy Barbie",
    "name": "Boy Barbie [V3]",
    "date": "May 12, 2020",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://t2.genius.com/unsafe/830x0/https%3A%2F%2Fimages.genius.com%2Fb02b56888fb1482002f5c8ae5e9af993.827x827x1.jpg"
+   ],
    "description": "This is the third and final version of the tracklist.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Gold Medal (feat. International Jefe & Lil Unky)"
+     "name": "Gold Medal (feat. International Jefe & Lil Unky)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Geeked Up"
+     "name": "Geeked Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "What You Know (feat. Lancey Foux)"
+     "name": "What You Know (feat. Lancey Foux)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Pink Panther (feat. Lancey Foux)"
+     "name": "Pink Panther (feat. Lancey Foux)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Flexing (feat. Lil Yachty)"
+     "name": "Flexing (feat. Lil Yachty)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Moshpit"
+     "name": "Moshpit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -151,34 +203,48 @@
    "era": "Teen X",
    "name": "Teen X",
    "date": "Aug 14, 2020",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://images.genius.com/2a64fa7a58dd2958aa0d0c199c6dbf4b.1000x1000x1.png"
+   ],
    "description": "Official tracklist for Teen X.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Teen X"
+     "name": "Teen X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yale"
+     "name": "Yale",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Meds"
+     "name": "Meds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Why"
+     "name": "Why",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "For Her"
+     "name": "For Her",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Pissed Off"
+     "name": "Pissed Off",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -196,34 +262,46 @@
    "era": "Lost Files",
    "name": "Lost Files",
    "date": "Jan 20, 2021",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for Lost Files.",
    "tracks": [
     {
      "num": "#1",
-     "name": "opium"
+     "name": "opium",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "no love"
+     "name": "no love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "pose 2 do"
+     "name": "pose 2 do",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "phenomenon"
+     "name": "phenomenon",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "stuck (feat. Lil Yachty)"
+     "name": "stuck (feat. Lil Yachty)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "fuk shit"
+     "name": "fuk shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -241,30 +319,40 @@
    "era": "Teen X : Relapsed",
    "name": "Teen X : Relapsed",
    "date": "Jan 31, 2021",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for Teen X : Relapsed.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Teen X Babe"
+     "name": "Teen X Babe",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Teenager Rager"
+     "name": "Teenager Rager",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Butterfly"
+     "name": "Butterfly",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "High as Sh!T"
+     "name": "High as Sh!T",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "On the Low"
+     "name": "On the Low",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -282,46 +370,64 @@
    "era": "Lost Files 2",
    "name": "Lost Files 2",
    "date": "Jul 10, 2021",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for Lost Files 2.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Glock 19"
+     "name": "Glock 19",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Patrick Ewing (feat. Lil Tecca)"
+     "name": "Patrick Ewing (feat. Lil Tecca)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Celebrate"
+     "name": "Celebrate",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "M&M"
+     "name": "M&M",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "BackPack"
+     "name": "BackPack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "How 2 Flex"
+     "name": "How 2 Flex",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Been Braggin"
+     "name": "Been Braggin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Killstreak"
+     "name": "Killstreak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Teen Bean"
+     "name": "Teen Bean",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -338,55 +444,77 @@
   {
    "era": "Project X",
    "name": "Project X [V1]",
-   "date": "",
-   "quality": "Clear",
+   "date": "2021",
+   "quality": "Secondary",
    "source": "Secondary",
    "links": [],
    "description": "@isseyboy (Caskets) mentioned that Carti was meant to appear on the album, stating that the song was allegedly \"Hella,\" but Carti didn't like his verse and had it taken off.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Who's Next"
+     "name": "Who's Next",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rock N Roll"
+     "name": "Rock N Roll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Party All Day"
+     "name": "Party All Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Change"
+     "name": "Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Run + Ran"
+     "name": "Run + Ran",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Shake"
+     "name": "Shake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Hella (feat. Playboi Carti)"
+     "name": "Hella (feat. Playboi Carti)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "Clutch"
+     "name": "Clutch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Till I Die"
+     "name": "Till I Die",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Burnin Up"
+     "name": "Burnin Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "So What"
+     "name": "So What",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -394,54 +522,76 @@
    "era": "Project X",
    "name": "Project X [V2]",
    "date": "Jul 23, 2021",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for Project X.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Who's Next"
+     "name": "Who's Next",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Rock N Roll"
+     "name": "Rock N Roll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Party All Day"
+     "name": "Party All Day",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Change"
+     "name": "Change",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Run + Ran"
+     "name": "Run + Ran",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Shake"
+     "name": "Shake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Hella"
+     "name": "Hella",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Clutch"
+     "name": "Clutch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Till I Die"
+     "name": "Till I Die",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Burnin Up"
+     "name": "Burnin Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "So What"
+     "name": "So What",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -459,109 +609,153 @@
    "era": "lost_files_3",
    "name": "lost_files_3",
    "date": "Jan 29, 2022",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for lost_files_3.",
    "tracks": [
     {
      "num": "#1",
-     "name": "hang_fire :/"
+     "name": "hang_fire :/",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "gang (feat. Lil Tecca & Destroy Lonely)"
+     "name": "gang (feat. Lil Tecca & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "drugs_over_love :{"
+     "name": "drugs_over_love :{",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "i_influence"
+     "name": "i_influence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "r_u_srs_?"
+     "name": "r_u_srs_?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "murder_musik (feat. Destroy Lonely)"
+     "name": "murder_musik (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "upside_down"
+     "name": "upside_down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "sh00t"
+     "name": "sh00t",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "over_dosed"
+     "name": "over_dosed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "lost_files_3",
    "name": "lost_files_3",
-   "date": "",
-   "quality": "Clear",
+   "date": "2022",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Another version of the tracklist when Sicko added four more tracks to the mixtape.",
    "tracks": [
     {
      "num": "#1",
-     "name": "hang_fire :/"
+     "name": "hang_fire :/",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "gang (feat. Lil Tecca & Destroy Lonely)"
+     "name": "gang (feat. Lil Tecca & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "drugs_over_love :{"
+     "name": "drugs_over_love :{",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "i_influence"
+     "name": "i_influence",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "r_u_srs_?"
+     "name": "r_u_srs_?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "murder_musik (feat. Destroy Lonely)"
+     "name": "murder_musik (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "upside_down"
+     "name": "upside_down",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "sh00t"
+     "name": "sh00t",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "over_dosed"
+     "name": "over_dosed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "by_my_lonely (feat. JBan$2Turnt)"
+     "name": "by_my_lonely (feat. JBan$2Turnt)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "raver (feat. Destroy Lonely)"
+     "name": "raver (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "exodus (feat. Destroy Lonely)"
+     "name": "exodus (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "wockstar (feat. Offset)"
+     "name": "wockstar (feat. Offset)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -579,50 +773,70 @@
    "era": "X TWO THREE",
    "name": "X TWO THREE",
    "date": "Jun 8, 2022",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for X TWO THREE.",
    "tracks": [
     {
      "num": "#1",
-     "name": "X GAMES"
+     "name": "X GAMES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "X FOR BREAKFAST (feat. Destroy Lonely)"
+     "name": "X FOR BREAKFAST (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "STICK"
+     "name": "STICK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "POP"
+     "name": "POP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "PUSSY PINK (feat. SoFaygo)"
+     "name": "PUSSY PINK (feat. SoFaygo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "AQUAFINA"
+     "name": "AQUAFINA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "SHOULDA LISTENED (feat. Lil Tecca & Destroy Lonely)"
+     "name": "SHOULDA LISTENED (feat. Lil Tecca & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "LIL VAMP"
+     "name": "LIL VAMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "KEEPS"
+     "name": "KEEPS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "ALL YEAR FREESTYLE"
+     "name": "ALL YEAR FREESTYLE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -640,90 +854,132 @@
    "era": "X",
    "name": "X",
    "date": "Jul 8, 2022",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://t2.genius.com/unsafe/830x0/https%3A%2F%2Fimages.genius.com%2Ff21660e5765b78f1c8d5cd5ec6a55076.1000x1000x1.png"
+   ],
    "description": "Official tracklist for X.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "New"
+     "name": "New",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Gems"
+     "name": "Gems",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Nobody"
+     "name": "Nobody",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Go"
+     "name": "Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "MDMA (feat. Destroy Lonely)"
+     "name": "MDMA (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "X"
+     "name": "X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "PDBMH"
+     "name": "PDBMH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Money Hunt"
+     "name": "Money Hunt",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "South Beach"
+     "name": "South Beach",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Going Schitz"
+     "name": "Going Schitz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Same Thing"
+     "name": "Same Thing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Freestyle 1"
+     "name": "Freestyle 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Freestyle 2"
+     "name": "Freestyle 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Fuk 12"
+     "name": "Fuk 12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Murda Musik (feat. Destroy Lonely)"
+     "name": "Murda Musik (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Delinquent (feat. HXG)"
+     "name": "Delinquent (feat. HXG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Get Rich Or Die"
+     "name": "Get Rich Or Die",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Turn Up"
+     "name": "Turn Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "The End"
+     "name": "The End",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -741,110 +997,160 @@
    "era": "XTENDED",
    "name": "XTENDED",
    "date": "Oct 31, 2022",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for XTENDED. Features 5 additional tracks.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Intro"
+     "name": "Intro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "New"
+     "name": "New",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Gems"
+     "name": "Gems",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Nobody"
+     "name": "Nobody",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Go"
+     "name": "Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "MDMA (feat. Destroy Lonely)"
+     "name": "MDMA (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "X"
+     "name": "X",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "PDBMH"
+     "name": "PDBMH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Money Hunt"
+     "name": "Money Hunt",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "South Beach"
+     "name": "South Beach",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Going Schitz"
+     "name": "Going Schitz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Same Thing"
+     "name": "Same Thing",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Freestyle 1"
+     "name": "Freestyle 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Freestyle 2"
+     "name": "Freestyle 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Fuk 12"
+     "name": "Fuk 12",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Murda Musik (feat. Destroy Lonely)"
+     "name": "Murda Musik (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Delinquent (feat. HXG)"
+     "name": "Delinquent (feat. HXG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Get Rich Or Die"
+     "name": "Get Rich Or Die",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Turn Up"
+     "name": "Turn Up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "The End"
+     "name": "The End",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Freestyle 3"
+     "name": "Freestyle 3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Fashion Habits"
+     "name": "Fashion Habits",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "Shoot"
+     "name": "Shoot",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "Swag Overload"
+     "name": "Swag Overload",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "Lookbook"
+     "name": "Lookbook",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -862,42 +1168,58 @@
    "era": "lost ?",
    "name": "lost ?",
    "date": "Jan 3, 2023",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for lost ?",
    "tracks": [
     {
      "num": "#1",
-     "name": "𝓼𝓾𝓲𝓬𝓲𝓭𝓪𝓵"
+     "name": "𝓼𝓾𝓲𝓬𝓲𝓭𝓪𝓵",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "𝓯𝓻𝓮𝓮 𝔂𝓸𝓾𝓷𝓰 𝓽𝓱𝓾𝓰"
+     "name": "𝓯𝓻𝓮𝓮 𝔂𝓸𝓾𝓷𝓰 𝓽𝓱𝓾𝓰",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "𝓫𝓸𝓼𝓼𝓮𝓼"
+     "name": "𝓫𝓸𝓼𝓼𝓮𝓼",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "𝓵𝓮𝓽𝓼 𝓰𝓸 𝓼𝓱𝓸𝓹𝓹𝓲𝓷"
+     "name": "𝓵𝓮𝓽𝓼 𝓰𝓸 𝓼𝓱𝓸𝓹𝓹𝓲𝓷",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "𝓹𝓵𝓪𝔂𝓮𝓻"
+     "name": "𝓹𝓵𝓪𝔂𝓮𝓻",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "𝓰𝓵𝓸𝓬𝓴 𝔀𝓲𝓽𝓱 𝓪 𝓼𝔀𝓲𝓽𝓬𝓱"
+     "name": "𝓰𝓵𝓸𝓬𝓴 𝔀𝓲𝓽𝓱 𝓪 𝓼𝔀𝓲𝓽𝓬𝓱",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "𝓱𝓲𝓰𝓱𝓮𝓻 & 𝓯𝓵𝔂𝓮𝓻"
+     "name": "𝓱𝓲𝓰𝓱𝓮𝓻 & 𝓯𝓵𝔂𝓮𝓻",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "𝓫𝓪𝓬𝓴 𝓯𝓻𝓸𝓶 𝓽𝓱𝓮 𝓭𝓮𝓪𝓭"
+     "name": "𝓫𝓪𝓬𝓴 𝓯𝓻𝓸𝓶 𝓽𝓱𝓮 𝓭𝓮𝓪𝓭",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -915,66 +1237,96 @@
    "era": "A Great Chaos",
    "name": "A Great Chaos [V1]",
    "date": "Jun 25, 2023",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://agc.pillar.land/assets/content/tracklist.webp"
+   ],
    "description": "The first version of the tracklist shared by Ken Carson via his Twitter.",
    "tracks": [
     {
      "num": "#1",
-     "name": "intro"
+     "name": "intro",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#2",
-     "name": "jennifer's body"
+     "name": "jennifer's body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "hardcore"
+     "name": "hardcore",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#4",
-     "name": "pouring out the syrup"
+     "name": "pouring out the syrup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "singapore ft"
+     "name": "singapore ft",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "it's over"
+     "name": "it's over",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#7",
-     "name": "drugs talkin ft"
+     "name": "drugs talkin ft",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#8",
-     "name": "like this ft"
+     "name": "like this ft",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#9",
-     "name": "paranoid ft"
+     "name": "paranoid ft",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "interlude"
+     "name": "interlude",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     },
     {
      "num": "#11",
-     "name": "fyt"
+     "name": "fyt",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "so dark"
+     "name": "so dark",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "ken carson"
+     "name": "ken carson",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#14",
-     "name": "outro"
+     "name": "outro",
+     "color": "#999999",
+     "colorLabel": "Unknown"
     }
    ]
   },
@@ -989,71 +1341,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Green Room"
+     "name": "Green Room",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jennifer's Body"
+     "name": "Jennifer's Body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fighting Demons"
+     "name": "Fighting Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Singapore (feat. Destroy Lonely)"
+     "name": "Singapore (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lose It"
+     "name": "Lose It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Hardcore"
+     "name": "Hardcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Me N My Kup"
+     "name": "Me N My Kup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "It's Over"
+     "name": "It's Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)"
+     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Succubus"
+     "name": "Succubus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Paranoid (feat. Destroy Lonely)"
+     "name": "Paranoid (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Pots"
+     "name": "Pots",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Overtime"
+     "name": "Overtime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Vampire Hour"
+     "name": "Vampire Hour",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nightcore"
+     "name": "Nightcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Nightcore 2"
+     "name": "Nightcore 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Rockstar Lifestyle"
+     "name": "Rockstar Lifestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1061,82 +1447,120 @@
    "era": "A Great Chaos",
    "name": "A Great Chaos",
    "date": "Oct 13, 2023",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://t2.genius.com/unsafe/830x0/https%3A%2F%2Fimages.genius.com%2F9707d12a3aa440b938a76344adb5a954.1000x1000x1.jpg"
+   ],
    "description": "Official tracklist for A Great Chaos.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Green Room"
+     "name": "Green Room",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jennifer's Body"
+     "name": "Jennifer's Body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fighting My Demons"
+     "name": "Fighting My Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Singapore (feat. Destroy Lonely)"
+     "name": "Singapore (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lose It"
+     "name": "Lose It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Hardcore"
+     "name": "Hardcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Me N My Kup"
+     "name": "Me N My Kup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "It's Over"
+     "name": "It's Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Succubus"
+     "name": "Succubus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Paranoid (feat. Destroy Lonely)"
+     "name": "Paranoid (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pots"
+     "name": "Pots",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)"
+     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Overtime"
+     "name": "Overtime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Vampire Hour"
+     "name": "Vampire Hour",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nightcore"
+     "name": "Nightcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Nightcore 2"
+     "name": "Nightcore 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Rockstar Lifestyle"
+     "name": "Rockstar Lifestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "i need u"
+     "name": "i need u",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1144,30 +1568,42 @@
    "era": "A Great Chaos",
    "name": "Birthday EP",
    "date": "Jul 5, 2024",
-   "quality": "Clear",
+   "quality": "Leaked",
    "source": "Leaked",
-   "links": [],
+   "links": [
+    "https://i.ibb.co/JFspjDJh/20250816-142648.jpg"
+   ],
    "description": "Instead of only Overseas releasing on Ken's birthday, an EP was originally planned.",
    "tracks": [
     {
      "num": "#?",
-     "name": "overseas"
+     "name": "overseas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "toxic"
+     "name": "toxic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "leather jacket"
+     "name": "leather jacket",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "kryptonite"
+     "name": "kryptonite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "mewtwo"
+     "name": "mewtwo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1175,114 +1611,168 @@
    "era": "A Great Chaos",
    "name": "A Great Chaos (Deluxe) [V1]",
    "date": "Jul 5, 2024",
-   "quality": "Clear",
+   "quality": "Leaked",
    "source": "Leaked",
-   "links": [],
+   "links": [
+    "https://i.ibb.co/JFspjDJh/20250816-142648.jpg"
+   ],
    "description": "Tracklist for A Great Chaos (Deluxe). Xposed was intended for release alongside everything else on the deluxe, but it didn't for an unknown reason. It later released on More Chaos.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Green Room"
+     "name": "Green Room",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jennifer's Body"
+     "name": "Jennifer's Body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fighting My Demons"
+     "name": "Fighting My Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Singapore (feat. Destroy Lonely)"
+     "name": "Singapore (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lose It"
+     "name": "Lose It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Hardcore"
+     "name": "Hardcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Me N My Kup"
+     "name": "Me N My Kup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "It's Over"
+     "name": "It's Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Succubus"
+     "name": "Succubus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Paranoid (feat. Destroy Lonely)"
+     "name": "Paranoid (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pots"
+     "name": "Pots",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)"
+     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Overtime"
+     "name": "Overtime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Vampire Hour"
+     "name": "Vampire Hour",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nightcore"
+     "name": "Nightcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Nightcore 2"
+     "name": "Nightcore 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Rockstar Lifestyle"
+     "name": "Rockstar Lifestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "i need u"
+     "name": "i need u",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "loading"
+     "name": "loading",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "more chaos"
+     "name": "more chaos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "toxic"
+     "name": "toxic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "leather jacket"
+     "name": "leather jacket",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "mewtwo"
+     "name": "mewtwo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "ss"
+     "name": "ss",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "overseas"
+     "name": "overseas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "xposed"
+     "name": "xposed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1290,110 +1780,160 @@
    "era": "A Great Chaos",
    "name": "A Great Chaos (Deluxe) [V2]",
    "date": "Jul 5, 2024",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Official tracklist for A Great Chaos (Deluxe).",
    "tracks": [
     {
      "num": "#1",
-     "name": "Green Room"
+     "name": "Green Room",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Jennifer's Body"
+     "name": "Jennifer's Body",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Fighting My Demons"
+     "name": "Fighting My Demons",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Singapore (feat. Destroy Lonely)"
+     "name": "Singapore (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Lose It"
+     "name": "Lose It",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Hardcore"
+     "name": "Hardcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Me N My Kup"
+     "name": "Me N My Kup",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "It's Over"
+     "name": "It's Over",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Succubus"
+     "name": "Succubus",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Paranoid (feat. Destroy Lonely)"
+     "name": "Paranoid (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Pots"
+     "name": "Pots",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)"
+     "name": "Like This (feat. Lil Uzi Vert & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Overtime"
+     "name": "Overtime",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Vampire Hour"
+     "name": "Vampire Hour",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Nightcore"
+     "name": "Nightcore",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Nightcore 2"
+     "name": "Nightcore 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Rockstar Lifestyle"
+     "name": "Rockstar Lifestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "i need u"
+     "name": "i need u",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "loading"
+     "name": "loading",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "more chaos"
+     "name": "more chaos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "toxic"
+     "name": "toxic",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "leather jacket"
+     "name": "leather jacket",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
-     "name": "mewtwo"
+     "name": "mewtwo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
-     "name": "ss"
+     "name": "ss",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
-     "name": "overseas"
+     "name": "overseas",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1411,66 +1951,96 @@
    "era": "More Chaos",
    "name": "More Chaos [V1]",
    "date": "Jan 25, 2025",
-   "quality": "Blurry",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "https://i.ibb.co/bMddY9GR/image.png"
+   ],
    "description": "An unfinished tracklist for More Chaos posted on January 25th, 2025.",
    "tracks": [
     {
      "num": "#1",
-     "name": "TrapJump"
+     "name": "TrapJump",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "Sniffer"
+     "name": "Sniffer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Naked"
+     "name": "Naked",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#4",
-     "name": "Dismantled"
+     "name": "Dismantled",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "ROAE"
+     "name": "ROAE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Down2Earth"
+     "name": "Down2Earth",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#7",
-     "name": "BC<3"
+     "name": "BC<3",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "VMP"
+     "name": "VMP",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#9",
-     "name": "XPOSED"
+     "name": "XPOSED",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "1st Night"
+     "name": "1st Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "200 Kash"
+     "name": "200 Kash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "confetti"
+     "name": "confetti",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#13",
-     "name": "psycho"
+     "name": "psycho",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#14",
-     "name": "Narcotics"
+     "name": "Narcotics",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
@@ -1478,7 +2048,9 @@
     },
     {
      "num": "#16",
-     "name": "MOH"
+     "name": "MOH",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
@@ -1486,7 +2058,9 @@
     },
     {
      "num": "#18",
-     "name": "Proud Family"
+     "name": "Proud Family",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
@@ -1494,7 +2068,9 @@
     },
     {
      "num": "#20",
-     "name": "THX"
+     "name": "THX",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1502,82 +2078,118 @@
    "era": "More Chaos",
    "name": "More Chaos [V2]",
    "date": "Apr 11, 2025",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Tracklist on physical copies of More Chaos. Missing 2000, Evolution, Ghoul & Off The Meter.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Lord Of Chaos"
+     "name": "Lord Of Chaos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Xposed"
+     "name": "Xposed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Money Spread"
+     "name": "Money Spread",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Root Of All Evil"
+     "name": "Root Of All Evil",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "K-Hole"
+     "name": "K-Hole",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Trap Jump"
+     "name": "Trap Jump",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Blakk Rokkstar"
+     "name": "Blakk Rokkstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "LiveLeak"
+     "name": "LiveLeak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Diamonds"
+     "name": "Diamonds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dismantled"
+     "name": "Dismantled",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "200 Kash"
+     "name": "200 Kash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Down2Earth"
+     "name": "Down2Earth",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Confetti"
+     "name": "Confetti",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Naked"
+     "name": "Naked",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Kryptonite"
+     "name": "Kryptonite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Psycho"
+     "name": "Psycho",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Inferno"
+     "name": "Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Thx"
+     "name": "Thx",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1585,94 +2197,136 @@
    "era": "More Chaos",
    "name": "More Chaos [V3]",
    "date": "Apr 11, 2025",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Initial streaming tracklist for More Chaos.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Lord Of Chaos"
+     "name": "Lord Of Chaos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Xposed"
+     "name": "Xposed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Money Spread"
+     "name": "Money Spread",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Root Of All Evil"
+     "name": "Root Of All Evil",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "K-Hole"
+     "name": "K-Hole",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Trap Jump"
+     "name": "Trap Jump",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Blakk Rokkstar"
+     "name": "Blakk Rokkstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "LiveLeak"
+     "name": "LiveLeak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Diamonds"
+     "name": "Diamonds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dismantled"
+     "name": "Dismantled",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "200 Kash"
+     "name": "200 Kash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Down2Earth"
+     "name": "Down2Earth",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Confetti"
+     "name": "Confetti",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Naked"
+     "name": "Naked",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Kryptonite"
+     "name": "Kryptonite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Psycho"
+     "name": "Psycho",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Inferno"
+     "name": "Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Thx"
+     "name": "Thx",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "2000"
+     "name": "2000",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Evolution"
+     "name": "Evolution",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Ghoul"
+     "name": "Ghoul",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1680,98 +2334,142 @@
    "era": "More Chaos",
    "name": "More Chaos [V4]",
    "date": "Apr 11, 2025",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
    "links": [],
    "description": "Streaming tracklist for More Chaos. Has an additional song which was released shortly after the main album.",
    "tracks": [
     {
      "num": "#1",
-     "name": "Lord Of Chaos"
+     "name": "Lord Of Chaos",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Xposed"
+     "name": "Xposed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Money Spread"
+     "name": "Money Spread",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Root Of All Evil"
+     "name": "Root Of All Evil",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "K-Hole"
+     "name": "K-Hole",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Trap Jump"
+     "name": "Trap Jump",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Blakk Rokkstar"
+     "name": "Blakk Rokkstar",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "LiveLeak"
+     "name": "LiveLeak",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Diamonds"
+     "name": "Diamonds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Dismantled"
+     "name": "Dismantled",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "200 Kash"
+     "name": "200 Kash",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Down2Earth"
+     "name": "Down2Earth",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Confetti"
+     "name": "Confetti",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Naked"
+     "name": "Naked",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Kryptonite"
+     "name": "Kryptonite",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Psycho"
+     "name": "Psycho",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Inferno"
+     "name": "Inferno",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "Thx"
+     "name": "Thx",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "2000"
+     "name": "2000",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "Evolution"
+     "name": "Evolution",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "Ghoul"
+     "name": "Ghoul",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "Off The Meter (with Playboi Carti & Destroy Lonely)"
+     "name": "Off The Meter (with Playboi Carti & Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1789,42 +2487,60 @@
    "era": "xperiment",
    "name": "the experiment [V1]\n(xperiment)",
    "date": "Jan 15, 2026",
-   "quality": "Rumored",
+   "quality": "Leaked",
    "source": "Leaked",
-   "links": [],
-   "description": "An alleged unfinished tracklist for \"xperiment\" with a planned release date of July 23rd, 2026. These are only the confirmed songs, and more are planned as the album is still being worked on.",
+   "links": [
+    "https://i.ibb.co/9k13hFNC/Rumored-Experiment.png"
+   ],
+   "description": "An alleged unfinished tracklist for \"xperiment\" with a planned release date of July 23rd, 2026. Shared in a Discord server on January 15th, 2026.",
    "tracks": [
     {
      "num": "#1",
-     "name": "stars"
+     "name": "stars",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#2",
-     "name": "boil"
+     "name": "boil",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#3",
-     "name": "lotto"
+     "name": "lotto",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#4",
-     "name": "call up yo shooters (feat. Playboi Carti)"
+     "name": "call up yo shooters (feat. Playboi Carti)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet Available"
     },
     {
      "num": "#5",
-     "name": "switch up (feat. Lil Uzi Vert)"
+     "name": "switch up (feat. Lil Uzi Vert)",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#6",
-     "name": "amnesia"
+     "name": "amnesia",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#7",
-     "name": "chains & watches"
+     "name": "chains & watches",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
     },
     {
      "num": "#8",
-     "name": "shawty"
+     "name": "shawty",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1832,98 +2548,145 @@
    "era": "xperiment",
    "name": "xperiment [V2]",
    "date": "Jul 3, 2026",
-   "quality": "Clear",
+   "quality": "Ken",
    "source": "Ken",
-   "links": [],
+   "links": [
+    "http://open.spotify.com/prerelease/6Dx9MCwVAX6WDcOCvrG4In",
+    "https://music.apple.com/ca/album/xperiment/6781478597"
+   ],
    "description": "Streaming tracklist for xperiment. Features 22 tracks.",
    "tracks": [
     {
      "num": "#1",
-     "name": "wheredoistart"
+     "name": "wheredoistart",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "deaf note (feat. Playboi Carti)"
+     "name": "deaf note (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "shadeson (feat. 2hollis)"
+     "name": "shadeson (feat. 2hollis)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "gynecologist"
+     "name": "gynecologist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "wrist"
+     "name": "wrist",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "edm"
+     "name": "edm",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "truth"
+     "name": "truth",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "outofmybody"
+     "name": "outofmybody",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "the ritual"
+     "name": "the ritual",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "interlude"
+     "name": "interlude",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "ghost (feat. Lil Uzi Vert)"
+     "name": "ghost (feat. Lil Uzi Vert)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "drug kit (feat. Young Thug)"
+     "name": "drug kit (feat. Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "possession"
+     "name": "possession",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "fw00"
+     "name": "fw00",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "somanybags"
+     "name": "somanybags",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "shopping (feat. Destroy Lonely)"
+     "name": "shopping (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "amandabynes"
+     "name": "amandabynes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "amnesia"
+     "name": "amnesia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "flamethrower"
+     "name": "flamethrower",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "knocking"
+     "name": "knocking",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
-     "name": "addiction"
+     "name": "addiction",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
-     "name": "wedidit (feat. Playboi Carti)"
+     "name": "wedidit (feat. Playboi Carti)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -1934,18 +2697,228 @@
    "quality": "",
    "source": "",
    "links": [],
-   "description": "(Jul 3, 2026) (xperiment is released)\n(Jul 10, 2026) (cartunez fails to release as expected)\n(Ongoing)",
+   "description": "(Apr 11, 2025) (More Chaos is released - Ken Carson works on songs for xperiment & cartunez)\n(Jul 10, 2026) (cartunez fails to release as expected)\n(Aug 27, 2026) (cartunez is released)",
    "tracks": []
   },
   {
    "era": "cartunez",
-   "name": "cartunez",
-   "date": "Jul 2026",
-   "quality": "Clear",
-   "source": "Ken",
+   "name": "cartunez [V1]",
+   "date": "Jul 16, 2026",
+   "quality": "Leaked",
+   "source": "Leaked",
    "links": [],
-   "description": "Tracklist for cartunez. TBD.\n\nConfirmed & Speculated Tracks:\n\n50k\nHome Rollin\nscraping the pot\ncounterfeit\nlisten\nheart\npacks\ntaste",
-   "tracks": []
+   "description": "@purple4matter confirmed a version of cartunez featuring 8 tracks was submit on July 16th, 2026. Nothing else is known. This was likely Ken Carson's original vision for the project as an EP.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "???"
+    },
+    {
+     "num": "#2",
+     "name": "???"
+    },
+    {
+     "num": "#3",
+     "name": "???"
+    },
+    {
+     "num": "#4",
+     "name": "???"
+    },
+    {
+     "num": "#5",
+     "name": "???"
+    },
+    {
+     "num": "#6",
+     "name": "???"
+    },
+    {
+     "num": "#7",
+     "name": "???"
+    },
+    {
+     "num": "#8",
+     "name": "???"
+    }
+   ]
+  },
+  {
+   "era": "cartunez",
+   "name": "cartunez [V2]",
+   "date": "Aug 24, 2026",
+   "quality": "Ken",
+   "source": "Ken",
+   "links": [
+    "https://i.ibb.co/F448rTxT/cartunez-og.jpg"
+   ],
+   "description": "Original tracklist for cartunez which featured 12 tracks. Posted by Ken Carson to his Twitter on August 24th, 2026. Notably two highly anticipated songs \"keep goin\" and \"rollin\" did not make the final tracklist, and an unheard collaboration with Destroy Lonely & Playboi Carti, likely due to issues with his label.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "keep goin",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "scrape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "swag jack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "rare creature",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "nirvana (feat. Destroy Lonely & Playboi Carti)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "50k",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "rollin",
+     "color": "#93c47d",
+     "colorLabel": "Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "roxy reynolds (feat. Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "005",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "eaters",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "9 bitches",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "vamp city (feat. OsamaSon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "cartunez",
+   "name": "xperiment - cartunez [V3]",
+   "date": "Aug 27, 2026",
+   "quality": "Ken",
+   "source": "Ken",
+   "links": [
+    "https://open.spotify.com/album/6XeYRwn2Db1C0g78HoXxn7?utm_source=copy-link",
+    "https://music.apple.com/ca/album/xperiment-cartunez/6805723370"
+   ],
+   "description": "Streaming tracklist for cartunez. Released as a Disc 2 to \"xperiment.\"",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "scrape",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "swag jack",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "off a bean",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "rare creature",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "50k",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "roxy reynolds (with Destroy Lonely)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "005",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "eaters",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "9 bitches (with ApolloRed1)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "vamp city (with OsamaSon)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "fake news",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "disturbing the peace",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "yvngvmp",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
   }
  ]
 }

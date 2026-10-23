@@ -19,6 +19,482 @@
  ],
  "albums": [
   {
+   "era": "But My Mackin' Ain't Easy",
+   "name": "But My Mackin' Ain't Easy (OG)",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for the original version of But My Mackin' Ain't Easy.",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Mackin' Ain't Easy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Warhead (feat. B.DuBB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Hey You (feat. J.Herd & Liquid Luke",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Dead Presidents",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "We Brothers in Arms",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Too Green Scene (feat. D-Wreck)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Hater's Last Meal",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Crooklyn Dodgers (feat. B.DuBB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Coffee Shop Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "How We Do (feat. B.DuBB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Good Days Are Gone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "The World Is Mine",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "War Games Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Mac Is Like",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "It Gets No Better Than This",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Kick Push (feat. D.DuBB)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "Thanks For Comin Out [Mackin' Ain't Easy]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "How High; The EP",
+   "name": "How High; The EP",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for \"How High; The EP.\"",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "How High (Intro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "How Sick Am I",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Do It Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "I Am Legend (feat. John Record)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Open Ya Eyes (feat. Plain English)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "What It iss (feat. Franchise (The Come Up))",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "The Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Like Aaay!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Know Bout that",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "The Outro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Instant Replay by Beedie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Cruisin' by Mac Miller",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "How High; The Mixtape",
+   "name": "How High; The Mixtape",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for \"How High; The Mixtape.\"",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "How High (Intro)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "How Sick Am I",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Do It Again",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Bring It On (feat. BILL WAVES)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "I Am Legend (feat. John Record)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Open Ya Eyes (feat. Plain English)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Tryna Get Blazed",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Say Goodnight Freestyle (Feat. Vinny Radio)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Whatup Dilla",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "What It is (Feat. Franchise (The Come-Up)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "The Hold up",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Child's Play Freestyle (feat. Johnny \"Ghostwriter\" Harris)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Same Old Shit (Feat. Plain English",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "The Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Like Aaay!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Know Bout That",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "The III Children (Feat. Lip The Kid)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Ain't I Freestyle",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "Gothca Opin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "The Outro",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#21",
+     "name": "Instant Replay by Beedie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#22",
+     "name": "Cruisin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
+   "era": "The Jukebox: Prelude To the Class Clown",
+   "name": "The Jukebox: Prelude To The Class Clown",
+   "date": "",
+   "quality": "",
+   "source": "",
+   "links": [],
+   "description": "Tracklist for \"The Jukebox: Prelude To The Class Clown.\"",
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Intro (The Jukebox)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Sound Like",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Barz for Dayz",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "PA Hustla",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "What Up Cousin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Got A Clue",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Get It On The Floor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Late Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Cruisin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Swing Set",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Love My Name (feat. John Record)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Snap Back",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "J's On My Feet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "On Some Real Shit (100,000 Bars)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "The Chow Line (feat. Beedie & Max B)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "A Night In The Studio",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "My Lady",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Comin Soon' (feat. John Record)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "Keep Me Alive",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "So Far To Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#21",
+     "name": "Keep It Rollin'",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ]
+  },
+  {
    "era": "The High Life",
    "name": "The High Life",
    "date": "",
@@ -30,13 +506,13 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "Ms. Always Right",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -53,128 +529,128 @@
     {
      "num": "#2",
      "name": "Ridin' High",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Muscial Chairs",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Live Free",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Cruisin' Round the Clock",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "5 O'Clock (feat. Boaz)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Jerome Weinberg Speaks (Interlude)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Class President",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "A Million Dollars",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "I'm Ready",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Fly In Her Nikes (feat. Josh Everette)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "The Finer Things",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Travelin' Man '09",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Cruise Control (feat. Wiz Khalifa)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "One of a KInd",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Foolin' Around",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Castle Made Of Sand",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Just My Imagination",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Another Night",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Thanks for Coming Out",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Pen Game (feat. Skyzoo)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -184,68 +660,68 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
      "name": "Better Know Bout Us",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -255,92 +731,92 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "Rockin Wit The Best",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "Give It A Go",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -350,14 +826,14 @@
     {
      "num": "#1",
      "name": "It's All Gravy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -367,20 +843,20 @@
     {
      "num": "#1",
      "name": "Life Goes On",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -390,38 +866,38 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "The Cool Out",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -431,44 +907,44 @@
     {
      "num": "#1",
      "name": "World Go Round",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Kickin' Incredibly Dope Shit)",
    "date": "",
    "quality": "",
    "source": "",
@@ -478,43 +954,43 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
      "name": "LaLaLa",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -531,67 +1007,67 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "Good Evening",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
@@ -608,109 +1084,109 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
      "name": "Don't Mind If I Do",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#16",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#18",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
@@ -727,109 +1203,109 @@
     {
      "num": "#1",
      "name": "Kickin' Incredibly Dopt Shit (intro)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Outside",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Get Em Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Nikes on My Feet",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Senior Skip Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "The Spins",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Traffic in the Sky",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Don't Mind If I Do",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Paper Route (feat. Chevy Woods)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Good Evening",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Ride Around",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Knock Knock",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Mad Flava, Heavy Flow (Interlude) (feat. DJ Bonics)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Kool Aid & Frozen Pizza)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "All I Want Is You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Poppy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Face in the Crowd",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "La La La La",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -846,91 +1322,91 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "Donald Trump",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#14",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
@@ -947,97 +1423,97 @@
     {
      "num": "#1",
      "name": "Best Day Ever",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Get Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Donald Trump",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Oy Vey",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "I'll Be There (feat. Phonte)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Wear My Hat",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Wake Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "All Around The World",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Down the Rabbit Hole",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "In the Air",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Play Ya Cards",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "She Said",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Life Ain't Easy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Snooze",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Keep Floatin' (feat. Wiz Khalifa)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "BDE Bonus",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1054,37 +1530,37 @@
     {
      "num": "#1",
      "name": "Put It On",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Live Free",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "On And On",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Life Ain't Easy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "In the Air",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Another Night",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1101,79 +1577,79 @@
     {
      "num": "#1",
      "name": "I Love Life, Thank You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "People Under the Stairs",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Willie Dynamite",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "The Scoop on Heaven",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Love Lost",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Pranks 4 Players (feat. Sir Micheal Rocks)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Cold Feet",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Family First (feat. Talib Kweli)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "The Miller Family Reunion",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Boom Bap Rap (feat. The Come Up)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Just a Kid",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "All That (feat. Bun B)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "All This",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1190,109 +1666,109 @@
     {
      "num": "#1",
      "name": "2:27 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "3:43 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "2:47 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "4:21 Under The Weather?",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "2:52 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
      "name": "3:03 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#7",
      "name": "3:14 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
      "name": "3:49 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#9",
      "name": "0:40 Hole In My Pocket?",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
      "name": "3:01 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
      "name": "2:20 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#12",
      "name": "2:39 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
      "name": "3:45 Feels So Good",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "4:22 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#15",
      "name": "3:18 Unplugged",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "3:28 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#17",
      "name": "3:15 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#18",
      "name": "3:31 ???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
@@ -1309,104 +1785,104 @@
     {
      "num": "#1",
      "name": "English Lane",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Blue Slide Park",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Party on Fifth Ave.",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "PA Nights",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Frick Park Market",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Smile Back",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Under the Weather",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Of The Soul",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "My Team",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Up All Night",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Loitering",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Hole In My Pocket",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Diamonds & Gold",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Missed Calls",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Man In the Hat",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "One Last Thing",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Blue Slide Park",
-   "name": "Blue Slide Park",
+   "name": "Blue Slide Park (Commentary Version)",
    "date": "",
    "quality": "",
    "source": "",
@@ -1416,187 +1892,187 @@
     {
      "num": "#1",
      "name": "English Lane - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "English Lane",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Blue Slide Park - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Blue Slide Park",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Party on Fifth Ave - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Party on Fifth Ave.",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Pa Nights - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "PA Nights",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Frick Park Market - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Frick Park Market",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Smile Back - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Smile Back",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Under the Weather - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Under the Weather",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Of The Soul - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Of The Soul",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "My Team - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "My Team",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Up All Night - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Up All Night",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Loitering - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "Loitering",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "Hole In My Pocket - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "Diamonds & Gold - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "Diamonds & Gold",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "Missed Calls - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#28",
      "name": "Missed Calls",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#29",
      "name": "Man In the Hat - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#30",
      "name": "Man In the Hat",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#31",
      "name": "One Last Thing - Commentary",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#32",
      "name": "One Last Thing",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1613,110 +2089,110 @@
     {
      "num": "#1",
      "name": "Love Me As I Have Loved You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Desperado",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Loud",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Thoughts from a Balcony",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Aliens Fighting Robots (feat. Sir Michael Rocks)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Vitamans",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Fight the Feelings (feat. Iman Omari & Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Lucky Ass Bitch (feat. Juicy J)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "The Mourning After",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "1 Threw 8",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Ignorant (feat. Cam'ron)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "The Question (feat. Lil Wayne)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Angels (When She Shuts Her Eyes)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Sunlight (feat. Iman Omari)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Clarity",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "America (feat. Casey Veggies & Joey Bada$$)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Fuck 'Em All",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Pink Slime",
-   "name": "Pink Slime",
+   "name": "Pink Slime (EP)",
    "date": "",
    "quality": "",
    "source": "",
@@ -1726,38 +2202,38 @@
     {
      "num": "#1",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
      "name": "???",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "Pink Slime",
-   "name": "Pink Slime",
+   "name": "Pink Slime (11-track)",
    "date": "",
    "quality": "",
    "source": "",
@@ -1766,47 +2242,69 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Glow"
+     "name": "Glow",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Onaroll"
+     "name": "Onaroll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Dreams (feat. Curren$y)"
+     "name": "Dreams (feat. Curren$y)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Flyin' High"
+     "name": "Flyin' High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "Coffee Table"
+     "name": "Coffee Table",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
-     "name": "ATM Jam"
+     "name": "ATM Jam",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     },
     {
      "num": "#?",
-     "name": "Objects"
+     "name": "Objects",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Mac x Gotye"
+     "name": "Mac x Gotye",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Mac x Styles P"
+     "name": "Mac x Styles P",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Unknown"
+     "name": "Unknown",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
-     "name": "Unknown"
+     "name": "Unknown",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ]
   },
@@ -1822,31 +2320,31 @@
     {
      "num": "#1",
      "name": "Life Can Wait",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Love Affair",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Suspicions",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "A Moment 4 Jazz",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -1863,50 +2361,50 @@
     {
      "num": "#1",
      "name": "Birthday",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "If Poseidon Had a Surfboard",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Gelato Party",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "I Am Actually a Fish Alien",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "She Used To Love Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "The Revolution is Coming",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Avocado",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Watching Movies with the Sound Off",
-   "name": "Watching Movies with the Sound Off",
+   "name": "Watching Movies with the Sound Off EP",
    "date": "",
    "quality": "",
    "source": "",
@@ -1925,79 +2423,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Star Room"
+     "name": "The Star Room",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Avain"
+     "name": "Avain",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "I'm Not Real (feat. Earl Sweatshirt)"
+     "name": "I'm Not Real (feat. Earl Sweatshirt)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "S.D.S"
+     "name": "S.D.S",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Bird Call"
+     "name": "Bird Call",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Matches (feat. Ab-Soul)"
+     "name": "Matches (feat. Ab-Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "I Am Who Am (Killin' Time) (feat. Niki Randa)"
+     "name": "I Am Who Am (Killin' Time) (feat. Niki Randa)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Objects In the Mirror"
+     "name": "Objects In the Mirror",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Red Dot Music (feat. Action Bronson & Loaded Lux)"
+     "name": "Red Dot Music (feat. Action Bronson & Loaded Lux)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Gees (feat. ScHoolboy Q)"
+     "name": "Gees (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Watching Movies"
+     "name": "Watching Movies",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Suplexes Inside of Complexes & Duplexes (feat. Jay Electronica)"
+     "name": "Suplexes Inside of Complexes & Duplexes (feat. Jay Electronica)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "REMember"
+     "name": "REMember",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Someone Like You"
+     "name": "Someone Like You",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Aquarium"
+     "name": "Aquarium",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Youforia"
+     "name": "Youforia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "Goosebumpz [Bonus Track]"
+     "name": "Goosebumpz [Bonus Track]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "O.K. (feat. Tyler, the Creator) [Bonus Track]"
+     "name": "O.K. (feat. Tyler, the Creator) [Bonus Track]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "Claymation (feat Vinny Radio) [Bonus Track]"
+     "name": "Claymation (feat Vinny Radio) [Bonus Track]",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -2013,62 +2549,62 @@
     {
      "num": "#?",
      "name": "can",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "MacFatts (Fantoms)",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "pooppoop",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "samples are cool tho",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "the spill",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "vince",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "Waka",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "welcome back",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     },
     {
      "num": "#?",
      "name": "Willie Hutch (Back Sellin' Crack)",
-     "color": "#E06666",
+     "color": "#e06666",
      "colorLabel": "Completely Unheard"
     }
    ]
   },
   {
    "era": "Stolen Youth",
-   "name": "Stolen Youth",
+   "name": "Tales of a Stolen Youth",
    "date": "",
    "quality": "",
    "source": "",
@@ -2078,61 +2614,61 @@
     {
      "num": "#1",
      "name": "Intro",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Niggas Get Shot (Back Sellin Crack)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Fantoms",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Killin' Yall",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Guns N Roses",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Sleep",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Heaven",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Stuck In My Ways",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Though About You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Outro",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -2149,61 +2685,61 @@
     {
      "num": "#1",
      "name": "Intro",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Fantoms (feat. Joey Fatts)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Heaven (feat. Hardo & Mac Miller)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Guns & Roses",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Back Sellin' Crack (feat. ScHoolboy Q)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Stuck In My Ways",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Killin' Y'all (feat. Ab-Soul)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Thought About You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Sleep (feat. Da$h, Ab-Soul & Mac Miller)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Outro",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -2220,68 +2756,68 @@
     {
      "num": "#1",
      "name": "Larry",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Halo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Vertigo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Bill (feat. Earl Sweatshirt & Bill)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "72",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "The Jesuits (feat. Da$h)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Dr. Thomas",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Labido",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Melvin",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Grandpa Used to Carry a Flask (feat. Mac Miller)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Balloonerism",
-   "name": "Balloonerism",
+   "name": "Balloonerism (ZIP)",
    "date": "",
    "quality": "",
    "source": "",
@@ -2290,61 +2826,87 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Tambourine Dream"
+     "name": "Tambourine Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "5 Dollar Pony Rides"
+     "name": "5 Dollar Pony Rides",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "DJs Chord Organ (The Song That Changed Everything) ft. SZA"
+     "name": "DJs Chord Organ (The Song That Changed Everything) ft. SZA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Mrs Deborah Downer"
+     "name": "Mrs Deborah Downer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Do You Have A Destination"
+     "name": "Do You Have A Destination",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Stoned"
+     "name": "Stoned",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Colors and Shapes"
+     "name": "Colors and Shapes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Excelsior"
+     "name": "Excelsior",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Friendly Hallucinations"
+     "name": "Friendly Hallucinations",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Funny Papers"
+     "name": "Funny Papers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Manakins ft. Dylan Reynolds"
+     "name": "Manakins ft. Dylan Reynolds",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Transformations"
+     "name": "Transformations",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Tomorrow Will Never Know"
+     "name": "Tomorrow Will Never Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Balloonerism",
-   "name": "Balloonerism",
+   "name": "Balloonerism (FISHALIEN)",
    "date": "",
    "quality": "",
    "source": "",
@@ -2353,73 +2915,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Tambourine Dream"
+     "name": "Tambourine Dream",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "The Song That Changed Everything"
+     "name": "The Song That Changed Everything",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Do You Have A Destination"
+     "name": "Do You Have A Destination",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Mrs Deborah Downer"
+     "name": "Mrs Deborah Downer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stoned"
+     "name": "Stoned",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Colors and Shapes"
+     "name": "Colors and Shapes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Excelsior"
+     "name": "Excelsior",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Friendly Hallucinations"
+     "name": "Friendly Hallucinations",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Funny Papers"
+     "name": "Funny Papers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Manakins"
+     "name": "Manakins",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "He Finally Sleeps"
+     "name": "He Finally Sleeps",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Transformations"
+     "name": "Transformations",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Uber"
+     "name": "Uber",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Smile"
+     "name": "Smile",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Tomorrow Will Never Know"
+     "name": "Tomorrow Will Never Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Bob's Dementia"
+     "name": "Bob's Dementia",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Faces",
-   "name": "Faces",
+   "name": "Ken Morganson",
    "date": "",
    "quality": "",
    "source": "",
@@ -2428,67 +3022,99 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "It Just Doesn't Matter 1.2"
+     "name": "It Just Doesn't Matter 1.2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Colors and Shapes 1"
+     "name": "Colors and Shapes 1",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Here We Go"
+     "name": "Here We Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Dragons"
+     "name": "Dragons",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Therapy"
+     "name": "Therapy",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "I Don't Trust These Bitches (feat. Future)"
+     "name": "I Don't Trust These Bitches (feat. Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Pet Sounds (feat. Sean Price)"
+     "name": "Pet Sounds (feat. Sean Price)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Birthday, Wedding, Funeral (feat. Nas)"
+     "name": "Birthday, Wedding, Funeral (feat. Nas)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "San Francisco"
+     "name": "San Francisco",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Diablo"
+     "name": "Diablo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Insomniak (feat. Rick Ross)"
+     "name": "Insomniak (feat. Rick Ross)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "New Faces (Earl Sweatshirt & Da$h)"
+     "name": "New Faces (Earl Sweatshirt & Da$h)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Bob's Dementia (Hodgy Beats & Captain Murphy)"
+     "name": "Bob's Dementia (Hodgy Beats & Captain Murphy)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#14",
-     "name": "Angish (feat. ScHoolboy Q)"
+     "name": "Angish (feat. ScHoolboy Q)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Rain (feat. Vince Staples)"
+     "name": "Rain (feat. Vince Staples)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "Tomorrow Will Never Know"
+     "name": "Tomorrow Will Never Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -2497,7 +3123,7 @@
   },
   {
    "era": "Faces",
-   "name": "Faces",
+   "name": "Yes Faces",
    "date": "",
    "quality": "",
    "source": "",
@@ -2506,79 +3132,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Inside Outside"
+     "name": "Inside Outside",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Here We Go"
+     "name": "Here We Go",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Angel Dust Mix 5"
+     "name": "Angel Dust Mix 5",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "Mike"
+     "name": "Mike",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#5",
-     "name": "Happy Birthday Mix 3"
+     "name": "Happy Birthday Mix 3",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "It Just Doesn't Matter Mix"
+     "name": "It Just Doesn't Matter Mix",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Polo Jeans Mix 2"
+     "name": "Polo Jeans Mix 2",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "Therapy Mix"
+     "name": "Therapy Mix",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Wedding"
+     "name": "Wedding",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
-     "name": "Funeral Mix 6"
+     "name": "Funeral Mix 6",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#11",
-     "name": "Diablo Mix 2"
+     "name": "Diablo Mix 2",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "55 Mix"
+     "name": "55 Mix",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "San Francisco 1.5"
+     "name": "San Francisco 1.5",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Color and Shapes Mix 2"
+     "name": "Color and Shapes Mix 2",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#15",
-     "name": "Insomniak Mix 3"
+     "name": "Insomniak Mix 3",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Rain Mix"
+     "name": "Rain Mix",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#17",
-     "name": "Apparition Mix"
+     "name": "Apparition Mix",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#18",
-     "name": "Thumbalina From The Block 1.2"
+     "name": "Thumbalina From The Block 1.2",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#19",
-     "name": "Grand Finale 1.1"
+     "name": "Grand Finale 1.1",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -2597,152 +3261,152 @@
     {
      "num": "#1",
      "name": "Inside Outside",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Here We Go",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Friends (feat. ScHoolboy Q)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Angel Dust",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Malibu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "What Do You Do (feat. Sir Micheal Rocks)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "It Just Doesn't Matter",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Therapy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Polo Jeans (feat. Earl Sweatshirt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Happy Birthday",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Wedding",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Funeral",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Diablo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Ave Maria",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "55",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "San Francisco",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Colors and Shapes",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Insomniak (feat. Rick Ross)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Uber (feat. Mike Jones)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Rain (feat. Vince Staples)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Apparition",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "Thumbalina",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "New Faces v2 (feat. Da$h & Earl Sweatshirt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "Grand Finale",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Balloonerism",
-   "name": "Balloonerism",
+   "name": "Balloonerism 2",
    "date": "",
    "quality": "",
    "source": "",
@@ -2751,63 +3415,93 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "The Song That Changed Everything (DJ's Chord Organ)"
+     "name": "The Song That Changed Everything (DJ's Chord Organ)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Do You Have A Destination?"
+     "name": "Do You Have A Destination?",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Mrs Deborah Downer"
+     "name": "Mrs Deborah Downer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Operation Love"
+     "name": "Operation Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Stoned"
+     "name": "Stoned",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Colors and Shapes 2"
+     "name": "Colors and Shapes 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Friend Hallucinations 2"
+     "name": "Friend Hallucinations 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Funny Papers"
+     "name": "Funny Papers",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "5 Dollar Pony Rides"
+     "name": "5 Dollar Pony Rides",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Uber"
+     "name": "Uber",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Tommorrow Will Never Know"
+     "name": "Tommorrow Will Never Know",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Real Time"
+     "name": "Real Time",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#13",
-     "name": "Excelsior"
+     "name": "Excelsior",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Manakins - Dylan no v2"
+     "name": "Manakins - Dylan no v2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "Shangri La Yes Yes (Shangri La)"
+     "name": "Shangri La Yes Yes (Shangri La)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
     }
    ],
    "images": [
@@ -2816,7 +3510,7 @@
   },
   {
    "era": "Maclib",
-   "name": "Maclib",
+   "name": "Maclib (2014)",
    "date": "",
    "quality": "",
    "source": "",
@@ -2826,61 +3520,61 @@
     {
      "num": "#1",
      "name": "Track 20",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
      "name": "Number 7",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
      "name": "Track 18",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
      "name": "English Breakfast",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
      "name": "Nosy Neighbor",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
      "name": "Lightning Dog",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
      "name": "Number 4",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
      "name": "David Crockett",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
      "name": "Track 15",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#10",
      "name": "Track 02",
-     "color": "#93C47D",
+     "color": "#93c47d",
      "colorLabel": "Alternate Version Available"
     }
    ],
@@ -2889,7 +3583,7 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "Good Morning",
    "date": "",
    "quality": "",
    "source": "",
@@ -2898,43 +3592,63 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Brand Name"
+     "name": "Brand Name",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "Ascension"
+     "name": "Ascension",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Royal Flush"
+     "name": "Royal Flush",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Growing Pains"
+     "name": "Growing Pains",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "5 Dollar Pony Rides"
+     "name": "5 Dollar Pony Rides",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "She Knows Too Much"
+     "name": "She Knows Too Much",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Lightning Dog"
+     "name": "Lightning Dog",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Tips"
+     "name": "Tips",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Thank God"
+     "name": "Thank God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Larry's Record Shop"
+     "name": "Larry's Record Shop",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -2943,7 +3657,7 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "Good Morning",
    "date": "",
    "quality": "",
    "source": "",
@@ -2951,56 +3665,76 @@
    "description": "Another early tracklist that was leaked on the same day as the one above.",
    "tracks": [
     {
-     "num": "#1",
-     "name": "Brand Name"
-    },
-    {
      "num": "#2",
-     "name": "Growing Pains"
+     "name": "Growing Pains",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "Crickets"
+     "name": "Crickets",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Tips (feat Dom Kennedy)"
+     "name": "Tips (feat Dom Kennedy)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#5",
-     "name": "Pittsburgh"
+     "name": "Pittsburgh",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Stop Complainin"
+     "name": "Stop Complainin",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "NASA"
+     "name": "NASA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Ascension"
+     "name": "Ascension",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "Jan 10th bpm 140"
+     "name": "Jan 10th bpm 140",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#10",
-     "name": "She Knows Too Much (feat. Thundercat)"
+     "name": "She Knows Too Much (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Lightning Dog"
+     "name": "Lightning Dog",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "Snakes"
+     "name": "Snakes",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Jump (Lost in Translation)"
+     "name": "Jump (Lost in Translation)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3009,64 +3743,94 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "GO:OD A.M.",
    "date": "",
    "quality": "",
    "source": "",
    "links": [],
-   "description": "Early tracklist with two unheard tracks.",
+   "description": "Early tracklist with two unheard tracks. GO:OD AM is stylized with out a colon in some files.",
    "tracks": [
     {
      "num": "#1",
-     "name": "BRAND NAME"
+     "name": "Brand Name"
+    },
+    {
+     "num": "#1",
+     "name": "BRAND NAME",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "LIGHTNING DOG (feat. Thundercat)"
+     "name": "LIGHTNING DOG (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "NORELCO"
+     "name": "NORELCO",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "C4"
+     "name": "C4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "GROWING PAINS"
+     "name": "GROWING PAINS",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "BUTTER"
+     "name": "BUTTER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "GAZEBO"
+     "name": "GAZEBO",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#8",
-     "name": "FANTASTIC! (She Knows Too Much)"
+     "name": "FANTASTIC! (She Knows Too Much)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "WHEN IN ROME"
+     "name": "WHEN IN ROME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "THERAPY PT 2"
+     "name": "THERAPY PT 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "FALLING APART"
+     "name": "FALLING APART",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "ASCENSION"
+     "name": "ASCENSION",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "JUMP"
+     "name": "JUMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3075,60 +3839,84 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "GO:OD A.M.",
    "date": "",
    "quality": "",
    "source": "",
    "links": [],
-   "description": "Similar tracklist as above with some tracks rearranged and the track \"Butter\" being removed.",
+   "description": "Similar tracklist as above with some tracks rearranged and the track \"Butter\" being removed. GO:OD AM is stylized with out a colon in some files.",
    "tracks": [
     {
      "num": "#1",
-     "name": "BRAND NAME"
+     "name": "BRAND NAME",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#2",
-     "name": "LIGHTNING DOG (feat. Thundercat)"
+     "name": "LIGHTNING DOG (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "NORELCO"
+     "name": "NORELCO",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#4",
-     "name": "C4"
+     "name": "C4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "GAZEBO"
+     "name": "GAZEBO",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#6",
-     "name": "GROWING PAINS"
+     "name": "GROWING PAINS",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "CABLE BOX"
+     "name": "CABLE BOX",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#8",
-     "name": "FANTASTIC! (She Knows Too Much)"
+     "name": "FANTASTIC! (She Knows Too Much)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#9",
-     "name": "WHEN IN ROME"
+     "name": "WHEN IN ROME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "THERAPY PT 2"
+     "name": "THERAPY PT 2",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "ASCENSION"
+     "name": "ASCENSION",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "JUMP"
+     "name": "JUMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3137,7 +3925,7 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "GO:OD A.M.",
    "date": "",
    "quality": "",
    "source": "",
@@ -3146,51 +3934,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "ALARM CLOCK"
+     "name": "ALARM CLOCK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "BRAND NAME"
+     "name": "BRAND NAME",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#3",
-     "name": "C4"
+     "name": "C4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "ATOMIC BOMB"
+     "name": "ATOMIC BOMB",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "GROWING PAINS"
+     "name": "GROWING PAINS",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "CABLE BOX"
+     "name": "CABLE BOX",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "LIGHTNING DOG (feat. Thundercat)"
+     "name": "LIGHTNING DOG (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "SNAKES"
+     "name": "SNAKES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "ROYAL FLUSH (feat. Vinny Radio)"
+     "name": "ROYAL FLUSH (feat. Vinny Radio)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "WHEN IN ROME"
+     "name": "WHEN IN ROME",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "ASCENSION"
+     "name": "ASCENSION",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "JUMP"
+     "name": "JUMP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "images": [
@@ -3199,7 +4011,7 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "album",
    "date": "",
    "quality": "",
    "source": "",
@@ -3208,71 +4020,105 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "GO_OD am"
+     "name": "GO_OD am",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Brand Name"
+     "name": "Brand Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Rush Hour"
+     "name": "Rush Hour",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "2 Matches (feat. Ab-Soul)"
+     "name": "2 Matches (feat. Ab-Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "100 Grandkids"
+     "name": "100 Grandkids",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Time Flies"
+     "name": "Time Flies",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Weekend"
+     "name": "Weekend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Club House"
+     "name": "Club House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Carpe Diem"
+     "name": "Carpe Diem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "25_8"
+     "name": "25_8",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Perfect Circle"
+     "name": "Perfect Circle",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "It Gets Better"
+     "name": "It Gets Better",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "Cable Box"
+     "name": "Cable Box",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "On Sail"
+     "name": "On Sail",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "The Festival (feat. Little Dragon)"
+     "name": "The Festival (feat. Little Dragon)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#16",
-     "name": "Ascension"
+     "name": "Ascension",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#17",
-     "name": "YEAH"
+     "name": "YEAH",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ],
    "images": [
@@ -3281,7 +4127,7 @@
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "album",
    "date": "",
    "quality": "",
    "source": "",
@@ -3290,79 +4136,117 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "GO_OD am"
+     "name": "GO_OD am",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "Brand Name"
+     "name": "Brand Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Rush Hour"
+     "name": "Rush Hour",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#4",
-     "name": "2 Matches (feat. Ab-Soul)"
+     "name": "2 Matches (feat. Ab-Soul)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "100 Grandkids"
+     "name": "100 Grandkids",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#6",
-     "name": "Time Flies"
+     "name": "Time Flies",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#7",
-     "name": "Weekend"
+     "name": "Weekend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Club House"
+     "name": "Club House",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Carpe Diem"
+     "name": "Carpe Diem",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "25_8"
+     "name": "25_8",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "Perfect Circle"
+     "name": "Perfect Circle",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#12",
-     "name": "Wake Up Call"
+     "name": "Wake Up Call",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#13",
-     "name": "It Gets Better"
+     "name": "It Gets Better",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "Cable Box"
+     "name": "Cable Box",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "On Sail"
+     "name": "On Sail",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "The Festival (feat. Little Dragon)"
+     "name": "The Festival (feat. Little Dragon)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#17",
-     "name": "Ascension"
+     "name": "Ascension",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#18",
-     "name": "Jump"
+     "name": "Jump",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     },
     {
      "num": "#19",
-     "name": "YEAH"
+     "name": "YEAH",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -3378,103 +4262,103 @@
     {
      "num": "#1",
      "name": "Doors",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Brand Name",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Rush Hour",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Two Matches (feat. Ab-Soul)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "100 Grandkids",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Time Flies (feat. Lil B)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Weekend (feat. Miguel)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Clubhouse",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "In The Bag",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Break The Law",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Perfect Circle/God Speed",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "When In Rome",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "ROS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Cut The Check (feat. Chief Keef)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Ascension",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Jump",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "The Festival (feat. Little Dragon)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -3491,80 +4375,80 @@
     {
      "num": "#1",
      "name": "Fuckin Shit",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "jjjoh",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Hulu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Yooo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Atom Bomb",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Juil",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "HXH",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Here is a Bear",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "FaceBush",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Funk Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Best For Last",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Smile (feat. Mac Miller)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "The Divine Feminine",
-   "name": "The Divine Feminine",
+   "name": "The Divine Feminine EP",
    "date": "",
    "quality": "",
    "source": "",
@@ -3574,13 +4458,13 @@
     {
      "num": "#?",
      "name": "Congratulations",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#?",
      "name": "Dang!",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -3597,61 +4481,61 @@
     {
      "num": "#1",
      "name": "Congratulations (feat. Bilal)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Dang! (feat. Anderson Paak)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Stay",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Skin",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Cinderella (feat. Ty Dolla $ign)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Planet God Damn (feat. Njomza)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Soulmate",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "We (feat. CeeLo Green)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "My Favorite Part (feat. Ariana Grande)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "God Is Fair, Sexy Nasty (feat. Kendrick Lamar)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -3667,7 +4551,9 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Channel 13"
+     "name": "Channel 13",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -3682,17 +4568,21 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Come Back To Earth (OG)"
+     "name": "Come Back To Earth (OG)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Came Alone"
+     "name": "Came Alone",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Swimming",
-   "name": "Swimming",
+   "name": "Mixtape",
    "date": "",
    "quality": "",
    "source": "",
@@ -3728,7 +4618,9 @@
    "tracks": [
     {
      "num": "#?",
-     "name": "Buttons"
+     "name": "Buttons",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
     }
    ]
   },
@@ -3744,92 +4636,82 @@
     {
      "num": "#1",
      "name": "Come Back To Earth",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Hurt Feelings",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "What's the Use",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Perfecto",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Self Care",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Wings",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Ladders",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Small Worlds",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Conversation, Pt. 1",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Dunno",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Jet Fuel",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "2009",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "So It Goes",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
-  },
-  {
-   "era": "",
-   "name": "",
-   "date": "",
-   "quality": "",
-   "source": "",
-   "links": [],
-   "description": "Posthumous Releases",
-   "tracks": []
   },
   {
    "era": "Spotify Singles",
@@ -3843,13 +4725,13 @@
     {
      "num": "#1",
      "name": "Dunno (Spotify Singles)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Nothing from Nothing",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -3866,7 +4748,7 @@
     {
      "num": "#4",
      "name": "Good News",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -3883,80 +4765,80 @@
     {
      "num": "#1",
      "name": "Circles",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Complicated",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Blue World",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Good News",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "I Can See",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Everybody",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Woods",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Hand Me Downs (feat. Baro Sura)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "That's On Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Hands",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Surf",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Once A Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Circles",
-   "name": "Circles",
+   "name": "Circles (Deluxe)",
    "date": "",
    "quality": "",
    "source": "",
@@ -3966,92 +4848,92 @@
     {
      "num": "#1",
      "name": "Circles",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Complicated",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Blue World",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Good News",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "I Can See",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Everybody",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Woods",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Hand Me Downs (feat. Baro Sura)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "That's On Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Hands",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Surf",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Once A Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Right",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Floating",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Re-Release)",
    "date": "",
    "quality": "",
    "source": "",
@@ -4061,104 +4943,104 @@
     {
      "num": "#1",
      "name": "Kickin' Incredibly Dope Shit (Intro)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Outside",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Get Em Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Nikes on My Feet",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Senior Skip Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "The Spins",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Don't Mind If I do",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Paper Route (feat. Chevy Woods)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Good Evening",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Ride Around",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Knock Knock",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Mad Flava Heavy Flow Interlude (feat. DJ Bonics)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Kool Aid & Frozen Pizza",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "All I Want Is You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Poppy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Face in the Crowd",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Maclib",
-   "name": "Maclib",
+   "name": "Maclib (2020)",
    "date": "",
    "quality": "",
    "source": "",
@@ -4167,43 +5049,63 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Track 20"
+     "name": "Track 20",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Number 7"
+     "name": "Number 7",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Track 18"
+     "name": "Track 18",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "English Breakfast"
+     "name": "English Breakfast",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Nosy Neighbor"
+     "name": "Nosy Neighbor",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Lightning Dog (feat. Thundercat)"
+     "name": "Lightning Dog (feat. Thundercat)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "David Crockett"
+     "name": "David Crockett",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Track 15"
+     "name": "Track 15",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "Number 4"
+     "name": "Number 4",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "Track 02"
+     "name": "Track 02",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ],
    "availColor": "#93C47D",
@@ -4211,7 +5113,7 @@
   },
   {
    "era": "K.I.D.S.",
-   "name": "K.I.D.S.",
+   "name": "K.I.D.S. (Deluxe)",
    "date": "",
    "quality": "",
    "source": "",
@@ -4221,109 +5123,109 @@
     {
      "num": "#1",
      "name": "Kickin' Incredibly Dope Shit (Intro)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Outside",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Get Em Up",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Nikes on My Feet",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Senior Skip Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "The Spins",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Don't Mind If I do",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Paper Route (feat. Chevy Woods)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Good Evening",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Ride Around",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Knock Knock",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Mad Flava Heavy Flow Interlude (feat. Dj Bonics)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Kool Aid & Frozen Pizza",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "All I Want Is You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Poppy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Face in the Crowd",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Ayye",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Back In The Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -4340,170 +5242,170 @@
     {
      "num": "#1",
      "name": "Come Back To Earth",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Hurt Feelings",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "What's the Use",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Perfecto",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Self Care",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Wings",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Ladders",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Small Worlds",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Conversation, Pt. 1",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Dunno",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Jet Fuel",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "2009",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "So It Goes",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Circles",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Complicated",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Blue World",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Good News",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "I Can See",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Everybody",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Woods",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Hand Me Downs (feat. Baro Sura)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "That's On Me",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "Hands",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "Surf",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "Once A Day",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#26",
      "name": "Right",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#27",
      "name": "Floating",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Faces",
-   "name": "Faces",
+   "name": "Faces (Re-Release)",
    "date": "",
    "quality": "",
    "source": "",
@@ -4513,158 +5415,158 @@
     {
      "num": "#1",
      "name": "Inside Outside",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Here We Go",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Friends (feat. ScHoolboy Q)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Angel Dust",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Malibu",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "What Do You Do (feat. Sir Micheal Rocks)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "It Just Doesn't Matter",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Therapy",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Polo Jeans (feat. Earl Sweatshirt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Happy Birthday",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Wedding",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Funeral",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Diablo",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Ave Maria",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "55",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "San Francisco",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Colors and Shapes",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Insomniak (feat. Rick Ross)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Uber (feat. Mike Jones)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Rain (feat. Vince Staples)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "Apparition",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#22",
      "name": "Thumbalina",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#23",
      "name": "New Faces v2 (feat. Da$h & Earl Sweatshirt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#24",
      "name": "Grand Finale",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#25",
      "name": "Yeah (bonus)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Watching Movies with the Sound Off",
-   "name": "Watching Movies with the Sound Off",
+   "name": "Watching Movies with the Sound Off (10th Anniversary)",
    "date": "",
    "quality": "",
    "source": "",
@@ -4674,128 +5576,128 @@
     {
      "num": "#1",
      "name": "The Star Room",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Avain",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "I'm Not Real (feat. Earl Sweatshirt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "S.D.S",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Bird Call",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Matches (feat. Ab-Soul)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "I Am Who Am (Killin' Time) (feat. Niki Randa)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Objects In the Mirror",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Red Dot Music (feat. Action Bronson & Loaded Lux)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Gees (feat. ScHoolboy Q)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Watching Movies",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Suplexes Inside of Complexes & Duplexes (feat. Jay Electronica)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "REMember",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Someone Like You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Aquarium",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Youforia",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Goosebumpz [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "O.K. (feat. Tyler, the Creator) [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Claymation (feat Vinny Radio) [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "The Star Room (OG Version) (feat. Earl Sweatshrirt) [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "Watching Movies with the Sound Off",
-   "name": "Watching Movies with the Sound Off",
+   "name": "Watching Movies with the Sound Off (10th Anniversary) [Vinyl Version]",
    "date": "",
    "quality": "",
    "source": "",
@@ -4805,127 +5707,127 @@
     {
      "num": "#1",
      "name": "The Star Room",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Avain",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "I'm Not Real (feat. Earl Sweatshirt)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "S.D.S",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Bird Call",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Matches (feat. Ab-Soul)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "I Am Who Am (Killin' Time) (feat. Niki Randa)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Objects In the Mirror",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Red Dot Music (feat. Action Bronson & Loaded Lux)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Gees (feat. ScHoolboy Q)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Watching Movies",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Suplexes Inside of Complexes & Duplexes (feat. Jay Electronica)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "REMember",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Someone Like You",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Aquarium",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Youforia",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "Goosebumpz [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "O.K. (feat. Tyler, the Creator) [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Claymation (feat Vinny Radio) [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "The Star Room (OG Version) (feat. Earl Sweatshrirt) [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#21",
      "name": "The Quest [Bonus Track]",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
@@ -4942,92 +5844,92 @@
     {
      "num": "#1",
      "name": "Tambourine Dream",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "DJ's Chord Organ (feat. SZA)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Do You Have A Destination?",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "5 Dollar Pony Rides",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "Friendly Hallucinations (feat. SZA)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Mrs. Deborah Downer (feat. Ashley All Day)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Stoned",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Shangri-La",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "Funny Papers",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Excelsior",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Transformations (feat. Delusional Thomas)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "Manakins (feat. Dylan Reynolds)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "Rick's Piano",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Tomorrow Will Never Know",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]
   },
   {
    "era": "GO:OD AM",
-   "name": "GO:OD AM",
+   "name": "GO:OD AM (10th Anniversary Edition)",
    "date": "",
    "quality": "",
    "source": "",
@@ -5037,121 +5939,121 @@
     {
      "num": "#1",
      "name": "Doors",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
      "name": "Brand Name",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
      "name": "Rush Hour",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
      "name": "Two Matches (feat. Ab-Soul)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
      "name": "100 Grandkids",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
      "name": "Time Flies (feat. Lil B)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
      "name": "Weekend (feat. Miguel)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
      "name": "Clubhouse",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
      "name": "In The Bag",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
      "name": "Break The Law",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
      "name": "Perfect Circle/God Speed",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
      "name": "When In Rome",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
      "name": "ROS",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
      "name": "Cut The Check (feat. Chief Keef)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
      "name": "Ascension",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
      "name": "Jump",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
      "name": "The Festival (feat. Little Dragon)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
      "name": "Royal Flush (feat. Vinny Radio)",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
      "name": "Cable Box",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
      "name": "Carpe Diem",
-     "color": "#8E7CC3",
+     "color": "#8e7cc3",
      "colorLabel": "Confirmed Version Available"
     }
    ]

@@ -24,40 +24,58 @@
    "date": "",
    "quality": "Clear",
    "source": "Official Release",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/1zvRP4zj0nfsHeeoeXuanm?si=8552ea1ef5cd4971"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Pencil Pouch"
+     "name": "Pencil Pouch",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Bills"
+     "name": "Bills",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Doechii 101"
+     "name": "Doechii 101",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Spooky Coochie Live (Interlude)"
+     "name": "Spooky Coochie Live (Interlude)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Body Offer"
+     "name": "Body Offer",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "Weekend"
+     "name": "Weekend",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Mocking Bird"
+     "name": "Mocking Bird",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "Everything You Need"
+     "name": "Everything You Need",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -67,36 +85,52 @@
    "date": "",
    "quality": "Clear",
    "source": "Official Release",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/1zvRP4zj0nfsHeeoeXuanm?si=8552ea1ef5cd4971"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Oh The Places You'll Go"
+     "name": "Oh The Places You'll Go",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Yucky Blucky Fruitcake"
+     "name": "Yucky Blucky Fruitcake",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Black Girl Memoir"
+     "name": "Black Girl Memoir",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "God"
+     "name": "God",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Something Real"
+     "name": "Something Real",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "What's Your Name"
+     "name": "What's Your Name",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "Drop Out"
+     "name": "Drop Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -106,24 +140,34 @@
    "date": "",
    "quality": "Clear",
    "source": "Official Release",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/37qnx9fyIcMonemFUpDwNv?si=A16kk78LR0mEg_XCMnn3ZQ"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Pms"
+     "name": "Pms",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Truth"
+     "name": "Truth",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Shit"
+     "name": "Shit",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Girl"
+     "name": "Girl",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -133,28 +177,40 @@
    "date": "",
    "quality": "Clear",
    "source": "Official Release",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/0MndM4dEwGOjtuKE1aP2Tb?si=sNl9UynXR5SIYohWDAcFMA"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "Swamp Bitches (with Rico Nasty)"
+     "name": "Swamp Bitches (with Rico Nasty)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Bitch I'm Nice"
+     "name": "Bitch I'm Nice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Bitches Be (with Jst Ray)"
+     "name": "Bitches Be (with Jst Ray)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "This Bitch Matters"
+     "name": "This Bitch Matters",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "Persuasive (with SZA)"
+     "name": "Persuasive (with SZA)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -169,19 +225,27 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "Childish"
+     "name": "Childish",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "Emotions"
+     "name": "Emotions",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "Foolish"
+     "name": "Foolish",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "Roll"
+     "name": "Roll",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -196,51 +260,75 @@
    "tracks": [
     {
      "num": "#1",
-     "name": "IGNANT"
+     "name": "IGNANT",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#2",
-     "name": "WICKED (feat. ?)"
+     "name": "WICKED (feat. ?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#3",
-     "name": "BOOTY DROP"
+     "name": "BOOTY DROP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "SWEAT"
+     "name": "SWEAT",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Recording Available"
     },
     {
      "num": "#5",
-     "name": "ALTER EGO"
+     "name": "ALTER EGO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "BOOM BAP (feat. ?)"
+     "name": "BOOM BAP (feat. ?)",
+     "color": "#93c47d",
+     "colorLabel": "Alt Version / Unconfirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "WHAT IT IS"
+     "name": "WHAT IT IS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "ROCKET"
+     "name": "ROCKET",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#9",
-     "name": "SLIDE"
+     "name": "SLIDE",
+     "color": "#93c47d",
+     "colorLabel": "Alt Version / Unconfirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "TURN ME ON"
+     "name": "TURN ME ON",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     },
     {
      "num": "#11",
-     "name": "COCOA"
+     "name": "COCOA",
+     "color": "#93c47d",
+     "colorLabel": "Alt Version / Unconfirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "DANCING W/ MY CLOTHES OFF (feat. ?)"
+     "name": "DANCING W/ MY CLOTHES OFF (feat. ?)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
     }
    ],
    "images": [
@@ -253,80 +341,118 @@
    "date": "",
    "quality": "Clear",
    "source": "Official Release",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/60UzB8mOCMpc7xkuJE6Bwc?si=-XQsfR1nQQ6zTYspBYyJpw"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "STANKA POOH"
+     "name": "STANKA POOH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "BULLFROG"
+     "name": "BULLFROG",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "BOILED PEANUTS"
+     "name": "BOILED PEANUTS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "DENIAL IS A RIVER"
+     "name": "DENIAL IS A RIVER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "CATFISH"
+     "name": "CATFISH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SKIPP"
+     "name": "SKIPP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "HIDE N SEEK"
+     "name": "HIDE N SEEK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "BLOOM"
+     "name": "BLOOM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "DEATH ROLL"
+     "name": "DEATH ROLL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "PROFIT"
+     "name": "PROFIT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "BOOM BAP"
+     "name": "BOOM BAP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "NISSAN ALTIMA"
+     "name": "NISSAN ALTIMA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "GTFO"
+     "name": "GTFO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "HUH!"
+     "name": "HUH!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "SLIDE"
+     "name": "SLIDE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "FIREFLIES"
+     "name": "FIREFLIES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "BEVERLY HILLS"
+     "name": "BEVERLY HILLS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "ALLIGATOR BITES NEVER HEAL"
+     "name": "ALLIGATOR BITES NEVER HEAL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   },
@@ -336,84 +462,124 @@
    "date": "",
    "quality": "Clear",
    "source": "Official Release",
-   "links": [],
+   "links": [
+    "https://open.spotify.com/album/5yPu6XkHu8DAGmV6YkXYZq?si=2a5CBYBzQZm4-7QT4SPXFA"
+   ],
    "description": "",
    "tracks": [
     {
      "num": "#1",
-     "name": "STANKA POOH"
+     "name": "STANKA POOH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#2",
-     "name": "BULLFROG"
+     "name": "BULLFROG",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#3",
-     "name": "BOILED PEANUTS"
+     "name": "BOILED PEANUTS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#4",
-     "name": "DENIAL IS A RIVER"
+     "name": "DENIAL IS A RIVER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#5",
-     "name": "CATFISH"
+     "name": "CATFISH",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#6",
-     "name": "SKIPP"
+     "name": "SKIPP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#7",
-     "name": "HIDE N SEEK"
+     "name": "HIDE N SEEK",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#8",
-     "name": "BLOOM"
+     "name": "BLOOM",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#10",
-     "name": "DEATH ROLL"
+     "name": "DEATH ROLL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#11",
-     "name": "PROFIT"
+     "name": "PROFIT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#12",
-     "name": "BOOM BAP"
+     "name": "BOOM BAP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#13",
-     "name": "NISSAN ALTIMA"
+     "name": "NISSAN ALTIMA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#14",
-     "name": "GTFO"
+     "name": "GTFO",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#15",
-     "name": "HUH!"
+     "name": "HUH!",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#16",
-     "name": "SLIDE"
+     "name": "SLIDE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#17",
-     "name": "FIREFLIES"
+     "name": "FIREFLIES",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#18",
-     "name": "BEVERLY HILLS"
+     "name": "BEVERLY HILLS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#19",
-     "name": "ALLIGATOR BITES NEVER HEAL"
+     "name": "ALLIGATOR BITES NEVER HEAL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     },
     {
      "num": "#20",
-     "name": "ANXIETY"
+     "name": "ANXIETY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
     }
    ]
   }
