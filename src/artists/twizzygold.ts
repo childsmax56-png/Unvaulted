@@ -102,7 +102,8 @@ export const twizzygoldConfig: ArtistConfig = {
     "ADL (Deluxe)": "??/??/2023",
     "Ongoing": "??/??/????",
     "4L with us": "??/??/????",
-    "COCOON": "??/??/????",
+    "COCOON": "09/18/2026",
+    "Luh Leakyz Vol. 1": "10/23/2026",
   },
 
   ALBUM_ORDER: [
@@ -138,7 +139,7 @@ export const twizzygoldConfig: ArtistConfig = {
     "ADL",
     "ADL (Deluxe)",
     "Ongoing",
-    "4L with us", "COCOON",
+    "4L with us", "COCOON", "Luh Leakyz Vol. 1",
   ],
 
   HIDDEN_ALBUMS: [],
@@ -174,6 +175,7 @@ export const twizzygoldConfig: ArtistConfig = {
     "ADL": "ADL (A Dangerous Lyfe) is Yeat's official mixtape, released March 17, 2023.",
     "ADL (Deluxe)": "Deluxe edition of ADL with additional tracks, released in 2023.",
     "Ongoing": "Catch-all for miscellaneous Yeat songs without a confirmed era.",
+    "Luh Leakyz Vol. 1": "Luh Leakyz Vol. 1 is a mixtape of community-favorite tracks by Yeat that were previously off-streaming from major digital service providers, consisting of previously leaked tracks.",
   },
   ALBUM_SONG_COUNTS: {},
   CUSTOM_ALBUM_INFO: {},

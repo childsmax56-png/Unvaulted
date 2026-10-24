@@ -37,6 +37,7 @@ export const weekndgoldConfig: ArtistConfig = {
     'Thursday':                  '/weekndgold/eras/thursday.png',
     'Echoes Of Silence':         '/weekndgold/eras/echoes-of-silence.jpg',
     'Kiss Land':                 '/weekndgold/eras/kiss-land.png',
+    'Kiss Land (Remastered)':    '/weekndgold/eras/kiss-land.png',
     'Untitled':                  '/weekndgold/eras/untitled.png',
     'Beauty Behind The Madness': '/weekndgold/eras/beauty-behind-the-madness.jpg',
     'Starboy':                   '/weekndgold/eras/starboy.png',
@@ -69,6 +70,7 @@ export const weekndgoldConfig: ArtistConfig = {
     'The Idol': '??/??/????',
     'Hurry Up Tomorrow': '??/??/????',
     'Hurry Up Tomorrow (Score)': '??/??/????',
+    'Kiss Land (Remastered)': '??/??/????',
     'Ongoing': '??/??/????'
   },
 
@@ -99,6 +101,7 @@ export const weekndgoldConfig: ArtistConfig = {
     'The Idol',
     'Hurry Up Tomorrow',
     'Hurry Up Tomorrow (Score)',
+    'Kiss Land (Remastered)',
     'Ongoing'
   ],
 
