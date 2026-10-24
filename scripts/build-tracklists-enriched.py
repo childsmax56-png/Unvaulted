@@ -98,6 +98,7 @@ SHEETS = {
     # downloads-disabled sheets: Sheets API only (no xlsx, so no images)
     "yegold":         ["1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y", ""],
     "yelolgold":      ["1wQ0WC0U9q10fLWpy9CO8YR128eE8msGXqtZI8_cNyTA", ""],
+    "yecomgold":      ["1JcJOHsNdCo7rBS6dbOUbBGjeq_CS8x0FqdW9_cnTozs", ""],
 }
 
 # ── xlsx download ─────────────────────────────────────────────────────────────

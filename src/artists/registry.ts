@@ -2,6 +2,7 @@ import type { ArtistConfig } from './types';
 import { yzygoldConfig } from './yzygold';
 import { yegoldConfig } from './yegold';
 import { yelolgoldConfig } from './yelolgold';
+import { yecomgoldConfig } from './yecomgold';
 import { vampgoldConfig } from './vampgold';
 import { kdotgoldConfig } from './kdotgold';
 import { drizzygoldConfig } from './drizzygold';
@@ -85,6 +86,7 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   yegold: yegoldConfig,          // Featured (Ye) — default tracker, yetracker.net/.cc links
   yzygold: yzygoldConfig,        // Ye alt ("Suzy") — hidden, reachable via yegold's picker
   yelolgold: yelolgoldConfig,    // Ye alt ("Lol") — hidden, reachable via yegold's picker
+  yecomgold: yecomgoldConfig,    // Ye alt ("yetracker.com") — hidden, reachable via yegold's picker
   vampgold: vampgoldConfig,      // Pinned: Playboi Carti
   wolfgold: wolfgoldConfig,      // Pinned: Tyler, The Creator
   aapgold: aapgoldConfig,        // Pinned: A$AP Rocky

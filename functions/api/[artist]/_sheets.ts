@@ -733,6 +733,37 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       '1333371598': 'SSC',
     },
   },
+  // yecomgold (yetracker.com) is another downloads-disabled fork of the same template.
+  yecomgold: {
+    sheetId: '1JcJOHsNdCo7rBS6dbOUbBGjeq_CS8x0FqdW9_cnTozs',
+    gids: {
+      unreleased: '199908479',
+      released: '1295931150',
+      recent: '689133373',
+      tracklists: '1372270223',
+      stems: '495336364',
+      'album-copies': '1297512832',
+      'music-videos': '837199839',
+      misc: '70063278',
+      art: '1659647236',
+      fakes: '61838480',
+      groupbuys: '1022200924',
+    },
+    apiTitles: {
+      '199908479': 'Unreleased',
+      '1295931150': 'Released',
+      '689133373': 'Recent',
+      '1372270223': 'Tracklists',
+      '495336364': 'Stems',
+      '1297512832': 'Album Copies',
+      '837199839': 'Music Videos',
+      '70063278': 'Misc',
+      '1659647236': 'Art',
+      '61838480': 'Fakes / Detags',
+      '1022200924': 'Groupbuys',
+      '1333371598': 'SSC',
+    },
+  },
 };
 
 // yegold's and yelolgold's source sheets both split their Sunday Service Choir
@@ -748,6 +779,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
 const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
   yegold: ['1333371598'],
   yelolgold: ['1333371598'],
+  yecomgold: ['1333371598'],
 };
 
 const isCountHeaderRow = (era: string): boolean =>

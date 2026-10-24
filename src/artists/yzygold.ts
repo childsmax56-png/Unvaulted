@@ -22,6 +22,7 @@ export const yzygoldConfig: ArtistConfig = {
   alternateTrackers: [
     { slug: 'yegold', label: 'Official' },
     { slug: 'yelolgold', label: 'Lol' },
+    { slug: 'yecomgold', label: 'yetracker.com' },
   ],
   accentColor: '#C9A224',
   artistLabel: 'Suzy',
