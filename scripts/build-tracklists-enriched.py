@@ -41,6 +41,7 @@ import urllib.parse
 import urllib.request
 import urllib.error
 import zipfile
+from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
 
 try:
@@ -585,8 +586,9 @@ def api_tab_title(titles):
 def fetch_api_rows(sid, key):
     """Return (rows, hrefs) for the sheet's Tracklists tab, or None."""
     base = f"https://sheets.googleapis.com/v4/spreadsheets/{sid}"
-    meta = api_get(f"{base}?key={key}&fields=sheets.properties.title")
-    title = api_tab_title([sh["properties"]["title"] for sh in meta.get("sheets", [])])
+    meta = api_get(f"{base}?key={key}&fields=sheets.properties(title,sheetId)")
+    gids = {sh["properties"]["title"]: sh["properties"]["sheetId"] for sh in meta.get("sheets", [])}
+    title = api_tab_title(list(gids))
     if not title:
         print("    no tracklists tab")
         return None
@@ -614,7 +616,75 @@ def fetch_api_rows(sid, key):
             if val or fill:
                 cells[ci + 1] = (val, fill, run)
         rows.append((rn, cells))
-    return rows, hrefs
+    return rows, hrefs, gids[title]
+
+
+# ── in-cell images via htmlview ───────────────────────────────────────────────
+#
+# Images pasted "in cell" (e.g. the Image column on yegold/yzygold) are invisible
+# to both the CSV export and the Sheets API; the only public place they appear is
+# the tab's /htmlview, as <img src=".../sheets-images-rt/<token>=wNNN-hNNN">.
+# Tokens rotate after a few minutes, so download them straight after scraping.
+
+class _HtmlviewImages(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.rows = {}   # 1-based sheet row -> [image url]
+        self._row = None
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == "tr":
+            self._row = None
+        elif tag == "th":
+            m = re.search(r"R(\d+)$", a.get("id") or "")
+            if m:
+                self._row = int(m.group(1)) + 1  # htmlview rows are 0-based
+        elif tag == "img" and self._row is not None:
+            src = a.get("src") or ""
+            if "sheets-images-rt/" in src:
+                self.rows.setdefault(self._row, []).append(src)
+
+
+def fetch_htmlview_images(slug, sid, gid):
+    """Return {sheet_row: [/slug/art/tl-*.jpg]} for in-cell images on the tab."""
+    url = f"https://docs.google.com/spreadsheets/d/{sid}/htmlview/sheet?headers=true&gid={gid}"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        page = r.read().decode("utf-8", "ignore")
+    parser = _HtmlviewImages()
+    parser.feed(page)
+    if not parser.rows:
+        return {}
+    art_dir = os.path.join(PUBLIC, slug, "art")
+    os.makedirs(art_dir, exist_ok=True)
+    result = {}
+    for row, srcs in sorted(parser.rows.items()):
+        for n, src in enumerate(srcs):
+            src = re.sub(r"=[a-z][0-9a-z-]*$", "", src) + "=w1500"
+            out_name = f"tl-{row}-{n}.jpg"
+            try:
+                raw = None
+                for attempt in range(3):  # googleusercontent occasionally drops a request
+                    try:
+                        req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0"})
+                        with urllib.request.urlopen(req, timeout=60) as r:
+                            raw = r.read()
+                        break
+                    except Exception:
+                        if attempt == 2:
+                            raise
+                        time.sleep(2 * (attempt + 1))
+                im = Image.open(io.BytesIO(raw)).convert("RGB")
+                w, h = im.size
+                if max(w, h) > 1500:
+                    scale = 1500 / max(w, h)
+                    im = im.resize((int(w * scale), int(h * scale)))
+                im.save(os.path.join(art_dir, out_name), "JPEG", quality=82, optimize=True)
+                result.setdefault(row, []).append(f"/{slug}/art/{out_name}")
+            except Exception as e:
+                print(f"    in-cell image row {row} failed: {e}")
+    return result
 
 
 def _album_sig(a):
@@ -858,8 +928,16 @@ def build(slug, use_xlsx=False):
         try:
             fetched = fetch_api_rows(sid, key)
             if fetched:
-                result = build_from_rows(fetched[0], {}, fetched[1])
-                carry_images(slug, result["albums"])
+                rows, hrefs, tab_gid = fetched
+                try:
+                    in_cell = fetch_htmlview_images(slug, sid, tab_gid)
+                except Exception as e:
+                    print(f"    htmlview images failed: {e}")
+                    in_cell = {}
+                result = build_from_rows(rows, in_cell, hrefs)
+                if not in_cell:
+                    # floating images (xlsx-only): keep the ones from the last build
+                    carry_images(slug, result["albums"])
         except urllib.error.HTTPError as e:
             print(f"    sheets API failed ({e.code}); trying xlsx")
             result = None
