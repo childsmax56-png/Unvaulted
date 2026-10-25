@@ -34,6 +34,11 @@ export const onRequestGet: PagesFunction = async (context) => {
     if (out['Era'] === undefined && out['Album'] !== undefined) {
       out = { ...out, Era: out['Album'] };
     }
+    // vampgold's sheet split "Era" into "Rel. Era" (the release's era) and "Rec. Era"
+    // (recording era); group by the release era like the old single column did.
+    if (out['Era'] === undefined && out['Rel. Era'] !== undefined) {
+      out = { ...out, Era: out['Rel. Era'] };
+    }
     if (out['Type'] === undefined && out['Release Date'] !== undefined && out['Date'] !== undefined) {
       out = { ...out, Type: out['Release Date'], 'Release Date': out['Date'] };
     }
