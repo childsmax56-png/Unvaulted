@@ -293,7 +293,7 @@ export const TAG_TOOLTIP_MAP: Record<string, string> = new Proxy({} as Record<st
   ownKeys: () => Object.keys(activeConfig.TAG_TOOLTIP_MAP),
   getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: activeConfig.TAG_TOOLTIP_MAP[k] }),
 });
-export const ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; miniPlayer?: string; fullPicturePlayer?: string }> = new Proxy({} as any, {
+export const ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; bottomBannerContentBg?: string; miniPlayer?: string; fullPicturePlayer?: string }> = new Proxy({} as any, {
   get: (_, k: string) => activeConfig.ERA_THEMES[k],
   has: (_, k: string) => k in activeConfig.ERA_THEMES,
   ownKeys: () => Object.keys(activeConfig.ERA_THEMES),

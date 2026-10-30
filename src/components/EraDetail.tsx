@@ -211,6 +211,7 @@ export const handleShareSilent = (song: Song, era: Era): string => {
 
 export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
   const { settings, updateSettings } = useSettings();
+  const contentBg = !settings.disableEraThemes ? ERA_THEMES[era.name]?.bottomBannerContentBg : undefined;
   const deadLinks = useDeadLinks(activeConfig.slug);
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [zoomedImage, setZoomedImage] = useState(false);
@@ -950,9 +951,9 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           {processedCategories.map(({ category, songs: processedSongs }) => {
             return (
               <div key={category} className="mb-10">
-                <h3 className="text-lg font-bold text-white mb-4 pb-2 border-b border-white/10">{category}</h3>
+                <h3 className="text-lg font-bold text-white mb-4 pb-2 border-b border-white/10 rounded-t-md" style={contentBg ? { backgroundColor: contentBg, padding: '0.5rem 1rem' } : undefined}>{category}</h3>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col rounded-md" style={contentBg ? { backgroundColor: contentBg } : undefined}>
                   <div className="flex items-center px-4 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider border-b border-white/5 mb-2 hidden sm:flex">
                     {isSelectMode && (
                       <button

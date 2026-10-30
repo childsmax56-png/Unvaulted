@@ -353,6 +353,7 @@ export const yzygoldConfig: ArtistConfig = {
       topBanner: "/yzygold/TopBannerTLOP.png",
       bottomBanner: "/yzygold/BottomBannerTLOP.png",
       bottomBannerRepeat: true,
+      bottomBannerContentBg: "rgba(131, 72, 43, 0.92)",
       miniPlayer: "/yzygold/MiniPlayerTLOP.png",
       fullPicturePlayer: "/yzygold/FullPicturePlayerTLOP.png",
     },

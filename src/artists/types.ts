@@ -43,7 +43,7 @@ export interface ArtistConfig {
   TAG_TOOLTIP_MAP: Record<string, string>;
 
   // Themes
-  ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; miniPlayer?: string; fullPicturePlayer?: string }>;
+  ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; bottomBannerContentBg?: string; miniPlayer?: string; fullPicturePlayer?: string }>;
 
   // Optional tabs
   hasProductionTab?: boolean;
