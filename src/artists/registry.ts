@@ -91,7 +91,7 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   wolfgold: wolfgoldConfig,      // Pinned: Tyler, The Creator
   aapgold: aapgoldConfig,        // Pinned: A$AP Rocky
   drizzygold: drizzygoldConfig,  // Pinned: Drake
-  mjgold: mjgoldConfig,          // Row 2: Michael Jackson
+  frankgold: frankgoldConfig,    // Row 2: Frank Ocean
   dongold: dongoldConfig,        // Row 2: Don Toliver
   kdotgold: kdotgoldConfig,      // Row 2: Kendrick Lamar
   cactigold: cactigoldConfig,    // Row 2: Travis Scott
@@ -120,7 +120,7 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   jojigold: jojigoldConfig,
   jayzgold: jayzgoldConfig,
   macgold: macgoldConfig,
-  frankgold: frankgoldConfig,
+  mjgold: mjgoldConfig,          // Michael Jackson
   kengold: kengoldConfig,
   // Big-update mass import (scripts/build-bigupdate-csvs.py)
   szagold: szagoldConfig,               // SZA
