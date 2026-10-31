@@ -96,7 +96,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
 function sendTest(hook: string, slug: string): Promise<boolean> {
   const sample: ChangeRow = {
-    id: 'test', slug, era: 'Test', name: 'Alerts are connected', norm_name: '',
+    id: 'test', slug, tab: '', era: 'Test', name: 'Alerts are connected', norm_name: '',
     kind: 'link_added', old_value: null, new_value: null, url: null, detected_at: Date.now(),
   };
   return sendDiscord(hook, [sample]).catch(() => false);

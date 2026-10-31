@@ -16,12 +16,32 @@ import { PRODUCER_SLUGS } from '../producers/_index';
 // Public trackers to scan — same list the producer index uses (hidden trackers
 // are deliberately excluded). Add new trackers there.
 export const SCAN_SLUGS = PRODUCER_SLUGS;
-export const SHARD_SIZE = 5;
+// Each tracker costs ~10 catalog fetches (main + every side tab) plus R2 reads
+// and writes, so shards stay small to fit the per-invocation subrequest limit.
+export const SHARD_SIZE = 3;
 export const SHARD_COUNT = Math.ceil(SCAN_SLUGS.length / SHARD_SIZE);
 // A shard counts as overdue (for opportunistic scans) after this long.
 export const SCAN_INTERVAL_MS = 20 * 60_000;
 
 const SNAPSHOT_PREFIX = 'tracker-changes/v1/';
+
+// Side tabs scanned alongside the main (Unreleased) catalog. The id is the
+// tracker route segment the client links to (/{slug}/{id}); the path is the
+// /api/{slug}/{path} endpoint. Recent / Best Of are skipped — they're views of
+// the main catalog, so they'd only duplicate its changes. A tracker without a
+// tab just 404s that endpoint and is skipped.
+export const SIDE_TABS = [
+  { id: 'released', path: 'released', label: 'Released' },
+  { id: 'stems', path: 'stems', label: 'Stems' },
+  { id: 'art', path: 'art', label: 'Art' },
+  { id: 'videos', path: 'music-videos', label: 'Videos' },
+  { id: 'fakes', path: 'fakes', label: 'Fakes' },
+  { id: 'misc', path: 'misc', label: 'Misc' },
+  { id: 'tracklists', path: 'tracklists', label: 'Tracklists' },
+  { id: 'albumcopies', path: 'album-copies', label: 'Album Copies' },
+  { id: 'groupbuys', path: 'groupbuys', label: 'Groupbuys' },
+] as const;
+export const TAB_LABELS: Record<string, string> = Object.fromEntries(SIDE_TABS.map((t) => [t.id, t.label]));
 
 export type ChangeKind =
   | 'added' | 'removed' | 'renamed' | 'moved'
@@ -31,6 +51,7 @@ export type ChangeKind =
 export interface ChangeRow {
   id: string;
   slug: string;
+  tab: string; // '' = main Unreleased catalog, else a SIDE_TABS id
   era: string;
   name: string;
   norm_name: string;
@@ -44,6 +65,8 @@ export interface ChangeRow {
 // One catalog song as stored in a snapshot: [era, name, extra, url, quality, availability]
 type SnapSong = [string, string, string, string, string, string];
 interface Snapshot { at: number; songs: SnapSong[] }
+// All side tabs of one tracker share a single R2 object (fewer subrequests).
+interface TabsSnapshot { at: number; tabs: Record<string, SnapSong[]> }
 
 export function norm(s: string): string {
   return (s || '').toLowerCase().replace(/\s+/g, ' ').trim();
@@ -130,6 +153,8 @@ export async function ensureChangeTables(db: D1Database): Promise<void> {
   await db.prepare('ALTER TABLE alert_settings ADD COLUMN external_default INTEGER NOT NULL DEFAULT 1').run().catch(() => {});
   // Optional per-tracker Discord webhook; replaces the account-wide one for that tracker.
   await db.prepare('ALTER TABLE alert_tracker_delivery ADD COLUMN discord_webhook TEXT').run().catch(() => {});
+  // Which tab a change came from ('' = main catalog); added when side tabs got scanned.
+  await db.prepare("ALTER TABLE tracker_changes ADD COLUMN tab TEXT NOT NULL DEFAULT ''").run().catch(() => {});
   ensured = true;
 }
 
@@ -140,6 +165,68 @@ export async function ensureChangeTables(db: D1Database): Promise<void> {
 function realLink(raw: unknown): string {
   const s = String(raw ?? '').trim();
   return /^https?:\/\/\S+$/i.test(s) ? s : '';
+}
+
+// Side-tab link cells can hold several links, and Art cells point at our own
+// /api/sheet-image proxy; take the first real one.
+function firstLink(raw: unknown): string {
+  for (const part of String(raw ?? '').split(/\s+/)) {
+    if (/^https?:\/\/\S+$/i.test(part) || part.startsWith('/api/')) return part;
+  }
+  return '';
+}
+
+// Case-insensitive column lookup for the CSV-row tab endpoints (headers vary
+// per tracker: "Link(s)" / "Links", "Available Length" / "Avail. Length" …).
+function col(row: Record<string, unknown>, ...names: string[]): string {
+  for (const want of names) {
+    for (const k of Object.keys(row)) {
+      if (k.replace(/\s+/g, ' ').trim().toLowerCase() === want) return String(row[k] ?? '').trim();
+    }
+  }
+  return '';
+}
+
+async function fetchTab(origin: string, slug: string, path: string): Promise<SnapSong[] | null> {
+  const res = await fetch(`${origin}/api/${slug}/${path}`, { cache: 'no-store' } as RequestInit);
+  if (!res.ok) return null;
+  const data = await res.json() as any;
+  const songs: SnapSong[] = [];
+  if (path === 'album-copies') {
+    for (const era of data?.eras ?? []) {
+      for (const c of era?.copies ?? []) {
+        const name = String(c?.name ?? '').trim();
+        if (name) songs.push([String(era.name ?? ''), name, '', firstLink(c.url), String(c.quality ?? '').trim(), String(c.available_length ?? '').trim()]);
+      }
+    }
+  } else if (path === 'groupbuys') {
+    // quality ← price, availability ← status (funded / ongoing …)
+    for (const y of data?.years ?? []) {
+      for (const b of y?.buys ?? []) {
+        const name = String(b?.name ?? '').trim();
+        if (name) songs.push([String(b.era ?? ''), name, String(b.start ?? '').trim(), firstLink(b.link), String(b.price ?? '').trim(), String(b.status ?? '').trim()]);
+      }
+    }
+  } else if (Array.isArray(data)) {
+    for (const row of data) {
+      if (!row || typeof row !== 'object') continue;
+      // Rows without an era or a name are era headers / legends, not entries.
+      const era = col(row, 'era');
+      const [name, ...rest] = col(row, 'name').split('\n').map((l) => l.trim()).filter(Boolean);
+      if (!era || !name) continue;
+      songs.push([
+        era,
+        name,
+        rest.join(' '),
+        firstLink(col(row, 'link(s)', 'links', 'link')),
+        col(row, 'quality'),
+        col(row, 'available length', 'avail. length', 'streaming', 'status'),
+      ]);
+    }
+  } else {
+    return null;
+  }
+  return songs;
 }
 
 async function fetchCatalog(origin: string, slug: string): Promise<SnapSong[] | null> {
@@ -171,7 +258,7 @@ async function fetchCatalog(origin: string, slug: string): Promise<SnapSong[] | 
 
 // ---- Diffing ---------------------------------------------------------------
 
-type Pending = Omit<ChangeRow, 'id' | 'slug' | 'detected_at'>;
+type Pending = Omit<ChangeRow, 'id' | 'slug' | 'tab' | 'detected_at'>;
 
 function change(kind: ChangeKind, s: SnapSong, oldValue: string | null, newValue: string | null): Pending {
   return { era: s[0], name: s[1], norm_name: norm(s[1]), kind, old_value: oldValue, new_value: newValue, url: s[3] || null };
@@ -260,62 +347,85 @@ export function diffSnapshots(prev: SnapSong[], next: SnapSong[]): Pending[] {
 
 export interface ScanResult { slug: string; status: string; changes: number }
 
-// Scan one tracker. Returns the change rows written (already inserted).
-export async function scanSlug(env: Env, origin: string, slug: string, now: number): Promise<{ result: ScanResult; rows: ChangeRow[] }> {
-  const key = `${SNAPSHOT_PREFIX}${slug}.json`;
-  let songs: SnapSong[] | null;
-  try {
-    songs = await fetchCatalog(origin, slug);
-  } catch {
-    songs = null;
-  }
-  if (!songs || songs.length === 0) return { result: { slug, status: 'fetch_failed', changes: 0 }, rows: [] };
-
-  const saveSnapshot = () =>
-    env.YEDITS_BUCKET.put(key, JSON.stringify({ at: now, songs } satisfies Snapshot), {
-      httpMetadata: { contentType: 'application/json' },
-    });
-
-  const prevObj = await env.YEDITS_BUCKET.get(key);
-  if (!prevObj) {
-    // First sight of this tracker: baseline only, never a flood of "added".
-    await saveSnapshot();
-    return { result: { slug, status: 'baseline', changes: 0 }, rows: [] };
-  }
-  const prev = (await prevObj.json()) as Snapshot;
-
+// Diff one catalog list against its previous snapshot. `save` = whether the
+// new list should replace the stored one.
+function diffList(prev: SnapSong[] | undefined, songs: SnapSong[]): { status: string; pending: Pending[]; save: boolean } {
+  // First sight: baseline only, never a flood of "added".
+  if (!prev) return { status: 'baseline', pending: [], save: true };
   // A catalog that suddenly lost half its songs is almost always a live-sheet
   // hiccup (fallback CSV, tab restructure mid-edit) — skip and keep the old
   // snapshot rather than reporting mass removals.
-  if (songs.length < prev.songs.length * 0.5) {
-    return { result: { slug, status: 'shrunk_skipped', changes: 0 }, rows: [] };
-  }
-
-  const pending = diffSnapshots(prev.songs, songs);
-  if (pending.length === 0) {
-    await saveSnapshot();
-    return { result: { slug, status: 'unchanged', changes: 0 }, rows: [] };
-  }
-
+  if (songs.length < prev.length * 0.5) return { status: 'shrunk_skipped', pending: [], save: false };
+  const pending = diffSnapshots(prev, songs);
+  if (pending.length === 0) return { status: 'unchanged', pending, save: true };
   // Huge diffs mean the tracker was restructured (eras renamed, columns
   // shifted). Record a single marker instead of hundreds of bogus entries.
-  const bulk = pending.length > Math.max(80, Math.min(400, prev.songs.length * 0.15));
-  const rows: ChangeRow[] = (bulk
-    ? [{ era: '', name: '', norm_name: '', kind: 'resync' as ChangeKind, old_value: String(prev.songs.length), new_value: String(songs.length), url: null }]
-    : pending
-  ).map((p, i) => ({ ...p, id: crypto.randomUUID(), slug, detected_at: now + i }));
+  if (pending.length > Math.max(80, Math.min(400, prev.length * 0.15))) {
+    return {
+      status: 'resync',
+      pending: [{ era: '', name: '', norm_name: '', kind: 'resync', old_value: String(prev.length), new_value: String(songs.length), url: null }],
+      save: true,
+    };
+  }
+  return { status: 'changed', pending, save: true };
+}
 
+// Scan one tracker — its main catalog and every side tab. Returns the change
+// rows written (already inserted).
+export async function scanSlug(env: Env, origin: string, slug: string, now: number): Promise<{ result: ScanResult; rows: ChangeRow[] }> {
+  const mainKey = `${SNAPSHOT_PREFIX}${slug}.json`;
+  const tabsKey = `${SNAPSHOT_PREFIX}${slug}.tabs.json`;
+  const safe = <T>(p: Promise<T>) => p.catch(() => null);
+  const [songs, tabLists, prevMainObj, prevTabsObj] = await Promise.all([
+    safe(fetchCatalog(origin, slug)),
+    Promise.all(SIDE_TABS.map((t) => safe(fetchTab(origin, slug, t.path)))),
+    env.YEDITS_BUCKET.get(mainKey),
+    env.YEDITS_BUCKET.get(tabsKey),
+  ]);
+
+  const pending: (Pending & { tab: string })[] = [];
+  const statuses: string[] = [];
+  const writes: (() => Promise<unknown>)[] = [];
+  const put = (key: string, body: unknown) =>
+    writes.push(() => env.YEDITS_BUCKET.put(key, JSON.stringify(body), { httpMetadata: { contentType: 'application/json' } }));
+
+  if (songs && songs.length) {
+    const prev = prevMainObj ? ((await prevMainObj.json()) as Snapshot).songs : undefined;
+    const d = diffList(prev, songs);
+    statuses.push(d.status);
+    pending.push(...d.pending.map((p) => ({ ...p, tab: '' })));
+    if (d.save) put(mainKey, { at: now, songs } satisfies Snapshot);
+  } else {
+    statuses.push('fetch_failed');
+  }
+
+  const prevTabs = prevTabsObj ? ((await prevTabsObj.json()) as TabsSnapshot).tabs : {};
+  // Tabs that failed to load this time keep their old snapshot.
+  const nextTabs: Record<string, SnapSong[]> = { ...prevTabs };
+  SIDE_TABS.forEach((t, i) => {
+    const list = tabLists[i];
+    if (!list || list.length === 0) return;
+    const d = diffList(prevTabs[t.id], list);
+    if (d.status !== 'unchanged' && d.status !== 'baseline') statuses.push(`${t.id}:${d.status}`);
+    pending.push(...d.pending.map((p) => ({ ...p, tab: t.id })));
+    if (d.save) nextTabs[t.id] = list;
+  });
+  put(tabsKey, { at: now, tabs: nextTabs } satisfies TabsSnapshot);
+
+  const rows: ChangeRow[] = pending.map((p, i) => ({ ...p, id: crypto.randomUUID(), slug, detected_at: now + i }));
   const stmt = env.DB.prepare(
-    `INSERT INTO tracker_changes (id, slug, era, name, norm_name, kind, old_value, new_value, url, detected_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    `INSERT INTO tracker_changes (id, slug, tab, era, name, norm_name, kind, old_value, new_value, url, detected_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   );
   for (let i = 0; i < rows.length; i += 50) {
     await env.DB.batch(rows.slice(i, i + 50).map((r) =>
-      stmt.bind(r.id, r.slug, r.era, r.name, r.norm_name, r.kind, r.old_value, r.new_value, r.url, r.detected_at)
+      stmt.bind(r.id, r.slug, r.tab, r.era, r.name, r.norm_name, r.kind, r.old_value, r.new_value, r.url, r.detected_at)
     ));
   }
-  await saveSnapshot();
-  return { result: { slug, status: bulk ? 'resync' : 'changed', changes: rows.length }, rows };
+  // Snapshots are written only after the rows are in, so a failed insert
+  // re-detects the same changes next scan instead of losing them.
+  await Promise.all(writes.map((w) => w()));
+  return { result: { slug, status: statuses.join(' '), changes: rows.length }, rows };
 }
 
 // Claim a shard for scanning (a short lock so overlapping cron + page-view

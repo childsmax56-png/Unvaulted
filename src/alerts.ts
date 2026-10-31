@@ -15,6 +15,7 @@ export type ChangeKind =
 export interface ChangeItem {
   id: string;
   slug: string;
+  tab?: string; // '' / missing = main Unreleased catalog, else a CHANGE_TABS id
   era: string;
   name: string;
   kind: ChangeKind;
@@ -135,9 +136,10 @@ export async function markAllRead(): Promise<void> {
 
 // ---- Changelog -------------------------------------------------------------
 
-export async function fetchChanges(opts: { slug?: string; kinds?: ChangeKind[]; before?: number }): Promise<{ items: ChangeItem[]; nextBefore: number | null; lastScanAt: number | null }> {
+export async function fetchChanges(opts: { slug?: string; tab?: string; kinds?: ChangeKind[]; before?: number }): Promise<{ items: ChangeItem[]; nextBefore: number | null; lastScanAt: number | null }> {
   const qs = new URLSearchParams({ limit: '100' });
   if (opts.slug) qs.set('slug', opts.slug);
+  if (opts.tab) qs.set('tab', opts.tab);
   if (opts.kinds?.length) qs.set('kinds', opts.kinds.join(','));
   if (opts.before) qs.set('before', String(opts.before));
   const res = await fetch(`/api/changes?${qs}`);
@@ -236,6 +238,21 @@ export async function disablePush(): Promise<void> {
 
 // ---- Display ---------------------------------------------------------------
 
+// Tabs the changelog scans besides Unreleased — mirrors SIDE_TABS in
+// functions/api/changes/_core.ts. The id is the tracker route segment.
+export const CHANGE_TABS: { id: string; label: string }[] = [
+  { id: 'released', label: 'Released' },
+  { id: 'stems', label: 'Stems' },
+  { id: 'art', label: 'Art' },
+  { id: 'videos', label: 'Videos' },
+  { id: 'fakes', label: 'Fakes' },
+  { id: 'misc', label: 'Misc' },
+  { id: 'tracklists', label: 'Tracklists' },
+  { id: 'albumcopies', label: 'Album Copies' },
+  { id: 'groupbuys', label: 'Groupbuys' },
+];
+export const TAB_LABELS: Record<string, string> = Object.fromEntries(CHANGE_TABS.map((t) => [t.id, t.label]));
+
 export const KIND_META: Record<ChangeKind, { label: string; className: string }> = {
   added: { label: 'New song', className: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
   link_added: { label: 'Link added', className: 'bg-sky-500/15 text-sky-300 border-sky-500/30' },
@@ -249,10 +266,11 @@ export const KIND_META: Record<ChangeKind, { label: string; className: string }>
   resync: { label: 'Reorganised', className: 'bg-white/5 text-white/50 border-white/15' },
 };
 
-export function describeChange(c: Pick<ChangeItem, 'kind' | 'old_value' | 'new_value'>): string {
+export function describeChange(c: Pick<ChangeItem, 'kind' | 'old_value' | 'new_value' | 'tab'>): string {
+  const tab = c.tab ? TAB_LABELS[c.tab] || c.tab : '';
   switch (c.kind) {
-    case 'added': return 'Added to the tracker';
-    case 'removed': return 'Removed from the tracker';
+    case 'added': return tab ? `Added to ${tab}` : 'Added to the tracker';
+    case 'removed': return tab ? `Removed from ${tab}` : 'Removed from the tracker';
     case 'renamed': return `Renamed from “${c.old_value}”`;
     case 'moved': return `Moved from ${c.old_value} to ${c.new_value}`;
     case 'link_added': return 'Now has a link';
@@ -260,7 +278,7 @@ export function describeChange(c: Pick<ChangeItem, 'kind' | 'old_value' | 'new_v
     case 'link_changed': return 'Link was replaced';
     case 'availability': return c.old_value ? `${c.old_value} → ${c.new_value}` : `Now ${c.new_value}`;
     case 'quality': return c.old_value ? `${c.old_value} → ${c.new_value}` : `${c.new_value}`;
-    case 'resync': return `Tracker reorganised (${c.old_value} → ${c.new_value} songs)`;
+    case 'resync': return `${tab ? `${tab} tab` : 'Tracker'} reorganised (${c.old_value} → ${c.new_value} ${tab ? 'entries' : 'songs'})`;
   }
 }
 

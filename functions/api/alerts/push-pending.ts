@@ -25,7 +25,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     : f.def ? '' : ' AND 0';
   const [rows, unread] = await Promise.all([
     env.DB.prepare(
-      `SELECT c.id, c.slug, c.era, c.name, c.kind, c.old_value, c.new_value
+      `SELECT c.id, c.slug, c.tab, c.era, c.name, c.kind, c.old_value, c.new_value
          FROM alert_notifications n JOIN tracker_changes c ON c.id = n.change_id
         WHERE n.user_id = ? AND n.read_at IS NULL${slugClause}
         ORDER BY c.detected_at DESC LIMIT 5`
@@ -37,6 +37,6 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   ]);
   return json({
     unread: unread?.n ?? 0,
-    items: rows.results.map((r) => ({ id: r.id, slug: r.slug, era: r.era, name: r.name, text: describeChange(r) })),
+    items: rows.results.map((r) => ({ id: r.id, slug: r.slug, tab: r.tab, era: r.era, name: r.name, text: describeChange(r) })),
   });
 };

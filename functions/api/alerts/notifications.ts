@@ -15,7 +15,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const before = Number(url.searchParams.get('before')) || Number.MAX_SAFE_INTEGER;
   const [rows, unread] = await Promise.all([
     env.DB.prepare(
-      `SELECT c.id, c.slug, c.era, c.name, c.kind, c.old_value, c.new_value, c.url, c.detected_at, n.read_at
+      `SELECT c.id, c.slug, c.tab, c.era, c.name, c.kind, c.old_value, c.new_value, c.url, c.detected_at, n.read_at
          FROM alert_notifications n JOIN tracker_changes c ON c.id = n.change_id
         WHERE n.user_id = ? AND c.detected_at < ?
         ORDER BY c.detected_at DESC LIMIT ?`

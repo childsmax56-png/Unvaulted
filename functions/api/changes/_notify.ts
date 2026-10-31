@@ -6,10 +6,11 @@
 // (public/sw.js) wakes up and pulls the latest unread items from
 // /api/alerts/push-pending using its own subscription endpoint as the key.
 
-import { norm, type ChangeKind, type ChangeRow } from './_core';
+import { norm, TAB_LABELS, type ChangeKind, type ChangeRow } from './_core';
 
 // What each follow scope is alerted about. Artist follows only hear about the
-// big moments; narrower follows hear about everything except housekeeping.
+// big moments in the main catalog; narrower follows hear about everything
+// except housekeeping, on any tab.
 const ARTIST_KINDS = new Set<ChangeKind>(['added', 'link_added', 'availability']);
 const ERA_KINDS = new Set<ChangeKind>(['added', 'link_added', 'link_changed', 'availability', 'quality', 'renamed', 'moved']);
 const SONG_KINDS = new Set<ChangeKind>(['added', 'removed', 'link_added', 'link_removed', 'link_changed', 'availability', 'quality', 'renamed', 'moved']);
@@ -20,18 +21,19 @@ const MAX_WEBHOOKS = 50;
 
 export const DISCORD_WEBHOOK_RE = /^https:\/\/(?:(?:canary|ptb)\.)?discord(?:app)?\.com\/api\/webhooks\/\d+\/[\w-]+$/;
 
-export function describeChange(c: Pick<ChangeRow, 'kind' | 'old_value' | 'new_value'>): string {
+export function describeChange(c: Pick<ChangeRow, 'kind' | 'old_value' | 'new_value'> & { tab?: string | null }): string {
+  const tab = c.tab ? TAB_LABELS[c.tab] || c.tab : '';
   switch (c.kind) {
-    case 'added': return 'New song added';
-    case 'removed': return 'Removed from the tracker';
+    case 'added': return tab ? `Added to ${tab}` : 'New song added';
+    case 'removed': return tab ? `Removed from ${tab}` : 'Removed from the tracker';
     case 'renamed': return `Renamed from "${c.old_value}"`;
     case 'moved': return `Moved from ${c.old_value} to ${c.new_value}`;
     case 'link_added': return 'Link added';
     case 'link_removed': return 'Link removed';
     case 'link_changed': return 'Link updated';
     case 'availability': return c.old_value ? `${c.old_value} → ${c.new_value}` : `Now ${c.new_value}`;
-    case 'quality': return c.old_value ? `Quality ${c.old_value} → ${c.new_value}` : `Quality: ${c.new_value}`;
-    case 'resync': return 'Tracker reorganised';
+    case 'quality': return c.old_value ? `${tab ? '' : 'Quality '}${c.old_value} → ${c.new_value}` : `${tab ? '' : 'Quality: '}${c.new_value}`;
+    case 'resync': return tab ? `${tab} tab reorganised` : 'Tracker reorganised';
   }
 }
 
@@ -50,7 +52,7 @@ export async function notifyFollowers(env: Env, rows: ChangeRow[], now: number):
     for (const r of notable) {
       if (r.slug !== f.slug) continue;
       const hit =
-        (f.scope === 'artist' && ARTIST_KINDS.has(r.kind)) ||
+        (f.scope === 'artist' && !r.tab && ARTIST_KINDS.has(r.kind)) ||
         (f.scope === 'era' && ERA_KINDS.has(r.kind) && norm(r.era) === f.target) ||
         (f.scope === 'song' && SONG_KINDS.has(r.kind) && r.norm_name === f.target);
       if (!hit) continue;
@@ -130,7 +132,8 @@ export async function sendDiscord(webhook: string, changes: ChangeRow[]): Promis
   if (!DISCORD_WEBHOOK_RE.test(webhook)) return false;
   const lines = changes.slice(0, 15).map((c) => {
     const name = c.name.replace(/[*_`~|]/g, '');
-    return `**${name}** · ${c.slug.replace(/gold$/, '')} · ${c.era}\n${describeChange(c)}`;
+    const where = [c.slug.replace(/gold$/, ''), c.tab ? TAB_LABELS[c.tab] || c.tab : '', c.era].filter(Boolean).join(' · ');
+    return `**${name}** · ${where}\n${describeChange(c)}`;
   });
   if (changes.length > 15) lines.push(`…and ${changes.length - 15} more`);
   const res = await fetch(webhook, {

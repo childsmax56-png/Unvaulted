@@ -13,19 +13,21 @@ import { ARTIST_LIST, getArtistConfig } from './artists/registry';
 import { Img, createSlug } from './utils';
 import { FollowButton } from './components/FollowButton';
 import { AlertsBell } from './components/AlertsBell';
-import { fetchChanges, describeChange, timeAgo, KIND_META, type ChangeItem, type ChangeKind } from './alerts';
+import { fetchChanges, describeChange, timeAgo, KIND_META, CHANGE_TABS, TAB_LABELS, type ChangeItem, type ChangeKind } from './alerts';
 
 const ACCENT = '#F5C518';
 
 const FILTERS: { id: string; label: string; kinds: ChangeKind[] }[] = [
   { id: 'highlights', label: 'Highlights', kinds: ['added', 'link_added', 'availability', 'quality', 'renamed'] },
-  { id: 'new', label: 'New songs', kinds: ['added'] },
+  { id: 'new', label: 'New entries', kinds: ['added'] },
   { id: 'links', label: 'Links', kinds: ['link_added', 'link_changed', 'link_removed'] },
   { id: 'upgrades', label: 'Availability & quality', kinds: ['availability', 'quality'] },
   { id: 'renames', label: 'Renames & moves', kinds: ['renamed', 'moved'] },
   { id: 'removed', label: 'Removed', kinds: ['removed'] },
   { id: 'all', label: 'Everything', kinds: [] },
 ];
+
+const TAB_FILTERS = [{ id: '', label: 'All tabs' }, { id: 'unreleased', label: 'Unreleased' }, ...CHANGE_TABS];
 
 function dayLabel(ts: number): string {
   const d = new Date(ts);
@@ -41,8 +43,10 @@ export function ChangeRowItem({ c, showArtist, unread }: { c: ChangeItem; showAr
   const navigate = useNavigate();
   const cfg = getArtistConfig(c.slug);
   const meta = KIND_META[c.kind];
-  const href = c.era ? `/${c.slug}/album/${createSlug(c.era)}` : `/${c.slug}`;
+  // Side-tab changes open that tab; main-catalog ones open the era.
+  const href = c.tab ? `/${c.slug}/${c.tab}` : c.era ? `/${c.slug}/album/${createSlug(c.era)}` : `/${c.slug}`;
   const isResync = c.kind === 'resync';
+  const tabLabel = c.tab ? TAB_LABELS[c.tab] || c.tab : '';
   return (
     <div
       onClick={() => navigate(href)}
@@ -55,10 +59,11 @@ export function ChangeRowItem({ c, showArtist, unread }: { c: ChangeItem; showAr
         <div className="flex items-center gap-2 min-w-0">
           {unread && <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: ACCENT }} />}
           <span className="font-semibold text-sm truncate">{isResync ? (cfg?.artistLabel || c.slug) : c.name}</span>
-          <span className={`hidden sm:inline-flex px-2 py-0.5 rounded-full border text-[10px] font-semibold whitespace-nowrap ${meta.className}`}>{meta.label}</span>
+          <span className={`hidden sm:inline-flex px-2 py-0.5 rounded-full border text-[10px] font-semibold whitespace-nowrap ${meta.className}`}>{c.kind === 'added' && tabLabel ? 'New' : meta.label}</span>
+          {tabLabel && <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full border border-white/15 bg-white/5 text-white/55 text-[10px] font-semibold whitespace-nowrap">{tabLabel}</span>}
         </div>
         <div className="text-xs text-white/45 truncate">
-          {!isResync && <>{showArtist && <>{cfg?.artistLabel || c.slug} · </>}{c.era} · </>}
+          {!isResync && <>{showArtist && <>{cfg?.artistLabel || c.slug} · </>}{tabLabel && <span className="sm:hidden">{tabLabel} · </span>}{c.era} · </>}
           <span className="text-white/65">{describeChange(c)}</span>
         </div>
       </div>
@@ -80,6 +85,7 @@ export function ChangesPage() {
   const { slug } = useParams<{ slug?: string }>();
   const cfg = slug ? getArtistConfig(slug) : undefined;
   const [filter, setFilter] = useState('highlights');
+  const [tab, setTab] = useState('');
   const [items, setItems] = useState<ChangeItem[] | null>(null);
   const [nextBefore, setNextBefore] = useState<number | null>(null);
   const [lastScanAt, setLastScanAt] = useState<number | null>(null);
@@ -96,18 +102,18 @@ export function ChangesPage() {
     let cancelled = false;
     setItems(null);
     setError(false);
-    fetchChanges({ slug, kinds })
+    fetchChanges({ slug, tab, kinds })
       .then((d) => { if (!cancelled) { setItems(d.items); setNextBefore(d.nextBefore); setLastScanAt(d.lastScanAt); } })
       .catch(() => { if (!cancelled) setError(true); });
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug, filter]);
+  }, [slug, filter, tab]);
 
   const loadMore = async () => {
     if (!nextBefore) return;
     setLoadingMore(true);
     try {
-      const d = await fetchChanges({ slug, kinds, before: nextBefore });
+      const d = await fetchChanges({ slug, tab, kinds, before: nextBefore });
       setItems((prev) => [...(prev ?? []), ...d.items]);
       setNextBefore(d.nextBefore);
     } finally {
@@ -149,6 +155,14 @@ export function ChangesPage() {
             </button>
           ))}
         </div>
+        <div className="flex gap-1 px-4 md:px-8 pb-2 overflow-x-auto no-scrollbar">
+          {TAB_FILTERS.map((t) => (
+            <button key={t.id} onClick={() => setTab(t.id)}
+              className={`px-2.5 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap transition-colors cursor-pointer ${tab === t.id ? 'bg-white/15 text-white' : 'text-white/45 hover:bg-white/5 hover:text-white'}`}>
+              {t.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="w-full max-w-3xl mx-auto px-4 md:px-6 pt-6">
@@ -164,7 +178,7 @@ export function ChangesPage() {
         ) : (
           <div className="mb-6">
             <p className="text-sm text-white/55 max-w-xl">
-              Every song added, link posted, snippet that went full and rename across {trackers.length} trackers.
+              Every song added, link posted, snippet that went full and rename across {trackers.length} trackers — on every tab, from Unreleased to Art, Stems and Groupbuys.
               Tap the <Bell className="inline w-3.5 h-3.5 -mt-0.5" /> on any song, era or tracker to get alerts.
             </p>
             <div className="flex gap-1.5 mt-4 overflow-x-auto no-scrollbar pb-1">

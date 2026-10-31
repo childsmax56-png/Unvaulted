@@ -1,11 +1,12 @@
-// GET /api/changes?slug=&kinds=added,link_added&before=<ts>&limit=
+// GET /api/changes?slug=&tab=&kinds=added,link_added&before=<ts>&limit=
+//   tab: 'unreleased' = main catalog only, or a side-tab id (released, art …)
 //
 // The tracker changelog feed: newest first, optionally one tracker / some
 // change kinds, cursor-paginated by detected_at. Also kicks off a background
 // scan of the stalest shard when it's overdue, so the changelog keeps moving
 // even if the cron Worker isn't deployed.
 import { json, options } from '../_auth';
-import { ensureChangeTables, stalestShard, SCAN_INTERVAL_MS, SCAN_SLUGS } from './_core';
+import { ensureChangeTables, stalestShard, SCAN_INTERVAL_MS, SCAN_SLUGS, TAB_LABELS } from './_core';
 import { runShard } from './_run';
 
 export const onRequestOptions = options;
@@ -17,15 +18,18 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env, waitUntil
   const url = new URL(request.url);
   const slug = url.searchParams.get('slug') || '';
   const kinds = (url.searchParams.get('kinds') || '').split(',').filter((k) => KINDS.has(k));
+  const tab = url.searchParams.get('tab') || '';
   const before = Number(url.searchParams.get('before')) || Number.MAX_SAFE_INTEGER;
   const limit = Math.min(Math.max(Number(url.searchParams.get('limit')) || 100, 1), 200);
 
   const where = ['detected_at < ?'];
   const binds: unknown[] = [before];
   if (slug) { where.push('slug = ?'); binds.push(slug); }
+  if (tab === 'unreleased') where.push("tab = ''");
+  else if (TAB_LABELS[tab]) { where.push('tab = ?'); binds.push(tab); }
   if (kinds.length) { where.push(`kind IN (${kinds.map(() => '?').join(',')})`); binds.push(...kinds); }
   const rows = await env.DB.prepare(
-    `SELECT id, slug, era, name, kind, old_value, new_value, url, detected_at
+    `SELECT id, slug, tab, era, name, kind, old_value, new_value, url, detected_at
        FROM tracker_changes WHERE ${where.join(' AND ')}
       ORDER BY detected_at DESC LIMIT ?`
   ).bind(...binds, limit + 1).all();

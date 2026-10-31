@@ -47,7 +47,7 @@ self.addEventListener('push', (event) => {
       icon: '/icons/icon-192.png',
       tag: 'vg-alerts',
       renotify: true,
-      data: { url: unread > 1 ? '/alerts' : `/${first.slug}/album/${createSlug(first.era)}` },
+      data: { url: unread > 1 ? '/alerts' : first.tab ? `/${first.slug}/${first.tab}` : `/${first.slug}/album/${createSlug(first.era)}` },
     });
   })());
 });
