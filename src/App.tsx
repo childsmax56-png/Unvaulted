@@ -1963,7 +1963,7 @@ export default function App() {
       return res.data?.cdnUrl ?? rawUrl;
     } else if (rawUrl.includes('pillows.su/f/') || rawUrl.includes('pillowcase.su/f/')) {
       const id = rawUrl.split('/f/')[1];
-      return `https://api.pillows.su/api/get/${id}`;
+      return audioStore.pillowsStreamUrl(id);
     } else if (rawUrl.includes('pixeldrain.com/u/')) {
       const id = rawUrl.split('/u/')[1]?.split('?')[0];
       // Pixeldrain blocks cross-site hotlinking (Sec-Fetch-Site) and Cloudflare
@@ -2048,7 +2048,7 @@ export default function App() {
           }
         } else if (rawUrl.includes('pillows.su/f/') || rawUrl.includes('pillowcase.su/f/')) {
           const id = rawUrl.split('/f/')[1];
-          streamUrl = `https://api.pillows.su/api/get/${id}`;
+          streamUrl = await audioStore.pillowsStreamUrl(id);
         } else if (rawUrl.includes('pixeldrain.com/u/')) {
           const id = rawUrl.split('/u/')[1]?.split('?')[0];
           streamUrl = `${pixeldrainProxyBase()}/api/${id}`;

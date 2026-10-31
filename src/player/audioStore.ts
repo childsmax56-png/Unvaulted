@@ -242,6 +242,41 @@ export function rawPlay() {
 
 // --- Stream resolution (mirrors App's resolveStreamUrl) --------------------
 
+// pillows.su's /api/get streams are Ogg Opus re-encodes but keep the original
+// upload's Content-Type. Safari/iOS sniffs past most wrong labels (mpeg, wav,
+// flac) but not `audio/mp4` — it hands those to the MP4 demuxer and fails
+// (MEDIA_ERR_SRC_NOT_SUPPORTED), while desktop Chrome plays them fine. For
+// those, stream the untouched original from /api/download instead: it's
+// correctly labelled, CORS-enabled and supports Range.
+const pillowsUseOriginal = new Map<string, boolean>();
+
+async function isMislabelledMp4(direct: string): Promise<boolean> {
+  try {
+    const res = await fetch(direct, { headers: { Range: 'bytes=0-3' }, signal: AbortSignal.timeout(4000) });
+    const ct = (res.headers.get('content-type') || '').toLowerCase();
+    if (!res.ok || !res.body || !/mp4|m4a|aac/.test(ct)) {
+      res.body?.cancel().catch(() => {});
+      return false;
+    }
+    const reader = res.body.getReader();
+    const { value } = await reader.read();
+    reader.cancel().catch(() => {});
+    return !!value && String.fromCharCode(...value.subarray(0, 4)) === 'OggS';
+  } catch {
+    return false; // probe failed — fall back to the stream URL
+  }
+}
+
+export async function pillowsStreamUrl(id: string): Promise<string> {
+  const direct = `https://api.pillows.su/api/get/${id}`;
+  let useOriginal = pillowsUseOriginal.get(id);
+  if (useOriginal === undefined) {
+    useOriginal = await isMislabelledMp4(direct);
+    pillowsUseOriginal.set(id, useOriginal);
+  }
+  return useOriginal ? `https://api.pillows.su/api/download/${id}` : direct;
+}
+
 export async function resolveStreamUrl(rawUrl: string): Promise<string> {
   if (rawUrl.includes('imgur.gg/f/')) {
     const id = rawUrl.split('/f/')[1];
@@ -250,7 +285,7 @@ export async function resolveStreamUrl(rawUrl: string): Promise<string> {
     return res.data?.cdnUrl ?? rawUrl;
   } else if (rawUrl.includes('pillows.su/f/') || rawUrl.includes('pillowcase.su/f/')) {
     const id = rawUrl.split('/f/')[1];
-    return `https://api.pillows.su/api/get/${id}`;
+    return pillowsStreamUrl(id);
   } else if (rawUrl.includes('pixeldrain.com/u/')) {
     const id = rawUrl.split('/u/')[1]?.split('?')[0];
     // Pixeldrain blocks Cloudflare egress + hotlinks, so route through the same

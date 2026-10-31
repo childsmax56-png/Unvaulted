@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { pillowsStreamUrl } from './player/audioStore';
 
 const VG_API = 'https://unvaulted.cc';
 const STORAGE_KEY = 'vg_my_tracker_url';
@@ -101,7 +102,7 @@ function driveFileId(url: string): string | null {
 async function getStreamUrl(url: string): Promise<string | null> {
   if (isPillowcase(url)) {
     const id = url.split('/f/')[1];
-    return id ? `https://api.pillows.su/api/get/${id}` : null;
+    return id ? pillowsStreamUrl(id) : null;
   }
   if (isTempImgur(url)) {
     const tid = url.split('/f/')[1];
