@@ -701,6 +701,15 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       groupbuys: '1022200924',
     },
   },
+  // Hidden "Unvaulted Promotional" Ye tracker — a copy of yegold's template;
+  // only its Unreleased + Recent tabs are used.
+  promogold: {
+    sheetId: '1zKk5p9lDA40p0EXrvtfNTyUzUTVUW1kCpqy7BF0WyWo',
+    gids: {
+      unreleased: '34972268',
+      recent: '77894385',
+    },
+  },
   // yelolgold's sheet has viewer downloads disabled (export HTTP 401), so it's read
   // through the Sheets API — see apiTitles.
   yelolgold: {
