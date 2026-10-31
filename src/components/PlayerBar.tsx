@@ -220,7 +220,18 @@ export function PlayerBar({
             const imgUrl = artworkOverride || currentSong.image || CUSTOM_IMAGES[actualEraName] || (currentSong as any).realEra?.image || era?.image;
             return (
               <div className="w-14 h-14 rounded-md overflow-hidden shrink-0 bg-white/10 relative group shadow-lg">
-                {imgUrl && <Img w={200} eager src={imgUrl} alt="Cover" className={`w-full h-full object-cover ${allowFullScreen ? 'cursor-pointer' : ''}`} onClick={allowFullScreen ? onFullScreen : undefined} />}
+                {imgUrl ? (
+                  <Img w={200} eager src={imgUrl} alt="Cover" className={`w-full h-full object-cover ${allowFullScreen ? 'cursor-pointer' : ''}`} onClick={allowFullScreen ? onFullScreen : undefined} />
+                ) : actualEraName ? (
+                  // No artwork for this era — show its name as a text cover instead.
+                  <div
+                    className={`w-full h-full flex items-center justify-center p-1 text-center bg-gradient-to-br from-white/15 to-white/5 ${allowFullScreen ? 'cursor-pointer' : ''}`}
+                    onClick={allowFullScreen ? onFullScreen : undefined}
+                    title={actualEraName}
+                  >
+                    <span className="text-[9px] leading-tight font-bold uppercase tracking-wide text-white/90 break-words line-clamp-4">{actualEraName}</span>
+                  </div>
+                ) : null}
                 {toggleFavorite && 
                currentSong.name !== "Alright but the beat is Father Stretch My Hands Pt. 1" && 
                !currentSong.name.endsWith('[Fake Leak]') && 
