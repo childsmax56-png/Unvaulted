@@ -281,17 +281,44 @@ export const ERA_DISCLAIMERS: Record<string, { text: string; linkText?: string; 
   ownKeys: () => Object.keys(activeConfig.ERA_DISCLAIMERS ?? {}),
   getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: (activeConfig.ERA_DISCLAIMERS ?? {})[k] }),
 });
+// Standard tracker emoji legend. Every tracker gets these as a fallback so tags render
+// worded out ("Best Of", "Worst Of"…) even when its config leaves TAG_MAP empty; a
+// config's own entries win for any emoji it maps differently.
+const DEFAULT_TAG_MAP: Record<string, string> = {
+  '⭐': 'Best Of', '🏆': 'Grails', '🥇': 'Wanted', '🏅': 'Wanted',
+  '✨': 'Special', '🗑️': 'Worst Of', '🗑': 'Worst Of',
+  '🚮': 'Unwanted', '🤖': 'AI', '⁉️': 'Lost Media', '⁉': 'Lost Media', '❓': 'Unknown',
+};
+const DEFAULT_TAG_TOOLTIP_MAP: Record<string, string> = {
+  'Best Of': 'some of the best leaks hosted on the tracker.',
+  'Grails': 'the most wanted songs that have not yet leaked in full.',
+  'Wanted': 'Songs that are wanted, but not as wanted as "Grails".',
+  'Special': 'special songs worth highlighting.',
+  'Worst Of': 'some of the worst leaks hosted on the tracker.',
+  'Unwanted': "Songs that we don't want to leak in full.",
+  'AI': 'Track contains AI vocals.',
+  'Lost Media': "Is currently lost, or we don't have a link to the media.",
+};
+const mergedMaps = new WeakMap<Record<string, string>, Record<string, string>>();
+function withDefaults(own: Record<string, string> | undefined, defaults: Record<string, string>): Record<string, string> {
+  const key = own ?? defaults;
+  let merged = mergedMaps.get(key);
+  if (!merged) { merged = { ...defaults, ...own }; mergedMaps.set(key, merged); }
+  return merged;
+}
+const activeTagMap = () => withDefaults(activeConfig.TAG_MAP, DEFAULT_TAG_MAP);
+const activeTagTooltipMap = () => withDefaults(activeConfig.TAG_TOOLTIP_MAP, DEFAULT_TAG_TOOLTIP_MAP);
 export const TAG_MAP: Record<string, string> = new Proxy({} as Record<string, string>, {
-  get: (_, k: string) => activeConfig.TAG_MAP[k],
-  has: (_, k: string) => k in activeConfig.TAG_MAP,
-  ownKeys: () => Object.keys(activeConfig.TAG_MAP),
-  getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: activeConfig.TAG_MAP[k] }),
+  get: (_, k: string) => activeTagMap()[k],
+  has: (_, k: string) => k in activeTagMap(),
+  ownKeys: () => Object.keys(activeTagMap()),
+  getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: activeTagMap()[k] }),
 });
 export const TAG_TOOLTIP_MAP: Record<string, string> = new Proxy({} as Record<string, string>, {
-  get: (_, k: string) => activeConfig.TAG_TOOLTIP_MAP[k],
-  has: (_, k: string) => k in activeConfig.TAG_TOOLTIP_MAP,
-  ownKeys: () => Object.keys(activeConfig.TAG_TOOLTIP_MAP),
-  getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: activeConfig.TAG_TOOLTIP_MAP[k] }),
+  get: (_, k: string) => activeTagTooltipMap()[k],
+  has: (_, k: string) => k in activeTagTooltipMap(),
+  ownKeys: () => Object.keys(activeTagTooltipMap()),
+  getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: activeTagTooltipMap()[k] }),
 });
 export const ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; bottomBannerContentBg?: string; miniPlayer?: string; fullPicturePlayer?: string }> = new Proxy({} as any, {
   get: (_, k: string) => activeConfig.ERA_THEMES[k],
@@ -389,7 +416,7 @@ export function buildTitleTag(songName: string, includeFeatures = true, keepEmoj
   const tags: string[] = [];
   if (!keepEmojis) Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
     if (rest.includes(emoji)) {
-      tags.push(`[${tag.toUpperCase()}]`);
+      if (!tags.includes(`[${tag.toUpperCase()}]`)) tags.push(`[${tag.toUpperCase()}]`);
       rest = rest.split(emoji).join('');
     }
   });
@@ -468,7 +495,7 @@ export function formatTextForNotification(text: string | undefined | null, tagsA
 
   Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
     if (formattedText.includes(emoji)) {
-      if (!tagsAsEmojis) {
+      if (!tagsAsEmojis && !tags.includes(`[${tag.toUpperCase()}]`)) {
         tags.push(`[${tag.toUpperCase()}]`);
       }
       formattedText = formattedText.split(emoji).join('').trim();
@@ -496,7 +523,7 @@ export function formatTextWithTags(text: string | undefined | null) {
 
   Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
     if (formattedText.includes(emoji)) {
-      tags.push({ emoji, tag });
+      if (!tags.some(t => t.tag === tag)) tags.push({ emoji, tag });
       formattedText = formattedText.split(emoji).join('').trim();
     }
   });
@@ -628,7 +655,7 @@ export function getCleanSongNameWithTags(text: string | undefined | null): strin
 
   Object.entries(TAG_MAP).forEach(([emoji, tag]) => {
     if (formattedText.includes(emoji)) {
-      tags.push(tag);
+      if (!tags.includes(tag)) tags.push(tag);
       formattedText = formattedText.split(emoji).join('').trim();
     }
   });
