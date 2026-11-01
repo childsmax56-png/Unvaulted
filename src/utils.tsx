@@ -50,6 +50,18 @@ export async function runWithConcurrencyLimit<T>(
   await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, () => runNext()));
 }
 
+// Apple retired the full-resolution "original file" mzstatic links
+// (a5.mzstatic.com/us/r1000/0/…, a1.mzstatic.com/r40/…): Akamai now answers
+// every one with a 403 HTML page, so downloading a cover that uses one fell
+// through to openFallback() and dumped users on that error page. The same
+// asset is still served (with CORS) by the image/thumb resizer.
+export function fixMzstaticUrl<T extends string | undefined | null>(url: T): T {
+  if (!url) return url;
+  const m = url.match(/^https?:\/\/a\d+\.mzstatic\.com\/(?:us\/)?r\d+\/(?:\d+\/)?(.+?)(?:[?#].*)?$/i);
+  if (!m) return url;
+  return `https://is1-ssl.mzstatic.com/image/thumb/${m[1]}/3000x3000bb.jpg` as T;
+}
+
 // Cover art and photos are stored as full-resolution originals on slow, free
 // hosts (i.ibb.co accounts for 400+ of them). Loading those originals for a
 // 48px thumbnail is the main reason images crawl in. Route images through
@@ -70,6 +82,7 @@ export async function runWithConcurrencyLimit<T>(
 const REMOTE_IMAGE_RESIZE = false;
 export function optimizedImage(src: string | undefined | null, width = 400): string | undefined {
   if (!src) return src ?? undefined;
+  src = fixMzstaticUrl(src);
   if (src.startsWith('data:') || src.startsWith('blob:')) return src; // inline / object URLs
   if (!/^https?:\/\//i.test(src)) return src;                         // app-hosted relative asset
   if (src.includes('/cdn-cgi/image/')) return src;                    // already transformed
@@ -755,6 +768,7 @@ async function compressArtworkToJpeg(buf: ArrayBuffer, maxPx = 800, quality = 0.
 }
 
 async function fetchArtworkBuffer(artworkUrl: string): Promise<ArrayBuffer | null> {
+  artworkUrl = fixMzstaticUrl(artworkUrl);
   const proxies = [
     artworkUrl,
     `https://corsproxy.io/?${encodeURIComponent(artworkUrl)}`,
@@ -1269,6 +1283,7 @@ export async function resolveImgurGg(url: string): Promise<{ cdnUrl: string; typ
 }
 
 export async function resolveUrl(url: string): Promise<{ fetchUrl: string; isImage: boolean; imageExt?: string; headers?: Record<string, string> }> {
+  url = fixMzstaticUrl(url);
   if (url.includes('imgur.gg/f/')) {
     const info = await resolveImgurGg(url);
     if (info?.type.startsWith('image/')) return { fetchUrl: info.cdnUrl, isImage: true, imageExt: info.ext || '.jpg' };
@@ -1334,6 +1349,7 @@ async function compressImageBlob(blob: Blob, maxDim = 2048, quality = 0.85): Pro
 
 export async function handleDownloadFile(url: string, suggestedName: string, tagsAsEmojis: boolean, meta?: SongMeta, description?: string, convertToMp3 = false) {
   if (!url) return;
+  url = fixMzstaticUrl(url);
   let finalUrl = url;
   try {
     const ogName = parseOgFilename(description);
