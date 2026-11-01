@@ -144,10 +144,8 @@ const imbbResolvedCache: Map<string, string> = loadImbbCache();
 const imbbInFlight: Map<string, Promise<string | null>> = new Map();
 
 async function fetchImbbDirectLink(url: string): Promise<string | null> {
-  const sources = [
-    `/api/ibb-resolve?url=${encodeURIComponent(url)}`,
-    `https://imgbb-file-get-api.vercel.app/api?url=${url}`,
-  ];
+  const sources = [`/api/ibb-resolve?url=${encodeURIComponent(url)}`];
+  if (url.includes('ibb.co')) sources.push(`https://imgbb-file-get-api.vercel.app/api?url=${url}`);
   for (const endpoint of sources) {
     try {
       const res = await fetch(endpoint);
@@ -188,10 +186,16 @@ export async function resolveImbbUrl(url: string): Promise<string | null> {
 }
 
 // An ibb.co page URL (not already a direct i.ibb.co image) must be resolved
-// before it can render.
+// before it can render — as must imgur.com page/album/gallery links and
+// imgur.gg/f/ file pages (same /api/ibb-resolve endpoint).
+const IMGUR_PAGE_RE = /^https?:\/\/(www\.|m\.)?imgur\.com\/(a\/|gallery\/)?[A-Za-z0-9-]+\/?(?:[?#].*)?$/i;
+const IMGUR_GG_RE = /^https?:\/\/([a-z0-9-]+\.)?imgur\.gg\/f\//i;
 function needsImbbResolve(src: string | undefined | null): src is string {
-  return typeof src === 'string' && src.includes('ibb.co') && !src.includes('i.ibb.co');
+  if (typeof src !== 'string') return false;
+  if (src.includes('ibb.co') && !src.includes('i.ibb.co')) return true;
+  return IMGUR_PAGE_RE.test(src) || IMGUR_GG_RE.test(src);
 }
+export const needsPageResolve = (url: string): boolean => needsImbbResolve(url);
 
 // Shared image element for remote cover art / photos. Bakes in lazy loading,
 // async decoding, the no-referrer policy (hosts like i.ibb.co block hotlinks
@@ -1303,6 +1307,11 @@ export async function resolveUrl(url: string): Promise<{ fetchUrl: string; isIma
     const m = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
     if (m) return { fetchUrl: `/api/audio-proxy?url=${encodeURIComponent(`https://drive.google.com/uc?export=download&id=${m[1]}`)}`, isImage: false };
   }
+  if (IMGUR_PAGE_RE.test(url)) {
+    const direct = await resolveImbbUrl(url);
+    const ext = direct?.match(/\.(png|jpe?g|gif|webp)$/i)?.[0];
+    return { fetchUrl: direct ?? url, isImage: true, imageExt: ext ?? '.jpg' };
+  }
   if (url.includes('ibb.co')) {
     // Prefer our own edge-cached resolver, falling back to the public imgbb API.
     const endpoints = [
@@ -1387,6 +1396,11 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
     } else if (url.includes('drive.google.com')) {
         const m = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
         if (m) finalUrl = `/api/audio-proxy?url=${encodeURIComponent(`https://drive.google.com/uc?export=download&id=${m[1]}`)}`;
+    } else if (IMGUR_PAGE_RE.test(url)) {
+        isImage = true;
+        const direct = await resolveImbbUrl(url);
+        if (direct) finalUrl = direct;
+        ext = direct?.match(/\.(png|jpe?g|gif|webp)$/i)?.[0] ?? '.jpg';
     } else if (url.includes('i.imgur.com')) {
         finalUrl = url;
         const extMatch = url.match(/\.(mp3|mp4|m4a|wav|ogg|flac|aac)(\?|$)/i);

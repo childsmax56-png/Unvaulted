@@ -3,7 +3,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowLeft, ExternalLink, Image as ImageIcon, X, Link as LinkIcon, Share2, Check, Download, Loader2 } from 'lucide-react';
 import { Era, SearchFilters } from '../types';
-import { formatTextWithTags, ALBUM_RELEASE_DATES, createSlug, matchesFilters, CUSTOM_IMAGES, handleDownloadFile , Img, resolveImbbUrl, peekImbbCache} from '../utils';
+import { formatTextWithTags, ALBUM_RELEASE_DATES, createSlug, matchesFilters, CUSTOM_IMAGES, handleDownloadFile , Img, resolveImbbUrl, peekImbbCache, needsPageResolve} from '../utils';
 import { useSettings } from '../SettingsContext';
 import { CommentButton } from './CommentButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
@@ -46,7 +46,7 @@ const RENDERABLE_DOMAINS = [
 export function isLinkRenderable(link: string | undefined | null): boolean {
   if (!link) return false;
   const lc = link.toLowerCase();
-  if (link.includes('ibb.co') || link.includes('pillows.su/f/') || link.startsWith('/api/sheet-image?')) return true;
+  if (needsPageResolve(link) || link.includes('i.imgur.com') || link.includes('pillows.su/f/') || link.startsWith('/api/sheet-image?')) return true;
   if (lc.endsWith('.png') || lc.endsWith('.jpg') || lc.endsWith('.jpeg') || lc.endsWith('.gif') || lc.endsWith('.webp')) return true;
   try {
     const { hostname } = new URL(link);
@@ -57,7 +57,7 @@ export function isLinkRenderable(link: string | undefined | null): boolean {
 export function ArtImage({ url, alt, contain = false }: { url: string; alt: string; contain?: boolean }) {
   const [imgSrc, setImgSrc] = useState<string | null>(() => {
     // Synchronously return cached value if available
-    if (url.includes('ibb.co') && !url.includes('i.ibb.co')) {
+    if (needsPageResolve(url)) {
       return peekImbbCache(url) ?? null;
     }
     if (url.includes('pillows.su/f/')) {
@@ -70,7 +70,7 @@ export function ArtImage({ url, alt, contain = false }: { url: string; alt: stri
 
   useEffect(() => {
     setError(false);
-    if (url.includes('ibb.co') && !url.includes('i.ibb.co')) {
+    if (needsPageResolve(url)) {
       const cached = peekImbbCache(url);
       if (cached) { setImgSrc(cached); return; }
       setImgSrc(null);

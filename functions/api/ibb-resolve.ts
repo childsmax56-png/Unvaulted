@@ -10,6 +10,11 @@
 // across all visitors are served instantly instead of hammering a flaky
 // external API on every view.
 //
+// Also resolves imgur links the same way: imgur.com/<id>, /a/<album> and
+// /gallery/<post> pages expose their (first) image as og:image, and imgur.gg/f/<id>
+// file pages resolve through imgur.gg's file API (images only — it also hosts
+// video/zips, which can't render as art).
+//
 // Wrapped in try/catch so an upstream fetch failure returns a useful JSON
 // error instead of Cloudflare's generic edge error page.
 
@@ -45,6 +50,25 @@ function extractDirectLink(html: string): string | null {
   return null;
 }
 
+// og:image on imgur pages carries a "?fb" (Facebook crop) suffix — drop the
+// query so the full-size original is served.
+function extractImgurLink(html: string): string | null {
+  const m = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
+    ?? html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i);
+  const found = m?.[1];
+  if (!found || !/^https?:\/\/i\.imgur\.com\//i.test(found)) return null;
+  return found.split('?')[0];
+}
+
+async function resolveImgurGgFile(pageUrl: URL): Promise<string | null> {
+  const id = pageUrl.pathname.split('/f/')[1]?.split('/')[0];
+  if (!id) return null;
+  const res = await fetch(`https://${pageUrl.host}/api/file/${id}`, { signal: AbortSignal.timeout(10000) });
+  if (!res.ok) return null;
+  const data = await res.json().catch(() => null) as { cdnUrl?: string; type?: string } | null;
+  return data?.cdnUrl && String(data.type ?? '').startsWith('image/') ? data.cdnUrl : null;
+}
+
 export const onRequestOptions: PagesFunction = async () =>
   new Response(null, { status: 204, headers: CORS });
 
@@ -62,12 +86,15 @@ export const onRequestGet: PagesFunction = async (context) => {
     }
 
     const host = pageUrl.hostname.toLowerCase();
-    if (host !== 'ibb.co' && !host.endsWith('.ibb.co')) {
+    const isIbb = host === 'ibb.co' || host.endsWith('.ibb.co');
+    const isImgur = host === 'imgur.com' || host === 'www.imgur.com' || host === 'm.imgur.com' || host === 'i.imgur.com';
+    const isImgurGg = (host === 'imgur.gg' || host.endsWith('.imgur.gg')) && pageUrl.pathname.startsWith('/f/');
+    if (!isIbb && !isImgur && !isImgurGg) {
       return json({ error: 'Host not allowed' }, 403);
     }
 
     // Already a direct image URL — nothing to resolve.
-    if (host === 'i.ibb.co') {
+    if (host === 'i.ibb.co' || host === 'i.imgur.com') {
       return json({ direct_link: pageUrl.toString() }, 200, {
         'Cache-Control': 'public, max-age=604800',
       });
@@ -79,19 +106,23 @@ export const onRequestGet: PagesFunction = async (context) => {
     const cached = await cache.match(cacheKey);
     if (cached) return cached;
 
-    const pageRes = await fetch(pageUrl.toString(), {
-      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html' },
-      signal: AbortSignal.timeout(10000),
-    });
-    if (!pageRes.ok) {
-      return json({ error: `Failed to fetch page (status ${pageRes.status})` }, 502);
+    let direct: string | null;
+    if (isImgurGg) {
+      direct = await resolveImgurGgFile(pageUrl);
+    } else {
+      const pageRes = await fetch(pageUrl.toString(), {
+        headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html' },
+        signal: AbortSignal.timeout(10000),
+      });
+      if (!pageRes.ok) {
+        return json({ error: `Failed to fetch page (status ${pageRes.status})` }, 502);
+      }
+      const html = await pageRes.text();
+      direct = isImgur ? extractImgurLink(html) : extractDirectLink(html);
     }
-
-    const html = await pageRes.text();
-    const direct = extractDirectLink(html);
     if (!direct) return json({ error: 'No image link found' }, 502);
 
-    // Cache resolved links aggressively — an ibb.co page's direct URL is stable.
+    // Cache resolved links aggressively — a page's direct URL is stable.
     const resp = json({ direct_link: direct }, 200, {
       'Cache-Control': 'public, max-age=604800',
     });
