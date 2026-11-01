@@ -391,7 +391,7 @@ export function buildArtistTag(songName: string, eraName: string | undefined, in
   const featured = collectFeatured(songName);
   const primaryLower = primary.toLowerCase();
   const unique = featured.filter(n => !primaryLower.includes(n.toLowerCase()));
-  return unique.length ? `${primary} feat. ${unique.join(', ')}` : primary;
+  return unique.length ? [primary, ...unique].join(', ') : primary;
 }
 
 // Covers every spelling the trackers use: "feat.", "feat", "featuring", "ft.", "ft", "with",
