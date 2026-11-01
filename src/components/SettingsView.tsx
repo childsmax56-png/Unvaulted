@@ -9,7 +9,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { isLastfmLoggedIn } from '../lastfm';
 import { saveAs } from 'file-saver';
 import { Era } from '../types';
-import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, buildDownloadName, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { ArtEntry } from './ArtGallery';
 import { StemEntry } from './StemsView';
@@ -59,7 +59,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
       for (const tracks of Object.values(era.data || {})) {
         for (const song of tracks) {
           const url = song.url || (song.urls && song.urls[0]) || '';
-          if (url) songs.push({ name: song.name, era: era.name, eraImage: era.image, songImage: song.image, url });
+          if (url) songs.push({ name: songCredits(song.name, song.extra), era: era.name, eraImage: era.image, songImage: song.image, url });
         }
       }
     }
@@ -198,7 +198,7 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
       for (const tracks of Object.values(era.data || {})) {
         for (const song of tracks) {
           const url = song.url || (song.urls && song.urls[0]) || '';
-          if (url) songs.push({ name: song.name, era: era.name, eraImage: era.image, songImage: song.image, url });
+          if (url) songs.push({ name: songCredits(song.name, song.extra), era: era.name, eraImage: era.image, songImage: song.image, url });
         }
       }
     }

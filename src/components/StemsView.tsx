@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star, FileArchive } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle, SongExtra } from './SongTitle';
 import { saveAs } from 'file-saver';
@@ -594,7 +594,7 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
         if (ct.startsWith('text/html') || ct.startsWith('application/json')) throw new Error('non-audio response');
         let blob = await res.blob();
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
-        const fileName = buildDownloadName(song.name, settings.tagFeaturedArtists, settings.tagsAsEmojis);
+        const fileName = buildDownloadName(songCredits(song.name, song.extra), settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
         if (isImage) {
           ext = imageExt || await detectAudioExt(blob);
@@ -610,8 +610,8 @@ export function StemsView({ eras, stemsData, searchQuery, filters, onPlaySong, c
           if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
             const artUrl = selectedEraData!.image || CUSTOM_IMAGES[stemsEraName];
             const tagMeta = {
-              title: buildTitleTag(song.name, settings.tagFeaturedArtists),
-              artist: buildArtistTag(song.name, stemsEraName, settings.tagFeaturedArtists),
+              title: buildTitleTag(songCredits(song.name, song.extra), settings.tagFeaturedArtists),
+              artist: buildArtistTag(songCredits(song.name, song.extra), stemsEraName, settings.tagFeaturedArtists),
               album: stemsEraName,
               year: ALBUM_RELEASE_DATES[stemsEraName]?.split('/').pop(),
               artworkUrl: artUrl,

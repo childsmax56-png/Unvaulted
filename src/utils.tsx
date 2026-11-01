@@ -394,13 +394,23 @@ export function buildArtistTag(songName: string, eraName: string | undefined, in
   return unique.length ? `${primary} feat. ${unique.join(', ')}` : primary;
 }
 
-const FEATURE_GROUP = /[\[(](?:feat\.|ft\.|with\s+|w\/)\s*([^\])\n]+)[\])]/gi;
-const CREDIT_GROUP = /\s*[\[(](?:feat\.|ft\.|prod\.|add\.|perf\.|ref\.|with\s+|w\/)[^\])\n]*[\])]/gi;
+// Covers every spelling the trackers use: "feat.", "feat", "featuring", "ft.", "ft", "with",
+// "with.", "w/" (any case, optional "-"/":" after). \b keeps "(Without…)" / "(Featured…)" out.
+const FEATURE_GROUP = /[\[(](?:feat(?:uring)?\b\.?|ft\b\.?|with\b\.?|w\/)[\s:-]*([^\])\n]+)[\])]/gi;
+const CREDIT_GROUP = /\s*[\[(](?:feat(?:uring)?\b\.?|ft\b\.?|prod\.|add\.|perf\.|ref\.|with\b\.?|w\/)[^\])\n]*[\])]/gi;
+
+/**
+ * Song name plus its credit lines, for the tag builders. The API splits each tracker cell at
+ * its first line break, so "(feat. X)" usually lives in song.extra rather than song.name.
+ */
+export function songCredits(name: string, extra?: string | null): string {
+  return extra ? `${name}\n${extra}` : name;
+}
 
 function collectFeatured(songName: string): string[] {
   const featured: string[] = [];
   for (const m of songName.matchAll(FEATURE_GROUP)) {
-    m[1].split(/,|&/).map(n => n.replace(/[\uFE0F]/g, '').trim()).filter(n => n && n !== '???').forEach(n => featured.push(n));
+    m[1].split(/,|&/).map(n => n.replace(/[\uFE0F]/g, '').trim()).filter(n => n !== '???' && /[\p{L}\p{N}]/u.test(n)).forEach(n => featured.push(n));
   }
   return [...new Set(featured)];
 }
@@ -437,7 +447,8 @@ export function buildTitleTag(songName: string, includeFeatures = true, keepEmoj
 /** Download filename for a song: the tagged title format when Tag Featured Artists is on, else the raw name. */
 export function buildDownloadName(songName: string, tagFeaturedArtists: boolean, tagsAsEmojis: boolean): string {
   if (tagFeaturedArtists) return buildTitleTag(songName, true, tagsAsEmojis);
-  return tagsAsEmojis ? songName : formatTextForNotification(songName, false);
+  const firstLine = songName.split('\n')[0];
+  return tagsAsEmojis ? firstLine : formatTextForNotification(firstLine, false);
 }
 
 /**
