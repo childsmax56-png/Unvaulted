@@ -34,25 +34,57 @@ function eraSlug(name: string): string {
   );
 }
 
-function buildTrackerSummary(data: TrackerData): string {
+function normalizeForMatch(s: string): string {
+  return ` ${s.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim()} `;
+}
+
+// Song notes total ~1.8M chars on the Ye tracker — far too much to send on
+// every message. Only songs the conversation is about (named in the recent
+// messages, in the album being viewed, or currently playing) get their full
+// description; everything else stays a one-line metadata entry.
+const DESCRIPTION_BUDGET = 150000;
+
+function buildTrackerSummary(
+  data: TrackerData,
+  focusText: string,
+  screenContext: ScreenContext,
+): string {
   const eras = Object.values(data.eras || {}) as Era[];
   const lines: string[] = [];
+  const focus = normalizeForMatch(focusText);
+  const currentSong = screenContext.currentSongName
+    ? normalizeForMatch(cleanSongName(screenContext.currentSongName))
+    : '';
+  let descriptionChars = 0;
 
   for (const era of eras) {
     const slug = eraSlug(era.name);
+    const eraInFocus = era.name === screenContext.selectedAlbumName;
     const categories = Object.entries(era.data || {});
     const allSongs: string[] = [];
     for (const [, songs] of categories) {
       for (const song of songs as Song[]) {
-        const parts = [cleanSongName(song.name)];
+        const clean = cleanSongName(song.name);
+        const parts = [clean];
         if (song.quality) parts.push(`quality:${song.quality}`);
         if (song.available_length) parts.push(`length:${song.available_length}`);
         if (song.leak_date) parts.push(`leaked:${song.leak_date}`);
         if (!song.url && !(song.urls?.length)) parts.push('unavailable');
+        const desc = song.description?.replace(/\s+/g, ' ').trim();
+        if (desc && descriptionChars < DESCRIPTION_BUDGET) {
+          const key = normalizeForMatch(clean);
+          const named = key.trim().length >= 3 && focus.includes(key);
+          if (eraInFocus || named || (currentSong && key === currentSong)) {
+            parts.push(`notes:${desc}`);
+            descriptionChars += desc.length;
+          }
+        }
         allSongs.push(parts.join(' | '));
       }
     }
     lines.push(`=== ${era.name} | url:/album/${slug} ===`);
+    const eraDesc = era.description?.replace(/\s+/g, ' ').trim();
+    if (eraDesc) lines.push(`era notes: ${eraDesc}`);
     lines.push(...allSongs);
   }
 
@@ -123,7 +155,10 @@ export function ChatBubble({ data, screenContext, showPlayer, open, onOpenChange
     setLoading(true);
 
     try {
-      const trackerSummary = data ? buildTrackerSummary(data) : 'Tracker data not yet loaded.';
+      const focusText = [...messages.slice(-4).map(m => m.content), text].join('\n');
+      const trackerSummary = data
+        ? buildTrackerSummary(data, focusText, screenContext)
+        : 'Tracker data not yet loaded.';
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

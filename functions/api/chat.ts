@@ -42,7 +42,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   const systemPrompt = `You are a knowledgeable assistant for UNVAULTED, a comprehensive fan tracker for Ye (formerly Kanye West) unreleased and leaked music. You help users find information about songs, eras, leaks, quality ratings, and availability.
 
-The site organizes unreleased/leaked Ye music by "eras" (albums/time periods). Songs have metadata like quality (CDQ = CD quality, HQ = high quality, LQ = low quality), available length (Full, Partial, Snippet), leak dates, BPM, and file dates. Songs without a URL are unavailable/not yet leaked.
+The site organizes unreleased/leaked Ye music by "eras" (albums/time periods). Songs have metadata like quality (CDQ = CD quality, HQ = high quality, LQ = low quality), available length (Full, Partial, Snippet), leak dates, BPM, and file dates. Songs without a URL are unavailable/not yet leaked. Some song lines include "notes:" — the tracker's description of that song (history, origin, versions, who's on it, how it leaked); eras may have an "era notes:" line describing the era. Notes are only included for songs relevant to the current conversation, so a song without notes may still have a description on the tracker.
 
 Currently the user is viewing: ${screenDesc}
 
