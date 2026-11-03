@@ -26,6 +26,11 @@ interface SheetSource {
   // here still use the plain export, so one label-link tab can go through the API
   // while the rest of the sheet keeps exporting.
   apiTitles?: Record<string, string>;
+  // Per-tab header renames for sheets whose live column names differ from the
+  // committed snapshot (tab → live header → snapshot header). A live header
+  // matches by its whitespace-collapsed text or by its first line, so a hint
+  // like "Notes\nDon't forget to join the Discord" matches "Notes".
+  headers?: Record<string, Record<string, string>>;
 }
 
 // gids are enumerated from a sheet's public /htmlview by scripts/build-sheet-tabs.mjs.
@@ -116,6 +121,43 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
   // frankgold: its Google Sheet is gone (export HTTP 410) — read live from
   // franktracker.net's published tables instead (_franktracker.ts).
+  // xgold: Art stays on the committed CSV — its Link(s) point at artwork saved
+  // under public/xgold/art/, where the sheet has Drive/SoundCloud pages.
+  xgold: {
+    sheetId: '1vMEIba05N8zD2iSh_knAkAMzyrm9rtreu1NJeyNZj0I',
+    gids: {
+      unreleased: '1286952088',
+      released: '1470024127',
+      stems: '1947711651',
+      fakes: '1933130849',
+      misc: '683920500',
+    },
+    headers: {
+      unreleased: {
+        Notes: 'Notes',
+        'File / Aprox Date': 'File Date',
+        'Track Length': 'Track Length',
+        Status: 'Available Length',
+        'Available Quality': 'Quality',
+        'Download(s)': 'Link(s)',
+      },
+      released: {
+        'Song Name': 'Name',
+        'Notes & Information': 'Notes',
+        'Track Length': 'Length',
+        'Track Type': 'Type',
+        'Download(s)': 'Link(s)',
+      },
+      stems: {
+        'Instrumental Name & Notes': 'Notes',
+        'Song BPM': 'BPM',
+        Status: 'Available Length',
+        'Links(s)': 'Link(s)',
+      },
+      fakes: { Notes: 'Notes' },
+      misc: { Notes: 'Notes', 'Track Length': 'Length' },
+    },
+  },
   // futuregold: Released Discography is a credits list with no links and the
   // Music Videos tab is an abandoned "Old Format" — both left out.
   futuregold: {
@@ -843,6 +885,18 @@ function unwrapSongEraCells(csv: string): string {
   return changed ? joinCSVRows(rows) : csv;
 }
 
+function renameLiveHeaders(csv: string, renames: Record<string, string>): string {
+  const rows = splitCSVRows(csv);
+  const h = rows.findIndex(r => (r[0] ?? '').trim().toLowerCase() === 'era');
+  if (h === -1) return csv;
+  rows[h] = rows[h].map(cell => {
+    const full = cell.replace(/\s+/g, ' ').trim();
+    const first = cell.split('\n')[0].trim();
+    return renames[full] ?? renames[first] ?? cell;
+  });
+  return joinCSVRows(rows);
+}
+
 // Live Unreleased tabs aren't run through canonicalizeLiveHeaders (its aliases
 // are tuned for the side tabs), but a.ts reads a few columns by exact name: join
 // wrapped header words ("Leak\nDate") and name a Notes column whose header cell
@@ -1154,7 +1208,9 @@ export async function resolveTrackerCsv(
         fetchSheetTabCsv(src, src.gids[tab], apiKey),
         tab === 'art' ? fetchSheetRowImages(src.sheetId, src.gids[tab]).catch(() => null) : null,
       ]);
-      const text = images ? joinCSVRows(fillRowsWithImages(splitCSVRows(rawText), images)) : rawText;
+      let text = images ? joinCSVRows(fillRowsWithImages(splitCSVRows(rawText), images)) : rawText;
+      const renames = src.headers?.[tab];
+      if (renames) text = renameLiveHeaders(text, renames);
       let csv = tab === 'unreleased'
         ? await mergeExtraUnreleasedTabs(artist, text, apiKey)
         : canonicalizeLiveHeaders(tab, text);

@@ -892,7 +892,7 @@ const SHEET_URLS: Record<string, string> = {
   wolfgold:   'https://docs.google.com/spreadsheets/d/19GJTNp7PxK1OtyVBmGelZSMm5i8Fy82EGtcFdIkBpsY/edit?gid=1246511510#gid=1246511510',
   drizzygold: 'https://docs.google.com/spreadsheets/d/1v55XAPLzw1iuWxH1OQKajCIYPhW2BXcLoV4mXDZ55DI/edit?gid=755606328#gid=755606328',
   frankgold:  'https://franktracker.net/',
-  xgold:      'https://docs.google.com/spreadsheets/d/1wKq7lSERmXYutRFxipNbFFc-DUdqhVXWWlFnqkzwRFA/edit?usp=sharing',
+  xgold:      'https://docs.google.com/spreadsheets/d/1vMEIba05N8zD2iSh_knAkAMzyrm9rtreu1NJeyNZj0I/edit',
   cactigold:  'https://docs.google.com/spreadsheets/d/1gJqbQrb3dIWF-PLMsKkNUrftpQb8zxsZFDAIpSvT5Fo/edit?gid=846204501#gid=846204501',
   kdotgold:   'https://docs.google.com/spreadsheets/d/1i4OQglDHiiqMDthqfUFPutGmpZzK7n63LaoWApqhQXI/edit?gid=1169728352#gid=1169728352',
   twizzygold: 'https://docs.google.com/spreadsheets/d/1FUzAZyTCgFTVxQ--qbCAS2bUk4dsAw6ASxwjURPHbyI',
