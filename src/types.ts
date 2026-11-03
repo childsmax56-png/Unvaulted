@@ -16,6 +16,7 @@ export interface Song {
   fakesType?: string;
   fakesLength?: string;
   subera?: string;
+  subera_note?: string;
   // Comment-thread context stamped on at play time so the mini player can open
   // the same per-entry thread as the row it was played from (see src/comments).
   commentTracker?: string;

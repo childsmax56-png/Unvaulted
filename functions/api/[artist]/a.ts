@@ -2,6 +2,7 @@ import { parseCSV, csvResponse, splitCSVRows, joinCSVRows } from './_csvParser';
 import { fetchTrackerCsv } from './_sheets';
 import { resolveCommunityTracker, buildCommunityTrackerData } from './_community';
 import { mapEraName } from './_eraNames';
+import { classifySuberaRows } from '../../../src/suberas';
 
 // Extract the URL from a Google Sheets HYPERLINK formula: =HYPERLINK("url","text") → url
 function extractHyperlinkUrl(cell: string): string {
@@ -22,6 +23,12 @@ function parseSongName(raw: string): { name: string; extra: string | undefined }
   const extra = raw.substring(newline).trim().replace(/^\n+/, '') || undefined;
   return { name, extra };
 }
+
+// Per-artist song-row era renames (see foldSongEra below).
+const ARTIST_SONG_ERA_FIXES: Record<string, Record<string, string>> = {
+  // two rows use the short name; the era's header is "SUPER SLIMEY 2 [V1]"
+  futuregold: { 'Super Slimey 2': 'SUPER SLIMEY 2 [V1]' },
+};
 
 // Per-artist ERA_ORDER for artists whose CSVs have eras in the wrong order.
 const ARTIST_ERA_ORDERS: Record<string, string[]> = {
@@ -406,7 +413,24 @@ export const onRequestGet: PagesFunction = async (context) => {
       s.length > 120 || /^\d{1,2}\/\d{1,2}\/\d{2,4}:/.test(s) || /^(Update Notes|Tracker Guidelines|Tracker News|Links|Changelogs?)$/i.test(s)
       // a bare date or member list in parentheses, e.g. frankgold "(June 4th, 2026)"
       || /^\(.*\)$/.test(s);
+    // futuregold marks songs whose era is uncertain with a trailing "*" on the
+    // song row ("Pluto*"); file them under the real era when "Pluto" exists as a
+    // header or on other song rows (a real "JOJI* [V1]" header keeps its own era).
+    // ARTIST_SONG_ERA_FIXES renames per-tracker song-row eras that ERA_NAME_MAP
+    // can't (it's shared, and these names are real eras on other trackers).
+    const songEraFixes = ARTIST_SONG_ERA_FIXES[artist] ?? {};
+    const knownEraNames = new Set(validEraNames);
     for (const row of rows) {
+      const era = collapseSpaces(row['Era'] ?? '').trim();
+      if (era && !era.includes('\n') && !era.endsWith('*')) knownEraNames.add(era);
+    }
+    const foldSongEra = (era: string): string => {
+      if (songEraFixes[era]) return songEraFixes[era];
+      const base = era.replace(/\s*\*$/, '');
+      return base !== era && !validEraNames.has(era) && knownEraNames.has(base) ? base : era;
+    };
+    for (const row of rows) {
+      if (row['Era'] && !row['Era'].includes('\n')) row['Era'] = foldSongEra(collapseSpaces(row['Era']).trim());
       const eraField = collapseSpaces(row['Era'] ?? '').trim();
       if (eraField && !eraField.includes('\n') && !/^\d+\s+(OG|Full|Tagged|Partial|Snippet|Unavailable)\b/i.test(eraField) && !isJunkEraText(eraField)) {
         validEraNames.add(eraField);
@@ -414,8 +438,11 @@ export const onRequestGet: PagesFunction = async (context) => {
       }
     }
 
+    // Subera banners (blank Era, section title in Name) that split an era into parts.
+    const { suberas } = classifySuberaRows(rows, { nameKey: NAME_KEY, notesKey: NOTES_KEY, mapEra: mapEraName });
+
     // Second pass: build eras and songs, ignoring anything outside known eras.
-    for (const row of rows) {
+    for (const [rowIdx, row] of rows.entries()) {
       const eraField = collapseSpaces(row['Era'] ?? '');
       const nameField = row[NAME_KEY] ?? '';
 
@@ -467,6 +494,8 @@ export const onRequestGet: PagesFunction = async (context) => {
           quality: row['Quality'] ?? '',
           url: links[0] ?? '',
           urls: links,
+          subera: suberas[rowIdx]?.name,
+          subera_note: suberas[rowIdx]?.note,
         });
       }
     }

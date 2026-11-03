@@ -116,6 +116,21 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   },
   // frankgold: its Google Sheet is gone (export HTTP 410) — read live from
   // franktracker.net's published tables instead (_franktracker.ts).
+  // futuregold: Released Discography is a credits list with no links and the
+  // Music Videos tab is an abandoned "Old Format" — both left out.
+  futuregold: {
+    sheetId: '1alPlu5jpMv5-HbyKkBX-gH5SC4QPZH90StbAaUA9o0k',
+    gids: {
+      unreleased: '610753461',
+      recent: '1932564138',
+      stems: '883254410',
+    },
+    // Some Unreleased/Recent links are label-only hyperlinks the export drops.
+    apiTitles: {
+      '610753461': '💿Unreleased',
+      '1932564138': '🆕Recent',
+    },
+  },
   yzygold: {
     sheetId: '12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM',
     gids: {
@@ -828,6 +843,33 @@ function unwrapSongEraCells(csv: string): string {
   return changed ? joinCSVRows(rows) : csv;
 }
 
+// Live Unreleased tabs aren't run through canonicalizeLiveHeaders (its aliases
+// are tuned for the side tabs), but a.ts reads a few columns by exact name: join
+// wrapped header words ("Leak\nDate") and name a Notes column whose header cell
+// is a bare link (futuregold's is its Discord invite). Only fills a canonical
+// name that's missing, so a tab that already has it is left alone.
+const UNRELEASED_HEADER_NAMES = new Set(['Leak Date', 'File Date', 'Track Length', 'Available Length']);
+
+function fixUnreleasedHeaders(csv: string): string {
+  const rows = splitCSVRows(csv);
+  const h = rows.findIndex(r => r.slice(0, 3).some(c => /^\s*(name|title)\b/i.test(c)));
+  if (h === -1) return csv;
+  const header = rows[h];
+  const present = new Set(header.map(c => c.trim()));
+  let changed = false;
+  rows[h] = header.map(cell => {
+    const c = cell.replace(/\s+/g, ' ').trim();
+    let target = c;
+    if (/^https?:\/\/\S+$/.test(c) && !header.some(x => /^\s*Notes\b/.test(x))) target = 'Notes';
+    else if (!UNRELEASED_HEADER_NAMES.has(c)) return cell;
+    if (target === cell || present.has(target)) return cell;
+    present.add(target);
+    changed = true;
+    return target;
+  });
+  return changed ? joinCSVRows(rows) : csv;
+}
+
 const isCountHeaderRow = (era: string): boolean =>
   era.includes('\n') && /\b(Full|Tagged|Partial|OG|Snippet|Unavailable)\b/i.test(era);
 
@@ -998,7 +1040,7 @@ function canonicalizeLiveHeaders(tab: string, csv: string): string {
       return hinted[1];
     }
     if (/^(Name|Notes)\b/.test(cell.trim())) return cell;
-    const target = tabAliases[c] ?? HEADER_ALIASES_ALL[c] ?? c;
+    const target = /^https?:\/\/\S+$/.test(c) ? 'Notes' : tabAliases[c] ?? HEADER_ALIASES_ALL[c] ?? c;
     if (target === cell) return cell;
     if (target !== c && present.has(target)) return cell;
     if (target === 'Name' && header.some(x => x.trim().startsWith('Name'))) return cell;
@@ -1116,6 +1158,7 @@ export async function resolveTrackerCsv(
       let csv = tab === 'unreleased'
         ? await mergeExtraUnreleasedTabs(artist, text, apiKey)
         : canonicalizeLiveHeaders(tab, text);
+      if (tab === 'unreleased') csv = fixUnreleasedHeaders(csv);
       if (tab === 'unreleased' && UNWRAP_SONG_ERA_ARTISTS.has(artist)) csv = unwrapSongEraCells(csv);
       return { text: csv, source: src.apiTitles?.[src.gids[tab]] ? 'sheets-api' : 'live', liveConfigured: true };
     } catch (err) {

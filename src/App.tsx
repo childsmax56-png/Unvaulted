@@ -240,6 +240,7 @@ import { initDataSync, scheduleDataPush } from './dataSync';
 import { recordListeningHistory } from './history';
 import { activeConfig } from './artists/activeConfig';
 import { reportBrokenLink } from './linkStatus';
+import { classifySuberaRows } from './suberas';
 
 // When viewing a community (user-built) tracker, attach the signed-in account's
 // token to our own /api/ data requests. This lets the creator/admin preview a
@@ -840,24 +841,16 @@ export default function App() {
       return keys[0];
     };
 
-    let lastEraName: string | null = null;
-    let currentSubera: string | undefined;
+    const { suberas } = classifySuberaRows(sheetData, {
+      nameKey, notesKey,
+      mapEra: era => ERA_MAPPINGS[Object.keys(ERA_MAPPINGS).find(k => k.toLowerCase() === era.toLowerCase()) ?? ''] ?? era,
+    });
 
-    sheetData.forEach((item: any) => {
+    sheetData.forEach((item: any, rowIdx: number) => {
       const rawEra = (item.Era || '').trim();
-      if (!rawEra) return;
-      // Era header rows (file count summaries, subera banners) have a multiline Era cell.
-      if (rawEra.includes('\n')) {
-        // File-count summary rows look like "12 OG File(s)\n5 Full\n...\n3 Unavailable" —
-        // a subera banner instead has no song name and isn't a count row, e.g.
-        // "BULLY - DELUXE\n(03/28/2026) (BULLY officialy releases)".
-        const isFileCountRow = /File\(s\)|Stem Bounce|Total Links/i.test(rawEra);
-        const nameVal = (item[nameKey] || '').trim();
-        if (!isFileCountRow && !nameVal) {
-          currentSubera = rawEra.split('\n')[0].trim();
-        }
-        return;
-      }
+      // Blank-Era rows and multi-line Era rows are era headers / subera banners,
+      // handled by classifySuberaRows above.
+      if (!rawEra || rawEra.includes('\n')) return;
 
       const rawName = (item[nameKey] || '').trim();
       const nameLines = rawName.split('\n');
@@ -868,10 +861,6 @@ export default function App() {
 
       const matchedMapKey = Object.keys(ERA_MAPPINGS).find(k => k.toLowerCase() === rawEra.toLowerCase());
       const eraName = matchedMapKey ? ERA_MAPPINGS[matchedMapKey] : rawEra;
-      if (eraName !== lastEraName) {
-        currentSubera = undefined;
-        lastEraName = eraName;
-      }
       if (!targetJson.eras) targetJson.eras = {};
       if (!targetJson.eras[eraName]) {
         // Only create eras that are in the known era list — prevents changelog/garbage
@@ -899,7 +888,8 @@ export default function App() {
         quality: item.Quality || '',
         url: rawUrl,
         urls: cellLinks.length > 0 ? cellLinks : rawUrl ? [rawUrl] : [],
-        subera: currentSubera,
+        subera: suberas[rowIdx]?.name,
+        subera_note: suberas[rowIdx]?.note,
       };
 
       const categories = targetJson.eras[eraName].data || {};
@@ -931,12 +921,17 @@ export default function App() {
       const sameByBaseName = (s: Song) =>
         !!baseName && stripVersionTags(s.name) === baseName && normalizeCredits(s.extra) === extraNorm;
 
+      // The live row may sit outside the snapshot's subera banner (or the live
+      // sheet may lack one), so keep the snapshot's banner when the row has none.
+      const keepSubera = (next: Song, prev: Song): Song =>
+        next.subera || !prev.subera ? next : { ...next, subera: prev.subera, subera_note: prev.subera_note };
+
       // Try each strategy in turn; replace the first matching entry in place.
       let replaced = false;
       for (const match of [sameByUrl, sameByExactName]) {
         for (const list of Object.values(categories) as Song[][]) {
           const idx = list.findIndex(match);
-          if (idx !== -1) { list[idx] = newSong; replaced = true; break; }
+          if (idx !== -1) { list[idx] = keepSubera(newSong, list[idx]); replaced = true; break; }
         }
         if (replaced) break;
       }
@@ -948,7 +943,7 @@ export default function App() {
           list.forEach((s, idx) => { if (sameByBaseName(s)) candidates.push({ list, idx }); });
         }
         if (candidates.length === 1) {
-          candidates[0].list[candidates[0].idx] = newSong;
+          candidates[0].list[candidates[0].idx] = keepSubera(newSong, candidates[0].list[candidates[0].idx]);
           replaced = true;
         }
       }

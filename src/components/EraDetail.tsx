@@ -25,6 +25,7 @@ import { useDeadLinks, isDeadLink } from '../linkStatus';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { usePlaylists } from '../PlaylistContext';
 import { useIsClamped } from '../hooks/useIsClamped';
+import { SuberaBanner } from './SuberaBanner';
 
 function normalizeName(name: string): string {
   return name
@@ -1001,9 +1002,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                     return (
                       <Fragment key={i}>
                       {showSuberaBanner && (
-                        <div className="bg-white/10 text-center text-xs font-bold uppercase tracking-wider text-white/80 py-2 mb-2 rounded">
-                          {song.subera}
-                        </div>
+                        <SuberaBanner name={song.subera} note={song.subera_note} className={i > 0 ? 'mt-4' : ''} />
                       )}
                       <div
                         onClick={() => {

@@ -917,7 +917,7 @@ const SHEET_URLS: Record<string, string> = {
   teccagold:  'https://docs.google.com/spreadsheets/d/15UwihAVwPeS6eIE1FE1J6v7xiBYFkculVrzhMSIcEew/edit?gid=0#gid=0',
   macgold:    'https://docs.google.com/spreadsheets/d/17TycQCSpIm-6DyWId4ve8fVaM7Ewg3lgV1DDNRwauh0/edit?gid=1466156873#gid=1466156873',
   smokegold:  'https://docs.google.com/spreadsheets/d/1-Kd8molYeR1WpmWR81DqmSCGng3g-AVmZfgd752kh3M/edit#gid=0',
-  futuregold: 'https://docs.google.com/spreadsheets/d/1OGAthACjwPcq3vHIVTAoaT8blFXjyBLtVcP0m5u80-U/edit',
+  futuregold: 'https://docs.google.com/spreadsheets/d/1alPlu5jpMv5-HbyKkBX-gH5SC4QPZH90StbAaUA9o0k/edit',
   gorillazgold: 'https://docs.google.com/spreadsheets/d/1jauTeMKDULPud0hGD-gPeD-HM70HiBSedrLyOyAqUh0/edit?gid=339324838#gid=339324838',
   cudigold:   'https://docs.google.com/spreadsheets/d/1fj9HcbyLbu5NGwJzbl1lExQud3FNKv-JUU6NY4OKM9Y/edit',
   rihannagold: 'https://docs.google.com/spreadsheets/d/1HMqjw55sCPUGyI_UBc-JcO881FHzUTX08NvQY9oa61k/edit',
