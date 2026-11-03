@@ -1,4 +1,5 @@
 import { parseCSV, csvResponse } from './_csvParser';
+import { fetchTrackerCsv } from './_sheets';
 
 function parseSongName(raw: string): { name: string; extra: string | undefined } {
   const newline = raw.indexOf('\n');
@@ -121,18 +122,13 @@ const ERA_ORDER = [
   'Hot Water',
 ];
 
-const isCsvText = (t: string) => !t.trimStart().startsWith('<');
-
 export const onRequestGet: PagesFunction = async (context) => {
   try {
     const url = new URL(context.request.url);
     const artist = (context.params as Record<string, string>).artist ?? 'dregold';
-    const csvUrl = `${url.origin}/${artist}/data/unreleased-production.csv`;
-
-    const res = await fetch(csvUrl);
-    if (!res.ok) return new Response('CSV not found', { status: 404 });
-    const text = await res.text();
-    if (!isCsvText(text)) return new Response('CSV not found', { status: 404 });
+    // Live "Unreleased (Production Projects)" tab, falling back to the committed CSV.
+    const text = await fetchTrackerCsv(url.origin, artist, 'unreleased-production', context.env as Env, context.request);
+    if (text === null) return new Response('CSV not found', { status: 404 });
 
     const rows = parseCSV(text);
     const NAME_KEY = 'Name';

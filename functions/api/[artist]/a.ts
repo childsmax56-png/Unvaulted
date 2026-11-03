@@ -339,11 +339,16 @@ export const onRequestGet: PagesFunction = async (context) => {
     // an Era field and the tracker builds 0 songs.
     const allRows = splitCSVRows(text);
     const headerIdx = allRows.findIndex(r =>
-      r.slice(0, 3).some(c => /^\s*(name|title)\b/i.test(c)) && r.some(c => /link|source/i.test(c)));
+      r.slice(0, 3).some(c => /^\s*(name|title)\b|^\s*track\s*$/i.test(c)) && r.some(c => /link|source/i.test(c)));
     let csvText = text;
     if (headerIdx >= 0) {
       const header = [...allRows[headerIdx]];
       header[0] = 'Era';
+      // jojigold's live sheet calls the song column "Track".
+      if (!header.some(c => /^\s*(name|title)\b/i.test(c))) {
+        const trackIdx = header.findIndex(c => /^\s*track\s*$/i.test(c));
+        if (trackIdx > 0) header[trackIdx] = 'Name';
+      }
       csvText = joinCSVRows([header, ...allRows.slice(headerIdx + 1)]);
     }
 

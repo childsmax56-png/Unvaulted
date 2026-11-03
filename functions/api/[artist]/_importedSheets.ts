@@ -207,6 +207,31 @@ const IMPORTED_SOURCES: Record<string, ImportedSource> = {
       fakes: t('515726586', 'fakes'),
     },
   },
+
+  // Single tabs of trackers otherwise served by SHEET_SOURCES (_sheets.ts) whose
+  // committed CSV was built by the importer from a different sheet tab: their
+  // sheets have no Recent tab (the importer took the newest dated Unreleased
+  // rows), and gibbsgold's Released tab is the sheet's "Mixtapes" tab.
+  coldplaygold: {
+    sheetId: '1i4xfiqtONMps_FL9n_2O5UmpKKio6HUCh5y6zQniyPk',
+    tabs: { recent: t('0', 'recent-from-unreleased') },
+  },
+  dannybrowngold: {
+    sheetId: '1ybtg3wbiB63eHKGv8_ZFek3qQIoRbB8DUYAWObfeDZI',
+    tabs: { recent: t('321437127', 'recent-from-unreleased') },
+  },
+  jamesblakegold: {
+    sheetId: '1_bPMUWLNzeMY0CtVEE3PHkuCsZL80wnA-6joAUfx7p4',
+    tabs: { recent: t('2092886681', 'recent-from-unreleased') },
+  },
+  westsidegold: {
+    sheetId: '1_dFPF4tSdIuwRUj_UXUFz5qeNVJm-9lCl3zhIGXt0wI',
+    tabs: { recent: t('1783689060', 'recent-from-unreleased') },
+  },
+  gibbsgold: {
+    sheetId: '1CCe1DI9VIp0J4MQyTsdMuOriZ9ucmCVMw6nS9j8e4N0',
+    tabs: { released: t('748135090', 'released') },
+  },
 };
 
 // Per-tracker era-name fixes (same table as ERA_FIXES in the importer).

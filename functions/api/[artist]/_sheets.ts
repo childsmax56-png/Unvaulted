@@ -21,7 +21,9 @@ interface SheetSource {
   // Download-disabled sheets 401 on the CSV export, so their tabs are read through
   // the Sheets API instead (gid → tab title, the API's `ranges` key) and rebuilt
   // into the same raw CSV the export gave, with hyperlink hrefs swapped in for
-  // label-only link cells. Needs env.GOOGLE_SHEETS_API_KEY.
+  // label-only link cells. Needs env.GOOGLE_SHEETS_API_KEY. Gids without a title
+  // here still use the plain export, so one label-link tab can go through the API
+  // while the rest of the sheet keeps exporting.
   apiTitles?: Record<string, string>;
 }
 
@@ -32,13 +34,13 @@ interface SheetSource {
 const SHEET_SOURCES: Record<string, SheetSource> = {
   // Download-disabled / label-link sheets read through the Sheets API (apiTitles),
   // enrolled per tab only where the live links match or beat the committed CSV.
-  // Held back (committed CSV): jojigold unreleased (Track/Links layout a.ts can't
-  // parse), juicegold unreleased/released/recent + kengold unreleased/released/
+  // Held back (committed CSV): jojigold fakes (live has fewer links), juicegold unreleased/released/recent + kengold unreleased/released/
   // recent/stems (the committed links are merged pixeldrain/lastshare copies; the
   // sheet has froste/exoshare links the player can't stream).
   jojigold: {
     sheetId: '1FPlWbXnx94y5FODJ2qniLf0BzViNSAmj6Xdfw1ZNwQ4',
     gids: {
+      unreleased: '990933532',
       released: '108045339',
       recent: '583378522',
       stems: '1821222349',
@@ -47,6 +49,7 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '1419046321',
     },
     apiTitles: {
+      '990933532': 'Unreleased',
       '108045339': 'Released',
       '583378522': '📆 Recent',
       '1821222349': '🌱 Stems',
@@ -321,6 +324,10 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   dregold: {
     sheetId: '10_QK8xP-WCdrfO6RaIkhdDtYUXaM966e6D1xWD__iIo',
     gids: {
+      // "Unreleased (Main Projects/Collaborations)"; a.ts falls back to the
+      // committed unreleased-main.csv. production.ts reads the Production Projects tab.
+      unreleased: '1520634709',
+      'unreleased-production': '1543029106',
       released: '197122594',
       art: '1835098630',
       stems: '1977589904',
@@ -406,19 +413,29 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
   gorillazgold: {
     sheetId: '1jauTeMKDULPud0hGD-gPeD-HM70HiBSedrLyOyAqUh0',
     gids: {
+      unreleased: '339324838',
+      released: '838739184',
       stems: '2144277951',
       tracklists: '710536063',
       art: '502377677',
+    },
+    // Unreleased/Released links are label-only hyperlinks the CSV export drops.
+    apiTitles: {
+      '339324838': 'Unreleased',
+      '838739184': 'Released & Not on Streaming',
     },
   },
   cudigold: {
     sheetId: '1fj9HcbyLbu5NGwJzbl1lExQud3FNKv-JUU6NY4OKM9Y',
     gids: {
+      unreleased: '1792554832',
       released: '1763054298',
       stems: '1395107855',
       misc: '1538684847',
       art: '632168101',
     },
+    // Unreleased links are label-only hyperlinks the CSV export drops.
+    apiTitles: { '1792554832': 'Unreleased' },
   },
   jayzgold: {
     sheetId: '18GwItf2M92QimNMAbUCfFsxCkiHlkf8DPJPLWHAcoxQ',
@@ -791,6 +808,25 @@ const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
   yecomgold: ['1333371598'],
 };
 
+// jojigold's live Unreleased tab hard-wraps long Era cells on song rows
+// ("Head In\nThe Clouds"), and a.ts reads any multi-line Era cell as an era
+// header — so each of those songs turned into its own empty era. Its real
+// headers always carry digit file counts, so unwrap the digit-free ones.
+const UNWRAP_SONG_ERA_ARTISTS = new Set(['jojigold']);
+
+function unwrapSongEraCells(csv: string): string {
+  const rows = splitCSVRows(csv);
+  let changed = false;
+  for (const row of rows) {
+    const era = row[0] ?? '';
+    if (era.includes('\n') && !/\d/.test(era)) {
+      row[0] = era.replace(/\s+/g, ' ').trim();
+      changed = true;
+    }
+  }
+  return changed ? joinCSVRows(rows) : csv;
+}
+
 const isCountHeaderRow = (era: string): boolean =>
   era.includes('\n') && /\b(Full|Tagged|Partial|OG|Snippet|Unavailable)\b/i.test(era);
 
@@ -858,8 +894,7 @@ function remapRowToBaseHeader(baseHeaders: string[], extraHeaders: string[], row
 // (reported by the admin health dashboard).
 async function fetchSheetTabCsv(src: SheetSource, gid: string, apiKey: string | undefined): Promise<string> {
   const title = src.apiTitles?.[gid];
-  if (src.apiTitles) {
-    if (!title) throw new Error(`no API tab title for gid ${gid}`);
+  if (title) {
     if (!apiKey) throw new Error('GOOGLE_SHEETS_API_KEY not set');
     const rows = await fetchApiRows(src.sheetId, title, apiKey);
     if (!rows) throw new Error('Sheets API request failed');
@@ -1065,10 +1100,11 @@ export async function resolveTrackerCsv(
         tab === 'art' ? fetchSheetRowImages(src.sheetId, src.gids[tab]).catch(() => null) : null,
       ]);
       const text = images ? joinCSVRows(fillRowsWithImages(splitCSVRows(rawText), images)) : rawText;
-      const csv = tab === 'unreleased'
+      let csv = tab === 'unreleased'
         ? await mergeExtraUnreleasedTabs(artist, text, apiKey)
         : canonicalizeLiveHeaders(tab, text);
-      return { text: csv, source: src.apiTitles ? 'sheets-api' : 'live', liveConfigured: true };
+      if (tab === 'unreleased' && UNWRAP_SONG_ERA_ARTISTS.has(artist)) csv = unwrapSongEraCells(csv);
+      return { text: csv, source: src.apiTitles?.[src.gids[tab]] ? 'sheets-api' : 'live', liveConfigured: true };
     } catch (err) {
       errors.push(err instanceof Error ? err.message : String(err));
     }
