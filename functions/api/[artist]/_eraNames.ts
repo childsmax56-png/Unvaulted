@@ -78,6 +78,8 @@ export const ERA_NAME_MAP: Record<string, string> = {
   // uzigold — the live sheet renamed/de-accented these eras
   'Delta Pink [V1]': 'Pink Tape [V1]',
   'Super geeky': 'Super gëëky',
+  // frankgold — franktracker.net dropped the space
+  'nostalgia,ULTRA.': 'nostalgia, ULTRA.',
 };
 
 export function mapEraName(name: string): string {

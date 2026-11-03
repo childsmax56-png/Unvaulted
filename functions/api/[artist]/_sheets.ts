@@ -2,6 +2,7 @@ import { getCommunityTrackerCsv } from './_community';
 import { fetchSheetApiCsv, getSheetApiTabRef, hasSheetApiSource } from './_sheetsApi';
 import { fetchApiRows, fetchImportedCsv, getImportedTabRef, hasImportedSource } from './_importedSheets';
 import { splitCSVRows, joinCSVRows } from './_csvParser';
+import { fetchSiteCsv, hasSiteSource } from './_franktracker';
 import { fetchSheetRowImages, fillRowsWithImages } from './_htmlview';
 
 // Live Google Sheet fallback for trackers that don't ship committed CSVs.
@@ -113,8 +114,8 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       stems: '196376179',
     },
   },
-  // frankgold: its Google Sheet is gone (export HTTP 410) — served from the committed
-  // CSVs scraped from franktracker.net's static mirror, so no live source.
+  // frankgold: its Google Sheet is gone (export HTTP 410) — read live from
+  // franktracker.net's published tables instead (_franktracker.ts).
   yzygold: {
     sheetId: '12nGHPPh5dVTfLuBLVQYzC3QgPxKfvp-jgCoNccvEasM',
     gids: {
@@ -1064,8 +1065,20 @@ export async function resolveTrackerCsv(
   if (community !== null) return { text: community, source: 'community', liveConfigured: false };
 
   const errors: string[] = [];
+  const siteConfigured = hasSiteSource(artist, tab);
   const apiConfigured = hasSheetApiSource(artist, tab);
   const importedConfigured = hasImportedSource(artist, tab);
+
+  // Trackers whose sheet is gone but whose tracker site still publishes the
+  // tabs as HTML tables (frankgold → franktracker.net; see _franktracker.ts).
+  if (siteConfigured) {
+    try {
+      const csv = canonicalizeLiveHeaders(tab, await fetchSiteCsv(artist, tab));
+      return { text: csv, source: 'live', liveConfigured: true };
+    } catch (err) {
+      errors.push(err instanceof Error ? err.message : String(err));
+    }
+  }
 
   // Trackers added by scripts/build-bigupdate-csvs.py: fetch the raw tab and run
   // the importer's normalization live (see _importedSheets.ts).
@@ -1110,7 +1123,7 @@ export async function resolveTrackerCsv(
     }
   }
 
-  const liveConfigured = apiConfigured || importedConfigured || !!remote;
+  const liveConfigured = siteConfigured || apiConfigured || importedConfigured || !!remote;
   const liveError = errors.length ? errors.join('; ') : undefined;
 
   // Committed static CSV snapshot (fallback, or the sole source for unconfigured tabs).
