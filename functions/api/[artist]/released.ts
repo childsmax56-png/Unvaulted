@@ -1,5 +1,6 @@
 import { parseCSV, csvResponse } from './_csvParser';
 import { fetchTrackerCsv } from './_sheets';
+import { classifySuberaRows } from '../../../src/suberas';
 
 const VALID_TYPES = new Set(['Feature', 'Production', 'Single', 'Album Track', 'Mixtape Track', 'EP Track', 'Other']);
 
@@ -44,8 +45,15 @@ export const onRequestGet: PagesFunction = async (context) => {
     }
     return out;
   });
+  // Stamp each song with its subera banner before the banner rows (no Type) are filtered out.
+  const nameKey = Object.keys(rows[0] ?? {}).find(k => k.startsWith('Name')) ?? 'Name';
+  const { suberas } = classifySuberaRows(rows, { nameKey });
   const filtered = rows
-    .map(row => ({ ...row, Type: normalizeType(row['Type'] || '') }))
+    .map((row, i) => ({
+      ...row,
+      Type: normalizeType(row['Type'] || ''),
+      ...(suberas[i] ? { subera: suberas[i]!.name, subera_note: suberas[i]!.note ?? '' } : {}),
+    }))
     .filter(row => VALID_TYPES.has(row['Type']));
 
   return csvResponse(filtered);

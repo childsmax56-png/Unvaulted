@@ -1,5 +1,6 @@
 import { parseCSV, csvResponse } from './_csvParser';
 import { fetchTrackerCsv } from './_sheets';
+import { classifySuberaRows, type Subera } from '../../../src/suberas';
 
 // Split a "Name\n(subtitle)" cell into its display name and optional extra line.
 function firstLine(raw: string): { name: string; extra?: string } {
@@ -28,6 +29,8 @@ interface Copy {
   quality: string;
   url: string;
   urls: string[];
+  subera?: string;
+  subera_note?: string;
 }
 
 interface EraGroup {
@@ -99,7 +102,11 @@ export const onRequestGet: PagesFunction = async (context) => {
       return eraByName[name];
     };
 
-    const addCopy = (era: EraGroup, row: Record<string, string>, name: string, extra?: string) => {
+    // Subera banners share the header rows' blank-Era shape; tell them apart so a
+    // banner doesn't start a new era (see src/suberas.ts).
+    const { kinds, suberas } = classifySuberaRows(rows, { nameKey: NAME_KEY, notesKey: NOTES_KEY });
+
+    const addCopy = (era: EraGroup, row: Record<string, string>, name: string, extra?: string, subera?: Subera) => {
       const links = (row[LINK_KEY] ?? '')
         .split('\n')
         .map((l) => l.trim())
@@ -115,14 +122,17 @@ export const onRequestGet: PagesFunction = async (context) => {
         quality: (row[QUALITY_KEY] ?? '').trim(),
         url: links[0] ?? '',
         urls: links,
+        subera: subera?.name,
+        subera_note: subera?.note,
       });
     };
 
     let currentEra: EraGroup | null = null;
 
-    for (const row of rows) {
+    for (const [rowIdx, row] of rows.entries()) {
       const eraField = (row['Era'] ?? '').trim();
       const { name, extra } = firstLine(row[NAME_KEY] ?? '');
+      if (kinds[rowIdx] === 'subera') continue;
 
       if (hasHeaderRows) {
         if (eraField === '' && name) {
@@ -137,13 +147,13 @@ export const onRequestGet: PagesFunction = async (context) => {
           currentEra = getEra(eraField);
         }
         if (!name) continue; // placeholder row with no copy
-        addCopy(currentEra, row, name, extra);
+        addCopy(currentEra, row, name, extra, suberas[rowIdx]);
       } else {
         // Flat layout — group by the Era column; skip file-count summary rows.
         if (!eraField || isFileCountEra(row['Era'] ?? '')) continue;
         const era = getEra(eraField);
         if (!name) continue; // era placeholder with no copy yet
-        addCopy(era, row, name, extra);
+        addCopy(era, row, name, extra, suberas[rowIdx]);
       }
     }
 

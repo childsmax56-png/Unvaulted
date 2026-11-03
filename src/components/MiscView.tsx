@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Fragment } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle } from './SongTitle';
@@ -15,6 +15,8 @@ import { CommentButton } from './CommentButton';
 import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { classifySuberaRows } from '../suberas';
+import { SuberaBanner } from './SuberaBanner';
 
 export interface MiscEntry {
   Era: string;
@@ -71,7 +73,9 @@ function parseMiscToEras(miscData: MiscEntry[], allEras: Era[]): { eraName: stri
     } catch { return d; }
   };
 
-  for (const item of miscData) {
+  const { suberas } = classifySuberaRows(miscData as unknown as Record<string, unknown>[], { nameKey: 'Name' });
+
+  for (const [rowIdx, item] of miscData.entries()) {
     const isBrokenEra = typeof item.Era === 'string' && (item.Era.includes('OG File') || item.Era.includes('Unavailable') || /^\d+ tracks$/.test(item.Era.trim()));
     const isEraHeader = (!item.Era || isBrokenEra) && item.Name && (typeof item["File Date"] === 'object' || typeof item["Date Made"] === 'object');
 
@@ -108,6 +112,8 @@ function parseMiscToEras(miscData: MiscEntry[], allEras: Era[]): { eraName: stri
         quality: typeof item.Quality === 'string' ? item.Quality : '',
         url: links.length > 0 ? links[0] : '',
         urls: links,
+        subera: suberas[rowIdx]?.name,
+        subera_note: suberas[rowIdx]?.note,
       };
 
       songsByEra[eraName].push(song);
@@ -483,9 +489,12 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                   const isCurrentlyPlaying = (currentSong?.url && song.url && currentSong.url === song.url) ||
                     (currentSong?.urls && song.urls && currentSong.urls.length > 0 && song.urls.length > 0 && currentSong.urls[0] === song.urls[0]);
 
+                  const showSubera = !!song.subera && song.subera !== filteredSongs[i - 1]?.subera;
+
                   return (
+                    <Fragment key={i}>
+                    {showSubera && <SuberaBanner name={song.subera!} note={song.subera_note} className={i > 0 ? 'mt-4' : ''} />}
                     <div
-                      key={i}
                       onClick={() => !isEmpty && onPlaySong(stampSongComment(song, { tracker: activeConfig.slug, type: 'Misc', era: selectedEra || '' }), dummyEra, allPlayableSongs)}
                       className={`group flex items-center px-4 py-2.5 rounded-md transition-colors ${isEmpty ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white/5 cursor-pointer'} ${isCurrentlyPlaying ? 'bg-white/5' : ''}`}
                     >
@@ -580,6 +589,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         />
                       </div>
                     </div>
+                    </Fragment>
                   );
                 })}
               </div>

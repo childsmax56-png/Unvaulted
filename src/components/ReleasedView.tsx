@@ -17,6 +17,7 @@ import { CommentButton } from './CommentButton';
 import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { SuberaBanner } from './SuberaBanner';
 
 export interface ReleasedEntry {
   Era: string;
@@ -34,6 +35,9 @@ export interface ReleasedEntry {
   Link?: string;
   'Track Length'?: string;
   'Release\nDate'?: string;
+  // Stamped by /api/{slug}/released from the sheet's subera banner rows.
+  subera?: string;
+  subera_note?: string;
 }
 
 interface ReleasedViewProps {
@@ -359,8 +363,11 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
             const trackLength = track.Length || track['Track Length'] || '';
             const releaseDate = track['Release Date'] || track['Release\nDate'] || '';
 
+            const showSubera = !!track.subera && track.subera !== filteredTracks[trackIdx - 1]?.subera;
+
             return (
               <div key={trackIdx} className="border-b border-white/5 last:border-0">
+                {showSubera && <SuberaBanner name={track.subera!} note={track.subera_note || undefined} className={trackIdx > 0 ? 'mt-4' : 'mt-2'} />}
                 {/* track row */}
                 <div className="flex items-center px-4 py-3 hover:bg-white/[0.03] transition-colors group">
                   <div className="w-8 shrink-0 text-sm font-mono text-white/30 group-hover:text-white/50">

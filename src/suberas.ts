@@ -19,6 +19,7 @@ export type RowKind = 'era-header' | 'subera' | 'song' | 'other';
 export interface SuberaOptions {
   eraKey?: string;
   nameKey: string;
+  // Defaults to the first column titled "Notes…" (or "Info").
   notesKey?: string;
   // Maps a sheet era name to its canonical name, so headers titled with the
   // long name still match song rows that use the short one.
@@ -31,13 +32,19 @@ const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 // Banner-shaped rows that are sheet chrome, not sections.
 const JUNK = /discord|contribute|editors don|inquir|playlist for|re-?up soon|not supposed to see|tracker website|to view only/i;
 
-// "12 OG File(s)\n5 Full\n…" stats cells on era header rows.
+// "12 OG File(s)\n5 Full\n…" stats cells on era header rows. The tab views see
+// them flattened onto one line ("6 Full 0 Tagged …", App.tsx normalizeEraField),
+// so the single-line form needs a stat word to avoid catching eras like "4 Your Eyez Only".
+const COUNT_LINE = /^\d+\s+(OG|Full|Tagged|Partial|Snippets?|Unavailable|Stems?|Total|Released|Unreleased|Instrumentals?|Acapellas?|Mixtapes?|Albums?|Songs?|Tracks?|Videos?|Copies|Singles?|Features?)\b/i;
 const isCountCell = (era: string) =>
-  /File\(s\)|Stem Bounce|Total Links/i.test(era) || era.split('\n').some(l => /^\d+\s+\S/.test(l.trim()));
+  /File\(s\)|Stem Bounce|Total Links/i.test(era) ||
+  (era.includes('\n') ? era.split('\n').some(l => /^\d+\s+\S/.test(l.trim())) : COUNT_LINE.test(era));
 
 export function classifySuberaRows(rows: Record<string, unknown>[], opts: SuberaOptions): { kinds: RowKind[]; suberas: (Subera | undefined)[] } {
   const eraKey = opts.eraKey ?? 'Era';
   const mapEra = opts.mapEra ?? ((e: string) => e);
+  const headerKeys = rows.length > 0 ? Object.keys(rows[0]) : [];
+  const notesKey = opts.notesKey ?? headerKeys.find(k => /^notes/i.test(k.trim())) ?? headerKeys.find(k => k.trim() === 'Info');
   const kinds: RowKind[] = new Array(rows.length).fill('other');
   const suberas: (Subera | undefined)[] = new Array(rows.length).fill(undefined);
 
@@ -46,17 +53,23 @@ export function classifySuberaRows(rows: Record<string, unknown>[], opts: Subera
   for (let i = rows.length - 1; i >= 0; i--) {
     const era = str(rows[i][eraKey]).trim();
     const name = str(rows[i][opts.nameKey]).trim();
-    nextSongEra[i] = era && !era.includes('\n') && name ? era : nextSongEra[i + 1];
+    nextSongEra[i] = era && !era.includes('\n') && !isCountCell(era) && name ? era : nextSongEra[i + 1];
   }
 
   let current: (Subera & { era: string }) | undefined;
+  // A subera banner sits inside an era: below a song of the same era, or right
+  // under the era's header. A banner at an era boundary with no header above it
+  // is the era header itself, titled slightly differently from its song rows
+  // ("Purple Swag" over "Purple Swagg" rows).
+  let prevSongEra: string | undefined;
+  let afterHeader = false;
 
   rows.forEach((row, i) => {
     const era = str(row[eraKey]).trim();
     const name = str(row[opts.nameKey]).trim();
-    const note = opts.notesKey ? str(row[opts.notesKey]).trim() : '';
+    const note = notesKey ? str(row[notesKey]).trim() : '';
 
-    if (era.includes('\n')) {
+    if (era.includes('\n') || isCountCell(era)) {
       const followingEra = nextSongEra[i + 1];
       if (!name && !isCountCell(era) && followingEra && !JUNK.test(era)) {
         const [title, ...rest] = era.split('\n');
@@ -65,6 +78,7 @@ export function classifySuberaRows(rows: Record<string, unknown>[], opts: Subera
       } else {
         current = undefined;
         kinds[i] = 'era-header';
+        afterHeader = true;
       }
       return;
     }
@@ -77,9 +91,11 @@ export function classifySuberaRows(rows: Record<string, unknown>[], opts: Subera
       const followingEra = nextSongEra[i + 1];
       if (!followingEra || title.length > 120 || JUNK.test(name)) return;
       const t = norm(title);
-      if (t === norm(followingEra) || t === norm(mapEra(followingEra)) || norm(mapEra(title)) === norm(mapEra(followingEra))) {
+      const titleIsEra = t === norm(followingEra) || t === norm(mapEra(followingEra)) || norm(mapEra(title)) === norm(mapEra(followingEra));
+      if (titleIsEra || (!afterHeader && prevSongEra !== followingEra)) {
         current = undefined;
         kinds[i] = 'era-header';
+        afterHeader = true;
         return;
       }
       current = { name: title.trim(), note: note || extra.join('\n').trim() || undefined, era: followingEra };
@@ -89,6 +105,8 @@ export function classifySuberaRows(rows: Record<string, unknown>[], opts: Subera
 
     if (!name) return;
     kinds[i] = 'song';
+    prevSongEra = era;
+    afterHeader = false;
     if (current && current.era !== era) current = undefined;
     if (current) suberas[i] = { name: current.name, note: current.note };
   });

@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { ArrowLeft, ExternalLink, Play, Volume2, X, Star, Share2, Download } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Fragment } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, createSlug, isSongNotAvailable, looksLikeRealLink, matchesFilters, CUSTOM_IMAGES, parseNoteDescription , Img} from '../utils';
 import { SongTitle } from './SongTitle';
 import { FakesEntry } from '../App';
@@ -11,6 +11,8 @@ import { CommentButton } from './CommentButton';
 import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { classifySuberaRows } from '../suberas';
+import { SuberaBanner } from './SuberaBanner';
 
 interface FakesViewProps {
   eras: Era[];
@@ -36,9 +38,12 @@ function parseFakesToEras(fakesData: FakesEntry[], allEras: Era[]) {
   const fakesByEra: Record<string, FakesEntry[]> = {};
   const mappingBack: Record<string, string> = {};
 
-  for (const item of fakesData) {
-    if (!item.Era || !item.Name) continue;
-    
+  const { suberas } = classifySuberaRows(fakesData as unknown as Record<string, unknown>[], { nameKey: 'Name' });
+
+  for (const [rowIdx, row] of fakesData.entries()) {
+    if (!row.Era || !row.Name) continue;
+    const item: FakesEntry = suberas[rowIdx] ? { ...row, subera: suberas[rowIdx]!.name, subera_note: suberas[rowIdx]!.note } : row;
+
     const standardEraName = ERA_MAPPINGS[item.Era] || item.Era;
     
     if (!fakesByEra[standardEraName]) {
@@ -210,6 +215,8 @@ export function FakesView({ eras, fakesData, searchQuery, filters, onPlaySong, c
          track_length: undefined,
          fakesType: f.Type,
          fakesLength: f["Available Length"] === 'Not Available' ? '' : f["Available Length"],
+         subera: f.subera,
+         subera_note: f.subera_note,
        };
        return stampSongComment(song, { tracker: activeConfig.slug, type: 'Fakes', era: selectedEraData?.eraName || '' });
      });
@@ -354,9 +361,12 @@ export function FakesView({ eras, fakesData, searchQuery, filters, onPlaySong, c
                   const isCurrentlyPlaying = (currentSong?.url && song.url && currentSong.url === song.url);
                   const isStarred = favoriteKeys.some(k => k.songName === song.name && k.url === rawUrl);
 
+                  const showSubera = !!song.subera && song.subera !== fakesAsSongs[i - 1]?.subera;
+
                   return (
+                     <Fragment key={i}>
+                     {showSubera && <SuberaBanner name={song.subera!} note={song.subera_note} className={i > 0 ? 'mt-4' : ''} />}
                      <div
-                        key={i}
                         onClick={() => !isEmpty && onPlaySong(song, dummyEra, allPlayableFakes)}
                         className={`group flex items-center px-4 py-2.5 rounded-md transition-colors ${isEmpty ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white/5 cursor-pointer'} ${isCurrentlyPlaying ? 'bg-white/5' : ''}`}
                      >
@@ -422,6 +432,7 @@ export function FakesView({ eras, fakesData, searchQuery, filters, onPlaySong, c
                           />
                         </div>
                      </div>
+                     </Fragment>
                   );
                 })}
               </div>

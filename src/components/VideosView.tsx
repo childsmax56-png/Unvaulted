@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback, Fragment } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { ArrowLeft, ExternalLink, ChevronDown, ChevronUp, Film, Maximize2, Minimize2, X } from 'lucide-react';
@@ -9,6 +9,8 @@ import { CommentButton } from './CommentButton';
 import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { classifySuberaRows } from '../suberas';
+import { SuberaBanner } from './SuberaBanner';
 
 export interface VideoRawEntry {
   Era: string;
@@ -33,6 +35,8 @@ interface VideoEntry {
   quality: string;
   links: string[];
   section: 'Unreleased' | 'Released';
+  subera?: string;
+  subera_note?: string;
 }
 
 interface VideoEraGroup {
@@ -148,9 +152,13 @@ function parseVideosData(rows: VideoRawEntry[], allEras: Era[]): VideoEraGroup[]
   const eraGroups: Record<string, { unreleased: VideoEntry[]; released: VideoEntry[] }> = {};
   const eraOrder: string[] = [];
 
-  for (const row of rows) {
+  const { suberas } = classifySuberaRows(rows as unknown as Record<string, unknown>[], { nameKey: 'Name' });
+
+  for (const [rowIdx, row] of rows.entries()) {
     const era = row.Era?.trim() || '';
     const name = row.Name?.trim() || '';
+    // "Unreleased" / "Released" banners pick the section below, not a subera.
+    const subera = suberas[rowIdx] && !/^(un)?released$/i.test(suberas[rowIdx]!.name) ? suberas[rowIdx] : undefined;
 
     if (!era) {
       if (name === 'Unreleased') currentSection = 'Unreleased';
@@ -183,6 +191,8 @@ function parseVideosData(rows: VideoRawEntry[], allEras: Era[]): VideoEraGroup[]
       quality: row.Quality?.trim() || '',
       links,
       section: currentSection,
+      subera: subera?.name,
+      subera_note: subera?.note,
     };
 
     if (currentSection === 'Unreleased') {
@@ -686,14 +696,18 @@ function EraDetailView({ eraGroup, onBack, searchQuery, miniPlayerMode, activeMi
             </h2>
             <div className="space-y-1">
               {filteredUnreleased.map((entry, i) => (
-                <VideoRow
-                  key={i}
-                  entry={entry}
-                  miniPlayerMode={miniPlayerMode}
-                  activeMiniEntry={activeMiniEntry}
-                  onOpenMiniPlayer={onOpenMiniPlayer}
-                  onVideoPlay={onVideoPlay}
-                />
+                <Fragment key={i}>
+                  {!!entry.subera && entry.subera !== filteredUnreleased[i - 1]?.subera && (
+                    <SuberaBanner name={entry.subera} note={entry.subera_note} className={i > 0 ? 'mt-4' : ''} />
+                  )}
+                  <VideoRow
+                    entry={entry}
+                    miniPlayerMode={miniPlayerMode}
+                    activeMiniEntry={activeMiniEntry}
+                    onOpenMiniPlayer={onOpenMiniPlayer}
+                    onVideoPlay={onVideoPlay}
+                  />
+                </Fragment>
               ))}
             </div>
           </section>
@@ -707,14 +721,18 @@ function EraDetailView({ eraGroup, onBack, searchQuery, miniPlayerMode, activeMi
             </h2>
             <div className="space-y-1">
               {filteredReleased.map((entry, i) => (
-                <VideoRow
-                  key={i}
-                  entry={entry}
-                  miniPlayerMode={miniPlayerMode}
-                  activeMiniEntry={activeMiniEntry}
-                  onOpenMiniPlayer={onOpenMiniPlayer}
-                  onVideoPlay={onVideoPlay}
-                />
+                <Fragment key={i}>
+                  {!!entry.subera && entry.subera !== filteredReleased[i - 1]?.subera && (
+                    <SuberaBanner name={entry.subera} note={entry.subera_note} className={i > 0 ? 'mt-4' : ''} />
+                  )}
+                  <VideoRow
+                    entry={entry}
+                    miniPlayerMode={miniPlayerMode}
+                    activeMiniEntry={activeMiniEntry}
+                    onOpenMiniPlayer={onOpenMiniPlayer}
+                    onVideoPlay={onVideoPlay}
+                  />
+                </Fragment>
               ))}
             </div>
           </section>

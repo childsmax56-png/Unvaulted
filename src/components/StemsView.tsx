@@ -17,6 +17,7 @@ import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comm
 import { activeConfig } from '../artists/activeConfig';
 import { isDirectlyPlayableAudio } from '../player/audioStore';
 import { FileKind, getCachedFileKind, isNonPlayableKind, isProbeableLink, probeFileKind, useFileKind } from '../fileKind';
+import { classifySuberaRows } from '../suberas';
 
 export interface StemEntry {
   Era: string;
@@ -76,7 +77,12 @@ function parseStemsToEras(stemsData: StemEntry[], allEras: Era[]): { eraName: st
 
   const CATEGORY_NAMES = ['Instrumentals', 'Acapellas', 'Studio Stems', 'Sessions', 'Live Acapellas', 'Live Stems', 'TV Tracks', 'Samples', 'Multitracks', 'Snippets'];
 
-  for (const item of stemsData) {
+  // Section banners not in CATEGORY_NAMES ("Beat Loops", "Multitracks / Stems")
+  // would otherwise read as era headers; classifySuberaRows tells them apart.
+  const { kinds } = classifySuberaRows(stemsData as unknown as Record<string, unknown>[], { nameKey: 'Name' });
+
+  for (const [rowIdx, item] of stemsData.entries()) {
+    const isSubera = kinds[rowIdx] === 'subera';
     const isBrokenEra = typeof item.Era === 'string' && (
       item.Era.includes('OG File') ||
       item.Era.includes('Unavailable') ||
@@ -88,8 +94,8 @@ function parseStemsToEras(stemsData: StemEntry[], allEras: Era[]): { eraName: st
       || (item["Full Length"] && typeof item["Full Length"] === 'string' && item["Full Length"].length > 50)
       // Short-name era header format (e.g. vampgold): blank Era, era name in Name, nothing else
       || (!item["Link(s)"] && !item.Quality && !CATEGORY_NAMES.includes(item.Name))
-    );
-    const isCategoryHeader = !item.Era && item.Name && !item.Quality && !item["Link(s)"] && CATEGORY_NAMES.includes(item.Name);
+    ) && !isSubera;
+    const isCategoryHeader = !item.Era && item.Name && !item.Quality && !item["Link(s)"] && (CATEGORY_NAMES.includes(item.Name) || isSubera);
 
     if (isEraHeader && !isCategoryHeader) {
       if (currentEraName && currentCategorySongs.length > 0) {
@@ -118,7 +124,7 @@ function parseStemsToEras(stemsData: StemEntry[], allEras: Era[]): { eraName: st
       if (currentCategorySongs.length > 0) {
         currentEraCategories.push({ name: currentCategory, songs: currentCategorySongs });
       }
-      currentCategory = item.Name;
+      currentCategory = item.Name.split('\n')[0].trim();
       currentCategorySongs = [];
       continue;
     }

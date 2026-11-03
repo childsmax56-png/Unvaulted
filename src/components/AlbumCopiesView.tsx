@@ -1,13 +1,14 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { ArrowLeft, ExternalLink, Download, X, Share2, Disc3 } from 'lucide-react';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Fragment } from 'react';
 import { Era } from '../types';
 import { formatTextWithTags, createSlug, CUSTOM_IMAGES, Img } from '../utils';
 import { SongTitle } from './SongTitle';
 import { CommentButton } from './CommentButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { SuberaBanner } from './SuberaBanner';
 
 export interface AlbumCopy {
   name: string;
@@ -20,6 +21,8 @@ export interface AlbumCopy {
   quality: string;
   url: string;
   urls: string[];
+  subera?: string;
+  subera_note?: string;
 }
 
 export interface AlbumCopyEra {
@@ -255,9 +258,11 @@ export function AlbumCopiesView({ eras, albumCopiesData, searchQuery }: AlbumCop
               const url = copy.url || (copy.urls && copy.urls[0]) || '';
               const dl = getDownloadTarget(url, `${copy.name}`);
               const playable = dl !== null;
+              const showSubera = !!copy.subera && copy.subera !== visibleCopies[i - 1]?.subera;
               return (
+                <Fragment key={`${copy.name}-${i}`}>
+                {showSubera && <SuberaBanner name={copy.subera!} note={copy.subera_note} className={i > 0 ? 'mt-2 !mb-0' : '!mb-0'} />}
                 <motion.div
-                  key={`${copy.name}-${i}`}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: Math.min(i * 0.02, 0.4), duration: 0.3 }}
@@ -318,6 +323,7 @@ export function AlbumCopiesView({ eras, albumCopiesData, searchQuery }: AlbumCop
                     )}
                   </div>
                 </motion.div>
+                </Fragment>
               );
             })}
             {visibleCopies.length === 0 && (

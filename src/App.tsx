@@ -217,6 +217,9 @@ export interface FakesEntry {
   FeatureExtra?: string;
   "Available Length"?: string;
   "Link(s)"?: string;
+  // Stamped by FakesView from the sheet's subera banner rows.
+  subera?: string;
+  subera_note?: string;
 }
 
 import { SettingsView } from './components/SettingsView';
