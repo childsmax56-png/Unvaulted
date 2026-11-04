@@ -1730,13 +1730,15 @@ export function matchesFilters(song: any, searchQuery: string, filters: any): bo
   if (!searchMatch) return false;
 
   if (filters.tags && filters.tags.length > 0) {
-    const hasAllTags = filters.tags.every((tagEmoji: string) => {
-      return (song.name && song.name.includes(tagEmoji)) ||
-        (song.extra && song.extra.includes(tagEmoji)) ||
-        (song.fakesType && song.fakesType.toLowerCase().includes(tagEmoji.toLowerCase()));
-    });
+    const hasTag = (tagEmoji: string) =>
+      (song.name && song.name.includes(tagEmoji)) ||
+      (song.extra && song.extra.includes(tagEmoji)) ||
+      (song.fakesType && song.fakesType.toLowerCase().includes(tagEmoji.toLowerCase()));
+    const tagsMatch = filters.tagMatch === 'any'
+      ? filters.tags.some(hasTag)
+      : filters.tags.every(hasTag);
 
-    if (!hasAllTags) {
+    if (!tagsMatch) {
       return false;
     }
   }

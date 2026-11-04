@@ -73,6 +73,8 @@ export interface UserPlaylist {
 export interface SearchFilters {
   tags: string[];
   excludedTags: string[];
+  /** How included tags combine: 'all' (song has every tag, default) or 'any' (song has at least one). */
+  tagMatch?: 'all' | 'any';
   qualities: string[];
   excludedQualities: string[];
   availableLengths: string[];

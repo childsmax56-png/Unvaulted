@@ -297,7 +297,7 @@ export function FilterMenu({ filters, setFilters, activeCategory }: FilterMenuPr
   }, []);
 
   const clearFilters = () => {
-    setFilters({ tags: [], excludedTags: [], qualities: [], excludedQualities: [], availableLengths: [], excludedAvailableLengths: [], durationOp: '>', durationValue: '', playableOnly: false, hasClips: null, hasRemixes: null, hasSamples: null, albums: [] });
+    setFilters({ tags: [], excludedTags: [], tagMatch: filters.tagMatch, qualities: [], excludedQualities: [], availableLengths: [], excludedAvailableLengths: [], durationOp: '>', durationValue: '', playableOnly: false, hasClips: null, hasRemixes: null, hasSamples: null, albums: [] });
   };
 
   const hasActiveFilters = filters.tags.length > 0 || (filters.excludedTags && filters.excludedTags.length > 0) || filters.qualities.length > 0 || (filters.excludedQualities && filters.excludedQualities.length > 0) || (filters.availableLengths?.length > 0) || (filters.excludedAvailableLengths && filters.excludedAvailableLengths.length > 0) || filters.durationValue !== '' || filters.playableOnly || filters.hasClips !== null || filters.hasRemixes !== null || filters.hasSamples !== null || (filters.albums && filters.albums.length > 0);
@@ -357,7 +357,26 @@ export function FilterMenu({ filters, setFilters, activeCategory }: FilterMenuPr
 
           <div className="space-y-6">
             <div>
-              <label className="block text-xs text-white/50 mb-2 uppercase tracking-wider font-semibold">Tags</label>
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-xs text-white/50 uppercase tracking-wider font-semibold">Tags</label>
+                <div
+                  className="flex items-center rounded-md border border-white/10 bg-black/30 p-0.5 text-[11px] font-semibold"
+                  title="Match songs with all of the selected tags, or with any of them"
+                >
+                  {(['all', 'any'] as const).map(mode => {
+                    const active = (filters.tagMatch ?? 'all') === mode;
+                    return (
+                      <button
+                        key={mode}
+                        onClick={() => setFilters({ ...filters, tagMatch: mode })}
+                        className={`px-2 py-0.5 rounded transition-colors ${active ? 'bg-white text-black' : 'text-white/50 hover:text-white'}`}
+                      >
+                        {mode === 'all' ? 'Match all' : 'Match any'}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
               <div className="space-y-1.5">
                 {currentTags.map(tag => {
                   let status = 0;
