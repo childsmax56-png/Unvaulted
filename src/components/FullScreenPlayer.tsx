@@ -39,7 +39,7 @@ export function FullScreenPlayer({
   const [viewMode, setViewMode] = useState<'sync' | 'plain'>('sync');
   const lyricsContainerRef = useRef<HTMLDivElement>(null);
 
-  const { plainLyrics, parsedSyncedLyrics, source, loading, error } = useLyrics(currentSong, era);
+  const { plainLyrics, parsedSyncedLyrics, loading, error } = useLyrics(currentSong, era);
   const { settings } = useSettings();
 
   const hasSynced = !!parsedSyncedLyrics && parsedSyncedLyrics.length > 0;
@@ -489,7 +489,7 @@ export function FullScreenPlayer({
                       Lyrics may not be accurate
                     </div>
                     <div className="mt-2 text-[10px] text-white/20 uppercase tracking-widest">
-                      Sourced from {source === 'genius' ? 'Genius' : 'lrclib'}
+                      Sourced from lrclib
                     </div>
                   </div>
                 ) : plainLyrics ? (
@@ -501,7 +501,7 @@ export function FullScreenPlayer({
                       Lyrics may not be accurate
                     </div>
                     <div className="mt-2 text-[10px] text-white/20 uppercase tracking-widest text-center">
-                      Sourced from {source === 'genius' ? 'Genius' : 'lrclib'}
+                      Sourced from lrclib
                     </div>
                   </div>
                 ) : null}

@@ -17,20 +17,21 @@ export interface SongInfo {
   annotationCount: number;
 }
 
-export type LyricsSource = 'genius' | 'lrclib';
-
 export interface LyricsData {
   plainLyrics: string | null;
   syncedLyrics: string | null;
   parsedSyncedLyrics: { time: number; text: string }[] | null;
-  source: LyricsSource | null;
+  source: 'lrclib' | null;
   annotations: Annotation[] | null;
   geniusUrl: string | null;
   songInfo: SongInfo | null;
 }
 
-// Both providers are looked up independently; the cache keeps each one's result (null = not found).
-const lyricsCache = new Map<string, { genius: LyricsData | null; lrclib: LyricsData | null }>();
+type GeniusInfo = Pick<LyricsData, 'annotations' | 'geniusUrl' | 'songInfo'>;
+
+// Lyrics text (lrclib) and song info (Genius API) are looked up independently;
+// the cache keeps each one's result (null = not found).
+const lyricsCache = new Map<string, { lrclib: LyricsData | null; genius: GeniusInfo | null }>();
 
 function cleanTrackName(name: string): string {
   let track = name;
@@ -114,21 +115,17 @@ function parseSyncedLyrics(synced: string): { time: number; text: string }[] {
   }).filter(Boolean) as { time: number; text: string }[];
 }
 
-async function fetchGenius(artists: string[], tracks: string[], alive: () => boolean): Promise<LyricsData | null> {
-  // All calls server-side via CF Worker — iterate all artist/track combos
+// Genius gives song info + annotations only (see functions/api/lyrics.ts); lyrics text is lrclib's.
+async function fetchGeniusInfo(artists: string[], tracks: string[], alive: () => boolean): Promise<GeniusInfo | null> {
   for (const artist of artists) {
     for (const track of tracks) {
       if (!alive()) return null;
       try {
         const res = await axios.get('/api/lyrics', { params: { artist, track } });
-        if (res.data?.lyrics) {
+        if (res.data?.geniusUrl) {
           return {
-            plainLyrics: res.data.lyrics,
-            syncedLyrics: null,
-            parsedSyncedLyrics: null,
-            source: 'genius',
             annotations: res.data.annotations ?? null,
-            geniusUrl: res.data.geniusUrl ?? null,
+            geniusUrl: res.data.geniusUrl,
             songInfo: res.data.songInfo ?? null,
           };
         }
@@ -166,12 +163,9 @@ async function fetchLrclib(artists: string[], tracks: string[], alive: () => boo
 
 const EMPTY: LyricsData = { plainLyrics: null, syncedLyrics: null, parsedSyncedLyrics: null, source: null, annotations: null, geniusUrl: null, songInfo: null };
 
-// `preferred` picks which provider is shown; the other one is used as a fallback when the
-// preferred one has nothing. `available` reports which providers found lyrics so a UI can
-// offer a switch between them.
-export function useLyrics(currentSong: Song | null, era: Era | null, preferred: LyricsSource = 'genius') {
+export function useLyrics(currentSong: Song | null, era: Era | null) {
   // undefined = still searching, null = searched and not found
-  const [results, setResults] = useState<{ genius: LyricsData | null | undefined; lrclib: LyricsData | null | undefined }>({ genius: undefined, lrclib: undefined });
+  const [results, setResults] = useState<{ lrclib: LyricsData | null | undefined; genius: GeniusInfo | null | undefined }>({ lrclib: undefined, genius: undefined });
 
   useEffect(() => {
     if (!currentSong) return;
@@ -185,7 +179,7 @@ export function useLyrics(currentSong: Song | null, era: Era | null, preferred: 
 
     let isMounted = true;
     const alive = () => isMounted;
-    setResults({ genius: undefined, lrclib: undefined });
+    setResults({ lrclib: undefined, genius: undefined });
 
     const initialArtist = parseArtistFromSong(currentSong.name, currentSong.extra, era?.name);
 
@@ -208,16 +202,16 @@ export function useLyrics(currentSong: Song | null, era: Era | null, preferred: 
       }
     }
 
-    const geniusP = fetchGenius(artistsToTry, trackNamesToTry, alive).then(genius => {
-      if (isMounted) setResults(r => ({ ...r, genius }));
-      return genius;
-    });
     const lrclibP = fetchLrclib(artistsToTry, trackNamesToTry, alive).then(lrclib => {
       if (isMounted) setResults(r => ({ ...r, lrclib }));
       return lrclib;
     });
-    Promise.all([geniusP, lrclibP]).then(([genius, lrclib]) => {
-      if (isMounted) lyricsCache.set(cacheKey, { genius, lrclib });
+    const geniusP = fetchGeniusInfo(artistsToTry, trackNamesToTry, alive).then(genius => {
+      if (isMounted) setResults(r => ({ ...r, genius }));
+      return genius;
+    });
+    Promise.all([lrclibP, geniusP]).then(([lrclib, genius]) => {
+      if (isMounted) lyricsCache.set(cacheKey, { lrclib, genius });
     });
 
     return () => {
@@ -225,20 +219,16 @@ export function useLyrics(currentSong: Song | null, era: Era | null, preferred: 
     };
   }, [currentSong, era]);
 
-  const other: LyricsSource = preferred === 'genius' ? 'lrclib' : 'genius';
-  const mine = results[preferred];
-  const fallback = results[other];
-  // Show the preferred provider; once it has come back empty, fall back to the other one.
-  const active = mine ?? (mine === null ? fallback ?? null : null);
-  const allDone = results.genius !== undefined && results.lrclib !== undefined;
-  const loading = !active && !allDone;
-  const error = !active && allDone ? "No lyrics found for this track." : null;
+  const loading = results.lrclib === undefined;
+  const error = results.lrclib === null ? "No lyrics found for this track." : null;
 
   return {
-    ...(active ?? EMPTY),
+    ...(results.lrclib ?? EMPTY),
+    // Genius info arrives on its own schedule and can exist even when lrclib has no lyrics.
+    annotations: results.genius?.annotations ?? null,
+    geniusUrl: results.genius?.geniusUrl ?? null,
+    songInfo: results.genius?.songInfo ?? null,
     loading,
     error,
-    available: { genius: !!results.genius, lrclib: !!results.lrclib },
-    searching: { genius: results.genius === undefined, lrclib: results.lrclib === undefined },
   };
 }

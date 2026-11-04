@@ -4,7 +4,7 @@ import { X, Loader2, Mic2, AlignLeft, Clock, ChevronDown, ExternalLink, Info } f
 import { Song, Era } from '../types';
 import { createPortal } from 'react-dom';
 import { useLyrics } from '../useLyrics';
-import type { Annotation, LyricsSource } from '../useLyrics';
+import type { Annotation } from '../useLyrics';
 import { Img } from '../utils';
 
 interface LyricsModalProps {
@@ -53,8 +53,7 @@ function buildAnnotatedSegments(text: string, annotations: Annotation[]) {
 }
 
 export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0, onSeek }: LyricsModalProps) {
-  const [preferredSource, setPreferredSource] = useState<LyricsSource>('genius');
-  const { plainLyrics, parsedSyncedLyrics, source, annotations, geniusUrl, songInfo, loading, error, available, searching } = useLyrics(currentSong, era, preferredSource);
+  const { plainLyrics, parsedSyncedLyrics, annotations, geniusUrl, songInfo, loading, error } = useLyrics(currentSong, era);
   const { settings } = useSettings();
   const [viewMode, setViewMode] = useState<'sync' | 'plain' | 'info'>('sync');
   const [selectedAnnotation, setSelectedAnnotation] = useState<Annotation | null>(null);
@@ -80,7 +79,6 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
     prevSongKeyRef.current = songKey;
     setSelectedAnnotation(null);
     setViewMode('sync');
-    setPreferredSource('genius');
   }, [currentSong]);
 
   useEffect(() => {
@@ -139,27 +137,6 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
             <div className="flex items-center gap-2 text-white font-bold">
               <Mic2 className="w-4 h-4 text-[var(--theme-color)]" />
               Lyrics
-              <div className="flex items-center bg-white/10 rounded-full p-0.5 ml-1">
-                {(['genius', 'lrclib'] as const).map(src => {
-                  const isActive = source === src;
-                  const disabled = !available[src];
-                  return (
-                    <button
-                      key={src}
-                      onClick={() => { setPreferredSource(src); setViewMode('sync'); }}
-                      disabled={disabled}
-                      title={disabled ? (searching[src] ? 'Searching…' : 'No lyrics on ' + (src === 'genius' ? 'Genius' : 'lrclib')) : undefined}
-                      className={`text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors ${
-                        isActive
-                          ? src === 'genius' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-white/20 text-white'
-                          : disabled ? 'text-white/20 cursor-not-allowed' : 'text-white/50 hover:text-white/80 cursor-pointer'
-                      }`}
-                    >
-                      {src === 'genius' ? 'Genius' : 'lrclib'}
-                    </button>
-                  );
-                })}
-              </div>
             </div>
 
             <div className="flex items-center gap-2">
@@ -181,11 +158,11 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
                   </button>
                 </div>
               )}
-              {source === 'genius' && songInfo && (
+              {songInfo && (
                 <button
                   onClick={() => setViewMode(v => v === 'info' ? (hasSynced ? 'sync' : 'plain') : 'info')}
                   className={`p-1.5 rounded-full transition-colors ${viewMode === 'info' ? 'text-[var(--theme-color)]' : 'text-white/50 hover:text-white/80'}`}
-                  title="Song Info"
+                  title="Song info from Genius"
                 >
                   <Info className="w-4 h-4" />
                 </button>
@@ -201,41 +178,7 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
             className="relative z-10 flex-1 overflow-y-auto p-6 custom-scrollbar flex flex-col mask-image-y"
             style={{ maskImage: viewMode === 'sync' ? 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)' : 'none' }}
           >
-            {loading ? (
-              <div className="flex-1 flex flex-col items-center justify-center text-white/50 gap-3">
-                <Loader2 className="w-6 h-6 animate-spin text-[var(--theme-color)]" />
-                <span className="text-sm font-medium">Searching lyrics...</span>
-              </div>
-            ) : error ? (
-              <div className="flex-1 flex items-center justify-center text-white/50 text-center text-sm font-medium">
-                {error}
-              </div>
-            ) : viewMode === 'sync' && parsedSyncedLyrics ? (
-              <div className={`flex flex-col gap-4 py-32 ${settings.miniLyricsAlignment === 'left' ? 'text-left' : settings.miniLyricsAlignment === 'right' ? 'text-right' : 'text-center'}`}>
-                {parsedSyncedLyrics.map((line, i) => {
-                  const isActive = i === currentLineIndex;
-                  const isPassed = i < currentLineIndex;
-                  return (
-                    <motion.div
-                      key={i}
-                      data-index={i}
-                      onClick={() => onSeek && onSeek(line.time)}
-                      animate={{
-                        scale: isActive ? 1.05 : 1,
-                        opacity: isActive ? 1 : isPassed ? 0.5 : 0.3,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className={`text-lg md:text-xl font-bold leading-tight cursor-pointer hover:opacity-80 transition-opacity ${isActive ? 'text-white' : 'text-white/50'}`}
-                    >
-                      {line.text || '♪'}
-                    </motion.div>
-                  );
-                })}
-                <div className="mt-8 text-xs text-white/40 text-center uppercase tracking-wider">
-                  Lyrics may not be accurate
-                </div>
-              </div>
-            ) : viewMode === 'info' && songInfo ? (
+            {viewMode === 'info' && songInfo ? (
               <div className="flex-1 flex flex-col gap-5 py-2">
                 {songInfo.description && (
                   <div>
@@ -278,10 +221,44 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
                   </a>
                 )}
               </div>
+            ) : loading ? (
+              <div className="flex-1 flex flex-col items-center justify-center text-white/50 gap-3">
+                <Loader2 className="w-6 h-6 animate-spin text-[var(--theme-color)]" />
+                <span className="text-sm font-medium">Searching lyrics...</span>
+              </div>
+            ) : error ? (
+              <div className="flex-1 flex items-center justify-center text-white/50 text-center text-sm font-medium">
+                {error}
+              </div>
+            ) : viewMode === 'sync' && parsedSyncedLyrics ? (
+              <div className={`flex flex-col gap-4 py-32 ${settings.miniLyricsAlignment === 'left' ? 'text-left' : settings.miniLyricsAlignment === 'right' ? 'text-right' : 'text-center'}`}>
+                {parsedSyncedLyrics.map((line, i) => {
+                  const isActive = i === currentLineIndex;
+                  const isPassed = i < currentLineIndex;
+                  return (
+                    <motion.div
+                      key={i}
+                      data-index={i}
+                      onClick={() => onSeek && onSeek(line.time)}
+                      animate={{
+                        scale: isActive ? 1.05 : 1,
+                        opacity: isActive ? 1 : isPassed ? 0.5 : 0.3,
+                      }}
+                      transition={{ duration: 0.3 }}
+                      className={`text-lg md:text-xl font-bold leading-tight cursor-pointer hover:opacity-80 transition-opacity ${isActive ? 'text-white' : 'text-white/50'}`}
+                    >
+                      {line.text || '♪'}
+                    </motion.div>
+                  );
+                })}
+                <div className="mt-8 text-xs text-white/40 text-center uppercase tracking-wider">
+                  Lyrics may not be accurate
+                </div>
+              </div>
             ) : plainLyrics ? (
               <div className="flex-1 flex flex-col">
                 <div className={`text-white/90 text-sm md:text-base leading-relaxed font-medium whitespace-pre-wrap ${settings.miniLyricsAlignment === 'left' ? 'text-left' : settings.miniLyricsAlignment === 'right' ? 'text-right' : 'text-center'}`}>
-                  {hasAnnotations && source === 'genius' && annotations
+                  {hasAnnotations && annotations
                     ? buildAnnotatedSegments(plainLyrics, annotations).map((seg, i) =>
                         seg.annIdx >= 0 ? (
                           <span
@@ -297,7 +274,7 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
                       )
                     : plainLyrics}
                 </div>
-                {hasAnnotations && source === 'genius' && (
+                {hasAnnotations && (
                   <p className="mt-4 text-[10px] text-white/30 text-center">
                     Tap highlighted text to see Genius annotations
                   </p>
