@@ -8,7 +8,7 @@ import { SongTitle } from './SongTitle';
 import { CommentButton } from './CommentButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
-import { SuberaBanner } from './SuberaBanner';
+import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
 
 export interface AlbumCopy {
   name: string;
@@ -254,6 +254,7 @@ export function AlbumCopiesView({ eras, albumCopiesData, searchQuery }: AlbumCop
           </div>
 
           <div className="px-6 md:px-8 mt-8 max-w-5xl mx-auto flex flex-col gap-4">
+            <SuberaJumpBar names={uniqueSuberas(visibleCopies)} className="!mb-2" />
             {visibleCopies.map((copy, i) => {
               const url = copy.url || (copy.urls && copy.urls[0]) || '';
               const dl = getDownloadTarget(url, `${copy.name}`);

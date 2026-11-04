@@ -10,7 +10,7 @@ import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 import { classifySuberaRows } from '../suberas';
-import { SuberaBanner } from './SuberaBanner';
+import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
 
 export interface VideoRawEntry {
   Era: string;
@@ -688,6 +688,7 @@ function EraDetailView({ eraGroup, onBack, searchQuery, miniPlayerMode, activeMi
       </div>
 
       <div className="px-4 md:px-8 mt-6 max-w-4xl mx-auto space-y-8">
+        <SuberaJumpBar names={uniqueSuberas([...filteredUnreleased, ...filteredReleased])} className="!mb-0" />
         {filteredUnreleased.length > 0 && (
           <section>
             <h2 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3 flex items-center gap-2">

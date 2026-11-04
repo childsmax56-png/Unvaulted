@@ -17,7 +17,7 @@ import { CommentButton } from './CommentButton';
 import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
-import { SuberaBanner } from './SuberaBanner';
+import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
 
 export interface ReleasedEntry {
   Era: string;
@@ -344,6 +344,7 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
 
         {/* track list */}
         <div className="px-4 md:px-8 mt-6 max-w-5xl mx-auto">
+          <SuberaJumpBar names={uniqueSuberas(filteredTracks)} />
           {/* column headers */}
           <div className="hidden sm:flex items-center px-4 py-2 text-xs font-semibold text-white/30 uppercase tracking-wider border-b border-white/5 mb-1">
             <div className="w-8 shrink-0">#</div>

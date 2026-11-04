@@ -12,7 +12,7 @@ import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 import { classifySuberaRows } from '../suberas';
-import { SuberaBanner } from './SuberaBanner';
+import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
 
 interface FakesViewProps {
   eras: Era[];
@@ -342,6 +342,7 @@ export function FakesView({ eras, fakesData, searchQuery, filters, onPlaySong, c
           </div>
 
           <div className="px-6 md:px-8 mt-8 max-w-6xl mx-auto">
+            <SuberaJumpBar names={uniqueSuberas(fakesAsSongs)} />
             <div className="mb-10">
               <div className="flex flex-col">
                 <div className="flex items-center px-4 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider border-b border-white/5 mb-2 hidden sm:flex">

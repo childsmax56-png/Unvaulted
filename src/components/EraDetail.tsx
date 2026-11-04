@@ -25,7 +25,7 @@ import { useDeadLinks, isDeadLink } from '../linkStatus';
 import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comments';
 import { usePlaylists } from '../PlaylistContext';
 import { useIsClamped } from '../hooks/useIsClamped';
-import { SuberaBanner } from './SuberaBanner';
+import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
 
 function normalizeName(name: string): string {
   return name
@@ -913,6 +913,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           ) : undefined}
         >
         <div className={`px-6 md:px-8 pt-8 max-w-6xl mx-auto${!settings.disableEraThemes && ERA_THEMES[era.name]?.bottomBanner ? ' drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]' : ''}`}>
+          <SuberaJumpBar names={uniqueSuberas(processedCategories.flatMap(c => c.songs))} />
           {processedCategories.map(({ category, songs: processedSongs }) => {
             return (
               <div key={category} className="mb-10">
