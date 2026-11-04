@@ -393,6 +393,12 @@ export function getSongSlug(song: any, allSongsInCollection: any[]): string {
   return createSlug(song.name) || 'NoName1';
 }
 
+// Ye's name is styled "Ye" in tags; the trackers' config and sheets write "YE".
+// Standalone word only, so names like "YE-I" are left alone.
+function tagArtistName(name: string): string {
+  return name.replace(/(?<![\w-])YE(?![\w-])/g, 'Ye');
+}
+
 export function buildArtistTag(songName: string, eraName: string | undefined, includeFeatures = true, fallbackArtist?: string): string {
   let primary: string;
   const dashIdx = songName.indexOf(' - ');
@@ -403,6 +409,7 @@ export function buildArtistTag(songName: string, eraName: string | undefined, in
   } else {
     primary = fallbackArtist || getArtistName(eraName);
   }
+  primary = tagArtistName(primary);
   if (!includeFeatures) return primary;
 
   const featured = collectFeatured(songName);
@@ -427,7 +434,7 @@ export function songCredits(name: string, extra?: string | null): string {
 function collectFeatured(songName: string): string[] {
   const featured: string[] = [];
   for (const m of songName.matchAll(FEATURE_GROUP)) {
-    m[1].split(/,|&/).map(n => n.replace(/[\uFE0F]/g, '').trim()).filter(n => n !== '???' && /[\p{L}\p{N}]/u.test(n)).forEach(n => featured.push(n));
+    m[1].split(/,|&/).map(n => n.replace(/[\uFE0F]/g, '').trim()).filter(n => n !== '???' && /[\p{L}\p{N}]/u.test(n)).forEach(n => featured.push(tagArtistName(n)));
   }
   return [...new Set(featured)];
 }
