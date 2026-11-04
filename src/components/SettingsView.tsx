@@ -9,7 +9,7 @@ import { SiLastdotfm } from 'react-icons/si';
 import { isLastfmLoggedIn } from '../lastfm';
 import { saveAs } from 'file-saver';
 import { Era } from '../types';
-import { embedID3Tags, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { prepareAudioDownload, detectAudioExt, ALBUM_RELEASE_DATES, CUSTOM_IMAGES, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { ArtEntry } from './ArtGallery';
 import { StemEntry } from './StemsView';
@@ -74,21 +74,20 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
         const fetchUrl = await resolveAudioUrl(url);
         const res = await fetch(fetchUrl);
         if (!res.ok) throw new Error('fetch failed');
-        let blob = await res.blob();
-        const ext = await detectAudioExt(blob);
-        if (settings.embedMetadata && ext === '.mp3') {
-          const artUrl = songImage || CUSTOM_IMAGES[era] || eraImage;
-          const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
-          try {
-            blob = await embedID3Tags(blob, {
-              title: buildTitleTag(name, settings.tagFeaturedArtists),
-              artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
-              album: era,
-              year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
-              artworkUrl: artUrl,
-            }, songTitle);
-          } catch { /* skip tagging, save raw */ }
-        }
+        const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
+        const { blob, ext } = await prepareAudioDownload(await res.blob(), {
+          contentType: res.headers.get('content-type') ?? '',
+          contentDisposition: res.headers.get('content-disposition') ?? '',
+          meta: settings.embedMetadata ? {
+            title: buildTitleTag(name, settings.tagFeaturedArtists),
+            artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
+            album: era,
+            year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
+            artworkUrl: songImage || CUSTOM_IMAGES[era] || eraImage,
+          } : undefined,
+          cleanTitle: songTitle,
+          convertToMp3: settings.convertToMp3,
+        });
         zip.file(`${sanitizeFilename(era)}/${sanitizeFilename(buildDownloadName(name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
       } catch { /* skip */ } finally {
         done++;
@@ -229,21 +228,20 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
           const fetchUrl = await resolveAudioUrl(url);
           const res = await fetch(fetchUrl);
           if (!res.ok) throw new Error('fetch failed');
-          let blob = await res.blob();
-          const ext = await detectAudioExt(blob);
-          if (settings.embedMetadata && ext === '.mp3') {
-            const artUrl = songImage || CUSTOM_IMAGES[era] || eraImage;
-            const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
-            try {
-              blob = await embedID3Tags(blob, {
-                title: buildTitleTag(name, settings.tagFeaturedArtists),
-                artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
-                album: era,
-                year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
-                artworkUrl: artUrl,
-              }, songTitle);
-            } catch { /* skip tagging, save raw */ }
-          }
+          const songTitle = name.includes(' - ') ? name.substring(name.indexOf(' - ') + 3) : name;
+          const { blob, ext } = await prepareAudioDownload(await res.blob(), {
+            contentType: res.headers.get('content-type') ?? '',
+            contentDisposition: res.headers.get('content-disposition') ?? '',
+            meta: settings.embedMetadata ? {
+              title: buildTitleTag(name, settings.tagFeaturedArtists),
+              artist: buildArtistTag(name, era, settings.tagFeaturedArtists),
+              album: era,
+              year: ALBUM_RELEASE_DATES[era]?.split('/').pop(),
+              artworkUrl: songImage || CUSTOM_IMAGES[era] || eraImage,
+            } : undefined,
+            cleanTitle: songTitle,
+            convertToMp3: settings.convertToMp3,
+          });
           zip.file(`unreleased/${sanitizeFilename(era)}/${sanitizeFilename(buildDownloadName(name, settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
         } else if (kind === 'art') {
           const item = data;

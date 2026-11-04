@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Star } from 'lucide-react';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect, Fragment } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, detectAudioExt, prepareAudioDownload, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { SongTitle } from './SongTitle';
 import { saveAs } from 'file-saver';
@@ -315,36 +315,19 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
         if (isImage) {
           ext = imageExt || await detectAudioExt(blob);
         } else {
-          ext = await detectAudioExt(blob);
-          if (ext === '.mp3') {
-            if (ct.includes('flac'))                                     ext = '.flac';
-            else if (ct.includes('wav') || ct.includes('wave'))          ext = '.wav';
-            else if (ct.includes('aiff'))                                ext = '.aiff';
-            else if (ct.includes('ogg') || ct.includes('opus'))          ext = '.ogg';
-            else if (ct.includes('m4a') || (ct.includes('mp4') && !ct.includes('video'))) ext = '.m4a';
-          }
-          if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
-            const artUrl = selectedEraData!.image || CUSTOM_IMAGES[miscEraName];
-            const tagMeta = {
+          ({ blob, ext } = await prepareAudioDownload(blob, {
+            contentType: ct,
+            contentDisposition: res.headers.get('content-disposition') ?? '',
+            meta: settings.embedMetadata ? {
               title: buildTitleTag(songCredits(song.name, song.extra), settings.tagFeaturedArtists),
               artist: buildArtistTag(songCredits(song.name, song.extra), miscEraName, settings.tagFeaturedArtists),
               album: miscEraName,
               year: ALBUM_RELEASE_DATES[miscEraName]?.split('/').pop(),
-              artworkUrl: artUrl,
-            };
-            try {
-              if (ext === '.mp3') blob = await embedID3Tags(blob, tagMeta, songTitle);
-              else if (ext === '.wav') blob = await embedWAVTags(blob, tagMeta, songTitle);
-              else if (ext === '.flac') {
-                try {
-                  blob = await flacToWav(blob); ext = '.wav';
-                  blob = await embedWAVTags(blob, tagMeta, songTitle);
-                } catch {
-                  blob = await embedFLACTags(blob, tagMeta, songTitle);
-                }
-              }
-            } catch { /* skip tagging, save raw */ }
-          }
+              artworkUrl: selectedEraData!.image || CUSTOM_IMAGES[miscEraName],
+            } : undefined,
+            cleanTitle: songTitle,
+            convertToMp3: settings.convertToMp3,
+          }));
         }
         zip.file(`${sanitizeFilename(fileName)}${ext}`, blob);
       } catch (err) {

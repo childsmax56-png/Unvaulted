@@ -771,8 +771,25 @@ async function compressArtworkToJpeg(buf: ArrayBuffer, maxPx = 800, quality = 0.
   });
 }
 
-async function fetchArtworkBuffer(artworkUrl: string): Promise<ArrayBuffer | null> {
-  artworkUrl = fixMzstaticUrl(artworkUrl);
+// Bulk downloads tag every song in an era with the same cover, so memoize by
+// URL: one fetch per unique cover instead of one per song (concurrent per-song
+// fetches used to saturate the connection limit and hang zip downloads).
+const artworkCache = new Map<string, Promise<ArrayBuffer | null>>();
+
+function fetchArtworkBuffer(artworkUrl: string): Promise<ArrayBuffer | null> {
+  const key = fixMzstaticUrl(artworkUrl);
+  let pending = artworkCache.get(key);
+  if (!pending) {
+    pending = fetchArtworkBufferUncached(key);
+    if (artworkCache.size >= 50) artworkCache.delete(artworkCache.keys().next().value!);
+    artworkCache.set(key, pending);
+    // Don't cache a miss — a later download may reach the image.
+    pending.then(buf => { if (!buf) artworkCache.delete(key); });
+  }
+  return pending;
+}
+
+async function fetchArtworkBufferUncached(artworkUrl: string): Promise<ArrayBuffer | null> {
   const proxies = [
     artworkUrl,
     `https://corsproxy.io/?${encodeURIComponent(artworkUrl)}`,
@@ -1180,6 +1197,102 @@ export async function embedFLACTags(blob: Blob, meta: SongMeta, cleanTitle: stri
   return new Blob([out], { type: 'audio/flac' });
 }
 
+export type AudioExt = '.mp3' | '.wav' | '.flac' | '.aiff' | '.zip' | '.ogg' | '.m4a';
+
+// Shared by the single-song download and every bulk/zip download so they all
+// pick the same extension, honour "Download as MP3", and embed the same tags.
+// Detects the real format (magic bytes, then Content-Type / Content-Disposition),
+// optionally transcodes to MP3, then tags MP3/WAV directly and FLAC by converting
+// to tagged WAV (falling back to Vorbis-comment FLAC tags if decoding fails).
+// Tagging failures are logged and the untagged file is kept.
+export async function prepareAudioDownload(blob: Blob, opts: {
+  contentType?: string;
+  contentDisposition?: string;
+  meta?: SongMeta;
+  cleanTitle?: string;
+  convertToMp3?: boolean;
+  // Convert FLAC to WAV even when not tagging (Lossless-quality era downloads).
+  flacToWavUntagged?: boolean;
+}): Promise<{ blob: Blob; ext: AudioExt }> {
+  const ct = opts.contentType ?? '';
+  let ext = await detectAudioExt(blob);
+
+  // If magic-byte detection fell back to .mp3, cross-check the Content-Type
+  // so that FLAC/WAV/OGG files that evade byte detection still get the right ext.
+  if (ext === '.mp3') {
+    if (ct.includes('flac'))                                   ext = '.flac';
+    else if (ct.includes('wav') || ct.includes('wave'))        ext = '.wav';
+    else if (ct.includes('aiff'))                              ext = '.aiff';
+    else if (ct.includes('ogg') || ct.includes('opus'))        ext = '.ogg';
+    else if (ct.includes('m4a') || (ct.includes('mp4') && !ct.includes('video'))) ext = '.m4a';
+  }
+
+  // Also honour Content-Disposition filename extension when present
+  const dispExt = (opts.contentDisposition ?? '').match(/filename[^;=\n]*=(['"]?)([^'"\n;]+)\1/i)?.[2]
+    ?.trim().match(/\.(flac|wav|aiff?|ogg|opus|m4a|zip)$/i)?.[0].toLowerCase();
+  if (dispExt) ext = (dispExt === '.aif' ? '.aiff' : dispExt === '.opus' ? '.ogg' : dispExt) as AudioExt;
+
+  if (ext === '.zip') return { blob, ext };
+
+  // "Download as MP3": transcode any non-MP3 audio to a real MP3 so it's
+  // accepted by Spotify Local Files. On failure we keep the original format.
+  if (opts.convertToMp3 && ext !== '.mp3') {
+    try {
+      blob = await blobToMp3(blob);
+      ext = '.mp3';
+    } catch (e) {
+      console.warn('MP3 conversion failed, keeping original format:', e);
+    }
+  }
+
+  const meta = opts.meta;
+  if (!meta) {
+    if (opts.flacToWavUntagged && ext === '.flac') {
+      try { blob = await flacToWav(blob); ext = '.wav'; } catch { /* keep as FLAC */ }
+    }
+    return { blob, ext };
+  }
+
+  const cleanTitle = meta.title || opts.cleanTitle || '';
+  if (ext === '.mp3') {
+    try {
+      blob = await embedID3Tags(blob, meta, cleanTitle);
+    } catch (e) {
+      console.warn('ID3 tagging failed, saving without tags:', e);
+    }
+  } else if (ext === '.wav') {
+    try {
+      blob = await embedWAVTags(blob, meta, cleanTitle);
+    } catch (e) {
+      console.warn('WAV tagging failed, saving without tags:', e);
+    }
+  } else if (ext === '.flac') {
+    let wav: Blob | null = null;
+    try {
+      wav = await flacToWav(blob);
+    } catch (e) {
+      // decodeAudioData unsupported or failed — fall back to FLAC with embedded tags
+      console.warn('[flac→wav] conversion failed, falling back to tagged FLAC:', e);
+    }
+    if (wav) {
+      blob = wav;
+      ext = '.wav';
+      try {
+        blob = await embedWAVTags(blob, meta, cleanTitle);
+      } catch (e) {
+        console.warn('WAV tagging failed, saving without tags:', e);
+      }
+    } else {
+      try {
+        blob = await embedFLACTags(blob, meta, cleanTitle);
+      } catch (e) {
+        console.warn('[flac tags] fallback tagging also failed, saving without tags:', e);
+      }
+    }
+  }
+  return { blob, ext };
+}
+
 function openFallback(url: string, fileName?: string) {
   const a = document.createElement('a');
   a.href = url;
@@ -1524,69 +1637,18 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
         blob = await compressImageBlob(blob);
         fileName = fileName.replace(/\.(png|jpeg|jpg)$/i, '') + '.jpg';
       } else {
-        let actualExt = await detectAudioExt(blob);
-
-        // If magic-byte detection fell back to .mp3, cross-check the Content-Type
-        // so that FLAC/WAV/OGG files that evade byte detection still get the right ext.
-        if (actualExt === '.mp3') {
-          if (responseCt.includes('flac'))                                   actualExt = '.flac';
-          else if (responseCt.includes('wav') || responseCt.includes('wave')) actualExt = '.wav';
-          else if (responseCt.includes('aiff'))                               actualExt = '.aiff';
-          else if (responseCt.includes('ogg') || responseCt.includes('opus')) actualExt = '.ogg';
-          else if (responseCt.includes('m4a') || (responseCt.includes('mp4') && !responseCt.includes('video'))) actualExt = '.m4a';
-        }
-
-        // Also honour Content-Disposition filename extension when present
-        const disposition = response.headers.get('content-disposition') ?? '';
-        const dispExt = disposition.match(/filename[^;=\n]*=(['"]?)([^'"\n;]+)\1/i)?.[2]
-          ?.trim().match(/\.(flac|wav|aiff?|ogg|opus|m4a|zip)$/i)?.[0].toLowerCase();
-        if (dispExt) actualExt = dispExt as typeof actualExt;
-
-        // "Download as MP3": transcode any non-MP3 audio to a real MP3 so it's
-        // accepted by Spotify Local Files. On failure we keep the original format.
-        if (convertToMp3 && actualExt !== '.mp3') {
-          try {
-            blob = await blobToMp3(blob);
-            actualExt = '.mp3';
-          } catch (e) {
-            console.warn('MP3 conversion failed, keeping original format:', e);
-          }
-        }
-
-        if (actualExt !== '.mp3' && fileName.endsWith('.mp3')) {
-          fileName = fileName.slice(0, -4) + actualExt;
-        }
-
-        if (meta) {
-          const cleanTitle = meta.title || formatTextForNotification(suggestedName, false);
-          if (actualExt === '.mp3') {
-            try {
-              blob = await embedID3Tags(blob, meta, cleanTitle);
-            } catch (e) {
-              console.warn('ID3 tagging failed, saving without tags:', e);
-            }
-          } else if (actualExt === '.wav') {
-            try {
-              blob = await embedWAVTags(blob, meta, cleanTitle);
-            } catch (e) {
-              console.warn('WAV tagging failed, saving without tags:', e);
-            }
-          } else if (actualExt === '.flac') {
-            try {
-              blob = await flacToWav(blob);
-              actualExt = '.wav';
-              fileName = fileName.replace(/\.flac$/i, '.wav');
-              blob = await embedWAVTags(blob, meta, cleanTitle);
-            } catch (e) {
-              // decodeAudioData unsupported or failed — fall back to FLAC with embedded tags
-              console.warn('[flac→wav] conversion failed, falling back to tagged FLAC:', e);
-              try {
-                blob = await embedFLACTags(blob, meta, cleanTitle);
-              } catch (e2) {
-                console.warn('[flac tags] fallback tagging also failed, saving without tags:', e2);
-              }
-            }
-          }
+        const prepared = await prepareAudioDownload(blob, {
+          contentType: responseCt,
+          contentDisposition: response.headers.get('content-disposition') ?? '',
+          meta,
+          cleanTitle: formatTextForNotification(suggestedName, false),
+          convertToMp3,
+        });
+        blob = prepared.blob;
+        if (prepared.ext !== '.mp3' && fileName.endsWith('.mp3')) {
+          fileName = fileName.slice(0, -4) + prepared.ext;
+        } else if (prepared.ext === '.wav') {
+          fileName = fileName.replace(/\.flac$/i, '.wav');
         }
       }
     } catch (e) {

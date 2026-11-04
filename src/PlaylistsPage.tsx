@@ -9,7 +9,7 @@ import { UserPlaylist, PlaylistSong, Song, Era } from './types';
 import { ArtImage } from './components/ArtGallery';
 import { eraArtwork } from './eraArtwork';
 import * as audioStore from './player/audioStore';
-import { handleDownloadFile, buildArtistTag, buildTitleTag, buildDownloadName, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
+import { handleDownloadFile, prepareAudioDownload, type SongMeta, buildArtistTag, buildTitleTag, buildDownloadName, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
 import { useSettings } from './SettingsContext';
 
 // Prefer the song's real era cover (bundled per tracker) over whatever was
@@ -139,7 +139,8 @@ async function resolveDownloadUrl(url: string): Promise<string | null> {
 
 // Fetch a single entry's audio as a named blob, or null if it isn't directly
 // downloadable / the fetch fails. `baseName` becomes the filename (sans ext).
-async function fetchSongFile(entry: PlaylistSong, baseName: string): Promise<{ blob: Blob; fileName: string } | null> {
+// Tagged/converted exactly like a single-song download (pass `meta` to tag).
+async function fetchSongFile(entry: PlaylistSong, baseName: string, meta?: SongMeta, convertToMp3 = false): Promise<{ blob: Blob; fileName: string } | null> {
   const rawUrl = entry.url ?? '';
   if (!rawUrl || !isDirectlyDownloadable(rawUrl)) return null;
   const fetchUrl = await resolveDownloadUrl(rawUrl);
@@ -148,8 +149,13 @@ async function fetchSongFile(entry: PlaylistSong, baseName: string): Promise<{ b
   if (!res?.ok) return null;
   const ct = res.headers.get('content-type') ?? '';
   if (ct.startsWith('text/html') || ct.startsWith('application/json')) return null;
-  const blob = await res.blob();
-  const ext = ct.includes('flac') ? '.flac' : ct.includes('wav') ? '.wav' : '.mp3';
+  const { blob, ext } = await prepareAudioDownload(await res.blob(), {
+    contentType: ct,
+    contentDisposition: res.headers.get('content-disposition') ?? '',
+    meta,
+    cleanTitle: entry.songName,
+    convertToMp3,
+  });
   return { blob, fileName: `${baseName}${ext}` };
 }
 
@@ -240,6 +246,18 @@ export function PlaylistsPage() {
     }
   };
 
+  const songTagMeta = (entry: PlaylistSong): SongMeta | undefined => {
+    if (!settings.embedMetadata) return undefined;
+    const eraName = entry.eraName || '';
+    return {
+      title: buildTitleTag(entry.songName, settings.tagFeaturedArtists),
+      artist: buildArtistTag(entry.songName, eraName, settings.tagFeaturedArtists, entry.artist),
+      album: eraName,
+      year: ALBUM_RELEASE_DATES[eraName]?.split('/').pop(),
+      artworkUrl: songArtwork(entry),
+    };
+  };
+
   const downloadZip = async (playlist: UserPlaylist) => {
     if (downloading) return;
     setDownloading(true);
@@ -258,7 +276,7 @@ export function PlaylistsPage() {
       tracklist += '\n\n';
       if (!rawUrl || !isDirectlyDownloadable(rawUrl)) { skipped++; continue; }
       try {
-        const file = await fetchSongFile(entry, baseName);
+        const file = await fetchSongFile(entry, baseName, songTagMeta(entry), settings.convertToMp3);
         if (!file) { skipped++; continue; }
         let fileName = file.fileName;
         if (usedNames.has(fileName)) fileName = fileName.replace(/(\.[^.]+)$/, ` (${i + 1})$1`);
@@ -293,15 +311,7 @@ export function PlaylistsPage() {
     }
     setDownloadingSong(key);
     try {
-      const eraName = entry.eraName || '';
-      const meta = settings.embedMetadata ? {
-        title: buildTitleTag(entry.songName, settings.tagFeaturedArtists),
-        artist: buildArtistTag(entry.songName, eraName, settings.tagFeaturedArtists, entry.artist),
-        album: eraName,
-        year: ALBUM_RELEASE_DATES[eraName]?.split('/').pop(),
-        artworkUrl: songArtwork(entry),
-      } : undefined;
-      await handleDownloadFile(entry.url, buildDownloadName(entry.songName, settings.tagFeaturedArtists, settings.tagsAsEmojis), settings.tagsAsEmojis, meta, undefined, settings.convertToMp3);
+      await handleDownloadFile(entry.url, buildDownloadName(entry.songName, settings.tagFeaturedArtists, settings.tagsAsEmojis), settings.tagsAsEmojis, songTagMeta(entry), undefined, settings.convertToMp3);
     } catch {
       showToast('Couldn’t download this song');
     } finally {

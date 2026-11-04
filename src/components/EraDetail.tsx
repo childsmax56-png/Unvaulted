@@ -5,7 +5,7 @@ import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loa
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, detectAudioExt, embedID3Tags, embedFLACTags, flacToWav, embedWAVTags, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, prepareAudioDownload, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
 import { addItemsToGlobalTierList, readGlobalTierLists } from '../tierListStore';
@@ -285,6 +285,15 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
     setTimeout(() => setToastMessage(null), 3000);
   };
 
+  // Same tags (incl. cover art priority) as the player's single-song Download.
+  const songTagMeta = (song: Song, songEraName: string) => ({
+    title: buildTitleTag(songCredits(song.name, song.extra), settings.tagFeaturedArtists),
+    artist: buildArtistTag(songCredits(song.name, song.extra), songEraName, settings.tagFeaturedArtists),
+    album: songEraName,
+    year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
+    artworkUrl: song.image || CUSTOM_IMAGES[songEraName] || (song as any).realEra?.image || era.image,
+  });
+
   const handleDownloadAlbum = async () => {
     if (!allFilteredPlayableSongs.length) {
       setToastMessage("No playable songs found in this album.");
@@ -313,45 +322,17 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
         const fileName = buildDownloadName(songCredits(song.name, song.extra), settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
-        if (isImage) {
-          ext = imageExt || await detectAudioExt(blob);
+        if (isImage && imageExt) {
+          ext = imageExt;
         } else {
-          ext = await detectAudioExt(blob);
-        }
-        // Apply content-type override for all URLs — corrects .mp3 fallback when magic bytes
-        // are ambiguous (e.g. audio from ibb.co or other image-flagged hosts).
-        if (ext === '.mp3') {
-          if (ct.includes('flac'))                                     ext = '.flac';
-          else if (ct.includes('wav') || ct.includes('wave'))          ext = '.wav';
-          else if (ct.includes('aiff'))                                ext = '.aiff';
-          else if (ct.includes('ogg') || ct.includes('opus'))          ext = '.ogg';
-          else if (ct.includes('m4a') || (ct.includes('mp4') && !ct.includes('video'))) ext = '.m4a';
-        }
-        const isLossless = song.quality?.toLowerCase().includes('lossless');
-        if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
-          // Skip artwork in zip path — concurrent artwork fetches across all songs saturate
-          // the browser's connection limit and cause the download to hang.
-          const tagMeta = {
-            title: buildTitleTag(songCredits(song.name, song.extra), settings.tagFeaturedArtists),
-            artist: buildArtistTag(songCredits(song.name, song.extra), songEraName, settings.tagFeaturedArtists),
-            album: songEraName,
-            year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
-            artworkUrl: undefined,
-          };
-          try {
-            if (ext === '.mp3') blob = await embedID3Tags(blob, tagMeta, songTitle);
-            else if (ext === '.wav') blob = await embedWAVTags(blob, tagMeta, songTitle);
-            else if (ext === '.flac') {
-              try {
-                blob = await flacToWav(blob); ext = '.wav';
-                blob = await embedWAVTags(blob, tagMeta, songTitle);
-              } catch {
-                if (!isLossless) blob = await embedFLACTags(blob, tagMeta, songTitle);
-              }
-            }
-          } catch { /* skip tagging, save raw */ }
-        } else if (isLossless && ext === '.flac') {
-          try { blob = await flacToWav(blob); ext = '.wav'; } catch { /* keep as FLAC */ }
+          ({ blob, ext } = await prepareAudioDownload(blob, {
+            contentType: ct,
+            contentDisposition: res.headers.get('content-disposition') ?? '',
+            meta: settings.embedMetadata ? songTagMeta(song, songEraName) : undefined,
+            cleanTitle: songTitle,
+            convertToMp3: settings.convertToMp3,
+            flacToWavUntagged: song.quality?.toLowerCase().includes('lossless'),
+          }));
         }
         zip.file(`${sanitizeFilename(fileName)}${ext}`, blob);
       } catch (err) {
@@ -419,34 +400,17 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         const songTitle = song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name;
         const fileName = buildDownloadName(songCredits(song.name, song.extra), settings.tagFeaturedArtists, settings.tagsAsEmojis);
         let ext: string;
-        if (isImage) { ext = imageExt || await detectAudioExt(blob); }
-        else { ext = await detectAudioExt(blob); }
-        if (ext === '.mp3') {
-          if (ct.includes('flac')) ext = '.flac';
-          else if (ct.includes('wav') || ct.includes('wave')) ext = '.wav';
-          else if (ct.includes('aiff')) ext = '.aiff';
-          else if (ct.includes('ogg') || ct.includes('opus')) ext = '.ogg';
-          else if (ct.includes('m4a') || (ct.includes('mp4') && !ct.includes('video'))) ext = '.m4a';
-        }
-        const isLossless = song.quality?.toLowerCase().includes('lossless');
-        if (settings.embedMetadata && (ext === '.mp3' || ext === '.flac' || ext === '.wav')) {
-          const tagMeta = {
-            title: buildTitleTag(songCredits(song.name, song.extra), settings.tagFeaturedArtists),
-            artist: buildArtistTag(songCredits(song.name, song.extra), songEraName, settings.tagFeaturedArtists),
-            album: songEraName,
-            year: (ALBUM_RELEASE_DATES[songEraName] || activeConfig.MEMBER_RELEASE_DATES?.[songEraName])?.split('/').pop(),
-            artworkUrl: undefined,
-          };
-          try {
-            if (ext === '.mp3') blob = await embedID3Tags(blob, tagMeta, songTitle);
-            else if (ext === '.wav') blob = await embedWAVTags(blob, tagMeta, songTitle);
-            else if (ext === '.flac') {
-              try { blob = await flacToWav(blob); ext = '.wav'; blob = await embedWAVTags(blob, tagMeta, songTitle); }
-              catch { if (!isLossless) blob = await embedFLACTags(blob, tagMeta, songTitle); }
-            }
-          } catch { /* skip tagging */ }
-        } else if (isLossless && ext === '.flac') {
-          try { blob = await flacToWav(blob); ext = '.wav'; } catch { /* keep as FLAC */ }
+        if (isImage && imageExt) {
+          ext = imageExt;
+        } else {
+          ({ blob, ext } = await prepareAudioDownload(blob, {
+            contentType: ct,
+            contentDisposition: res.headers.get('content-disposition') ?? '',
+            meta: settings.embedMetadata ? songTagMeta(song, songEraName) : undefined,
+            cleanTitle: songTitle,
+            convertToMp3: settings.convertToMp3,
+            flacToWavUntagged: song.quality?.toLowerCase().includes('lossless'),
+          }));
         }
         zip.file(`${sanitizeFilename(fileName)}${ext}`, blob);
       } catch (err) {

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Download, ExternalLink, Play, Pause, Image as ImageIcon, X } from 'lucide-react';
 import { saveAs } from 'file-saver';
 import { Era, Song } from '../types';
-import { isSongNotAvailable, embedID3Tags, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
+import { isSongNotAvailable, prepareAudioDownload, CUSTOM_IMAGES, ALBUM_RELEASE_DATES, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, sanitizeFilename, runWithConcurrencyLimit } from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
 import { useSettings } from '../SettingsContext';
 import { CommentButton } from './CommentButton';
@@ -253,23 +253,20 @@ function AlbumCard({ album, matches, defaultOpen, onPlaySong, currentSong, isPla
         const fetchUrl = await resolveAudioUrl(rawUrl);
         const res = await fetch(fetchUrl);
         if (!res.ok) throw new Error('fetch failed');
-        let blob = await res.blob();
-        const ext = blob.type.includes('wav') ? '.wav' : blob.type.includes('flac') ? '.flac' : '.mp3';
-        if (ext === '.mp3' && settings.embedMetadata) {
-          try {
-            const artworkUrl = CUSTOM_IMAGES[album.era] || match.era?.image || match.song.image;
-            const year = album.date || ALBUM_RELEASE_DATES[album.era]?.split('/').pop();
-            blob = await embedID3Tags(blob, {
-              title: buildTitleTag(songCredits(track.name, match.song.extra), settings.tagFeaturedArtists),
-              artist: buildArtistTag(songCredits(track.name, match.song.extra), album.era, settings.tagFeaturedArtists),
-              album: album.name,
-              year,
-              artworkUrl,
-            }, track.name);
-          } catch {
-            // continue without tags
-          }
-        }
+        const artworkUrl = CUSTOM_IMAGES[album.era] || match.era?.image || match.song.image;
+        const { blob, ext } = await prepareAudioDownload(await res.blob(), {
+          contentType: res.headers.get('content-type') ?? '',
+          contentDisposition: res.headers.get('content-disposition') ?? '',
+          meta: settings.embedMetadata ? {
+            title: buildTitleTag(songCredits(track.name, match.song.extra), settings.tagFeaturedArtists),
+            artist: buildArtistTag(songCredits(track.name, match.song.extra), album.era, settings.tagFeaturedArtists),
+            album: album.name,
+            year: album.date || ALBUM_RELEASE_DATES[album.era]?.split('/').pop(),
+            artworkUrl,
+          } : undefined,
+          cleanTitle: track.name,
+          convertToMp3: settings.convertToMp3,
+        });
         const num = track.num !== '#?' ? String(track.num).padStart(2, '0') : '00';
         zip.file(`${num}. ${sanitizeFilename(buildDownloadName(songCredits(track.name, match.song.extra), settings.tagFeaturedArtists, settings.tagsAsEmojis))}${ext}`, blob);
       } catch {
