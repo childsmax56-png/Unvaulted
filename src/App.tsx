@@ -244,6 +244,7 @@ import { recordListeningHistory } from './history';
 import { activeConfig } from './artists/activeConfig';
 import { reportBrokenLink } from './linkStatus';
 import { classifySuberaRows } from './suberas';
+import { TagFilterBar, TagSelection, detectTagColumns, applyTagFilter } from './components/TagFilterBar';
 
 // When viewing a community (user-built) tracker, attach the signed-in account's
 // token to our own /api/ data requests. This lets the creator/admin preview a
@@ -373,6 +374,22 @@ export default function App() {
     hasRemixes: null,
     hasSamples: null
   });
+
+  // Per-tab tag filters detected from the side tab's own columns (Art "Use",
+  // Released "Streaming", Misc "Type", …); reset whenever the tab changes.
+  const [tagSelection, setTagSelection] = useState<TagSelection>({});
+  useEffect(() => { setTagSelection({}); }, [activeCategory]);
+  const tagSource: Record<string, unknown>[] | null =
+    activeCategory === 'art' ? artData as any
+      : activeCategory === 'misc' ? miscData as any
+      : activeCategory === 'stems' ? stemsData as any
+      : activeCategory === 'fakes' ? fakesData as any
+      : activeCategory === 'released' ? releasedData as any
+      : activeCategory === 'videos' ? videosData as any
+      : null;
+  const tagColumns = useMemo(() => (tagSource ? detectTagColumns(tagSource) : []), [tagSource]);
+  const tagFiltered = useMemo(() => (tagSource ? applyTagFilter(tagSource, tagSelection) : null), [tagSource, tagSelection]);
+  const withTags = <T,>(data: T[]): T[] => ((data as unknown) === tagSource && tagFiltered ? tagFiltered as unknown as T[] : data);
 
   useEffect(() => {
     if (!loading) {
@@ -3288,18 +3305,19 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
 
         <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
+            <TagFilterBar columns={tagColumns} selection={tagSelection} onChange={setTagSelection} />
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
                 <SettingsView key="settings" onCategoryChange={setActiveCategory} searchQuery={searchQuery} eras={erasArray} artData={artData} stemsData={stemsData} miscData={miscData} />
               ) : activeCategory === 'history' ? (
                 <HistoryView key="history" searchQuery={searchQuery} filters={filters} eras={erasArray} historyData={recentData} />
               ) : activeCategory === 'art' ? (
-                <ArtGallery key="art" eras={[...erasArray, ...artOnlyErasArray]} artData={artData} searchQuery={searchQuery} filters={filters} />
+                <ArtGallery key="art" eras={[...erasArray, ...artOnlyErasArray]} artData={withTags(artData)} searchQuery={searchQuery} filters={filters} />
               ) : activeCategory === 'stems' ? (
                 <StemsView
                   key="stems"
                   eras={erasArray}
-                  stemsData={stemsData}
+                  stemsData={withTags(stemsData)}
                   searchQuery={searchQuery}
                   filters={filters}
                   onPlaySong={handlePlaySong}
@@ -3315,7 +3333,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 <MiscView
                   key="misc"
                   eras={erasArray}
-                  miscData={miscData}
+                  miscData={withTags(miscData)}
                   searchQuery={searchQuery}
                   filters={filters}
                   onPlaySong={handlePlaySong}
@@ -3347,7 +3365,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 <FakesView
                   key="fakes"
                   eras={erasArray}
-                  fakesData={fakesData}
+                  fakesData={withTags(fakesData)}
                   searchQuery={searchQuery}
                   filters={filters}
                   onPlaySong={handlePlaySong}
@@ -3373,7 +3391,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 <VideosView
                   key="videos"
                   eras={erasArray}
-                  videosData={videosData}
+                  videosData={withTags(videosData)}
                   searchQuery={searchQuery}
                   onVideoPlay={() => {
                     if (audioRef.current) {
@@ -3400,7 +3418,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 <ReleasedView
                   key="released"
                   eras={erasArray}
-                  releasedData={releasedData}
+                  releasedData={withTags(releasedData)}
                   searchQuery={searchQuery}
                   spotifyLoggedIn={spotifyLoggedIn}
                   spotifyReady={spotifyState.isReady}
