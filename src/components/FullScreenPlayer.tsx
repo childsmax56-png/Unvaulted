@@ -93,12 +93,12 @@ export function FullScreenPlayer({
   }, [currentSong, era]);
 
   useEffect(() => {
-    if (!loading && !hasSynced && plainLyrics && !settings.syncedLyricsOnly) {
+    if (!loading && !hasSynced && plainLyrics) {
       setViewMode('plain');
     } else if (!loading && hasSynced) {
       setViewMode('sync');
     }
-  }, [hasSynced, plainLyrics, loading, settings.syncedLyricsOnly]);
+  }, [hasSynced, plainLyrics, loading]);
 
   const currentLineIndex = parsedSyncedLyrics 
     ? parsedSyncedLyrics.findIndex((line, i) => {
@@ -304,7 +304,7 @@ export function FullScreenPlayer({
           </p>
         </div>
         <div className="flex items-center gap-2 md:gap-4 shrink-0 justify-end">
-          {showLyrics && hasSynced && plainLyrics && !isLyricsDisabled && !settings.syncedLyricsOnly && (
+          {showLyrics && hasSynced && plainLyrics && !isLyricsDisabled && (
             <div className="flex items-center bg-white/10 rounded-full p-0.5 mr-2">
               <button
                 onClick={() => setViewMode('sync')}
@@ -492,10 +492,6 @@ export function FullScreenPlayer({
                     <div className="mt-2 text-[10px] text-white/20 uppercase tracking-widest">
                       Sourced from {source === 'genius' ? 'Genius' : 'lrclib'}
                     </div>
-                  </div>
-                ) : settings.syncedLyricsOnly && !hasSynced ? (
-                  <div className="h-full flex items-center justify-center text-white/50 text-center text-lg font-medium">
-                    No synced lyrics available for this track.
                   </div>
                 ) : plainLyrics ? (
                   <div className="flex flex-col py-12">

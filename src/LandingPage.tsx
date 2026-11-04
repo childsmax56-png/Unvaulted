@@ -301,11 +301,6 @@ function LandingSettingsPanel({ onClose }: { onClose: () => void }) {
           <Toggle on={settings.startupShuffle} onToggle={() => updateSettings({ startupShuffle: !settings.startupShuffle })} />
         </div>
 
-        <div style={row}>
-          <div style={label}>Synced Lyrics Only</div>
-          <Toggle on={settings.syncedLyricsOnly} onToggle={() => updateSettings({ syncedLyricsOnly: !settings.syncedLyricsOnly })} />
-        </div>
-
         {vgUser ? (
           <>
             <div style={{ ...row, justifyContent: 'flex-start', gap: 10 }}>

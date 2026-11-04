@@ -17,17 +17,20 @@ export interface SongInfo {
   annotationCount: number;
 }
 
+export type LyricsSource = 'genius' | 'lrclib';
+
 export interface LyricsData {
   plainLyrics: string | null;
   syncedLyrics: string | null;
   parsedSyncedLyrics: { time: number; text: string }[] | null;
-  source: 'genius' | 'lrclib' | null;
+  source: LyricsSource | null;
   annotations: Annotation[] | null;
   geniusUrl: string | null;
   songInfo: SongInfo | null;
 }
 
-const lyricsCache = new Map<string, LyricsData & { error: string | null }>();
+// Both providers are looked up independently; the cache keeps each one's result (null = not found).
+const lyricsCache = new Map<string, { genius: LyricsData | null; lrclib: LyricsData | null }>();
 
 function cleanTrackName(name: string): string {
   let track = name;
@@ -99,174 +102,143 @@ function getAlternativeNames(song: Song): string[] {
 }
 
 
-export function useLyrics(currentSong: Song | null, era: Era | null) {
-  const [lyricsData, setLyricsData] = useState<LyricsData>({ plainLyrics: null, syncedLyrics: null, parsedSyncedLyrics: null, source: null, annotations: null, geniusUrl: null, songInfo: null });
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+function parseSyncedLyrics(synced: string): { time: number; text: string }[] {
+  return synced.split('\n').map((line: string) => {
+    const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2,3})\](.*)/);
+    if (!match) return null;
+    const minutes = parseInt(match[1], 10);
+    const seconds = parseInt(match[2], 10);
+    const msStr = match[3];
+    const milliseconds = msStr.length === 2 ? parseInt(msStr, 10) * 10 : parseInt(msStr, 10);
+    return { time: minutes * 60 + seconds + milliseconds / 1000, text: match[4].trim() };
+  }).filter(Boolean) as { time: number; text: string }[];
+}
+
+async function fetchGenius(artists: string[], tracks: string[], alive: () => boolean): Promise<LyricsData | null> {
+  // All calls server-side via CF Worker — iterate all artist/track combos
+  for (const artist of artists) {
+    for (const track of tracks) {
+      if (!alive()) return null;
+      try {
+        const res = await axios.get('/api/lyrics', { params: { artist, track } });
+        if (res.data?.lyrics) {
+          return {
+            plainLyrics: res.data.lyrics,
+            syncedLyrics: null,
+            parsedSyncedLyrics: null,
+            source: 'genius',
+            annotations: res.data.annotations ?? null,
+            geniusUrl: res.data.geniusUrl ?? null,
+            songInfo: res.data.songInfo ?? null,
+          };
+        }
+      } catch {
+        // Genius unreachable — continue trying
+      }
+    }
+  }
+  return null;
+}
+
+async function fetchLrclib(artists: string[], tracks: string[], alive: () => boolean): Promise<LyricsData | null> {
+  for (const artist of artists) {
+    for (const track of tracks) {
+      if (!alive()) return null;
+      try {
+        const res = await axios.get('https://lrclib.net/api/get', { params: { artist_name: artist, track_name: track } });
+        if (res.data && (res.data.plainLyrics || res.data.syncedLyrics)) {
+          return {
+            plainLyrics: res.data.plainLyrics || null,
+            syncedLyrics: res.data.syncedLyrics ? res.data.syncedLyrics.replace(/\[\d{2}:\d{2}\.\d{2,3}\]\s*/g, '') : null,
+            parsedSyncedLyrics: res.data.syncedLyrics ? parseSyncedLyrics(res.data.syncedLyrics) : null,
+            source: 'lrclib',
+            annotations: null,
+            geniusUrl: null,
+            songInfo: null,
+          };
+        }
+      } catch {
+      }
+    }
+  }
+  return null;
+}
+
+const EMPTY: LyricsData = { plainLyrics: null, syncedLyrics: null, parsedSyncedLyrics: null, source: null, annotations: null, geniusUrl: null, songInfo: null };
+
+// `preferred` picks which provider is shown; the other one is used as a fallback when the
+// preferred one has nothing. `available` reports which providers found lyrics so a UI can
+// offer a switch between them.
+export function useLyrics(currentSong: Song | null, era: Era | null, preferred: LyricsSource = 'genius') {
+  // undefined = still searching, null = searched and not found
+  const [results, setResults] = useState<{ genius: LyricsData | null | undefined; lrclib: LyricsData | null | undefined }>({ genius: undefined, lrclib: undefined });
 
   useEffect(() => {
     if (!currentSong) return;
 
     const cacheKey = `${currentSong.name}-${era?.name || ''}`;
-    if (lyricsCache.has(cacheKey)) {
-      const cached = lyricsCache.get(cacheKey)!;
-      setLyricsData({
-        plainLyrics: cached.plainLyrics,
-        syncedLyrics: cached.syncedLyrics,
-        parsedSyncedLyrics: cached.parsedSyncedLyrics,
-        source: cached.source,
-        annotations: cached.annotations,
-        geniusUrl: cached.geniusUrl,
-        songInfo: cached.songInfo,
-      });
-      setError(cached.error);
-      setLoading(false);
+    const cached = lyricsCache.get(cacheKey);
+    if (cached) {
+      setResults(cached);
       return;
     }
 
     let isMounted = true;
+    const alive = () => isMounted;
+    setResults({ genius: undefined, lrclib: undefined });
 
-    const fetchLyrics = async () => {
-      setLoading(true);
-      setError(null);
-      setLyricsData({ plainLyrics: null, syncedLyrics: null, parsedSyncedLyrics: null, source: null, annotations: null, geniusUrl: null, songInfo: null });
+    const initialArtist = parseArtistFromSong(currentSong.name, currentSong.extra, era?.name);
 
-      const initialArtist = parseArtistFromSong(currentSong.name, currentSong.extra, era?.name);
+    let trackNamesToTry = getAlternativeNames(currentSong);
+    let artistsToTry = [initialArtist];
 
-      let trackNamesToTry = getAlternativeNames(currentSong);
-      let artistsToTry = [initialArtist];
-
-      if (currentSong.name === "Alright but the beat is Father Stretch My Hands Pt. 1") {
-        artistsToTry = ["Kendrick Lamar"];
-        trackNamesToTry = ["Alright"];
-      } else {
-        // Fall back to the active tracker's primary artist (not a hardcoded one),
-        // so songs credited to collaborators still resolve lyrics under the main artist.
-        const primaryArtist = getArtistName(undefined);
-        const lowerArtist = initialArtist.toLowerCase();
-        const lowerPrimary = primaryArtist.toLowerCase();
-        if (primaryArtist && !lowerArtist.includes(lowerPrimary)) {
-          artistsToTry.push(primaryArtist);
-          // Kanye is commonly credited as "Ye" on Genius — add the alias only for that tracker.
-          if (lowerPrimary.includes('kanye')) artistsToTry.push('Ye');
-        }
+    if (currentSong.name === "Alright but the beat is Father Stretch My Hands Pt. 1") {
+      artistsToTry = ["Kendrick Lamar"];
+      trackNamesToTry = ["Alright"];
+    } else {
+      // Fall back to the active tracker's primary artist (not a hardcoded one),
+      // so songs credited to collaborators still resolve lyrics under the main artist.
+      const primaryArtist = getArtistName(undefined);
+      const lowerArtist = initialArtist.toLowerCase();
+      const lowerPrimary = primaryArtist.toLowerCase();
+      if (primaryArtist && !lowerArtist.includes(lowerPrimary)) {
+        artistsToTry.push(primaryArtist);
+        // Kanye is commonly credited as "Ye" on Genius — add the alias only for that tracker.
+        if (lowerPrimary.includes('kanye')) artistsToTry.push('Ye');
       }
+    }
 
-      let foundLyrics = false;
-      let finalData: LyricsData = { plainLyrics: null, syncedLyrics: null, parsedSyncedLyrics: null, source: null, annotations: null, geniusUrl: null, songInfo: null };
-
-      // Genius metadata saved here if lyrics scraping is blocked, so we can attach to lrclib results
-      let geniusMeta: { annotations: LyricsData['annotations']; geniusUrl: string | null; songInfo: LyricsData['songInfo'] } | null = null;
-
-      // Try Genius (all calls server-side via CF Worker) — iterate all artist/track combos
-      outer: for (const artist of artistsToTry) {
-        for (const trackName of trackNamesToTry) {
-          if (!isMounted) break outer;
-          try {
-            const geniusRes = await axios.get('/api/lyrics', {
-              params: { artist, track: trackName },
-            });
-            if (geniusRes.data?.lyrics) {
-              finalData = {
-                plainLyrics: geniusRes.data.lyrics,
-                syncedLyrics: null,
-                parsedSyncedLyrics: null,
-                source: 'genius',
-                annotations: geniusRes.data.annotations ?? null,
-                geniusUrl: geniusRes.data.geniusUrl ?? null,
-                songInfo: geniusRes.data.songInfo ?? null,
-              };
-              foundLyrics = true;
-              if (isMounted) setLyricsData(finalData);
-              break outer;
-            } else if (geniusRes.data?.geniusUrl && !geniusMeta) {
-              // Lyrics scraping blocked but metadata came through — attach to lrclib
-              geniusMeta = {
-                annotations: geniusRes.data.annotations ?? null,
-                geniusUrl: geniusRes.data.geniusUrl,
-                songInfo: geniusRes.data.songInfo ?? null,
-              };
-            }
-          } catch {
-            // Genius unreachable — continue trying
-          }
-        }
-      }
-
-      // Fall back to lrclib (supports synced lyrics)
-      if (!foundLyrics) {
-        for (const artist of artistsToTry) {
-          if (foundLyrics) break;
-
-          for (const trackName of trackNamesToTry) {
-            if (!isMounted) return;
-
-            try {
-              const params: any = {
-                artist_name: artist,
-                track_name: trackName
-              };
-
-              const res = await axios.get(`https://lrclib.net/api/get`, { params });
-
-              if (res.data && (res.data.plainLyrics || res.data.syncedLyrics)) {
-                let parsedSyncedLyrics = null;
-                if (res.data.syncedLyrics) {
-                  const lines = res.data.syncedLyrics.split('\n');
-                  parsedSyncedLyrics = lines.map((line: string) => {
-                    const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2,3})\](.*)/);
-                    if (match) {
-                      const minutes = parseInt(match[1], 10);
-                      const seconds = parseInt(match[2], 10);
-                      const msStr = match[3];
-                      const milliseconds = msStr.length === 2 ? parseInt(msStr, 10) * 10 : parseInt(msStr, 10);
-                      const time = minutes * 60 + seconds + milliseconds / 1000;
-                      return { time, text: match[4].trim() };
-                    }
-                    return null;
-                  }).filter(Boolean) as { time: number; text: string }[];
-                }
-
-                finalData = {
-                  plainLyrics: res.data.plainLyrics || null,
-                  syncedLyrics: res.data.syncedLyrics ? res.data.syncedLyrics.replace(/\[\d{2}:\d{2}\.\d{2,3}\]\s*/g, '') : null,
-                  parsedSyncedLyrics,
-                  // Attach Genius metadata if we got it, so annotations/song info still show
-                  source: geniusMeta ? 'genius' : 'lrclib',
-                  annotations: geniusMeta?.annotations ?? null,
-                  geniusUrl: geniusMeta?.geniusUrl ?? null,
-                  songInfo: geniusMeta?.songInfo ?? null,
-                };
-
-                if (isMounted) {
-                  setLyricsData(finalData);
-                  foundLyrics = true;
-                }
-                break;
-              }
-            } catch {
-            }
-          }
-        }
-      }
-
-      if (isMounted) {
-        if (!foundLyrics) {
-          setError("No lyrics found for this track.");
-          lyricsCache.set(cacheKey, { ...finalData, error: "No lyrics found for this track." });
-        } else {
-          lyricsCache.set(cacheKey, { ...finalData, error: null });
-        }
-        setLoading(false);
-      }
-    };
-
-    fetchLyrics();
+    const geniusP = fetchGenius(artistsToTry, trackNamesToTry, alive).then(genius => {
+      if (isMounted) setResults(r => ({ ...r, genius }));
+      return genius;
+    });
+    const lrclibP = fetchLrclib(artistsToTry, trackNamesToTry, alive).then(lrclib => {
+      if (isMounted) setResults(r => ({ ...r, lrclib }));
+      return lrclib;
+    });
+    Promise.all([geniusP, lrclibP]).then(([genius, lrclib]) => {
+      if (isMounted) lyricsCache.set(cacheKey, { genius, lrclib });
+    });
 
     return () => {
       isMounted = false;
     };
   }, [currentSong, era]);
 
-  return { ...lyricsData, loading, error };
+  const other: LyricsSource = preferred === 'genius' ? 'lrclib' : 'genius';
+  const mine = results[preferred];
+  const fallback = results[other];
+  // Show the preferred provider; once it has come back empty, fall back to the other one.
+  const active = mine ?? (mine === null ? fallback ?? null : null);
+  const allDone = results.genius !== undefined && results.lrclib !== undefined;
+  const loading = !active && !allDone;
+  const error = !active && allDone ? "No lyrics found for this track." : null;
+
+  return {
+    ...(active ?? EMPTY),
+    loading,
+    error,
+    available: { genius: !!results.genius, lrclib: !!results.lrclib },
+    searching: { genius: results.genius === undefined, lrclib: results.lrclib === undefined },
+  };
 }

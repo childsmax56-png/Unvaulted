@@ -4,7 +4,7 @@ import { X, Loader2, Mic2, AlignLeft, Clock, ChevronDown, ExternalLink, Info } f
 import { Song, Era } from '../types';
 import { createPortal } from 'react-dom';
 import { useLyrics } from '../useLyrics';
-import type { Annotation } from '../useLyrics';
+import type { Annotation, LyricsSource } from '../useLyrics';
 import { Img } from '../utils';
 
 interface LyricsModalProps {
@@ -53,7 +53,8 @@ function buildAnnotatedSegments(text: string, annotations: Annotation[]) {
 }
 
 export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0, onSeek }: LyricsModalProps) {
-  const { plainLyrics, parsedSyncedLyrics, source, annotations, geniusUrl, songInfo, loading, error } = useLyrics(currentSong, era);
+  const [preferredSource, setPreferredSource] = useState<LyricsSource>('genius');
+  const { plainLyrics, parsedSyncedLyrics, source, annotations, geniusUrl, songInfo, loading, error, available, searching } = useLyrics(currentSong, era, preferredSource);
   const { settings } = useSettings();
   const [viewMode, setViewMode] = useState<'sync' | 'plain' | 'info'>('sync');
   const [selectedAnnotation, setSelectedAnnotation] = useState<Annotation | null>(null);
@@ -65,12 +66,12 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
 
   useEffect(() => {
     if (viewMode === 'info') return;
-    if (!loading && !hasSynced && plainLyrics && !settings.syncedLyricsOnly) {
+    if (!loading && !hasSynced && plainLyrics) {
       setViewMode('plain');
     } else if (!loading && hasSynced) {
       setViewMode('sync');
     }
-  }, [hasSynced, plainLyrics, loading, settings.syncedLyricsOnly]);
+  }, [hasSynced, plainLyrics, loading]);
 
   // Dismiss annotation panel when song or view changes; reset info tab on song change
   useEffect(() => {
@@ -79,6 +80,7 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
     prevSongKeyRef.current = songKey;
     setSelectedAnnotation(null);
     setViewMode('sync');
+    setPreferredSource('genius');
   }, [currentSong]);
 
   useEffect(() => {
@@ -137,15 +139,31 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
             <div className="flex items-center gap-2 text-white font-bold">
               <Mic2 className="w-4 h-4 text-[var(--theme-color)]" />
               Lyrics
-              {!loading && source && (
-                <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${source === 'genius' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-white/10 text-white/50'}`}>
-                  {source === 'genius' ? 'Genius' : 'lrclib'}
-                </span>
-              )}
+              <div className="flex items-center bg-white/10 rounded-full p-0.5 ml-1">
+                {(['genius', 'lrclib'] as const).map(src => {
+                  const isActive = source === src;
+                  const disabled = !available[src];
+                  return (
+                    <button
+                      key={src}
+                      onClick={() => { setPreferredSource(src); setViewMode('sync'); }}
+                      disabled={disabled}
+                      title={disabled ? (searching[src] ? 'Searching…' : 'No lyrics on ' + (src === 'genius' ? 'Genius' : 'lrclib')) : undefined}
+                      className={`text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors ${
+                        isActive
+                          ? src === 'genius' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-white/20 text-white'
+                          : disabled ? 'text-white/20 cursor-not-allowed' : 'text-white/50 hover:text-white/80 cursor-pointer'
+                      }`}
+                    >
+                      {src === 'genius' ? 'Genius' : 'lrclib'}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="flex items-center gap-2">
-              {hasSynced && plainLyrics && !settings.syncedLyricsOnly && (
+              {hasSynced && plainLyrics && (
                 <div className="flex items-center bg-white/10 rounded-full p-0.5">
                   <button
                     onClick={() => setViewMode('sync')}
@@ -259,10 +277,6 @@ export function LyricsModal({ isOpen, onClose, currentSong, era, currentTime = 0
                     <ExternalLink className="w-3 h-3" /> View full page on Genius
                   </a>
                 )}
-              </div>
-            ) : settings.syncedLyricsOnly && !hasSynced ? (
-              <div className="flex-1 flex items-center justify-center text-white/50 text-center text-sm font-medium">
-                No synced lyrics available for this track.
               </div>
             ) : plainLyrics ? (
               <div className="flex-1 flex flex-col">

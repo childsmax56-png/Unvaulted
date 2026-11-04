@@ -40,7 +40,6 @@ export interface AppSettings {
   showMiniLyricsArt: boolean;
   showNextSongNotification: boolean;
   themeColor: string;
-  syncedLyricsOnly: boolean;
   notificationWhenPlaying: boolean;
   startupShuffle: boolean;
   startupLoop: number;
@@ -86,7 +85,6 @@ export const defaultSettings: AppSettings = {
   showMiniLyricsArt: true,
   showNextSongNotification: true,
   themeColor: '#FFD700',
-  syncedLyricsOnly: false,
   notificationWhenPlaying: false,
   startupShuffle: false,
   startupLoop: 0,
