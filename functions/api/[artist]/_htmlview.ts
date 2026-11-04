@@ -146,9 +146,10 @@ export async function fetchSheetRowImages(
 }
 
 // Fill a tab's image column from its in-cell images: rows are the tab's raw
-// export/API rows (index = sheet row). Images go into the row's Link(s)/Link
-// column (what ArtGallery reads) when that cell has no URL; a Link(s) column is
-// appended when the tab has none (e.g. yzygold's Art tab is images-only).
+// export/API rows (index = sheet row). Images go first in the row's Link(s)/Link
+// column (what ArtGallery reads) — a direct in-cell image beats an image link —
+// with any existing links kept after it; a Link(s) column is appended when the
+// tab has none (e.g. yzygold's Art tab is images-only).
 export function fillRowsWithImages(rows: string[][], images: Map<number, HtmlviewRow>): string[][] {
   if (!images.size) return rows;
   const h = rows.findIndex(r => r.some(c => /^\s*(name|title)\b/i.test(c)) && r.some(c => /^\s*(image|link|art|cover)/i.test(c)));
@@ -165,7 +166,7 @@ export function fillRowsWithImages(rows: string[][], images: Map<number, Htmlvie
     if (!img) continue;
     const row = rows[i];
     while (row.length <= col) row.push('');
-    if (!/https?:\/\//i.test(row[col])) row[col] = img;
+    if (!row[col].includes(img)) row[col] = [img, row[col].trim()].filter(Boolean).join('\n');
   }
   return rows;
 }

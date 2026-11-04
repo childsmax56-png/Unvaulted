@@ -5,7 +5,7 @@ import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect, Fragment } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, createSlug, getSongSlug, ALBUM_RELEASE_DATES, matchesFilters, isSongNotAvailable, looksLikeRealLink, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, detectAudioExt, prepareAudioDownload, formatTextForNotification, parseNoteDescription , Img, relPath, absPath, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { useDownloadManager } from '../DownloadManagerContext';
-import { SongTitle } from './SongTitle';
+import { SongTitle, SongExtra } from './SongTitle';
 import { saveAs } from 'file-saver';
 import { useSettings } from '../SettingsContext';
 import { MvEntry, RemixEntry, SampleEntry } from '../App';
@@ -17,6 +17,7 @@ import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comm
 import { activeConfig } from '../artists/activeConfig';
 import { classifySuberaRows } from '../suberas';
 import { SuberaBanner } from './SuberaBanner';
+import { FileKind, getCachedFileKind, isProbeableLink, probeFileKind } from '../fileKind';
 
 export interface MiscEntry {
   Era: string;
@@ -54,6 +55,25 @@ const ERA_MAPPINGS: Record<string, string> = {
   "Bully": "BULLY [V1]",
   "BULLY": "BULLY [V1]"
 };
+
+// Internal era keys keep the " [Misc Album]" suffix (URL slugs, comment threads
+// and favorites are keyed on it); it's only dropped for display.
+const displayEraName = (eraName: string) => eraName.replace(/\s*\[Misc Album\]$/, '');
+
+// Hosts the in-app player handles. Anything else (YouTube, Dailymotion, Twitter,
+// Streamable…) is video or a web page, so it opens on the site instead.
+const PLAYER_HOSTS = /(pillows|pillowcase)\.su\/f\/|pixeldrain\.com\/u\/|imgur\.gg\/f\/|drive\.google\.com|krakenfiles\.com\/view\/|soundcloud\.com/i;
+
+/** Misc rows mix audio with music videos, photos and zips — only audio plays. */
+function opensOnSite(url: string, kind: FileKind | undefined): boolean {
+  if (!PLAYER_HOSTS.test(url)) return true;
+  return !!kind && kind !== 'audio' && kind !== 'unknown';
+}
+
+// Comment threads were keyed on the full multi-line sheet name before credits
+// moved to `extra`; rebuild that key so existing threads still match.
+const commentName = (song: Song) =>
+  song.extra ? `${song.name.replace(/ \[Misc\]$/, '')} ${song.extra} [Misc]` : song.name;
 
 function parseMiscToEras(miscData: MiscEntry[], allEras: Era[]): { eraName: string; image?: string; songs: Song[] }[] {
   const eraOrder: string[] = [];
@@ -102,8 +122,13 @@ function parseMiscToEras(miscData: MiscEntry[], allEras: Era[]): { eraName: stri
 
       const links = item["Link(s)"] ? item["Link(s)"].split('\n').filter(l => l.trim()) : [];
 
+      // Credits ("(dir. Hype Williams)", "(feat. …)") and alt titles sit on the
+      // lines after the title — show them as the secondary line, not the title.
+      const [title = '', ...creditLines] = (typeof item.Name === 'string' ? item.Name : '').split('\n').map(l => l.trim()).filter(Boolean);
+
       const song: Song = {
-        name: (typeof item.Name === 'string' ? item.Name : '') + ' [Misc]',
+        name: title + ' [Misc]',
+        extra: creditLines.length ? creditLines.join(' ') : undefined,
         description: typeof item.Notes === 'string' ? item.Notes : '',
         track_length: (typeof item["Copy Length"] === 'string' ? item["Copy Length"] : undefined) || (typeof item["Image / Length"] === 'string' ? item["Image / Length"] : undefined) || '',
         leak_date: '',
@@ -140,6 +165,9 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [selectedEra, setSelectedEra] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastHref, setToastHref] = useState<string | null>(null);
+  // Bumped as file-type probes land so rows re-render with the right icon.
+  const [kindsVersion, setKindsVersion] = useState(0);
 
   const parsedEras = useMemo(() => {
     return parseMiscToEras(miscData, eras).filter(era => !era.eraName.startsWith('NASIR') && !era.eraName.startsWith('K.T.S.E.') && !era.eraName.startsWith('NEVER STOP') && !era.eraName.startsWith('DAYTONA'));
@@ -257,13 +285,47 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
     });
   }, [selectedEraData, searchQuery, filters]);
 
+  useEffect(() => {
+    let cancelled = false;
+    for (const s of filteredSongs) {
+      const rawUrl = s.url || (s.urls && s.urls.length > 0 ? s.urls[0] : '');
+      if (!rawUrl || getCachedFileKind(rawUrl) || !PLAYER_HOSTS.test(rawUrl) || !isProbeableLink(rawUrl)) continue;
+      probeFileKind(rawUrl).then(() => { if (!cancelled) setKindsVersion(v => v + 1); });
+    }
+    return () => { cancelled = true; };
+  }, [filteredSongs]);
+
   const allPlayableSongs = useMemo(() => {
     return filteredSongs.filter(s => {
       const rawUrl = s.url || (s.urls && s.urls.length > 0 ? s.urls[0] : '');
       const isNotAvailable = isSongNotAvailable(s, rawUrl);
-      return rawUrl && rawUrl.includes('pillows.su/f/') && !isNotAvailable;
+      return rawUrl && rawUrl.includes('pillows.su/f/') && !isNotAvailable && !opensOnSite(rawUrl, getCachedFileKind(rawUrl));
     }).map(s => stampSongComment(s, { tracker: activeConfig.slug, type: 'Misc', era: selectedEra || '' }));
-  }, [filteredSongs, selectedEra]);
+  }, [filteredSongs, selectedEra, kindsVersion]);
+
+  const showToast = (text: string, href?: string, ms = 2500) => {
+    setToastMessage(text);
+    setToastHref(href ?? null);
+    setTimeout(() => { setToastMessage(null); setToastHref(null); }, ms);
+  };
+
+  const openOnSite = (rawUrl: string) => {
+    // No 'noopener' feature string: with it window.open always returns null,
+    // which would hide whether a popup blocker ate the call.
+    const win = window.open(rawUrl, '_blank');
+    // Popup blockers (Safari/iOS) drop window.open after an await — fall back
+    // to a tappable link in the toast.
+    if (!win) { showToast('Not an audio file — tap to open', rawUrl, 6000); return; }
+    try { win.opener = null; } catch { /* cross-origin */ }
+  };
+
+  const handleActivate = async (song: Song, dummyEra: Era) => {
+    const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
+    let kind = getCachedFileKind(rawUrl);
+    if (!kind && PLAYER_HOSTS.test(rawUrl) && isProbeableLink(rawUrl)) kind = await probeFileKind(rawUrl);
+    if (opensOnSite(rawUrl, kind)) { openOnSite(rawUrl); return; }
+    onPlaySong(stampSongComment(song, { tracker: activeConfig.slug, type: 'Misc', era: selectedEra || '' }), dummyEra, allPlayableSongs);
+  };
 
   const handleShare = (song: Song, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -404,14 +466,14 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
               {selectedEraData.image ? (
                 <Img w={400} src={selectedEraData.image} alt={selectedEraData.eraName} className="w-full h-full object-cover" />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-white/20 text-center p-4">{selectedEraData.eraName}</div>
+                <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-white/20 text-center p-4">{displayEraName(selectedEraData.eraName)}</div>
               )}
             </div>
 
             <div className="flex flex-col justify-end h-full py-2">
               <div className="flex items-center gap-4 mb-3 flex-wrap">
                 <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap">
-                  <div className="truncate">{formatTextWithTags(selectedEraData.eraName)}</div>
+                  <div className="truncate">{formatTextWithTags(displayEraName(selectedEraData.eraName))}</div>
                 </h1>
                 <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                   Misc
@@ -467,8 +529,9 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                   const isNotAvailable = isSongNotAvailable(song, rawUrl);
                   const lowerUrl = (rawUrl || '').toLowerCase();
                   const isTrulyEmptyLink = !rawUrl || lowerUrl === 'n/a' || lowerUrl.includes('link needed') || lowerUrl.includes('source needed') || !looksLikeRealLink(rawUrl);
-                  const isPlayable = rawUrl.includes('pillows.su/f/') && !isNotAvailable;
                   const isEmpty = isTrulyEmptyLink || isNotAvailable || lowerUrl.includes('n/a');
+                  const opensExternally = !isEmpty && opensOnSite(rawUrl, getCachedFileKind(rawUrl));
+                  const isPlayable = rawUrl.includes('pillows.su/f/') && !isNotAvailable && !opensExternally;
                   const isCurrentlyPlaying = (currentSong?.url && song.url && currentSong.url === song.url) ||
                     (currentSong?.urls && song.urls && currentSong.urls.length > 0 && song.urls.length > 0 && currentSong.urls[0] === song.urls[0]);
 
@@ -478,7 +541,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                     <Fragment key={i}>
                     {showSubera && <SuberaBanner name={song.subera!} note={song.subera_note} className={i > 0 ? 'mt-4' : ''} />}
                     <div
-                      onClick={() => !isEmpty && onPlaySong(stampSongComment(song, { tracker: activeConfig.slug, type: 'Misc', era: selectedEra || '' }), dummyEra, allPlayableSongs)}
+                      onClick={() => { if (!isEmpty) handleActivate(song, dummyEra); }}
                       className={`group flex items-center px-4 py-2.5 rounded-md transition-colors ${isEmpty ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white/5 cursor-pointer'} ${isCurrentlyPlaying ? 'bg-white/5' : ''}`}
                     >
                       <div className={`w-8 text-sm font-mono flex items-center ${isCurrentlyPlaying ? 'text-[var(--theme-color)]' : 'text-white/40 group-hover:text-white'}`}>
@@ -487,7 +550,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         </span>
                         {isEmpty ? (
                           <X className="w-4 h-4 hidden group-hover:block" />
-                        ) : isPlayable ? (
+                        ) : !opensExternally ? (
                           <Play className="w-4 h-4 hidden group-hover:block" />
                         ) : (
                           <ExternalLink className="w-4 h-4 hidden group-hover:block" />
@@ -498,6 +561,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         <div className={`flex items-baseline gap-2 truncate font-medium ${isCurrentlyPlaying ? 'text-[var(--theme-color)]' : 'text-white'}`}>
                           <SongTitle name={song.name} />
                         </div>
+                        {song.extra && <SongExtra extra={song.extra} className={`block text-xs break-words whitespace-normal leading-snug mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/50'}`} />}
                         {song.description && (() => {
                           const { note, ogFilename } = parseNoteDescription(song.description);
                           const display = note ? note.split('\n')[0] : ogFilename ? `OG: ${ogFilename}` : null;
@@ -565,7 +629,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         )}
                         <CommentButton
                           tracker={activeConfig.slug}
-                          entryKey={makeEntryKey('Misc', selectedEra || '', song.name)}
+                          entryKey={makeEntryKey('Misc', selectedEra || '', commentName(song))}
                           entryLabel={song.name}
                           entryType="Misc"
                           isCurrentlyPlaying={isCurrentlyPlaying}
@@ -590,7 +654,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                 className="fixed bottom-12 left-1/2 -translate-x-1/2 bg-[#0ba345] text-white px-6 py-3.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] text-[15px] font-medium tracking-wide z-[9999] flex items-center gap-3"
               >
                 <Check className="w-5 h-5 stroke-[2.5]" />
-                {toastMessage}
+                {toastHref ? <a href={toastHref} target="_blank" rel="noopener noreferrer" className="underline">{toastMessage}</a> : toastMessage}
               </motion.div>
             )}
           </AnimatePresence>,
@@ -623,7 +687,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
               <Img w={300} src={era.image} alt={era.eraName} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-white/5 text-white/20 font-bold text-2xl text-center p-4">
-                {era.eraName}
+                {displayEraName(era.eraName)}
               </div>
             )}
             <div className="absolute bottom-2 right-2 bg-black/70 backdrop-blur-sm text-white/80 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">
@@ -633,7 +697,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
 
           <div>
             <h3 className="text-sm font-bold text-white group-hover:underline truncate flex items-center gap-2">
-              <div className="truncate">{formatTextWithTags(era.eraName)}</div>
+              <div className="truncate">{formatTextWithTags(displayEraName(era.eraName))}</div>
             </h3>
           </div>
         </motion.div>

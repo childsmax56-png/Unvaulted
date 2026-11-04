@@ -8,6 +8,7 @@ import { useSettings } from '../SettingsContext';
 import { CommentButton } from './CommentButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
+import { getCachedFileKind, isProbeableLink, probeFileKind } from '../fileKind';
 
 export interface ArtEntry {
   Era: string;
@@ -114,6 +115,22 @@ export function ArtImage({ url, alt, contain = false }: { url: string; alt: stri
   );
 }
 
+// An art row's Link(s) cell can hold several lines. The image shown is the
+// first renderable one (in-cell sheet images are put first server-side, so a
+// direct image beats an image link); the external page is the first link that
+// isn't an image. File hosts (imgur.gg etc.) also hold videos/zips, so a link
+// probed as anything but an image counts as external.
+export function artLinks(item: ArtEntry): { image?: string; external?: string } {
+  const links = (item['Link(s)'] || '').split('\n').map(l => l.trim()).filter(l => /^https?:\/\//i.test(l) || l.startsWith('/api/sheet-image?'));
+  const isImage = (l: string) => {
+    const kind = getCachedFileKind(l);
+    return isLinkRenderable(l) && (!kind || kind === 'image' || kind === 'unknown');
+  };
+  const image = links.find(isImage);
+  const external = links.find(l => !isImage(l));
+  return { image, external };
+}
+
 const normEra = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]/g, '');
 
 // Live Art tabs name eras the sheet's own way ("How High: The Mixtape", "1017 vs.
@@ -142,6 +159,17 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  // Bumped when a file-type probe for the open item lands, so artLinks re-runs.
+  const [, setKindTick] = useState(0);
+
+  useEffect(() => {
+    if (!zoomedArt) return;
+    let cancelled = false;
+    for (const l of (zoomedArt['Link(s)'] || '').split('\n').map(x => x.trim())) {
+      if (l && !getCachedFileKind(l) && isProbeableLink(l)) probeFileKind(l).then(() => { if (!cancelled) setKindTick(t => t + 1); });
+    }
+    return () => { cancelled = true; };
+  }, [zoomedArt]);
 
   const filteredEras = useMemo(() => {
     return eras.filter(era => {
@@ -256,9 +284,8 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
     
     for (let i = 0; i < eraItems.length; i++) {
         const item = eraItems[i];
-        const link = item['Link(s)']?.split('\n')[0]?.trim();
-        const isRenderable = isLinkRenderable(link);
-        if (link && isRenderable) {
+        const link = artLinks(item).image;
+        if (link) {
            await handleDownloadFile(link, `${item.Name.split('\n')[0]}`, settings.tagsAsEmojis);
            await new Promise(res => setTimeout(res, 800));
         }
@@ -269,6 +296,7 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
   };
 
   if (selectedEra) {
+    const zoomedLinks = zoomedArt ? artLinks(zoomedArt) : {};
     const eraImageSrc = CUSTOM_IMAGES[selectedEra.name] || selectedEra.image;
 
     return (
@@ -351,8 +379,8 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
           <div className="p-4 md:p-8 max-w-7xl mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {eraItems.map((item, i) => {
-                const link = item['Link(s)']?.split('\n')[0]?.trim();
-                const isRenderable = isLinkRenderable(link);
+                const link = artLinks(item).image;
+                const isRenderable = !!link;
 
                 return (
                   <motion.div
@@ -361,13 +389,7 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.02 }}
                     className="group relative bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden hover:border-white/15 transition-all duration-300 cursor-pointer flex flex-col h-full"
-                    onClick={() => {
-                      if (isRenderable) {
-                        setZoomedArt(item);
-                      } else {
-                        window.open(link, '_blank');
-                      }
-                    }}
+                    onClick={() => setZoomedArt(item)}
                   >
                     <div className="aspect-square bg-black/40 relative overflow-hidden flex-shrink-0">
                       {isRenderable && link ? (
@@ -375,7 +397,7 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                       ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center p-6 bg-white/[0.02] text-white/30 group-hover:text-white/50 transition-colors">
                           <LinkIcon className="w-8 h-8 mb-3" />
-                          <span className="text-xs font-medium uppercase tracking-widest text-center">Click here to visit site</span>
+                          <span className="text-xs font-medium uppercase tracking-widest text-center">External link</span>
                         </div>
                       )}
                       {isRenderable && (
@@ -423,16 +445,23 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                   className="flex flex-col lg:flex-row bg-[#111] border border-white/10 rounded-xl overflow-hidden max-w-7xl w-full max-h-[95vh] relative"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="flex-1 bg-black/50 p-2 md:p-8 flex items-center justify-center relative min-h-[35vh] lg:min-h-[600px]">
-                    <ArtImage url={zoomedArt['Link(s)']?.split('\n')[0]?.trim()} alt={zoomedArt.Name} contain={true} />
-                  </div>
+                  {zoomedLinks.image ? (
+                    <div className="flex-1 bg-black/50 p-2 md:p-8 flex items-center justify-center relative min-h-[35vh] lg:min-h-[600px]">
+                      <ArtImage url={zoomedLinks.image} alt={zoomedArt.Name} contain={true} />
+                    </div>
+                  ) : (
+                    <div className="flex-1 bg-black/50 p-8 flex flex-col items-center justify-center gap-3 text-white/30 min-h-[25vh] lg:min-h-[600px]">
+                      <LinkIcon className="w-10 h-10" />
+                      <span className="text-xs font-medium uppercase tracking-widest text-center">Hosted on an external page</span>
+                    </div>
+                  )}
 
                   <div className="w-full lg:w-[400px] shrink-0 p-6 md:p-8 bg-[#111] border-t lg:border-t-0 lg:border-l border-white/10 overflow-y-auto flex flex-col relative">
-                    <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50 flex items-center gap-2">
-                      <button
+                    <div className="flex items-center justify-end gap-2 mb-4 -mt-1 -mr-1">
+                      {zoomedLinks.image && <button
                         className="p-2 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
                         onClick={() => {
-                          const url = zoomedArt['Link(s)']?.split('\n')[0]?.trim();
+                          const url = zoomedLinks.image;
                           if (url) {
                             setToastMessage('Downloading...');
                             handleDownloadFile(url, `${zoomedArt.Name.split('\n')[0]}`, settings.tagsAsEmojis);
@@ -442,7 +471,7 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                         title="Download image"
                       >
                         <Download className="w-5 h-5 md:w-6 md:h-6 p-0.5" />
-                      </button>
+                      </button>}
                       <button
                         className="p-2 bg-white/5 hover:bg-white/10 rounded-full text-white/50 hover:text-white transition-colors"
                         onClick={() => copyLink(selectedEra, zoomedArt)}
@@ -467,8 +496,8 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                       </button>
                     </div>
 
-                    <div className="mb-6 pr-24">
-                      <h3 className="text-xl font-bold text-white mb-1">{zoomedArt.Name.split('\n')[0]}</h3>
+                    <div className="mb-6 min-w-0">
+                      <h3 className="text-xl font-bold text-white mb-1 break-words">{zoomedArt.Name.split('\n')[0]}</h3>
                       {zoomedArt.Name.includes('\n') && (
                         <p className="text-sm text-white/40">{zoomedArt.Name.split('\n').slice(1).join(' ')}</p>
                       )}
@@ -479,7 +508,7 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                       {zoomedArt.Notes && (
                         <div>
                           <h4 className="text-[10px] font-semibold text-white/30 uppercase tracking-widest mb-2">Description</h4>
-                          <p className="text-sm text-white/70 leading-relaxed font-medium">{zoomedArt.Notes}</p>
+                          <p className="text-sm text-white/70 leading-relaxed font-medium whitespace-pre-line break-words">{zoomedArt.Notes}</p>
                         </div>
                       )}
 
@@ -509,6 +538,18 @@ export function ArtGallery({ eras, artData: rawArtData, searchQuery, filters }: 
                           </div>
                         )}
                       </div>
+
+                      {zoomedLinks.external && (
+                        <a
+                          href={zoomedLinks.external}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-auto flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-white/10 hover:bg-white/15 text-white text-sm font-medium transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          {zoomedLinks.image ? 'View source page' : 'Visit external page'}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.div>

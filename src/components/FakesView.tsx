@@ -389,15 +389,18 @@ export function FakesView({ eras, fakesData, searchQuery, filters, onPlaySong, c
                            </div>
                            {song.description && (() => {
                               const { note, ogFilename } = parseNoteDescription(song.description);
-                              const display = note ? note.replace(/\n/g, '  •  ') : ogFilename ? `OG: ${ogFilename}` : null;
-                              return display ? (
-                                <div className="flex items-center gap-1 mt-0.5">
-                                  <div className={`min-w-0 flex-1 text-xs truncate ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>
-                                    {formatTextWithTags(display)}
-                                  </div>
-                                  <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={!!isCurrentlyPlaying} />
+                              if (!note && !ogFilename) return null;
+                              return (
+                                <div className="mt-1">
+                                  {note && (
+                                    <div className="flex items-start gap-1">
+                                      <div className={`min-w-0 flex-1 text-xs break-words whitespace-pre-line leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(note)}</div>
+                                      <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={!!isCurrentlyPlaying} className="-mt-0.5" />
+                                    </div>
+                                  )}
+                                  {ogFilename && <div className={`text-[10px] font-mono mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/25' : 'text-white/25'}`}>OG: {ogFilename}</div>}
                                 </div>
-                              ) : null;
+                              );
                            })()}
                         </div>
 
