@@ -1,7 +1,9 @@
 import { motion, AnimatePresence } from 'motion/react';
+import { LoopIcon, loopTitle } from './LoopIcon';
 import { Play, Pause, X, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Mic2, Loader2, AlignLeft, Clock, ListMusic, Volume2, ExternalLink } from 'lucide-react';
 import { parseArtistFromSong, cleanTrackName } from '../lastfm';
 import { Song, Era } from '../types';
+import * as audioStore from '../player/audioStore';
 import { useEffect, useRef, useState } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, CUSTOM_IMAGES, parseNoteDescription, ERA_THEMES , Img, looksLikeRealLink} from '../utils';
 import { useLyrics } from '../useLyrics';
@@ -45,6 +47,7 @@ export function FullScreenPlayer({
   const showNextNotification = settings.showNextSongNotification && nextSong && duration > 0 && (duration - currentTime) <= 10 && (duration - currentTime) > 5;
 
   const [showMoreQueue, setShowMoreQueue] = useState(false);
+  const [hasLoopedOnce] = audioStore.usePlayerField('hasLoopedOnce');
   const upcomingQueue: {song: Song, realIndex: number, queueId: string}[] = [];
   const INITIAL_SHOW_COUNT = 15;
 
@@ -59,20 +62,16 @@ export function FullScreenPlayer({
         const curIdx = shuffledQueue.indexOf(currentSongIndex);
         if (curIdx !== -1) {
           nextIndices = shuffledQueue.slice(curIdx + 1);
-          if (loopMode === 1 && nextIndices.length === 0) {
-            nextIndices = shuffledQueue;
-          }
         }
       } else {
         nextIndices = playlist.map((_, i) => i).slice(currentSongIndex + 1);
-        if (loopMode === 1 && nextIndices.length === 0) {
-          nextIndices = playlist.map((_, i) => i);
-        }
       }
+
+      if (loopMode === 1 && !hasLoopedOnce) nextIndices.unshift(currentSongIndex);
 
       for (const idx of nextIndices) {
         if (playlist[idx]) {
-          upcomingQueue.push({ song: playlist[idx], realIndex: idx, queueId: `normal-${idx}` });
+          upcomingQueue.push({ song: playlist[idx], realIndex: idx, queueId: `normal-${idx}-${upcomingQueue.length}` });
         }
       }
     }
@@ -611,8 +610,8 @@ export function FullScreenPlayer({
           <button onClick={onNext} className="w-12 h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors">
             <SkipForward className="w-8 h-8 fill-current" />
           </button>
-          <button onClick={toggleLoop} disabled={!toggleLoop} className={`w-10 h-10 flex items-center justify-center transition-colors ${!toggleLoop ? 'invisible' : ''} ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
-            {loopMode === 1 ? <Repeat1 className="w-5 h-5" /> : <Repeat className="w-5 h-5" />}
+          <button onClick={toggleLoop} disabled={!toggleLoop} title={loopTitle(loopMode)} className={`w-10 h-10 flex items-center justify-center transition-colors ${!toggleLoop ? 'invisible' : ''} ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
+            <LoopIcon loopMode={loopMode} className="w-5 h-5" />
           </button>
         </div>
       </div>

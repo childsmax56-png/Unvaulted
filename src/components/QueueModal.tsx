@@ -1,5 +1,6 @@
 import { X, Play } from 'lucide-react';
 import { Song, Era } from '../types';
+import * as audioStore from '../player/audioStore';
 import { useState } from 'react';
 import { formatTextWithTags, CUSTOM_IMAGES , Img} from '../utils';
 import { motion, AnimatePresence } from 'motion/react';
@@ -19,6 +20,7 @@ interface QueueModalProps {
 export function QueueModal({ onClose, playlist, currentSongIndex, shuffledQueue, isShuffle, loopMode, onPlaySong, currentEra }: QueueModalProps) {
   const [showMore, setShowMore] = useState(false);
 
+  const [hasLoopedOnce] = audioStore.usePlayerField('hasLoopedOnce');
   const upcomingQueue: {song: Song, realIndex: number, queueId: string}[] = [];
   const INITIAL_SHOW_COUNT = 15;
 
@@ -33,20 +35,16 @@ export function QueueModal({ onClose, playlist, currentSongIndex, shuffledQueue,
         const curIdx = shuffledQueue.indexOf(currentSongIndex);
         if (curIdx !== -1) {
           nextIndices = shuffledQueue.slice(curIdx + 1);
-          if (loopMode === 1 && nextIndices.length === 0) {
-            nextIndices = shuffledQueue;
-          }
         }
       } else {
         nextIndices = playlist.map((_, i) => i).slice(currentSongIndex + 1);
-        if (loopMode === 1 && nextIndices.length === 0) {
-          nextIndices = playlist.map((_, i) => i);
-        }
       }
+
+      if (loopMode === 1 && !hasLoopedOnce) nextIndices.unshift(currentSongIndex);
 
       for (const idx of nextIndices) {
         if (playlist[idx]) {
-          upcomingQueue.push({ song: playlist[idx], realIndex: idx, queueId: `normal-${idx}` });
+          upcomingQueue.push({ song: playlist[idx], realIndex: idx, queueId: `normal-${idx}-${upcomingQueue.length}` });
         }
       }
     }

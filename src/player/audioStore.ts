@@ -378,7 +378,7 @@ export function toggleShuffle() {
 }
 
 export function cycleLoop() {
-  setState({ loopMode: (state.loopMode + 1) % 3 });
+  setState({ loopMode: (state.loopMode + 1) % 3, hasLoopedOnce: false });
 }
 
 export function setVolume(v: number) {

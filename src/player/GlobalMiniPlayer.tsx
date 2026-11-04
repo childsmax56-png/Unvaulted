@@ -9,6 +9,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
+import { LoopIcon, loopTitle } from '../components/LoopIcon';
 import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Volume2, X, ChevronUp, Maximize2 } from 'lucide-react';
 import * as audioStore from './audioStore';
 import { parseArtistFromSong } from '../lastfm';
@@ -155,8 +156,8 @@ export function GlobalMiniPlayer() {
               <button onClick={audioStore.playNext} className="w-8 h-8 flex items-center justify-center text-white/80 hover:text-white transition-colors cursor-pointer" title="Next">
                 <SkipForward className="w-5 h-5 fill-current" />
               </button>
-              <button onClick={audioStore.cycleLoop} className={`w-8 h-8 flex items-center justify-center transition-colors cursor-pointer ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`} title="Repeat">
-                {loopMode === 1 ? <Repeat1 className="w-4 h-4" /> : <Repeat className="w-4 h-4" />}
+              <button onClick={audioStore.cycleLoop} className={`w-8 h-8 flex items-center justify-center transition-colors cursor-pointer ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`} title={loopTitle(loopMode)}>
+                <LoopIcon loopMode={loopMode} />
               </button>
             </div>
             <div className="w-full flex items-center gap-3 px-2 md:px-0 text-[10px] font-mono text-white/50">

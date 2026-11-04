@@ -734,8 +734,8 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
                   onChange={(e) => updateSettings({ startupLoop: parseInt(e.target.value) })}
                   className="bg-white/10 text-xs text-white px-2 py-1 rounded border border-white/10 outline-none"
                 >
-                  <option value={2} className="bg-[#111]">Loop All</option>
-                  <option value={1} className="bg-[#111]">Loop One</option>
+                  <option value={2} className="bg-[#111]">Loop Forever</option>
+                  <option value={1} className="bg-[#111]">Loop Once</option>
                 </select>
               )}
               <button

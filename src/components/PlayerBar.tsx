@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
+import { LoopIcon, loopTitle } from './LoopIcon';
 import { Play, Pause, Volume2, Maximize2, MoreHorizontal, Download, X, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Star, Mic2, ListMusic, Square, ExternalLink, Share2, Plus, Check } from 'lucide-react';
 import { parseArtistFromSong } from '../lastfm';
 import { Song, Era } from '../types';
@@ -273,8 +274,8 @@ export function PlayerBar({
             <button onClick={onNext} className="w-8 h-8 flex items-center justify-center text-white/80 hover:text-white transition-colors cursor-pointer">
               <SkipForward className="w-5 h-5 fill-current" />
             </button>
-            <button onClick={toggleLoop} className={`w-8 h-8 flex items-center justify-center transition-colors cursor-pointer ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
-              {loopMode === 1 ? <Repeat1 className="w-4 h-4" /> : <Repeat className="w-4 h-4" />}
+            <button onClick={toggleLoop} title={loopTitle(loopMode)} className={`w-8 h-8 flex items-center justify-center transition-colors cursor-pointer ${loopMode !== 0 ? 'text-white' : 'text-white/40 hover:text-white/80'}`}>
+              <LoopIcon loopMode={loopMode} />
             </button>
           </div>
           <div className="w-full flex items-center gap-3 px-2 md:px-0 text-[10px] md:text-[10px] font-mono text-white/50">
