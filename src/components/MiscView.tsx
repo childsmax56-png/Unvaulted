@@ -520,9 +520,9 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                 <div className="flex items-center px-4 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider border-b border-white/5 mb-2 hidden sm:flex">
                   <div className="w-8">#</div>
                   <div className="flex-1">Title</div>
-                  <div className="w-28">Quality</div>
+                  <div className="w-36">Quality</div>
                   <div className="w-20 text-right">Length</div>
-                  <div className="w-10"></div>
+                  <div className="w-28"></div>
                 </div>
 
                 {filteredSongs.map((song, i) => {
@@ -565,18 +565,23 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         {song.extra && <SongExtra extra={song.extra} className={`block text-xs break-words whitespace-normal leading-snug mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/50'}`} />}
                         {song.description && (() => {
                           const { note, ogFilename } = parseNoteDescription(song.description);
-                          const display = note ? note.split('\n')[0] : ogFilename ? `OG: ${ogFilename}` : null;
-                          return display ? (
-                            <div className="flex items-center gap-1 mt-0.5">
-                              <div className={`min-w-0 flex-1 text-xs truncate ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(display)}</div>
-                              <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} />
+                          if (!note && !ogFilename) return null;
+                          return (
+                            <div className="mt-1">
+                              {note && (
+                                <div className="flex items-start gap-1">
+                                  <div className={`min-w-0 flex-1 text-xs break-words whitespace-pre-line leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(note)}</div>
+                                  <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} className="-mt-0.5" />
+                                </div>
+                              )}
+                              {ogFilename && <div className={`text-[10px] font-mono mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/25' : 'text-white/25'}`}>OG: {ogFilename}</div>}
                             </div>
-                          ) : null;
+                          );
                         })()}
                         {song.file_date && <div className={`text-[10px] mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/30' : 'text-white/30'}`}>Date: {song.file_date}</div>}
                       </div>
 
-                      <div className="w-28 shrink-0 hidden sm:flex items-center gap-1.5 flex-wrap">
+                      <div className="w-36 shrink-0 hidden sm:flex items-center gap-1.5 flex-wrap">
                         {song.quality && (
                           <span className={`text-[10px] px-2 py-0.5 rounded border ${isCurrentlyPlaying ? 'border-[var(--theme-color)]/20 text-[var(--theme-color)]/80 bg-[var(--theme-color)]/5' : 'border-white/10 text-white/60 bg-white/5'}`}>
                             {song.quality}
@@ -593,7 +598,7 @@ export function MiscView({ eras, miscData, searchQuery, filters, onPlaySong, cur
                         <span className={`${isCurrentlyPlaying ? 'text-[var(--theme-color)]/60' : 'text-white/40'}`}>{song.track_length || '-:--'}</span>
                       </div>
 
-                      <div className="w-10 shrink-0 flex items-center justify-end gap-2">
+                      <div className="sm:w-28 shrink-0 flex items-center justify-end gap-1">
                         {(() => {
                           if (!isPlayable || !toggleFavorite || song.name === "Alright but the beat is Father Stretch My Hands Pt. 1") return null;
                           const rawUrl = song.url || (song.urls && song.urls.length > 0 ? song.urls[0] : '');
