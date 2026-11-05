@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { LogIn, LogOut, RefreshCw, ExternalLink, User, X } from 'lucide-react';
 import { SiSpotify, SiLastdotfm } from 'react-icons/si';
 import { activeConfig } from '../artists/activeConfig';
+import { applyLinkedServices, startSpotifyAccountLink, type LinkedServices } from '../accountServices';
 
 const API = 'https://unvaulted.cc';
 const TOKEN_KEY = 'vg_token';
@@ -24,10 +25,7 @@ const TRACKER_PREFIXES: Record<string, string> = {
 };
 
 interface VGUser { id: string; username: string; email: string; }
-interface VGLinked {
-  spotify?: { access_token: string; refresh_token: string; expires_at: number; username: string | null };
-  lastfm?: { session_key: string; username: string | null };
-}
+type VGLinked = LinkedServices;
 
 function getToken() { return localStorage.getItem(TOKEN_KEY); }
 function getUser(): VGUser | null {
@@ -141,12 +139,7 @@ export function VaultGoldSection({ matchesSearch }: { matchesSearch: (s: string)
     window.location.href = `${API}/api/auth/google/connect?return_to=${encodeURIComponent(window.location.origin)}`;
   };
 
-  const doLinkSpotify = () => {
-    const token = getToken();
-    if (!token) return;
-    const returnTo = window.location.href.split('?')[0];
-    window.location.href = `${API}/api/auth/spotify/connect?token=${encodeURIComponent(token)}&return_to=${encodeURIComponent(returnTo)}`;
-  };
+  const doLinkSpotify = startSpotifyAccountLink;
 
   const doSync = async () => {
     setSyncing(true);
@@ -160,23 +153,12 @@ export function VaultGoldSection({ matchesSearch }: { matchesSearch: (s: string)
     const l: VGLinked = data.linked ?? {};
     setLinked(l);
 
-    const synced: string[] = [];
-    const spotifyExpired = l.spotify?.expires_at && Date.now() > l.spotify.expires_at - 30 * 1000;
-    if (l.spotify?.access_token && !spotifyExpired) {
-      localStorage.setItem('spotify_access_token', l.spotify.access_token);
-      localStorage.setItem('spotify_refresh_token', l.spotify.refresh_token);
-      localStorage.setItem('spotify_expires_at', String(l.spotify.expires_at));
-      synced.push('Spotify');
-    } else if (l.spotify && spotifyExpired) {
+    const { synced, spotifyExpired } = applyLinkedServices(l);
+    if (spotifyExpired) {
       setSyncing(false);
       setSyncMsg('Spotify session expired — re-link Spotify at unvaulted.cc/account');
       setTimeout(() => setSyncMsg(''), 6000);
       return;
-    }
-    if (l.lastfm?.session_key) {
-      localStorage.setItem('lastfm_session_key', l.lastfm.session_key);
-      if (l.lastfm.username) localStorage.setItem('lastfm_username', l.lastfm.username);
-      synced.push('Last.fm');
     }
 
     // Pull favorites + playlists for ALL trackers in one call

@@ -21,8 +21,9 @@ import { ContributorContext } from './ContributorContext';
 import { ContributorView } from './components/ContributorView';
 import { applyLiveEras, loadLiveEraArtwork } from './liveEraMeta';
 import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, pixeldrainProxyBase } from './utils';
-import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName } from './lastfm';
+import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName, applyLastfmArtistOverride } from './lastfm';
 import { logListen, isListeningLoggedIn } from './listening';
+import { SpotifyLinkBanner } from './components/SpotifyLinkBanner';
 import { isSpotifyLoggedIn, clearSpotifySession, startSpotifyAuth, handleSpotifyCallback } from './spotify';
 import { useSpotify, SpotifyTrack } from './useSpotify';
 import { useYoutube } from './useYoutube';
@@ -2211,12 +2212,12 @@ export default function App() {
       const actualEraName = (currentSong as any).realEra?.name || currentEra.name;
       const cleanActualEraName = settings.lastfmEraOverrides[actualEraName] ?? cleanAlbumName(actualEraName).replace(/ \[Fake\]$/i, '');
       const cleanRealTrackName = currentSong.name.replace(/ \[Fake\]$/i, '');
-      const lfmArtist = parseArtistFromSong(cleanRealTrackName, currentSong.extra, actualEraName);
+      const lfmArtist = applyLastfmArtistOverride(parseArtistFromSong(cleanRealTrackName, currentSong.extra, actualEraName), settings.lastfmArtistOverrides);
 
       const lfmTrack = cleanTrackName(cleanRealTrackName, currentSong.extra, settings.lastfmShowVersion, settings.lastfmShowTags, settings.lastfmShowFeats);
       updateNowPlaying(lfmTrack, lfmArtist, cleanActualEraName);
     }
-  }, [isPlaying, currentSong, currentEra, lastfmLoggedIn, settings.lastfmShowVersion, settings.lastfmShowTags, settings.lastfmShowFeats, settings.lastfmEraOverrides]);
+  }, [isPlaying, currentSong, currentEra, lastfmLoggedIn, settings.lastfmShowVersion, settings.lastfmShowTags, settings.lastfmShowFeats, settings.lastfmEraOverrides, settings.lastfmArtistOverrides]);
 
   useEffect(() => {
     if (selectedAlbum) {
@@ -2546,7 +2547,7 @@ export default function App() {
           const cleanActualEraName = settings.lastfmEraOverrides[actualEraName] ?? cleanAlbumName(actualEraName).replace(/ \[Fake\]$/i, '');
           const cleanRealTrackName = currentSong.name.replace(/ \[Fake\]$/i, '');
           const lfmTrack = cleanTrackName(cleanRealTrackName, currentSong.extra, settings.lastfmShowVersion, settings.lastfmShowTags, settings.lastfmShowFeats);
-          const lfmArtist = parseArtistFromSong(cleanRealTrackName, currentSong.extra, actualEraName);
+          const lfmArtist = applyLastfmArtistOverride(parseArtistFromSong(cleanRealTrackName, currentSong.extra, actualEraName), settings.lastfmArtistOverrides);
           scrobbleTrack(
             lfmTrack,
             lfmArtist,
@@ -3306,6 +3307,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
         <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
             <TagFilterBar columns={tagColumns} selection={tagSelection} onChange={setTagSelection} />
+            {activeCategory === 'music' && !selectedAlbum && <SpotifyLinkBanner />}
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
                 <SettingsView key="settings" onCategoryChange={setActiveCategory} searchQuery={searchQuery} eras={erasArray} artData={artData} stemsData={stemsData} miscData={miscData} />
@@ -3476,6 +3478,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 <EraDetail
                   key={selectedAlbum.name}
                   era={selectedAlbum}
+                  showSpotifyBanner={activeCategory === 'music'}
                   onBack={() => {
                     setSelectedAlbum(null);
                     if (!settings.rememberSearch) {

@@ -13,7 +13,7 @@ import { SongTitle, SongExtra } from './SongTitle';
 import { saveAs } from 'file-saver';
 import { useSettings } from '../SettingsContext';
 import { useDownloadManager } from '../DownloadManagerContext';
-import { isLastfmLoggedIn } from '../lastfm';
+import { isLastfmLoggedIn, applyLastfmArtistOverride } from '../lastfm';
 import { SiLastdotfm } from 'react-icons/si';
 import { MvEntry, RemixEntry, SampleEntry } from '../App';
 import { AddToPlaylistButton } from './AddToPlaylistButton';
@@ -26,6 +26,7 @@ import { makeEntryKey, makeEraKey, baseEraName, stampSongComment } from '../comm
 import { usePlaylists } from '../PlaylistContext';
 import { useIsClamped } from '../hooks/useIsClamped';
 import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
+import { SpotifyLinkBanner } from './SpotifyLinkBanner';
 
 function normalizeName(name: string): string {
   return name
@@ -210,7 +211,7 @@ export const handleShareSilent = (song: Song, era: Era): string => {
   return `${baseUrl}?song=${songParam}`;
 };
 
-export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
+export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra, showSpotifyBanner = false }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void, showSpotifyBanner?: boolean }) {
   const { settings, updateSettings } = useSettings();
   const contentBg = !settings.disableEraThemes ? ERA_THEMES[era.name]?.bottomBannerContentBg : undefined;
   const deadLinks = useDeadLinks(activeConfig.slug);
@@ -230,6 +231,8 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
   );
   const [editingLfmName, setEditingLfmName] = useState(false);
   const [lfmNameDraft, setLfmNameDraft] = useState('');
+  const [editingLfmArtist, setEditingLfmArtist] = useState(false);
+  const [lfmArtistDraft, setLfmArtistDraft] = useState('');
   const [isSelectMode, setIsSelectMode] = useState(false);
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
   const [isDownloadingSelected, setIsDownloadingSelected] = useState(false);
@@ -627,6 +630,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto overflow-x-hidden pb-64"
       >
+        {showSpotifyBanner && <SpotifyLinkBanner className="px-6 md:px-8 py-4" />}
         <div
           className={`p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5${!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? ' bg-center md:bg-right' : ''}`}
           style={!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? {
@@ -810,6 +814,70 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                 )}
               </div>
             )}
+
+            {isLastfmLoggedIn() && era.name !== 'Favorites' && era.name !== 'Recent Leaks' && (() => {
+              const defaultArtist = getArtistName(era.name);
+              const artistOverrides = settings.lastfmArtistOverrides || {};
+              const saveArtist = () => {
+                const trimmed = lfmArtistDraft.trim();
+                const overrides = { ...artistOverrides };
+                if (trimmed && trimmed !== defaultArtist) overrides[defaultArtist] = trimmed;
+                else delete overrides[defaultArtist];
+                updateSettings({ lastfmArtistOverrides: overrides });
+                setEditingLfmArtist(false);
+              };
+              return (
+                <div className="flex flex-wrap items-center gap-2 mb-3 -mt-1">
+                  <SiLastdotfm className="w-4 h-4 text-[#d51007] shrink-0 opacity-0" />
+                  {editingLfmArtist ? (
+                    <>
+                      <input
+                        autoFocus
+                        className="bg-white/10 border border-white/20 rounded px-2 py-0.5 text-sm text-white outline-none focus:border-[#d51007] w-48"
+                        value={lfmArtistDraft}
+                        onChange={e => setLfmArtistDraft(e.target.value)}
+                        onKeyDown={e => {
+                          if (e.key === 'Enter') saveArtist();
+                          else if (e.key === 'Escape') setEditingLfmArtist(false);
+                        }}
+                        placeholder={defaultArtist}
+                      />
+                      <button className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer" onClick={saveArtist}>Save</button>
+                      <button
+                        className="text-xs text-white/30 hover:text-white/60 transition-colors cursor-pointer"
+                        onClick={() => setEditingLfmArtist(false)}
+                      >Cancel</button>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-xs text-white/40">Artist:</span>
+                      <span className="text-xs text-white/70">{applyLastfmArtistOverride(defaultArtist, artistOverrides)}</span>
+                      <button
+                        className="text-white/30 hover:text-white/70 transition-colors cursor-pointer"
+                        title="Edit Last.fm artist name"
+                        onClick={() => {
+                          setLfmArtistDraft(artistOverrides[defaultArtist] ?? '');
+                          setEditingLfmArtist(true);
+                        }}
+                      >
+                        <Pencil className="w-3 h-3" />
+                      </button>
+                      {artistOverrides[defaultArtist] && (
+                        <button
+                          className="text-white/20 hover:text-white/50 transition-colors cursor-pointer text-xs"
+                          title="Reset to default"
+                          onClick={() => {
+                            const overrides = { ...artistOverrides };
+                            delete overrides[defaultArtist];
+                            updateSettings({ lastfmArtistOverrides: overrides });
+                          }}
+                        >Reset</button>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })()}
 
             {ALBUM_DESCRIPTIONS[era.name] && (
               <div className="mb-2 max-w-3xl">
