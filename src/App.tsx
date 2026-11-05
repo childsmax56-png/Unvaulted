@@ -3307,7 +3307,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
         <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
             <TagFilterBar columns={tagColumns} selection={tagSelection} onChange={setTagSelection} />
-            {activeCategory === 'music' && !selectedAlbum && <SpotifyLinkBanner />}
+            {activeCategory === 'released' && <SpotifyLinkBanner />}
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
                 <SettingsView key="settings" onCategoryChange={setActiveCategory} searchQuery={searchQuery} eras={erasArray} artData={artData} stemsData={stemsData} miscData={miscData} />
@@ -3478,7 +3478,6 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
                 <EraDetail
                   key={selectedAlbum.name}
                   era={selectedAlbum}
-                  showSpotifyBanner={activeCategory === 'music'}
                   onBack={() => {
                     setSelectedAlbum(null);
                     if (!settings.rememberSearch) {

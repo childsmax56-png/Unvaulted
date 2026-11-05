@@ -4,7 +4,7 @@ import { SiSpotify } from 'react-icons/si';
 import { isSpotifyLoggedIn } from '../spotify';
 import { applyLinkedServices, fetchLinkedServices, getAccountToken, startSpotifyAccountLink } from '../accountServices';
 
-// Dismissable nudge on the Unreleased tab (era grid + era pages) to link
+// Dismissable nudge on the Released tab (era grid + era pages) to link
 // Spotify Premium, or — when the account already has Spotify linked but this
 // browser doesn't have the tokens — to sync services in one click.
 const DISMISS_KEY = 'vg_spotify_banner_dismissed_v1';
