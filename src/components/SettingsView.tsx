@@ -46,6 +46,8 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
   const [isConfirmingClear, setIsConfirmingClear] = useState(false);
   const [showShortcutsModal, setShowShortcutsModal] = useState(false);
   const [sheetUrlInput, setSheetUrlInput] = useState(settings.googleSheetsUrl);
+  const [lfmArtistFrom, setLfmArtistFrom] = useState('');
+  const [lfmArtistTo, setLfmArtistTo] = useState('');
   const [sheetSaved, setSheetSaved] = useState(false);
   const [dlProgress, setDlProgress] = useState<{ [key: string]: string | null }>({});
 
@@ -672,6 +674,62 @@ export function SettingsView({ onCategoryChange, searchQuery, eras = [], artData
               >
                 <div className={`w-5 h-5 rounded-full bg-white absolute top-0.5 transition-transform ${settings.lastfmShowFeats ? 'translate-x-5.5' : 'translate-x-0.5'}`} />
               </button>
+            </div>
+
+            <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col">
+                <span className="text-sm font-medium text-white/90">Artist Renames</span>
+                <span className="text-xs text-white/40">Scrobble an artist under a different name (e.g. "Ye" as "Kanye West"). Applies on every tracker.</span>
+              </div>
+              {Object.entries(settings.lastfmArtistOverrides || {}).map(([from, to]) => (
+                <div key={from} className="flex items-center gap-2 text-xs bg-white/5 rounded-lg px-3 py-2">
+                  <span className="text-white/60 truncate">{from}</span>
+                  <span className="text-white/30">→</span>
+                  <span className="text-white/90 truncate flex-1">{to}</span>
+                  <button
+                    className="text-white/30 hover:text-white/70 transition-colors cursor-pointer shrink-0"
+                    title="Remove rename"
+                    onClick={() => {
+                      const overrides = { ...settings.lastfmArtistOverrides };
+                      delete overrides[from];
+                      updateSettings({ lastfmArtistOverrides: overrides });
+                    }}
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              ))}
+              <form
+                className="flex flex-wrap items-center gap-2"
+                onSubmit={e => {
+                  e.preventDefault();
+                  const from = lfmArtistFrom.trim();
+                  const to = lfmArtistTo.trim();
+                  if (!from || !to) return;
+                  updateSettings({ lastfmArtistOverrides: { ...(settings.lastfmArtistOverrides || {}), [from]: to } });
+                  setLfmArtistFrom('');
+                  setLfmArtistTo('');
+                }}
+              >
+                <input
+                  className="bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-white outline-none focus:border-[#d51007] flex-1 min-w-[7rem]"
+                  value={lfmArtistFrom}
+                  onChange={e => setLfmArtistFrom(e.target.value)}
+                  placeholder="Artist on site"
+                />
+                <span className="text-white/30 text-xs">→</span>
+                <input
+                  className="bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-white outline-none focus:border-[#d51007] flex-1 min-w-[7rem]"
+                  value={lfmArtistTo}
+                  onChange={e => setLfmArtistTo(e.target.value)}
+                  placeholder="Scrobble as"
+                />
+                <button
+                  type="submit"
+                  disabled={!lfmArtistFrom.trim() || !lfmArtistTo.trim()}
+                  className="text-xs px-3 py-1 rounded bg-[#d51007] text-white disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
+                >Add</button>
+              </form>
             </div>
           </div>
         )}

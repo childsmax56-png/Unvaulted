@@ -87,6 +87,16 @@ export function parseArtistFromSong(songName: string, _extra?: string, eraName?:
   return artist.trim();
 }
 
+// Swaps a parsed artist for the user's chosen Last.fm artist name (set from an
+// era header or Settings). Matches the exact name first, then case-insensitively.
+export function applyLastfmArtistOverride(artist: string, overrides: Record<string, string> | undefined): string {
+  if (!overrides || !artist) return artist;
+  if (overrides[artist]) return overrides[artist];
+  const lower = artist.toLowerCase();
+  const key = Object.keys(overrides).find(k => k.toLowerCase() === lower);
+  return key ? overrides[key] : artist;
+}
+
 export async function handleLastfmCallback(token: string): Promise<{ success: boolean; username?: string }> {
   try {
     const response = await fetch(`/api/lastfm/callback?token=${encodeURIComponent(token)}`);

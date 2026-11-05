@@ -59,6 +59,7 @@ export interface AppSettings {
   YZYGOLDMode: boolean;
   dropdownNav: boolean;
   lastfmEraOverrides: Record<string, string>;
+  lastfmArtistOverrides: Record<string, string>;
   videosMiniPlayer: boolean;
   aiErrorDetails: boolean;
   shareLinkType: 'site' | 'pillowcase';
@@ -104,6 +105,7 @@ export const defaultSettings: AppSettings = {
   YZYGOLDMode: false,
   dropdownNav: true,
   lastfmEraOverrides: {},
+  lastfmArtistOverrides: {},
   videosMiniPlayer: true,
   aiErrorDetails: false,
   shareLinkType: 'site',
