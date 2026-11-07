@@ -1330,6 +1330,15 @@ function parseOgFilename(description: string | undefined): string | null {
   return raw.replace(/\.(mp3|wav|flac|aif|aiff|m4a|ogg)$/i, '');
 }
 
+// Cleans a raw File Date / Leak Date cell for display. Returns null for empty or
+// placeholder values ("N/A", "?", "Unknown") and strips ISO time suffixes.
+export function cleanSongDate(raw: unknown): string | null {
+  if (typeof raw !== 'string') return null;
+  const v = raw.trim().split('T')[0].trim();
+  if (!v || /^(n\/?a|\?+|-+|unknown|none|tbd)$/i.test(v)) return null;
+  return v;
+}
+
 export function parseNoteDescription(description: string | undefined | null): {
   ogFilename: string | null;
   note: string | null;

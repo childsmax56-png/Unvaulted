@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Check, Copy, StickyNote, X } from 'lucide-react';
-import { formatTextWithTags, parseNoteDescription } from '../utils';
+import { cleanSongDate, formatTextWithTags, parseNoteDescription } from '../utils';
 
 // A reusable "read the full note" affordance. Row notes are clamped/truncated to
 // one or two lines in every list view; this opens a dismissable popup with the
@@ -13,9 +13,11 @@ interface Props {
   title: string;
   isCurrentlyPlaying?: boolean;
   className?: string;
+  fileDate?: string;
+  leakDate?: string;
 }
 
-export function NoteButton({ note, title, isCurrentlyPlaying, className }: Props) {
+export function NoteButton({ note, title, isCurrentlyPlaying, className, fileDate, leakDate }: Props) {
   const [open, setOpen] = useState(false);
   if (!note || !note.trim()) return null;
 
@@ -32,14 +34,16 @@ export function NoteButton({ note, title, isCurrentlyPlaying, className }: Props
       >
         <StickyNote className="w-3.5 h-3.5" />
       </button>
-      <NoteModal isOpen={open} onClose={() => setOpen(false)} note={note} title={title} />
+      <NoteModal isOpen={open} onClose={() => setOpen(false)} note={note} title={title} fileDate={fileDate} leakDate={leakDate} />
     </>
   );
 }
 
-export function NoteModal({ isOpen, onClose, note, title }: { isOpen: boolean; onClose: () => void; note: string; title: string }) {
+export function NoteModal({ isOpen, onClose, note, title, fileDate, leakDate }: { isOpen: boolean; onClose: () => void; note: string; title: string; fileDate?: string; leakDate?: string }) {
   const [copied, setCopied] = useState(false);
   const { ogFilename, note: body } = parseNoteDescription(note);
+  const fileDateClean = cleanSongDate(fileDate);
+  const leakDateClean = cleanSongDate(leakDate);
 
   // Close on Escape.
   useEffect(() => {
@@ -109,6 +113,16 @@ export function NoteModal({ isOpen, onClose, note, title }: { isOpen: boolean; o
                 <div className="text-xs font-mono text-white/40 break-all">
                   <span className="text-white/25 uppercase tracking-wider text-[10px] font-sans font-bold mr-2">OG Filename</span>
                   {ogFilename}
+                </div>
+              )}
+              {(fileDateClean || leakDateClean) && (
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/50">
+                  {fileDateClean && (
+                    <span><span className="text-white/25 uppercase tracking-wider text-[10px] font-bold mr-2">File Date</span>{fileDateClean}</span>
+                  )}
+                  {leakDateClean && (
+                    <span><span className="text-white/25 uppercase tracking-wider text-[10px] font-bold mr-2">Leak Date</span>{leakDateClean}</span>
+                  )}
                 </div>
               )}
             </div>

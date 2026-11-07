@@ -5,7 +5,7 @@ import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loa
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
-import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, prepareAudioDownload, formatTextForNotification, parseNoteDescription, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
+import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, prepareAudioDownload, formatTextForNotification, parseNoteDescription, cleanSongDate, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
 import { addItemsToGlobalTierList, readGlobalTierLists } from '../tierListStore';
@@ -1035,10 +1035,21 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                                 {note && (
                                   <div className="flex items-start gap-1">
                                     <div className={`min-w-0 flex-1 text-xs break-words whitespace-normal leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(note)}</div>
-                                    <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} className="-mt-0.5" />
+                                    <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} className="-mt-0.5" fileDate={song.file_date} leakDate={song.leak_date} />
                                   </div>
                                 )}
                                 {ogFilename && <div className={`text-[10px] font-mono mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/25' : 'text-white/25'}`}>OG: {ogFilename}</div>}
+                              </div>
+                            );
+                          })()}
+                          {(() => {
+                            const fileDate = cleanSongDate(song.file_date);
+                            const leakDate = cleanSongDate(song.leak_date);
+                            if (!fileDate && !leakDate) return null;
+                            return (
+                              <div className={`flex flex-wrap gap-x-3 text-[10px] mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/30' : 'text-white/30'}`}>
+                                {fileDate && <span>File date: {fileDate}</span>}
+                                {leakDate && <span>Leak date: {leakDate}</span>}
                               </div>
                             );
                           })()}
