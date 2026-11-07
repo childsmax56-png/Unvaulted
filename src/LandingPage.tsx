@@ -1770,7 +1770,9 @@ export function LandingPage() {
           .grid-top > *:last-child { grid-column: 1 / -1; }
           .grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* Unlayered, so it beats Tailwind utilities; keep it off the global
+           player (portaled into <body>), or its padding collapses on mobile. */
+        *:not([data-global-player], [data-global-player] *) { box-sizing: border-box; margin: 0; padding: 0; }
       `}</style>
     </div>
     </>
