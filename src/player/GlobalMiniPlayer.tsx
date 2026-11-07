@@ -56,7 +56,7 @@ export function GlobalMiniPlayer() {
   const nextSong = playlist.length > 0 ? playlist[(currentSongIndex + 1) % playlist.length] : null;
 
   return createPortal(
-    <>
+    <div data-global-player>
     <AnimatePresence>
       {expanded && currentSong && (
         <FullScreenPlayer
@@ -218,7 +218,7 @@ export function GlobalMiniPlayer() {
         </motion.div>
       )}
     </AnimatePresence>
-    </>,
+    </div>,
     document.body,
   );
 }
