@@ -35,7 +35,6 @@ import { AdminPage } from './AdminPage.tsx';
 import { ProfilePage } from './ProfilePage.tsx';
 import { GlobalPlaylistProvider } from './GlobalPlaylistContext.tsx';
 import { GlobalMiniPlayer } from './player/GlobalMiniPlayer.tsx';
-import { CommunityMovedNotice } from './components/CommunityMovedNotice.tsx';
 
 // Top-level path segments that are app routes, not trackers. Anything else is a
 // tracker slug (official registry first, then the community fallback).
@@ -189,7 +188,6 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/:artist/*" element={<ArtistRoute />} />
         </Routes>
         <GlobalPlayerMount />
-        <CommunityMovedNotice />
       </BrowserRouter>
       </GlobalPlaylistProvider>
       <DownloadProgressWidget />

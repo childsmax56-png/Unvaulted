@@ -235,7 +235,6 @@ import { ReleasedView, ReleasedEntry } from './components/ReleasedView';
 import { VideosView, VideoRawEntry } from './components/VideosView';
 import { SubAlbumsView, SubAlbumEntry } from './components/SubAlbumsView';
 import { ChatBubble } from './components/ChatBubble';
-import { YeSourceNotice } from './components/YeSourceNotice';
 import { TimelineView } from './components/TimelineView';
 import { ImportPlaylistModal } from './components/ImportPlaylistModal';
 import { useSettings, LOADING_SCREENS, LoadingScreenId } from './SettingsContext';
@@ -3842,7 +3841,6 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
         )}
       </AnimatePresence>
 
-      {ARTIST_SLUG === 'yegold' && <YeSourceNotice raised={!!(showPlayer && effectiveSong)} />}
 
       <AnimatePresence>
         {showSafariWarning && (
