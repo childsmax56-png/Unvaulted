@@ -23,7 +23,7 @@ import { applyLiveEras, loadLiveEraArtwork } from './liveEraMeta';
 import { matchesFilters, createSlug, getSongSlug, getCleanSongNameWithTags, isSongNotAvailable, looksLikeRealLink, isChallengeGatedAudioHost, formatTextForNotification, CUSTOM_IMAGES, HIDDEN_ALBUMS, ALBUM_RELEASE_DATES, ERA_DISCLAIMERS, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, pixeldrainProxyBase } from './utils';
 import { isLastfmLoggedIn, saveLastfmSession, clearLastfmSession, scrobbleTrack, updateNowPlaying, cleanTrackName, parseArtistFromSong, cleanAlbumName, applyLastfmArtistOverride } from './lastfm';
 import { logListen, isListeningLoggedIn } from './listening';
-import { SpotifyLinkBanner } from './components/SpotifyLinkBanner';
+import { SpotifyLinkPopup } from './components/SpotifyLinkPopup';
 import { isSpotifyLoggedIn, clearSpotifySession, startSpotifyAuth, handleSpotifyCallback } from './spotify';
 import { useSpotify, SpotifyTrack } from './useSpotify';
 import { useYoutube } from './useYoutube';
@@ -3307,7 +3307,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
         <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
             <TagFilterBar columns={tagColumns} selection={tagSelection} onChange={setTagSelection} />
-            {activeCategory === 'released' && <SpotifyLinkBanner />}
+            {activeCategory === 'released' && <SpotifyLinkPopup />}
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
                 <SettingsView key="settings" onCategoryChange={setActiveCategory} searchQuery={searchQuery} eras={erasArray} artData={artData} stemsData={stemsData} miscData={miscData} />

@@ -18,7 +18,6 @@ import { NoteButton } from './NoteButton';
 import { makeEntryKey, makeEraKey, baseEraName } from '../comments';
 import { activeConfig } from '../artists/activeConfig';
 import { SuberaBanner, SuberaJumpBar, uniqueSuberas } from './SuberaBanner';
-import { SpotifyLinkBanner } from './SpotifyLinkBanner';
 
 export interface ReleasedEntry {
   Era: string;
@@ -287,7 +286,6 @@ export function ReleasedView({ eras, releasedData, searchQuery, spotifyLoggedIn,
         transition={{ duration: 0.4, ease: 'easeOut' }}
         className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto custom-scrollbar pb-64"
       >
-        <SpotifyLinkBanner className="px-6 md:px-8 py-4" />
         {/* header */}
         <div className="p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5 bg-white/5">
           <button
