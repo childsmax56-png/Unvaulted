@@ -1647,6 +1647,16 @@ export async function handleDownloadFile(url: string, suggestedName: string, tag
       }
 
       blob = await response.blob();
+      // Catch images from hosts/URLs the checks above don't recognise (e.g. art
+      // links without a file extension) so they aren't run through the audio
+      // path and saved with the default .mp3 extension.
+      if (!isImage && !nonAudioExt) {
+        const head = await blob.slice(0, 12).arrayBuffer();
+        if (responseCt.startsWith('image/') || (head.byteLength >= 12 && isImageBuffer(head))) {
+          isImage = true;
+          fileName = fileName.replace(/\.mp3$/i, '');
+        }
+      }
       if (nonAudioExt) {
         // Not audio — save as-is; tagging/transcoding would corrupt it.
       } else if (isImage) {
