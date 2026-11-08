@@ -281,6 +281,20 @@
     localStorage.removeItem('vg_user');
   }
 
+  // ?next=/some/path sends the user back after signing in (same-origin paths
+  // only). Stashed in sessionStorage so it survives the Google OAuth round trip.
+  (function() {
+    var n = new URLSearchParams(window.location.search).get('next');
+    if (n && /^\/(?![\/\\])/.test(n)) { try { sessionStorage.setItem('vg_next', n); } catch(e) {} }
+  })();
+
+  function goNext() {
+    var n = null;
+    try { n = sessionStorage.getItem('vg_next'); sessionStorage.removeItem('vg_next'); } catch(e) {}
+    if (n && /^\/(?![\/\\])/.test(n)) { window.location.href = n; return true; }
+    return false;
+  }
+
   function switchTab(tab) {
     document.getElementById('tab-login').classList.toggle('active', tab === 'login');
     document.getElementById('tab-register').classList.toggle('active', tab === 'register');
@@ -308,6 +322,7 @@
     if (!res.ok) return showMsg('login-msg', data.error || 'Sign in failed', 'error');
 
     setSession(data.token, data.user);
+    if (goNext()) return;
     showAccountView(data.user);
     loadLinked();
   }
@@ -327,12 +342,14 @@
     if (!res.ok) return showMsg('register-msg', data.error || 'Registration failed', 'error');
 
     setSession(data.token, data.user);
+    if (goNext()) return;
     showAccountView(data.user);
     loadLinked();
   }
 
   function doGoogle() {
-    window.location.href = API + '/api/auth/google/connect?return_to=' + encodeURIComponent(window.location.href);
+    var back = window.location.origin + window.location.pathname;
+    window.location.href = API + '/api/auth/google/connect?return_to=' + encodeURIComponent(back);
   }
 
   async function doSignOut() {
@@ -568,6 +585,7 @@
         var vgUser = JSON.parse(decodeURIComponent(vgUserRaw));
         setSession(vgToken, vgUser);
         window.history.replaceState({}, '', window.location.pathname);
+        goNext();
       } catch(e) {}
     }
   })();
@@ -579,6 +597,8 @@
     if (token && user) {
       showAccountView(user);
       loadLinked();
+    } else if (new URLSearchParams(window.location.search).get('tab') === 'register') {
+      switchTab('register');
     }
   })();
 </script>

@@ -10,6 +10,7 @@ import { useHasActiveAudio } from './player/audioStore';
 import { fetchGlobalVisitCounts, getUserVisitCounts, type VisitCounts } from './visits';
 import { AlternateTrackerButton } from './components/AlternateTrackerButton';
 import { AlertsBell } from './components/AlertsBell';
+import { applyCloudTrackerData } from './dataSync';
 
 type SortMode = 'featured' | 'az' | 'popular' | 'yours';
 const SORT_OPTIONS: { id: SortMode; label: string }[] = [
@@ -162,8 +163,7 @@ function LandingSettingsPanel({ onClose }: { onClose: () => void }) {
       for (const [trackerId, data] of Object.entries(allData)) {
         const prefix = TRACKER_PREFIXES[trackerId];
         if (!prefix) continue;
-        localStorage.setItem(`${prefix}favorite_keys`, JSON.stringify(data.favorites ?? []));
-        localStorage.setItem(`${prefix}playlists`, JSON.stringify(data.playlists ?? []));
+        applyCloudTrackerData(trackerId, prefix, data);
         totalFavs += data.favorites?.length ?? 0;
         totalPls += data.playlists?.length ?? 0;
       }

@@ -245,6 +245,7 @@ import { activeConfig } from './artists/activeConfig';
 import { reportBrokenLink } from './linkStatus';
 import { classifySuberaRows } from './suberas';
 import { TagFilterBar, TagSelection, detectTagColumns, applyTagFilter } from './components/TagFilterBar';
+import { AccountNudge } from './components/AccountNudge';
 
 // When viewing a community (user-built) tracker, attach the signed-in account's
 // token to our own /api/ data requests. This lets the creator/admin preview a
@@ -3918,6 +3919,8 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
           </motion.div>
         )}
       </AnimatePresence>
+
+      {typeof document !== 'undefined' && createPortal(<AccountNudge />, document.body)}
 
       {typeof document !== 'undefined' && createPortal(
         <AnimatePresence>

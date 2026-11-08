@@ -252,6 +252,8 @@ export function GlobalPlaylistProvider({ children }: { children: ReactNode }) {
   const createPlaylist = (name: string): string => {
     const id = Math.random().toString(36).slice(2, 10);
     setUserPlaylists(prev => [...prev, { id, name, songs: [] }]);
+    // Lets the signed-out account nudge (AccountNudge) react to a first playlist.
+    setTimeout(() => window.dispatchEvent(new CustomEvent('vg-playlists-changed')), 0);
     return id;
   };
   const renamePlaylist = (id: string, name: string) => {

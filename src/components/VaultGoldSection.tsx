@@ -3,6 +3,7 @@ import { LogIn, LogOut, RefreshCw, ExternalLink, User, X } from 'lucide-react';
 import { SiSpotify, SiLastdotfm } from 'react-icons/si';
 import { activeConfig } from '../artists/activeConfig';
 import { applyLinkedServices, startSpotifyAccountLink, type LinkedServices } from '../accountServices';
+import { applyCloudTrackerData } from '../dataSync';
 
 const API = 'https://unvaulted.cc';
 const TOKEN_KEY = 'vg_token';
@@ -175,8 +176,7 @@ export function VaultGoldSection({ matchesSearch }: { matchesSearch: (s: string)
       for (const [trackerId, data] of Object.entries(allData)) {
         const prefix = TRACKER_PREFIXES[trackerId];
         if (!prefix) continue;
-        localStorage.setItem(`${prefix}favorite_keys`, JSON.stringify(data.favorites ?? []));
-        localStorage.setItem(`${prefix}playlists`, JSON.stringify(data.playlists ?? []));
+        applyCloudTrackerData(trackerId, prefix, data);
         totalFavs += data.favorites?.length ?? 0;
         totalPls += data.playlists?.length ?? 0;
       }

@@ -106,6 +106,82 @@ export function scheduleDataPush(): void {
   }, PUSH_DEBOUNCE_MS));
 }
 
+// Which account this browser's local favorites/playlists for a tracker were last
+// reconciled with. Until a tracker has been reconciled with the signed-in
+// account, the local data is guest data (saved before signing in or signing
+// up), so we merge it into the account instead of overwriting it with the
+// cloud copy, which is empty for a brand-new account.
+const OWNER_PREFIX = 'vg_sync_owner_';
+
+function currentUserId(): string | null {
+  try {
+    const u = JSON.parse(localStorage.getItem('vg_user') || 'null') as { id?: string } | null;
+    return u?.id ?? getToken();
+  } catch {
+    return getToken();
+  }
+}
+
+const songKey = (s: SyncSong) => `${s.eraName}\u0000${s.songName}`;
+
+// Write one tracker's cloud favorites/playlists into localStorage under
+// `prefix`. The first time this browser sees that tracker for this account,
+// local-only favorites and playlists are kept and pushed up to the account.
+// After that the cloud copy wins, so deletes made on other devices stick.
+// Shared with the manual "sync all trackers" buttons.
+export function applyCloudTrackerData(
+  id: string,
+  prefix: string,
+  cloud: { favorites?: SyncSong[]; playlists?: SyncPlaylist[] },
+): void {
+  const cloudFavs = cloud.favorites ?? [];
+  const cloudPls = cloud.playlists ?? [];
+  const favStorageKey = `${prefix}favorite_keys`;
+  const plStorageKey = `${prefix}playlists`;
+  const userId = currentUserId();
+  const ownerKey = OWNER_PREFIX + id;
+
+  let favorites: SyncSong[] = cloudFavs;
+  let playlists: SyncPlaylist[] = cloudPls;
+  let addedLocal = false;
+
+  if (userId && localStorage.getItem(ownerKey) !== userId) {
+    const localFavs = parse<any[]>(localStorage.getItem(favStorageKey), []);
+    const localPls = parse<any[]>(localStorage.getItem(plStorageKey), []);
+    const seen = new Set(cloudFavs.map(songKey));
+    const extraFavs = localFavs
+      .map(f => ({ songName: f.songName, eraName: f.eraName, url: f.url ?? '' }))
+      .filter(f => f.songName && !seen.has(songKey(f)));
+    const plNames = new Set(cloudPls.map(p => p.name.toLowerCase()));
+    const extraPls = localPls.filter(p => p?.name && !plNames.has(String(p.name).toLowerCase()));
+    if (extraFavs.length || extraPls.length) {
+      favorites = [...cloudFavs, ...extraFavs];
+      playlists = [...cloudPls, ...extraPls];
+      addedLocal = true;
+    }
+    localStorage.setItem(ownerKey, userId);
+  }
+
+  localStorage.setItem(favStorageKey, JSON.stringify(favorites));
+  localStorage.setItem(plStorageKey, JSON.stringify(playlists));
+
+  const token = getToken();
+  if (addedLocal && token) {
+    const body = JSON.stringify({
+      favorites,
+      playlists: playlists.map(p => ({
+        id: p.id, name: p.name, cover: p.cover,
+        songs: (p.songs ?? []).map((s: any) => ({ songName: s.songName, eraName: s.eraName, url: s.url ?? '' })),
+      })),
+    });
+    void fetch(`${VG_API}/api/sync/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+      body,
+    }).catch(() => {});
+  }
+}
+
 // Pull the current tracker's cloud data into localStorage and notify the app.
 export async function pullDataSync(): Promise<void> {
   const token = getToken();
@@ -115,8 +191,7 @@ export async function pullDataSync(): Promise<void> {
     const res = await fetch(`${VG_API}/api/sync/${id}`, { headers: { Authorization: `Bearer ${token}` } });
     if (!res.ok) return;
     const data = await res.json() as { favorites?: SyncSong[]; playlists?: SyncPlaylist[] };
-    localStorage.setItem(favKey(), JSON.stringify(data.favorites ?? []));
-    localStorage.setItem(playlistKey(), JSON.stringify(data.playlists ?? []));
+    applyCloudTrackerData(id, activeConfig.STORAGE_PREFIX, data);
     pulled.add(stateKey(id));
     lastSnapshot.set(stateKey(id), JSON.stringify(readLocalPayload()));
     // App.tsx + PlaylistContext refresh their in-memory state off this event.
