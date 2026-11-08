@@ -234,6 +234,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
   const [isDownloadingSelected, setIsDownloadingSelected] = useState(false);
   const [isPlaylistMenuOpen, setIsPlaylistMenuOpen] = useState(false);
+  const isAggregateList = era.name === 'Favorites' || era.name === 'Recent Leaks';
   const [playlistCreating, setPlaylistCreating] = useState(false);
   const [newPlaylistName, setNewPlaylistName] = useState('');
   const [isTierMenuOpen, setIsTierMenuOpen] = useState(false);
@@ -913,7 +914,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           ) : undefined}
         >
         <div className={`px-6 md:px-8 pt-8 max-w-6xl mx-auto${!settings.disableEraThemes && ERA_THEMES[era.name]?.bottomBanner ? ' drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]' : ''}`}>
-          <SuberaJumpBar names={uniqueSuberas(processedCategories.flatMap(c => c.songs))} />
+          {!isAggregateList && <SuberaJumpBar names={uniqueSuberas(processedCategories.flatMap(c => c.songs))} />}
           {processedCategories.map(({ category, songs: processedSongs }) => {
             return (
               <div key={category} className="mb-10">
@@ -962,7 +963,8 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                     const songKey = getSongKey(category, i);
                     const isSelected = selectedKeys.has(songKey);
                     const prevSubera = i > 0 ? processedSongs[i - 1].subera : undefined;
-                    const showSuberaBanner = !!song.subera && song.subera !== prevSubera;
+                    // Favorites / Recent Leaks mix songs from many eras, so sheet sections don't apply.
+                    const showSuberaBanner = !isAggregateList && !!song.subera && song.subera !== prevSubera;
 
                     return (
                       <Fragment key={i}>
