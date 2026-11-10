@@ -1,10 +1,14 @@
 const ALLOWED_HOSTS = [
   'api.pillows.su',
-  'temp.imgur.gg',
-  'i.imgur.gg',
   'drive.google.com',
   'drive.usercontent.google.com',
 ];
+
+// imgur.gg moves files between CDN subdomains (temp., i., now b.), so allow
+// any subdomain rather than listing each one and breaking on the next move.
+function isAllowedHost(hostname: string): boolean {
+  return ALLOWED_HOSTS.includes(hostname) || hostname.endsWith('.imgur.gg');
+}
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -137,7 +141,7 @@ function parseTarget(request: Request): URL | Response {
   } catch {
     return new Response('Invalid url parameter', { status: 400, headers: CORS });
   }
-  if (!ALLOWED_HOSTS.includes(targetUrl.hostname)) {
+  if (!isAllowedHost(targetUrl.hostname)) {
     return new Response('Host not allowed', { status: 403, headers: CORS });
   }
   return targetUrl;
