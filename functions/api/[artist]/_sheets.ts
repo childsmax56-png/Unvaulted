@@ -352,11 +352,11 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '538700671',
       unreleased: '1246511510',
       released: '137554735',
-      // recent intentionally omitted: the Recent tab is served from the committed
-      // public/wolfgold/data/recent.csv, scraped from tylertracker.net's mirror
-      // (gid 1356276013) by scripts/build-wolfgold-recent.py. The live wolfgold
-      // sheet's recent tab uses an "Info/Notes" column that mapRecentItem() can't
-      // read, so notes wouldn't show. Do not re-add a recent gid here.
+      // unreleased/released/recent/stems/misc/album-copies/tracklists/fakes are read
+      // live from tylertracker.net first (_franktracker.ts); these gids are the
+      // fallback if that site fails. Only art is sheet-first. Do not add a recent
+      // gid: this sheet's recent tab has an "Info/Notes" column mapRecentItem()
+      // can't read.
       stems: '1415457574',
       misc: '1044127471',
       'album-copies': '788275515',

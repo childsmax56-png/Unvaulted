@@ -9,6 +9,9 @@ import { joinCSVRows } from './_csvParser';
 interface SiteSource {
   origin: string;
   gids: Record<string, string>;
+  // Site header → snapshot header, for sites whose template names columns
+  // differently from the committed CSVs (applied to every tab of that site).
+  headers?: Record<string, string>;
 }
 
 const SITE_SOURCES: Record<string, SiteSource> = {
@@ -26,6 +29,31 @@ const SITE_SOURCES: Record<string, SiteSource> = {
       // art (gid 1257812670) stays on the committed CSV: the site's Art table has
       // lost nearly all its images, while the snapshot points at artwork saved
       // under public/frankgold/art/.
+    },
+  },
+  // wolfgold: tylertracker.net mirrors the official Tyler tracker (a private
+  // sheet). Tabs not listed here keep reading the public wolfgold sheet
+  // (SHEET_SOURCES in _sheets.ts), which this registry takes precedence over.
+  wolfgold: {
+    origin: 'https://tylertracker.net',
+    gids: {
+      unreleased: '1467800195',
+      released: '1734736073',
+      recent: '110770002',
+      stems: '322785771',
+      'album-copies': '1511323240',
+      tracklists: '63404007',
+      misc: '437989339',
+      fakes: '1005618704',
+      // art (gid 1561502439) stays on the wolfgold sheet: the site's Art links are
+      // mostly pixeldrain/pillows pages, while the sheet's in-cell images give the
+      // gallery real pictures (see fetchSheetRowImages in _sheets.ts).
+    },
+    headers: {
+      Title: 'Name',
+      Length: 'Track Length',
+      Availability: 'Available Length',
+      'Download(s)': 'Link(s)',
     },
   },
 };
@@ -92,14 +120,15 @@ export function parseWaffleTable(html: string): string[][] {
 // above it dropped), header cells cut to their first line ("Name\n(Check out
 // the Tracker website!)" -> "Name") with wrapped words joined ("File \nDate"),
 // unused columns dropped, trailing blank columns trimmed.
-export function toTrackerCsv(rows: string[][]): string {
+export function toTrackerCsv(rows: string[][], renames: Record<string, string> = {}): string {
   const h = rows.findIndex(r => (r[0] ?? '').trim() === 'Era' || r.some(c => /^Name\b/.test(c.trim())));
   if (h === -1) throw new Error('no header row');
   const header = rows[h].map(c => {
     const lines = c.split('\n').map(l => l.trim());
     // a hint line in parentheses is dropped; a wrapped word is joined
     const kept = lines.filter((l, i) => i === 0 || (l && !l.startsWith('(')));
-    return kept.join(' ').replace(/\s+/g, ' ').trim();
+    const name = kept.join(' ').replace(/\s+/g, ' ').trim();
+    return renames[name] ?? name;
   });
   let width = header.length;
   while (width > 0 && !header[width - 1]) width--;
@@ -116,10 +145,15 @@ export async function fetchSiteCsv(artist: string, tab: string): Promise<string>
   const src = SITE_SOURCES[artist];
   const gid = src?.gids[tab];
   if (!src || !gid) throw new Error('no site source');
-  const res = await fetch(`${src.origin}/preview/sheet/${gid}`, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  // Edge-cache the page (up to ~1.3 MB) for 5 min, matching the API responses'
+  // max-age, so every visitor doesn't re-download it from the tracker site.
+  const res = await fetch(`${src.origin}/preview/sheet/${gid}`, {
+    headers: { 'User-Agent': 'Mozilla/5.0' },
+    cf: { cacheTtl: 300, cacheEverything: true },
+  });
   if (!res.ok) throw new Error(`Tracker site HTTP ${res.status}`);
   const rows = parseWaffleTable(await res.text());
-  const csv = toTrackerCsv(rows);
+  const csv = toTrackerCsv(rows, src.headers);
   // A layout change that leaves almost nothing parseable shouldn't blank the tab.
   if (rows.length < 3) throw new Error('site table is empty');
   return csv;
