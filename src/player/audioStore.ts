@@ -17,7 +17,7 @@ import axios from 'axios';
 import { useCallback, useSyncExternalStore } from 'react';
 import type { Song, Era } from '../types';
 import { parseArtistFromSong } from '../lastfm';
-import { pixeldrainProxyBase, isChallengeGatedAudioHost } from '../utils';
+import { pixeldrainProxyBase, isChallengeGatedAudioHost, fixMzstaticUrl, needsPageResolve, resolveImbbUrl } from '../utils';
 
 export type ActivePlayer = 'audio' | 'spotify' | 'youtube' | 'soundcloud';
 
@@ -504,6 +504,56 @@ function metaArtwork(song: Song, era: Era | null): string {
   return state.currentArtwork || (song as any).image || song.image || era?.image || '';
 }
 
+// --- Now Playing metadata ---------------------------------------------------
+//
+// iOS feeds this to the lock screen, Control Center and AirPlay receivers (the
+// TV shows the cover from here). Covers need some care first:
+//  - many are ibb.co / imgur *page* links, which the <Img> component resolves
+//    to a direct image; handing iOS the raw page URL gives it HTML, not art;
+//  - cover hosts often refuse hotlinked requests, so the artwork is fetched
+//    through our same-origin /api/img-proxy instead;
+//  - no `type` is declared, since covers are a mix of JPEG and PNG.
+
+function artworkSrc(directUrl: string): string {
+  const url = fixMzstaticUrl(directUrl);
+  if (typeof window === 'undefined' || !/^https?:\/\//i.test(url)) return url;
+  const host = window.location.hostname;
+  // The Pages Function proxy doesn't exist under the local Vite dev server.
+  if (host === 'localhost' || host === '127.0.0.1') return url;
+  try {
+    if (new URL(url).origin === window.location.origin) return url;
+  } catch { return url; }
+  return `${window.location.origin}/api/img-proxy?url=${encodeURIComponent(url)}`;
+}
+
+let nowPlayingToken = 0;
+
+export function setNowPlaying(meta: { title: string; artist: string; album: string; cover?: string }): void {
+  if (typeof navigator === 'undefined' || !('mediaSession' in navigator)) return;
+  const token = ++nowPlayingToken;
+  const apply = (direct: string | null) => {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: meta.title,
+        artist: meta.artist,
+        album: meta.album,
+        artwork: direct ? [{ src: artworkSrc(direct), sizes: '512x512' }] : [],
+      });
+    } catch { /* MediaMetadata unsupported */ }
+  };
+  const cover = meta.cover || '';
+  if (cover && needsPageResolve(cover)) {
+    // Show the text right away, then add the cover once the page link resolves
+    // (unless another track has been set in the meantime).
+    apply(null);
+    void resolveImbbUrl(cover).then((direct) => {
+      if (direct && token === nowPlayingToken) apply(direct);
+    });
+  } else {
+    apply(cover || null);
+  }
+}
+
 function updateMediaSession(): void {
   if (typeof navigator === 'undefined' || !('mediaSession' in navigator)) return;
   const song = state.currentSong;
@@ -511,13 +561,13 @@ function updateMediaSession(): void {
   const era = state.currentEra;
   const eraName = (song as any).realEra?.name || era?.name || '';
   const cover = metaArtwork(song, era);
+  setNowPlaying({
+    title: song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name,
+    artist: state.currentArtistLabel || parseArtistFromSong(song.name, song.extra, eraName),
+    album: eraName,
+    cover,
+  });
   try {
-    navigator.mediaSession.metadata = new MediaMetadata({
-      title: song.name.includes(' - ') ? song.name.substring(song.name.indexOf(' - ') + 3) : song.name,
-      artist: state.currentArtistLabel || parseArtistFromSong(song.name, song.extra, eraName),
-      album: eraName,
-      artwork: cover ? [{ src: cover, sizes: '512x512' }, { src: cover, sizes: '256x256' }] : [],
-    });
     navigator.mediaSession.setActionHandler('play', () => play());
     navigator.mediaSession.setActionHandler('pause', () => pause());
     navigator.mediaSession.setActionHandler('nexttrack', () => playNext());

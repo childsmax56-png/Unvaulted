@@ -2331,14 +2331,11 @@ export default function App() {
       const lfmTrack = cleanTrackName(currentSong.name, currentSong.extra);
       const coverImage = currentArtwork || currentSong.image || CUSTOM_IMAGES[actualEraName] || currentEra.image || 'https://i.ibb.co/mrK8W4rL/image-2026-03-22-142639537.png';
 
-      navigator.mediaSession.metadata = new MediaMetadata({
+      audioStore.setNowPlaying({
         title: lfmTrack,
         artist: currentArtistLabel || parseArtistFromSong(currentSong.name, currentSong.extra, actualEraName),
         album: cleanActualEraName,
-        artwork: [
-          { src: coverImage, sizes: '512x512', type: 'image/png' },
-          { src: coverImage, sizes: '256x256', type: 'image/png' }
-        ]
+        cover: coverImage,
       });
 
       if (settings.discordRPC) {
