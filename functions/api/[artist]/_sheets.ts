@@ -855,10 +855,6 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
 // uses the same 9-column layout as the main Unreleased tab, so its data rows
 // are appended under the Unreleased tab's own header rather than fetched as a
 // separate tab.
-//
-// (The stale fork yegold used to point at also had a "Related" tab, gid
-// 520283965, for DAYTONA/NASIR/K.T.S.E. — the real document has no such tab
-// at all; those eras don't exist on it.)
 const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
   yegold: ['1333371598'],
   yelolgold: ['1333371598'],

@@ -162,22 +162,17 @@ export const yegoldConfig: ArtistConfig = {
     "Ongoing": "??/??/????",
   },
 
-  // DAYTONA/NASIR/K.T.S.E./NEVER STOP are NOT eras here (unlike Jesus Is Born/
-  // Sunday Service Choir below) — they have no Unreleased-tab leak rows
-  // anywhere on the real sheet, so listing them would just show as empty "0
-  // songs" cards in the Related tab. They still have a CUSTOM_IMAGES entry
-  // above, since the Released/Tracklists/Art/Stems tabs reference those names
-  // directly and look covers up independent of this list. YE-I/The
-  // Elementary School Dropout (present on yzygold's/Suzy's sheet) don't exist
-  // anywhere on this one at all — dropped entirely.
-  HIDDEN_ALBUMS: ['Jesus Is Born', 'Sunday Service Choir'],
+  // Related tab. DAYTONA/NASIR/K.T.S.E./NEVER STOP are sections of the live
+  // Unreleased tab (headers titled "Pusha T - DAYTONA", "Nas - NASIR", etc.,
+  // folded onto the song rows' short names by ERA_NAME_MAP in _eraNames.ts).
+  // YE-I/The Elementary School Dropout (present on yzygold's/Suzy's sheet)
+  // don't exist anywhere on this one at all — dropped entirely.
+  HIDDEN_ALBUMS: ['DAYTONA', 'NASIR', 'K.T.S.E.', 'Jesus Is Born', 'Sunday Service Choir', 'NEVER STOP'],
 
   // Sourced from each era's own stat-header description cell on the live sheet
   // (same place the real yetracker.net site draws its own blurbs from) — not
   // ported from yzygold/Suzy's hand-written ones. DAYTONA/NASIR/K.T.S.E./NEVER
-  // STOP have no such cell anywhere on this sheet (no Unreleased-tab header
-  // row, and the Released tab doesn't carry one either), so they're absent
-  // here rather than filled in from another tracker.
+  // STOP aren't listed: their blurbs come straight from the live sheet.
   ALBUM_DESCRIPTIONS: {
     "Before The College Dropout": "Before Kanye released his first album to critical acclaim in 2004, he pursued many other projects, including a rap trio group named the \"Go Getters\" and production for other rappers, including, but not limited to JAŸ-Z, Common, Talib Kweli, and Scarface. Two years before the release of The College Dropout, Kanye began releasing a series of mixtapes to generate hype and publicity for the eventual release of his first album. Kanye eventually signed with Roc-A-Fella records in August 2002.",
     "The College Dropout": "Following his signing to Roc-A-Fella Records, Kanye released his debut studio album, The College Dropout. It features string arrangements, choirs, and his signature soul sampling, frequently branded as \"chipmunk soul\" for its sped-up and high-pitched nature. Contrary to the popular gangster-persona lyrics at the time, his songs mostly revolved around themes of family, materialism, religion, and racism. The inspiration for finally making his music came when he was in a near-fatal car crash.",
