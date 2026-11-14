@@ -26,9 +26,8 @@ const SITE_SOURCES: Record<string, SiteSource> = {
       'album-copies': '1324887433',
       'music-videos': '1257792866',
       fakes: '510511701',
-      // art (gid 1257812670) stays on the committed CSV: the site's Art table has
-      // lost nearly all its images, while the snapshot points at artwork saved
-      // under public/frankgold/art/.
+      // art: in-cell images go to the front of Link(s); see imagesIntoLinks().
+      art: '1257812670',
     },
   },
   // wolfgold: tylertracker.net mirrors the official Tyler tracker (a private
