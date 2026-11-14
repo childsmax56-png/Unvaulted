@@ -125,7 +125,9 @@ export function getAudioEl(): HTMLAudioElement | null {
   el.setAttribute('x-webkit-airplay', 'allow');
 
   el.addEventListener('timeupdate', () => {
-    if (el) setState({ currentTime: el.currentTime });
+    if (!el) return;
+    setState({ currentTime: el.currentTime });
+    maybeAdvanceBeforeEnd(el);
   });
   el.addEventListener('loadedmetadata', () => {
     if (!el) return;
@@ -658,6 +660,42 @@ function advancePrefetchedSync(): boolean {
   nextResolved = null;
   void preloadNext();
   return true;
+}
+
+// --- iOS locked-screen hand-off -------------------------------------------
+// On a locked iPhone/iPad, once a track reaches `ended` the element is
+// stopped, and iOS can let the page's audio session lapse before the next
+// track starts. The next track then "plays" (the clock and progress bar move)
+// but makes no sound until the user presses play by hand. To avoid that gap,
+// while the page is hidden on iOS we swap in the prefetched next track just
+// before the current one ends, so the element never stops playing.
+
+const EARLY_ADVANCE_SECONDS = 0.75;
+
+const IS_IOS = typeof navigator !== 'undefined' && (
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  // iPadOS reports itself as a Mac.
+  (navigator.userAgent.includes('Macintosh') && navigator.maxTouchPoints > 1)
+);
+
+let earlyAdvancedFrom: string | null = null;
+
+function maybeAdvanceBeforeEnd(a: HTMLAudioElement): void {
+  if (!IS_IOS || typeof document === 'undefined' || document.visibilityState !== 'hidden') return;
+  if (transportOverride || a.paused) return;
+  const { loopMode, hasLoopedOnce } = state;
+  // Repeat-one (and the first pass of play-twice) restart the same track.
+  if (loopMode === 2 || (loopMode === 1 && !hasLoopedOnce)) return;
+  const d = a.duration;
+  if (!Number.isFinite(d) || d <= EARLY_ADVANCE_SECONDS * 4) return;
+  if (d - a.currentTime > EARLY_ADVANCE_SECONDS) {
+    earlyAdvancedFrom = null; // not near the end: re-arm (the same song may come round again)
+    return;
+  }
+  if (earlyAdvancedFrom === a.src) return; // already handed off this track
+  earlyAdvancedFrom = a.src;
+  // Without a ready prefetch, leave it to the normal `ended` path.
+  advancePrefetchedSync();
 }
 
 function handleEnded() {
