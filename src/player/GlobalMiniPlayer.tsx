@@ -11,6 +11,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { LoopIcon, loopTitle } from '../components/LoopIcon';
 import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Volume2, X, ChevronUp, Maximize2 } from 'lucide-react';
+import AirPlayButton from '../components/AirPlayButton';
 import * as audioStore from './audioStore';
 import { parseArtistFromSong } from '../lastfm';
 import { CUSTOM_IMAGES, formatTextWithTags, Img } from '../utils';
@@ -186,6 +187,7 @@ export function GlobalMiniPlayer() {
           </div>
 
           <div className="flex items-center justify-end gap-3 md:gap-4 col-start-2 col-end-3 row-start-1 md:flex-1">
+            <AirPlayButton className="w-8 h-8" />
             {currentSong.commentKey && currentSong.commentTracker && (
               <CommentButton
                 tracker={currentSong.commentTracker}

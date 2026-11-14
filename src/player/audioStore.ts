@@ -121,6 +121,8 @@ export function getAudioEl(): HTMLAudioElement | null {
   el.preload = 'auto';
   el.crossOrigin = 'anonymous';
   el.setAttribute('playsinline', '');
+  // Let Safari route this element to AirPlay receivers (see ./airplay.ts).
+  el.setAttribute('x-webkit-airplay', 'allow');
 
   el.addEventListener('timeupdate', () => {
     if (el) setState({ currentTime: el.currentTime });

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { LoopIcon, loopTitle } from './LoopIcon';
 import { Play, Pause, X, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Mic2, Loader2, AlignLeft, Clock, ListMusic, Volume2, ExternalLink } from 'lucide-react';
+import AirPlayButton from './AirPlayButton';
 import { parseArtistFromSong, cleanTrackName } from '../lastfm';
 import { Song, Era } from '../types';
 import * as audioStore from '../player/audioStore';
@@ -321,6 +322,10 @@ export function FullScreenPlayer({
               </button>
             </div>
           )}
+          <AirPlayButton
+            className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 shrink-0"
+            iconClassName="w-5 h-5"
+          />
           {playlist && (
           <button 
             onClick={() => {

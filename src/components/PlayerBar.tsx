@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { LoopIcon, loopTitle } from './LoopIcon';
 import { Play, Pause, Volume2, Maximize2, MoreHorizontal, Download, X, SkipBack, SkipForward, Shuffle, Repeat, Repeat1, Star, Mic2, ListMusic, Square, ExternalLink, Share2, Plus, Check } from 'lucide-react';
+import AirPlayButton from './AirPlayButton';
 import { parseArtistFromSong } from '../lastfm';
 import { Song, Era } from '../types';
 import { useState, useRef, useEffect } from 'react';
@@ -286,6 +287,8 @@ export function PlayerBar({
         </div>
 
         <div className={`flex items-center justify-end gap-3 md:gap-6 col-start-2 col-end-3 row-start-1 md:flex-1 relative md:static${!settings.disableEraThemes && ERA_THEMES[era?.name ?? '']?.miniPlayer ? ' drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]' : ''}`}>
+          <AirPlayButton />
+
           <button 
             onClick={() => {
               if (showLyrics) setShowLyrics(false);
