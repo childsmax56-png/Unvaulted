@@ -662,7 +662,7 @@ function advancePrefetchedSync(): boolean {
   return true;
 }
 
-// --- iOS locked-screen hand-off -------------------------------------------
+// --- Locked-screen / AirPlay hand-off --------------------------------------
 // On a locked iPhone/iPad, once a track reaches `ended` the element is
 // stopped, and iOS can let the page's audio session lapse before the next
 // track starts. The next track then "plays" (the clock and progress bar move)
@@ -680,8 +680,14 @@ const IS_IOS = typeof navigator !== 'undefined' && (
 
 let earlyAdvancedFrom: string | null = null;
 
+// Also applies whenever audio is going to an AirPlay receiver (Safari on iOS
+// or macOS, locked or not): the AirPlay stream can drop in the same gap
+// between tracks.
 function maybeAdvanceBeforeEnd(a: HTMLAudioElement): void {
-  if (!IS_IOS || typeof document === 'undefined' || document.visibilityState !== 'hidden') return;
+  const airPlaying = !!(a as HTMLAudioElement & { webkitCurrentPlaybackTargetIsWireless?: boolean })
+    .webkitCurrentPlaybackTargetIsWireless;
+  const lockedIOS = IS_IOS && typeof document !== 'undefined' && document.visibilityState === 'hidden';
+  if (!airPlaying && !lockedIOS) return;
   if (transportOverride || a.paused) return;
   const { loopMode, hasLoopedOnce } = state;
   // Repeat-one (and the first pass of play-twice) restart the same track.
