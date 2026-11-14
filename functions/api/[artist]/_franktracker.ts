@@ -1,4 +1,4 @@
-import { joinCSVRows } from './_csvParser';
+import { joinCSVRows, splitCSVRows } from './_csvParser';
 
 // Live source for frankgold. Its Google Sheet is gone (export HTTP 410), but
 // franktracker.net still publishes every tab as a static published-sheet HTML
@@ -45,9 +45,9 @@ const SITE_SOURCES: Record<string, SiteSource> = {
       tracklists: '63404007',
       misc: '437989339',
       fakes: '1005618704',
-      // art (gid 1561502439) stays on the wolfgold sheet: the site's Art links are
-      // mostly pixeldrain/pillows pages, while the sheet's in-cell images give the
-      // gallery real pictures (see fetchSheetRowImages in _sheets.ts).
+      // art: the site's in-cell images (Image column, /assets/…) are moved to the
+      // front of Link(s) for the gallery; see imagesIntoLinks().
+      art: '1561502439',
     },
     headers: {
       Title: 'Name',
@@ -83,9 +83,16 @@ const toText = (html: string): string =>
 // One <td>'s inner HTML -> cell text. <br> becomes a newline; a cell whose links
 // are only labels ("Link", "Snippet") gets the hrefs instead of the label text,
 // and a link inside prose keeps its text followed by " <href>" (the snapshot's
-// format) unless the text already is the URL.
-function cellText(inner: string): string {
+// format) unless the text already is the URL. A cell holding only an in-cell
+// image (<img src="/assets/…">) becomes that image's absolute URL.
+function cellText(inner: string, origin: string): string {
   const text = toText(inner).trim();
+  if (!text) {
+    const imgs = [...inner.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/gi)]
+      .map(m => new URL(decodeEntities(m[1]), origin || 'https://invalid').href)
+      .filter(u => origin || !u.startsWith('https://invalid'));
+    if (imgs.length) return [...new Set(imgs)].join('\n');
+  }
   const hrefs = [...inner.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)].map(m => decodeEntities(m[1]));
   if (!hrefs.length) return text;
   if (!/https?:\/\//.test(text) && text.split('\n').every(l => l.trim().length <= 20)) {
@@ -101,13 +108,13 @@ function cellText(inner: string): string {
 // Published-sheet HTML table -> grid rows (sheet rows only; the freeze-bar and
 // column-header rows have no R{n} row id). colspan cells are padded with blanks
 // so later cells keep their column.
-export function parseWaffleTable(html: string): string[][] {
+export function parseWaffleTable(html: string, origin = ''): string[][] {
   const rows: string[][] = [];
   for (const tr of html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
     if (!/<th\b[^>]*\bid="[^"]*R\d+"/i.test(tr[1])) continue;
     const row: string[] = [];
     for (const td of tr[1].matchAll(/<td\b([^>]*)>([\s\S]*?)<\/td>/gi)) {
-      row.push(cellText(td[2]));
+      row.push(cellText(td[2], origin));
       const span = Number(/colspan="(\d+)"/i.exec(td[1])?.[1] ?? 1);
       for (let i = 1; i < span; i++) row.push('');
     }
@@ -141,6 +148,23 @@ export function toTrackerCsv(rows: string[][], renames: Record<string, string> =
   return joinCSVRows(out);
 }
 
+// The art gallery shows the first URL in Link(s), so put each row's in-cell
+// image there (the same place the Google-sheet path puts sheet images), ahead of
+// any download/source links.
+function imagesIntoLinks(csv: string): string {
+  const rows = splitCSVRows(csv);
+  const header = rows[0] ?? [];
+  const img = header.indexOf('Image');
+  const link = header.indexOf('Link(s)');
+  if (img === -1 || link === -1) return csv;
+  for (const row of rows.slice(1)) {
+    const url = (row[img] ?? '').split('\n')[0].trim();
+    if (!/^https?:\/\//.test(url) || (row[link] ?? '').includes(url)) continue;
+    row[link] = [url, (row[link] ?? '').trim()].filter(Boolean).join('\n');
+  }
+  return joinCSVRows(rows);
+}
+
 export async function fetchSiteCsv(artist: string, tab: string): Promise<string> {
   const src = SITE_SOURCES[artist];
   const gid = src?.gids[tab];
@@ -152,8 +176,9 @@ export async function fetchSiteCsv(artist: string, tab: string): Promise<string>
     cf: { cacheTtl: 300, cacheEverything: true },
   });
   if (!res.ok) throw new Error(`Tracker site HTTP ${res.status}`);
-  const rows = parseWaffleTable(await res.text());
-  const csv = toTrackerCsv(rows, src.headers);
+  const rows = parseWaffleTable(await res.text(), src.origin);
+  let csv = toTrackerCsv(rows, src.headers);
+  if (tab === 'art') csv = imagesIntoLinks(csv);
   // A layout change that leaves almost nothing parseable shouldn't blank the tab.
   if (rows.length < 3) throw new Error('site table is empty');
   return csv;
