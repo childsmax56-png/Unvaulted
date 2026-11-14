@@ -141,6 +141,10 @@ export function toTrackerCsv(rows: string[][], renames: Record<string, string> =
   const keep = header.map((c, i) => i < width && !DROP_HEADERS.has(c)).flatMap((k, i) => (k ? [i] : []));
   const out = [keep.map(i => header[i])];
   for (const r of rows.slice(h + 1)) {
+    // tylertracker.net's Unreleased tab ends with a footer (Highlights stats,
+    // Special Thanks, an "Other Albums" list beside the editor credits) that
+    // would otherwise parse as bogus songs and eras.
+    if ((r[0] ?? '').trim() === 'Highlights') break;
     if (!r.some(c => c.trim())) continue;
     out.push(keep.map(i => r[i] ?? ''));
   }

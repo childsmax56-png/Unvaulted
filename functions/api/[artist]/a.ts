@@ -463,9 +463,18 @@ export const onRequestGet: PagesFunction = async (context) => {
           if (!description || v.length > description.length) description = v;
         }
 
+        // Tracker-site mirrors (tylertracker.net) put the era's cover as an
+        // in-cell image in a merged cell of the header row; use it as the era
+        // image (the client's CUSTOM_IMAGES still take precedence).
+        const image = Object.entries(row)
+          .filter(([key]) => key !== 'Era' && key !== NAME_KEY && key !== NOTES_KEY)
+          .flatMap(([, value]) => (value ?? '').split('\n').map((l: string) => l.trim()))
+          .find((l: string) => /^https?:\/\/\S+\.(png|jpe?g|gif|webp)$/i.test(l));
+
         eras[eraName] = {
           name: eraName,
           extra: extra ?? undefined,
+          ...(image ? { image } : {}),
           timeline: row[NOTES_KEY]?.trim() || undefined,
           description,
           fileInfo: eraField.split('\n').map((l: string) => l.trim()).filter(Boolean),
