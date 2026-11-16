@@ -1,8 +1,10 @@
-# Cloudflare Worker (static assets only) for the Jewel Case Spinner.
-# No server code and no bindings: everything runs in the visitor's browser.
+# Cloudflare Worker for the Jewel Case Spinner.
+# The files in public/ are packed into the Worker by scripts/bundle.mjs before each
+# deploy (see [build]), so there are no bindings and no separate asset upload.
 name = "jewel-case-spinner"
+main = "src/worker.js"
 compatibility_date = "2025-01-01"
+workers_dev = true
 
-[assets]
-directory = "./public"
-not_found_handling = "single-page-application"
+[build]
+command = "node scripts/bundle.mjs"
