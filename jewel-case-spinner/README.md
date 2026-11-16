@@ -16,6 +16,8 @@ npm run dev        # http://localhost:8789
 
 ### Option A: from your computer (Wrangler)
 
+This deploys a Cloudflare Worker that serves the static files (see `[assets]` in `wrangler.toml`). Your API token needs **Account → Workers Scripts → Edit**.
+
 ```sh
 cd jewel-case-spinner
 npm install
@@ -23,9 +25,9 @@ npx wrangler login     # first time only, opens the browser
 npm run deploy
 ```
 
-The first deploy creates a Pages project called `jewel-case-spinner`, and the site is served at `https://jewel-case-spinner.pages.dev`.
+The site is served at `https://jewel-case-spinner.<your-subdomain>.workers.dev`.
 
-### Option B: auto-deploy from GitHub
+### Option B: Cloudflare Pages, auto-deploy from GitHub
 
 1. Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**, then pick this repository.
 2. Build settings:
@@ -45,5 +47,5 @@ In the Pages project: **Custom domains → Set up a custom domain**, for example
 public/index.html        the whole app (UI, 3D scene, GIF export)
 public/vendor/           three.js + RoomEnvironment + gifenc (MIT licensed)
 public/_headers          security headers and long caching for vendor files
-wrangler.toml            Cloudflare Pages config (output dir = public)
+wrangler.toml            Cloudflare Worker config (static assets from public/)
 ```

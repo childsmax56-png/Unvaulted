@@ -1,5 +1,8 @@
-# Cloudflare Pages project for the Jewel Case Spinner.
-# Static site only: no build step, no bindings. Everything runs in the visitor's browser.
+# Cloudflare Worker (static assets only) for the Jewel Case Spinner.
+# No server code and no bindings: everything runs in the visitor's browser.
 name = "jewel-case-spinner"
 compatibility_date = "2025-01-01"
-pages_build_output_dir = "public"
+
+[assets]
+directory = "./public"
+not_found_handling = "single-page-application"
