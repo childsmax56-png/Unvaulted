@@ -143,7 +143,8 @@ input[type="color"] { width: 44px; height: 28px; border: 1px solid var(--line); 
             <button class="clear" type="button" hidden>Remove</button>
           </div>
         </div>
-        <p class="hint">Square art works best for the front. For the back you can upload a full 151×118 mm tray card: the spines on its edges are used automatically. With no spine, the edge is filled with a color taken from the back cover.</p>
+        <p class="hint">Square art works best for the front. For the back you can upload a full 151×118 mm tray card: the spines on its edges are used automatically.</p>
+        <div class="bg-extra" id="spinecolor-wrap"><label for="spinecolor" class="hint">No spine image? Spine color</label><input type="color" id="spinecolor" value="#e9ecf0"><span class="meta" id="spinecolor-note">picked from the back cover</span></div>
       </section>
 
       <section class="group" aria-labelledby="h-case">
@@ -253,38 +254,26 @@ const state = {
   playing: !matchMedia('(prefers-reduced-motion: reduce)').matches,
   user: { front: null, back: null, spine: null }, // HTMLCanvasElements from uploads
   trayCardSpine: null,
+  spineColor: '#e9ecf0', spineColorTouched: false,
 };
 
 // ---------- sample artwork (shown until the user uploads) ----------
-function sampleFront() {
-  const c = document.createElement('canvas'); c.width = c.height = 1024; const g = c.getContext('2d');
-  const gr = g.createLinearGradient(0, 0, 1024, 1024); gr.addColorStop(0, '#f2efe8'); gr.addColorStop(1, '#d9d3c7');
-  g.fillStyle = gr; g.fillRect(0, 0, 1024, 1024);
-  g.fillStyle = '#1d2b53'; g.beginPath(); g.arc(512, 430, 250, 0, Math.PI * 2); g.fill();
-  g.fillStyle = '#e8543f'; g.beginPath(); g.arc(600, 360, 110, 0, Math.PI * 2); g.fill();
-  g.fillStyle = '#111'; g.textAlign = 'center';
-  g.font = '800 64px Archivo, Arial, sans-serif'; g.fillText('YOUR ALBUM', 512, 820);
-  g.font = '500 30px "IBM Plex Mono", monospace'; g.fillStyle = '#555'; g.fillText('SAMPLE FRONT COVER', 512, 880);
-  return c;
+function placeholder(w, h, label, sub, vertical) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d');
+  g.fillStyle = '#e9ecf0'; g.fillRect(0, 0, w, h);
+  g.strokeStyle = '#b9c0c9'; g.lineWidth = Math.max(4, Math.min(w, h) * 0.012);
+  g.setLineDash([g.lineWidth * 4, g.lineWidth * 3]);
+  const m = Math.min(w, h) * (vertical ? 0.18 : 0.06); g.strokeRect(m, m, w - 2 * m, h - 2 * m); g.setLineDash([]);
+  g.save(); g.translate(w / 2, h / 2); if (vertical) g.rotate(Math.PI / 2);
+  g.fillStyle = '#2a313b'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const size = vertical ? w * 0.42 : w * 0.085;
+  g.font = `800 ${size}px Archivo, Arial, sans-serif`; g.fillText(label, 0, sub ? -size * 0.35 : 0);
+  if (sub) { g.fillStyle = '#7a8492'; g.font = `500 ${size * 0.38}px "IBM Plex Mono", monospace`; g.fillText(sub, 0, size * 0.55); }
+  g.restore(); return c;
 }
-function sampleBack() {
-  const c = document.createElement('canvas'); c.width = 1380; c.height = 1180; const g = c.getContext('2d');
-  g.fillStyle = '#1d2b53'; g.fillRect(0, 0, c.width, c.height);
-  g.fillStyle = '#f2efe8'; g.font = '700 46px Archivo, Arial, sans-serif'; g.textAlign = 'left';
-  const tracks = ['Intro', 'Glass Hinge', 'Tray Card', 'Booklet', 'Hidden Track', 'Outro'];
-  tracks.forEach((t, i) => { g.fillText(String(i + 1).padStart(2, '0') + '   ' + t, 150, 260 + i * 110); });
-  g.fillStyle = '#e8543f'; g.fillRect(150, 140, 120, 14);
-  g.fillStyle = '#9aa6c4'; g.font = '500 26px "IBM Plex Mono", monospace'; g.fillText('SAMPLE BACK COVER · 138 × 118 MM', 150, 1060);
-  return c;
-}
-function sampleSpine() {
-  const c = document.createElement('canvas'); c.width = 64; c.height = 1180; const g = c.getContext('2d');
-  g.fillStyle = '#1d2b53'; g.fillRect(0, 0, 64, 1180);
-  g.save(); g.translate(32, 590); g.rotate(Math.PI / 2);
-  g.fillStyle = '#f2efe8'; g.font = '700 30px Archivo, Arial, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
-  g.fillText('ARTIST  ·  YOUR ALBUM', 0, 0); g.restore();
-  return c;
-}
+const sampleFront = () => placeholder(1024, 1024, 'FRONT COVER', '120 × 120 mm');
+const sampleBack = () => placeholder(1380, 1180, 'BACK COVER', '138 × 118 mm');
+const sampleSpine = () => placeholder(64, 1180, 'SPINE', '', true);
 
 // ---------- image helpers ----------
 function loadImage(file) {
@@ -315,13 +304,29 @@ function spineFromImage(img) {
   c.getContext('2d').drawImage(src, 0, 0, 96, 1180); return c;
 }
 function edgeColor(canvas) {
+  // Find the dominant color along the outer edges (not a blend of everything there):
+  // bucket the pixels, take the most common bucket, then average only the pixels in it.
   const g = canvas.getContext('2d'); const w = canvas.width, h = canvas.height;
-  const strip = Math.max(2, Math.round(w * 0.02));
-  const a = g.getImageData(0, 0, strip, h).data, b = g.getImageData(w - strip, 0, strip, h).data;
-  let r = 0, gg = 0, bl = 0, n = 0;
-  for (const d of [a, b]) for (let i = 0; i < d.length; i += 4) { r += d[i]; gg += d[i + 1]; bl += d[i + 2]; n++; }
-  const c = document.createElement('canvas'); c.width = 8; c.height = 64; const cg = c.getContext('2d');
-  cg.fillStyle = `rgb(${r / n | 0},${gg / n | 0},${bl / n | 0})`; cg.fillRect(0, 0, 8, 64); return c;
+  const sx = Math.max(2, Math.round(w * 0.03)), sy = Math.max(2, Math.round(h * 0.03));
+  const regions = [[0, 0, sx, h], [w - sx, 0, sx, h], [0, 0, w, sy], [0, h - sy, w, sy]];
+  const buckets = new Map();
+  for (const [x, y, rw, rh] of regions) {
+    const d = g.getImageData(x, y, rw, rh).data;
+    for (let i = 0; i < d.length; i += 4) {
+      if (d[i + 3] < 128) continue;
+      const k = (d[i] >> 4) << 8 | (d[i + 1] >> 4) << 4 | (d[i + 2] >> 4);
+      let b = buckets.get(k); if (!b) buckets.set(k, b = [0, 0, 0, 0]);
+      b[0] += d[i]; b[1] += d[i + 1]; b[2] += d[i + 2]; b[3]++;
+    }
+  }
+  let best = [255, 255, 255, 1];
+  for (const b of buckets.values()) if (b[3] > best[3]) best = b;
+  const hex = '#' + [0, 1, 2].map((j) => Math.round(best[j] / best[3]).toString(16).padStart(2, '0')).join('');
+  return hex;
+}
+function solidCanvas(color) {
+  const c = document.createElement('canvas'); c.width = 8; c.height = 64; const g = c.getContext('2d');
+  g.fillStyle = color; g.fillRect(0, 0, 8, 64); return c;
 }
 
 // ---------- three.js scene ----------
@@ -406,7 +411,11 @@ function applyArt() {
   const f = state.user.front || sampleFront();
   const b = state.user.back || sampleBack();
   let s = state.user.spine || state.trayCardSpine;
-  if (!s) s = state.user.back ? edgeColor(state.user.back) : sampleSpine();
+  if (!s) {
+    if (state.user.back && !state.spineColorTouched) { state.spineColor = edgeColor(state.user.back); $('#spinecolor').value = state.spineColor; }
+    s = state.user.back || state.spineColorTouched ? solidCanvas(state.spineColor) : sampleSpine();
+  }
+  $('#spinecolor-wrap').hidden = !!(state.user.spine || state.trayCardSpine);
   for (const [m, c] of [[frontMat, f], [backMat, b], [spineMat, s]]) { if (m.map) m.map.dispose(); m.map = tex(c); m.needsUpdate = true; }
   trayMat.color.set(state.tray === 'black' ? 0x141619 : 0xdde2e8);
   tintSide.opacity = state.tray === 'black' ? 0.28 : 0.42;
@@ -601,6 +610,7 @@ for (const [id, fn] of Object.entries(ranges)) {
   const upd = () => { out.textContent = fn(Number(el.value)); };
   el.addEventListener('input', upd); upd();
 }
+$('#spinecolor').addEventListener('input', (e) => { state.spineColor = e.target.value; state.spineColorTouched = true; $('#spinecolor-note').textContent = 'custom'; applyArt(); });
 $('#bgcolor').addEventListener('input', (e) => { state.bgColor = e.target.value; });
 $('#bgimg-btn').addEventListener('click', () => $('#file-bg').click());
 $('#file-bg').addEventListener('change', async (e) => {
@@ -616,6 +626,7 @@ async function handleFile(slot, file) {
   if (slot === 'front') state.user.front = cropTo(img, 1, 1400);
   else if (slot === 'spine') state.user.spine = spineFromImage(img);
   else {
+    state.spineColorTouched = false; $('#spinecolor-note').textContent = 'picked from the back cover';
     // A full tray card (151 × 118 mm) carries its own spines on the left and right edges.
     if (iw / ih > 1.24) {
       const spinePx = iw * (SPINE_W / (BACK_W + 2 * SPINE_W));
@@ -637,7 +648,7 @@ function showSample(slot, drop) {
   drop.innerHTML = '';
   const im = new Image(); im.alt = ''; im.src = samples[slot]().toDataURL('image/png'); im.style.opacity = '0.45';
   drop.appendChild(im);
-  drop.insertAdjacentHTML('beforeend', '<span class="badge">Sample</span><span class="ph" style="position:relative">Drop or tap</span>');
+  drop.insertAdjacentHTML('beforeend', '<span class="badge">Sample</span>');
 }
 document.querySelectorAll('.slot').forEach((slotEl) => {
   const slot = slotEl.dataset.slot, drop = slotEl.querySelector('.drop'), input = slotEl.querySelector('input');
