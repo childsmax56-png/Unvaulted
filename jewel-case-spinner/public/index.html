@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0e12">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<title>Jewel Case Spinner</title>
+<meta name="description" content="Upload a front cover, back cover and optional spine, and export a spinning CD jewel case as a looping GIF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a control rail on the left, a dark "light box" stage on the right; stacks to one column on phones. Single deliberate dark look. */
+:root {
+  --bg: #0c0e12;
+  --panel: #13171d;
+  --raised: #1a1f27;
+  --line: #262d38;
+  --fg: #e8ecf1;
+  --muted: #8a94a3;
+  --accent: #a9d8ff;
+  --accent-ink: #06131f;
+  --stage: #050608;
+  --danger: #ff9a8a;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--body); font-size: 14px; line-height: 1.45; }
+.wrap {
+  max-width: 1280px; margin: 0 auto;
+  padding-block: 20px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 20px;
+}
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+h1 { margin: 0; font-family: var(--display); font-stretch: 72%; font-weight: 800; font-size: clamp(28px, 4.4vw, 44px); letter-spacing: 0.01em; text-transform: uppercase; line-height: 0.95; text-wrap: balance; }
+h1 span { color: var(--accent); }
+.spec { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+.spec b { color: var(--fg); font-weight: 500; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } .stage-col { order: -1; } }
+
+.rail { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.group { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.group h2 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+.slots { display: grid; grid-template-columns: 1fr 1fr 0.55fr; gap: 10px; }
+.slot { position: relative; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.drop {
+  position: relative; display: grid; place-items: center; overflow: hidden;
+  aspect-ratio: 1 / 1; border-radius: 6px; border: 1px dashed #3a4350; background: var(--raised);
+  cursor: pointer; transition: border-color .15s, background .15s;
+}
+.slot[data-slot="back"] .drop { aspect-ratio: 138 / 118; }
+.slot[data-slot="spine"] .drop { aspect-ratio: auto; height: 100%; min-height: 80px; }
+.slot[data-slot="spine"] { grid-row: span 1; }
+.drop:hover, .drop:focus-visible, .drop.over { border-color: var(--accent); background: #1d2631; outline: none; }
+.drop img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.drop .ph { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: center; padding: 6px; line-height: 1.3; }
+.badge { position: absolute; top: 5px; left: 5px; font-family: var(--mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; background: rgba(5,6,8,.75); color: var(--muted); padding: 2px 5px; border-radius: 3px; }
+.slot-label { display: flex; justify-content: space-between; align-items: baseline; gap: 4px; font-size: 12px; font-weight: 600; }
+.slot-label small { font-family: var(--mono); font-weight: 400; font-size: 10px; color: var(--muted); white-space: nowrap; }
+.clear { appearance: none; border: 0; background: none; color: var(--muted); font: inherit; font-size: 11px; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; justify-self: start; text-align: left; }
+.clear:hover { color: var(--danger); }
+.hint { margin: 0; font-size: 12px; color: var(--muted); }
+
+.row { display: grid; grid-template-columns: 92px minmax(0, 1fr); align-items: center; gap: 10px; }
+.row > label, .row > .lbl { font-size: 12px; color: var(--muted); }
+.seg { display: flex; flex-wrap: wrap; gap: 4px; background: var(--raised); border: 1px solid var(--line); border-radius: 7px; padding: 3px; }
+.seg button { flex: 1 1 auto; appearance: none; border: 0; background: none; color: var(--fg); font: inherit; font-size: 12px; padding: 5px 8px; border-radius: 5px; cursor: pointer; white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.seg button:focus-visible, .btn:focus-visible, .clear:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.range { display: flex; align-items: center; gap: 8px; }
+.range input { flex: 1; min-width: 0; accent-color: var(--accent); }
+.range output { font-family: var(--mono); font-size: 11px; color: var(--fg); min-width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+input[type="color"] { width: 44px; height: 28px; border: 1px solid var(--line); border-radius: 6px; background: var(--raised); padding: 2px; cursor: pointer; }
+.bg-extra { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.stage-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
+@media (max-width: 860px) { .stage-col { position: static; } }
+.stage { background: var(--stage); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; align-items: center; min-height: 300px; }
+.frame { position: relative; width: 100%; max-width: 560px; min-width: 0; }
+.frame canvas { display: block; width: 100%; height: auto; border-radius: 4px; }
+.checker { background-color: #2a2f37; background-image: linear-gradient(45deg, #3a414b 25%, transparent 25%), linear-gradient(-45deg, #3a414b 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #3a414b 75%), linear-gradient(-45deg, transparent 75%, #3a414b 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0; }
+.stagebar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.btn { appearance: none; border: 1px solid var(--line); background: var(--raised); color: var(--fg); font: inherit; font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.btn:hover { border-color: #3d4756; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn:disabled { opacity: .5; cursor: progress; }
+.meta { font-family: var(--mono); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.progress { height: 6px; background: var(--raised); border-radius: 3px; overflow: hidden; border: 1px solid var(--line); }
+.progress i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .1s linear; }
+
+.result { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 14px; align-items: center; }
+.result img { width: 100%; border-radius: 4px; display: block; }
+.result .info { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.result .info strong { font-size: 15px; }
+.result .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.note { font-size: 12px; color: var(--muted); margin: 0; }
+.note.err { color: var(--danger); }
+@media (max-width: 480px) { .result { grid-template-columns: 1fr; } .result img { max-width: 220px; } .slots { grid-template-columns: 1fr 1fr; } .slot[data-slot="spine"] { grid-column: span 2; } .slot[data-slot="spine"] .drop { min-height: 56px; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>Jewel Case <span>Spinner</span></h1>
+    <div class="spec">Standard jewel case · <b>142 × 125 × 10.4 mm</b> · exports looping GIF</div>
+  </header>
+
+  <div class="grid">
+    <div class="rail">
+      <section class="group" aria-labelledby="h-art">
+        <h2 id="h-art">Artwork</h2>
+        <div class="slots">
+          <div class="slot" data-slot="front">
+            <div class="slot-label">Front <small>120×120</small></div>
+            <div class="drop" tabindex="0" role="button" aria-label="Upload front cover"><span class="ph">Drop or tap</span></div>
+            <input class="sr" type="file" accept="image/*" id="file-front">
+            <button class="clear" type="button" hidden>Remove</button>
+          </div>
+          <div class="slot" data-slot="back">
+            <div class="slot-label">Back <small>138×118</small></div>
+            <div class="drop" tabindex="0" role="button" aria-label="Upload back cover"><span class="ph">Drop or tap</span></div>
+            <input class="sr" type="file" accept="image/*" id="file-back">
+            <button class="clear" type="button" hidden>Remove</button>
+          </div>
+          <div class="slot" data-slot="spine">
+            <div class="slot-label">Spine <small>opt.</small></div>
+            <div class="drop" tabindex="0" role="button" aria-label="Upload spine (optional)"><span class="ph">Drop or tap</span></div>
+            <input class="sr" type="file" accept="image/*" id="file-spine">
+            <button class="clear" type="button" hidden>Remove</button>
+          </div>
+        </div>
+        <p class="hint">Square art works best for the front. For the back you can upload a full 151×118 mm tray card: the spines on its edges are used automatically.</p>
+        <div class="bg-extra" id="spinecolor-wrap"><label for="spinecolor" class="hint">No spine image? Spine color</label><input type="color" id="spinecolor" value="#e9ecf0"><span class="meta" id="spinecolor-note">picked from the back cover</span></div>
+      </section>
+
+      <section class="group" aria-labelledby="h-case">
+        <h2 id="h-case">Case</h2>
+        <div class="row"><span class="lbl">Tray</span>
+          <div class="seg" data-key="tray"><button type="button" data-v="clear" aria-pressed="true">Clear</button><button type="button" data-v="black">Black</button></div>
+        </div>
+        <div class="row"><label for="tilt">Tilt</label><div class="range"><input id="tilt" type="range" min="-25" max="25" step="1" value="0"><output for="tilt">0°</output></div></div>
+        <div class="row"><label for="zoom">Zoom</label><div class="range"><input id="zoom" type="range" min="70" max="130" step="1" value="100"><output for="zoom">100%</output></div></div>
+        <div class="row"><label for="gloss">Gloss</label><div class="range"><input id="gloss" type="range" min="0" max="200" step="5" value="100"><output for="gloss">100%</output></div></div>
+      </section>
+
+      <section class="group" aria-labelledby="h-motion">
+        <h2 id="h-motion">Motion</h2>
+        <div class="row"><span class="lbl">Style</span>
+          <div class="seg" data-key="style"><button type="button" data-v="spin" aria-pressed="true">Full spin</button><button type="button" data-v="sway">Sway</button></div>
+        </div>
+        <div class="row"><span class="lbl">Direction</span>
+          <div class="seg" data-key="dir"><button type="button" data-v="1" aria-pressed="true">Right</button><button type="button" data-v="-1">Left</button></div>
+        </div>
+        <div class="row"><label for="dur">Loop length</label><div class="range"><input id="dur" type="range" min="2" max="10" step="0.5" value="5"><output for="dur">5.0 s</output></div></div>
+      </section>
+
+      <section class="group" aria-labelledby="h-bg">
+        <h2 id="h-bg">Background</h2>
+        <div class="seg" data-key="bg">
+          <button type="button" data-v="aurora" aria-pressed="true">Aurora</button>
+          <button type="button" data-v="studio">Studio</button>
+          <button type="button" data-v="color">Color</button>
+          <button type="button" data-v="image">Image</button>
+          <button type="button" data-v="none">Transparent</button>
+        </div>
+        <div class="bg-extra" id="bg-color-wrap" hidden><label for="bgcolor" class="hint">Color</label><input type="color" id="bgcolor" value="#1b2a4a"></div>
+        <div class="bg-extra" id="bg-image-wrap" hidden>
+          <button class="btn" type="button" id="bgimg-btn">Choose image…</button>
+          <span class="meta" id="bgimg-name">No image yet</span>
+          <input class="sr" type="file" accept="image/*" id="file-bg">
+        </div>
+      </section>
+
+      <section class="group" aria-labelledby="h-export">
+        <h2 id="h-export">Export</h2>
+        <div class="row"><span class="lbl">Shape</span>
+          <div class="seg" data-key="shape"><button type="button" data-v="1" aria-pressed="true">1:1</button><button type="button" data-v="1.25">4:5</button><button type="button" data-v="1.7778">9:16</button></div>
+        </div>
+        <div class="row"><span class="lbl">Width</span>
+          <div class="seg" data-key="size"><button type="button" data-v="320">320</button><button type="button" data-v="480" aria-pressed="true">480</button><button type="button" data-v="640">640</button><button type="button" data-v="800">800</button></div>
+        </div>
+        <div class="row"><span class="lbl">Frame rate</span>
+          <div class="seg" data-key="fps"><button type="button" data-v="15">15 fps</button><button type="button" data-v="20" aria-pressed="true">20 fps</button><button type="button" data-v="25">25 fps</button></div>
+        </div>
+        <div class="meta" id="est"></div>
+      </section>
+    </div>
+
+    <div class="stage-col">
+      <div class="stage">
+        <div class="frame" id="frame"><canvas id="view" aria-label="Spinning jewel case preview"></canvas></div>
+      </div>
+      <div class="stagebar">
+        <button class="btn" type="button" id="play" aria-pressed="true">Pause</button>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <span class="meta" id="status">Loading 3D engine…</span>
+          <button class="btn primary" type="button" id="export" disabled>Export GIF</button>
+        </div>
+      </div>
+      <div class="progress" id="progress" hidden><i></i></div>
+      <div class="result" id="result" hidden>
+        <img id="result-img" alt="Exported GIF preview">
+        <div class="info">
+          <strong>Your GIF is ready</strong>
+          <span class="meta" id="result-meta"></span>
+          <div class="actions">
+            <button class="btn primary" type="button" id="save">Save GIF</button>
+          </div>
+          <p class="note" id="save-note"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three.module.js",
+  "three/addons/environments/RoomEnvironment.js": "./vendor/RoomEnvironment.js",
+  "gifenc": "./vendor/gifenc.esm.js"
+} }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { GIFEncoder, quantize, applyPalette } from 'gifenc';
+
+// ---------- real-world proportions (cm) ----------
+const W = 14.2, H = 12.5, D = 1.04;          // case
+const COVER = 12.0;                           // front booklet
+const BACK_W = 13.8, BACK_H = 11.8;           // tray card back panel
+const SPINE_W = 0.65;                         // tray card spine
+
+const $ = (s) => document.querySelector(s);
+const state = {
+  tray: 'clear', tilt: 0, zoom: 1, gloss: 1,
+  style: 'spin', dir: 1, dur: 5,
+  bg: 'aurora', bgColor: '#1b2a4a', bgImage: null,
+  shape: 1, size: 480, fps: 20,
+  playing: !matchMedia('(prefers-reduced-motion: reduce)').matches,
+  user: { front: null, back: null, spine: null }, // HTMLCanvasElements from uploads
+  trayCardSpine: null,
+  spineColor: '#e9ecf0', spineColorTouched: false,
+};
+
+// ---------- sample artwork (shown until the user uploads) ----------
+function placeholder(w, h, label, sub, vertical) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d');
+  g.fillStyle = '#e9ecf0'; g.fillRect(0, 0, w, h);
+  g.strokeStyle = '#b9c0c9'; g.lineWidth = Math.max(4, Math.min(w, h) * 0.012);
+  g.setLineDash([g.lineWidth * 4, g.lineWidth * 3]);
+  const m = Math.min(w, h) * (vertical ? 0.18 : 0.06); g.strokeRect(m, m, w - 2 * m, h - 2 * m); g.setLineDash([]);
+  g.save(); g.translate(w / 2, h / 2); if (vertical) g.rotate(Math.PI / 2);
+  g.fillStyle = '#2a313b'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const size = vertical ? w * 0.42 : w * 0.085;
+  g.font = `800 ${size}px Archivo, Arial, sans-serif`; g.fillText(label, 0, sub ? -size * 0.35 : 0);
+  if (sub) { g.fillStyle = '#7a8492'; g.font = `500 ${size * 0.38}px "IBM Plex Mono", monospace`; g.fillText(sub, 0, size * 0.55); }
+  g.restore(); return c;
+}
+const sampleFront = () => placeholder(1024, 1024, 'FRONT COVER', '120 × 120 mm');
+const sampleBack = () => placeholder(1380, 1180, 'BACK COVER', '138 × 118 mm');
+const sampleSpine = () => placeholder(64, 1180, 'SPINE', '', true);
+
+// ---------- image helpers ----------
+function loadImage(file) {
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(file); const img = new Image();
+    img.onload = () => res(img); img.onerror = () => rej(new Error('That file could not be read as an image.'));
+    img.src = url;
+  });
+}
+function cropTo(img, aspect, maxW, sx = 0, sw = img.naturalWidth || img.width) {
+  const ih = img.naturalHeight || img.height;
+  let cw = sw, ch = ih;
+  if (cw / ch > aspect) cw = ch * aspect; else ch = cw / aspect;
+  const x = sx + (sw - cw) / 2, y = (ih - ch) / 2;
+  const outW = Math.min(maxW, Math.round(cw)), outH = Math.round(outW / aspect);
+  const c = document.createElement('canvas'); c.width = outW; c.height = outH;
+  const g = c.getContext('2d'); g.imageSmoothingQuality = 'high'; g.drawImage(img, x, y, cw, ch, 0, 0, outW, outH);
+  return c;
+}
+function spineFromImage(img) {
+  // Landscape spine art is turned upright so it reads top to bottom.
+  let src = img, w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
+  if (w > h) {
+    const c = document.createElement('canvas'); c.width = h; c.height = w; const g = c.getContext('2d');
+    g.translate(h, 0); g.rotate(Math.PI / 2); g.drawImage(img, 0, 0); src = c;
+  }
+  const c = document.createElement('canvas'); c.width = 96; c.height = 1180;
+  c.getContext('2d').drawImage(src, 0, 0, 96, 1180); return c;
+}
+function edgeColor(canvas) {
+  // Find the dominant color along the outer edges (not a blend of everything there):
+  // bucket the pixels, take the most common bucket, then average only the pixels in it.
+  const g = canvas.getContext('2d'); const w = canvas.width, h = canvas.height;
+  const sx = Math.max(2, Math.round(w * 0.03)), sy = Math.max(2, Math.round(h * 0.03));
+  const regions = [[0, 0, sx, h], [w - sx, 0, sx, h], [0, 0, w, sy], [0, h - sy, w, sy]];
+  const buckets = new Map();
+  for (const [x, y, rw, rh] of regions) {
+    const d = g.getImageData(x, y, rw, rh).data;
+    for (let i = 0; i < d.length; i += 4) {
+      if (d[i + 3] < 128) continue;
+      const k = (d[i] >> 4) << 8 | (d[i + 1] >> 4) << 4 | (d[i + 2] >> 4);
+      let b = buckets.get(k); if (!b) buckets.set(k, b = [0, 0, 0, 0]);
+      b[0] += d[i]; b[1] += d[i + 1]; b[2] += d[i + 2]; b[3]++;
+    }
+  }
+  let best = [255, 255, 255, 1];
+  for (const b of buckets.values()) if (b[3] > best[3]) best = b;
+  const hex = '#' + [0, 1, 2].map((j) => Math.round(best[j] / best[3]).toString(16).padStart(2, '0')).join('');
+  return hex;
+}
+function solidCanvas(color) {
+  const c = document.createElement('canvas'); c.width = 8; c.height = 64; const g = c.getContext('2d');
+  g.fillStyle = color; g.fillRect(0, 0, 8, 64); return c;
+}
+
+// ---------- three.js scene ----------
+const glCanvas = document.createElement('canvas');
+const renderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setClearColor(0x000000, 0);
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+const envMap = pmrem.fromScene(new RoomEnvironment(), 0.02).texture;
+const camera = new THREE.PerspectiveCamera(28, 1, 1, 200);
+
+const caseGroup = new THREE.Group(); scene.add(caseGroup);
+const maxAniso = renderer.capabilities.getMaxAnisotropy();
+function tex(canvas) {
+  const t = new THREE.CanvasTexture(canvas); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = maxAniso; return t;
+}
+
+// Opaque tray block: guarantees a solid silhouette and shows through the hinge and margins.
+const trayMat = new THREE.MeshBasicMaterial({ color: 0xdde2e8 });
+const tray = new THREE.Mesh(new THREE.BoxGeometry(W - 0.12, H - 0.12, D - 0.3), trayMat);
+caseGroup.add(tray);
+
+// Front booklet, flush right, leaving the hinge strip on the left.
+const frontMat = new THREE.MeshBasicMaterial();
+const front = new THREE.Mesh(new THREE.PlaneGeometry(COVER, COVER), frontMat);
+const frontX = W / 2 - 0.32 - COVER / 2;
+front.position.set(frontX, 0, D / 2 - 0.1); caseGroup.add(front);
+
+// Back tray card.
+const backMat = new THREE.MeshBasicMaterial();
+const back = new THREE.Mesh(new THREE.PlaneGeometry(BACK_W, BACK_H), backMat);
+back.rotation.y = Math.PI; back.position.set(0, 0, -D / 2 + 0.1); caseGroup.add(back);
+
+// Spines on both short sides of the tray card.
+const spineMat = new THREE.MeshBasicMaterial();
+const spineGeo = new THREE.PlaneGeometry(D - 0.16, BACK_H);
+const spineL = new THREE.Mesh(spineGeo, spineMat); spineL.rotation.y = -Math.PI / 2; spineL.position.x = -W / 2 + 0.05;
+const spineR = new THREE.Mesh(spineGeo, spineMat); spineR.rotation.y = Math.PI / 2; spineR.position.x = W / 2 - 0.05;
+caseGroup.add(spineL, spineR);
+
+// Hinge strip: translucent ridged plastic over the left edge of the front.
+function hingeCanvas() {
+  const c = document.createElement('canvas'); c.width = 128; c.height = 1024; const g = c.getContext('2d');
+  g.fillStyle = 'rgba(225,232,240,0.30)'; g.fillRect(0, 0, 128, 1024);
+  const ridges = [[10, .55], [30, .35], [58, .5], [88, .3], [112, .6]];
+  for (const [x, a] of ridges) { g.fillStyle = `rgba(255,255,255,${a})`; g.fillRect(x, 0, 3, 1024); g.fillStyle = `rgba(40,48,60,${a * .5})`; g.fillRect(x + 3, 0, 2, 1024); }
+  g.fillStyle = 'rgba(255,255,255,0.55)';
+  g.fillRect(0, 0, 128, 26); g.fillRect(0, 998, 128, 26);
+  return c;
+}
+const hingeW = frontX - COVER / 2 + W / 2;
+const hinge = new THREE.Mesh(new THREE.PlaneGeometry(hingeW, H - 0.1),
+  new THREE.MeshBasicMaterial({ map: tex(hingeCanvas()), transparent: true, depthWrite: false }));
+hinge.position.set(-W / 2 + hingeW / 2, 0, D / 2 - 0.04); hinge.renderOrder = 2; caseGroup.add(hinge);
+
+// Plastic shell: a faint tint plus an additive specular layer that only adds reflections.
+const box = new THREE.BoxGeometry(W, H, D);
+const tintSide = new THREE.MeshBasicMaterial({ color: 0xeef2f6, transparent: true, opacity: 0.42, depthWrite: false });
+const tintFace = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.05, depthWrite: false });
+const tint = new THREE.Mesh(box, [tintSide, tintSide, tintSide, tintSide, tintFace, tintFace]);
+tint.renderOrder = 3; caseGroup.add(tint);
+const glossMat = new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.06, metalness: 0, envMap, envMapIntensity: 1.2,
+  transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
+const gloss = new THREE.Mesh(box, glossMat); gloss.renderOrder = 4; caseGroup.add(gloss);
+// A second, slightly inset gloss layer stands in for the booklet's inner surface.
+const gloss2 = new THREE.Mesh(new THREE.BoxGeometry(W - 0.3, H - 0.3, D - 0.12), glossMat.clone());
+gloss2.material.envMapIntensity = 0.45; gloss2.renderOrder = 4; caseGroup.add(gloss2);
+
+// Crisp plastic edges and the lid's raised rim.
+const edgeMat = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.55, depthWrite: false });
+const edges = new THREE.LineSegments(new THREE.EdgesGeometry(box), edgeMat); edges.renderOrder = 5; caseGroup.add(edges);
+const rimMat = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.35, depthWrite: false });
+function rectLine(x0, x1, y0, y1, z) {
+  const g = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x0, y0, z), new THREE.Vector3(x1, y0, z), new THREE.Vector3(x1, y1, z), new THREE.Vector3(x0, y1, z), new THREE.Vector3(x0, y0, z)]);
+  const l = new THREE.Line(g, rimMat); l.renderOrder = 5; return l;
+}
+caseGroup.add(rectLine(frontX - COVER / 2 - 0.04, W / 2 - 0.16, -H / 2 + 0.16, H / 2 - 0.16, D / 2 + 0.002));
+caseGroup.add(rectLine(-BACK_W / 2 - 0.05, BACK_W / 2 + 0.05, -BACK_H / 2 - 0.05, BACK_H / 2 + 0.05, -D / 2 - 0.002));
+
+const faceMats = [frontMat, backMat];
+function applyArt() {
+  const f = state.user.front || sampleFront();
+  const b = state.user.back || sampleBack();
+  let s = state.user.spine || state.trayCardSpine;
+  if (!s) {
+    if (state.user.back && !state.spineColorTouched) { state.spineColor = edgeColor(state.user.back); $('#spinecolor').value = state.spineColor; }
+    s = state.user.back || state.spineColorTouched ? solidCanvas(state.spineColor) : sampleSpine();
+  }
+  $('#spinecolor-wrap').hidden = !!(state.user.spine || state.trayCardSpine);
+  for (const [m, c] of [[frontMat, f], [backMat, b], [spineMat, s]]) { if (m.map) m.map.dispose(); m.map = tex(c); m.needsUpdate = true; }
+  trayMat.color.set(state.tray === 'black' ? 0x141619 : 0xdde2e8);
+  tintSide.opacity = state.tray === 'black' ? 0.28 : 0.42;
+}
+
+// ---------- backgrounds ----------
+let auroraCache = null;
+function drawBackground(g, w, h) {
+  if (state.bg === 'none') { g.clearRect(0, 0, w, h); return; }
+  if (state.bg === 'color') { g.fillStyle = state.bgColor; g.fillRect(0, 0, w, h); return; }
+  if (state.bg === 'image' && state.bgImage) {
+    const im = state.bgImage, iw = im.naturalWidth, ih = im.naturalHeight, s = Math.max(w / iw, h / ih);
+    g.drawImage(im, (w - iw * s) / 2, (h - ih * s) / 2, iw * s, ih * s); return;
+  }
+  if (state.bg === 'studio' || state.bg === 'image') {
+    const r = g.createRadialGradient(w / 2, h * 0.45, 0, w / 2, h * 0.45, Math.max(w, h) * 0.75);
+    r.addColorStop(0, '#5b6472'); r.addColorStop(0.55, '#262b33'); r.addColorStop(1, '#0d0f12');
+    g.fillStyle = r; g.fillRect(0, 0, w, h); return;
+  }
+  // aurora (procedural night sky), cached per size
+  const key = w + 'x' + h;
+  if (!auroraCache || auroraCache.key !== key) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h; const a = c.getContext('2d');
+    const sky = a.createLinearGradient(0, 0, 0, h); sky.addColorStop(0, '#04131a'); sky.addColorStop(0.55, '#0a2a33'); sky.addColorStop(1, '#0b1a3a');
+    a.fillStyle = sky; a.fillRect(0, 0, w, h);
+    let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    for (let i = 0; i < (w * h) / 900; i++) { a.fillStyle = `rgba(255,255,255,${0.2 + rnd() * 0.6})`; const s = rnd() < 0.08 ? 1.6 : 0.9; a.fillRect(rnd() * w, rnd() * h * 0.75, s * w / 480, s * w / 480); }
+    a.globalCompositeOperation = 'lighter'; a.filter = `blur(${Math.round(w / 28)}px)`;
+    for (let k = 0; k < 3; k++) {
+      a.beginPath(); const y0 = h * (0.12 + k * 0.1);
+      a.moveTo(-w * 0.1, y0);
+      for (let x = 0; x <= w * 1.2; x += w / 12) a.lineTo(x, y0 + Math.sin(x / w * 5 + k * 2) * h * 0.06 + (x / w) * h * 0.08 * (k - 1));
+      a.lineWidth = h * (0.08 - k * 0.018); a.strokeStyle = ['rgba(60,255,170,0.55)', 'rgba(40,200,190,0.45)', 'rgba(120,255,160,0.35)'][k]; a.stroke();
+    }
+    a.filter = 'none'; a.globalCompositeOperation = 'source-over';
+    // distant ridge line
+    a.fillStyle = '#0e2a6b'; a.beginPath(); a.moveTo(0, h);
+    seed = 11; let y = h * 0.72;
+    for (let x = 0; x <= w; x += w / 40) { y = Math.min(h * 0.85, Math.max(h * 0.58, y + (rnd() - 0.5) * h * 0.06)); a.lineTo(x, y); }
+    a.lineTo(w, h); a.closePath(); a.fill();
+    const fog = a.createLinearGradient(0, h * 0.6, 0, h); fog.addColorStop(0, 'rgba(30,70,180,0)'); fog.addColorStop(1, 'rgba(20,50,150,0.6)');
+    a.fillStyle = fog; a.fillRect(0, h * 0.6, w, h * 0.4);
+    auroraCache = { key, c };
+  }
+  g.drawImage(auroraCache.c, 0, 0);
+}
+
+// ---------- pose + render ----------
+function poseAt(t) { // t in [0,1)
+  const ang = state.style === 'spin' ? t * Math.PI * 2 : Math.sin(t * Math.PI * 2) * 0.62;
+  caseGroup.rotation.set(state.tilt * Math.PI / 180, ang * state.dir, 0, 'XYZ');
+  // soft shading: faces dim as they turn away from camera
+  caseGroup.updateMatrixWorld();
+  const n = new THREE.Vector3(0, 0, 1).applyQuaternion(caseGroup.quaternion);
+  const facing = Math.abs(n.z);
+  const shade = 0.78 + 0.22 * facing;
+  frontMat.color.setScalar(shade); backMat.color.setScalar(shade);
+  spineMat.color.setScalar(0.8 + 0.2 * Math.sqrt(Math.max(0, 1 - facing * facing)));
+  glossMat.envMapIntensity = 1.2 * state.gloss; gloss2.material.envMapIntensity = 0.45 * state.gloss;
+}
+function setupCamera(w, h) {
+  const aspect = w / h; camera.aspect = aspect;
+  const vHalf = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+  const needV = (H / 2 + 1.4) / vHalf, needH = (W / 2 + 1.4) / (vHalf * aspect);
+  camera.position.set(0, 0, Math.max(needV, needH) / state.zoom + D);
+  camera.lookAt(0, 0, 0); camera.updateProjectionMatrix();
+}
+function renderTo(ctx, w, h, t) {
+  if (glCanvas.width !== w || glCanvas.height !== h) renderer.setSize(w, h, false);
+  setupCamera(w, h); poseAt(t);
+  renderer.render(scene, camera);
+  drawBackground(ctx, w, h);
+  ctx.drawImage(glCanvas, 0, 0, w, h);
+}
+
+// ---------- preview loop ----------
+const view = $('#view'), vctx = view.getContext('2d');
+const frameEl = $('#frame');
+let phase = 0.06, last = performance.now(), busy = false;
+function sizeView() {
+  const maxH = window.innerHeight * 0.7;
+  frameEl.style.maxWidth = Math.min(560, maxH / state.shape) + 'px';
+  view.style.aspectRatio = `1 / ${state.shape}`;
+  const cssW = frameEl.clientWidth, cssH = cssW * state.shape;
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  view.width = Math.round(cssW * dpr); view.height = Math.round(cssH * dpr);
+  frameEl.classList.toggle('checker', state.bg === 'none');
+}
+function tick(now) {
+  const dt = (now - last) / 1000; last = now;
+  if (state.playing && !busy) phase = (phase + dt / state.dur) % 1;
+  if (!busy) renderTo(vctx, view.width, view.height, phase);
+  requestAnimationFrame(tick);
+}
+
+// ---------- export ----------
+const nextFrame = () => new Promise((r) => setTimeout(r, 0));
+let lastGif = null;
+async function exportGif() {
+  busy = true; $('#export').disabled = true; $('#result').hidden = true;
+  const prog = $('#progress'), bar = prog.firstElementChild; prog.hidden = false; bar.style.width = '0%';
+  const w = state.size, h = Math.round(state.size * state.shape / 2) * 2;
+  const frames = Math.round(state.fps * state.dur), delay = Math.round(1000 / state.fps / 10) * 10;
+  const transparent = state.bg === 'none';
+  const work = document.createElement('canvas'); work.width = w; work.height = h;
+  const wctx = work.getContext('2d', { willReadFrequently: true });
+  const gif = GIFEncoder();
+  try {
+    for (let i = 0; i < frames; i++) {
+      wctx.clearRect(0, 0, w, h);
+      renderTo(wctx, w, h, i / frames);
+      const { data } = wctx.getImageData(0, 0, w, h);
+      if (transparent) {
+        const palette = quantize(data, 256, { format: 'rgba4444', oneBitAlpha: true, clearAlpha: true });
+        const index = applyPalette(data, palette, 'rgba4444');
+        let ti = palette.findIndex((p) => p[3] === 0); if (ti < 0) ti = 0;
+        gif.writeFrame(index, w, h, { palette, delay, transparent: true, transparentIndex: ti, dispose: 2 });
+      } else {
+        const palette = quantize(data, 256);
+        const index = applyPalette(data, palette);
+        gif.writeFrame(index, w, h, { palette, delay });
+      }
+      bar.style.width = ((i + 1) / frames * 100).toFixed(1) + '%';
+      $('#status').textContent = `Rendering frame ${i + 1} of ${frames}`;
+      await nextFrame();
+    }
+    gif.finish();
+    const blob = new Blob([gif.bytes()], { type: 'image/gif' });
+    if (lastGif) URL.revokeObjectURL(lastGif.url);
+    lastGif = { blob, url: URL.createObjectURL(blob) };
+    $('#result-img').src = lastGif.url;
+    $('#result-meta').textContent = `${w} × ${h} px · ${frames} frames · ${(blob.size / 1048576).toFixed(2)} MB`;
+    $('#save-note').textContent = ''; $('#save-note').className = 'note';
+    $('#result').hidden = false;
+    $('#status').textContent = 'Done';
+  } catch (e) {
+    $('#status').textContent = 'Export failed: ' + (e && e.message || e);
+  } finally {
+    prog.hidden = true; busy = false; $('#export').disabled = false;
+  }
+}
+
+// Saving: claude.ai viewer offers a save prompt; a normal website uses a download link.
+let downloadsP = null;
+if (window.claude && typeof window.claude.use === 'function') downloadsP = window.claude.use('downloads').catch(() => null);
+async function saveGif() {
+  if (!lastGif) return;
+  const name = 'jewel-case-spin.gif';
+  const note = $('#save-note');
+  const dl = downloadsP ? await downloadsP : null;
+  if (dl) {
+    try { await dl.save({ filename: name, data: lastGif.blob }); note.className = 'note'; note.textContent = 'Saved.'; }
+    catch (e) {
+      note.className = 'note' + (e && e.code === 'declined' ? '' : ' err');
+      note.textContent = e && e.code === 'declined' ? 'Save cancelled.' : 'This view could not save the file. Open the page in a browser tab and try again.';
+    }
+    return;
+  }
+  const a = document.createElement('a'); a.href = lastGif.url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  note.className = 'note'; note.textContent = 'Download started. On iPhone, you can also press and hold the GIF to save it to Photos.';
+}
+
+// ---------- UI wiring ----------
+function updateEstimate() {
+  const frames = Math.round(state.fps * state.dur);
+  const h = Math.round(state.size * state.shape / 2) * 2;
+  $('#est').textContent = `${state.size} × ${h} px · ${frames} frames · ${state.dur.toFixed(1)} s loop`;
+}
+document.querySelectorAll('.seg').forEach((seg) => {
+  seg.addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    seg.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    const k = seg.dataset.key, v = b.dataset.v;
+    if (k === 'dir' || k === 'size' || k === 'fps' || k === 'shape') state[k] = Number(v); else state[k] = v;
+    if (k === 'tray') applyArt();
+    if (k === 'bg') {
+      $('#bg-color-wrap').hidden = v !== 'color'; $('#bg-image-wrap').hidden = v !== 'image';
+      if (v === 'image' && !state.bgImage) $('#file-bg').click();
+    }
+    if (k === 'shape' || k === 'bg') sizeView();
+    updateEstimate();
+  });
+});
+const ranges = {
+  tilt: (v) => { state.tilt = v; return v + '°'; },
+  zoom: (v) => { state.zoom = v / 100; return v + '%'; },
+  gloss: (v) => { state.gloss = v / 100; return v + '%'; },
+  dur: (v) => { state.dur = v; updateEstimate(); return v.toFixed(1) + ' s'; },
+};
+for (const [id, fn] of Object.entries(ranges)) {
+  const el = document.getElementById(id), out = el.nextElementSibling;
+  const upd = () => { out.textContent = fn(Number(el.value)); };
+  el.addEventListener('input', upd); upd();
+}
+$('#spinecolor').addEventListener('input', (e) => { state.spineColor = e.target.value; state.spineColorTouched = true; $('#spinecolor-note').textContent = 'custom'; applyArt(); });
+$('#bgcolor').addEventListener('input', (e) => { state.bgColor = e.target.value; });
+$('#bgimg-btn').addEventListener('click', () => $('#file-bg').click());
+$('#file-bg').addEventListener('change', async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  try { state.bgImage = await loadImage(f); $('#bgimg-name').textContent = f.name; } catch (err) { $('#bgimg-name').textContent = err.message; }
+  e.target.value = '';
+});
+
+async function handleFile(slot, file) {
+  if (!file || !file.type.startsWith('image/')) { $('#status').textContent = 'Please choose an image file (JPG, PNG, WebP).'; return; }
+  const img = await loadImage(file);
+  const iw = img.naturalWidth, ih = img.naturalHeight;
+  if (slot === 'front') state.user.front = cropTo(img, 1, 1400);
+  else if (slot === 'spine') state.user.spine = spineFromImage(img);
+  else {
+    state.spineColorTouched = false; $('#spinecolor-note').textContent = 'picked from the back cover';
+    // A full tray card (151 × 118 mm) carries its own spines on the left and right edges.
+    if (iw / ih > 1.24) {
+      const spinePx = iw * (SPINE_W / (BACK_W + 2 * SPINE_W));
+      state.user.back = cropTo(img, BACK_W / BACK_H, 1600, spinePx, iw - 2 * spinePx);
+      const c = document.createElement('canvas'); c.width = 96; c.height = 1180;
+      c.getContext('2d').drawImage(img, 0, 0, spinePx, ih, 0, 0, 96, 1180);
+      state.trayCardSpine = c;
+    } else { state.user.back = cropTo(img, BACK_W / BACK_H, 1600); state.trayCardSpine = null; }
+  }
+  const slotEl = document.querySelector(`.slot[data-slot="${slot}"]`);
+  const drop = slotEl.querySelector('.drop');
+  drop.innerHTML = ''; const th = new Image(); th.alt = ''; th.src = URL.createObjectURL(file); drop.appendChild(th);
+  slotEl.querySelector('.clear').hidden = false;
+  applyArt();
+  $('#status').textContent = 'Ready';
+}
+const samples = { front: sampleFront, back: sampleBack, spine: sampleSpine };
+function showSample(slot, drop) {
+  drop.innerHTML = '';
+  const im = new Image(); im.alt = ''; im.src = samples[slot]().toDataURL('image/png'); im.style.opacity = '0.45';
+  drop.appendChild(im);
+  drop.insertAdjacentHTML('beforeend', '<span class="badge">Sample</span>');
+}
+document.querySelectorAll('.slot').forEach((slotEl) => {
+  const slot = slotEl.dataset.slot, drop = slotEl.querySelector('.drop'), input = slotEl.querySelector('input');
+  drop.addEventListener('click', () => input.click());
+  drop.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
+  input.addEventListener('change', () => { handleFile(slot, input.files[0]).catch((err) => { $('#status').textContent = err.message; }); input.value = ''; });
+  drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('over'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+  drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); handleFile(slot, e.dataTransfer.files[0]).catch((err) => { $('#status').textContent = err.message; }); });
+  slotEl.querySelector('.clear').addEventListener('click', () => {
+    state.user[slot] = null; if (slot === 'back') state.trayCardSpine = null;
+    showSample(slot, drop);
+    slotEl.querySelector('.clear').hidden = true; applyArt();
+  });
+  showSample(slot, drop);
+});
+$('#play').addEventListener('click', () => {
+  state.playing = !state.playing; $('#play').textContent = state.playing ? 'Pause' : 'Play'; $('#play').setAttribute('aria-pressed', String(state.playing));
+});
+$('#play').textContent = state.playing ? 'Pause' : 'Play';
+$('#export').addEventListener('click', exportGif);
+$('#save').addEventListener('click', saveGif);
+window.addEventListener('resize', sizeView);
+new ResizeObserver(sizeView).observe(frameEl.parentElement);
+
+applyArt(); sizeView(); updateEstimate();
+if (document.fonts) document.fonts.ready.then(() => { applyArt(); });
+$('#export').disabled = false; $('#status').textContent = 'Sample art loaded. Upload your covers.';
+requestAnimationFrame(tick);
+</script>
+<noscript><p class="wrap">This tool needs JavaScript and WebGL.</p></noscript>
+
+</body>
+</html>

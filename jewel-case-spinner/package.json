@@ -1,0 +1,13 @@
+{
+  "name": "jewel-case-spinner",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Upload CD artwork and export a spinning 3D jewel case as a looping GIF.",
+  "scripts": {
+    "dev": "wrangler pages dev public --port 8789",
+    "deploy": "wrangler pages deploy public --project-name jewel-case-spinner"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
