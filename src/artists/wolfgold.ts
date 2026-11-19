@@ -63,6 +63,9 @@ export const wolfgoldConfig: ArtistConfig = {
     'Rolling Papers': '/wolfgold/eras/rolling-papers.jpg',
     'Goblin': '/wolfgold/eras/goblin.png',
     'Radical 2': 'https://i.ibb.co/4Bj3b2F/1-Odd-Future.jpg',
+    // tylertracker.net's names for the same eras
+    'Awesome': 'https://i.ibb.co/4Bj3b2F/1-Odd-Future.jpg',
+    'III TV Cab Thief': '/wolfgold/eras/ill-cab-tv-thief.png',
     'The Odd Future Tape Vol. 2': '/wolfgold/eras/the-of-tape-vol-2.png',
     'The OF Tape Vol. 2': '/wolfgold/eras/the-of-tape-vol-2.png',
     'Nilbog': '/wolfgold/eras/nilbog.jpg',
@@ -287,7 +290,6 @@ export const wolfgoldConfig: ArtistConfig = {
   hasCompsTab: false,
   hasConcertsTab: false,
   hasRecentTab: true,
-  hasArtTab: false,
   hasVideosTab: false,
 
   TAG_MAP: {

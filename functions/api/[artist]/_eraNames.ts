@@ -21,6 +21,11 @@ export const ERA_NAME_MAP: Record<string, string> = {
   'Donda [V1]': 'DONDA [V1]',
   'Bully': 'BULLY [V1]',
   'BULLY': 'BULLY [V1]',
+  // yegold — Related-tab section headers carry the lead artist, song rows don't
+  'Pusha T - DAYTONA': 'DAYTONA',
+  'Nas - NASIR': 'NASIR',
+  'Teyana Taylor - K.T.S.E.': 'K.T.S.E.',
+  'King Combs - NEVER STOP': 'NEVER STOP',
   // dongold — song rows use the short name, section header uses the trilogy name
   'Space Age Pimping': 'Space Age Pimping Trilogy',
   // colegold

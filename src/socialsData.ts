@@ -249,7 +249,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
     {
       "platform": "MySpace",
       "handle": "tylerthecreator (Radio Arcade)",
-      "notes": "Tyler's earliest MySpace page, technically an alt page. Originally used to be the Radio Arcade page. (Dec 6, 2005 - ???)",
+      "notes": "Tyler's earliest MySpace page, technically an alt page. Originally used to be the Radio Arcade page. Has the following tracks: \"Fucking Lame\" \"AssMilk Featuring Earl\" \"Se7en\" \"VCR\" \"Blow\" (Dec 6, 2005 - ???)",
       "type": "Social Media",
       "status": "",
       "link": ""
@@ -257,18 +257,18 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
     {
       "platform": "MySpace",
       "handle": "imaginace (Tyler, The Creator!)",
-      "notes": "Tyler's main MySpace page. (Feb 21, 2006 - ???)",
+      "notes": "Tyler's main MySpace page, has a lot of photos & music archived. Has the following tracks: \"Fucking Lame\" \"Odd Toddlers Featuring Casey V\" \"AssMilk Featuring Earl\" \"Sarah\" \"Se7en\" \"Bitches Brewin'\" \"Slow It Down Ft Hodgy Beats\" \"VCR\" \"Blow\" \"Jack And The Beanstalk\" (Feb 21, 2006 - ???)",
       "type": "Social Media",
       "status": "",
-      "link": ""
+      "link": "https://web.archive.org/web/20081002234130/http://myspace.com/imaginace"
     },
     {
       "platform": "MySpace",
       "handle": "thrashpolo (Tyler, The Creator!)",
-      "notes": "Another alt page, has a poll asking \"Your Favorite Sound\" (Feb 21, 2006 - ???)",
+      "notes": "Another alt page, has a poll asking \"Your Favorite Sound\". (Jun 21, 2006 - ???)",
       "type": "Social Media",
       "status": "",
-      "link": ""
+      "link": "https://web.archive.org/web/20070529084424/http://myspace.com:80/thrashpolo"
     },
     {
       "platform": "MySpace",
@@ -276,7 +276,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "notes": "Another alt page. (Mar 18, 2007 - Oct 23, 2008)",
       "type": "Social Media",
       "status": "",
-      "link": ""
+      "link": "https://web.archive.org/web/20081201135035/http://www.myspace.com/acethecreator"
     },
     {
       "platform": "MySpace",
@@ -284,7 +284,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "notes": "Poly/Mono MySpace page. (June 26, 2007 - Feb 12, 2009)",
       "type": "Social Media",
       "status": "",
-      "link": ""
+      "link": "https://web.archive.org/web/20110809042728/http://www.myspace.com/soundonacid"
     },
     {
       "platform": "HYPEBEAST",
@@ -313,7 +313,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
     {
       "platform": "𝕏",
       "handle": "tylerthecreator (fucktyler)",
-      "notes": "(Jul 2010 - Present)",
+      "notes": "Tyler's main Twitter page, which was deactivated on September 2026 immediately after resposting a 2011 tweet he made stating \"Oh Yeah, White People Stink.\" <https://pillows.su/f/965ba7298d279d541a92c670c5658fc0> (Jul 2010 - Sep 2026)",
       "type": "Social Media",
       "status": "",
       "link": "https://x.com/tylerthecreator"
@@ -322,14 +322,6 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "platform": "𝕏",
       "handle": "freeperm",
       "notes": "Private Twitter, archived in its entirety in the Freeperm archive. (Jul 19, 2011 - Sep 19, 2016)",
-      "type": "Social Media",
-      "status": "",
-      "link": ""
-    },
-    {
-      "platform": "Instagram",
-      "handle": "stankdady",
-      "notes": "Tyler's old burner instagram account, it has approximatively six thousand posts. Nothing else is known about it. (2012-2016)",
       "type": "Social Media",
       "status": "",
       "link": ""
@@ -369,7 +361,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
     {
       "platform": "Discord",
       "handle": "bm200902",
-      "notes": "NOTICE: WE DO NOT ENCOURAGE YOU TRY TO CONTACT Tyler's burner Discord, originally discovered by Horse, made to spy on the unreleased community. Found out because when Horse got a cease & desist from SME, screenshots were provided that were taken by that account (I believe there was more to it that linked Tyler to it, but I don't remember). This account used to lurk is a Neptunes fan server (screenshots are had). Most recent activity is joining a groupbuy server for I Dream + Herpes & Cupcakes [BOTH FAKE], before being banned by an admin. The story that \"...he then left when they realized they were being scammed, and the groupbuy was for Al material he'd never made\" is false. \"hi hi hi\" - bm (Oct 26, 2020 - 2025)",
+      "notes": "NOTICE: PLEASE DO NOT TRY & CONTACT THIS USER Tyler's burner Discord, originally discovered by Horse, made to spy on the unreleased community. Found out because when Horse got a cease & desist from SME, screenshots were provided that were taken by that account (I believe there was more to it that linked Tyler to it, but I don't remember). This account used to lurk is a Neptunes fan server (screenshots are had). Most recent activity is joining a groupbuy server for I Dream + Herpes & Cupcakes [BOTH FAKE], before being banned by an admin. The story that \"...he then left when they realized they were being scammed, and the groupbuy was for Al material he'd never made\" was initially thought false, but was later discovered to be true. Supposedly, Tyler has been camping since around 2023 - 2024. \"hi hi hi\" - bm's bio. (Oct 26, 2020 - 2025)",
       "type": "Social Media",
       "status": "",
       "link": ""
@@ -476,7 +468,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "notes": "Tyler's imeem account, has the following tracks: \"Gloomy Radio\" \"Eargasm\" \"April Fools\" \"909\" \"Hustla Remix\" \"Odd Remix\" \"Celery Sticks\" \"Dope Dealer\" \"Highliter\" \"Herpes INstrumental\" (Supersonic) (??? - ???)",
       "type": "Social Media",
       "status": "",
-      "link": ""
+      "link": "https://web.archive.org/web/20081221022646/http://www.imeem.com/thecreator/"
     },
     {
       "platform": "MySpace",
@@ -511,6 +503,14 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "link": ""
     },
     {
+      "platform": "MySpace",
+      "handle": "ismellpanties (I Smell Panties)",
+      "notes": "I Smell Panties MySpace page, the only one currently available. (??? - ???)",
+      "type": "Social Media",
+      "status": "",
+      "link": "https://myspace.com/ismellpanties"
+    },
+    {
       "platform": "SoundCloud",
       "handle": "Wolf Haley (Tyler Creator)",
       "notes": "Burner account, had three songs at one point: \"Fuck This Christmas\", \"Dem Hoes\", & \"Let's Dance\". (??? - ???)",
@@ -524,7 +524,7 @@ export const SOCIALS_DATA: Record<string, SocialEntry[]> = {
       "notes": "Official website for the Rocky and Tyler Tour. (??? - ???)",
       "type": "Other",
       "status": "",
-      "link": ""
+      "link": "https://web.archive.org/web/20151006021242/http://rockyandtyler.com/"
     },
     {
       "platform": "TikTok",

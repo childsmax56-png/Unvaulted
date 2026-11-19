@@ -352,11 +352,10 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       art: '538700671',
       unreleased: '1246511510',
       released: '137554735',
-      // recent intentionally omitted: the Recent tab is served from the committed
-      // public/wolfgold/data/recent.csv, scraped from tylertracker.net's mirror
-      // (gid 1356276013) by scripts/build-wolfgold-recent.py. The live wolfgold
-      // sheet's recent tab uses an "Info/Notes" column that mapRecentItem() can't
-      // read, so notes wouldn't show. Do not re-add a recent gid here.
+      // Every tab here is read live from tylertracker.net first (_franktracker.ts);
+      // these gids are the fallback if that site fails. Do not add a recent
+      // gid: this sheet's recent tab has an "Info/Notes" column mapRecentItem()
+      // can't read.
       stems: '1415457574',
       misc: '1044127471',
       'album-copies': '788275515',
@@ -856,10 +855,6 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
 // uses the same 9-column layout as the main Unreleased tab, so its data rows
 // are appended under the Unreleased tab's own header rather than fetched as a
 // separate tab.
-//
-// (The stale fork yegold used to point at also had a "Related" tab, gid
-// 520283965, for DAYTONA/NASIR/K.T.S.E. — the real document has no such tab
-// at all; those eras don't exist on it.)
 const EXTRA_UNRELEASED_GIDS: Record<string, string[]> = {
   yegold: ['1333371598'],
   yelolgold: ['1333371598'],
