@@ -168,7 +168,7 @@ interface FilterMenuProps {
   activeCategory?: Category;
 }
 
-const AVAILABLE_TAGS = [
+export const AVAILABLE_TAGS = [
   { label: 'Lost Media', id: '⁉️' },
   { label: 'AI', id: '🤖' },
   { label: 'Worst Of', id: '🗑️' },
@@ -558,6 +558,73 @@ export function FilterMenu({ filters, setFilters, activeCategory }: FilterMenuPr
             </div>
           </div>
         </div>
+      )}
+    </div>
+  );
+}
+
+// Inline chip row for the main (Unreleased) tab, so the common tag filters —
+// Best Of, Worst Of, Grails… — sit on the page like the side tabs' TagFilterBar
+// instead of only behind the filter button. Shares state with FilterMenu:
+// click once to include, again to exclude, a third time to clear.
+export function QuickTagBar({ filters, setFilters }: { filters: SearchFilters; setFilters: (filters: SearchFilters) => void }) {
+  const { settings } = useSettings();
+  const included = filters.tags || [];
+  const excluded = filters.excludedTags || [];
+
+  const toggle = (id: string) => {
+    if (included.includes(id)) {
+      setFilters({ ...filters, tags: included.filter(t => t !== id), excludedTags: [...excluded, id] });
+    } else if (excluded.includes(id)) {
+      setFilters({ ...filters, excludedTags: excluded.filter(t => t !== id) });
+    } else {
+      setFilters({ ...filters, tags: [...included, id] });
+    }
+  };
+
+  const active = included.length > 0 || excluded.length > 0;
+
+  return (
+    <div className="px-6 md:px-8 pt-5 -mb-2 flex items-center gap-1.5 overflow-x-auto [scrollbar-width:none] md:flex-wrap md:overflow-visible">
+      <span className="shrink-0 text-[10px] uppercase tracking-wider font-semibold text-white/40 mr-1">Tags</span>
+      {AVAILABLE_TAGS.map(tag => {
+        const on = included.includes(tag.id);
+        const off = excluded.includes(tag.id);
+        // The 💛 tag is named per tracker ("By PUSHAgold", …) — prefer the active artist's label.
+        const label = TAG_MAP[tag.id] || tag.label;
+        const emoji = TAG_MAP[tag.id] ? tag.id : Object.entries(TAG_MAP).find(([, v]) => v === label)?.[0] || '';
+        return (
+          <button
+            key={tag.id}
+            onClick={() => toggle(tag.id)}
+            title={TAG_TOOLTIP_MAP[label] || label}
+            className={`shrink-0 whitespace-nowrap text-xs px-2.5 py-1 rounded-full border transition-colors flex items-center gap-1 ${on
+              ? 'bg-white text-black border-white'
+              : off
+                ? 'bg-red-500/15 text-red-400 border-red-500/40 line-through'
+                : 'border-white/10 text-white/70 bg-white/5 hover:bg-white/10 hover:text-white'}`}
+          >
+            {settings.tagsAsEmojis && emoji && <span className="no-underline">{emoji}</span>}
+            {label}
+          </button>
+        );
+      })}
+      {included.length > 1 && (
+        <button
+          onClick={() => setFilters({ ...filters, tagMatch: (filters.tagMatch ?? 'all') === 'all' ? 'any' : 'all' })}
+          className="shrink-0 whitespace-nowrap text-xs px-2 py-1 text-white/50 hover:text-white"
+          title="Match songs with all of the selected tags, or with any of them"
+        >
+          {(filters.tagMatch ?? 'all') === 'all' ? 'Match all' : 'Match any'}
+        </button>
+      )}
+      {active && (
+        <button
+          onClick={() => setFilters({ ...filters, tags: [], excludedTags: [] })}
+          className="shrink-0 whitespace-nowrap text-xs px-2 py-1 text-white/50 hover:text-white flex items-center gap-1"
+        >
+          <X className="w-3 h-3" /> Clear
+        </button>
       )}
     </div>
   );

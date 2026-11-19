@@ -244,6 +244,7 @@ import { recordListeningHistory } from './history';
 import { activeConfig } from './artists/activeConfig';
 import { reportBrokenLink } from './linkStatus';
 import { classifySuberaRows } from './suberas';
+import { QuickTagBar } from './components/FilterMenu';
 import { TagFilterBar, TagSelection, detectTagColumns, applyTagFilter } from './components/TagFilterBar';
 import { AccountNudge } from './components/AccountNudge';
 
@@ -3304,6 +3305,7 @@ let relatedErasArray = (Object.values(data.eras || {}) as Era[])
         <main className={`flex-1 md:overflow-y-auto relative scroll-smooth bg-[#0a0a0a] flex flex-col ${showPlayer ? 'pb-44 md:pb-28' : ''}`}>
           <div className="flex-1">
             <TagFilterBar columns={tagColumns} selection={tagSelection} onChange={setTagSelection} />
+            {activeCategory === 'music' && <QuickTagBar filters={filters} setFilters={setFilters} />}
             {activeCategory === 'released' && <SpotifyLinkPopup />}
             <AnimatePresence mode="wait">
               {activeCategory === 'settings' ? (
