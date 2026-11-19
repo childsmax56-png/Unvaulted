@@ -174,7 +174,6 @@ export const AVAILABLE_TAGS = [
   { label: 'Worst Of', id: '🗑️' },
   { label: 'Unwanted', id: '🚮' },
   { label: 'Special', id: '✨' },
-  { label: 'By YƵYGOLD', id: '💛' },
   { label: 'Grails', id: '🏆' },
   { label: 'Best Of', id: '⭐' },
   { label: 'Wanted', id: '🏅' }
@@ -256,10 +255,10 @@ export function FilterMenu({ filters, setFilters, activeCategory }: FilterMenuPr
 
   const filteredTags = AVAILABLE_TAGS.filter(tag => {
     if (activeCategory === 'stems') {
-      return tag.label === 'Lost Media' || tag.label === 'By YƵYGOLD';
+      return tag.label === 'Lost Media';
     }
     if (activeCategory === 'misc') {
-      return tag.label === 'Lost Media' || tag.label === 'Best Of' || tag.label === 'By YƵYGOLD';
+      return tag.label === 'Lost Media' || tag.label === 'Best Of';
     }
     return true;
   });
@@ -267,7 +266,6 @@ export function FilterMenu({ filters, setFilters, activeCategory }: FilterMenuPr
   const FAKES_TAGS = [
     { label: 'Stem Edit', id: 'Stem Edit' },
     { label: 'Detag', id: 'Detag' },
-    { label: 'By YƵYGOLD', id: '💛' },
     { label: 'Comp', id: 'Comp' },
     { label: 'Fake Leak', id: 'Fake Leak' },
     { label: 'Fake Rumor', id: 'Fake Rumor' },
@@ -587,7 +585,7 @@ export function QuickTagBar({ filters, setFilters }: { filters: SearchFilters; s
   return (
     <div className="px-6 md:px-8 pt-5 -mb-2 flex items-center gap-1.5 overflow-x-auto [scrollbar-width:none] md:flex-wrap md:overflow-visible">
       <span className="shrink-0 text-[10px] uppercase tracking-wider font-semibold text-white/40 mr-1">Tags</span>
-      {AVAILABLE_TAGS.filter(tag => tag.id !== '💛').map(tag => {
+      {AVAILABLE_TAGS.map(tag => {
         const on = included.includes(tag.id);
         const off = excluded.includes(tag.id);
         // The 💛 tag is named per tracker ("By PUSHAgold", …) — prefer the active artist's label.
