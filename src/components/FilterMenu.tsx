@@ -587,7 +587,7 @@ export function QuickTagBar({ filters, setFilters }: { filters: SearchFilters; s
   return (
     <div className="px-6 md:px-8 pt-5 -mb-2 flex items-center gap-1.5 overflow-x-auto [scrollbar-width:none] md:flex-wrap md:overflow-visible">
       <span className="shrink-0 text-[10px] uppercase tracking-wider font-semibold text-white/40 mr-1">Tags</span>
-      {AVAILABLE_TAGS.map(tag => {
+      {AVAILABLE_TAGS.filter(tag => tag.id !== '💛').map(tag => {
         const on = included.includes(tag.id);
         const off = excluded.includes(tag.id);
         // The 💛 tag is named per tracker ("By PUSHAgold", …) — prefer the active artist's label.
