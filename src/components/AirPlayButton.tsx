@@ -1,10 +1,14 @@
 import { Airplay } from 'lucide-react';
-import { useAirPlay, showAirPlayPicker } from '../player/airplay';
+import { useAirPlay, showAirPlayPicker, isAirPlaySupported } from '../player/airplay';
 import { usePlayerField } from '../player/audioStore';
 
 // Opens Safari's AirPlay device picker for the global audio element. Renders
-// nothing unless an AirPlay receiver is reachable (Safari only) and the track
-// is playing through our own <audio> element (not a Spotify/YouTube embed).
+// only in browsers with AirPlay (Safari) and while the track is playing through
+// our own <audio> element (not a Spotify/YouTube embed).
+//
+// It does not wait for Safari's "receiver available" event: the element has
+// wireless video playback disabled (so AirPlay carries Now Playing covers, see
+// audioStore), and with that set Safari stops reporting receivers to it.
 export default function AirPlayButton({
   className = '',
   iconClassName = 'w-4 h-4',
@@ -15,7 +19,7 @@ export default function AirPlayButton({
   const { available, active } = useAirPlay();
   const [activePlayer] = usePlayerField('activePlayer');
 
-  if ((!available && !active) || activePlayer !== 'audio') return null;
+  if (!(isAirPlaySupported() || available || active) || activePlayer !== 'audio') return null;
 
   return (
     <button
