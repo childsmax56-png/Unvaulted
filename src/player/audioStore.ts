@@ -123,6 +123,12 @@ export function getAudioEl(): HTMLAudioElement | null {
   el.setAttribute('playsinline', '');
   // Let Safari route this element to AirPlay receivers (see ./airplay.ts).
   el.setAttribute('x-webkit-airplay', 'allow');
+  // Without this, iOS AirPlays to video-capable receivers (Apple TV, Fire TV
+  // receiver apps) by handing them the stream URL, as if it were a video: the
+  // receiver plays the file itself and never gets the Now Playing title or
+  // cover, so it shows a placeholder. With it, the phone plays the audio and
+  // streams it as audio, Now Playing info included.
+  el.setAttribute('x-webkit-wirelessvideoplaybackdisabled', '');
 
   el.addEventListener('timeupdate', () => {
     if (!el) return;
