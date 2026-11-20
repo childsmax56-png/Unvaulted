@@ -35,6 +35,7 @@ import { AdminPage } from './AdminPage.tsx';
 import { ProfilePage } from './ProfilePage.tsx';
 import { GlobalPlaylistProvider } from './GlobalPlaylistContext.tsx';
 import { GlobalMiniPlayer } from './player/GlobalMiniPlayer.tsx';
+import { GlobalSpotifyHost } from './player/GlobalSpotifyHost.tsx';
 
 // Top-level path segments that are app routes, not trackers. Anything else is a
 // tracker slug (official registry first, then the community fallback).
@@ -64,7 +65,7 @@ function GlobalPlayerMount() {
   // routes (and the landing page) show the standalone mini player.
   const onArtistRoute = !!firstSegment && !RESERVED_TOP_SEGMENTS.has(firstSegment);
   if (onArtistRoute) return null;
-  return <GlobalMiniPlayer />;
+  return <><GlobalSpotifyHost /><GlobalMiniPlayer /></>;
 }
 
 // Mounts the shared tracker <App> for a community (DB-backed) tracker after

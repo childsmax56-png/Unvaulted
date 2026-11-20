@@ -41,6 +41,9 @@ export interface AudioState {
   // different artist's tracker (where the active config would resolve wrongly).
   currentArtwork: string;
   currentArtistLabel: string;
+  // True while a Spotify Web Playback device is connected on a non-artist
+  // route (see GlobalSpotifyHost), so Spotify links can play in the page.
+  spotifyReady: boolean;
 }
 
 const initialState: AudioState = {
@@ -60,6 +63,7 @@ const initialState: AudioState = {
   activePlayer: 'audio',
   currentArtwork: '',
   currentArtistLabel: '',
+  spotifyReady: false,
 };
 
 let state: AudioState = { ...initialState };
@@ -242,6 +246,98 @@ export function setTransportOverride(o: TransportOverride): () => void {
   return () => { if (transportOverride === o) transportOverride = null; };
 }
 
+// --- Spotify host (non-artist routes) ---------------------------------------
+// GlobalSpotifyHost connects a Spotify Web Playback device on routes where
+// <App> isn't mounted and registers itself here, so the store can play
+// open.spotify.com tracks in a mixed queue alongside regular audio. While a
+// Spotify song is current, activePlayer is 'spotify' and the transport calls
+// (play/pause/seek/volume) are routed to the host.
+export interface SpotifyHost {
+  play: (uri: string) => Promise<boolean>;
+  pause: () => void;
+  resume: () => void;
+  seek: (seconds: number) => void;
+  setVolume: (v: number) => void;
+}
+let spotifyHost: SpotifyHost | null = null;
+
+export function setSpotifyHost(h: SpotifyHost): () => void {
+  spotifyHost = h;
+  setState({ spotifyReady: true });
+  return () => {
+    if (spotifyHost !== h) return;
+    spotifyHost = null;
+    const patch: Partial<AudioState> = { spotifyReady: false };
+    if (state.activePlayer === 'spotify') {
+      Object.assign(patch, { activePlayer: 'audio', currentSong: null, isPlaying: false, currentTime: 0, duration: 0 });
+    }
+    setState(patch);
+  };
+}
+
+export function spotifyUriFromUrl(url: string): string | null {
+  const m = url.match(/open\.spotify\.com(?:\/intl-[a-z]+)?\/(track|album)\/([A-Za-z0-9]+)/);
+  return m ? `spotify:${m[1]}:${m[2]}` : null;
+}
+
+// Whether the store can play this link right here: direct audio, or a Spotify
+// track/album while a Spotify device is connected.
+export function canPlayInPage(url: string): boolean {
+  if (!url) return false;
+  return isDirectlyPlayableAudio(url) || (!!spotifyHost && !!spotifyUriFromUrl(url));
+}
+
+function parseTrackLength(len: unknown): number {
+  if (typeof len !== 'string') return 0;
+  const parts = len.split(':').map(Number);
+  if (parts.some(n => Number.isNaN(n))) return 0;
+  return parts.reduce((acc, n) => acc * 60 + n, 0);
+}
+
+function playSpotifySong(opts: { song: Song; era: Era; playlist: Song[]; index: number }): boolean {
+  const host = spotifyHost;
+  const rawUrl = opts.song.url || (opts.song.urls && opts.song.urls[0]) || '';
+  const uri = spotifyUriFromUrl(rawUrl);
+  if (!host || !uri) return false;
+  getAudioEl()?.pause();
+  const patch: Partial<AudioState> = {
+    activePlayer: 'spotify',
+    currentSong: opts.song,
+    currentEra: opts.era,
+    playlist: opts.playlist,
+    currentSongIndex: opts.index,
+    hasLoopedOnce: false,
+    isPlaying: true,
+    currentTime: 0,
+    duration: parseTrackLength((opts.song as any).track_length),
+    currentArtwork: (opts.song as any).image || opts.song.image || opts.era?.image || '',
+    currentArtistLabel: (opts.song as any).artist || parseArtistFromSong(opts.song.name, opts.song.extra, opts.era?.name),
+  };
+  if (state.isShuffle && opts.playlist !== state.playlist) {
+    patch.shuffledQueue = generateShuffledQueue(opts.playlist.length, opts.index);
+  }
+  setState(patch);
+  updateMediaSession();
+  void host.play(uri).then(ok => { if (!ok && state.currentSong === opts.song) setState({ isPlaying: false }); });
+  return true;
+}
+
+// Called by the Spotify host when the current Spotify track finishes.
+export function spotifyTrackEnded() {
+  if (state.activePlayer !== 'spotify' || !state.currentSong) return;
+  const { loopMode, hasLoopedOnce } = state;
+  if (loopMode === 2 || (loopMode === 1 && !hasLoopedOnce)) {
+    const uri = spotifyUriFromUrl(state.currentSong.url || '');
+    if (loopMode === 1) setState({ hasLoopedOnce: true });
+    if (uri && spotifyHost) void spotifyHost.play(uri);
+    return;
+  }
+  setState({ hasLoopedOnce: false });
+  playNext();
+}
+
+const spotifyActive = () => state.activePlayer === 'spotify' && !!spotifyHost;
+
 // Raw element control for the room sync loop (bypasses the override).
 export function rawPlay() {
   const a = getAudioEl();
@@ -330,6 +426,11 @@ export function isDirectlyPlayableAudio(rawUrl: string): boolean {
 // --- Transport controls -----------------------------------------------------
 
 export function togglePlay() {
+  if (spotifyActive()) {
+    if (state.isPlaying) spotifyHost!.pause(); else spotifyHost!.resume();
+    setState({ isPlaying: !state.isPlaying });
+    return;
+  }
   const a = getAudioEl();
   if (!a) return;
   if (transportOverride) { transportOverride.onPlayPause(a.paused); return; }
@@ -342,6 +443,7 @@ export function togglePlay() {
 }
 
 export function play() {
+  if (spotifyActive()) { spotifyHost!.resume(); setState({ isPlaying: true }); return; }
   const a = getAudioEl();
   if (!a) return;
   if (transportOverride) { transportOverride.onPlayPause(true); return; }
@@ -350,11 +452,13 @@ export function play() {
 }
 
 export function pause() {
+  if (spotifyActive()) { spotifyHost!.pause(); setState({ isPlaying: false }); return; }
   if (transportOverride) { transportOverride.onPlayPause(false); return; }
   getAudioEl()?.pause();
 }
 
 export function seek(time: number) {
+  if (spotifyActive()) { spotifyHost!.seek(time); setState({ currentTime: time }); return; }
   const a = getAudioEl();
   if (!a) return;
   a.currentTime = time;
@@ -392,6 +496,7 @@ export function cycleLoop() {
 }
 
 export function setVolume(v: number) {
+  spotifyHost?.setVolume(v);
   const a = getAudioEl();
   if (a) a.volume = v;
   setState({ volume: v });
@@ -410,6 +515,7 @@ export function playAudioStream(opts: {
   artistLabel?: string;
 }) {
   const autoPlay = opts.autoPlay ?? true;
+  if (state.activePlayer === 'spotify') spotifyHost?.pause();
   const patch: Partial<AudioState> = {
     activePlayer: 'audio',
     currentSong: opts.song,
@@ -455,9 +561,10 @@ export async function playSongList(songs: Song[], startIndex: number, era: Era):
   if (!song) return;
   const rawUrl = song.url || (song.urls && song.urls[0]) || '';
   if (!rawUrl) return;
+  const realEra = (song as any).realEra || era;
+  if (!isDirectlyPlayableAudio(rawUrl) && playSpotifySong({ song, era: realEra, playlist: songs, index: startIndex })) return;
   const streamUrl = await resolveStreamUrl(rawUrl);
   if (!streamUrl) return;
-  const realEra = (song as any).realEra || era;
   playAudioStream({
     song,
     era: realEra,
@@ -583,8 +690,9 @@ function updateMediaSession(): void {
   } catch { /* unsupported action */ }
 }
 
-function computeAdjacentIndex(direction: 1 | -1): number | null {
-  const { playlist, currentSongIndex, isShuffle, shuffledQueue } = state;
+function computeAdjacentIndex(direction: 1 | -1, fromIndex = state.currentSongIndex): number | null {
+  const { playlist, isShuffle, shuffledQueue } = state;
+  const currentSongIndex = fromIndex;
   if (playlist.length === 0) return null;
 
   if (isShuffle && shuffledQueue.length > 0) {
@@ -605,17 +713,30 @@ function computeAdjacentIndex(direction: 1 | -1): number | null {
 // etc.). App's own next/prev handle everything else when it is mounted.
 function advanceAudioOnly(direction: 1 | -1) {
   const { playlist, currentEra } = state;
-  const idx = computeAdjacentIndex(direction);
-  if (idx === null || !currentEra) return;
+  if (!currentEra) return;
+  // Step past entries this page can't play (e.g. Spotify with no device).
+  let idx: number | null = null;
+  let from = state.currentSongIndex;
+  for (let tries = 0; tries < playlist.length; tries++) {
+    const cand = computeAdjacentIndex(direction, from);
+    if (cand === null) return;
+    const s = playlist[cand];
+    const u = s ? (s.url || (s.urls && s.urls[0]) || '') : '';
+    if (s && canPlayInPage(u)) { idx = cand; break; }
+    from = cand;
+  }
+  if (idx === null) return;
   const song = playlist[idx];
-  if (!song) return;
   const era = (song as any).realEra || currentEra;
   const rawUrl = song.url || (song.urls && song.urls[0]) || '';
-  if (!rawUrl || !isDirectlyPlayableAudio(rawUrl)) return;
+  if (!isDirectlyPlayableAudio(rawUrl)) {
+    playSpotifySong({ song, era, playlist, index: idx });
+    return;
+  }
   resolveStreamUrl(rawUrl)
     .then((streamUrl) => {
       if (!streamUrl) return;
-      playAudioStream({ song, era, streamUrl, playlist, index: idx, autoPlay: true });
+      playAudioStream({ song, era, streamUrl, playlist, index: idx!, autoPlay: true });
     })
     .catch(() => {});
 }
@@ -772,7 +893,7 @@ export function useAudioState(): AudioState {
 export function useHasActiveAudio(): boolean {
   return useSyncExternalStore(
     subscribe,
-    () => state.activePlayer === 'audio' && !!state.currentSong,
+    () => (state.activePlayer === 'audio' || state.activePlayer === 'spotify') && !!state.currentSong,
     () => false,
   );
 }

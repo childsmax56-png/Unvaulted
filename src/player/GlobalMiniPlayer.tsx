@@ -34,9 +34,10 @@ export function GlobalMiniPlayer() {
 
   const { currentSong, currentEra, activePlayer, isPlaying, currentTime, duration, volume, isShuffle, loopMode, currentArtwork, currentArtistLabel, playlist, currentSongIndex, shuffledQueue } = state;
 
-  // Only responsible for the persistent HTML5-audio playback. Embedded players
-  // (Spotify/YouTube/SoundCloud) are tied to App and stop on navigation.
-  if (activePlayer !== 'audio' || !currentSong) return null;
+  // Responsible for the persistent HTML5-audio playback, plus Spotify tracks
+  // played through GlobalSpotifyHost. App's embedded players (YouTube,
+  // SoundCloud, App's own Spotify) are tied to App and stop on navigation.
+  if ((activePlayer !== 'audio' && activePlayer !== 'spotify') || !currentSong) return null;
 
   const actualEraName = (currentSong as any).realEra?.name || currentEra?.name || '';
   // Prefer the artwork/artist resolved at play time (under the song's own

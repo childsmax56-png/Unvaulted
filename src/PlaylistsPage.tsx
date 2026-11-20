@@ -10,6 +10,7 @@ import { UserPlaylist, PlaylistSong, Song, Era } from './types';
 import { ArtImage } from './components/ArtGallery';
 import { eraArtwork } from './eraArtwork';
 import * as audioStore from './player/audioStore';
+import { isSpotifyLoggedIn } from './spotify';
 import { handleDownloadFile, prepareAudioDownload, type SongMeta, buildArtistTag, buildTitleTag, buildDownloadName, ALBUM_RELEASE_DATES, createSlug, pixeldrainProxyUrl } from './utils';
 import { useSettings } from './SettingsContext';
 
@@ -70,9 +71,9 @@ function spotifyEmbedUrl(url: string): string | null {
 }
 
 function playEntries(entries: PlaylistSong[], startIndex: number, shuffle = false) {
-  // Only entries the audio engine can stream; Spotify/YouTube/etc. links would
-  // load a web page into <audio> and stall playback (and the queue) silently.
-  const playable = entries.filter(e => e.url && audioStore.isDirectlyPlayableAudio(e.url));
+  // Only entries the player can handle here: direct audio, plus Spotify when a
+  // Spotify device is connected. Other links would stall the queue silently.
+  const playable = entries.filter(e => e.url && audioStore.canPlayInPage(e.url));
   const songs = playable.map(entryToSong);
   if (!songs.length) return;
   if (shuffle) {
@@ -193,13 +194,17 @@ export function PlaylistsPage() {
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 2600); };
 
-  // Row click: stream audio links; open Spotify links in an inline embed under
-  // the row; open anything else (YouTube, SoundCloud, …) in a new tab.
+  // Row click: play in the page when possible (audio, or Spotify with Premium
+  // connected); otherwise open Spotify links in an inline embed under the row,
+  // and anything else (YouTube, SoundCloud, …) in a new tab.
   const playRow = (entries: PlaylistSong[], i: number) => {
     const entry = entries[i];
     const url = entry.url || '';
     if (!url) return;
-    if (audioStore.isDirectlyPlayableAudio(url)) { setEmbedKey(null); playEntries(entries, i, false); return; }
+    if (audioStore.canPlayInPage(url)) { setEmbedKey(null); playEntries(entries, i, false); return; }
+    if (spotifyEmbedUrl(url) && isSpotifyLoggedIn() && !audioStore.getState().spotifyReady && embedKey === null) {
+      showToast('Spotify is still connecting. Showing the Spotify player for now.');
+    }
     if (spotifyEmbedUrl(url)) {
       const key = `${i}-${url}`;
       if (embedKey !== key) audioStore.pause();
@@ -210,8 +215,10 @@ export function PlaylistsPage() {
   };
 
   const playAll = (entries: PlaylistSong[], shuffle: boolean) => {
-    if (!entries.some(e => e.url && audioStore.isDirectlyPlayableAudio(e.url))) {
-      showToast('No songs here can play in the player. Tap a Spotify song to play it inline.');
+    if (!entries.some(e => e.url && audioStore.canPlayInPage(e.url))) {
+      showToast(entries.some(e => e.url && spotifyEmbedUrl(e.url))
+        ? 'Link Spotify Premium in Settings to play Spotify songs here, or tap one to open its player.'
+        : 'No songs here can play in the player.');
       return;
     }
     setEmbedKey(null);
@@ -361,7 +368,7 @@ export function PlaylistsPage() {
   const audio = audioStore.useAudioState();
   // (A spacer, not padding: bottom padding on these flex-row scroll containers
   // doesn't count toward their height, so it never cleared the player.)
-  const playerSpacer = audio.activePlayer === 'audio' && audio.currentSong
+  const playerSpacer = (audio.activePlayer === 'audio' || audio.activePlayer === 'spotify') && audio.currentSong
     ? <div aria-hidden className="h-48 md:h-28 shrink-0" />
     : null;
 
