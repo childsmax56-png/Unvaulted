@@ -248,6 +248,9 @@ import { QuickTagBar } from './components/FilterMenu';
 import { TagFilterBar, TagSelection, detectTagColumns, applyTagFilter } from './components/TagFilterBar';
 import { AccountNudge } from './components/AccountNudge';
 
+// See ArtistConfig.mergeRecentIntoEras.
+const MERGE_RECENT = activeConfig.mergeRecentIntoEras !== false;
+
 // When viewing a community (user-built) tracker, attach the signed-in account's
 // token to our own /api/ data requests. This lets the creator/admin preview a
 // draft/pending tracker before it's approved; official trackers are unaffected.
@@ -1131,17 +1134,17 @@ export default function App() {
             }
           });
           applyLocalSongs(nextJson, localRes.data);
-          applyTrackerSheetSongs(nextJson, sheetsRes.data);
-          applyTrackerSheetSongs(nextJson, recentTabRes.data);
-          applyTrackerSheetSongs(nextJson, recentRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(nextJson, sheetsRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(nextJson, recentTabRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(nextJson, recentRes.data);
           injectMissingEraStubs(nextJson);
           setData(nextJson);
         } else {
           const baseJson = JSON.parse(JSON.stringify(json));
           applyLocalSongs(baseJson, localRes.data);
-          applyTrackerSheetSongs(baseJson, sheetsRes.data);
-          applyTrackerSheetSongs(baseJson, recentTabRes.data);
-          applyTrackerSheetSongs(baseJson, recentRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(baseJson, sheetsRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(baseJson, recentTabRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(baseJson, recentRes.data);
           injectMissingEraStubs(baseJson);
           setData(baseJson);
         }
@@ -1718,9 +1721,9 @@ export default function App() {
         setData(prev => {
           if (!prev) return prev;
           const next = JSON.parse(JSON.stringify(prev));
-          applyTrackerSheetSongs(next, sheetsRes.data);
-          applyTrackerSheetSongs(next, recentTabRes.data);
-          applyTrackerSheetSongs(next, recentRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(next, sheetsRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(next, recentTabRes.data);
+          if (MERGE_RECENT) applyTrackerSheetSongs(next, recentRes.data);
           return next;
         });
       } catch (err) {

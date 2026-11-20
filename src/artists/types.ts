@@ -71,6 +71,11 @@ export interface ArtistConfig {
   // ALBUM_RELEASE_DATES, which also seeds (empty) eras into the main grid.
   MEMBER_RELEASE_DATES?: Record<string, string>;
   hasIndividualTracklistsTab?: boolean; // set true to enable a Tracklists-style tab for the Individual Projects catalog, sourced from the 'individual-tracklists' sheet tab
+  // Set false when the sheet's Recent tab logs additions from EVERY tab (Misc
+  // concerts/videos, etc.), not just Unreleased songs — merging it into the eras
+  // would file those under Unreleased. Only safe when the Unreleased tab itself
+  // is live-synced (SHEET_SOURCES), since that already carries every new song.
+  mergeRecentIntoEras?: boolean;
   SHEET_URL_RECENT_PRODUCTION?: string; // CSV export URL for a second recent tab (production projects)
   productionFirst?: boolean; // show Production Projects before Music in navbar
   productionSecond?: boolean; // show Production Projects second (right after Music) in navbar

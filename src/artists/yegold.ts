@@ -27,6 +27,10 @@ export const yegoldConfig: ArtistConfig = {
   HARDCODED_SHEET_GID: '77894385',
   SHEET_URL_UNRELEASED: '',
   SHEET_URL_RECENT: 'https://docs.google.com/spreadsheets/d/1shKl9S-r5d1vgzYGSEyWflyyn0LS_AKJ7Ydjsczbb0Y/export?format=csv&gid=77894385',
+  // yetracker.net's Recent tab logs new rows from every tab (Misc concerts,
+  // fashion show videos, ...), and the Unreleased tab is already live-synced,
+  // so merging Recent would only add Misc entries into the eras.
+  mergeRecentIntoEras: false,
   hasCompsTab: false,
   hasSubAlbumsTab: true,
   alternateTrackers: [
