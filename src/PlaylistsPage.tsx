@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Play, Trash2, Pencil, Check, X, ChevronUp, ChevronDown, ChevronLeft, ListMusic, Shuffle, ImagePlus, Download, Home, Heart, Share2, ExternalLink } from 'lucide-react';
+import { SiSpotify } from 'react-icons/si';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { useGlobalPlaylists, FAVORITES_ID } from './GlobalPlaylistContext';
@@ -61,8 +62,17 @@ function entryToSong(entry: PlaylistSong): Song {
   return s as Song;
 }
 
+// Spotify links can't go through the <audio> engine; they get an inline
+// Spotify embed instead. Returns the embed URL, or null for non-Spotify links.
+function spotifyEmbedUrl(url: string): string | null {
+  const m = url.match(/open\.spotify\.com(?:\/intl-[a-z]+)?\/(track|album|playlist)\/([A-Za-z0-9]+)/);
+  return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator&theme=0` : null;
+}
+
 function playEntries(entries: PlaylistSong[], startIndex: number, shuffle = false) {
-  const playable = entries.filter(e => e.url);
+  // Only entries the audio engine can stream; Spotify/YouTube/etc. links would
+  // load a web page into <audio> and stall playback (and the queue) silently.
+  const playable = entries.filter(e => e.url && audioStore.isDirectlyPlayableAudio(e.url));
   const songs = playable.map(entryToSong);
   if (!songs.length) return;
   if (shuffle) {
@@ -179,7 +189,34 @@ export function PlaylistsPage() {
   const [pendingShare, setPendingShare] = useState<SharedPlaylist | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [embedKey, setEmbedKey] = useState<string | null>(null);
+
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 2600); };
+
+  // Row click: stream audio links; open Spotify links in an inline embed under
+  // the row; open anything else (YouTube, SoundCloud, …) in a new tab.
+  const playRow = (entries: PlaylistSong[], i: number) => {
+    const entry = entries[i];
+    const url = entry.url || '';
+    if (!url) return;
+    if (audioStore.isDirectlyPlayableAudio(url)) { setEmbedKey(null); playEntries(entries, i, false); return; }
+    if (spotifyEmbedUrl(url)) {
+      const key = `${i}-${url}`;
+      if (embedKey !== key) audioStore.pause();
+      setEmbedKey(k => (k === key ? null : key));
+      return;
+    }
+    window.open(url, '_blank', 'noopener');
+  };
+
+  const playAll = (entries: PlaylistSong[], shuffle: boolean) => {
+    if (!entries.some(e => e.url && audioStore.isDirectlyPlayableAudio(e.url))) {
+      showToast('No songs here can play in the player. Tap a Spotify song to play it inline.');
+      return;
+    }
+    setEmbedKey(null);
+    playEntries(entries, 0, shuffle);
+  };
 
   // Detect a shared-playlist link (?shared=… , or legacy ?playlist=…) and offer
   // to import it. Strips the param from the URL either way.
@@ -441,10 +478,10 @@ export function PlaylistsPage() {
                   <div className="flex items-center gap-2 flex-wrap">
                     {selected.songs.length > 0 && (
                       <>
-                        <button onClick={() => { audioStore.setState({ isShuffle: false }); playEntries(selected.songs, 0, false); }} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer" style={{ background: `${ACCENT}22`, color: ACCENT }}>
+                        <button onClick={() => { audioStore.setState({ isShuffle: false }); playAll(selected.songs, false); }} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer" style={{ background: `${ACCENT}22`, color: ACCENT }}>
                           <Play className="w-3.5 h-3.5" /> Play
                         </button>
-                        <button onClick={() => playEntries(selected.songs, 0, true)} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/5 text-white/60 text-xs font-semibold uppercase tracking-wider hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+                        <button onClick={() => playAll(selected.songs, true)} className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/5 text-white/60 text-xs font-semibold uppercase tracking-wider hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
                           <Shuffle className="w-3.5 h-3.5" /> Shuffle
                         </button>
                         <button onClick={() => downloadZip(selected)} disabled={downloading} className="p-2 rounded text-white/30 hover:text-white hover:bg-white/10 transition-colors cursor-pointer disabled:opacity-40" title="Download as zip">
@@ -473,13 +510,17 @@ export function PlaylistsPage() {
                 ) : (
                   <div className="py-2">
                     {selected.songs.map((entry, i) => (
-                      <div key={`${entry.tracker}-${entry.url}-${i}`} className="group flex items-center px-4 md:px-6 py-2.5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => playEntries(selected.songs, i, false)}>
+                      <div key={`${entry.tracker}-${entry.url}-${i}`}>
+                      <div className="group flex items-center px-4 md:px-6 py-2.5 hover:bg-white/5 transition-colors cursor-pointer" onClick={() => playRow(selected.songs, i)}>
                         <span className="w-8 text-xs font-mono text-white/30 group-hover:text-white/60 shrink-0">{i + 1}</span>
                         <div className="w-9 h-9 rounded overflow-hidden shrink-0 bg-white/5 mr-3">
                           {songArtwork(entry) && <ArtImage url={songArtwork(entry)!} alt={entry.songName} />}
                         </div>
                         <div className="flex-1 min-w-0 pr-4">
-                          <div className="text-sm font-medium truncate">{entry.songName}</div>
+                          <div className="text-sm font-medium truncate flex items-center gap-1.5">
+                            {entry.url && spotifyEmbedUrl(entry.url) && <SiSpotify className="w-3 h-3 shrink-0 text-[#1DB954]" title="Plays via Spotify" />}
+                            <span className="truncate">{entry.songName}</span>
+                          </div>
                           <div className="text-[10px] text-white/40 mt-0.5 truncate">{entry.artist ? `${entry.artist} • ` : ''}{entry.eraName}</div>
                         </div>
                         <div className="flex items-center gap-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
@@ -497,6 +538,19 @@ export function PlaylistsPage() {
                             </>
                           )}
                         </div>
+                      </div>
+                      {embedKey === `${i}-${entry.url}` && entry.url && spotifyEmbedUrl(entry.url) && (
+                        <div className="px-4 md:px-6 pb-3">
+                          <iframe
+                            src={spotifyEmbedUrl(entry.url)!}
+                            title={`${entry.songName} on Spotify`}
+                            className="w-full rounded-xl border-0"
+                            height={entry.url.includes('/track/') ? 80 : 152}
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
                       </div>
                     ))}
                   </div>
