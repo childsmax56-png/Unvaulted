@@ -561,69 +561,138 @@ export function FilterMenu({ filters, setFilters, activeCategory }: FilterMenuPr
   );
 }
 
-// Inline chip row for the main (Unreleased) tab, so the common tag filters —
-// Best Of, Worst Of, Grails… — sit on the page like the side tabs' TagFilterBar
-// instead of only behind the filter button. Shares state with FilterMenu:
-// click once to include, again to exclude, a third time to clear.
+// Inline filter rows for the main (Unreleased) tab, so the common filters —
+// tags (Best Of, Worst Of…), quality, available length and duration — sit on the
+// page like the side tabs' TagFilterBar instead of only behind the filter button.
+// Shares state with FilterMenu: click a chip once to include, again to exclude,
+// a third time to clear.
+type ChipStatus = 0 | 1 | 2;
+
+function Chip({ label, status, title, emoji, onClick }: { label: string; status: ChipStatus; title?: string; emoji?: string; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      title={title || label}
+      className={`shrink-0 whitespace-nowrap text-xs px-2.5 py-1 rounded-full border transition-colors flex items-center gap-1 ${status === 1
+        ? 'bg-white text-black border-white'
+        : status === 2
+          ? 'bg-red-500/15 text-red-400 border-red-500/40 line-through'
+          : 'border-white/10 text-white/70 bg-white/5 hover:bg-white/10 hover:text-white'}`}
+    >
+      {emoji && <span className="no-underline">{emoji}</span>}
+      {label}
+    </button>
+  );
+}
+
+const ROW = 'flex items-center gap-1.5 overflow-x-auto [scrollbar-width:none] md:flex-wrap md:overflow-visible';
+const ROW_LABEL = 'shrink-0 w-14 text-[10px] uppercase tracking-wider font-semibold text-white/40';
+
 export function QuickTagBar({ filters, setFilters }: { filters: SearchFilters; setFilters: (filters: SearchFilters) => void }) {
   const { settings } = useSettings();
-  const included = filters.tags || [];
-  const excluded = filters.excludedTags || [];
 
-  const toggle = (id: string) => {
-    if (included.includes(id)) {
-      setFilters({ ...filters, tags: included.filter(t => t !== id), excludedTags: [...excluded, id] });
-    } else if (excluded.includes(id)) {
-      setFilters({ ...filters, excludedTags: excluded.filter(t => t !== id) });
+  const statusOf = (included: string[] | undefined, excluded: string[] | undefined, item: string): ChipStatus =>
+    (included || []).includes(item) ? 1 : (excluded || []).includes(item) ? 2 : 0;
+
+  const cycle = (type: 'tags' | 'qualities' | 'availableLengths', excludedType: 'excludedTags' | 'excludedQualities' | 'excludedAvailableLengths', item: string) => {
+    const included = filters[type] || [];
+    const excluded = filters[excludedType] || [];
+    if (included.includes(item)) {
+      setFilters({ ...filters, [type]: included.filter(i => i !== item), [excludedType]: [...excluded, item] });
+    } else if (excluded.includes(item)) {
+      setFilters({ ...filters, [excludedType]: excluded.filter(i => i !== item) });
     } else {
-      setFilters({ ...filters, tags: [...included, id] });
+      setFilters({ ...filters, [type]: [...included, item] });
     }
   };
 
-  const active = included.length > 0 || excluded.length > 0;
+  const active = filters.tags.length > 0 || (filters.excludedTags?.length ?? 0) > 0
+    || filters.qualities.length > 0 || (filters.excludedQualities?.length ?? 0) > 0
+    || (filters.availableLengths?.length ?? 0) > 0 || (filters.excludedAvailableLengths?.length ?? 0) > 0
+    || filters.durationValue !== '';
 
   return (
-    <div className="px-6 md:px-8 pt-5 -mb-2 flex items-center gap-1.5 overflow-x-auto [scrollbar-width:none] md:flex-wrap md:overflow-visible">
-      <span className="shrink-0 text-[10px] uppercase tracking-wider font-semibold text-white/40 mr-1">Tags</span>
-      {AVAILABLE_TAGS.map(tag => {
-        const on = included.includes(tag.id);
-        const off = excluded.includes(tag.id);
-        // The 💛 tag is named per tracker ("By PUSHAgold", …) — prefer the active artist's label.
-        const label = TAG_MAP[tag.id] || tag.label;
-        const emoji = TAG_MAP[tag.id] ? tag.id : Object.entries(TAG_MAP).find(([, v]) => v === label)?.[0] || '';
-        return (
+    <div className="px-6 md:px-8 pt-5 -mb-2 flex flex-col gap-2">
+      <div className={ROW}>
+        <span className={ROW_LABEL}>Tags</span>
+        {AVAILABLE_TAGS.map(tag => {
+          const label = TAG_MAP[tag.id] || tag.label;
+          const emoji = TAG_MAP[tag.id] ? tag.id : Object.entries(TAG_MAP).find(([, v]) => v === label)?.[0] || '';
+          return (
+            <Chip
+              key={tag.id}
+              label={label}
+              title={TAG_TOOLTIP_MAP[label]}
+              emoji={settings.tagsAsEmojis ? emoji : undefined}
+              status={statusOf(filters.tags, filters.excludedTags, tag.id)}
+              onClick={() => cycle('tags', 'excludedTags', tag.id)}
+            />
+          );
+        })}
+        {filters.tags.length > 1 && (
           <button
-            key={tag.id}
-            onClick={() => toggle(tag.id)}
-            title={TAG_TOOLTIP_MAP[label] || label}
-            className={`shrink-0 whitespace-nowrap text-xs px-2.5 py-1 rounded-full border transition-colors flex items-center gap-1 ${on
-              ? 'bg-white text-black border-white'
-              : off
-                ? 'bg-red-500/15 text-red-400 border-red-500/40 line-through'
-                : 'border-white/10 text-white/70 bg-white/5 hover:bg-white/10 hover:text-white'}`}
+            onClick={() => setFilters({ ...filters, tagMatch: (filters.tagMatch ?? 'all') === 'all' ? 'any' : 'all' })}
+            className="shrink-0 whitespace-nowrap text-xs px-2 py-1 text-white/50 hover:text-white"
+            title="Match songs with all of the selected tags, or with any of them"
           >
-            {settings.tagsAsEmojis && emoji && <span className="no-underline">{emoji}</span>}
-            {label}
+            {(filters.tagMatch ?? 'all') === 'all' ? 'Match all' : 'Match any'}
           </button>
-        );
-      })}
-      {included.length > 1 && (
-        <button
-          onClick={() => setFilters({ ...filters, tagMatch: (filters.tagMatch ?? 'all') === 'all' ? 'any' : 'all' })}
-          className="shrink-0 whitespace-nowrap text-xs px-2 py-1 text-white/50 hover:text-white"
-          title="Match songs with all of the selected tags, or with any of them"
+        )}
+      </div>
+
+      <div className={ROW}>
+        <span className={ROW_LABEL}>Quality</span>
+        {AVAILABLE_QUALITIES.map(q => (
+          <Chip
+            key={q}
+            label={q}
+            title={FILTER_TOOLTIPS[q]}
+            status={statusOf(filters.qualities, filters.excludedQualities, q)}
+            onClick={() => cycle('qualities', 'excludedQualities', q)}
+          />
+        ))}
+      </div>
+
+      <div className={ROW}>
+        <span className={ROW_LABEL}>Length</span>
+        {AVAILABLE_LENGTHS.map(len => (
+          <Chip
+            key={len}
+            label={len}
+            title={FILTER_TOOLTIPS[len]}
+            status={statusOf(filters.availableLengths, filters.excludedAvailableLengths, len)}
+            onClick={() => cycle('availableLengths', 'excludedAvailableLengths', len)}
+          />
+        ))}
+      </div>
+
+      <div className={ROW}>
+        <span className={ROW_LABEL}>Duration</span>
+        <select
+          value={filters.durationOp}
+          onChange={(e) => setFilters({ ...filters, durationOp: e.target.value })}
+          className="shrink-0 bg-white/5 border border-white/10 rounded-full px-2.5 py-1 text-xs text-white/80 focus:outline-none focus:border-white/30 cursor-pointer"
         >
-          {(filters.tagMatch ?? 'all') === 'all' ? 'Match all' : 'Match any'}
-        </button>
-      )}
-      {active && (
-        <button
-          onClick={() => setFilters({ ...filters, tags: [], excludedTags: [] })}
-          className="shrink-0 whitespace-nowrap text-xs px-2 py-1 text-white/50 hover:text-white flex items-center gap-1"
-        >
-          <X className="w-3 h-3" /> Clear
-        </button>
-      )}
+          <option value=">" className="bg-neutral-900">More than</option>
+          <option value="<" className="bg-neutral-900">Less than</option>
+          <option value="=" className="bg-neutral-900">Exactly</option>
+        </select>
+        <input
+          type="text"
+          placeholder="5:00 or 5"
+          value={filters.durationValue}
+          onChange={(e) => setFilters({ ...filters, durationValue: e.target.value })}
+          className="shrink-0 w-24 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs text-white focus:outline-none focus:border-white/30 placeholder:text-white/30"
+        />
+        {active && (
+          <button
+            onClick={() => setFilters({ ...filters, tags: [], excludedTags: [], qualities: [], excludedQualities: [], availableLengths: [], excludedAvailableLengths: [], durationValue: '' })}
+            className="shrink-0 whitespace-nowrap text-xs px-2 py-1 ml-1 text-white/50 hover:text-white flex items-center gap-1"
+          >
+            <X className="w-3 h-3" /> Clear filters
+          </button>
+        )}
+      </div>
     </div>
   );
 }
