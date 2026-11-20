@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loader2, Film, Disc3, Layers, Star, Pencil, CheckSquare, Square, ListMusic, Plus } from 'lucide-react';
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, prepareAudioDownload, formatTextForNotification, parseNoteDescription, cleanSongDate, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
@@ -213,6 +213,22 @@ export const handleShareSilent = (song: Song, era: Era): string => {
 export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
   const { settings, updateSettings } = useSettings();
   const contentBg = !settings.disableEraThemes ? ERA_THEMES[era.name]?.bottomBannerContentBg : undefined;
+  // Compact era banner that slides in once the big header scrolls out of view.
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [showMiniBanner, setShowMiniBanner] = useState(false);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const threshold = (headerRef.current?.offsetHeight ?? 240) - 56;
+      setShowMiniBanner(el.scrollTop > threshold);
+    };
+    onScroll();
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
+  const scrollToTop = () => scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
   const deadLinks = useDeadLinks(activeConfig.slug);
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [zoomedImage, setZoomedImage] = useState(false);
@@ -626,9 +642,35 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         animate={{ opacity: 1, filter: 'blur(0px)' }}
         exit={{ opacity: 0, filter: 'blur(10px)' }}
         transition={{ duration: 0.4, ease: "easeOut" }}
+        ref={scrollRef}
         className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto overflow-x-hidden pb-64"
+        style={{ scrollPaddingTop: 64 }}
       >
+        <div className="sticky top-0 z-40 h-0">
+          <div
+            className={`absolute inset-x-0 top-0 h-14 px-4 md:px-6 flex items-center gap-3 bg-[#0f0f0f]/85 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-200 ${showMiniBanner ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}
+            aria-hidden={!showMiniBanner}
+          >
+            {onBack && (
+              <button onClick={onBack} title="Back" className="cursor-pointer flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors shrink-0" tabIndex={showMiniBanner ? 0 : -1}>
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+            )}
+            <button
+              onClick={scrollToTop}
+              title="Back to top"
+              className="cursor-pointer flex items-center gap-3 min-w-0 text-left group"
+              tabIndex={showMiniBanner ? 0 : -1}
+            >
+              <div className="w-9 h-9 rounded overflow-hidden bg-white/5 shrink-0">
+                {era.image && <Img w={120} src={era.image} alt="" className="w-full h-full object-cover" />}
+              </div>
+              <span className="font-bold text-white truncate group-hover:underline">{formatTextWithTags(era.name)}</span>
+            </button>
+          </div>
+        </div>
         <div
+          ref={headerRef}
           className={`p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5${!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? ' bg-center md:bg-right' : ''}`}
           style={!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? {
             backgroundImage: `url(${ERA_THEMES[era.name].topBanner})`,
@@ -656,7 +698,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           <div className="flex flex-col justify-end h-full py-2 w-full min-w-0 md:w-auto md:flex-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             <div className="flex items-center gap-4 mb-3 flex-wrap">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap min-w-0 max-w-full">
-                <div className="truncate max-w-full">{formatTextWithTags(era.name)}</div>
+                <div className="truncate max-w-full cursor-pointer" onClick={scrollToTop} title="Back to top">{formatTextWithTags(era.name)}</div>
                 {(ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]) && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]}</div>}
               </h1>
 
