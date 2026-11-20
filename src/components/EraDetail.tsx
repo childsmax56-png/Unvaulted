@@ -698,7 +698,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
           <div className="flex flex-col justify-end h-full py-2 w-full min-w-0 md:w-auto md:flex-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             <div className="flex items-center gap-4 mb-3 flex-wrap">
               <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight flex items-center gap-4 flex-wrap min-w-0 max-w-full">
-                <div className="truncate max-w-full">{formatTextWithTags(era.name)}</div>
+                <div className="truncate max-w-full cursor-pointer" onClick={scrollToTop} title="Back to top">{formatTextWithTags(era.name)}</div>
                 {(ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]) && <div className="text-xl md:text-2xl text-white/30 font-medium bg-white/5 border border-white/5 rounded-lg px-3 py-1 mt-1">{ALBUM_RELEASE_DATES[era.name] || activeConfig.MEMBER_RELEASE_DATES?.[era.name]}</div>}
               </h1>
 
