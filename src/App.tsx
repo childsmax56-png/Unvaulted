@@ -1620,7 +1620,13 @@ export default function App() {
     const isBrowserSafari = userAgent.includes('safari') && !userAgent.includes('chrome') && !userAgent.includes('crios') && !userAgent.includes('android');
 
     if (isBrowserSafari) {
-      setShowSafariWarning(true);
+      // Show the warning only once per browser, ever.
+      let seen = false;
+      try { seen = localStorage.getItem('safariWarningSeen') === '1'; } catch {}
+      if (!seen) {
+        setShowSafariWarning(true);
+        try { localStorage.setItem('safariWarningSeen', '1'); } catch {}
+      }
     }
 
     const urlParams = new URLSearchParams(window.location.search);
