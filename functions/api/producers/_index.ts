@@ -12,10 +12,10 @@
 // endpoints fan out to the ~8 cached shards instead.
 
 // Public trackers to index. Kept in sync with src/artists/registry.ts — hidden
-// trackers (yzygold/yelolgold/yecomgold Ye alts, daxgold, d4vdgold) are deliberately left out.
+// trackers (yzygold/yelolgold/yecomgold Ye alts, cactigold Travis alt, daxgold, d4vdgold) are deliberately left out.
 export const PRODUCER_SLUGS = [
   'yegold', 'vampgold', 'wolfgold', 'aapgold', 'drizzygold', 'mjgold', 'dongold',
-  'kdotgold', 'cactigold', 'slimegold', 'colegold', 'mfgold', 'sosagold', 'xgold',
+  'kdotgold', 'travisgold', 'slimegold', 'colegold', 'mfgold', 'sosagold', 'xgold',
   'uzigold', 'pushagold', 'shadygold', 'twizzygold', 'dregold', 'juicegold',
   'luckigold', 'gorillazgold', 'rihannagold', 'fiftygold', 'teccagold', 'keemgold',
   'lonelygold', 'futuregold', 'denzelgold', 'cudigold', 'smokegold', 'jojigold',

@@ -46,6 +46,7 @@ export function normTracker(raw: string): string {
 // the whole group. Keep in sync with `alternateTrackers` in src/artists/*.ts.
 const COMMENT_GROUPS: string[][] = [
   ['yegold', 'yzygold', 'yelolgold', 'yecomgold'],
+  ['travisgold', 'cactigold'],
 ];
 
 export function commentGroup(tracker: string): string[] {

@@ -20,6 +20,7 @@ const TRACKER_PREFIXES: Record<string, string> = {
   uzigold: 'uzigold_',
   pushagold: 'pushagold_',
   shadygold: 'shadygold_',
+  travisgold: 'travisgold_',
   cactigold: 'cactigold_',
   dregold: 'dregold_',
   luckigold: 'luckigold_',

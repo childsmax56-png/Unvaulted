@@ -10,7 +10,7 @@
 
 // Slugs to aggregate. Kept in sync with src/artists/registry.ts.
 const ARTIST_SLUGS = [
-  'yegold', 'vampgold', 'wolfgold', 'drizzygold', 'xgold', 'cactigold',
+  'yegold', 'vampgold', 'wolfgold', 'drizzygold', 'xgold', 'travisgold',
   'kdotgold', 'uzigold', 'pushagold', 'shadygold', 'twizzygold', 'dregold',
   'juicegold', 'luckigold',
 ];

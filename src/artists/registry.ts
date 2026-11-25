@@ -9,6 +9,7 @@ import { kdotgoldConfig } from './kdotgold';
 import { drizzygoldConfig } from './drizzygold';
 import { xgoldConfig } from './xgold';
 import { cactigoldConfig } from './cactigold';
+import { travisgoldConfig } from './travisgold';
 import { dregoldConfig } from './dregold';
 import { pushagoldConfig } from './pushagold';
 import { shadygoldConfig } from './shadygold';
@@ -96,7 +97,8 @@ export const ARTIST_REGISTRY: Record<string, ArtistConfig> = {
   frankgold: frankgoldConfig,    // Row 2: Frank Ocean
   dongold: dongoldConfig,        // Row 2: Don Toliver
   kdotgold: kdotgoldConfig,      // Row 2: Kendrick Lamar
-  cactigold: cactigoldConfig,    // Row 2: Travis Scott
+  travisgold: travisgoldConfig,  // Row 2: Travis Scott — default tracker (Yerlsd's sheet)
+  cactigold: cactigoldConfig,    // Travis alt ("CACTIgold") — hidden, reachable via travisgold's picker
   slimegold: slimegoldConfig,    // Young Thug
   colegold: colegoldConfig,
   mfgold: mfgoldConfig,

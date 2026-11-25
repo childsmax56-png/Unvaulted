@@ -2,6 +2,13 @@ import type { ArtistConfig } from './types';
 
 export const cactigoldConfig: ArtistConfig = {
   slug: 'cactigold',
+  // Demoted to an alternate now that travisgold (Yerlsd's Travis Scott Tracker)
+  // is the main Travis tracker — still fully functional at /cactigold/, just
+  // off the landing grid/search. Reachable via the picker on travisgold's card.
+  hidden: true,
+  alternateTrackers: [
+    { slug: 'travisgold', label: 'Main' },
+  ],
   SITE_NAME: 'CACTIgold',
   SITE_DESCRIPTION: 'The Best Travis Scott Tracker In The World!',
   SITE_URL: 'https://unvaulted.cc/cactigold/',

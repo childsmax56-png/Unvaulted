@@ -847,6 +847,34 @@ const SHEET_SOURCES: Record<string, SheetSource> = {
       '1333371598': 'SSC',
     },
   },
+  // travisgold (Yerlsd's Travis Scott Tracker) is a downloads-disabled sheet on
+  // the same yetracker template. Its Fakes / Remixes tab (515737333) is still a
+  // "coming soon" placeholder, so it's left out.
+  travisgold: {
+    sheetId: '18Ht_QECCPW3zPkuBmGeJDTRMjFEinRlWyAtbkBivjPo',
+    gids: {
+      unreleased: '199908479',
+      released: '1295931150',
+      recent: '1385926980',
+      tracklists: '1372270223',
+      stems: '495336364',
+      'album-copies': '1297512832',
+      art: '887765608',
+      misc: '1436880299',
+      'music-videos': '837199839',
+    },
+    apiTitles: {
+      '199908479': 'Unreleased',
+      '1295931150': 'Released',
+      '1385926980': 'Recent',
+      '1372270223': 'Tracklists',
+      '495336364': 'Stems',
+      '1297512832': 'Album Copies',
+      '887765608': 'Art',
+      '1436880299': 'Misc',
+      '837199839': 'Music Videos',
+    },
+  },
 };
 
 // yegold's and yelolgold's source sheets both split their Sunday Service Choir
