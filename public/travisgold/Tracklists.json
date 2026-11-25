@@ -1,299 +1,2223 @@
-[
- {
-  "era": "The Classmates",
-  "name": "TJ Maxx",
-  "date": "Oct 21, 2010",
-  "quality": "Clear",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "Sep 14, 2011",
-  "quality": "Clear",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "Late Sep - Oct 2011",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "~Late 2011",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "~Late 2011",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "~Late 2011",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "Late 2011 - Early 2012",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "Mid - Dec 2012",
-  "quality": "N/A",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "Aug 3, 2012",
-  "quality": "Mostly Clear",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "Feb 24, 2013",
-  "quality": "Blocked",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Untitled Album [V1]",
-  "date": "Mar - Jul 2013",
-  "quality": "N/A",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh",
-  "date": "May 18, 2013",
-  "quality": "Clear",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Owl Pharaoh",
-  "name": "Owl Pharaoh [iTunes Deluxe]",
-  "date": "Jun 2013",
-  "quality": "N/A",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Days Before Rodeo",
-  "name": "Untitled Album [V2]\n(Fuego)",
-  "date": "Jul 2013 - Early 2014",
-  "quality": "N/A",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo",
-  "date": "Aug 19, 2014",
-  "quality": "N/A",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo",
-  "date": "Mar 2015",
-  "quality": "N/A",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo",
-  "date": "Apr 14, 2015",
-  "quality": "Clear",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo [Considerations]",
-  "date": "Apr 23, 2015",
-  "quality": "Clear",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo [Considerations]",
-  "date": "Jul 1, 2015",
-  "quality": "Clear",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo",
-  "date": "Mid - Late Jul 2015",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Rodeo",
-  "name": "Rodeo [Final Version]",
-  "date": "Aug 2015",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Birds In The Trap Sing McKnight",
-  "name": "Tina",
-  "date": "Early 2016",
-  "quality": "N/A",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Birds In The Trap Sing McKnight",
-  "name": "Birds In The Trap Sing McKnight",
-  "date": "~Jul - Aug 2016",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Birds In The Trap Sing McKnight",
-  "name": "[Unknown Project with Sauce Walka]",
-  "date": "Aug 9, 2016",
-  "quality": "N/A",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Huncho Jack, Jack Huncho",
-  "name": "Huncho Jack, Jack Huncho [Leaked Copy]",
-  "date": "Dec 21, 2017",
-  "quality": "N/A",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "Astroworld",
-  "name": "Astroworld [Final Version]",
-  "date": "Aug 2018",
-  "quality": "Clear",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "JACKBOYS",
-  "name": "JACKBOYS [Considerations]",
-  "date": "Oct 2019",
-  "quality": "N/A",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "JACKBOYS",
-  "name": "JACKBOYS",
-  "date": "Dec 6, 2019",
-  "quality": "N/A",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "UTOPIA [V1]",
-  "name": "UTOPIA\n(ref. Ye)",
-  "date": "May 14, 2020",
-  "quality": "N/A",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "UTOPIA [V1]",
-  "name": "JESUS IS LORD [May 14, 2020]\n(Source: Leak)",
-  "date": "May 14, 2020",
-  "quality": "Clear",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "UTOPIA [V1]",
-  "name": "DYSTOPIA",
-  "date": "Nov 5, 2021",
-  "quality": "N/A",
-  "source": "Secondary",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "UTOPIA [V1]",
-  "name": "UTOPIA",
-  "date": "Nov 5, 2021",
-  "quality": "N/A",
-  "source": "Travis",
-  "links": [],
-  "tracks": []
- },
- {
-  "era": "JACKBOYS 2",
-  "name": "JACKBOYS 2 [Considerations]",
-  "date": "~May 2025",
-  "quality": "N/A",
-  "source": "Leaked",
-  "links": [],
-  "tracks": []
- }
-]
+{
+ "legend": [
+  {
+   "label": "Unknown",
+   "color": "#999999"
+  },
+  {
+   "label": "Completely Unheard",
+   "color": "#e06666"
+  },
+  {
+   "label": "Snippet / Partial / Beat / Recording Available",
+   "color": "#f6b26b"
+  },
+  {
+   "label": "Alternate Version Available",
+   "color": "#93c47d"
+  },
+  {
+   "label": "Confirmed Version Available",
+   "color": "#8e7cc3"
+  }
+ ],
+ "albums": [
+  {
+   "era": "The Classmates",
+   "name": "TJ Maxx",
+   "date": "Oct 21, 2010",
+   "quality": "Clear",
+   "source": "Travis",
+   "links": [
+    "https://ibb.co/MkKpxZzF"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Duke of Earl",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "High",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#3",
+     "name": "Good Love",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "Jam",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "Tweeted about by Travis. Tracklist for the unconfirmed mixtape 'TJ Maxx'",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xWhUEC6TcdDC47cbMpKNZj4glijFBmEJgMtuXHL84tvBAlsgJrPylL2bvsOllDOCkfc5cZongcXbKJzZothD47tifCTqzJ8l_LqNKxK-Gt99BLWQaI5aFbQTUAKFMFchnM=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "Sep 14, 2011",
+   "quality": "Clear",
+   "source": "Travis",
+   "links": [
+    "https://i.imgur.com/h6LAofg.png"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Fear",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#2",
+     "name": "Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Hero",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#4",
+     "name": "Smith & Western",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#5",
+     "name": "Angels vs. Demons",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "That B!tch Crazy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "Earliest known tracklist. Tweeted by Travis and preserved through a KTT poster who conveniently quoted the full thing with a timestamp. L$ said that \"Love\" was \"Lights (LoveSick)\"‚ though it is more likely to be \"L.O.V.E. Interlude\".",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xWrBgCZ4ZoIT9ssFsjHj60J0-bNdmzx1upTCcfpZaELH9hoHxNeXuaFv967D9ufsOnUeajc7NMnyky3LOp6C4AIAg=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "Late Sep - Oct 2011",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://i.imgur.com/VOU4D.jpeg"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Unknown",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#2",
+     "name": "Fear",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#3",
+     "name": "Hero",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#4",
+     "name": "Cracks",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#5",
+     "name": "Love",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "That B!tch Crazy",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Smith & Western",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    }
+   ],
+   "description": "A tracklist very similar to the previous one was one of two tracklists included in an email to L$ from Travis. It's likely that this is from a similar time, as it essentially has the same songs as the above tracklist, just in a different order. It's unclear when exactly the two tracklists are from, and why Travis would send them together, but they do appear to be from different stages.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xX2Md5RAeuVm7-PZtl18kw3BYwjkFSebZs2nqQrS3ten4X20b9YiUhi439ZvGdC2mfJ7LtptdU-nh-SXJGZRcIJ=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "~Late 2011",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://i.imgur.com/pdSXYJL.png"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Fear",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#2",
+     "name": "Hero",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#3",
+     "name": "Cracks / Angels vs. Demons",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "Love",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "That B!tch Crazy",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Swith & Western",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#7",
+     "name": "Treehouse",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#8",
+     "name": "Avenues of America",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Tracklist provided by L$. L$ noted that this was from before Travis met Ye and began reworking the project, and it appears to be an evolution of the previous tracklists, so is likely from later in 2011. Track 4 was likely \"L.O.V.E. Interlude\" rather than \"Lights (LoveSick)\".",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xWnAw96F7Zq856KEMQ50WLWGvnUMNnCeHCpyJn3pAajezg3F4d193NYrzuIGdAubll6yc6zm4kKotWohoN3QfNhCA=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "~Late 2011",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://i.imgur.com/VOU4D.jpeg"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Pharaoh",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#2",
+     "name": "Treehouse",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#3",
+     "name": "That B!tch Crazy",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Smith & Western",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#5",
+     "name": "Angels vs. Demons / Cracks",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "Love",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Fear",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#8",
+     "name": "Hero",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#9",
+     "name": "Cracks",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "The second of two tracklists included in an email to L$ from Travis. It may not be exact as \"Cracks\" appears twice. It's unclear when exactly the two tracklists are from, and why Travis would send them together, but they do appear to be from different stages.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xX2Md5RAeuVm7-PZtl18kw3BYwjkFSebZs2nqQrS3ten4X20b9YiUhi439ZvGdC2mfJ7LtptdU-nh-SXJGZRcIJ=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "~Late 2011",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://i.imgur.com/vI3uq3l.png"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Pharaoh",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#2",
+     "name": "Hero",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#3",
+     "name": "Cracks / Angels vs. Demons",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "Lights (LoveSick)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "L.O.V.E. Interlude",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "That B!tch Crazy",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Swith & Western",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#8",
+     "name": "Treehouse",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#9",
+     "name": "Avenues of America",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Appears on various discography threads on KTT, referenced as being posted by L$, though I have been unable to find the original post. Appears to be a slightly later version of the previous tracklist. Another variation of this tracklist likely exists, as \"L.O.V.E. Interlude\" was leaked as track 6 of something.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xX38o9sIo3Es9DspvaPNyBeD93xno8sO3V_CN9dL02yAEbK5oWY-5N-LPsM4L3TreseALOC7qDNqa2acg-aGhtifw=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "Late 2011 - Early 2012",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://imgur.com/UmqZIrY"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Illamerica",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "Owl City",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#3",
+     "name": "Phoenix",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "Avenues of America / (16 Chapels)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#5",
+     "name": "Treehouse",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "Pharaoh",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#7",
+     "name": "Smith & Western",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#8",
+     "name": "Fear",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#9",
+     "name": "Hero",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#10",
+     "name": "The City of Angels and Demons / Angels vs. Demons",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#11",
+     "name": "Cracks",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#12",
+     "name": "Lights (LoveSick)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "That B!tch Crazy",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Tracklist provided by L$, without a date. If an unsourced Wikipedia claim is to be believed about Travis announcing 'Owl Pharaoh' as an 11 track EP with 2 bonus tracks, this tracklist is from late 2011. That being said, it's also possible that the Wikipedia entry was written by someone who saw this on KTT. Either way, it's the last version to use certain 2011 songs, so it was likely one of the final versions before it was reworked. ---------- Bonus ---------- The tracklist as written by L$ had the slashes between the titles in tracks 4 and 10. The titles either side of the slash for track 10 seem to suggest that they are alternate titles rather than two songs connected together, meaning that \"Avenues of America\" is likely to be an alternative title for \"16 Chapels\" and not its own song.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xUBQaToVHIn2Ig3QVpnXdnZT10bs0KNKWBCiVb1ROijYj0ZfGbznukQ6ECBC0a51eCtnwnNmzXMBYFq5jsrDcRw8g=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "Mid - Dec 2012",
+   "quality": "N/A",
+   "source": "Leaked",
+   "links": [
+    "https://imgur.com/iHkAQLM",
+    "https://imgur.com/a/mikelangelo-statements-NTktSUi"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "12 Disciples",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Manor Ruff Beat",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#3",
+     "name": "Night",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Gold 88",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Travis x Chip",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Dust",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Time Machine",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "travis1",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#9",
+     "name": "Illamerica",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Paradise V3",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Phoenix",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Gifted Beat",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#13",
+     "name": "16 Chapels",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Owl Pharaoh Intro",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Supposed early version of the project that leaked on KTT on June 1, 2013. Pharaohxx sold it to KTT user Fitz, who leaked it. The original, unsequenced order of the files is as follows: It's unclear whether this is a genuine early version of the project or simply a collection of random demos. Pharaoxx stated that he left out the original version of \"Sin City\" and the version of \"Gold 88\" with Pusha T, which suggests that it's merely a compilation, though the inclusion of songs like \"16 Chapels\", \"Night\", and \"Illamerica\", which were all already released/leaked, suggest that the leak was an early version of the project, or at the very least a collection of songs that were being considered for the project. KTT user mikelangelo (who leaked the LQ version of \"Sin City\" and knew Travis) claimed to have heard a very similar version of the project over a phonecall with Travis. mikelangelo stated that the call took place in December 2012, so it's possible that he heard a later version; if this is the case, the songs being unfinished here makes more sense, and Pharaohxx's comment about leaving things out may have been a bluff. We know that \"Gold 88\" had Pusha T from July 28, 2012, at the latest, so it's possible that this is a version of the project from before he was added. There are three probable scenarios (in no particular order): 1) this is a random compilation of demos that Pharaohxx had on-hand; 2) this is a collection of songs that were being considered for the project (effectively an early version) sometime close to July 2012; or 3) this is an incomplete version of the project from December 2012 that is missing some songs and some correct versions of songs."
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "Aug 3, 2012",
+   "quality": "Mostly Clear",
+   "source": "Travis",
+   "links": [
+    "https://i.imgur.com/MZrIsWd.jpg"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Last Night - Travis Scott - 03-08-12BS",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "manor (prod. Lifted )",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#3",
+     "name": "Phoenix 9.0",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "Travis Scott ft. Chip the RIpper",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#5",
+     "name": "Travis Scott- ft. juicy jprod (Cardo)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "Travis Scott- Ah Sample",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#7",
+     "name": "Travis Scott- Dust 2.0",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#8",
+     "name": "Travis Scott- flocka (prod young chop)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#9",
+     "name": "Travis Scott- Follow Me",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#10",
+     "name": "Travis Scott- Fuck ft kid cudi Kanye w",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#11",
+     "name": "Travis Scott- Gold 88 ft pusha",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#12",
+     "name": "Travis Scott- Harmonies",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#13",
+     "name": "Travis Scott- Hitboy",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#14",
+     "name": "Travis Scott- Time Machine",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "A partial 'tracklist' of sorts was shared by Travis on August 3, 2012, showcasing a few songs that had been made since meeting T.I. and Ye (the Instagram post was captioned \"tracklist so far\"). Most of the titles are the session folder names. Note that these are simply in alphabetical order and not sequenced. It's assumed that \"Ah Sample\", \"Hitboy\", and \"Harmonies\" are simply sessions with ideas and not proper songs.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xXMQ7i1sa2-8Xlg_CWTfJdK6BaxPHVWoXo_rqnDDXpOEh44XZA1t5CVLIqJZq16kEhkl8hnsErGnaQJ0KF8UcTu=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "Feb 24, 2013",
+   "quality": "Blocked",
+   "source": "Travis",
+   "links": [
+    "https://imgur.com/RG6zVXF"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "(Bl)ocka",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "(Upp)er Echelon",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#3",
+     "name": "(Hom)e [?]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#4",
+     "name": "(Thank You For) Changing My Life",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#5",
+     "name": "(16) Chapels",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "(Danc)ing on the Moon",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#7",
+     "name": "(Driv)e [?]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#8",
+     "name": "(Quin)tana",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#9",
+     "name": "(Old) English",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#10",
+     "name": "(Bad) Mood",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "Part of a tracklist that could be seen in a picture posted briefly to Instagram by Travis on February 24, 2013. Some guesses have to be made, as the beginning of the titles become progressively harder to read. Unlikely to be sequenced. There may be more tracks that can't be seen underneath; for example, \"Bandz\" is very likely to be on here, as are \"MIA\" and \"Naked\".",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xWLDAxRcW1xBnxlBk2BEViKncJZHcEqIcCyjFsBSJwViPMjclYCLaMBfNrkZGref11CXlkIheFxAsfVHa-bU-2X=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Untitled Album [V1]",
+   "date": "Mar - Jul 2013",
+   "quality": "N/A",
+   "source": "Travis",
+   "links": [
+    "https://www.youtube.com/watch?v=1NXJTEAPyTs",
+    "https://imgur.com/a/8dfwYzK",
+    "https://i.imgur.com/7jnlE0B.png"
+   ],
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Armageddon",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "Can't Look In My Eyes",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled (\"Somewhereinamerica\" instrumental)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "While it wasn't officially announced until later, Travis was openly working on a studio album alongside 'Owl Pharaoh'; he and Pharaohxx both made references to an album in March 2013, and Pharaohxx said that was originally meant to release in September 2013. Known songs from different periods are: Travis stated that the instrumental for JAY-Z's \"Somewhereinamerica\" was intended for the project, and he also said that he wanted to put \"Can't Look In My Eyes\" on it after Cudi initially scrapped it. According to Pharaohxx, \"Armageddon\" was also being saved for the album."
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh",
+   "date": "May 18, 2013",
+   "quality": "Clear",
+   "source": "Travis",
+   "links": [
+    "https://imgur.com/3X63zSB",
+    "https://www.instagram.com/p/ZdiNPtBUio/"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "medow creek 04.06.2013",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Bad Mood / shit on you",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Upper Echelon",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "naked",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "CHAZZ INTERLUDE",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "UPtown",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Travis Scott hell of night",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Dance on the Moon",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "MIA 2.5",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Drive Paris With Intro",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "TRAVI$ SCOTT - QUINTANA",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "16 Chapels",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Bandz",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Tracklist shared by Travis on May 18, 2013, three days before release. \"Blocka La Flame\" is missing, \"Naked\" is the uncut version, \"Chazz Interlude\" is a lot longer, \"Dance on the Moon\" is notably shorter and \"Bandz\" notably longer, and \"Quintana\" is solo. Most other tracks are at least a few seconds different in length to what was released, excluding \"Quintana\" (was released as a single prior, and also used for the video) and \"16 Chapels\" (same as the version released in 2012).",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xUsVj7D_M5doJkOOCJONtmIN-UP5mzuRLzN17p41Ge01jTc73Hr7BbirZviCjcgdVunCr3Ogcva_6HNARGmFSyigA=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Owl Pharaoh",
+   "name": "Owl Pharaoh [iTunes Deluxe]",
+   "date": "Jun 2013",
+   "quality": "N/A",
+   "source": "Travis",
+   "links": [
+    "https://imgur.com/a/TNsWcvI",
+    "https://imgur.com/a/jFVgCv2"
+   ],
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Naked (Rick Rubin Rework)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Bandz (Remix)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Upper Echelon (Remix)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Home",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Pharrell Collaboration",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ye and Cudi Collaboration (possibly \"Can't Look In My Eyes\"; nothing else was ever recorded)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Announced by Travis to be a mixed and mastered version of the project with additional tracks, verses, and features; was set to be released in June 2013. No confirmed tracklist ever surfaced and the release was eventually quietly cancelled - GOODMUSICINSIDER later stated that Epic Records \"dropped the ball\" with its release. Tracks set to appear according to Pharaohxx were: \"Blame\" with Mr Hudson is a rumoured song."
+  },
+  {
+   "era": "Days Before Rodeo",
+   "name": "Untitled Album [V2]\n(Fuego)",
+   "date": "Jul 2013 - Early 2014",
+   "quality": "N/A",
+   "source": "Travis",
+   "links": [
+    "https://www.youtube.com/watch?v=c1NIvCx6HFw&t=26m",
+    "https://i.imgur.com/FWS03ng.png"
+   ],
+   "tracks": [],
+   "description": "During an interview on HOT97 on July 16, 2013, Travis officially announced that he was working on an album, set to be released in 2014. At the time of the announcement, Travis said that he had recently been working with Crada, so any songs made with him are likely in contention; \"Naked\" and \"Can't Look In My Eyes\" may have still been in consideration (assuming Cudi hadn't taken the latter back yet) but \"Armageddon\" likely wasn't. Pharaohxx also said that the Rick Rubin rework of \"Naked\" would make the album. An October 31, 2013, Rolling Stone article said that Travis was considering 'Fuego' as a title, but 'Rodeo' was eventually settled on (in March 2014 at the latest). The project continued to evolve until eventually all songs from this time had been cut."
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo",
+   "date": "Aug 19, 2014",
+   "quality": "N/A",
+   "source": "Secondary",
+   "links": [
+    "https://imgur.com/LEJEUqW"
+   ],
+   "tracks": [],
+   "description": "By August 19, 2014, according to GOODMUSICINSIDER, 'Rodeo' already had features from James Blake, Justin Vernon of Bon Iver, and King Krule, as well as a song with PARTYNEXTDOOR and Young Thug that we now know is \"Perfect\" [V2]. Other probable songs include \"Pray 4 Love\" and \"Love\"."
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo",
+   "date": "Mar 2015",
+   "quality": "N/A",
+   "source": "Travis",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Oh My",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Dinosaurus",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Man in My City",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Drunk",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Young Thug - Dipped in Gold",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "Travis played a few songs intended for 'Rodeo' at a Chicago meet-and-greet in March 2015. The songs played (in no particular order) were: \"Dipped in Gold\" may have just been played for fun; it's rumoured that Travis wanted to use the song, but it's thought that he never recorded anything. Other songs such as \"3500\", \"90210\", \"Act 1 (Drown)\", \"Never Catch Me\", \"Poet and Parade\", \"Pray 4 Love\", and \"Wasted\" (among others) all existed at the time, but it's not known if they were being considered."
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo",
+   "date": "Apr 14, 2015",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Addy",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#2",
+     "name": "Naughty",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "OK Alright (feat. ScHoolboy Q) [likely also feat. Kacy Hill, SZA and Zonaman]",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "3500 [Ye was wanted at this point]",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Nightcrawler (feat. Chief Keef)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Act 1 (Drown) [feat. Young Thug & Yung Mazi]",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "90210 (feat. Kacy Hill) [Kacy not mentioned, but was definitely on it]",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Whole Lot's Changed (feat. Yung Mazi)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Only One",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#10",
+     "name": "Wasted (feat. Yung Lean)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Bruh (Ooh Na Na) [feat. Young Thug]",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#12",
+     "name": "Poet and Parade",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Twist One Up (feat. Jeremih)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    }
+   ],
+   "description": "Tracklist sourced from a document titled \"RODEO SONG STATUS\", dated April 14, 2015. Text in red is edited in (excluding the header); the list originally said 'Mozzy' instead of 'Mazi', so that has been corrected, and Keef has been added as a feature to \"Nightcrawler\", since he recorded for it on the same day. It can't be seen in the picture, but a note beside \"Only One\" says: \"TWO VERSIONS EXIST. ONE WITH BEGINNING LOOPED THROUGH AND ONE WITH OLD ENDING\". It's unclear how exhaustive this tracklist is. Songs like \"Oh My\", \"Never Catch Me\", and \"Pray 4 Love\" all existed at the time and could reasonably be expected to appear, but they equally may not have been in consideration at this time; \"Pray 4 Love\" was handled entirely by The Weeknd's team, which could explain its absence."
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo [Considerations]",
+   "date": "Apr 23, 2015",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://i.imgur.com/yhjSvOn.png"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "I Can Tell",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Never Catch Me (feat. Tinashe)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "3500 (feat. Ye & Rick Ross)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Nightcrawler (feat. The Weeknd & Chief Keef)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Whole Lot's Changed",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Flying High (feat. Pharrell Williams)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Ok (feat. ScHoolboy Q & Zona Man)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Alright (feat. SZA)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Joyride (feat. Tinashe)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Naughty",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Maria",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "I'm Drunk (feat. Young Thug)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Oh My",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Dis Side",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Grant to You",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#15",
+     "name": "90210 (feat. Kacy Hill)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "A list of songs from April 23, 2015, that were being actively worked on by Travis. Not sequenced, it's simply a list of songs that could've been in consideration for 'Rodeo', with notes on the state of their completion and possible features (some hadn't recorded and didn't in the end). Note that \"Ok Alright\", \"Maria I'm Drunk\", and \"Oh My Dis Side\" existed at this point, but they were treated as individual songs on the list so that they could have their progression tracked more easily. Click the link to see the full image.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xUYVqfapu9vMwjcLlnqnyoaLTzW7o4HHp4WKOlA5dSkHrNDD5VbxFdGPB5L22rDQoicgVkMsZ1GAsXccgogrxhzEg=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo [Considerations]",
+   "date": "Jul 1, 2015",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [
+    "https://imgur.com/a/znIn8xV"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "I Can Tell",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Never Catch Me (feat. Tinashe & T.I.)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "3500 (feat. Future & 2 Chainz)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Nightcall (Nightcrawler) [feat. Rae Sremmurd & Chief Keef]",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Whole Lot's Changed (feat. Fredo)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Flying High (feat. Pharrell Williams)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Ok (feat. ScHoolboy Q & ZonaMan)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Alright (feat. SZA)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Joyride (feat. Tinashe)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Naughty",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Maria",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "I'm Drunk (feat. Young Thug & Justin Bieber)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Oh My",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Dis Side",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Grant to You",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#15",
+     "name": "90210 (feat. Kacy Hill)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Pornography (feat. Z-Ro)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "Wasted (feat. Juicy J)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "Piss on Your Grave (feat. Ye)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#19",
+     "name": "911-(MY EX BEST FRIEND (411/713)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#20",
+     "name": "Apple Pie",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#21",
+     "name": "20 Naked Bitches",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#22",
+     "name": "Twist One Up (feat. Jeremih)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#23",
+     "name": "Poet and Parade",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#24",
+     "name": "Antidote",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "A list of songs from July 1, 2015, that were being actively worked on by Travis. Very close to completion at this point, but is still missing some songs and has more that were later cut. Note that \"Ok Alright\", \"Maria I'm Drunk\", and \"Oh My Dis Side\" existed at this point, but they were treated as individual songs on the list so that  they could have their progression tracked more easily. \"20 Naked Bitches\" is likely a feature rather than a 'Rodeo' consideration. This is the first time that \"Twist One Up\" and \"Poet and Parade\" had been revisited since the April 14 tracklist. It's unknown why \"My Ex Best Friend\" has such a confusing and unclear title. Click the link to see the full images."
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo",
+   "date": "Mid - Late Jul 2015",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://imgur.com/RT3JjQQ",
+    "https://imgur.com/a/NAcYo1q"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "3500",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Oh My Dis Side (Quavo)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Night Call",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Ok Alright",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "Antidote",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Maria I'm Drunk",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "I Can Tell",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "90210",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Flying High",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Never Catch Me",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Pray For Love",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#12",
+     "name": "Pornography",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "Wasted (King Krule)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Piss On Your Grave (Ye)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "[Blank/Erased]",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#16",
+     "name": "My Ex Best Friend",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Whiteboard tracklist shared by Mike Dean after the release of the album; Mike had previously shared a picture of the same whiteboard featuring only \"3500\" on July 13, 2015, and it appeared briefly in the back of a Snapchat video posted by Allen Ritter on July 21. Unlikely to be sequenced. Quite a few songs were still unfinished at this stage. \"Impossible\" and \"Apple Pie\" are missing; \"Apple Pie\" existed at the time, but it's not known if \"Impossible\" did. \"Nightcrawler\" is listed as \"Night Call\", which was its new title from June onwards; it was also titled this on the CD leak, though it was changed back to \"Nightcrawler\" for the official release. \"Pray 4 Love\" is listed as \"Pray For Love\". \"My Ex Best Friend\" has been crossed out, and a song has been erased. Possible contenders for the erased song are \"Twist One Up\" and \"Poet and Parade\" (which were both revisited and reconsidered for the album shortly before this tracklist was penned), and \"Joyride\" (which was sent to Rihanna around this time); the latter two are the only two songs that look like they could fit what is left of the erased text, but \"Poet and Parade\" is currently the most likely. The same tracklist was printed on merchandising tees for Rodeo's 10th anniversary in 2025.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xWLUbYRe_S00pY1FGep6N2LPnpKUBlDTa1SqGywBKyO7-pbCpp0RLdYkFh7O_65DAfDF2MgqjpJoExsco3Fs_KOQA=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Rodeo",
+   "name": "Rodeo [Final Version]",
+   "date": "Aug 2015",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Pornography",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Oh My Dis Side",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "3500",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Wasted",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "90210",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Pray for Love",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Night Call",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Piss On Your Grave",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Antidote",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Impossible",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "Maria I'm Drunk",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "I Can Tell",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#14",
+     "name": "Apple Pie",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "Never Catch Me",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Flying High",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "Ok Alright",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "description": "Whiteboard tracklist shared by Mike Dean after the release of the album. ------------------------ Everything is identical other than a couple of track titles (\"Pray 4 Love\" as \"Pray for Love\", and \"Nightcrawler\" as \"Night Call\"). Reveals that \"Flying High\" was originally meant to be a bonus track on the deluxe edition."
+  },
+  {
+   "era": "Birds In The Trap Sing McKnight",
+   "name": "Tina",
+   "date": "Early 2016",
+   "quality": "N/A",
+   "source": "Travis",
+   "links": [
+    "https://pillows.su/f/c28bd699711e4a2eb1bb5be33ddc8530"
+   ],
+   "tracks": [],
+   "description": "Travis has stated that 'Birds in the Trap Sing McKnight' was originally titled 'Tina', before Quavo's line from \"Pick Up the Phone\" inspired him to change it (this likely would've taken place in March 2016). \"Goosebumps\" was confirmed to be on it on .WAV Radio; basically any song created in the period between the release of 'Rodeo' and March 2016 could've been in contention at the time."
+  },
+  {
+   "era": "Birds In The Trap Sing McKnight",
+   "name": "Birds In The Trap Sing McKnight",
+   "date": "~Jul - Aug 2016",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://imgur.com/k98WkP2",
+    "https://www.hotnewhiphop.com/49642-travis-scott-says-kendrick-lamar-and-kid-cudi-will-be-on-birds-in-the-trap-sing-mcknight-news"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Way Back",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Late Nights",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "Sweet Sweet",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Goosebumps",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "All I Know Is This",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#6",
+     "name": "Outside",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Lose",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "The Curse",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "Guidance",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Raw Raw",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Posted by Tom Kahre, an engineer who worked on the album, a couple of years after its release. Based on the present songs and the features that Travis said were going to be on the album in an August 12, 2016 episode of .WAV Radio, it can be presumed that the tracklist is from sometime in July-August. Two pieces of supporting evidence: 1) The original \"Guidance\" dropped June 5, 2016, so it can't have been before then; 2) \"All I Know\" was recorded in early July 2016, and Kamaiyah was still on the album as of August 12. \"Late Nights\" is \"Through the Late Night\"; \"Outside\" was possibly solo at this point, and \"RaRa\" may be too if it didn't feature Offset at this point. Differences for every other song are likely, but unknown.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xW0_Ertcmy1nrgHT0JcgXMsDlkxiXu0eGFx8posDFuDFb7ajWR_3UG0QY1cP7neIH4nkXppM1JSEhm6BAW31kGq2w=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "Birds In The Trap Sing McKnight",
+   "name": "[Unknown Project with Sauce Walka]",
+   "date": "Aug 9, 2016",
+   "quality": "N/A",
+   "source": "Secondary",
+   "links": [],
+   "tracks": [],
+   "description": "Sauce Walka and Travis were said to be working on a \"5-song EP\", with \"2 or 3\" songs already completed by August 9, 2016. No songs have surfaced from this project, other than possibly \"Texas Cyclone\"."
+  },
+  {
+   "era": "Huncho Jack, Jack Huncho",
+   "name": "Huncho Jack, Jack Huncho [Leaked Copy]",
+   "date": "Dec 21, 2017",
+   "quality": "N/A",
+   "source": "Leaked",
+   "links": [
+    "https://drive.google.com/drive/folders/1oDLbqpkkrpVh0x9nsAy4L3w8CbGwAh8W"
+   ],
+   "tracks": [],
+   "description": "Version of the album that leaked December 21, 2017, just a few hours before it dropped officially. Everything is much louder than the final version; Mike Dean rushed to remaster it quickly after the leak."
+  },
+  {
+   "era": "Astroworld",
+   "name": "Astroworld [Final Version]",
+   "date": "Aug 2018",
+   "quality": "Clear",
+   "source": "Secondary",
+   "links": [
+    "https://imgur.com/RT3JjQQ",
+    "https://imgur.com/6CvZ5YK"
+   ],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "STARGAZING",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "CAROUSEL",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "SICKO MODE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "RIP SCREW",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#5",
+     "name": "STOP TRYING TO BE GOD",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "NO BYSTANDERS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "SKELETONS",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "DON'T WANNA WAKE UP",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "5% TINT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "NC-17",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#11",
+     "name": "ASTROTHUNDER",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "YOSEMITE",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#13",
+     "name": "CAN'T SAY",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#15",
+     "name": "BUTTERFLY EFFECT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#16",
+     "name": "HOUSTONFORNICATION",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#17",
+     "name": "COFFEE BEAN",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#18",
+     "name": "[Blank]",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#14",
+     "name": "WHO WHAT",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "description": "Whiteboard tracklist shared by Mike Dean after the release of the album. No differences, other than \"WAKE UP\" being titled \"DON'T WANNA WAKE UP\". Reveals that \"WHO? WHAT?\" was a last-minute addition, though it was already known to be the last song recorded for the album, per the Complex cover. It also appears that there may have been a song at track 17 (now 18 after the inclusion of \"WHO? WHAT?\") that was scrapped very late on, as one of the columns has a check mark.  This song could possibly be \"Watch\" as it would fit as an outro, but the lack of check marks suggest that the song didn't get very far in the mixing / mastering stage, while \"Watch\" had already received the full Mike Dean treatment.",
+   "images": [
+    "https://lh3.googleusercontent.com/docsubipk/AP9E6xWSOT2USrk78aWEkcKwOfv2863tQkaSBzoN_mNH9bPZYFuyk8FkiRFkvX2j76mWX5V5v69a-CHY1iakWM4PwKPfmg=s382-w382-h20"
+   ]
+  },
+  {
+   "era": "JACKBOYS",
+   "name": "JACKBOYS [Considerations]",
+   "date": "Oct 2019",
+   "quality": "N/A",
+   "source": "Leaked",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Classy (Don Toliver x Sheck Wes)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "What To Do (Don Toliver x Sheck Wes)",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#3",
+     "name": "Solid (Don Toliver x Sheck Wes x Quavo)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "A folder containing three songs labelled for 'JackBoys', all made during the early Don Toliver x Sheck Wes sessions."
+  },
+  {
+   "era": "JACKBOYS",
+   "name": "JACKBOYS",
+   "date": "Dec 6, 2019",
+   "quality": "N/A",
+   "source": "Secondary",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "Out West (presumably with Young Thug)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#2",
+     "name": "Gang Moves (retitled \"Gang Gang\"; might be missing Luxury Tax since he isn't credited as a JackBoy)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#3",
+     "name": "What To Do (with Don Toliver and Sheck Wes; unclear if Travis had recorded yet)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#4",
+     "name": "Solid (Don Toliver x Sheck Wes x Quavo)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#5",
+     "name": "Gold Blackberry (Travis)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#6",
+     "name": "Top Floor (presumably with Gunna)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#7",
+     "name": "Don Toliver - Had Enough (with Quavo and Offset)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#8",
+     "name": "Chase B - May Day (with Sheck Wes and Young Thug; had already been released)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#9",
+     "name": "OMD (presumably with Roddy Ricch, and Kendrick Lamar wanted)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#10",
+     "name": "Da Baby (no information)",
+     "color": "#999999",
+     "colorLabel": "Unknown"
+    },
+    {
+     "num": "#11",
+     "name": "Sheck Wes - Glock on Ice",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#12",
+     "name": "Highest In the Room Remix (Travis and probably Lil Baby; possibly no Mike Dean)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    }
+   ],
+   "description": "Lengthy tentative tracklist that was ultimately trimmed down. Put together by Erin Durant, who was A&R for the project. Sourced from a document that was created on December 6, 2019. Features were not listed, but some songs were credited to specific artists. Credited as \"Jack Boys (Travis Scott, Don Toliver, Sheck Wes and OG Chase B)\". Anything in parentheses is commentary. Information on producers can be found in each song's respective unreleased sheet entry, as well as any other known details."
+  },
+  {
+   "era": "UTOPIA [V1]",
+   "name": "UTOPIA\n(ref. Ye)",
+   "date": "May 14, 2020",
+   "quality": "N/A",
+   "source": "Leaked",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Untitled Ref 1*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 2* (verses idea)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 3* (chorus idea)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Big Champ",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 4* (Uses an instrumental previewed at the 2021 Cactus Jack x Dior show)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 5*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Delresto",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 6* / Best Day* [V1] (chorus idea)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 6 / Best Day* [V2] (verse idea)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 7*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 8*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 9*",
+     "color": "#e06666",
+     "colorLabel": "Completely Unheard"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 10*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 11*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 12*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Untitled Ref 13*",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    }
+   ],
+   "description": "Version of 'Utopia' dated May 14, 2020, featuring Ye performing freestyles over some beats, likely meant as a reference; no Travis vocals, although the two can be briefly heard talking in some of the files. Ye was rumoured to be executive producing the album in 2020, and it appears that this is from that time. Features 15 tracks (with some having two versions each), including early versions of \"Delresto\" and \"Big Champ\". Besides the latter, no other title is known. Although the filenames are numbered, the copy is likely still unordered. [NOTE: \"(ref. Ye)\" is implicit for all the songs]"
+  },
+  {
+   "era": "UTOPIA [V1]",
+   "name": "JESUS IS LORD [May 14, 2020]\n(Source: Leak)",
+   "date": "May 14, 2020",
+   "quality": "Clear",
+   "source": "Leaked",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#1",
+     "name": "??? (See This Why)"
+    },
+    {
+     "num": "#2",
+     "name": "??? (Alone)"
+    },
+    {
+     "num": "#3",
+     "name": "??? (Alone)"
+    },
+    {
+     "num": "#4",
+     "name": "??? (Eat The Cake)"
+    },
+    {
+     "num": "#5",
+     "name": "Big Champ"
+    },
+    {
+     "num": "#6",
+     "name": "??? (Bad Dream)"
+    },
+    {
+     "num": "#7",
+     "name": "??? (Supersonic)"
+    },
+    {
+     "num": "#8",
+     "name": "Delresto"
+    },
+    {
+     "num": "#9",
+     "name": "??? (Best Day)"
+    },
+    {
+     "num": "#10",
+     "name": "??? (Best Day)"
+    },
+    {
+     "num": "#11",
+     "name": "??? (Wildin')"
+    },
+    {
+     "num": "#12",
+     "name": "??? (Mad)"
+    },
+    {
+     "num": "#13",
+     "name": "??? (Original)"
+    },
+    {
+     "num": "#14",
+     "name": "??? (Seizures)"
+    },
+    {
+     "num": "#15",
+     "name": "??? (Light It Up)"
+    },
+    {
+     "num": "#16",
+     "name": "??? (Pills)"
+    },
+    {
+     "num": "#17",
+     "name": "??? (LED)"
+    }
+   ],
+   "description": "15-track Ye freestyle copy from May 14, 2020 produced by Travis Scott. Originally thought to be a copy of 'UTOPIA', though it is more likely a 'God's Country' freestyle copy titled \"JIL - Travis\" found on a leaked selling list. \"Alone\" and \"Best Day\" appear twice due to Ye recording two ideas per beat."
+  },
+  {
+   "era": "UTOPIA [V1]",
+   "name": "DYSTOPIA",
+   "date": "Nov 5, 2021",
+   "quality": "N/A",
+   "source": "Secondary",
+   "links": [
+    "https://www.gq.com/story/travis-scott-men-of-the-year-cover-2023"
+   ],
+   "tracks": [],
+   "description": "Based on information from a producer that has worked extensively with Cactus Jack, as well as what can be inferred from comments made by Travis as part of the GQ Cover 'The Reemergence of Travis Scott', Travis intended to release a mixtape titled 'Dystopia' in late 2021 or very early 2022, followed by the album 'Utopia' in early 2022. While the producer should be a reliable source, they also claimed that they had production on both projects, but didn't appear on 'Utopia'; it's still possible that they were telling the truth and were simply cut. Regardless, the aforementioned GQ Cover states that Travis intended \"other releases\" after the \"Escape Plan\" / \"Mafia\" pack - quite possibly 'Dystopia' - but the AstroFest tragedy halted the plans. While no tracks are confirmed, some can be speculated on. \"Heartbeat\" would be a solid contender. KayCyy mentioned that it was intended to be the lead single for 'Utopia' before the leaks messed it up; it could be that he was partially correct, and the song was intended for 'Dystopia' instead. Snippets like \"I Need You*\" would also fit the supposed darker vibe that 'Dystopia' was rumoured to have. It could also be the case that several of the darker songs on 'Utopia' were repurposed from 'Dystopia'."
+  },
+  {
+   "era": "UTOPIA [V1]",
+   "name": "UTOPIA",
+   "date": "Nov 5, 2021",
+   "quality": "N/A",
+   "source": "Travis",
+   "links": [
+    "https://www.gq.com/story/travis-scott-men-of-the-year-cover-2023"
+   ],
+   "tracks": [],
+   "description": "According to Travis in the GQ Cover 'The Reemergence of Travis Scott', by the time that \"Escape Plan\" and \"Mafia\" were released on November 5, 2021, a version of 'Utopia' was roughly 50-60% completed. It can be deduced that a large number of the songs that made the final cut of the album existed at this time: -\"Hyaena\", \"Sirens\", \"Delresto\" were all verifiably started in 2020 -\"Thank God\" and \"God's Country\" were started by Ye in 2020; it's not precisely known when Travis took them. Studio images shared by KayCyy after 'Utopia' released suggest that \"Thank God\" was reworked in June 2021 -\"Lost Forever\" was recorded with Gunn in February 2021 -The first part of \"Skitzo is from 2019. The second beat was added just weeks before release, although the later parts could've existed already -\"Til Further Notice\" was started in 2019 (technically 2018, by artist SwaVay), although it was a Metro song for sometime and it's not known precisely when Travis took it. -\"Looove\" was verifiably revisited in mid-2021 -The first part of \"My Eyes\" is said to be one of the first songs worked on the album according to Travis. -\"Future Sounds\" was started in 2019, with Travis recording in 2020 and the last version being dated just before the release of 'Donda'. It's not known when Travis took the song, but SZA (and probably Future) definitely wasn't on the song until very late. It's safer to guess it was reworked into \"Telekinesis\" by Travis after the tragedy -\"Modern Jam\" (atleast Teezo's recordings) seems to be from July 2021, although there's room for doubt Due to the lack of clarity surrounding the 'Dystopia' / 'Utopia' situation, it's difficult to speculate on what other songs were in consideration at this time and whether or not all of the aforementioned songs were intended for the album. \"In My Head\" is the only solid guess, since it was briefly previewed at Travis's Dior x Cactus Jack show alongside \"Escape Plan\" and \"Lost Forever\". \"Respected\" and \"Hold On\" are said to be from 2020, possibly meant for the album, but totally unconfirmed as of now. \"Franchise\" was first advertised as the opener of the 'Utopia' era in 2020, but it's likely it was later cut from the project in 2021."
+  },
+  {
+   "era": "JACKBOYS 2",
+   "name": "JACKBOYS 2 [Considerations]",
+   "date": "~May 2025",
+   "quality": "N/A",
+   "source": "Leaked",
+   "links": [],
+   "tracks": [
+    {
+     "num": "#?",
+     "name": "Travis Scott & Don Toliver - Champain & Vacay (feat. Waka Flocka Flame)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Travis Scott, Don Toliver & Sheck Wes - 2000 Excursion",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Travis Scott - Kick Out",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Travis Scott - Dumbo",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "SoFaygo - MM3",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Don Toliver & Sheck Wes - Velour",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Travis Scott - Contest (feat. SoFaygo)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Sheck Wes - ILMB (feat. Travis Scott)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Travis Scott - Where Was You (feat. Playboi Carti & Future)",
+     "color": "#8e7cc3",
+     "colorLabel": "Confirmed Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Don Toliver - Call Back",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Don Toliver - Bleed Out Music (feat. SahBabii)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "Travis Scott - Outside (feat. NBA YoungBoy*)",
+     "color": "#93c47d",
+     "colorLabel": "Alternate Version Available"
+    },
+    {
+     "num": "#?",
+     "name": "JACKBOYS - Satellites (feat. Travis Scott*, Don Toliver* & SoFaygo*)",
+     "color": "#f6b26b",
+     "colorLabel": "Snippet / Partial / Beat / Recording Available"
+    }
+   ],
+   "description": "Some of the alleged considerations for 'JackBoys 2' in May 2025. The list is unordered. -\"ILMB\" was in consideration ever since June 2024. It was only temporarily removed in June 2025. -All of SoFaygo's contributions were chosen in April, although some of the songs had already been recorded. He might've also temporarily appeared on \"Velour\" too at this stage, but it's unconfirmed. -\"Where Was You\" was finalized in May, when Future recorded. -\"Outside\" was created in May, but YoungBoy was added later. -\"Call Back\" was played live by Don, who teased it as a 'JB2' song before the project's release. It was replaced by \"No Comments\". -\"Bleed Out Music\" is an early version of \"K9\". It was replaced by \"Beep Beep\". -\"Satellites\" is an early version of Chase B's \"Satellite\" and was in consideration in May; it's unknown exactly who would've made the final cut though. -Don's \"FWU\" might've been another contender since it was played live by Don, who labeled it as a 'JB2' song, before the project's release. -\"Florida Flow\" existed but was likely incomplete and it's unknown if it was in contention."
+  }
+ ]
+}
