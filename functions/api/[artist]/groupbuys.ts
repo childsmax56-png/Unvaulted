@@ -1,4 +1,5 @@
 import { parseCSV, csvResponse } from './_csvParser';
+import { fetchLiveGroupbuysCsv, hasLiveGroupbuys } from './_liveGroupbuys';
 
 // Uniform schema produced by the groupbuys normalizer:
 //   Year,YearTotal,Era,Name,Content,Price,Start,End,Type,Status,Link
@@ -33,14 +34,27 @@ export const onRequestGet: PagesFunction = async (context) => {
   try {
     const url = new URL(context.request.url);
     const artist = (context.params as Record<string, string>).artist ?? '';
-    const csvUrl = `${url.origin}/${artist}/data/groupbuys.csv`;
+    const cacheKey = new Request(`${url.origin}/api/${artist}/groupbuys`);
+    const cache = (caches as unknown as { default: Cache }).default;
+    const hit = await cache.match(cacheKey);
+    if (hit) return hit;
 
-    const res = await fetch(csvUrl);
-    if (!res.ok) return csvResponse({ years: [], grandTotal: '' });
-
-    const text = await res.text();
-    // The SPA catch-all returns index.html (status 200) for missing static files.
-    if (text.trimStart().startsWith('<')) return csvResponse({ years: [], grandTotal: '' });
+    // Live from the sheet's buys tab (_liveGroupbuys.ts), else the committed snapshot.
+    let text = '';
+    if (hasLiveGroupbuys(artist)) {
+      try {
+        text = await fetchLiveGroupbuysCsv(artist);
+      } catch {
+        // fall back to the snapshot
+      }
+    }
+    if (!text) {
+      const res = await fetch(`${url.origin}/${artist}/data/groupbuys.csv`);
+      if (!res.ok) return csvResponse({ years: [], grandTotal: '' });
+      text = await res.text();
+      // The SPA catch-all returns index.html (status 200) for missing static files.
+      if (text.trimStart().startsWith('<')) return csvResponse({ years: [], grandTotal: '' });
+    }
 
     const rows = parseCSV(text);
     if (rows.length === 0) return csvResponse({ years: [], grandTotal: '' });
@@ -101,7 +115,9 @@ export const onRequestGet: PagesFunction = async (context) => {
       }
     }
 
-    return csvResponse({ years: groups, grandTotal });
+    const out = csvResponse({ years: groups, grandTotal });
+    context.waitUntil(cache.put(cacheKey, out.clone()));
+    return out;
   } catch {
     return csvResponse({ years: [], grandTotal: '' });
   }

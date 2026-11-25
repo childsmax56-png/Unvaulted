@@ -1584,7 +1584,10 @@ export default function App() {
         console.error("Failed to fetch Samples data:", err);
       });
 
-    axios.get(`/${ARTIST_SLUG}/Tracklists.json`)
+    // Live from the sheet (falls back to the committed Tracklists.json server-side);
+    // the static file directly if the API itself is unreachable.
+    axios.get(`/api/${ARTIST_SLUG}/tracklists-live`)
+      .catch(() => axios.get(`/${ARTIST_SLUG}/Tracklists.json`))
       .then(res => {
         // Newer builds ship { legend, albums }; older ones a bare album array.
         const raw = res.data;
