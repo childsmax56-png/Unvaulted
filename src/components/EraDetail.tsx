@@ -1372,11 +1372,6 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
               </div>
             );
           })}
-          {eraTheme && (
-            <div className="pt-6 pb-8 text-center text-[11px] text-white/40">
-              Custom Theme Created by Er Mattaroz ツ on discord
-            </div>
-          )}
         </div>
         </div>
       </motion.div>
