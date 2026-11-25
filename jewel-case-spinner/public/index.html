@@ -387,7 +387,9 @@ hinge.position.set(-W / 2 + hingeW / 2, 0, D / 2 - 0.04); hinge.renderOrder = 2;
 const box = new THREE.BoxGeometry(W, H, D);
 const tintSide = new THREE.MeshBasicMaterial({ color: 0xeef2f6, transparent: true, opacity: 0.42, depthWrite: false });
 const tintFace = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.05, depthWrite: false });
-const tint = new THREE.Mesh(box, [tintSide, tintSide, tintSide, tintSide, tintFace, tintFace]);
+// The left/right sides sit over the spines, so they get only a faint tint to keep spine colors true.
+const tintSpine = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.07, depthWrite: false });
+const tint = new THREE.Mesh(box, [tintSpine, tintSpine, tintSide, tintSide, tintFace, tintFace]);
 tint.renderOrder = 3; caseGroup.add(tint);
 const glossMat = new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.06, metalness: 0, envMap, envMapIntensity: 1.2,
   transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
@@ -474,7 +476,7 @@ function poseAt(t) { // t in [0,1)
   const facing = Math.abs(n.z);
   const shade = 0.78 + 0.22 * facing;
   frontMat.color.setScalar(shade); backMat.color.setScalar(shade);
-  spineMat.color.setScalar(0.8 + 0.2 * Math.sqrt(Math.max(0, 1 - facing * facing)));
+  spineMat.color.setScalar(0.9 + 0.1 * Math.sqrt(Math.max(0, 1 - facing * facing)));
   glossMat.envMapIntensity = 1.2 * state.gloss; gloss2.material.envMapIntensity = 0.45 * state.gloss;
 }
 function setupCamera(w, h) {
@@ -618,7 +620,7 @@ for (const [id, fn] of Object.entries(ranges)) {
   const upd = () => { out.textContent = fn(Number(el.value)); };
   el.addEventListener('input', upd); upd();
 }
-$('#spinecolor').addEventListener('input', (e) => { state.spineColor = e.target.value; state.spineColorTouched = true; $('#spinecolor-note').textContent = 'custom'; applyArt(); });
+for (const ev of ['input', 'change']) $('#spinecolor').addEventListener(ev, (e) => { state.spineColor = e.target.value; state.spineColorTouched = true; $('#spinecolor-note').textContent = 'custom'; applyArt(); });
 $('#bgcolor').addEventListener('input', (e) => { state.bgColor = e.target.value; });
 $('#bgimg-btn').addEventListener('click', () => $('#file-bg').click());
 $('#file-bg').addEventListener('change', async (e) => {
