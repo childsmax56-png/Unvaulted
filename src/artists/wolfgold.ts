@@ -270,6 +270,8 @@ export const wolfgoldConfig: ArtistConfig = {
   ERA_MAPPINGS: {
     'Ace*': 'Ace',
     'Bastard*': 'Bastard',
+    // tylertracker.net titles it "BASTARD"; the render filter needs the exact config key
+    'BASTARD': 'Bastard',
     'Goblin*': 'Goblin',
     'Radical*': 'Radical',
     'Nilbog*': 'Nilbog',
