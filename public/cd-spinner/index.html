@@ -171,11 +171,11 @@ input[type="color"] { width: 44px; height: 28px; border: 1px solid var(--line); 
       <section class="group" aria-labelledby="h-bg">
         <h2 id="h-bg">Background</h2>
         <div class="seg" data-key="bg">
-          <button type="button" data-v="aurora" aria-pressed="true">Aurora</button>
+          <button type="button" data-v="aurora">Aurora</button>
           <button type="button" data-v="studio">Studio</button>
           <button type="button" data-v="color">Color</button>
           <button type="button" data-v="image">Image</button>
-          <button type="button" data-v="none">Transparent</button>
+          <button type="button" data-v="none" aria-pressed="true">Transparent</button>
         </div>
         <div class="bg-extra" id="bg-color-wrap" hidden><label for="bgcolor" class="hint">Color</label><input type="color" id="bgcolor" value="#1b2a4a"></div>
         <div class="bg-extra" id="bg-image-wrap" hidden>
@@ -194,7 +194,7 @@ input[type="color"] { width: 44px; height: 28px; border: 1px solid var(--line); 
           <div class="seg" data-key="size"><button type="button" data-v="320">320</button><button type="button" data-v="480" aria-pressed="true">480</button><button type="button" data-v="640">640</button><button type="button" data-v="800">800</button></div>
         </div>
         <div class="row"><span class="lbl">Frame rate</span>
-          <div class="seg" data-key="fps"><button type="button" data-v="20">20 fps</button><button type="button" data-v="25">25 fps</button><button type="button" data-v="33" aria-pressed="true">33 fps</button><button type="button" data-v="50">50 fps</button></div>
+          <div class="seg" data-key="fps"><button type="button" data-v="20">20 fps</button><button type="button" data-v="25">25 fps</button><button type="button" data-v="33">33 fps</button><button type="button" data-v="50" aria-pressed="true">50 fps</button></div>
         </div>
         <div class="meta" id="est"></div>
       </section>
@@ -249,8 +249,8 @@ const $ = (s) => document.querySelector(s);
 const state = {
   tray: 'clear', tilt: 0, zoom: 1, gloss: 1,
   style: 'spin', dir: 1, dur: 5,
-  bg: 'aurora', bgColor: '#1b2a4a', bgImage: null,
-  shape: 1, size: 480, fps: 33,
+  bg: 'none', bgColor: '#1b2a4a', bgImage: null,
+  shape: 1, size: 480, fps: 50,
   playing: !matchMedia('(prefers-reduced-motion: reduce)').matches,
   user: { front: null, back: null, spine: null }, // HTMLCanvasElements from uploads
   trayCardSpine: null,
