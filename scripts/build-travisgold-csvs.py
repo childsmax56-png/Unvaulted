@@ -87,8 +87,16 @@ def fetch_htmlview(gid):
 
 def fetch_rows_htmlview(gid):
     page = fetch_htmlview(gid)
+    # Index rows by their real sheet row (<th id="{gid}R{n}">) so they line up
+    # with Sheets API rows; this skips the view's frozen-row divider, which has
+    # no row number.
     grid = []
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+        n = re.search(r'<th[^>]*id="\d+R(\d+)"', tr)
+        if not n:
+            continue
+        while len(grid) < int(n.group(1)):
+            grid.append([])
         row = []
         for attrs, inner in re.findall(r"<td([^>]*)>(.*?)</td>", tr, re.S):
             text, hrefs = _cell_text(inner)
@@ -202,6 +210,35 @@ def build_tracklists_htmlview(dst_dir):
     return ["Era", "Name", "Tracklist", "Image", "Date Made", "Quality", "Source", "Link(s)"], csv_rows
 
 
+# --------------------------------------------------------------------- art --
+# Art-tab pictures are pasted into the Image column as in-cell images, which
+# neither the API nor the export carries. The htmlview shows them as stable,
+# public lh3.googleusercontent.com/docsubipk URLs; put each one first in the
+# row's Link(s) cell so the Art gallery shows the sheet's own picture ahead of
+# any link (the same thing fillRowsWithImages does on the live path).
+def fill_art_images(rows):
+    page = fetch_htmlview(GIDS["art"])
+    images = {}
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+        n = re.search(r'<th[^>]*id="\d+R(\d+)"', tr)
+        img = re.search(r'<img[^>]*src="(https://lh\d\.googleusercontent\.com/docsubipk/[A-Za-z0-9_-]+)', tr)
+        if n and img:
+            images[int(n.group(1))] = img.group(1) + "=w1000"
+    hi = base.find_header(rows)
+    link = next((i for i, h in enumerate(rows[hi]) if re.match(r"links?(\(s\))?$", h.strip(), re.I)), None)
+    if link is None:
+        return rows
+    for i in range(hi + 1, len(rows)):
+        img = images.get(i)
+        if not img:
+            continue
+        while len(rows[i]) <= link:
+            rows[i].append("")
+        rows[i][link] = "\n".join(x for x in (img, rows[i][link].strip()) if x)
+    print(f"    art: {sum(1 for i in images if i > hi)} in-cell images")
+    return rows
+
+
 def fetch_rows(gid):
     if _key():
         yecom.SHEET_ID = SHEET_ID
@@ -235,7 +272,10 @@ def main():
     base.write_csv(data_dir, "tracklists.csv", hdr, rows)
 
     for tab in ("album-copies", "art", "misc", "music-videos"):
-        rows = base.build_passthrough(fetch_rows(GIDS[tab]))
+        raw = fetch_rows(GIDS[tab])
+        if tab == "art":
+            raw = fill_art_images(raw)
+        rows = base.build_passthrough(raw)
         if rows:
             base.write_csv(data_dir, f"{tab}.csv", rows[0], rows[1:])
 

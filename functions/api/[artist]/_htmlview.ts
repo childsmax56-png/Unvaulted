@@ -10,6 +10,12 @@
 // Each <tr> carries a <th id="{gid}R{n}"> where n is the 0-based sheet row —
 // the same index as that row in the tab's CSV export / Sheets API grid, so
 // images can be joined back onto export rows by index.
+//
+// Some sheets' views serve in-cell images as
+// <img src="https://lh3.googleusercontent.com/docsubipk/...=sNNN-wNNN-hNNN">
+// instead. Those URLs are stable, public and sent with permissive CORS/CORP
+// headers, so they're handed to the browser directly (resized via =wNNN)
+// rather than going through /api/sheet-image.
 
 export interface HtmlviewRow {
   images: string[];
@@ -62,6 +68,8 @@ export async function getSheetImageTokens(sheetId: string, gid: string): Promise
   return (await scrapeSheetView(sheetId, gid)).tokens;
 }
 
+const isDirectImage = (v: string): boolean => v.startsWith('https://');
+
 interface RawRow { images: string[]; imageCells: number[]; cells: string[] }
 
 async function scrapeSheetView(sheetId: string, gid: string): Promise<{
@@ -96,10 +104,13 @@ async function scrapeSheetView(sheetId: string, gid: string): Promise<{
     })
     .on('td img', {
       element(el) {
-        const m = decodeEntities(el.getAttribute('src') ?? '')
-          .match(/^https:\/\/docs\.google\.com\/sheets-images-rt\/([A-Za-z0-9_-]+)/);
-        if (current && m) {
-          current.images.push(m[1]);
+        const src = decodeEntities(el.getAttribute('src') ?? '');
+        const m = src.match(/^https:\/\/docs\.google\.com\/sheets-images-rt\/([A-Za-z0-9_-]+)/);
+        const direct = src.match(/^https:\/\/lh\d\.googleusercontent\.com\/docsubipk\/[A-Za-z0-9_-]+/);
+        if (current && (m || direct)) {
+          // A direct URL is kept whole (no size suffix); a token is swapped for
+          // its stable key below.
+          current.images.push(direct ? direct[0] : m![1]);
           current.imageCells.push(cell);
         }
       },
@@ -115,6 +126,7 @@ async function scrapeSheetView(sheetId: string, gid: string): Promise<{
     const fp = fingerprint(row.cells.join('\u0001'));
     // Replace each token with its stable key.
     row.images = row.images.map((token, i) => {
+      if (isDirectImage(token)) return token;
       const key = `${fp}-${row.imageCells[i]}`;
       tokens[key] = token;
       return key;
@@ -137,7 +149,7 @@ export async function fetchSheetRowImages(
   for (const [n, row] of raw) {
     if (!row.images.length && !opts.withText) continue;
     rows.set(n, {
-      images: row.images.map(key => sheetImageUrl(sheetId, gid, key, width)),
+      images: row.images.map(key => isDirectImage(key) ? `${key}=w${width}` : sheetImageUrl(sheetId, gid, key, width)),
       imageCells: row.imageCells,
       cells: opts.withText ? row.cells : undefined,
     });
