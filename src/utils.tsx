@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { saveAs } from 'file-saver';
 import { useSettings } from './SettingsContext';
 import { activeConfig } from './artists/activeConfig';
-import type { EraTheme } from './artists/types';
 
 export function sanitizeFilename(name: string): string {
   return name.replace(/[/\\?%*:|"<>]/g, '-').trim();
@@ -338,7 +337,7 @@ export const TAG_TOOLTIP_MAP: Record<string, string> = new Proxy({} as Record<st
   ownKeys: () => Object.keys(activeTagTooltipMap()),
   getOwnPropertyDescriptor: (_, k: string) => ({ configurable: true, enumerable: true, value: activeTagTooltipMap()[k] }),
 });
-export const ERA_THEMES: Record<string, EraTheme> = new Proxy({} as any, {
+export const ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; bottomBannerContentBg?: string; miniPlayer?: string; fullPicturePlayer?: string }> = new Proxy({} as any, {
   get: (_, k: string) => activeConfig.ERA_THEMES[k],
   has: (_, k: string) => k in activeConfig.ERA_THEMES,
   ownKeys: () => Object.keys(activeConfig.ERA_THEMES),

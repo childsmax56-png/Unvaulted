@@ -1,34 +1,3 @@
-// An image drawn over an era's top banner that drifts with the cursor
-// (parallax). Positions are in units of the banner's height, measured from its
-// right edge, so they line up with a right-anchored `cover` background.
-export interface EraThemeLayer {
-  src: string;
-  /** Distance from the banner's right edge to the layer's centre, in banner heights. */
-  right: number;
-  /** Distance from the banner's top edge to the layer's centre, in banner heights. */
-  top: number;
-  /** Layer height, in banner heights. */
-  height: number;
-  /** How many pixels the layer moves at the edge of the window. Negative moves against the cursor. */
-  depth?: number;
-  /** Soft black glow around the layer's outline. */
-  aura?: { size: number; intensity: number };
-}
-
-export interface EraTheme {
-  topBanner?: string;
-  /** Animated images drawn over `topBanner` (shown on md+ screens). */
-  topBannerLayers?: EraThemeLayer[];
-  /** Shadow cast by the top banner onto the content below it. */
-  topBannerAura?: { size: number; intensity: number };
-  bottomBanner?: string;
-  bottomBannerRepeat?: boolean;
-  bottomBannerPosition?: string;
-  bottomBannerContentBg?: string;
-  miniPlayer?: string;
-  fullPicturePlayer?: string;
-}
-
 export interface ArtistConfig {
   // Identity
   slug: string;
@@ -74,7 +43,7 @@ export interface ArtistConfig {
   TAG_TOOLTIP_MAP: Record<string, string>;
 
   // Themes
-  ERA_THEMES: Record<string, EraTheme>;
+  ERA_THEMES: Record<string, { topBanner?: string; bottomBanner?: string; bottomBannerRepeat?: boolean; bottomBannerContentBg?: string; miniPlayer?: string; fullPicturePlayer?: string }>;
 
   // Optional tabs
   hasProductionTab?: boolean;
