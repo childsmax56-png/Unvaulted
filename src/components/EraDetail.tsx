@@ -5,6 +5,7 @@ import { ArrowLeft, Play, ExternalLink, X, Share2, Volume2, Check, Download, Loa
 import { SiYoutube } from 'react-icons/si';
 import { Era, Song, SearchFilters } from '../types';
 import { useState, useMemo, useEffect } from 'react';
+import { EraBannerLayers } from './EraBannerLayers';
 import { formatTextWithTags, getCleanSongNameWithTags, matchesFilters, createSlug, getSongSlug, ALBUM_RELEASE_DATES, isSongNotAvailable, looksLikeRealLink, ALBUM_DESCRIPTIONS, ERA_DISCLAIMERS, HIDDEN_ALBUMS, CUSTOM_IMAGES, getArtistName, buildArtistTag, buildTitleTag, buildDownloadName, songCredits, handleDownloadFile, resolveUrl, prepareAudioDownload, formatTextForNotification, parseNoteDescription, cleanSongDate, ERA_THEMES , Img, sanitizeFilename, runWithConcurrencyLimit} from '../utils';
 import { activeConfig } from '../artists/activeConfig';
 import { eraArtwork } from '../eraArtwork';
@@ -212,7 +213,8 @@ export const handleShareSilent = (song: Song, era: Era): string => {
 
 export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, currentSong, isPlaying, mvData = [], remixData = [], samplesData = [], favoriteKeys = [], toggleFavorite, onNavigateToEra }: { key?: string, era: Era, onBack?: () => void, onPlaySong: (song: Song, era: Era, contextTracks?: Song[]) => void, searchQuery?: string, filters: SearchFilters, currentSong?: Song | null, isPlaying?: boolean, mvData?: MvEntry[], remixData?: RemixEntry[], samplesData?: SampleEntry[], favoriteKeys?: { songName: string, eraName: string, url: string }[], toggleFavorite?: (song: Song, eraName: string) => void, onNavigateToEra?: (era: Era) => void }) {
   const { settings, updateSettings } = useSettings();
-  const contentBg = !settings.disableEraThemes ? ERA_THEMES[era.name]?.bottomBannerContentBg : undefined;
+  const eraTheme = !settings.disableEraThemes ? ERA_THEMES[era.name] : undefined;
+  const contentBg = eraTheme?.bottomBannerContentBg;
   const deadLinks = useDeadLinks(activeConfig.slug);
   const { startJob, updateJob, startItem, finishItem, finishJob } = useDownloadManager();
   const [zoomedImage, setZoomedImage] = useState(false);
@@ -629,12 +631,16 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
         className="absolute inset-0 z-10 bg-yzy-black overflow-y-auto overflow-x-hidden pb-64"
       >
         <div
-          className={`p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5${!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? ' bg-center md:bg-right' : ''}`}
-          style={!settings.disableEraThemes && ERA_THEMES[era.name]?.topBanner ? {
-            backgroundImage: `url(${ERA_THEMES[era.name].topBanner})`,
+          className={`p-6 md:p-8 flex flex-col md:flex-row items-start gap-6 md:gap-8 border-b border-white/5${eraTheme?.topBanner ? ' bg-center md:bg-right' : ''}${eraTheme?.topBannerLayers || eraTheme?.topBannerAura ? ' relative isolate z-[1]' : ''}`}
+          style={eraTheme?.topBanner ? {
+            backgroundImage: `url(${eraTheme.topBanner})`,
             backgroundSize: 'cover',
+            ...(eraTheme.topBannerAura && {
+              boxShadow: `0 0 ${eraTheme.topBannerAura.size}px rgb(0 0 0 / ${eraTheme.topBannerAura.intensity})`,
+            }),
           } : { backgroundColor: 'rgba(255,255,255,0.05)' }}
         >
+          {eraTheme?.topBannerLayers && <EraBannerLayers layers={eraTheme.topBannerLayers} />}
           {onBack && (
             <button onClick={onBack} className="cursor-pointer mt-1 flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors shrink-0">
               <ArrowLeft className="w-4 h-4" />
@@ -909,7 +915,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
             } : {
               backgroundImage: `url(${ERA_THEMES[era.name].bottomBanner})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: ERA_THEMES[era.name].bottomBannerPosition ?? 'center',
             }
           ) : undefined}
         >

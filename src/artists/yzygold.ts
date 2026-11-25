@@ -308,8 +308,16 @@ export const yzygoldConfig: ArtistConfig = {
       fullPicturePlayer: "/yzygold/FullPicturePlayerLateRegistration.png",
     },
     "Graduation": {
-      topBanner: "/yzygold/TopBannerGraduation.png",
-      bottomBanner: "/yzygold/BottomBannerGraduation.png",
+      // Animated theme: the bear and the Dropout Bear artwork float over the
+      // clouds and drift with the cursor.
+      topBanner: "/yzygold/GraduationAnimTop.webp",
+      topBannerAura: { size: 25, intensity: 0.8 },
+      topBannerLayers: [
+        { src: "/yzygold/GraduationAnimBear.webp", right: 0.91, top: 0.3, height: 0.33, depth: 26, aura: { size: 23, intensity: 0.42 } },
+        { src: "/yzygold/GraduationAnimDropout.webp", right: 0.4, top: 0.58, height: 0.87, depth: 6, aura: { size: 40, intensity: 0.72 } },
+      ],
+      bottomBanner: "/yzygold/GraduationAnimBottom.webp",
+      bottomBannerPosition: "top center",
       miniPlayer: "/yzygold/MiniPlayerGraduation.png",
       fullPicturePlayer: "/yzygold/FullPicturePlayerGraduation.png",
     },
