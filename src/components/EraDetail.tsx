@@ -189,6 +189,26 @@ export function findSamplesForSong(songName: string, eraName: string, samplesDat
 
 // Returns the artist URL prefix (e.g. "/yzygold") when running under /:artist/ on a
 // unified host, or "" when running at the root of a standalone deployment.
+// Era header "important dates" — the header row's Notes cell, one event per line:
+// "(06/08/1977) (Ye is born in Atlanta)" or "(2004 - 2012) (as Ace)". Lines that
+// aren't in that shape (prose some sheets add below) are left out.
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function formatEraDate(raw: string): string {
+  const m = raw.match(/^(\?\?|\d{1,2})\/(\?\?|\d{1,2})\/(\d{4})$/);
+  if (!m) return raw;
+  const [, mm, dd, yyyy] = m;
+  const mon = MONTHS[parseInt(mm) - 1];
+  if (!mon) return yyyy;
+  return dd === '??' ? `${mon} ${yyyy}` : `${mon} ${parseInt(dd)}, ${yyyy}`;
+}
+function parseEraDates(raw: string | undefined): { date: string; event: string }[] {
+  if (!raw) return [];
+  return raw.split('\n').flatMap(line => {
+    const m = line.trim().match(/^\(([^()]*\d[^()]*)\)\s*\((.+)\)$/);
+    return m ? [{ date: formatEraDate(m[1].trim()), event: m[2].trim() }] : [];
+  });
+}
+
 function getArtistUrlPrefix(): string {
   const slug = activeConfig.slug;
   if (!slug) return '';
@@ -230,6 +250,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
     ALBUM_DESCRIPTIONS[era.name],
     isDescriptionExpanded,
   );
+  const eraDates = useMemo(() => parseEraDates(era.timeline), [era.timeline]);
   const [editingLfmName, setEditingLfmName] = useState(false);
   const [lfmNameDraft, setLfmNameDraft] = useState('');
   const [isSelectMode, setIsSelectMode] = useState(false);
@@ -818,6 +839,16 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
               </div>
             )}
 
+            {eraDates.length > 0 && (
+              <ul className="mb-3 flex flex-col gap-1 max-w-3xl">
+                {eraDates.map((d, i) => (
+                  <li key={i} className="flex items-baseline gap-2 text-sm leading-snug">
+                    <span className="shrink-0 font-bold text-[var(--theme-color)] tabular-nums">{d.date}</span>
+                    <span className="text-white/75">{d.event}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             {ALBUM_DESCRIPTIONS[era.name] && (
               <div className="mb-2 max-w-3xl">
                 <p ref={descriptionRef} className={`text-white/80 text-sm leading-relaxed ${isDescriptionExpanded ? '' : 'line-clamp-3'}`}>
@@ -1043,7 +1074,7 @@ export function EraDetail({ era, onBack, onPlaySong, searchQuery = '', filters, 
                                 {note && (
                                   <div className="flex items-start gap-1">
                                     <div className={`min-w-0 flex-1 text-xs break-words whitespace-normal leading-snug ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>{formatTextWithTags(note)}</div>
-                                    <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} className="-mt-0.5" fileDate={song.file_date} leakDate={song.leak_date} />
+                                    <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={isCurrentlyPlaying} className="-mt-0.5" fileDate={song.file_date} leakDate={song.leak_date} quality={song.quality} availableLength={song.available_length} trackLength={song.track_length} />
                                   </div>
                                 )}
                                 {ogFilename && <div className={`text-[10px] font-mono mt-0.5 ${isCurrentlyPlaying ? 'text-[var(--theme-color)]/25' : 'text-white/25'}`}>OG: {ogFilename}</div>}
