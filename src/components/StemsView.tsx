@@ -314,7 +314,7 @@ function StemRow({ song, index, entryKey, isCurrentlyPlaying, isPlaying, isStarr
             <div className={`min-w-0 flex-1 text-xs line-clamp-2 sm:line-clamp-1 break-words ${accent ? 'text-[var(--theme-color)]/40' : 'text-white/40'}`}>
               {formatTextWithTags(description)}
             </div>
-            <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={accent} className="-mt-0.5" />
+            <NoteButton note={song.description} title={song.name} isCurrentlyPlaying={accent} className="-mt-0.5" fileDate={song.file_date} leakDate={song.leak_date} quality={song.quality} availableLength={song.available_length} trackLength={song.track_length} />
           </div>
         )}
         <div className="sm:hidden flex flex-wrap items-center gap-1 mt-1.5 empty:hidden">

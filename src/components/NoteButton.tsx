@@ -15,9 +15,14 @@ interface Props {
   className?: string;
   fileDate?: string;
   leakDate?: string;
+  quality?: string;
+  availableLength?: string;
+  trackLength?: string;
 }
 
-export function NoteButton({ note, title, isCurrentlyPlaying, className, fileDate, leakDate }: Props) {
+interface MetaProps { fileDate?: string; leakDate?: string; quality?: string; availableLength?: string; trackLength?: string }
+
+export function NoteButton({ note, title, isCurrentlyPlaying, className, ...meta }: Props) {
   const [open, setOpen] = useState(false);
   if (!note || !note.trim()) return null;
 
@@ -34,16 +39,23 @@ export function NoteButton({ note, title, isCurrentlyPlaying, className, fileDat
       >
         <StickyNote className="w-3.5 h-3.5" />
       </button>
-      <NoteModal isOpen={open} onClose={() => setOpen(false)} note={note} title={title} fileDate={fileDate} leakDate={leakDate} />
+      <NoteModal isOpen={open} onClose={() => setOpen(false)} note={note} title={title} {...meta} />
     </>
   );
 }
 
-export function NoteModal({ isOpen, onClose, note, title, fileDate, leakDate }: { isOpen: boolean; onClose: () => void; note: string; title: string; fileDate?: string; leakDate?: string }) {
+export function NoteModal({ isOpen, onClose, note, title, fileDate, leakDate, quality, availableLength, trackLength }: { isOpen: boolean; onClose: () => void; note: string; title: string } & MetaProps) {
   const [copied, setCopied] = useState(false);
   const { ogFilename, note: body } = parseNoteDescription(note);
   const fileDateClean = cleanSongDate(fileDate);
   const leakDateClean = cleanSongDate(leakDate);
+  const metaItems: [string, string][] = ([
+    ['File Date', fileDateClean],
+    ['Leak Date', leakDateClean],
+    ['Quality', quality?.trim()],
+    ['Available', availableLength?.trim()],
+    ['Length', trackLength?.trim()],
+  ] as [string, string | undefined][]).filter((m): m is [string, string] => !!m[1]);
 
   // Close on Escape.
   useEffect(() => {
@@ -115,14 +127,11 @@ export function NoteModal({ isOpen, onClose, note, title, fileDate, leakDate }: 
                   {ogFilename}
                 </div>
               )}
-              {(fileDateClean || leakDateClean) && (
+              {metaItems.length > 0 && (
                 <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/50">
-                  {fileDateClean && (
-                    <span><span className="text-white/25 uppercase tracking-wider text-[10px] font-bold mr-2">File Date</span>{fileDateClean}</span>
-                  )}
-                  {leakDateClean && (
-                    <span><span className="text-white/25 uppercase tracking-wider text-[10px] font-bold mr-2">Leak Date</span>{leakDateClean}</span>
-                  )}
+                  {metaItems.map(([label, value]) => (
+                    <span key={label}><span className="text-white/25 uppercase tracking-wider text-[10px] font-bold mr-2">{label}</span>{value}</span>
+                  ))}
                 </div>
               )}
             </div>
