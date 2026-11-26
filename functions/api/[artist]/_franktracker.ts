@@ -127,7 +127,8 @@ export function parseWaffleTable(html: string, origin = ''): string[][] {
 // the Tracker website!)" -> "Name") with wrapped words joined ("File \nDate"),
 // unused columns dropped, trailing blank columns trimmed.
 export function toTrackerCsv(rows: string[][], renames: Record<string, string> = {}): string {
-  const h = rows.findIndex(r => (r[0] ?? '').trim() === 'Era' || r.some(c => /^Name\b/.test(c.trim())));
+  const isNameCell = (c: string) => /^(Name|Title)\b/.test(c.trim());
+  const h = rows.findIndex(r => (r[0] ?? '').trim() === 'Era' || r.some(isNameCell));
   if (h === -1) throw new Error('no header row');
   const header = rows[h].map(c => {
     const lines = c.split('\n').map(l => l.trim());
@@ -136,6 +137,10 @@ export function toTrackerCsv(rows: string[][], renames: Record<string, string> =
     const name = kept.join(' ').replace(/\s+/g, ' ').trim();
     return renames[name] ?? name;
   });
+  // The era column sits just before the name column on these sites, but its
+  // header cell is sometimes mislabelled (tylertracker.net's Unreleased tab
+  // read "zf" in Nov 2026), which would otherwise drop every song's era.
+  if (header[0] !== 'Era' && isNameCell(rows[h][1] ?? '')) header[0] = 'Era';
   let width = header.length;
   while (width > 0 && !header[width - 1]) width--;
   const keep = header.map((c, i) => i < width && !DROP_HEADERS.has(c)).flatMap((k, i) => (k ? [i] : []));
